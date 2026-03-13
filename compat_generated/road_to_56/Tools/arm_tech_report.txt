@@ -1,0 +1,2016 @@
+ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+============================================================
+
+Total techs parsed:    967
+Successfully mapped:   755
+Unmapped (unknown):    145
+
+BRANCH SUMMARY
+----------------------------------------
+  air                              94 techs
+  industry_electronics            169 techs
+  land                            359 techs
+  naval                           133 techs
+
+CATEGORY DETAIL
+------------------------------------------------------------
+
+  [air / cas] — 12 techs
+    1922  early_bombs
+          [from: road_to_56]
+    1936  CAS1
+          [from: road_to_56]
+    1936  cv_CAS1
+          [from: road_to_56]
+    1936  armor_piercing_bombs
+          [from: road_to_56]
+    1936  air_torpedoe_1
+          [from: road_to_56]
+    1940  CAS2
+          [from: road_to_56]
+    1940  cv_CAS2
+          [from: road_to_56]
+    1940  heavy_bombs
+          [from: road_to_56]
+    1940  air_torpedoe_2
+          [from: road_to_56]
+    1944  CAS3
+          [from: road_to_56]
+    1944  cv_CAS3
+          [from: road_to_56]
+    1944  air_torpedoe_3
+          [from: road_to_56]
+
+  [air / fighters] — 39 techs
+    1922  aa_lmg
+          [from: road_to_56]
+    1922  engines_1
+          [from: road_to_56]
+    1926  iw_small_airframe
+          [from: road_to_56]
+    1933  early_fighter
+          [from: road_to_56]
+    1933  cv_early_fighter
+          [from: road_to_56]
+    1936  fighter1
+          [from: road_to_56]
+    1936  cv_fighter1
+          [from: road_to_56]
+    1936  scout_plane1
+          [from: road_to_56]
+    1936  basic_small_airframe
+          [from: road_to_56]
+    1936  engines_2
+          [from: road_to_56]
+    1936  range_improvements
+          [from: road_to_56]
+    1936  aircraft_construction
+          [from: road_to_56]
+    1939  survivability_studies
+          [from: road_to_56]
+    1939  aa_hmg
+          [from: road_to_56]
+    1939  aa_cannon_1
+          [from: road_to_56]
+    1940  fighter2
+          [from: road_to_56]
+    1940  cv_fighter2
+          [from: road_to_56]
+    1940  fighter_bomber2
+          [from: road_to_56]
+    1940  scout_plane2
+          [from: road_to_56]
+    1940  improved_small_airframe
+          [from: road_to_56]
+    1940  engines_3
+          [from: road_to_56]
+    1942  reinforced_wings_mothership
+          [from: road_to_56]
+    1943  aa_cannon_2
+          [from: road_to_56]
+    1944  fighter3
+          [from: road_to_56]
+    1944  cv_fighter3
+          [from: road_to_56]
+    1944  fighter_bomber3
+          [from: road_to_56]
+    1944  advanced_small_airframe
+          [from: road_to_56]
+    1944  engines_4
+          [from: road_to_56]
+    1944  miniature_fighters
+          [from: road_to_56]
+    1945  jet_fighter1
+          [from: road_to_56]
+    1945  cv_jet_fighter1
+          [from: road_to_56]
+    1945  modern_small_airframe
+          [from: road_to_56]
+    1945  aa_cannon_3
+          [from: road_to_56]
+    1946  aerial_hangars
+          [from: road_to_56]
+    1950  jet_fighter2
+          [from: road_to_56]
+    1950  supersonic_fighter1
+          [from: road_to_56]
+    1950  cv_jet_fighter2
+          [from: road_to_56]
+    1950  supersonic_small_airframe
+          [from: road_to_56]
+    1955  cv_jet_fighter_a
+          [from: road_to_56]
+
+  [air / heavy_fighters] — 11 techs
+    1926  iw_medium_airframe
+          [from: road_to_56]
+    1936  heavy_fighter1
+          [from: road_to_56]
+    1936  hfighter_bomber1
+          [from: road_to_56]
+    1936  basic_medium_airframe
+          [from: road_to_56]
+    1940  heavy_fighter2
+          [from: road_to_56]
+    1940  hfighter_bomber2
+          [from: road_to_56]
+    1940  improved_medium_airframe
+          [from: road_to_56]
+    1944  heavy_fighter3
+          [from: road_to_56]
+    1944  hfighter_bomber3
+          [from: road_to_56]
+    1944  advanced_medium_airframe
+          [from: road_to_56]
+    1945  modern_medium_airframe
+          [from: road_to_56]
+
+  [air / naval_bombers] — 6 techs
+    1936  naval_bomber1
+          [from: road_to_56]
+    1936  cv_naval_bomber1
+          [from: road_to_56]
+    1940  naval_bomber2
+          [from: road_to_56]
+    1940  cv_naval_bomber2
+          [from: road_to_56]
+    1944  naval_bomber3
+          [from: road_to_56]
+    1944  cv_naval_bomber3
+          [from: road_to_56]
+
+  [air / strategic_bombers] — 10 techs
+    1926  iw_large_airframe
+          [from: road_to_56]
+    1936  strategic_bomber1
+          [from: road_to_56]
+    1936  basic_large_airframe
+          [from: road_to_56]
+    1940  strategic_bomber2
+          [from: road_to_56]
+    1940  improved_large_airframe
+          [from: road_to_56]
+    1944  strategic_bomber3
+          [from: road_to_56]
+    1944  advanced_large_airframe
+          [from: road_to_56]
+    1945  modern_large_airframe
+          [from: road_to_56]
+    1950  jet_strategic_bomber1
+          [from: road_to_56]
+    1955  jet_strategic_bomber_a
+          [from: road_to_56]
+
+  [air / tactical_bombers] — 10 techs
+    1933  early_bomber
+          [from: road_to_56]
+    1936  tactical_bomber1
+          [from: road_to_56]
+    1936  med_maritime1
+          [from: road_to_56]
+    1940  tactical_bomber2
+          [from: road_to_56]
+    1940  med_maritime2
+          [from: road_to_56]
+    1944  tactical_bomber3
+          [from: road_to_56]
+    1944  med_maritime3
+          [from: road_to_56]
+    1945  jet_tactical_bomber1
+          [from: road_to_56]
+    1950  jet_tactical_bomber2
+          [from: road_to_56]
+    1955  jet_tactical_bomber_a
+          [from: road_to_56]
+
+  [air / transport] — 6 techs
+    1933  early_transport_plane
+    1933  bba_early_transport_plane
+    1940  improved_transport_plane
+          [from: road_to_56]
+    1940  bba_improved_transport_plane
+          [from: road_to_56]
+    1945  strategic_airlifter
+          [from: road_to_56]
+    1945  bba_strategic_airlifter
+          [from: road_to_56]
+
+  [industry_electronics / electronics] — 33 techs
+    1936  electronic_mechanical_engineering
+          [from: road_to_56]
+    1936  radio
+          [from: road_to_56]
+    1936  mechanical_computing
+          [from: road_to_56]
+    1936  basic_fire_control_system
+          [from: road_to_56]
+    1936  improved_fire_control_system
+          [from: road_to_56]
+    1936  advanced_fire_control_system
+          [from: road_to_56]
+    1938  improved_radio
+          [from: road_to_56]
+    1938  computing_machine
+          [from: road_to_56]
+    1938  basic_encryption
+          [from: road_to_56]
+    1938  basic_decryption
+          [from: road_to_56]
+    1939  r56_centralized_military_research_and_development
+          [from: road_to_56]
+    1940  improved_computing_machine
+          [from: road_to_56]
+    1940  improved_encryption
+          [from: road_to_56]
+    1940  improved_decryption
+          [from: road_to_56]
+    1941  advanced_radio
+          [from: road_to_56]
+    1941  etax_great_leap
+          [from: road_to_56]
+    1941  etax_inclusive_science
+          [from: road_to_56]
+    1942  advanced_computing_machine
+          [from: road_to_56]
+    1942  advanced_encryption
+          [from: road_to_56]
+    1942  advanced_decryption
+          [from: road_to_56]
+    1944  semi_modern_radio
+          [from: road_to_56]
+    1944  rdf_partisan
+          [from: road_to_56]
+    1944  future_computing_machine
+          [from: road_to_56]
+    1944  future_encryption
+          [from: road_to_56]
+    1944  future_decryption
+          [from: road_to_56]
+    1947  future_computing_machine_2
+          [from: road_to_56]
+    1947  future_encryption_2
+          [from: road_to_56]
+    1947  future_decryption_2
+          [from: road_to_56]
+    1951  future_encryption_3
+          [from: road_to_56]
+    1951  future_decryption_3
+          [from: road_to_56]
+    1951  future_computing_machine_3
+          [from: road_to_56]
+    1953  modern_radio
+          [from: road_to_56]
+    1955  future_computing_machine_4
+          [from: road_to_56]
+
+  [industry_electronics / industry] — 94 techs
+    1918  etax_doctrine
+          [from: road_to_56]
+    1930  steel_production_1
+          [from: road_to_56]
+    1934  butadiene_processing
+          [from: road_to_56]
+    1934  butadiene_processing
+          [from: road_to_56]
+    1936  basic_fortification_tech
+          [from: road_to_56]
+    1936  coastal_fort_tech_1
+          [from: road_to_56]
+    1936  basic_machine_tools
+          [from: road_to_56]
+    1936  concentrated_industry
+          [from: road_to_56]
+    1936  dispersed_industry
+          [from: road_to_56]
+    1936  fuel_silos
+          [from: road_to_56]
+    1936  fuel_refining
+          [from: road_to_56]
+    1936  synth_oil_experiments
+          [from: road_to_56]
+    1936  construction1
+          [from: road_to_56]
+    1936  excavation1
+          [from: road_to_56]
+    1936  aluminum_production_1
+          [from: road_to_56]
+    1936  etax_the_ends
+          [from: road_to_56]
+    1937  improved_equipment_conversion
+    1937  rubber_processing
+    1937  improved_machine_tools
+          [from: road_to_56]
+    1937  concentrated_industry2
+          [from: road_to_56]
+    1937  dispersed_industry2
+          [from: road_to_56]
+    1937  fuel_refining2
+          [from: road_to_56]
+    1937  oil_processing
+          [from: road_to_56]
+    1937  construction2
+          [from: road_to_56]
+    1937  excavation2
+          [from: road_to_56]
+    1938  land_fort_tech_1
+          [from: road_to_56]
+    1938  rubber_plant_a
+          [from: road_to_56]
+    1938  etax_business_interests
+          [from: road_to_56]
+    1938  etax_desperation
+          [from: road_to_56]
+    1939  advanced_equipment_conversion
+    1939  improved_rubber_processing
+    1939  advanced_machine_tools
+          [from: road_to_56]
+    1939  concentrated_industry3
+          [from: road_to_56]
+    1939  dispersed_industry3
+          [from: road_to_56]
+    1939  fuel_refining3
+          [from: road_to_56]
+    1939  improved_oil_processing
+          [from: road_to_56]
+    1939  construction3
+          [from: road_to_56]
+    1939  excavation3
+          [from: road_to_56]
+    1940  land_fort_tech_2
+          [from: road_to_56]
+    1940  coastal_fort_tech_2
+          [from: road_to_56]
+    1940  etax_cost_plus
+          [from: road_to_56]
+    1940  etax_no_qa
+          [from: road_to_56]
+    1941  advanced_rubber_processing
+    1941  assembly_line_production
+          [from: road_to_56]
+    1941  concentrated_industry4
+          [from: road_to_56]
+    1941  dispersed_industry4
+          [from: road_to_56]
+    1941  fuel_refining4
+          [from: road_to_56]
+    1941  construction4
+          [from: road_to_56]
+    1941  excavation4
+          [from: road_to_56]
+    1941  rubber_plant_b
+          [from: road_to_56]
+    1941  steel_production_2
+          [from: road_to_56]
+    1941  aluminum_production_2
+          [from: road_to_56]
+    1941  etax_production_in_depth
+          [from: road_to_56]
+    1941  etax_expendable_labor
+          [from: road_to_56]
+    1942  etax_practical_projects
+          [from: road_to_56]
+    1943  modern_rubber_processing
+    1943  flexible_line
+          [from: road_to_56]
+    1943  streamlined_line
+          [from: road_to_56]
+    1943  concentrated_industry5
+          [from: road_to_56]
+    1943  dispersed_industry5
+          [from: road_to_56]
+    1943  fuel_refining5
+          [from: road_to_56]
+    1943  advanced_oil_processing
+          [from: road_to_56]
+    1943  construction5
+          [from: road_to_56]
+    1943  excavation5
+          [from: road_to_56]
+    1943  etax_great_works
+          [from: road_to_56]
+    1943  etax_quality
+          [from: road_to_56]
+    1945  construction_a
+          [from: road_to_56]
+    1945  excavation_a
+          [from: road_to_56]
+    1945  rubber_plant_c
+          [from: road_to_56]
+    1945  flexible_line_a
+          [from: road_to_56]
+    1945  streamlined_line_a
+          [from: road_to_56]
+    1945  concentrated_industry_a
+          [from: road_to_56]
+    1945  dispersed_industry_a
+          [from: road_to_56]
+    1948  modern_oil_processing
+          [from: road_to_56]
+    1948  construction_b
+          [from: road_to_56]
+    1948  excavation_b
+          [from: road_to_56]
+    1948  streamlined_line_b
+          [from: road_to_56]
+    1948  concentrated_industry_b
+          [from: road_to_56]
+    1948  dispersed_industry_b
+          [from: road_to_56]
+    1948  steel_production_3
+          [from: road_to_56]
+    1948  aluminum_production_3
+          [from: road_to_56]
+    1949  rubber_plant_d
+          [from: road_to_56]
+    1951  construction_c
+          [from: road_to_56]
+    1951  excavation_c
+          [from: road_to_56]
+    1951  streamlined_line_c
+          [from: road_to_56]
+    1951  concentrated_industry_c
+          [from: road_to_56]
+    1951  dispersed_industry_c
+          [from: road_to_56]
+    1954  construction_d
+          [from: road_to_56]
+    1954  excavation_d
+          [from: road_to_56]
+    1954  streamlined_line_d
+          [from: road_to_56]
+    1954  concentrated_industry_d
+          [from: road_to_56]
+    1954  dispersed_industry_d
+          [from: road_to_56]
+    1954  steel_production_4
+          [from: road_to_56]
+    1954  aluminum_production_4
+          [from: road_to_56]
+
+  [industry_electronics / nuclear] — 7 techs
+    1940  atomic_research
+          [from: road_to_56]
+    1943  isotope_separation_centrifugal
+    1943  nuclear_reactor
+          [from: road_to_56]
+    1943  nuclear_reactor_heavy_water
+          [from: road_to_56]
+    1943  etax_the_bomb
+          [from: road_to_56]
+    1945  nukes
+          [from: road_to_56]
+    1950  thermonuclear_bombs
+
+  [industry_electronics / radar] — 16 techs
+    1936  rdf0
+          [from: road_to_56]
+    1936  radio_detection
+          [from: road_to_56]
+    1937  basic_identification_friend_or_foe
+          [from: road_to_56]
+    1938  cavity_magnatron
+          [from: road_to_56]
+    1939  rdf1
+          [from: road_to_56]
+    1940  centimetric_radar
+          [from: road_to_56]
+    1941  phased_array
+          [from: road_to_56]
+    1942  rdf2
+          [from: road_to_56]
+    1942  monopulse_radar
+          [from: road_to_56]
+    1943  rdf3
+          [from: road_to_56]
+    1945  future_radar
+          [from: road_to_56]
+    1946  rdf4
+          [from: road_to_56]
+    1949  rdf5
+          [from: road_to_56]
+    1949  future_radar_2
+          [from: road_to_56]
+    1951  rdf6
+          [from: road_to_56]
+    1953  future_radar_3
+          [from: road_to_56]
+
+  [industry_electronics / rockets] — 19 techs
+    1940  rocket_artillery
+          [from: road_to_56]
+    1941  rocket_artillery2
+          [from: road_to_56]
+    1942  rocket_artillery3
+          [from: road_to_56]
+    1942  experimental_rockets
+          [from: road_to_56]
+    1943  rocket_artillery4
+          [from: road_to_56]
+    1943  sp_rockets_improved_guidance
+          [from: road_to_56]
+    1944  rocket_artillery_a
+          [from: road_to_56]
+    1944  rocket_engines
+          [from: road_to_56]
+    1944  sp_rockets_rocket_bomber
+          [from: road_to_56]
+    1944  jet_engines
+          [from: road_to_56]
+    1944  sp_rockets_dual_chamber_rocket_engine_1
+          [from: road_to_56]
+    1945  rocket_artillery_b
+          [from: road_to_56]
+    1945  sp_rockets_improved_rocket_bomber
+          [from: road_to_56]
+    1945  improved_rocket_engines
+          [from: road_to_56]
+    1946  advanced_rocket_engines
+          [from: road_to_56]
+    1946  sp_rockets_dual_chamber_rocket_engine_2
+          [from: road_to_56]
+    1948  rocket_artillery_c
+          [from: road_to_56]
+    1951  rocket_artillery_d
+          [from: road_to_56]
+    1954  rocket_artillery_e
+          [from: road_to_56]
+
+  [land / anti_air] — 10 techs
+    1936  interwar_antiair
+          [from: road_to_56]
+    1939  antiair1
+          [from: road_to_56]
+    1941  antiair3
+          [from: road_to_56]
+    1942  antiair4
+          [from: road_to_56]
+    1943  antiair5
+          [from: road_to_56]
+    1944  antiair_a
+          [from: road_to_56]
+    1945  antiair_b
+          [from: road_to_56]
+    1948  antiair_c
+          [from: road_to_56]
+    1951  antiair_d
+          [from: road_to_56]
+    1954  antiair_e
+          [from: road_to_56]
+
+  [land / anti_tank] — 13 techs
+    1936  mountain_tanks
+          [from: road_to_56]
+    1936  interwar_antitank
+          [from: road_to_56]
+    1936  SWE_bofors_antitank_gun
+          [from: road_to_56]
+    1939  antitank1
+          [from: road_to_56]
+    1940  antitank2
+          [from: road_to_56]
+    1941  antitank3
+          [from: road_to_56]
+    1942  antitank4
+          [from: road_to_56]
+    1943  antitank5
+          [from: road_to_56]
+    1944  antitank_a
+          [from: road_to_56]
+    1945  antitank_b
+          [from: road_to_56]
+    1948  antitank_c
+          [from: road_to_56]
+    1951  antitank_d
+          [from: road_to_56]
+    1954  antitank_e
+          [from: road_to_56]
+
+  [land / artillery] — 20 techs
+    1917  r56_gw_railway_gun
+          [from: road_to_56]
+    1930  r56_railway_mortar_subtech
+          [from: road_to_56]
+    1936  gw_artillery
+          [from: road_to_56]
+    1936  interwar_artillery
+          [from: road_to_56]
+    1936  railway_gun
+          [from: road_to_56]
+    1939  artillery1
+          [from: road_to_56]
+    1940  artillery2
+          [from: road_to_56]
+    1940  antiair2
+          [from: road_to_56]
+    1940  sp_artillery_rocket_assisted_projectiles_tech
+          [from: road_to_56]
+    1940  sp_artillery_purpose_built_gun_motor_carriages_tech
+          [from: road_to_56]
+    1941  artillery3
+          [from: road_to_56]
+    1941  sp_shock_hardening_techniques
+          [from: road_to_56]
+    1942  artillery4
+          [from: road_to_56]
+    1942  sp_variable_time_fuze_shells
+          [from: road_to_56]
+    1943  artillery5
+          [from: road_to_56]
+    1944  artillery_a
+          [from: road_to_56]
+    1945  artillery_b
+          [from: road_to_56]
+    1948  artillery_c
+          [from: road_to_56]
+    1951  artillery_d
+          [from: road_to_56]
+    1954  artillery_e
+          [from: road_to_56]
+
+  [land / heavy_tanks] — 16 techs
+    1934  basic_heavy_tank
+          [from: road_to_56]
+    1934  basic_heavy_tank_chassis
+          [from: road_to_56]
+    1937  r56_heavy_tank_studies_tech
+          [from: road_to_56]
+    1940  improved_heavy_tank_chassis
+          [from: road_to_56]
+    1941  improved_heavy_tank
+          [from: road_to_56]
+    1943  advanced_heavy_tank
+          [from: road_to_56]
+    1943  super_heavy_tank
+          [from: road_to_56]
+    1943  advanced_heavy_tank_chassis
+          [from: road_to_56]
+    1943  super_heavy_tank_chassis
+          [from: road_to_56]
+    1943  sp_armored_lc_naval_engine_conversion_tech
+          [from: road_to_56]
+    1943  sp_armored_lc_transmission_improvements_tech
+          [from: road_to_56]
+    1943  sp_armored_lc_specialized_field_manuals_tech
+          [from: road_to_56]
+    1943  sp_armored_lc_high_impact_obliterator_cannon_tech
+          [from: road_to_56]
+    1945  sp_armored_lc_weapon_fire_control_tech
+          [from: road_to_56]
+    1947  super_heavy_tank_a
+          [from: road_to_56]
+    1951  super_heavy_tank_b
+          [from: road_to_56]
+
+  [land / infantry] — 102 techs
+    1918  support_weapons
+          [from: road_to_56]
+    1933  infantry_weapons
+          [from: road_to_56]
+    1936  infantry_weapons1
+          [from: road_to_56]
+    1936  r56_anti_tank_kit
+          [from: road_to_56]
+    1936  paratroopers
+          [from: road_to_56]
+    1936  marines
+          [from: road_to_56]
+    1936  tech_mountaineers
+          [from: road_to_56]
+    1936  rangers_tech
+          [from: road_to_56]
+    1936  jungletroops
+          [from: road_to_56]
+    1936  shocktroops
+          [from: road_to_56]
+    1936  winter_clothes_gw
+          [from: road_to_56]
+    1936  jaegers
+          [from: road_to_56]
+    1936  jngdst_clothes_gw
+          [from: road_to_56]
+    1936  desertinfantry_at
+          [from: road_to_56]
+    1936  camo
+          [from: road_to_56]
+    1936  NOR_mountain_tactics
+          [from: road_to_56]
+    1936  NOR_concealed_skirmishers
+          [from: road_to_56]
+    1936  AUS_alpine_warfare
+          [from: road_to_56]
+    1936  etax_the_means
+          [from: road_to_56]
+    1938  infantry_weapons2
+          [from: road_to_56]
+    1938  tech_special_forces
+          [from: road_to_56]
+    1938  support_weapons2
+          [from: road_to_56]
+    1938  etax_glory
+          [from: road_to_56]
+    1939  improved_infantry_weapons
+          [from: road_to_56]
+    1939  infantry_at
+          [from: road_to_56]
+    1939  paratroopers2
+          [from: road_to_56]
+    1939  marines2
+          [from: road_to_56]
+    1939  tech_mountaineers2
+          [from: road_to_56]
+    1939  rangers_tech2
+          [from: road_to_56]
+    1939  jungletroops2
+          [from: road_to_56]
+    1939  shocktroops2
+          [from: road_to_56]
+    1939  jaegers2
+          [from: road_to_56]
+    1939  desertinfantry_at2
+          [from: road_to_56]
+    1939  r56_anti_tank_rifle_grenade_tech
+          [from: road_to_56]
+    1940  improved_infantry_weapons_2
+          [from: road_to_56]
+    1940  advanced_special_forces
+          [from: road_to_56]
+    1940  improved_special_forces
+          [from: road_to_56]
+    1940  support_weapons3
+          [from: road_to_56]
+    1940  r56_gammon_bomb_tech
+          [from: road_to_56]
+    1940  etax_broad_support
+          [from: road_to_56]
+    1941  winter_clothes_1939
+          [from: road_to_56]
+    1941  jngdst_clothes_1939
+          [from: road_to_56]
+    1941  camo1942
+          [from: road_to_56]
+    1942  advanced_infantry_weapons
+          [from: road_to_56]
+    1942  paratroopers3
+          [from: road_to_56]
+    1942  marines3
+          [from: road_to_56]
+    1942  tech_mountaineers3
+          [from: road_to_56]
+    1942  rangers_tech3
+          [from: road_to_56]
+    1942  support_weapons4
+          [from: road_to_56]
+    1942  jungletroops3
+          [from: road_to_56]
+    1942  shocktroops3
+          [from: road_to_56]
+    1942  jaegers3
+          [from: road_to_56]
+    1942  desertinfantry_at3
+          [from: road_to_56]
+    1942  etax_grand_projects
+          [from: road_to_56]
+    1943  infantry_at2
+          [from: road_to_56]
+    1943  advanced_infantry_weapons2
+          [from: road_to_56]
+    1943  extreme_environment_training
+          [from: road_to_56]
+    1943  survival_training
+          [from: road_to_56]
+    1945  rangers_a
+          [from: road_to_56]
+    1945  advanced_infantry_weapons_b
+          [from: road_to_56]
+    1945  paratroopers_a
+          [from: road_to_56]
+    1945  marines_a
+          [from: road_to_56]
+    1945  mountaineers_a
+          [from: road_to_56]
+    1945  jungletroops4
+          [from: road_to_56]
+    1945  shocktroops4
+          [from: road_to_56]
+    1945  jaegers4
+          [from: road_to_56]
+    1945  desertinfantry_at4
+          [from: road_to_56]
+    1946  elite_forces
+          [from: road_to_56]
+    1946  support_weapons_a
+          [from: road_to_56]
+    1947  winter_clothes_1941
+          [from: road_to_56]
+    1947  jngdst_clothes_1941
+          [from: road_to_56]
+    1947  camo1948
+          [from: road_to_56]
+    1948  advanced_infantry_weapons_e
+          [from: road_to_56]
+    1948  infantry_at_a
+          [from: road_to_56]
+    1949  rangers_b
+          [from: road_to_56]
+    1949  advanced_infantry_weapons_c
+          [from: road_to_56]
+    1949  paratroopers_b
+          [from: road_to_56]
+    1949  marines_b
+          [from: road_to_56]
+    1949  mountaineers_b
+          [from: road_to_56]
+    1949  jungletroops5
+          [from: road_to_56]
+    1949  shocktroops5
+          [from: road_to_56]
+    1949  jaegers5
+          [from: road_to_56]
+    1949  desertinfantry_at5
+          [from: road_to_56]
+    1950  elite_forces_02
+          [from: road_to_56]
+    1950  infantry_at_b
+          [from: road_to_56]
+    1950  support_weapons_b
+          [from: road_to_56]
+    1952  advanced_infantry_weapons_f
+          [from: road_to_56]
+    1953  rangers_c
+          [from: road_to_56]
+    1953  advanced_infantry_weapons_d
+          [from: road_to_56]
+    1953  infantry_at_c
+          [from: road_to_56]
+    1953  paratroopers_c
+          [from: road_to_56]
+    1953  marines_c
+          [from: road_to_56]
+    1953  mountaineers_c
+          [from: road_to_56]
+    1953  jungletroops6
+          [from: road_to_56]
+    1953  shocktroops6
+          [from: road_to_56]
+    1953  jaegers6
+          [from: road_to_56]
+    1953  desertinfantry_at6
+          [from: road_to_56]
+    1954  elite_forces_03
+          [from: road_to_56]
+    1954  support_weapons_c
+          [from: road_to_56]
+    1954  winter_clothes_1944
+          [from: road_to_56]
+    1954  jngdst_clothes_1944
+          [from: road_to_56]
+    1954  camo1955
+          [from: road_to_56]
+
+  [land / light_tanks] — 21 techs
+    1918  gwtank
+          [from: road_to_56]
+    1930  gwtank_chassis
+          [from: road_to_56]
+    1930  armored_car1
+          [from: road_to_56]
+    1934  basic_light_tank
+          [from: road_to_56]
+    1934  basic_light_tank_chassis
+          [from: road_to_56]
+    1936  improved_light_tank
+          [from: road_to_56]
+    1936  improved_light_tank_chassis
+          [from: road_to_56]
+    1939  mechanised_infantry
+          [from: road_to_56]
+    1939  armored_car2
+          [from: road_to_56]
+    1941  advanced_light_tank
+          [from: road_to_56]
+    1941  advanced_light_tank_chassis
+          [from: road_to_56]
+    1941  amphibious_mechanized_infantry
+          [from: road_to_56]
+    1942  mechanised_infantry2
+          [from: road_to_56]
+    1942  armored_car3
+          [from: road_to_56]
+    1943  amphibious_mechanized_infantry_2
+          [from: road_to_56]
+    1944  modern_light_tank_chassis
+          [from: road_to_56]
+    1945  advanced_light_tank_a
+          [from: road_to_56]
+    1945  mechanised_infantry3
+          [from: road_to_56]
+    1949  advanced_light_tank_b
+          [from: road_to_56]
+    1949  mechanised_infantry_a
+          [from: road_to_56]
+    1950  oscillating_turret_tech
+          [from: road_to_56]
+
+  [land / medium_tanks] — 11 techs
+    1938  basic_medium_tank_chassis
+          [from: road_to_56]
+    1939  basic_medium_tank
+          [from: road_to_56]
+    1940  improved_medium_tank_chassis
+          [from: road_to_56]
+    1941  improved_medium_tank
+          [from: road_to_56]
+    1943  advanced_medium_tank
+          [from: road_to_56]
+    1943  advanced_medium_tank_chassis
+          [from: road_to_56]
+    1947  main_battle_tank_a
+          [from: road_to_56]
+    1949  main_battle_tank_b
+          [from: road_to_56]
+    1950  advanced_main_battle_tank_chassis
+          [from: road_to_56]
+    1953  main_battle_tank_d
+          [from: road_to_56]
+    1955  main_battle_tank_e
+          [from: road_to_56]
+
+  [land / modern_tanks] — 2 techs
+    1945  main_battle_tank
+          [from: road_to_56]
+    1945  main_battle_tank_chassis
+          [from: road_to_56]
+
+  [land / motorised] — 3 techs
+    1920  tech_trucks
+          [from: road_to_56]
+    1936  motorised_infantry
+          [from: road_to_56]
+    1939  motorized_rocket_unit
+          [from: road_to_56]
+
+  [land / support] — 77 techs
+    1918  tech_support
+          [from: road_to_56]
+    1920  basic_train
+          [from: road_to_56]
+    1930  sniper_rifle
+          [from: road_to_56]
+    1930  flamethrower
+          [from: road_to_56]
+    1936  r56_combat_service
+          [from: road_to_56]
+    1936  armored_train
+          [from: road_to_56]
+    1936  r56_flexible_railnetwork
+          [from: road_to_56]
+    1936  tech_recon_focus_bonus
+          [from: road_to_56]
+    1936  tech_engineers
+          [from: road_to_56]
+    1936  tech_recon
+          [from: road_to_56]
+    1936  tech_military_police
+          [from: road_to_56]
+    1936  tech_maintenance_company
+          [from: road_to_56]
+    1936  tech_field_hospital
+          [from: road_to_56]
+    1936  tech_logistics_company
+          [from: road_to_56]
+    1936  tech_signal_company
+          [from: road_to_56]
+    1938  sp_armored_engineer_tech
+          [from: road_to_56]
+    1938  sp_armored_maintenance_tech
+          [from: road_to_56]
+    1938  sp_armored_signal_tech
+          [from: road_to_56]
+    1938  sp_helicopter_transport_pods_tech
+          [from: road_to_56]
+    1938  sp_helicopter_artillery_observers_tech
+          [from: road_to_56]
+    1938  sp_helicopter_med_evac_tech
+          [from: road_to_56]
+    1938  sp_armored_motorized_military_police_tech
+          [from: road_to_56]
+    1939  wartime_train
+          [from: road_to_56]
+    1939  tech_engineers2
+          [from: road_to_56]
+    1939  tech_recon2
+          [from: road_to_56]
+    1939  tech_military_police2
+          [from: road_to_56]
+    1939  tech_maintenance_company2
+          [from: road_to_56]
+    1939  tech_field_hospital2
+          [from: road_to_56]
+    1939  tech_logistics_company2
+          [from: road_to_56]
+    1939  tech_signal_company2
+          [from: road_to_56]
+    1941  r56_convoy_highways
+          [from: road_to_56]
+    1941  r56_military_railnetwork
+          [from: road_to_56]
+    1942  r56_mid_wartime_train
+          [from: road_to_56]
+    1942  tech_engineers3
+          [from: road_to_56]
+    1942  tech_recon3
+          [from: road_to_56]
+    1942  tech_military_police3
+          [from: road_to_56]
+    1942  tech_maintenance_company3
+          [from: road_to_56]
+    1942  tech_field_hospital3
+          [from: road_to_56]
+    1942  tech_logistics_company3
+          [from: road_to_56]
+    1942  tech_signal_company3
+          [from: road_to_56]
+    1943  r56_convoy_highways_2
+          [from: road_to_56]
+    1944  night_vision
+          [from: road_to_56]
+    1944  r56_modern_military_railnetwork
+          [from: road_to_56]
+    1945  tech_engineers4
+          [from: road_to_56]
+    1945  tech_recon4
+          [from: road_to_56]
+    1945  tech_military_police4
+          [from: road_to_56]
+    1945  tech_maintenance_company4
+          [from: road_to_56]
+    1945  tech_field_hospital4
+          [from: road_to_56]
+    1945  tech_logistics_company4
+          [from: road_to_56]
+    1945  tech_signal_company4
+          [from: road_to_56]
+    1947  night_vision2
+          [from: road_to_56]
+    1947  r56_convoy_highways_3
+          [from: road_to_56]
+    1948  r56_postwar_train
+          [from: road_to_56]
+    1948  tech_engineers_a
+          [from: road_to_56]
+    1948  tech_recon_a
+          [from: road_to_56]
+    1948  tech_military_police_a
+          [from: road_to_56]
+    1948  tech_maintenance_company_a
+          [from: road_to_56]
+    1948  tech_field_hospital_a
+          [from: road_to_56]
+    1948  tech_logistics_company_a
+          [from: road_to_56]
+    1948  tech_signal_company_a
+          [from: road_to_56]
+    1950  r56_convoy_highways_4
+          [from: road_to_56]
+    1950  r56_modern_military_railnetwork_2
+          [from: road_to_56]
+    1951  night_vision_a
+          [from: road_to_56]
+    1951  tech_engineers_b
+          [from: road_to_56]
+    1951  tech_recon_b
+          [from: road_to_56]
+    1951  tech_military_police_b
+          [from: road_to_56]
+    1951  tech_maintenance_company_b
+          [from: road_to_56]
+    1951  tech_field_hospital_b
+          [from: road_to_56]
+    1951  tech_logistics_company_b
+          [from: road_to_56]
+    1951  tech_signal_company_b
+          [from: road_to_56]
+    1954  tech_engineers_c
+          [from: road_to_56]
+    1954  tech_recon_c
+          [from: road_to_56]
+    1954  tech_military_police_c
+          [from: road_to_56]
+    1954  tech_maintenance_company_c
+          [from: road_to_56]
+    1954  tech_field_hospital_c
+          [from: road_to_56]
+    1954  tech_logistics_company_c
+          [from: road_to_56]
+    1954  tech_signal_company_c
+          [from: road_to_56]
+
+  [land / tanks_generic] — 84 techs
+    1934  basic_light_td
+          [from: road_to_56]
+    1934  basic_light_art
+          [from: road_to_56]
+    1934  basic_light_spaa
+          [from: road_to_56]
+    1934  basic_heavy_td
+          [from: road_to_56]
+    1934  basic_heavy_art
+          [from: road_to_56]
+    1934  basic_heavy_spaa
+          [from: road_to_56]
+    1936  improved_light_td
+          [from: road_to_56]
+    1936  improved_light_art
+          [from: road_to_56]
+    1936  improved_light_spaa
+          [from: road_to_56]
+    1936  JAP_lighter_tanks
+          [from: road_to_56]
+    1936  GER_heavy_armored_car
+          [from: road_to_56]
+    1936  armor_tech_1
+          [from: road_to_56]
+    1936  engine_tech_1
+          [from: road_to_56]
+    1936  NOR_rikstanken_tech
+          [from: road_to_56]
+    1938  amphibious_tank_chassis
+          [from: road_to_56]
+    1938  armor_tech_2
+          [from: road_to_56]
+    1938  engine_tech_2
+          [from: road_to_56]
+    1939  amphibious_tank
+          [from: road_to_56]
+    1939  basic_medium_td
+          [from: road_to_56]
+    1939  basic_medium_art
+          [from: road_to_56]
+    1939  basic_medium_spaa
+          [from: road_to_56]
+    1941  advanced_light_td
+          [from: road_to_56]
+    1941  advanced_light_art
+          [from: road_to_56]
+    1941  advanced_light_spaa
+          [from: road_to_56]
+    1941  improved_medium_td
+          [from: road_to_56]
+    1941  improved_medium_art
+          [from: road_to_56]
+    1941  improved_medium_spaa
+          [from: road_to_56]
+    1941  improved_heavy_td
+          [from: road_to_56]
+    1941  improved_heavy_art
+          [from: road_to_56]
+    1941  improved_heavy_spaa
+          [from: road_to_56]
+    1941  amphibious_drive
+          [from: road_to_56]
+    1941  armor_tech_3
+          [from: road_to_56]
+    1941  engine_tech_3
+          [from: road_to_56]
+    1941  sp_armored_advanced_flamethrower_tech
+          [from: road_to_56]
+    1942  SWE_lynx_armored_car
+    1942  amphibious_tank_2
+          [from: road_to_56]
+    1942  r56_SWE_lynx_armored_car
+          [from: road_to_56]
+    1942  armored_car_at_upgrade
+          [from: road_to_56]
+    1943  advanced_medium_td
+          [from: road_to_56]
+    1943  advanced_medium_art
+          [from: road_to_56]
+    1943  advanced_medium_spaa
+          [from: road_to_56]
+    1943  advanced_heavy_td
+          [from: road_to_56]
+    1943  advanced_heavy_art
+          [from: road_to_56]
+    1943  advanced_heavy_spaa
+          [from: road_to_56]
+    1943  super_heavy_td
+          [from: road_to_56]
+    1943  super_heavy_art
+          [from: road_to_56]
+    1943  super_heavy_spaa
+          [from: road_to_56]
+    1944  amphibious_tank_3
+          [from: road_to_56]
+    1944  armor_tech_4
+          [from: road_to_56]
+    1944  engine_tech_4
+          [from: road_to_56]
+    1945  modern_td
+          [from: road_to_56]
+    1945  modern_art
+          [from: road_to_56]
+    1945  modern_spaa
+          [from: road_to_56]
+    1945  advanced_light_tank_td_a
+          [from: road_to_56]
+    1945  advanced_light_tank_art_a
+          [from: road_to_56]
+    1945  advanced_light_tank_spaa_a
+          [from: road_to_56]
+    1947  super_heavy_tank_td_a
+          [from: road_to_56]
+    1947  super_heavy_tank_art_a
+          [from: road_to_56]
+    1947  super_heavy_tank_spaa_a
+          [from: road_to_56]
+    1947  main_battle_tank_td_a
+          [from: road_to_56]
+    1947  main_battle_tank_art_a
+          [from: road_to_56]
+    1947  main_battle_tank_spaa_a
+          [from: road_to_56]
+    1948  amphibious_tank_4
+          [from: road_to_56]
+    1949  advanced_light_tank_td_b
+          [from: road_to_56]
+    1949  advanced_light_tank_art_b
+          [from: road_to_56]
+    1949  advanced_light_tank_spaa_b
+          [from: road_to_56]
+    1949  main_battle_tank_td_b
+          [from: road_to_56]
+    1949  main_battle_tank_art_b
+          [from: road_to_56]
+    1949  main_battle_tank_spaa_b
+          [from: road_to_56]
+    1950  armor_tech_5
+          [from: road_to_56]
+    1950  engine_tech_5
+          [from: road_to_56]
+    1951  super_heavy_tank_td_b
+          [from: road_to_56]
+    1951  super_heavy_tank_art_b
+          [from: road_to_56]
+    1951  super_heavy_tank_spaa_b
+          [from: road_to_56]
+    1951  main_battle_tank_c
+          [from: road_to_56]
+    1951  main_battle_tank_td_c
+          [from: road_to_56]
+    1951  main_battle_tank_art_c
+          [from: road_to_56]
+    1951  main_battle_tank_spaa_c
+          [from: road_to_56]
+    1953  main_battle_tank_td_d
+          [from: road_to_56]
+    1953  main_battle_tank_art_d
+          [from: road_to_56]
+    1953  main_battle_tank_spaa_d
+          [from: road_to_56]
+    1955  main_battle_tank_td_e
+          [from: road_to_56]
+    1955  main_battle_tank_art_e
+          [from: road_to_56]
+    1955  main_battle_tank_spaa_e
+          [from: road_to_56]
+
+  [naval / battleships] — 17 techs
+    1922  early_ship_hull_heavy
+          [from: road_to_56]
+    1922  early_battlecruiser
+          [from: road_to_56]
+    1922  early_battleship
+          [from: road_to_56]
+    1936  basic_ship_hull_heavy
+          [from: road_to_56]
+    1936  ship_hull_super_heavy
+          [from: road_to_56]
+    1936  basic_heavy_armor_scheme (XP)
+          [from: road_to_56]
+    1936  improved_heavy_armor_scheme (XP)
+          [from: road_to_56]
+    1936  basic_battleship
+          [from: road_to_56]
+    1936  heavy_battleship
+          [from: road_to_56]
+    1940  improved_ship_hull_heavy
+          [from: road_to_56]
+    1940  basic_battlecruiser
+          [from: road_to_56]
+    1940  improved_battleship
+          [from: road_to_56]
+    1944  advanced_ship_hull_heavy
+          [from: road_to_56]
+    1944  advanced_battleship
+          [from: road_to_56]
+    1944  heavy_battleship2
+          [from: road_to_56]
+    1948  modern_ship_hull_heavy
+          [from: road_to_56]
+    1948  semi_modern_battleship
+          [from: road_to_56]
+
+  [naval / carriers] — 12 techs
+    1922  early_ship_hull_carrier
+          [from: road_to_56]
+    1922  early_carrier
+          [from: road_to_56]
+    1936  basic_ship_hull_carrier
+          [from: road_to_56]
+    1936  basic_carrier
+          [from: road_to_56]
+    1940  improved_ship_hull_carrier
+          [from: road_to_56]
+    1940  improved_carrier
+          [from: road_to_56]
+    1942  sp_refined_pykrete
+          [from: road_to_56]
+    1944  advanced_ship_hull_carrier
+          [from: road_to_56]
+    1944  advanced_carrier
+          [from: road_to_56]
+    1945  sp_ice_composite_runawayas
+          [from: road_to_56]
+    1948  modern_ship_hull_carrier
+          [from: road_to_56]
+    1948  semi_modern_carrier
+          [from: road_to_56]
+
+  [naval / destroyers] — 20 techs
+    1922  early_ship_hull_light
+          [from: road_to_56]
+    1922  smoke_generator
+          [from: road_to_56]
+    1922  basic_depth_charges (XP)
+          [from: road_to_56]
+    1922  sonar
+          [from: road_to_56]
+    1922  early_destroyer
+          [from: road_to_56]
+    1936  basic_ship_hull_light
+          [from: road_to_56]
+    1936  improved_depth_charges (XP)
+          [from: road_to_56]
+    1936  improved_sonar
+          [from: road_to_56]
+    1936  basic_destroyer
+          [from: road_to_56]
+    1939  advanced_sonar
+          [from: road_to_56]
+    1939  r56_sp_naval_huff_duff_device_tech
+          [from: road_to_56]
+    1940  improved_ship_hull_light
+          [from: road_to_56]
+    1940  advanced_depth_charges (XP)
+          [from: road_to_56]
+    1940  improved_destroyer
+          [from: road_to_56]
+    1943  modern_sonar
+          [from: road_to_56]
+    1944  advanced_ship_hull_light
+          [from: road_to_56]
+    1944  modern_depth_charges (XP)
+          [from: road_to_56]
+    1944  advanced_destroyer
+          [from: road_to_56]
+    1948  modern_ship_hull_light
+          [from: road_to_56]
+    1948  semi_modern_destroyer
+          [from: road_to_56]
+
+  [naval / heavy_cruisers] — 6 techs
+    1922  basic_cruiser_armor_scheme (XP)
+          [from: road_to_56]
+    1922  early_heavy_cruiser
+          [from: road_to_56]
+    1936  basic_heavy_cruiser
+          [from: road_to_56]
+    1940  improved_heavy_cruiser
+          [from: road_to_56]
+    1944  advanced_heavy_cruiser
+          [from: road_to_56]
+    1948  semi_modern_heavy_cruiser
+          [from: road_to_56]
+
+  [naval / light_cruisers] — 11 techs
+    1922  early_ship_hull_cruiser
+          [from: road_to_56]
+    1922  early_light_cruiser
+          [from: road_to_56]
+    1936  basic_ship_hull_cruiser
+          [from: road_to_56]
+    1936  improved_airplane_launcher
+          [from: road_to_56]
+    1936  basic_light_cruiser
+          [from: road_to_56]
+    1940  improved_ship_hull_cruiser
+          [from: road_to_56]
+    1940  improved_light_cruiser
+          [from: road_to_56]
+    1944  advanced_ship_hull_cruiser
+          [from: road_to_56]
+    1944  advanced_light_cruiser
+          [from: road_to_56]
+    1948  modern_ship_hull_cruiser
+          [from: road_to_56]
+    1948  semi_modern_light_cruiser
+          [from: road_to_56]
+
+  [naval / naval_support] — 53 techs
+    1922  basic_battery
+          [from: road_to_56]
+    1922  basic_torpedo
+          [from: road_to_56]
+    1922  basic_naval_mines
+          [from: road_to_56]
+    1922  submarine_mine_laying
+          [from: road_to_56]
+    1922  mtg_transport
+          [from: road_to_56]
+    1922  transport
+          [from: road_to_56]
+    1936  basic_light_battery
+          [from: road_to_56]
+    1936  basic_light_shell
+          [from: road_to_56]
+    1936  basic_medium_battery
+          [from: road_to_56]
+    1936  basic_medium_shell
+          [from: road_to_56]
+    1936  basic_heavy_battery
+          [from: road_to_56]
+    1936  basic_heavy_shell
+          [from: road_to_56]
+    1936  magnetic_detonator (XP)
+          [from: road_to_56]
+    1936  improved_ship_torpedo_launcher
+          [from: road_to_56]
+    1936  damage_control_1 (XP)
+          [from: road_to_56]
+    1936  damage_control_2 (XP)
+          [from: road_to_56]
+    1936  damage_control_3 (XP)
+          [from: road_to_56]
+    1936  fire_control_methods_1 (XP)
+          [from: road_to_56]
+    1936  fire_control_methods_2 (XP)
+          [from: road_to_56]
+    1936  fire_control_methods_3 (XP)
+          [from: road_to_56]
+    1936  improved_naval_mines
+          [from: road_to_56]
+    1938  degaussing
+          [from: road_to_56]
+    1938  sp_multi_product_supply_ships (XP)
+          [from: road_to_56]
+    1939  improved_light_battery
+          [from: road_to_56]
+    1939  improved_medium_battery
+          [from: road_to_56]
+    1939  improved_heavy_battery
+          [from: road_to_56]
+    1939  basic_dp_light_battery
+          [from: road_to_56]
+    1939  improved_dp_light_battery
+          [from: road_to_56]
+    1940  advanced_ship_torpedo_launcher
+          [from: road_to_56]
+    1940  improved_submarine_mine_laying
+          [from: road_to_56]
+    1940  mtg_landing_craft
+          [from: road_to_56]
+    1940  landing_craft
+          [from: road_to_56]
+    1942  improved_light_shell
+          [from: road_to_56]
+    1942  improved_medium_shell
+          [from: road_to_56]
+    1942  improved_heavy_shell
+          [from: road_to_56]
+    1942  homing_torpedo (XP)
+          [from: road_to_56]
+    1942  advanced_naval_mines
+          [from: road_to_56]
+    1942  airdrop_mines
+          [from: road_to_56]
+    1942  airdrop_mines_bba
+          [from: road_to_56]
+    1942  sp_improved_support_ship (XP)
+          [from: road_to_56]
+    1942  sp_improved_repair_ship (XP)
+          [from: road_to_56]
+    1943  sp_standard_tenshioned_replenishment_alongside_method (XP)
+          [from: road_to_56]
+    1944  advanced_light_battery
+          [from: road_to_56]
+    1944  advanced_medium_battery
+          [from: road_to_56]
+    1944  advanced_heavy_battery
+          [from: road_to_56]
+    1944  advanced_dp_light_battery
+          [from: road_to_56]
+    1944  basic_dp_medium_battery
+          [from: road_to_56]
+    1944  modern_ship_torpedo_launcher
+          [from: road_to_56]
+    1944  airsweep_mines
+          [from: road_to_56]
+    1944  airsweep_mines_bba
+          [from: road_to_56]
+    1944  mtg_tank_landing_craft
+          [from: road_to_56]
+    1944  tank_landing_craft
+          [from: road_to_56]
+    1945  modern_naval_mines
+          [from: road_to_56]
+
+  [naval / submarines] — 14 techs
+    1922  early_ship_hull_submarine
+          [from: road_to_56]
+    1922  early_submarine
+          [from: road_to_56]
+    1936  basic_ship_hull_submarine
+          [from: road_to_56]
+    1936  basic_submarine
+          [from: road_to_56]
+    1940  improved_ship_hull_submarine
+          [from: road_to_56]
+    1940  basic_submarine_snorkel
+          [from: road_to_56]
+    1940  sp_aip_engine_improved_tech
+          [from: road_to_56]
+    1940  improved_submarine
+          [from: road_to_56]
+    1944  advanced_ship_hull_submarine
+          [from: road_to_56]
+    1944  improved_submarine_snorkel (XP)
+          [from: road_to_56]
+    1944  sp_aip_engine_advanced_tech
+          [from: road_to_56]
+    1944  advanced_submarine
+          [from: road_to_56]
+    1948  modern_ship_hull_submarine
+          [from: road_to_56]
+    1948  semi_modern_submarine
+          [from: road_to_56]
+
+UNMAPPED TECHS
+------------------------------------------------------------
+These techs could not be assigned to a branch.
+Add entries to custom_mappings.txt to include them.
+
+  BEL_chasseurs_ardennais
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  BEL_chasseurs_ardennais_ncns
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  CAN_frogmen_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  CUB_amphibious_training
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  DNZ_Special_Forces_Focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  DNZ_Special_Forces_Focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  ETH_improved_irregular_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  FRI_forest_training
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  FRI_forest_training
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  Flexible_AT
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry_extra_tech.txt
+  Flexible_AT
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  Flexible_AT
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  GER_assault_guns
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  HON_jungle_infantry
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  HON_jungle_infantry
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  HON_jungle_motor
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  HON_jungle_motor
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  HUN_light_infantry_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  JAP_lunge_mines
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  JAP_silver_wheels
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  Military_Police_Paramilitarization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  Military_Police_Paramilitarization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  NOR_mountain_men
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  NOR_mountain_men
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  PHI_battalion_combat_teams
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  POL_Heavy_Weight_Bomb_Ejector
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  POL_Heavy_Weight_Bomb_Ejector
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  POL_Man_Portable_Land_Mine_Detectors
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  POL_Man_Portable_Land_Mine_Detectors
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  POL_River_Flotillas
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  POL_River_Flotillas
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  POL_armor_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry_extra_tech.txt
+  POL_armor_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  POL_armor_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  POL_artillery_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry_extra_tech.txt
+  POL_artillery_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  POL_artillery_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  POL_engineers_special_forces_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry_extra_tech.txt
+  POL_engineers_special_forces_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  POL_engineers_special_forces_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  POL_partial_anti_aircraft_motorization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry_extra_tech.txt
+  POL_partial_anti_aircraft_motorization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  POL_partial_anti_aircraft_motorization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  POL_partial_anti_tank_motorization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry_extra_tech.txt
+  POL_partial_anti_tank_motorization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  POL_partial_anti_tank_motorization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  POL_urban_combat_specialization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry_extra_tech.txt
+  POL_urban_combat_specialization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  POL_urban_combat_specialization
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  PRU_llama_army_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  Reversible_Periscope
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  Reversible_Periscope
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  SWE_sami_support_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  SWE_svenska_jagare
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  SWI_mountaineer_paratroopers_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  Seaborne_High_Frequency_Directional_Radar
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  Seaborne_High_Frequency_Directional_Radar
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  TIB_mountainous_people_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  TOA_jungle_pioneers_support_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  ToA_river_boats_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  USA_army_rangers
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  USA_bangalore_torpedo
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  USA_walkie_talkies
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  advanced_modern_tank_turret_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  bicycle_infantry
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  blackshirt_assault_battalion_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  camelry
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  camelry_expertise
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  camicie_nere_security_militias
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\support.txt
+  coastal_defense_ships
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  commercial_nuclear_reactor_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  cruiser_submarines
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  dare_to_die_corps
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  dare_to_die_corps
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  desert_training_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  elephantry
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  flying_boat
+    categories: ['maritime', 'air_equipment']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\air_techs.txt
+  flying_boat1
+    categories: ['maritime', 'air_equipment']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\air_techs.txt
+  flying_boat2
+    categories: ['maritime', 'air_equipment']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\air_techs.txt
+  flying_boat3
+    categories: ['maritime', 'air_equipment']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\air_techs.txt
+  good_old_new_ways
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  hills_training_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  improved_militia
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  jungle_training_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  jungle_warfare
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  land_multi_charge_large_caliber_gun_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  lar_decryption_bonus_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\electronic_mechanical_engineering.txt
+  long_range_patrol_support_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  lotta_svard_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  masters_of_the_steppe
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  midget_submarines
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  militia_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  molotov_cocktails_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  motti_warfare
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  motti_warfare
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  mountain_defensive_training
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  mountain_gun
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\artillery.txt
+  mountain_warfare
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  mountain_warfare
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  mountain_warfare_militias_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  optimized_infantry_formations
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  panzerschiffe
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  penal_infantry
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  photo_reconnaisance
+    categories: ['air_equipment', 'plane_modules_tech', 'mio_cat_all_medium_aircraft_and_modules']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\bba_air_techs.txt
+  pre_dreadnoughts
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  preserve
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  preserve
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  r56_USA_train_side_tanks
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  r56_fido_tech
+    categories: ['air_equipment']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_special_projects_techs.txt
+  r56_improved_iff_tech
+    categories: ['air_equipment']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_special_projects_techs.txt
+  r56_improved_optics_tech_1
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_special_projects_techs.txt
+  r56_improved_optics_tech_2
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_special_projects_techs.txt
+  r56_militia_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  r56_sp_helicopter_tech
+    categories: ['air_equipment']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_special_projects_techs.txt
+  sami_pathfinders_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  selva_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  selva_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  siege_artillery
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  sp_centrifugal_jet_tech
+    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  sp_naval_proximity_fuze_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_a
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_b
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_c
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_a
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_b
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_c
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_a
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_b
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  specialized_crews
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  strat_maritime1
+    categories: ['maritime', 'heavy_air', 'air_equipment', 'naval_air']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\air_techs.txt
+  strat_maritime2
+    categories: ['maritime', 'heavy_air', 'air_equipment', 'naval_air']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\air_techs.txt
+  strat_maritime3
+    categories: ['maritime', 'heavy_air', 'air_equipment', 'naval_air']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\air_techs.txt
+  stronghold_network_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  sturmtruppe_battalion_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  suicide_charge
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\bba_air_techs.txt
+  suicide_craft
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\air_techs.txt
+  technical_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry_extra_tech.txt
+  technical_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_country_techs.txt
+  technical_training_focus
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\r56_techs.txt
+  torpedo_cruiser
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\naval.txt
+  torpedo_cruiser_mtg
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\MTG_naval.txt
+  transport_plane2
+    categories: ['medium_air', 'air_equipment', 'heavy_air']
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\air_techs.txt
+  uranium_tipped_bullets
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  urban_training_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt
+  winter_logistics_support_tech
+    categories: []
+    source: road_to_56 / E:\SteamLibrary\steamapps\workshop\content\394360\820260968\common\technologies\infantry.txt

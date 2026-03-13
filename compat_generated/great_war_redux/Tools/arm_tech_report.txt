@@ -1,0 +1,1279 @@
+ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+============================================================
+
+Total techs parsed:    738
+Successfully mapped:   634
+Unmapped (unknown):    66
+
+BRANCH SUMMARY
+----------------------------------------
+  air                              89 techs
+  industry_electronics            131 techs
+  land                            271 techs
+  naval                           143 techs
+
+CATEGORY DETAIL
+------------------------------------------------------------
+
+  [air / cas] — 13 techs
+    1914  aerial_bombs
+          [from: great_war_redux]
+    1918  CAS1
+          [from: great_war_redux]
+    1919  CAS2
+          [from: great_war_redux]
+    1922  early_bombs
+    1936  cv_CAS1
+    1936  armor_piercing_bombs
+    1936  air_torpedoe_1
+    1940  cv_CAS2
+    1940  heavy_bombs
+    1940  air_torpedoe_2
+    1944  CAS3
+    1944  cv_CAS3
+    1944  air_torpedoe_3
+
+  [air / fighters] — 37 techs
+    1910  aircraft_engine
+          [from: great_war_redux]
+    1910  scout_plane
+          [from: great_war_redux]
+    1914  synchronizer
+          [from: great_war_redux]
+    1914  turbocharger
+          [from: great_war_redux]
+    1914  scout_plane2
+          [from: great_war_redux]
+    1915  fighter1
+          [from: great_war_redux]
+    1917  fighter2
+          [from: great_war_redux]
+    1918  scout_plane3
+          [from: great_war_redux]
+    1918  advanced_aircraft_design
+          [from: great_war_redux]
+    1919  fighter3
+          [from: great_war_redux]
+    1919  cv_fighter3
+          [from: great_war_redux]
+    1922  aa_lmg
+    1922  engines_1
+    1926  iw_small_airframe
+    1933  early_fighter
+    1933  cv_early_fighter
+    1936  cv_fighter1
+    1936  scout_plane1
+    1936  basic_small_airframe
+    1936  engines_2
+    1936  range_improvements
+    1936  aircraft_construction
+    1939  survivability_studies
+    1939  aa_hmg
+    1939  aa_cannon_1
+    1940  cv_fighter2
+    1940  improved_small_airframe
+    1940  engines_3
+    1943  aa_cannon_2
+    1944  advanced_small_airframe
+    1944  engines_4
+    1945  jet_fighter1
+    1945  modern_small_airframe
+    1945  aa_cannon_3
+    1950  jet_fighter2
+    1950  supersonic_fighter1
+    1950  supersonic_small_airframe
+
+  [air / heavy_fighters] — 8 techs
+    1926  iw_medium_airframe
+    1936  heavy_fighter1
+    1936  basic_medium_airframe
+    1940  heavy_fighter2
+    1940  improved_medium_airframe
+    1944  heavy_fighter3
+    1944  advanced_medium_airframe
+    1945  modern_medium_airframe
+
+  [air / naval_bombers] — 7 techs
+    1916  seaplane1
+          [from: great_war_redux]
+    1916  naval_bomber1
+          [from: great_war_redux]
+    1918  naval_bomber2
+          [from: great_war_redux]
+    1936  cv_naval_bomber1
+    1940  cv_naval_bomber2
+    1944  naval_bomber3
+    1944  cv_naval_bomber3
+
+  [air / strategic_bombers] — 12 techs
+    1915  strategic_bomber1
+          [from: great_war_redux]
+    1917  strategic_bomber2
+          [from: great_war_redux]
+    1919  strategic_bomber3
+          [from: great_war_redux]
+    1926  iw_large_airframe
+    1936  basic_large_airframe
+    1940  improved_large_airframe
+    1942  reinforced_wings_mothership
+    1944  advanced_large_airframe
+    1944  miniature_fighters
+    1945  modern_large_airframe
+    1946  aerial_hangars
+    1950  jet_strategic_bomber1
+
+  [air / tactical_bombers] — 6 techs
+    1915  tactical_bomber1
+          [from: great_war_redux]
+    1917  tactical_bomber2
+          [from: great_war_redux]
+    1919  tactical_bomber3
+          [from: great_war_redux]
+    1933  early_bomber
+    1945  jet_tactical_bomber1
+    1950  jet_tactical_bomber2
+
+  [air / transport] — 6 techs
+    1933  early_transport_plane
+    1933  bba_early_transport_plane
+    1940  improved_transport_plane
+    1940  bba_improved_transport_plane
+    1945  bba_strategic_airlifter
+    1948  strategic_airlifter
+
+  [industry_electronics / electronics] — 34 techs
+    1900  electrical_engineering
+          [from: great_war_redux]
+    1910  early_fire_control_system
+          [from: great_war_redux]
+    1910  generator_battery
+          [from: great_war_redux]
+    1912  radio
+          [from: great_war_redux]
+    1912  analytical_engine
+          [from: great_war_redux]
+    1914  amplitude_modulation
+          [from: great_war_redux]
+    1914  mechanical_integrators
+          [from: great_war_redux]
+    1914  basic_cryptography
+          [from: great_war_redux]
+    1914  basic_cryptanalysis
+          [from: great_war_redux]
+    1914  basic_fire_control_system
+          [from: great_war_redux]
+    1916  improved_fire_control_system
+          [from: great_war_redux]
+    1918  advanced_radio
+          [from: great_war_redux]
+    1918  electromechanical_adding_machine
+          [from: great_war_redux]
+    1918  advanced_cryptography
+          [from: great_war_redux]
+    1918  advanced_cryptanalysis
+          [from: great_war_redux]
+    1918  advanced_fire_control_system
+          [from: great_war_redux]
+    1918  advanced_generator
+          [from: great_war_redux]
+    1924  encryption_machine
+          [from: great_war_redux]
+    1924  decryption_machine
+          [from: great_war_redux]
+    1928  radio_detection
+          [from: great_war_redux]
+    1928  differential_analyzer
+          [from: great_war_redux]
+    1930  basic_electronic_engineering
+          [from: great_war_redux]
+    1936  electronic_mechanical_engineering
+    1936  mechanical_computing
+    1938  improved_radio
+    1938  computing_machine
+    1938  basic_encryption
+    1938  basic_decryption
+    1940  improved_computing_machine
+    1940  improved_encryption
+    1940  improved_decryption
+    1942  advanced_computing_machine
+    1942  advanced_encryption
+    1942  advanced_decryption
+
+  [industry_electronics / industry] — 72 techs
+    1890  powder_type_b
+          [from: great_war_redux]
+    1900  early_machine_tools
+          [from: great_war_redux]
+    1900  construction0
+          [from: great_war_redux]
+    1910  haber_process
+          [from: great_war_redux]
+    1910  fortification1
+          [from: great_war_redux]
+    1910  construction1
+          [from: great_war_redux]
+    1910  double_base_propellant
+          [from: great_war_redux]
+    1910  stainless_steel
+          [from: great_war_redux]
+    1910  oil_production1
+          [from: great_war_redux]
+    1914  machine_tools2
+          [from: great_war_redux]
+    1914  improved_equipment_conversion
+          [from: great_war_redux]
+    1914  industrial_complex1
+          [from: great_war_redux]
+    1914  concentrated_industry2
+          [from: great_war_redux]
+    1914  dispersed_industry2
+          [from: great_war_redux]
+    1914  fortification2
+          [from: great_war_redux]
+    1914  construction2
+          [from: great_war_redux]
+    1914  synthetic_nitrogen
+          [from: great_war_redux]
+    1914  excavation2
+          [from: great_war_redux]
+    1914  oil_production2
+          [from: great_war_redux]
+    1914  fuel_silos
+          [from: great_war_redux]
+    1916  machine_tools3
+          [from: great_war_redux]
+    1916  advanced_equipment_conversion
+          [from: great_war_redux]
+    1916  industrial_complex2
+          [from: great_war_redux]
+    1916  concentrated_industry3
+          [from: great_war_redux]
+    1916  dispersed_industry3
+          [from: great_war_redux]
+    1916  fortification3
+          [from: great_war_redux]
+    1916  construction3
+          [from: great_war_redux]
+    1916  improved_synthetisation
+          [from: great_war_redux]
+    1916  excavation3
+          [from: great_war_redux]
+    1916  oil_production3
+          [from: great_war_redux]
+    1918  machine_tools4
+          [from: great_war_redux]
+    1918  industrial_complex3
+          [from: great_war_redux]
+    1918  concentrated_industry4
+          [from: great_war_redux]
+    1918  dispersed_industry4
+          [from: great_war_redux]
+    1918  construction4
+          [from: great_war_redux]
+    1918  advanced_synthetisation
+          [from: great_war_redux]
+    1918  excavation4
+          [from: great_war_redux]
+    1918  synth_oil_experiments
+          [from: great_war_redux]
+    1918  fuel_refining
+          [from: great_war_redux]
+    1920  machine_tools5
+          [from: great_war_redux]
+    1920  industrial_complex4
+          [from: great_war_redux]
+    1920  concentrated_industry5
+          [from: great_war_redux]
+    1920  dispersed_industry5
+          [from: great_war_redux]
+    1920  construction5
+          [from: great_war_redux]
+    1920  interwar_synthetisation
+          [from: great_war_redux]
+    1920  excavation5
+          [from: great_war_redux]
+    1920  oil_processing
+          [from: great_war_redux]
+    1920  rubber_processing
+          [from: great_war_redux]
+    1924  improved_oil_processing
+          [from: great_war_redux]
+    1924  improved_rubber_processing
+          [from: great_war_redux]
+    1924  fuel_refining2
+          [from: great_war_redux]
+    1936  basic_fortification_tech
+    1936  coastal_fort_tech_1
+    1936  basic_machine_tools
+    1936  concentrated_industry
+          [from: great_war_redux]
+    1936  dispersed_industry
+          [from: great_war_redux]
+    1936  excavation1
+          [from: great_war_redux]
+    1937  improved_machine_tools
+    1938  land_fort_tech_1
+    1939  advanced_machine_tools
+    1939  fuel_refining3
+    1940  land_fort_tech_2
+    1940  coastal_fort_tech_2
+    1941  assembly_line_production
+    1941  fuel_refining4
+    1941  advanced_oil_processing
+    1941  advanced_rubber_processing
+    1943  flexible_line
+    1943  streamlined_line
+    1943  fuel_refining5
+    1943  modern_oil_processing
+    1943  modern_rubber_processing
+
+  [industry_electronics / nuclear] — 6 techs
+    1940  atomic_research
+    1943  nuclear_reactor
+    1943  nuclear_reactor_heavy_water
+    1943  isotope_separation_centrifugal
+    1945  nukes
+    1950  thermonuclear_bombs
+
+  [industry_electronics / radar] — 4 techs
+    1938  cavity_magnatron
+    1940  centimetric_radar
+    1941  phased_array
+    1942  monopulse_radar
+
+  [industry_electronics / rockets] — 15 techs
+    1939  motorized_rocket_unit
+    1940  rocket_artillery
+    1941  rocket_artillery2
+    1942  rocket_artillery3
+    1942  experimental_rockets
+    1943  rocket_artillery4
+    1943  sp_rockets_improved_guidance
+    1944  rocket_engines
+    1944  sp_rockets_rocket_bomber
+    1944  jet_engines
+    1944  sp_rockets_dual_chamber_rocket_engine_1
+    1945  sp_rockets_improved_rocket_bomber
+    1945  improved_rocket_engines
+    1946  advanced_rocket_engines
+    1946  sp_rockets_dual_chamber_rocket_engine_2
+
+  [land / anti_air] — 12 techs
+    1915  early_antiair
+          [from: great_war_redux]
+    1916  early_antiair1
+          [from: great_war_redux]
+    1917  basic_antiair
+          [from: great_war_redux]
+    1918  basic_antiair1
+          [from: great_war_redux]
+    1918  anti_air_building1
+          [from: great_war_redux]
+    1920  anti_air_building2
+          [from: great_war_redux]
+    1936  interwar_antiair
+    1939  antiair1
+    1940  antiair2
+    1941  antiair3
+    1942  antiair4
+    1943  antiair5
+
+  [land / anti_tank] — 9 techs
+    1918  early_antitank
+          [from: great_war_redux]
+    1936  mountain_tanks
+    1936  interwar_antitank
+    1936  SWE_bofors_antitank_gun
+    1939  antitank1
+    1940  antitank2
+    1941  antitank3
+    1942  antitank4
+    1943  antitank5
+
+  [land / artillery] — 33 techs
+    1890  early_artillery
+          [from: great_war_redux]
+    1905  basic_field_gun
+          [from: great_war_redux]
+    1905  basic_howitzer
+          [from: great_war_redux]
+    1905  basic_mortars
+          [from: great_war_redux]
+    1910  prewar_field_gun
+          [from: great_war_redux]
+    1910  prewar_howitzer
+          [from: great_war_redux]
+    1914  improved_field_gun
+          [from: great_war_redux]
+    1914  improved_howitzer
+          [from: great_war_redux]
+    1914  improved_mortars
+          [from: great_war_redux]
+    1914  railway_gun
+          [from: great_war_redux]
+    1915  improved_field_gun1
+          [from: great_war_redux]
+    1915  improved_howitzer1
+          [from: great_war_redux]
+    1916  improved_field_gun2
+          [from: great_war_redux]
+    1916  advanced_mortars
+          [from: great_war_redux]
+    1916  gas_shell_tech
+          [from: great_war_redux]
+    1916  poisonous_gas_shell_tech
+          [from: great_war_redux]
+    1917  advanced_field_gun
+          [from: great_war_redux]
+    1917  advanced_howitzer
+          [from: great_war_redux]
+    1918  advanced_field_gun1
+          [from: great_war_redux]
+    1936  gw_artillery
+    1936  interwar_artillery
+    1939  artillery1
+    1939  basic_dp_light_battery
+    1940  artillery2
+    1940  sp_artillery_rocket_assisted_projectiles_tech
+    1940  sp_artillery_purpose_built_gun_motor_carriages_tech
+    1940  improved_dp_light_battery
+    1941  artillery3
+    1941  sp_shock_hardening_techniques
+    1942  artillery4
+    1942  sp_variable_time_fuze_shells
+    1943  artillery5
+    1944  advanced_dp_light_battery
+
+  [land / heavy_tanks] — 13 techs
+    1917  basic_heavy_tank
+          [from: great_war_redux]
+    1917  basic_heavy_tank_chassis
+          [from: great_war_redux]
+    1919  improved_heavy_tank
+          [from: great_war_redux]
+    1919  improved_heavy_tank_chassis
+          [from: great_war_redux]
+    1920  super_heavy_tank_chassis
+          [from: great_war_redux]
+    1920  super_heavy_tank
+          [from: great_war_redux]
+    1922  advanced_heavy_tank
+          [from: great_war_redux]
+    1922  advanced_heavy_tank_chassis
+          [from: great_war_redux]
+    1943  sp_armored_lc_naval_engine_conversion_tech
+    1943  sp_armored_lc_transmission_improvements_tech
+    1943  sp_armored_lc_specialized_field_manuals_tech
+    1943  sp_armored_lc_high_impact_obliterator_cannon_tech
+    1945  sp_armored_lc_weapon_fire_control_tech
+
+  [land / infantry] — 43 techs
+    1890  infantry_weapons
+          [from: great_war_redux]
+    1890  machine_guns
+          [from: great_war_redux]
+    1904  early_grenades
+          [from: great_war_redux]
+    1905  infantry_weapons1
+          [from: great_war_redux]
+    1905  support_weapons
+          [from: great_war_redux]
+    1910  marines
+          [from: great_war_redux]
+    1910  tech_mountaineers
+          [from: great_war_redux]
+    1912  infantry_weapons2
+          [from: great_war_redux]
+    1912  basic_machine_guns
+          [from: great_war_redux]
+    1912  basic_grenades
+          [from: great_war_redux]
+    1912  tech_special_forces
+          [from: great_war_redux]
+    1914  improved_grenades
+          [from: great_war_redux]
+    1915  improved_infantry_weapons_2
+          [from: great_war_redux]
+    1915  support_weapons2
+          [from: great_war_redux]
+    1915  advanced_special_forces
+          [from: great_war_redux]
+    1915  improved_special_forces
+          [from: great_war_redux]
+    1916  improved_infantry_weapons
+          [from: great_war_redux]
+    1916  improved_machine_guns
+          [from: great_war_redux]
+    1916  marines2
+          [from: great_war_redux]
+    1916  tech_mountaineers2
+          [from: great_war_redux]
+    1916  advanced_grenades
+          [from: great_war_redux]
+    1917  infantry_at
+          [from: great_war_redux]
+    1917  advanced_infantry_weapons2
+          [from: great_war_redux]
+    1917  support_weapons3
+          [from: great_war_redux]
+    1917  extreme_environment_training
+          [from: great_war_redux]
+    1917  survival_training
+          [from: great_war_redux]
+    1918  advanced_infantry_weapons
+          [from: great_war_redux]
+    1918  advanced_machine_guns
+          [from: great_war_redux]
+    1920  infantry_at2
+          [from: great_war_redux]
+    1920  advanced_infantry_weapons3
+          [from: great_war_redux]
+    1920  support_weapons4
+          [from: great_war_redux]
+    1922  support_weapons5
+          [from: great_war_redux]
+    1922  marines3
+          [from: great_war_redux]
+    1922  tech_mountaineers3
+          [from: great_war_redux]
+    1922  elite_forces
+          [from: great_war_redux]
+    1924  advanced_infantry_weapons4
+          [from: great_war_redux]
+    1924  support_weapons6
+          [from: great_war_redux]
+    1936  paratroopers
+    1936  rangers_tech
+    1939  paratroopers2
+    1939  rangers_tech2
+    1943  paratroopers3
+    1943  rangers_tech3
+
+  [land / light_tanks] — 8 techs
+    1917  basic_light_tank
+          [from: great_war_redux]
+    1917  basic_light_tank_chassis
+          [from: great_war_redux]
+    1918  gwtank
+    1918  gwtank_chassis
+    1919  improved_light_tank
+          [from: great_war_redux]
+    1919  improved_light_tank_chassis
+          [from: great_war_redux]
+    1922  advanced_light_tank
+          [from: great_war_redux]
+    1922  advanced_light_tank_chassis
+          [from: great_war_redux]
+
+  [land / mechanised] — 5 techs
+    1940  mechanised_infantry
+    1941  amphibious_mechanized_infantry
+    1942  mechanised_infantry2
+    1943  amphibious_mechanized_infantry_2
+    1944  mechanised_infantry3
+
+  [land / medium_tanks] — 6 techs
+    1917  basic_medium_tank
+          [from: great_war_redux]
+    1917  basic_medium_tank_chassis
+          [from: great_war_redux]
+    1919  improved_medium_tank
+          [from: great_war_redux]
+    1919  improved_medium_tank_chassis
+          [from: great_war_redux]
+    1922  advanced_medium_tank
+          [from: great_war_redux]
+    1922  advanced_medium_tank_chassis
+          [from: great_war_redux]
+
+  [land / modern_tanks] — 2 techs
+    1945  main_battle_tank
+    1945  main_battle_tank_chassis
+
+  [land / motorised] — 3 techs
+    1914  tech_trucks
+          [from: great_war_redux]
+    1917  wartime_trucks
+          [from: great_war_redux]
+    1920  motorised_infantry
+          [from: great_war_redux]
+
+  [land / support] — 59 techs
+    1880  basic_railways
+          [from: great_war_redux]
+    1890  basic_train
+          [from: great_war_redux]
+    1900  narrow_gauge_railway
+          [from: great_war_redux]
+    1900  standard_gauge_railway
+          [from: great_war_redux]
+    1905  tech_support
+          [from: great_war_redux]
+    1910  electric_railway
+          [from: great_war_redux]
+    1910  tech_engineers
+          [from: great_war_redux]
+    1910  tech_pioneers
+          [from: great_war_redux]
+    1910  tech_recon
+          [from: great_war_redux]
+    1910  tech_rangers
+          [from: great_war_redux]
+    1910  tech_military_police
+          [from: great_war_redux]
+    1910  tech_maintenance_company
+          [from: great_war_redux]
+    1910  tech_field_hospital
+          [from: great_war_redux]
+    1910  tech_logistics_company
+          [from: great_war_redux]
+    1910  armored_train
+          [from: great_war_redux]
+    1914  flexible_rail_network
+          [from: great_war_redux]
+    1914  tech_engineers2
+          [from: great_war_redux]
+    1914  tech_recon2
+          [from: great_war_redux]
+    1914  tech_military_police2
+          [from: great_war_redux]
+    1914  tech_maintenance_company2
+          [from: great_war_redux]
+    1914  tech_field_hospital2
+          [from: great_war_redux]
+    1914  tech_logistics_company2
+          [from: great_war_redux]
+    1914  wartime_train
+          [from: great_war_redux]
+    1915  early_gas_mask
+          [from: great_war_redux]
+    1915  cylinder_gas_tech
+          [from: great_war_redux]
+    1915  poisonous_cylinder_gas_tech
+          [from: great_war_redux]
+    1916  diesel_electric_control_system
+          [from: great_war_redux]
+    1916  improved_gas_mask
+          [from: great_war_redux]
+    1916  tech_signal_company
+          [from: great_war_redux]
+    1917  combat_respirator
+          [from: great_war_redux]
+    1917  gas_projector_tech
+          [from: great_war_redux]
+    1917  poisonous_gas_projector_tech
+          [from: great_war_redux]
+    1917  tech_engineers3
+          [from: great_war_redux]
+    1917  tech_recon3
+          [from: great_war_redux]
+    1917  tech_military_police3
+          [from: great_war_redux]
+    1917  tech_maintenance_company3
+          [from: great_war_redux]
+    1917  tech_field_hospital3
+          [from: great_war_redux]
+    1917  tech_logistics_company3
+          [from: great_war_redux]
+    1918  triple_gauge_system
+          [from: great_war_redux]
+    1918  tech_signal_company2
+          [from: great_war_redux]
+    1920  maintenance_standard
+          [from: great_war_redux]
+    1922  tech_engineers4
+          [from: great_war_redux]
+    1922  tech_recon4
+          [from: great_war_redux]
+    1922  tech_military_police4
+          [from: great_war_redux]
+    1922  tech_maintenance_company4
+          [from: great_war_redux]
+    1922  tech_field_hospital4
+          [from: great_war_redux]
+    1922  tech_logistics_company4
+          [from: great_war_redux]
+    1922  tech_signal_company3
+          [from: great_war_redux]
+    1936  tech_recon_focus_bonus
+    1938  sp_armored_engineer_tech
+    1938  sp_armored_maintenance_tech
+    1938  sp_armored_signal_tech
+    1938  sp_helicopter_transport_pods_tech
+    1938  sp_helicopter_artillery_observers_tech
+    1938  sp_helicopter_med_evac_tech
+    1938  sp_armored_motorized_military_police_tech
+    1943  night_vision
+    1945  tech_signal_company4
+    1946  night_vision2
+
+  [land / tanks_generic] — 78 techs
+    1900  mechanical_engineering
+          [from: great_war_redux]
+    1910  magneto_ignition
+          [from: great_war_redux]
+    1912  coil_ignition
+          [from: great_war_redux]
+    1914  armored_car1
+    1914  distributor_based_ignition
+          [from: great_war_redux]
+    1914  tank_design
+          [from: great_war_redux]
+    1914  tech_armored_car_recon
+          [from: great_war_redux]
+    1914  basic_armored_car
+          [from: great_war_redux]
+    1914  basic_armored_car_chassis
+          [from: great_war_redux]
+    1916  improved_armored_car
+          [from: great_war_redux]
+    1916  improved_armored_car_chassis
+          [from: great_war_redux]
+    1917  basic_light_art
+          [from: great_war_redux]
+    1917  basic_medium_art
+          [from: great_war_redux]
+    1917  basic_heavy_art
+          [from: great_war_redux]
+    1917  turret_improvement
+          [from: great_war_redux]
+    1917  maintenance_optimisation
+          [from: great_war_redux]
+    1917  engine_tech_1
+          [from: great_war_redux]
+    1917  armor_tech_1
+          [from: great_war_redux]
+    1918  advanced_armored_car
+          [from: great_war_redux]
+    1918  multicylinder_engine
+          [from: great_war_redux]
+    1918  tank_classification
+          [from: great_war_redux]
+    1918  advanced_armored_car_chassis
+          [from: great_war_redux]
+    1918  engine_tech_2
+          [from: great_war_redux]
+    1918  armor_tech_2
+          [from: great_war_redux]
+    1918  fuhrer_turret_improvement
+          [from: great_war_redux]
+    1918  defensive_assets
+          [from: great_war_redux]
+    1919  improved_light_art
+          [from: great_war_redux]
+    1919  improved_medium_art
+          [from: great_war_redux]
+    1919  improved_heavy_art
+          [from: great_war_redux]
+    1919  multi_turret_design
+          [from: great_war_redux]
+    1919  expanded_hull
+          [from: great_war_redux]
+    1919  engine_tech_3
+          [from: great_war_redux]
+    1919  armor_tech_3
+          [from: great_war_redux]
+    1920  super_heavy_art
+          [from: great_war_redux]
+    1920  engine_tech_4
+          [from: great_war_redux]
+    1920  armor_tech_4
+          [from: great_war_redux]
+    1922  interwar_armored_car
+          [from: great_war_redux]
+    1922  interwar_armored_car_chassis
+          [from: great_war_redux]
+    1922  advanced_light_art
+          [from: great_war_redux]
+    1922  advanced_medium_art
+          [from: great_war_redux]
+    1922  advanced_heavy_art
+          [from: great_war_redux]
+    1922  periscope
+          [from: great_war_redux]
+    1924  tank_design_standartization_and_unification
+          [from: great_war_redux]
+    1934  basic_light_td
+    1934  basic_light_spaa
+    1934  basic_heavy_td
+    1934  basic_heavy_spaa
+    1936  improved_light_td
+    1936  improved_light_spaa
+    1936  JAP_lighter_tanks
+    1936  GER_heavy_armored_car
+    1936  NOR_rikstanken_tech
+    1938  amphibious_tank_chassis
+    1939  basic_medium_td
+    1939  basic_medium_spaa
+    1940  amphibious_tank
+    1940  armored_car2
+    1941  advanced_light_td
+    1941  advanced_light_spaa
+    1941  improved_medium_td
+    1941  improved_medium_spaa
+    1941  improved_heavy_td
+    1941  improved_heavy_spaa
+    1941  amphibious_drive
+    1941  sp_armored_advanced_flamethrower_tech
+    1942  amphibious_tank_2
+    1942  armored_car3
+    1942  armored_car_at_upgrade
+    1942  SWE_lynx_armored_car
+    1943  advanced_medium_td
+    1943  advanced_medium_spaa
+    1943  advanced_heavy_td
+    1943  advanced_heavy_spaa
+    1943  super_heavy_td
+    1943  super_heavy_spaa
+    1945  modern_td
+    1945  modern_art
+    1945  modern_spaa
+
+  [naval / battleships] — 21 techs
+    1880  ironclad_ship_hull_heavy
+          [from: great_war_redux]
+    1890  pre_dreadnought_ship_hull_heavy
+          [from: great_war_redux]
+    1904  early_ship_hull_heavy
+          [from: great_war_redux]
+    1908  basic_heavy_armor_scheme (XP)
+          [from: great_war_redux]
+    1910  basic_ship_hull_heavy
+          [from: great_war_redux]
+    1910  ship_hull_super_heavy
+          [from: great_war_redux]
+    1912  basic_medium_shell (XP)
+          [from: great_war_redux]
+    1912  basic_heavy_shell (XP)
+          [from: great_war_redux]
+    1914  improved_heavy_armor_scheme (XP)
+          [from: great_war_redux]
+    1916  improved_ship_hull_heavy
+          [from: great_war_redux]
+    1916  improved_medium_shell (XP)
+          [from: great_war_redux]
+    1916  improved_heavy_shell (XP)
+          [from: great_war_redux]
+    1922  early_battlecruiser
+    1922  early_battleship
+    1922  advanced_ship_hull_heavy
+          [from: great_war_redux]
+    1936  basic_battleship
+    1936  heavy_battleship
+    1940  basic_battlecruiser
+    1940  improved_battleship
+    1944  advanced_battleship
+    1944  heavy_battleship2
+
+  [naval / carriers] — 10 techs
+    1910  early_ship_hull_carrier
+          [from: great_war_redux]
+    1916  basic_ship_hull_carrier
+          [from: great_war_redux]
+    1922  early_carrier
+    1922  improved_ship_hull_carrier
+          [from: great_war_redux]
+    1936  basic_carrier
+    1940  improved_carrier
+    1942  sp_refined_pykrete
+    1943  advanced_ship_hull_carrier
+    1944  sp_ice_composite_runawayas
+    1944  advanced_carrier
+
+  [naval / destroyers] — 19 techs
+    1880  torpedo_boat_ship_hull_light
+          [from: great_war_redux]
+    1890  gunboat_ship_hull_light
+          [from: great_war_redux]
+    1904  early_ship_hull_light
+          [from: great_war_redux]
+    1904  smoke_generator
+          [from: great_war_redux]
+    1910  basic_ship_hull_light
+          [from: great_war_redux]
+    1914  basic_depth_charges (XP)
+          [from: great_war_redux]
+    1916  improved_ship_hull_light
+          [from: great_war_redux]
+    1916  sonar
+          [from: great_war_redux]
+    1922  early_destroyer
+    1922  advanced_ship_hull_light
+          [from: great_war_redux]
+    1922  improved_sonar
+          [from: great_war_redux]
+    1936  improved_depth_charges (XP)
+    1936  basic_destroyer
+    1939  advanced_depth_charges (XP)
+    1939  advanced_sonar
+    1940  improved_destroyer
+    1943  modern_depth_charges (XP)
+    1943  modern_sonar
+    1944  advanced_destroyer
+
+  [naval / heavy_cruisers] — 4 techs
+    1922  early_heavy_cruiser
+    1936  basic_heavy_cruiser
+    1940  improved_heavy_cruiser
+    1944  advanced_heavy_cruiser
+
+  [naval / light_cruisers] — 16 techs
+    1880  victorian_ship_hull_cruiser
+          [from: great_war_redux]
+    1890  early_ship_hull_cruiser
+          [from: great_war_redux]
+    1890  basic_armored_cruiser_armor_scheme (XP)
+          [from: great_war_redux]
+    1895  coastal_defense_ship_armor_scheme (XP)
+          [from: great_war_redux]
+    1904  basic_ship_hull_cruiser
+          [from: great_war_redux]
+    1908  improved_armored_cruiser_armor_scheme (XP)
+          [from: great_war_redux]
+    1908  basic_cruiser_armor_scheme (XP)
+          [from: great_war_redux]
+    1910  improved_ship_hull_cruiser
+          [from: great_war_redux]
+    1914  improved_cruiser_armor_scheme (XP)
+          [from: great_war_redux]
+    1916  advanced_ship_hull_cruiser
+          [from: great_war_redux]
+    1918  advanced_cruiser_armor_scheme (XP)
+          [from: great_war_redux]
+    1922  early_light_cruiser
+    1922  interwar_ship_hull_cruiser
+          [from: great_war_redux]
+    1936  basic_light_cruiser
+    1940  improved_light_cruiser
+    1944  advanced_light_cruiser
+
+  [naval / naval_support] — 61 techs
+    1880  ironclad_artillery
+          [from: great_war_redux]
+    1880  basic_secondary_battery
+          [from: great_war_redux]
+    1880  ironclad_coal_engine
+          [from: great_war_redux]
+    1880  early_torpedo_tubes
+          [from: great_war_redux]
+    1880  basic_naval_mines
+          [from: great_war_redux]
+    1904  basic_battery
+          [from: great_war_redux]
+    1904  basic_coal_engine
+          [from: great_war_redux]
+    1904  early_oil_engine
+          [from: great_war_redux]
+    1904  basic_torpedo
+          [from: great_war_redux]
+    1904  mtg_transport
+          [from: great_war_redux]
+    1905  improved_secondary_battery
+          [from: great_war_redux]
+    1910  airship
+          [from: great_war_redux]
+    1910  airship_bomber
+          [from: great_war_redux]
+    1910  basic_light_battery
+          [from: great_war_redux]
+    1910  basic_medium_battery
+          [from: great_war_redux]
+    1910  basic_heavy_battery
+          [from: great_war_redux]
+    1910  improved_coal_engine
+          [from: great_war_redux]
+    1910  basic_oil_engine
+          [from: great_war_redux]
+    1910  improved_ship_torpedo_launcher
+          [from: great_war_redux]
+    1910  damage_control_2 (XP)
+          [from: great_war_redux]
+    1912  basic_light_shell (XP)
+          [from: great_war_redux]
+    1912  improved_naval_mines
+          [from: great_war_redux]
+    1914  improved_light_battery
+          [from: great_war_redux]
+    1914  improved_medium_battery
+          [from: great_war_redux]
+    1914  improved_heavy_battery
+          [from: great_war_redux]
+    1914  improved_oil_engine
+          [from: great_war_redux]
+    1914  advanced_ship_torpedo_launcher
+          [from: great_war_redux]
+    1914  damage_control_3 (XP)
+          [from: great_war_redux]
+    1915  submarine_mine_laying
+          [from: great_war_redux]
+    1916  airship2
+          [from: great_war_redux]
+    1916  airship_bomber2
+          [from: great_war_redux]
+    1916  improved_light_shell (XP)
+          [from: great_war_redux]
+    1916  mtg_landing_craft
+          [from: great_war_redux]
+    1918  airship3
+          [from: great_war_redux]
+    1918  airship_bomber3
+          [from: great_war_redux]
+    1918  advanced_light_battery
+          [from: great_war_redux]
+    1918  advanced_medium_battery
+          [from: great_war_redux]
+    1918  advanced_heavy_battery
+          [from: great_war_redux]
+    1918  advanced_oil_engine
+          [from: great_war_redux]
+    1918  modern_ship_torpedo_launcher
+          [from: great_war_redux]
+    1918  advanced_naval_mines
+          [from: great_war_redux]
+    1922  transport
+    1936  magnetic_detonator (XP)
+    1936  damage_control_1 (XP)
+          [from: great_war_redux]
+    1936  fire_control_methods_1 (XP)
+          [from: great_war_redux]
+    1936  fire_control_methods_2 (XP)
+          [from: great_war_redux]
+    1936  fire_control_methods_3 (XP)
+          [from: great_war_redux]
+    1938  degaussing
+    1938  sp_multi_product_supply_ships (XP)
+    1940  improved_submarine_mine_laying
+    1940  landing_craft
+    1942  homing_torpedo (XP)
+    1942  airdrop_mines
+    1942  airdrop_mines_bba
+    1942  airsweep_mines
+    1942  airsweep_mines_bba
+    1942  sp_improved_support_ship (XP)
+    1942  sp_improved_repair_ship (XP)
+    1943  sp_standard_tenshioned_replenishment_alongside_method (XP)
+    1944  mtg_tank_landing_craft
+    1944  tank_landing_craft
+
+  [naval / submarines] — 12 techs
+    1904  early_ship_hull_submarine
+          [from: great_war_redux]
+    1910  basic_ship_hull_submarine
+          [from: great_war_redux]
+    1916  improved_ship_hull_submarine
+          [from: great_war_redux]
+    1916  basic_submarine_snorkel
+          [from: great_war_redux]
+    1922  early_submarine
+    1922  advanced_ship_hull_submarine
+          [from: great_war_redux]
+    1936  basic_submarine
+    1939  sp_aip_engine_improved_tech
+    1940  improved_submarine
+    1943  improved_submarine_snorkel (XP)
+    1943  sp_aip_engine_advanced_tech
+    1944  advanced_submarine
+
+UNMAPPED TECHS
+------------------------------------------------------------
+These techs could not be assigned to a branch.
+Add entries to custom_mappings.txt to include them.
+
+  BEL_chasseurs_ardennais
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  BEL_chasseurs_ardennais_ncns
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ETH_improved_irregular_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  HUN_light_infantry_tech
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  ITA_anti_fortification_groups_tech
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  ITA_arditi_tech
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  ITA_modernized_cavalry_tech
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  ITA_savari_tech
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  JAP_silver_wheels
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  PHI_battalion_combat_teams
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWE_sami_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWI_mountaineer_paratroopers_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  TOA_jungle_pioneers_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ToA_river_boats_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  advanced_modern_tank_turret_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  bicycle_infantry
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  blackshirt_assault_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camelry
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  camicie_nere_security_militias
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\support.txt
+  chemical_warfare_tech
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  coastal_defense_ships
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  commercial_nuclear_reactor_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  cruiser_submarines
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\MTG_naval.txt
+  desert_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  elephantry
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  faketech
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\air_techs.txt
+  hills_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_warfare
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  land_multi_charge_large_caliber_gun_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  lar_decryption_bonus_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\electronic_mechanical_engineering.txt
+  long_range_patrol_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  lotta_svard_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  midget_submarines
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  militia_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  molotov_cocktails_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_defensive_training
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_gun
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\artillery.txt
+  mountain_warfare
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  mountain_warfare_militias_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  obsolete_infantry_weapons
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\infantry.txt
+  panzerschiffe
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\MTG_naval.txt
+  penal_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  photo_reconnaisance
+    categories: ['air_equipment', 'plane_modules_tech', 'mio_cat_all_medium_aircraft_and_modules']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  pre_dreadnoughts
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sami_pathfinders_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  seaplane2
+    categories: ['naval_air', 'air_equipment', 'seaplane', 'mio_cat_all_light_aircraft_and_modules']
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\air_techs.txt
+  sp_centrifugal_jet_tech
+    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  sp_naval_proximity_fuze_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_a
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_b
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\MTG_naval.txt
+  stronghold_network_tech
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\special_projects_tech.txt
+  sturmtruppe_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  suicide_charge
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  suicide_craft
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\air_techs.txt
+  torpedo_cruiser
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\naval.txt
+  torpedo_cruiser_mtg
+    categories: []
+    source: great_war_redux / E:\SteamLibrary\steamapps\workshop\content\394360\3365515312\common\technologies\MTG_naval.txt
+  uranium_tipped_bullets
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  urban_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  winter_logistics_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt

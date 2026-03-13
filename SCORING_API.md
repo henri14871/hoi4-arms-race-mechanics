@@ -1,0 +1,242 @@
+# Arms Race Scoring & Tier System
+
+A drop-in power scoring and tier classification system for Hearts of Iron IV mods. Evaluates every country's global power, branch-specific military competence, and assigns a tier that other systems can key off.
+
+Use this if your mod needs to answer "how powerful is this country?" at runtime.
+
+---
+
+## Quick start
+
+Copy these files into your mod:
+
+```
+common/scripted_effects/arm_scoring.txt       # power & competence calculation
+common/scripted_effects/arm_evaluation.txt    # tier assignment, lag, category gating
+common/scripted_triggers/arm_triggers.txt     # helper triggers
+```
+
+Call from any country scope:
+
+```
+arm_calculate_global_power = yes        # sets arm_global_power
+arm_calculate_land_competence = yes     # sets arm_land_competence
+arm_calculate_air_competence = yes      # sets arm_air_competence
+arm_calculate_naval_competence = yes    # sets arm_naval_competence
+arm_calculate_industry_competence = yes # sets arm_industry_competence
+arm_assign_power_tier = yes             # sets arm_tier_index (0-5)
+```
+
+All variables are set on the country scope and persist until the next evaluation.
+
+---
+
+## Variables reference
+
+### Global power
+
+After calling `arm_calculate_global_power`:
+
+| Variable | Type | Description |
+|---|---|---|
+| `arm_global_power` | float | Sum of all five component scores |
+| `arm_economy_score` | float | Factories with diminishing returns |
+| `arm_science_score` | float | Research slots |
+| `arm_mobilization_score` | float | Battalions + deployed manpower |
+| `arm_resource_score` | float | Weighted resource access (capped at 40) |
+| `arm_war_posture_score` | float | Stability + war support + at-war bonus + political power |
+
+### Branch competence
+
+| Variable | Type | Description |
+|---|---|---|
+| `arm_land_competence` | float | Military factories + manpower + steel + tungsten + at-war bonus |
+| `arm_air_competence` | float | Military factories + aluminium + rubber + oil + research slots |
+| `arm_naval_competence` | float | Dockyards + oil + steel + chromium + research slots |
+| `arm_industry_competence` | float | Civilian factories + research slots + stability + resource breadth |
+
+### Tier assignment
+
+After calling `arm_assign_power_tier`:
+
+| Variable | Type | Description |
+|---|---|---|
+| `arm_tier_index` | int | 0–5, current power tier |
+| `arm_base_lag` | float | Base technology lag in years |
+| `arm_quarterly_cap` | int | Tech grants allowed per quarter |
+| `arm_tier_avg` | float | Expected average competence for this tier (used for bonus thresholds) |
+
+---
+
+## Power tiers
+
+| Index | Name | Power threshold | Promote at | Demote at | Base lag | Quarterly cap |
+|---|---|---|---|---|---|---|
+| 5 | Superpower | 220 | >225 | <215 | 0.0 | 6 |
+| 4 | Great Power | 150 | >155 | <145 | 0.5 | 5 |
+| 3 | Regional Power | 90 | >95 | <85 | 1.5 | 4 |
+| 2 | Minor Industrial | 45 | >50 | <40 | 3.0 | 3 |
+| 1 | Minor | 20 | >25 | <15 | 4.5 | 2 |
+| 0 | Micro | 0 | — | — | 6.0 | 1 |
+
+Hysteresis is +5 to promote, -5 to demote. A country at tier 3 with 88 power stays at tier 3 until it drops below 85.
+
+---
+
+## Scoring formulas
+
+### Economy score
+
+Each factory type uses diminishing returns: first 80 at full weight, 81–160 at half, 161+ at quarter.
+
+| Factory type | Weight |
+|---|---|
+| Civilian | 1.0 |
+| Military | 1.5 |
+| Dockyards | 1.2 |
+
+Example: 100 military factories = (80 + 20 * 0.5) * 1.5 = 135
+
+### Science score
+
+| Research slots | Score |
+|---|---|
+| 6+ | 90 |
+| 5 | 75 |
+| 4 | 60 |
+| 3 | 45 |
+| 2 | 30 |
+| 1 | 15 |
+
+### Mobilisation score
+
+- Battalions * 0.1, capped at 15
+- Deployed manpower thresholds: 1.5M = 30, 1M = 20, 500K = 10, 250K = 5, 100K = 2
+
+### Resource score (capped at 40 total)
+
+| Resource | Points per unit | Example: 80 units |
+|---|---|---|
+| Steel | 1 per 8 | 10 |
+| Aluminium | 1 per 5 | 16 (capped by thresholds) |
+| Tungsten | 1 per 4 | 20 |
+| Chromium | 1 per 4 | 20 |
+| Rubber | 1 per 4 | 20 |
+| Oil | 1 per 6 | 13 |
+
+Resources use threshold chains (not continuous math) for Clausewitz compatibility.
+
+### War posture score
+
+- Stability * 0.5 (max 50, threshold chain at 0.1 intervals)
+- War support * 0.3 (max 30, threshold chain at 0.1 intervals)
+- At war: +20
+- Political power: 400+ = 20, 300+ = 16, 200+ = 12, 100+ = 8, 50+ = 4
+
+---
+
+## Branch competence formulas
+
+### Land competence
+
+| Component | Formula | Cap |
+|---|---|---|
+| Military factories | First 60 full, rest * 0.5 | — |
+| Deployed manpower | Threshold chain (1M = 25, 800K = 20, ...) | 25 |
+| Steel | /10 threshold chain | 15 |
+| Tungsten | /6 threshold chain | 10 |
+| At war | +10 | 10 |
+
+### Air competence
+
+| Component | Formula | Cap |
+|---|---|---|
+| Military factories | (First 60 full, rest * 0.4) * 0.8 | — |
+| Aluminium | /5 threshold chain | 15 |
+| Rubber | /5 threshold chain | 10 |
+| Oil | /8 threshold chain | 10 |
+| Research slots | * 8 threshold chain | 48 |
+
+### Naval competence
+
+| Component | Formula | Cap |
+|---|---|---|
+| Dockyards | (First 30 full, rest * 1.0) * 2.0 | — |
+| Oil | /8 threshold chain | 10 |
+| Steel | /10 threshold chain | 10 |
+| Chromium | /5 threshold chain | 10 |
+| Research slots | * 5 threshold chain | 30 |
+
+### Industry competence
+
+| Component | Formula | Cap |
+|---|---|---|
+| Civilian factories | (First 60 full, rest * 0.4) * 0.8 | — |
+| Research slots | * 12 threshold chain | 72 |
+| Stability | * 0.3 threshold chain | 30 |
+| Resource breadth | +3 per resource with 8+ access | 18 |
+
+---
+
+## Triggers reference
+
+All triggers run in country scope.
+
+| Trigger | Returns true when |
+|---|---|
+| `arm_system_enabled` | ARM is not disabled by game rule |
+| `arm_country_eligible` | Country should be evaluated (not capitulated, has factories, AI or rule allows) |
+| `arm_is_in_faction_with_major` | In faction with a Great Power+ leader |
+| `arm_is_puppet_eligible` | Is subject and puppet-sharing rule not disabled |
+| `arm_is_desperation_eligible` | At war, losing territory, rule not disabled |
+| `arm_doctrine_allowed` | Doctrine auto-research permitted for this country |
+| `arm_is_defensive_war` | Enemy controls at least one core state |
+
+---
+
+## Using tier in your own mod
+
+The simplest integration — check `arm_tier_index` in your own triggers or effects:
+
+```
+# Give a bonus to Great Powers and above
+if = {
+    limit = { check_variable = { arm_tier_index > 3 } }
+    add_political_power = 50
+}
+```
+
+```
+# Scale an effect by tier
+if = {
+    limit = { check_variable = { arm_tier_index = 5 } }
+    add_stability = 0.05
+}
+else_if = {
+    limit = { check_variable = { arm_tier_index = 4 } }
+    add_stability = 0.03
+}
+```
+
+```
+# Gate a decision behind branch competence
+my_build_carriers_decision = {
+    available = {
+        check_variable = { arm_naval_competence > 60 }
+    }
+}
+```
+
+If ARM isn't loaded, `arm_tier_index` will be 0 (unset) and competence variables will be 0. Design your fallbacks accordingly.
+
+---
+
+## Dependencies
+
+None. The scoring system uses only vanilla triggers and variables — no DLC required, no other mods required. Remove the game rule checks from `arm_evaluation.txt` if you don't want the configurable rules.
+
+---
+
+## License
+
+Part of [Arms Race Mechanics](https://github.com/henri14871/hoi4-arms-race-mechanics). Free to use and adapt in your own mods.

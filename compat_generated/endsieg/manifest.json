@@ -1,0 +1,12 @@
+{
+  "workshop_id": "1532883122",
+  "slug": "endsieg",
+  "display_name": "EndsiegDEV",
+  "mode": "overhaul",
+  "preset": "endsieg",
+  "stats": {
+    "techs_total": 1021,
+    "unknown_total": 105,
+    "doctrine_total": 192
+  }
+}

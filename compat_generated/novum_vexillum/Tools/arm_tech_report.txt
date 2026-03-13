@@ -1,0 +1,1747 @@
+ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+============================================================
+
+Total techs parsed:    876
+Successfully mapped:   734
+Unmapped (unknown):    133
+
+BRANCH SUMMARY
+----------------------------------------
+  air                              91 techs
+  industry_electronics            142 techs
+  land                            337 techs
+  naval                           164 techs
+
+CATEGORY DETAIL
+------------------------------------------------------------
+
+  [air / cas] — 16 techs
+    1922  early_bombs
+    1936  armor_piercing_bombs
+    1936  air_torpedoe_1
+    1940  heavy_bombs
+    1940  air_torpedoe_2
+    1944  CAS3
+    1944  cv_CAS3
+    1944  air_torpedoe_3
+    1960  CAS1
+          [from: novum_vexillum]
+    1960  heli1
+          [from: novum_vexillum]
+    1960  iw_small_airframe
+          [from: novum_vexillum]
+    1960  iw_heli_airframe
+          [from: novum_vexillum]
+    1960  air_misc
+          [from: novum_vexillum]
+    1980  CAS2
+          [from: novum_vexillum]
+    2000  heli2
+          [from: novum_vexillum]
+    2000  basic_heli_airframe
+          [from: novum_vexillum]
+
+  [air / fighters] — 23 techs
+    1933  early_fighter
+    1933  cv_early_fighter
+    1936  scout_plane1
+    1936  range_improvements
+    1939  survivability_studies
+    1939  aa_hmg
+    1940  scout_plane2
+    1940  improved_small_airframe
+    1944  advanced_small_airframe
+    1945  jet_fighter1
+    1945  modern_small_airframe
+    1950  jet_fighter2
+    1950  supersonic_fighter1
+    1950  supersonic_small_airframe
+    1960  fighter1
+          [from: novum_vexillum]
+    1980  fighter2
+          [from: novum_vexillum]
+    1980  basic_small_airframe
+          [from: novum_vexillum]
+    2000  fighter3
+          [from: novum_vexillum]
+    2006  fighter4
+          [from: novum_vexillum]
+    2012  fighter5
+          [from: novum_vexillum]
+    2018  fighter6
+          [from: novum_vexillum]
+    2024  fighter7
+          [from: novum_vexillum]
+    2030  fighter8
+          [from: novum_vexillum]
+
+  [air / heavy_fighters] — 11 techs
+    1936  heavy_fighter1
+    1940  heavy_fighter2
+    1944  heavy_fighter3
+    1960  iw_medium_airframe
+          [from: novum_vexillum]
+    1980  basic_medium_airframe
+          [from: novum_vexillum]
+    2000  improved_medium_airframe
+          [from: novum_vexillum]
+    2006  advanced_medium_airframe
+          [from: novum_vexillum]
+    2012  modern_medium_airframe
+          [from: novum_vexillum]
+    2018  more_modern_medium_airframe
+          [from: novum_vexillum]
+    2024  near_future_medium_airframe
+          [from: novum_vexillum]
+    2030  future_medium_airframe
+          [from: novum_vexillum]
+
+  [air / naval_bombers] — 11 techs
+    1960  naval_bomber1
+          [from: novum_vexillum]
+    1960  iw_naval_airframe
+          [from: novum_vexillum]
+    1980  naval_bomber2
+          [from: novum_vexillum]
+    1980  basic_naval_airframe
+          [from: novum_vexillum]
+    2000  naval_bomber3
+          [from: novum_vexillum]
+    2000  improved_naval_airframe
+          [from: novum_vexillum]
+    2006  naval_bomber4
+          [from: novum_vexillum]
+    2006  advanced_naval_airframe
+          [from: novum_vexillum]
+    2012  naval_bomber5
+          [from: novum_vexillum]
+    2012  modern_naval_airframe
+          [from: novum_vexillum]
+    2024  naval_bomber6
+          [from: novum_vexillum]
+
+  [air / strategic_bombers] — 14 techs
+    1942  reinforced_wings_mothership
+    1944  miniature_fighters
+    1946  aerial_hangars
+    1950  jet_strategic_bomber1
+    1960  strategic_bomber1
+          [from: novum_vexillum]
+    1960  iw_large_airframe
+          [from: novum_vexillum]
+    1980  strategic_bomber2
+          [from: novum_vexillum]
+    1980  basic_large_airframe
+          [from: novum_vexillum]
+    2006  strategic_bomber3
+          [from: novum_vexillum]
+    2006  improved_large_airframe
+          [from: novum_vexillum]
+    2018  strategic_bomber4
+          [from: novum_vexillum]
+    2018  advanced_large_airframe
+          [from: novum_vexillum]
+    2024  strategic_bomber5
+          [from: novum_vexillum]
+    2024  modern_large_airframe
+          [from: novum_vexillum]
+
+  [air / tactical_bombers] — 10 techs
+    1933  early_bomber
+    1945  jet_tactical_bomber1
+    1950  jet_tactical_bomber2
+    2000  tactical_bomber1
+          [from: novum_vexillum]
+    2000  iw_uav_airframe
+          [from: novum_vexillum]
+    2006  tactical_bomber2
+          [from: novum_vexillum]
+    2006  basic_uav_airframe
+          [from: novum_vexillum]
+    2018  tactical_bomber3
+          [from: novum_vexillum]
+    2024  tactical_bomber4
+          [from: novum_vexillum]
+    2030  tactical_bomber5
+          [from: novum_vexillum]
+
+  [air / transport] — 6 techs
+    1933  early_transport_plane
+    1933  bba_early_transport_plane
+    1940  improved_transport_plane
+    1940  bba_improved_transport_plane
+    1945  bba_strategic_airlifter
+    1948  strategic_airlifter
+
+  [industry_electronics / electronics] — 21 techs
+    1936  basic_fire_control_system
+          [from: novum_vexillum]
+    1936  improved_fire_control_system
+          [from: novum_vexillum]
+    1936  advanced_fire_control_system
+          [from: novum_vexillum]
+    1936  near_future_fire_control_system
+          [from: novum_vexillum]
+    1936  future_fire_control_system
+          [from: novum_vexillum]
+    1938  improved_radio
+    1938  basic_encryption
+    1938  basic_decryption
+    1940  improved_encryption
+    1940  improved_decryption
+    1941  advanced_radio
+    1942  advanced_encryption
+    1942  advanced_decryption
+    1990  electronic_mechanical_engineering
+          [from: novum_vexillum]
+    2000  radio
+          [from: novum_vexillum]
+    2000  mechanical_computing
+          [from: novum_vexillum]
+    2002  computing_machine
+          [from: novum_vexillum]
+    2008  improved_computing_machine
+          [from: novum_vexillum]
+    2016  advanced_computing_machine
+          [from: novum_vexillum]
+    2024  near_future_computing_machine
+          [from: novum_vexillum]
+    2032  future_computing_machine
+          [from: novum_vexillum]
+
+  [industry_electronics / industry] — 86 techs
+    1936  basic_fortification_tech
+    1936  coastal_fort_tech_1
+    1936  excavation1
+          [from: novum_vexillum]
+    1938  land_fort_tech_1
+    1940  land_fort_tech_2
+    1940  coastal_fort_tech_2
+    2000  basic_machine_tools
+          [from: novum_vexillum]
+    2000  factory_output_upgrade
+          [from: novum_vexillum]
+    2000  concentrated_industry
+          [from: novum_vexillum]
+    2000  dispersed_industry
+          [from: novum_vexillum]
+    2000  fuel_silos
+          [from: novum_vexillum]
+    2000  fuel_refining
+          [from: novum_vexillum]
+    2000  synth_oil_experiments
+          [from: novum_vexillum]
+    2000  recycling_center_initial
+          [from: novum_vexillum]
+    2000  construction1
+          [from: novum_vexillum]
+    2004  improved_machine_tools
+          [from: novum_vexillum]
+    2004  factory_output_upgrade2
+          [from: novum_vexillum]
+    2004  concentrated_industry2
+          [from: novum_vexillum]
+    2004  dispersed_industry2
+          [from: novum_vexillum]
+    2004  oil_processing
+          [from: novum_vexillum]
+    2004  recycling_center1a
+          [from: novum_vexillum]
+    2004  recycling_center1b
+          [from: novum_vexillum]
+    2004  construction2
+          [from: novum_vexillum]
+    2008  advanced_machine_tools
+          [from: novum_vexillum]
+    2008  improved_equipment_conversion
+          [from: novum_vexillum]
+    2008  factory_output_upgrade3
+          [from: novum_vexillum]
+    2008  concentrated_industry3
+          [from: novum_vexillum]
+    2008  dispersed_industry3
+          [from: novum_vexillum]
+    2008  fuel_refining2
+          [from: novum_vexillum]
+    2008  rubber_processing
+          [from: novum_vexillum]
+    2008  recycling_center_dod2
+          [from: novum_vexillum]
+    2008  construction3
+          [from: novum_vexillum]
+    2008  excavation2
+          [from: novum_vexillum]
+    2012  assembly_line_production
+          [from: novum_vexillum]
+    2012  factory_output_upgrade4
+          [from: novum_vexillum]
+    2012  concentrated_industry4
+          [from: novum_vexillum]
+    2012  dispersed_industry4
+          [from: novum_vexillum]
+    2012  improved_oil_processing
+          [from: novum_vexillum]
+    2012  recycling_center_dod3a
+          [from: novum_vexillum]
+    2012  recycling_center_dod3b
+          [from: novum_vexillum]
+    2012  construction4
+          [from: novum_vexillum]
+    2016  flexible_line
+          [from: novum_vexillum]
+    2016  streamlined_line
+          [from: novum_vexillum]
+    2016  factory_output_upgrade5
+          [from: novum_vexillum]
+    2016  concentrated_industry5
+          [from: novum_vexillum]
+    2016  dispersed_industry5
+          [from: novum_vexillum]
+    2016  fuel_refining3
+          [from: novum_vexillum]
+    2016  improved_rubber_processing
+          [from: novum_vexillum]
+    2016  recycling_center_dod4
+          [from: novum_vexillum]
+    2016  construction5
+          [from: novum_vexillum]
+    2016  excavation3
+          [from: novum_vexillum]
+    2020  industrial_software
+          [from: novum_vexillum]
+    2020  factory_output_upgrade6
+          [from: novum_vexillum]
+    2020  concentrated_industry6
+          [from: novum_vexillum]
+    2020  dispersed_industry6
+          [from: novum_vexillum]
+    2020  advanced_oil_processing
+          [from: novum_vexillum]
+    2020  recycling_center_dod5a
+          [from: novum_vexillum]
+    2020  recycling_center_dod5b
+          [from: novum_vexillum]
+    2020  construction6
+          [from: novum_vexillum]
+    2024  industrial_software2
+          [from: novum_vexillum]
+    2024  advanced_equipment_conversion
+          [from: novum_vexillum]
+    2024  factory_output_upgrade7
+          [from: novum_vexillum]
+    2024  concentrated_industry7
+          [from: novum_vexillum]
+    2024  dispersed_industry7
+          [from: novum_vexillum]
+    2024  fuel_refining4
+          [from: novum_vexillum]
+    2024  advanced_rubber_processing
+          [from: novum_vexillum]
+    2024  recycling_center_dod6
+          [from: novum_vexillum]
+    2024  construction7
+          [from: novum_vexillum]
+    2024  excavation4
+          [from: novum_vexillum]
+    2028  industrial_software3
+          [from: novum_vexillum]
+    2028  factory_output_upgrade8
+          [from: novum_vexillum]
+    2028  concentrated_industry8
+          [from: novum_vexillum]
+    2028  dispersed_industry8
+          [from: novum_vexillum]
+    2028  modern_oil_processing
+          [from: novum_vexillum]
+    2028  recycling_center_dod7a
+          [from: novum_vexillum]
+    2028  recycling_center_dod7b
+          [from: novum_vexillum]
+    2028  construction8
+          [from: novum_vexillum]
+    2032  industrial_software4a
+          [from: novum_vexillum]
+    2032  industrial_software4b
+          [from: novum_vexillum]
+    2032  factory_output_upgrade9
+          [from: novum_vexillum]
+    2032  concentrated_industry9
+          [from: novum_vexillum]
+    2032  dispersed_industry9
+          [from: novum_vexillum]
+    2032  fuel_refining5
+          [from: novum_vexillum]
+    2032  modern_rubber_processing
+          [from: novum_vexillum]
+    2032  construction9
+          [from: novum_vexillum]
+    2032  excavation5
+          [from: novum_vexillum]
+
+  [industry_electronics / nuclear] — 7 techs
+    1943  isotope_separation_centrifugal
+          [from: novum_vexillum]
+    1943  nuclear_reactor_heavy_water
+          [from: novum_vexillum]
+    1943  hide_naval_facilities
+          [from: novum_vexillum]
+    1950  thermonuclear_bombs
+    2004  atomic_research
+          [from: novum_vexillum]
+    2008  nuclear_reactor
+          [from: novum_vexillum]
+    2012  nukes
+          [from: novum_vexillum]
+
+  [industry_electronics / radar] — 12 techs
+    1938  cavity_magnatron
+    1941  phased_array
+    1942  monopulse_radar
+    2002  radio_detection
+          [from: novum_vexillum]
+    2004  decimetric_radar
+          [from: novum_vexillum]
+    2008  improved_decimetric_radar
+          [from: novum_vexillum]
+    2012  centimetric_radar
+          [from: novum_vexillum]
+    2016  improved_centimetric_radar
+          [from: novum_vexillum]
+    2020  advanced_centimetric_radar
+          [from: novum_vexillum]
+    2024  basic_quantum_radar
+          [from: novum_vexillum]
+    2028  improved_quantum_radar
+          [from: novum_vexillum]
+    2032  advanced_quantum_radar
+          [from: novum_vexillum]
+
+  [industry_electronics / rockets] — 16 techs
+    1939  motorized_rocket_unit
+    1943  rocket_artillery4
+    1943  sp_rockets_improved_guidance
+    1944  rocket_engines
+    1944  sp_rockets_rocket_bomber
+    1944  jet_engines
+    1944  sp_rockets_dual_chamber_rocket_engine_1
+    1945  sp_rockets_improved_rocket_bomber
+    1945  improved_rocket_engines
+    1946  advanced_rocket_engines
+    1946  sp_rockets_dual_chamber_rocket_engine_2
+    1980  rocket_artillery
+          [from: novum_vexillum]
+    1980  experimental_rockets
+          [from: novum_vexillum]
+    2004  rocket_artillery2
+          [from: novum_vexillum]
+    2008  rocket_artillerya1
+          [from: novum_vexillum]
+    2016  rocket_artillery3
+          [from: novum_vexillum]
+
+  [land / anti_air] — 14 techs
+    1980  coldwar_antiair
+          [from: novum_vexillum]
+    1980  sp_antiair0
+          [from: novum_vexillum]
+    2000  interwar_antiair
+          [from: novum_vexillum]
+    2000  sp_antiair1
+          [from: novum_vexillum]
+    2004  antiair1
+          [from: novum_vexillum]
+    2008  antiair2
+          [from: novum_vexillum]
+    2012  antiair3
+          [from: novum_vexillum]
+    2012  sp_antiair2
+          [from: novum_vexillum]
+    2016  antiair4
+          [from: novum_vexillum]
+    2020  antiair5
+          [from: novum_vexillum]
+    2024  antiair6
+          [from: novum_vexillum]
+    2024  sp_antiair3
+          [from: novum_vexillum]
+    2028  antiair7
+          [from: novum_vexillum]
+    2032  antiair8
+          [from: novum_vexillum]
+
+  [land / anti_tank] — 12 techs
+    1936  mountain_tanks
+    1936  SWE_bofors_antitank_gun
+    1980  coldwar_antitank
+          [from: novum_vexillum]
+    2000  interwar_antitank
+          [from: novum_vexillum]
+    2004  antitank1
+          [from: novum_vexillum]
+    2008  antitank2
+          [from: novum_vexillum]
+    2012  antitank3
+          [from: novum_vexillum]
+    2016  antitank4
+          [from: novum_vexillum]
+    2020  antitank5
+          [from: novum_vexillum]
+    2024  antitank6
+          [from: novum_vexillum]
+    2028  antitank7
+          [from: novum_vexillum]
+    2032  antitank8
+          [from: novum_vexillum]
+
+  [land / artillery] — 20 techs
+    1936  railway_gun
+    1936  coldwar_artillery
+          [from: novum_vexillum]
+    1939  artillery1
+    1939  basic_dp_light_battery
+    1940  sp_artillery_rocket_assisted_projectiles_tech
+    1940  sp_artillery_purpose_built_gun_motor_carriages_tech
+    1940  improved_dp_light_battery
+    1941  artillery3
+    1941  sp_shock_hardening_techniques
+    1942  sp_variable_time_fuze_shells
+    1943  artillery5
+    1944  advanced_dp_light_battery
+    2000  gw_artillery
+          [from: novum_vexillum]
+    2000  sp_artillery1
+          [from: novum_vexillum]
+    2004  interwar_artillery
+          [from: novum_vexillum]
+    2008  artillery2
+          [from: novum_vexillum]
+    2012  sp_artillery2
+          [from: novum_vexillum]
+    2016  artillery4
+          [from: novum_vexillum]
+    2024  artillery6
+          [from: novum_vexillum]
+    2024  sp_artillery3
+          [from: novum_vexillum]
+
+  [land / heavy_tanks] — 13 techs
+    1934  basic_heavy_tank
+    1934  basic_heavy_tank_chassis
+    1940  improved_heavy_tank_chassis
+    1941  improved_heavy_tank
+    1941  super_heavy_tank
+    1941  super_heavy_tank_chassis
+    1943  advanced_heavy_tank
+    1943  advanced_heavy_tank_chassis
+    1943  sp_armored_lc_naval_engine_conversion_tech
+    1943  sp_armored_lc_transmission_improvements_tech
+    1943  sp_armored_lc_specialized_field_manuals_tech
+    1943  sp_armored_lc_high_impact_obliterator_cannon_tech
+    1945  sp_armored_lc_weapon_fire_control_tech
+
+  [land / infantry] — 106 techs
+    1918  infantry_weapons
+    1936  rangers_tech
+    1936  special_forces_mountaineers (XP)
+          [from: novum_vexillum]
+    1936  ski_troops (XP)
+          [from: novum_vexillum]
+    1936  rangers (XP)
+          [from: novum_vexillum]
+    1936  special_forces_recon (XP)
+          [from: novum_vexillum]
+    1936  mountaineers_combat_1 (XP)
+          [from: novum_vexillum]
+    1936  mountaineers_combat_2 (XP)
+          [from: novum_vexillum]
+    1936  mountaineers_combat_3 (XP)
+          [from: novum_vexillum]
+    1936  mountaineers_keystone_1 (XP)
+          [from: novum_vexillum]
+    1936  mountaineers_keystone_2 (XP)
+          [from: novum_vexillum]
+    1936  special_forces_marines (XP)
+          [from: novum_vexillum]
+    1936  marines_jungle_troops (XP)
+          [from: novum_vexillum]
+    1936  marines_shore_parties (XP)
+          [from: novum_vexillum]
+    1936  marines_recon (XP)
+          [from: novum_vexillum]
+    1936  marines_commandoes (XP)
+          [from: novum_vexillum]
+    1936  marines_expeditionary (XP)
+          [from: novum_vexillum]
+    1936  marines_commandos_demolition (XP)
+          [from: novum_vexillum]
+    1936  marines_expeditionary_blowtorch (XP)
+          [from: novum_vexillum]
+    1936  marines_commandoes_mechanised (XP)
+          [from: novum_vexillum]
+    1936  marines_commandoes_mechanised_non_mtg (XP)
+          [from: novum_vexillum]
+    1936  marines_expeditionary_support (XP)
+          [from: novum_vexillum]
+    1936  special_forces_paratroopers (XP)
+          [from: novum_vexillum]
+    1936  paras_dispersed_drop (XP)
+          [from: novum_vexillum]
+    1936  paras_combat_drop (XP)
+          [from: novum_vexillum]
+    1936  paras_airborne_light_armor (XP)
+          [from: novum_vexillum]
+    1936  paras_combat_1 (XP)
+          [from: novum_vexillum]
+    1936  paras_combat_2 (XP)
+          [from: novum_vexillum]
+    1936  paras_bonus_1 (XP)
+          [from: novum_vexillum]
+    1936  paras_bonus_2 (XP)
+          [from: novum_vexillum]
+    1936  paras_keystone_1 (XP)
+          [from: novum_vexillum]
+    1936  paras_keystone_2 (XP)
+          [from: novum_vexillum]
+    1939  improved_infantry_weapons
+    1939  rangers_tech2
+    1940  improved_infantry_weapons_2
+    1942  infantry_at
+    1942  advanced_infantry_weapons
+    1943  infantry_at2
+    1943  rangers_tech3
+    1944  advanced_infantry_weapons2
+    1980  infantry_weapons1
+          [from: novum_vexillum]
+    1980  support_weapons
+          [from: novum_vexillum]
+    1980  body_armor
+          [from: novum_vexillum]
+    1980  camouflage
+          [from: novum_vexillum]
+    1980  drones
+          [from: novum_vexillum]
+    2000  infantry_rifle_upgrade
+          [from: novum_vexillum]
+    2000  support_weapons2
+          [from: novum_vexillum]
+    2000  body_armor2
+          [from: novum_vexillum]
+    2000  paratroopers
+          [from: novum_vexillum]
+    2000  marines
+          [from: novum_vexillum]
+    2000  tech_mountaineers
+          [from: novum_vexillum]
+    2000  tech_rangers
+          [from: novum_vexillum]
+    2002  infantry_weapons2
+          [from: novum_vexillum]
+    2002  infantry_rifle_upgrade2
+          [from: novum_vexillum]
+    2002  camouflage2
+          [from: novum_vexillum]
+    2002  drones2
+          [from: novum_vexillum]
+    2002  tech_special_forces
+          [from: novum_vexillum]
+    2004  upgraded_infantry_weapons1
+          [from: novum_vexillum]
+    2004  infantry_rifle_upgrade3
+          [from: novum_vexillum]
+    2004  support_weapons3
+          [from: novum_vexillum]
+    2004  body_armor3
+          [from: novum_vexillum]
+    2004  paratroopers2
+          [from: novum_vexillum]
+    2004  marines2
+          [from: novum_vexillum]
+    2004  tech_mountaineers2
+          [from: novum_vexillum]
+    2004  tech_rangers2
+          [from: novum_vexillum]
+    2004  advanced_special_forces
+          [from: novum_vexillum]
+    2004  improved_special_forces
+          [from: novum_vexillum]
+    2006  infantry_rifle_upgrade4
+          [from: novum_vexillum]
+    2006  camouflage3
+          [from: novum_vexillum]
+    2008  upgraded_infantry_weapons2
+          [from: novum_vexillum]
+    2008  infantry_rifle_upgrade5
+          [from: novum_vexillum]
+    2008  support_weapons4
+          [from: novum_vexillum]
+    2008  body_armor4
+          [from: novum_vexillum]
+    2008  droneslethal1
+          [from: novum_vexillum]
+    2008  extreme_environment_training
+          [from: novum_vexillum]
+    2008  survival_training
+          [from: novum_vexillum]
+    2012  support_weapons5
+          [from: novum_vexillum]
+    2012  body_armor5
+          [from: novum_vexillum]
+    2012  drones3
+          [from: novum_vexillum]
+    2012  elite_forces
+          [from: novum_vexillum]
+    2016  infantry_weapons3
+          [from: novum_vexillum]
+    2016  infantry_rifle_upgrade6
+          [from: novum_vexillum]
+    2016  camouflage4
+          [from: novum_vexillum]
+    2016  paratroopers3
+          [from: novum_vexillum]
+    2016  marines3
+          [from: novum_vexillum]
+    2016  tech_mountaineers3
+          [from: novum_vexillum]
+    2016  tech_rangers3
+          [from: novum_vexillum]
+    2018  infantry_rifle_upgrade7
+          [from: novum_vexillum]
+    2018  support_weapons6
+          [from: novum_vexillum]
+    2018  body_armor6
+          [from: novum_vexillum]
+    2018  elite_forces2
+          [from: novum_vexillum]
+    2020  upgraded_infantry_weapons3
+          [from: novum_vexillum]
+    2020  infantry_rifle_upgrade8
+          [from: novum_vexillum]
+    2020  camouflage5
+          [from: novum_vexillum]
+    2020  droneslethal2
+          [from: novum_vexillum]
+    2025  infantry_weapons4
+          [from: novum_vexillum]
+    2025  infantry_rifle_upgrade9
+          [from: novum_vexillum]
+    2025  support_weapons7
+          [from: novum_vexillum]
+    2025  body_armor7
+          [from: novum_vexillum]
+    2025  paratroopers4
+          [from: novum_vexillum]
+    2025  marines4
+          [from: novum_vexillum]
+    2025  tech_mountaineers4
+          [from: novum_vexillum]
+    2025  tech_rangers4
+          [from: novum_vexillum]
+    2030  infantry_weapons5
+          [from: novum_vexillum]
+    2030  support_weapons8
+          [from: novum_vexillum]
+    2030  camouflage6
+          [from: novum_vexillum]
+
+  [land / light_tanks] — 23 techs
+    1918  gwtank
+    1918  gwtank_chassis
+    1934  basic_light_tank
+    1934  basic_light_tank_chassis
+    1936  improved_light_tank
+    1936  improved_light_tank_chassis
+    1941  advanced_light_tank
+    1941  advanced_light_tank_chassis
+    1960  mechanised_infantry1
+          [from: novum_vexillum]
+    1960  IFV_chassis_80s
+          [from: novum_vexillum]
+    1980  light_tank1
+          [from: novum_vexillum]
+    1980  mechanised_infantry2
+          [from: novum_vexillum]
+    1980  IFV_chassis
+          [from: novum_vexillum]
+    2000  light_tank2
+          [from: novum_vexillum]
+    2000  IFV_chassis_00s
+          [from: novum_vexillum]
+    2006  light_tank3
+          [from: novum_vexillum]
+    2006  mechanised_infantry3
+          [from: novum_vexillum]
+    2010  IFV_chassis_10s
+          [from: novum_vexillum]
+    2012  light_tank4
+          [from: novum_vexillum]
+    2018  mechanised_infantry4
+          [from: novum_vexillum]
+    2020  IFV_chassis_20s
+          [from: novum_vexillum]
+    2024  light_tank5
+          [from: novum_vexillum]
+    2024  mechanised_infantry5
+          [from: novum_vexillum]
+
+  [land / mechanised] — 12 techs
+    1940  mechanised_infantry
+    1941  amphibious_mechanized_infantry
+    1943  amphibious_mechanized_infantry_2
+    1960  light_mechanized_infantry1
+          [from: novum_vexillum]
+    1980  light_mechanized_infantry2
+          [from: novum_vexillum]
+    2000  amphibious_mechanized_infantry1
+          [from: novum_vexillum]
+    2006  light_mechanized_infantry3
+          [from: novum_vexillum]
+    2012  light_mechanized_infantry4
+          [from: novum_vexillum]
+    2012  amphibious_mechanized_infantry2
+          [from: novum_vexillum]
+    2018  light_mechanized_infantry5
+          [from: novum_vexillum]
+    2024  amphibious_mechanized_infantry3
+          [from: novum_vexillum]
+    2030  light_mechanized_infantry6
+          [from: novum_vexillum]
+
+  [land / medium_tanks] — 20 techs
+    1938  basic_medium_tank_chassis
+    1939  basic_medium_tank
+    1940  improved_medium_tank_chassis
+    1941  improved_medium_tank
+    1943  advanced_medium_tank
+    1943  advanced_medium_tank_chassis
+    1960  main_battle_tank1
+          [from: novum_vexillum]
+    1980  main_battle_tank2
+          [from: novum_vexillum]
+    1980  main_battle_tank_chassis_80s
+          [from: novum_vexillum]
+    2000  main_battle_tank3
+          [from: novum_vexillum]
+    2000  main_battle_tank_chassis_00s
+          [from: novum_vexillum]
+    2006  main_battle_tank4
+          [from: novum_vexillum]
+    2010  main_battle_tank_chassis_10s
+          [from: novum_vexillum]
+    2012  main_battle_tank5
+          [from: novum_vexillum]
+    2018  main_battle_tank6
+          [from: novum_vexillum]
+    2020  main_battle_tank_chassis_20s
+          [from: novum_vexillum]
+    2024  main_battle_tank7
+          [from: novum_vexillum]
+    2030  main_battle_tank8
+          [from: novum_vexillum]
+    2030  main_battle_tank_chassis_30s
+          [from: novum_vexillum]
+    2030  IFV_chassis_30s
+          [from: novum_vexillum]
+
+  [land / modern_tanks] — 2 techs
+    1945  main_battle_tank
+    1960  main_battle_tank_chassis
+          [from: novum_vexillum]
+
+  [land / motorised] — 11 techs
+    1936  tech_trucks
+    1960  motorised_infantry
+          [from: novum_vexillum]
+    1980  motorised_infantry1
+          [from: novum_vexillum]
+    1980  nonsnb_technicality_tech
+          [from: novum_vexillum]
+    1980  technicality_tech
+          [from: novum_vexillum]
+    2000  motorised_infantry2
+          [from: novum_vexillum]
+    2000  nonnsb_technicality_tech2
+          [from: novum_vexillum]
+    2000  technicality_tech2
+          [from: novum_vexillum]
+    2012  motorised_infantry3
+          [from: novum_vexillum]
+    2018  motorised_infantry4
+          [from: novum_vexillum]
+    2030  motorised_infantry5
+          [from: novum_vexillum]
+
+  [land / support] — 46 techs
+    1936  armored_train
+    1936  tech_recon_focus_bonus
+    1938  sp_armored_engineer_tech
+    1938  sp_armored_maintenance_tech
+    1938  sp_armored_signal_tech
+    1938  sp_helicopter_transport_pods_tech
+    1938  sp_helicopter_artillery_observers_tech
+    1938  sp_helicopter_med_evac_tech
+    1938  sp_armored_motorized_military_police_tech
+    1939  wartime_train
+    1980  night_vision
+          [from: novum_vexillum]
+    1980  tech_support
+          [from: novum_vexillum]
+    1980  basic_train
+          [from: novum_vexillum]
+    2000  night_vision2
+          [from: novum_vexillum]
+    2000  tech_engineers
+          [from: novum_vexillum]
+    2000  tech_recon
+          [from: novum_vexillum]
+    2000  tech_military_police
+          [from: novum_vexillum]
+    2000  tech_maintenance_company
+          [from: novum_vexillum]
+    2000  tech_field_hospital
+          [from: novum_vexillum]
+    2000  tech_logistics_company
+          [from: novum_vexillum]
+    2000  tech_signal_company
+          [from: novum_vexillum]
+    2006  night_vision3
+          [from: novum_vexillum]
+    2006  tech_engineers2
+          [from: novum_vexillum]
+    2006  tech_recon2
+          [from: novum_vexillum]
+    2006  tech_military_police2
+          [from: novum_vexillum]
+    2006  tech_maintenance_company2
+          [from: novum_vexillum]
+    2006  tech_field_hospital2
+          [from: novum_vexillum]
+    2006  tech_logistics_company2
+          [from: novum_vexillum]
+    2006  tech_signal_company2
+          [from: novum_vexillum]
+    2012  night_vision4
+          [from: novum_vexillum]
+    2012  tech_engineers3
+          [from: novum_vexillum]
+    2012  tech_recon3
+          [from: novum_vexillum]
+    2012  tech_military_police3
+          [from: novum_vexillum]
+    2012  tech_maintenance_company3
+          [from: novum_vexillum]
+    2012  tech_field_hospital3
+          [from: novum_vexillum]
+    2012  tech_logistics_company3
+          [from: novum_vexillum]
+    2012  tech_signal_company3
+          [from: novum_vexillum]
+    2018  tech_engineers4
+          [from: novum_vexillum]
+    2018  tech_recon4
+          [from: novum_vexillum]
+    2018  tech_military_police4
+          [from: novum_vexillum]
+    2018  tech_maintenance_company4
+          [from: novum_vexillum]
+    2018  tech_field_hospital4
+          [from: novum_vexillum]
+    2018  tech_logistics_company4
+          [from: novum_vexillum]
+    2018  tech_signal_company4
+          [from: novum_vexillum]
+    2020  night_vision5
+          [from: novum_vexillum]
+    2030  night_vision6
+          [from: novum_vexillum]
+
+  [land / tanks_generic] — 58 techs
+    1914  armored_car1
+    1934  basic_light_td
+    1934  basic_light_art
+    1934  basic_light_spaa
+    1934  basic_heavy_td
+    1934  basic_heavy_art
+    1934  basic_heavy_spaa
+    1936  improved_light_td
+    1936  improved_light_art
+    1936  improved_light_spaa
+    1936  JAP_lighter_tanks
+    1936  GER_heavy_armored_car
+    1936  NOR_rikstanken_tech
+    1938  amphibious_tank_chassis
+    1939  basic_medium_td
+    1939  basic_medium_art
+    1939  basic_medium_spaa
+    1940  amphibious_tank
+    1940  armored_car2
+    1941  advanced_light_td
+    1941  advanced_light_art
+    1941  advanced_light_spaa
+    1941  improved_medium_td
+    1941  improved_medium_art
+    1941  improved_medium_spaa
+    1941  improved_heavy_td
+    1941  improved_heavy_art
+    1941  improved_heavy_spaa
+    1941  amphibious_drive
+    1941  sp_armored_advanced_flamethrower_tech
+    1942  amphibious_tank_2
+    1942  armored_car3
+    1942  armored_car_at_upgrade
+    1942  SWE_lynx_armored_car
+    1943  advanced_medium_td
+    1943  advanced_medium_art
+    1943  advanced_medium_spaa
+    1943  advanced_heavy_td
+    1943  advanced_heavy_art
+    1943  advanced_heavy_spaa
+    1943  super_heavy_td
+    1943  super_heavy_art
+    1943  super_heavy_spaa
+    1945  modern_td
+    1945  modern_art
+    1945  modern_spaa
+    1980  armor_tech_1
+          [from: novum_vexillum]
+    1980  engine_tech_1
+          [from: novum_vexillum]
+    2000  armor_tech_2
+          [from: novum_vexillum]
+    2000  engine_tech_2
+          [from: novum_vexillum]
+    2005  armor_tech_3
+          [from: novum_vexillum]
+    2005  engine_tech_3
+          [from: novum_vexillum]
+    2010  armor_tech_4
+          [from: novum_vexillum]
+    2010  engine_tech_4
+          [from: novum_vexillum]
+    2020  armor_tech_5
+          [from: novum_vexillum]
+    2020  engine_tech_5
+          [from: novum_vexillum]
+    2030  armor_tech_6
+          [from: novum_vexillum]
+    2030  engine_tech_6
+          [from: novum_vexillum]
+
+  [naval / battleships] — 20 techs
+    1922  early_battlecruiser
+    1936  ship_hull_super_heavy
+    1936  basic_heavy_armor_scheme (XP)
+    1936  improved_heavy_armor_scheme (XP)
+    1940  basic_battlecruiser
+    1980  early_ship_hull_heavy
+          [from: novum_vexillum]
+    1980  early_battleship
+          [from: novum_vexillum]
+    2000  basic_ship_hull_heavy
+          [from: novum_vexillum]
+    2000  basic_battleship
+          [from: novum_vexillum]
+    2000  heavy_battleship
+          [from: novum_vexillum]
+    2008  improved_ship_hull_heavy
+          [from: novum_vexillum]
+    2008  improved_battleship
+          [from: novum_vexillum]
+    2016  advanced_ship_hull_heavy
+          [from: novum_vexillum]
+    2016  advanced_battleship
+          [from: novum_vexillum]
+    2016  heavy_battleship2
+          [from: novum_vexillum]
+    2024  near_future_ship_hull_heavy
+          [from: novum_vexillum]
+    2024  near_future_battleship
+          [from: novum_vexillum]
+    2032  future_ship_hull_heavy
+          [from: novum_vexillum]
+    2032  future_battleship
+          [from: novum_vexillum]
+    2032  heavy_battleship3
+          [from: novum_vexillum]
+
+  [naval / carriers] — 20 techs
+    1942  sp_refined_pykrete
+    1944  sp_ice_composite_runawayas
+    1980  early_ship_hull_carrier
+          [from: novum_vexillum]
+    1980  ship_hull_fleet_carrier
+          [from: novum_vexillum]
+    1980  early_carrier
+          [from: novum_vexillum]
+    2000  basic_ship_hull_carrier
+          [from: novum_vexillum]
+    2000  basic_ship_hull_fleet_carrier
+          [from: novum_vexillum]
+    2000  basic_carrier
+          [from: novum_vexillum]
+    2008  improved_ship_hull_carrier
+          [from: novum_vexillum]
+    2008  improved_ship_hull_fleet_carrier
+          [from: novum_vexillum]
+    2008  improved_carrier
+          [from: novum_vexillum]
+    2016  advanced_ship_hull_carrier
+          [from: novum_vexillum]
+    2016  advanced_ship_hull_fleet_carrier
+          [from: novum_vexillum]
+    2016  advanced_carrier
+          [from: novum_vexillum]
+    2024  near_future_ship_hull_carrier
+          [from: novum_vexillum]
+    2024  near_future_ship_hull_fleet_carrier
+          [from: novum_vexillum]
+    2024  near_future_carrier
+          [from: novum_vexillum]
+    2032  future_ship_hull_carrier
+          [from: novum_vexillum]
+    2032  future_ship_hull_fleet_carrier
+          [from: novum_vexillum]
+    2032  future_carrier
+          [from: novum_vexillum]
+
+  [naval / destroyers] — 30 techs
+    1936  improved_depth_charges (XP)
+    1939  advanced_depth_charges (XP)
+    1943  modern_depth_charges (XP)
+    1943  modern_sonar
+    1980  early_ship_hull_light
+          [from: novum_vexillum]
+    1980  smoke_generator
+          [from: novum_vexillum]
+    1980  sonar
+          [from: novum_vexillum]
+    1980  early_destroyer
+          [from: novum_vexillum]
+    1990  basic_depth_charges (XP)
+          [from: novum_vexillum]
+    2000  basic_ship_hull_light
+          [from: novum_vexillum]
+    2000  basic_ship_hull_patrol_boat
+          [from: novum_vexillum]
+    2000  improved_sonar
+          [from: novum_vexillum]
+    2000  basic_destroyer
+          [from: novum_vexillum]
+    2000  basic_patrol_boat
+          [from: novum_vexillum]
+    2008  improved_ship_hull_light
+          [from: novum_vexillum]
+    2008  advanced_sonar
+          [from: novum_vexillum]
+    2008  improved_destroyer
+          [from: novum_vexillum]
+    2008  improved_patrol_boat
+          [from: novum_vexillum]
+    2016  advanced_ship_hull_light
+          [from: novum_vexillum]
+    2016  upgraded_sonar
+          [from: novum_vexillum]
+    2016  advanced_destroyer
+          [from: novum_vexillum]
+    2016  advanced_patrol_boat
+          [from: novum_vexillum]
+    2024  near_future_ship_hull_light
+          [from: novum_vexillum]
+    2024  near_future_sonar
+          [from: novum_vexillum]
+    2024  near_future_destroyer
+          [from: novum_vexillum]
+    2024  near_future_patrol_boat
+          [from: novum_vexillum]
+    2032  future_ship_hull_light
+          [from: novum_vexillum]
+    2032  future_sonar
+          [from: novum_vexillum]
+    2032  future_destroyer
+          [from: novum_vexillum]
+    2032  future_patrol_boat
+          [from: novum_vexillum]
+
+  [naval / heavy_cruisers] — 6 techs
+    1980  early_heavy_cruiser
+          [from: novum_vexillum]
+    2000  basic_heavy_cruiser
+          [from: novum_vexillum]
+    2008  improved_heavy_cruiser
+          [from: novum_vexillum]
+    2016  advanced_heavy_cruiser
+          [from: novum_vexillum]
+    2024  near_future_heavy_cruiser
+          [from: novum_vexillum]
+    2032  future_heavy_cruiser
+          [from: novum_vexillum]
+
+  [naval / light_cruisers] — 20 techs
+    1980  early_ship_hull_cruiser
+          [from: novum_vexillum]
+    1980  early_light_cruiser
+          [from: novum_vexillum]
+    2000  basic_ship_hull_cruiser
+          [from: novum_vexillum]
+    2000  basic_cruiser_armor_scheme (XP)
+          [from: novum_vexillum]
+    2000  improved_airplane_launcher
+          [from: novum_vexillum]
+    2000  basic_light_cruiser
+          [from: novum_vexillum]
+    2008  improved_ship_hull_cruiser
+          [from: novum_vexillum]
+    2008  improved_cruiser_armor_scheme (XP)
+          [from: novum_vexillum]
+    2008  improved_light_cruiser
+          [from: novum_vexillum]
+    2012  advanced_airplane_launcher
+          [from: novum_vexillum]
+    2016  advanced_ship_hull_cruiser
+          [from: novum_vexillum]
+    2016  advanced_cruiser_armor_scheme (XP)
+          [from: novum_vexillum]
+    2016  advanced_light_cruiser
+          [from: novum_vexillum]
+    2024  near_future_ship_hull_cruiser
+          [from: novum_vexillum]
+    2024  near_future_cruiser_armor_scheme (XP)
+          [from: novum_vexillum]
+    2024  near_future_airplane_launcher
+          [from: novum_vexillum]
+    2024  near_future_light_cruiser
+          [from: novum_vexillum]
+    2032  future_ship_hull_cruiser
+          [from: novum_vexillum]
+    2032  future_cruiser_armor_scheme (XP)
+          [from: novum_vexillum]
+    2032  future_light_cruiser
+          [from: novum_vexillum]
+
+  [naval / naval_support] — 46 techs
+    1922  submarine_mine_laying
+    1936  improved_naval_mines
+    1938  degaussing
+    1938  sp_multi_product_supply_ships (XP)
+    1940  improved_submarine_mine_laying
+    1942  airdrop_mines
+    1942  airdrop_mines_bba
+    1942  airsweep_mines
+    1942  airsweep_mines_bba
+    1942  sp_improved_support_ship (XP)
+    1942  sp_improved_repair_ship (XP)
+    1943  sp_standard_tenshioned_replenishment_alongside_method (XP)
+    1980  basic_torpedo
+          [from: novum_vexillum]
+    1980  basic_battery
+          [from: novum_vexillum]
+    1980  basic_naval_mines
+          [from: novum_vexillum]
+    1980  mtg_transport
+          [from: novum_vexillum]
+    1980  transport
+          [from: novum_vexillum]
+    1990  magnetic_detonator (XP)
+          [from: novum_vexillum]
+    1990  underway_replenishment_tech_1
+          [from: novum_vexillum]
+    2000  improved_ship_torpedo_launcher
+          [from: novum_vexillum]
+    2000  basic_light_battery
+          [from: novum_vexillum]
+    2000  basic_heavy_battery
+          [from: novum_vexillum]
+    2000  underway_replenishment_tech_2
+          [from: novum_vexillum]
+    2004  basic_light_shell (XP)
+          [from: novum_vexillum]
+    2004  basic_heavy_shell (XP)
+          [from: novum_vexillum]
+    2004  mtg_landing_craft
+          [from: novum_vexillum]
+    2004  landing_craft
+          [from: novum_vexillum]
+    2008  advanced_ship_torpedo_launcher
+          [from: novum_vexillum]
+    2008  improved_light_battery
+          [from: novum_vexillum]
+    2008  improved_heavy_battery
+          [from: novum_vexillum]
+    2008  advanced_naval_mines
+          [from: novum_vexillum]
+    2008  underway_replenishment_tech_3
+          [from: novum_vexillum]
+    2012  homing_torpedo (XP)
+          [from: novum_vexillum]
+    2012  mtg_tank_landing_craft
+          [from: novum_vexillum]
+    2012  tank_landing_craft
+          [from: novum_vexillum]
+    2016  modern_ship_torpedo_launcher
+          [from: novum_vexillum]
+    2016  advanced_light_battery
+          [from: novum_vexillum]
+    2016  advanced_heavy_battery
+          [from: novum_vexillum]
+    2020  improved_light_shell (XP)
+          [from: novum_vexillum]
+    2020  improved_heavy_shell (XP)
+          [from: novum_vexillum]
+    2024  near_future_ship_torpedo_launcher
+          [from: novum_vexillum]
+    2024  near_future_light_battery
+          [from: novum_vexillum]
+    2024  near_future_heavy_battery
+          [from: novum_vexillum]
+    2032  future_ship_torpedo_launcher
+          [from: novum_vexillum]
+    2032  future_light_battery
+          [from: novum_vexillum]
+    2032  future_heavy_battery
+          [from: novum_vexillum]
+
+  [naval / submarines] — 22 techs
+    1939  basic_submarine_snorkel
+    1939  sp_aip_engine_improved_tech
+    1943  improved_submarine_snorkel (XP)
+    1943  sp_aip_engine_advanced_tech
+    1980  early_ship_hull_submarine
+          [from: novum_vexillum]
+    1980  early_ship_hull_ballistic_submarine
+          [from: novum_vexillum]
+    1980  early_submarine
+          [from: novum_vexillum]
+    2000  basic_ship_hull_submarine
+          [from: novum_vexillum]
+    2000  basic_ship_hull_ballistic_submarine
+          [from: novum_vexillum]
+    2000  basic_submarine
+          [from: novum_vexillum]
+    2008  improved_ship_hull_submarine
+          [from: novum_vexillum]
+    2008  improved_ship_hull_ballistic_submarine
+          [from: novum_vexillum]
+    2008  improved_submarine
+          [from: novum_vexillum]
+    2016  advanced_ship_hull_submarine
+          [from: novum_vexillum]
+    2016  advanced_ship_hull_ballistic_submarine
+          [from: novum_vexillum]
+    2016  advanced_submarine
+          [from: novum_vexillum]
+    2024  near_future_ship_hull_submarine
+          [from: novum_vexillum]
+    2024  near_future_ship_hull_ballistic_submarine
+          [from: novum_vexillum]
+    2024  near_future_submarine
+          [from: novum_vexillum]
+    2032  future_ship_hull_submarine
+          [from: novum_vexillum]
+    2032  future_ship_hull_ballistic_submarine
+          [from: novum_vexillum]
+    2032  future_submarine
+          [from: novum_vexillum]
+
+UNMAPPED TECHS
+------------------------------------------------------------
+These techs could not be assigned to a branch.
+Add entries to custom_mappings.txt to include them.
+
+  Advanced_cas
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  BEL_chasseurs_ardennais
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  BEL_chasseurs_ardennais_ncns
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  Cold_war_cas
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  ETH_improved_irregular_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  HUN_light_infantry_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  JAP_silver_wheels
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  Modern_cas
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  PHI_battalion_combat_teams
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  POL_modern_sappers_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  SWE_sami_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWI_mountaineer_paratroopers_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  TOA_jungle_pioneers_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ToA_river_boats_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  aa_cannon_1
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  aa_cannon_2
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  aa_cannon_3
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  aa_lmg
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  advanced_asm
+    categories: ['naval_equipment', 'asw_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  advanced_modern_tank_turret_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  advanced_ship_hull_patrol_boat
+    categories: ['naval_equipment', 'pb_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  air_counter_measures
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  air_stealth
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  air_stealth_2
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  air_stealth_3
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  air_stealth_4
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  air_stealth_paint
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  air_stealth_paint_2
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  aircraft_construction
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  anti_tank_equiped_cavalry_secret_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  basic_asm
+    categories: ['naval_equipment', 'asw_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  basic_nuclear_reactors
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\special_projects_tech.txt
+  basic_secondary_battery
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  bicycle_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  blackshirt_assault_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camelry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camicie_nere_security_militias
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\support.txt
+  cavalry_infantry
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  child_soldier_infantry
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  coastal_defense_ships
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  commercial_nuclear_reactor_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\special_projects_tech.txt
+  cruiser_submarines
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  cv_CAS1
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_CAS2
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_fighter1
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_fighter2
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_fighter3
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_fighter4
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_fighter5
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_fighter6
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_fighter7
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_fighter8
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_naval_bomber1
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_naval_bomber2
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_naval_bomber3
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_naval_bomber4
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_naval_bomber5
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  cv_naval_bomber6
+    categories: ['naval_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  damage_control_1
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  damage_control_2
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  damage_control_3
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  desert_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  dp_secondary_battery
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  early_patrol_boat
+    categories: ['naval_equipment', 'pb_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\naval.txt
+  early_ship_hull_patrol_boat
+    categories: ['naval_equipment', 'pb_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  elephantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  engines_1
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  engines_2
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  engines_3
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  engines_4
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  engines_5
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  fire_control_methods_1
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  fire_control_methods_2
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  fire_control_methods_3
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  forest_warfare_secret_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  future_secondary_battery
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  future_ship_hull_patrol_boat
+    categories: ['naval_equipment', 'pb_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  hills_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  improved_asm
+    categories: ['naval_equipment', 'asw_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  improved_hospitals_secret_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  improved_secondary_battery
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  improved_ship_hull_patrol_boat
+    categories: ['naval_equipment', 'pb_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  jungle_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_warfare
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  land_multi_charge_large_caliber_gun_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\special_projects_tech.txt
+  lar_decryption_bonus_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\electronic_mechanical_engineering.txt
+  long_range_patrol_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  lotta_svard_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  midget_submarines
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  militia_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  modern_military_police
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  modern_tachanka
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  molotov_cocktails_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  motorcycle_infantry
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  mountain_defensive_training
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_gun
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  mountain_warfare
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  mountain_warfare_militias_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  near_future_asm
+    categories: ['naval_equipment', 'asw_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  near_future_secondary_battery
+    categories: ['naval_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval_Support.txt
+  near_future_ship_hull_patrol_boat
+    categories: ['naval_equipment', 'pb_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  panzerschiffe
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  penal_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  photo_reconnaisance
+    categories: ['air_equipment', 'plane_modules_tech', 'mio_cat_all_medium_aircraft_and_modules']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  pilot_assist
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  pilot_assist_2
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  pilot_assist_3
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  pilot_assist_4
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  pre_dreadnoughts
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  river_carrier_secret_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  sami_pathfinders_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  soviet_artillery_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  sp_centrifugal_jet_tech
+    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  sp_naval_proximity_fuze_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  stronghold_network_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\special_projects_tech.txt
+  sturmtruppe_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  suicide_charge
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\bba_air_techs.txt
+  suicide_craft
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\air_techs.txt
+  torpedo_cruiser
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\naval.txt
+  torpedo_cruiser_mtg
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\MTG_naval.txt
+  transport_plane2
+    categories: ['medium_air', 'air_equipment']
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\air_techs.txt
+  uranium_tipped_bullets
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  urban_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  urban_warfare_secret_tech
+    categories: []
+    source: novum_vexillum / E:\SteamLibrary\steamapps\workshop\content\394360\1827273767\common\technologies\secret_techs.txt
+  winter_logistics_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt

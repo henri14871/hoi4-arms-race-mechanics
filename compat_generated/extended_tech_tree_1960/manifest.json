@@ -1,0 +1,12 @@
+{
+  "workshop_id": "1778255798",
+  "slug": "extended_tech_tree_1960",
+  "display_name": "Extended Tech Tree 1960",
+  "mode": "expansion",
+  "preset": "extended_tech_tree_1960",
+  "stats": {
+    "techs_total": 766,
+    "unknown_total": 85,
+    "doctrine_total": 59
+  }
+}

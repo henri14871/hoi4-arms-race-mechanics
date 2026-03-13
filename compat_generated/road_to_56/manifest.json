@@ -1,0 +1,12 @@
+{
+  "workshop_id": "820260968",
+  "slug": "road_to_56",
+  "display_name": "The Road to 56",
+  "mode": "expansion",
+  "preset": "road_to_56",
+  "stats": {
+    "techs_total": 948,
+    "unknown_total": 137,
+    "doctrine_total": 67
+  }
+}

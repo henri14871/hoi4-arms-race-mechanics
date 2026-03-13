@@ -1,0 +1,103 @@
+###############################################################################
+# arm_grant.txt - Master Evaluation Orchestrator
+# Arms Race Mechanics mod
+#
+# Contains:
+#   arm_evaluate_and_grant  - main per-country evaluation pipeline
+#   arm_grant_doctrines     - doctrine granting (separate cap)
+#   arm_update_current_year - rebuilds global.arm_current_year from startup date + elapsed months
+###############################################################################
+
+# ---------------------------------------------------------------------------
+# arm_evaluate_and_grant
+# Runs in COUNTRY SCOPE. Called for each country during its bucket's
+# evaluation month.
+# ---------------------------------------------------------------------------
+arm_evaluate_and_grant = {
+
+    # Step 1: Calculate scores
+    arm_calculate_global_power = yes
+    arm_calculate_land_competence = yes
+    arm_calculate_air_competence = yes
+    arm_calculate_naval_competence = yes
+    arm_calculate_industry_competence = yes
+
+    # Step 1b: Apply historical bias if enabled
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+        }
+        arm_apply_historical_bias = yes
+    }
+
+    # Step 2: Assign tier using the active compatibility profile
+    arm_assign_power_tier_for_profile = yes
+
+    # Step 2b: Lock doctrine preferences after branch scores exist
+    arm_initialize_doctrine_paths_for_profile = yes
+
+    # Step 3: Assign allowed categories
+    arm_assign_allowed_categories = yes
+
+    # Step 4: Compute effective lag per branch
+    arm_compute_effective_lag = yes
+
+    # Step 5: Compute target years
+    arm_compute_target_years = yes
+
+    # Step 6: Update research speed spirits
+    arm_update_research_speed_spirit = yes
+
+    # Step 7: Reset grant counter
+    set_variable = { arm_grant_counter = 0 }
+
+    # Step 8: Grant technologies using the active compatibility profile
+    arm_grant_techs_for_profile = yes
+
+    # Step 9: Doctrines (if the active profile supports them)
+    arm_grant_doctrines_for_profile = yes
+}
+
+# ---------------------------------------------------------------------------
+# arm_grant_doctrines
+# Handles doctrine granting with a separate cap of 1 per evaluation.
+# ---------------------------------------------------------------------------
+arm_grant_doctrines = {
+    set_variable = { arm_doctrine_grant_counter = 0 }
+
+    if = {
+        limit = {
+            check_variable = { arm_land_competence >= arm_air_competence }
+            check_variable = { arm_land_competence >= arm_naval_competence }
+        }
+        arm_grant_doctrine_land_doctrine = yes
+        arm_grant_doctrine_air_doctrine = yes
+        arm_grant_doctrine_naval_doctrine = yes
+    }
+    else_if = {
+        limit = {
+            check_variable = { arm_air_competence >= arm_naval_competence }
+        }
+        arm_grant_doctrine_air_doctrine = yes
+        arm_grant_doctrine_land_doctrine = yes
+        arm_grant_doctrine_naval_doctrine = yes
+    }
+    else = {
+        arm_grant_doctrine_naval_doctrine = yes
+        arm_grant_doctrine_land_doctrine = yes
+        arm_grant_doctrine_air_doctrine = yes
+    }
+}
+
+# ---------------------------------------------------------------------------
+# arm_update_current_year
+# Rebuilds a fractional in-game year from startup year + elapsed months.
+# ---------------------------------------------------------------------------
+arm_update_current_year = {
+    set_temp_variable = { arm_elapsed_years = global.arm_start_month_offset }
+    add_to_temp_variable = { arm_elapsed_years = global.arm_elapsed_months }
+    divide_variable = { var = arm_elapsed_years value = 12 }
+
+    set_variable = { global.arm_current_year = global.arm_start_year }
+    add_to_variable = { global.arm_current_year = arm_elapsed_years }
+}

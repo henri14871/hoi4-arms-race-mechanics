@@ -1,0 +1,2015 @@
+ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+============================================================
+
+Total techs parsed:    986
+Successfully mapped:   862
+Unmapped (unknown):    115
+
+BRANCH SUMMARY
+----------------------------------------
+  air                             126 techs
+  industry_electronics            161 techs
+  land                            339 techs
+  naval                           236 techs
+
+CATEGORY DETAIL
+------------------------------------------------------------
+
+  [air / cas] — 12 techs
+    1922  early_bombs
+    1936  armor_piercing_bombs
+    1936  air_torpedoe_1
+    1936  CAS1
+          [from: great_war]
+    1936  bba_CAS1
+          [from: great_war]
+    1940  heavy_bombs
+    1940  air_torpedoe_2
+    1940  CAS2
+          [from: great_war]
+    1940  bba_CAS2
+          [from: great_war]
+    1944  air_torpedoe_3
+    1944  CAS3
+          [from: great_war]
+    1944  bba_CAS3
+          [from: great_war]
+
+  [air / fighters] — 47 techs
+    1912  ww1_fighter1
+          [from: great_war]
+    1912  ww1_fighter1b
+          [from: great_war]
+    1912  bba_ww1_fighter1
+          [from: great_war]
+    1912  bba_ww1_fighter1b
+          [from: great_war]
+    1915  ww1_fighter2
+          [from: great_war]
+    1915  ww1_fighter2b
+          [from: great_war]
+    1915  bba_ww1_fighter2
+          [from: great_war]
+    1915  bba_ww1_fighter2b
+          [from: great_war]
+    1918  ww1_fighter3
+          [from: great_war]
+    1918  bba_ww1_fighter3
+          [from: great_war]
+    1919  ww1_fighter4
+          [from: great_war]
+    1919  bba_ww1_fighter4
+          [from: great_war]
+    1922  aa_lmg
+    1922  engines_1
+    1923  ww1_fighter5
+          [from: great_war]
+    1923  bba_ww1_fighter5
+          [from: great_war]
+    1926  iw_small_airframe
+    1927  ww1_fighter6
+          [from: great_war]
+    1927  bba_ww1_fighter6
+          [from: great_war]
+    1933  early_fighter
+          [from: great_war]
+    1933  bba_early_fighter
+          [from: great_war]
+    1936  scout_plane1
+    1936  basic_small_airframe
+    1936  engines_2
+    1936  range_improvements
+    1936  aircraft_construction
+    1936  ww1_fakefighter1
+          [from: great_war]
+    1936  fighter1
+          [from: great_war]
+    1936  ww1_fakefighter1
+          [from: great_war]
+    1936  bba_fighter1
+          [from: great_war]
+    1939  survivability_studies
+    1939  aa_hmg
+    1939  aa_cannon_1
+    1940  scout_plane2
+    1940  improved_small_airframe
+    1940  engines_3
+    1940  fighter2
+          [from: great_war]
+    1940  bba_fighter2
+          [from: great_war]
+    1943  aa_cannon_2
+    1944  advanced_small_airframe
+    1944  engines_4
+    1944  fighter3
+          [from: great_war]
+    1944  bba_fighter3
+          [from: great_war]
+    1945  modern_small_airframe
+    1945  aa_cannon_3
+    1950  supersonic_fighter1
+    1950  supersonic_small_airframe
+
+  [air / heavy_fighters] — 11 techs
+    1926  iw_medium_airframe
+    1936  basic_medium_airframe
+    1936  heavy_fighter1
+          [from: great_war]
+    1936  bba_heavy_fighter1
+          [from: great_war]
+    1940  improved_medium_airframe
+    1940  heavy_fighter2
+          [from: great_war]
+    1940  bba_heavy_fighter2
+          [from: great_war]
+    1944  advanced_medium_airframe
+    1944  heavy_fighter3
+          [from: great_war]
+    1944  bba_heavy_fighter3
+          [from: great_war]
+    1945  modern_medium_airframe
+
+  [air / naval_bombers] — 10 techs
+    1915  ww1_seaplane1
+          [from: great_war]
+    1915  bba_ww1_seaplane1
+          [from: great_war]
+    1918  ww1_seaplane2
+          [from: great_war]
+    1918  bba_ww1_seaplane2
+          [from: great_war]
+    1936  naval_bomber1
+          [from: great_war]
+    1936  bba_naval_bomber1
+          [from: great_war]
+    1940  naval_bomber2
+          [from: great_war]
+    1940  bba_naval_bomber2
+          [from: great_war]
+    1944  naval_bomber3
+          [from: great_war]
+    1944  bba_naval_bomber3
+          [from: great_war]
+
+  [air / strategic_bombers] — 20 techs
+    1912  ww1_zeppelin1
+          [from: great_war]
+    1912  bba_ww1_zeppelin1
+          [from: great_war]
+    1918  ww1_zeppelin2
+          [from: great_war]
+    1918  bba_ww1_zeppelin2
+          [from: great_war]
+    1926  iw_large_airframe
+    1936  basic_large_airframe
+    1936  strategic_bomber1
+          [from: great_war]
+    1936  bba_strategic_bomber1
+          [from: great_war]
+    1940  improved_large_airframe
+    1940  strategic_bomber2
+          [from: great_war]
+    1940  bba_strategic_bomber2
+          [from: great_war]
+    1942  reinforced_wings_mothership
+    1944  advanced_large_airframe
+    1944  miniature_fighters
+    1944  strategic_bomber3
+          [from: great_war]
+    1944  bba_strategic_bomber3
+          [from: great_war]
+    1945  modern_large_airframe
+    1946  aerial_hangars
+    1950  jet_strategic_bomber1
+          [from: great_war]
+    1950  bba_jet_strategic_bomber1
+          [from: great_war]
+
+  [air / tactical_bombers] — 20 techs
+    1915  ww1_bomber1
+          [from: great_war]
+    1915  bba_ww1_bomber1
+          [from: great_war]
+    1918  ww1_bomber2
+          [from: great_war]
+    1918  bba_ww1_bomber2
+          [from: great_war]
+    1919  ww1_bomber3
+          [from: great_war]
+    1919  bba_ww1_bomber3
+          [from: great_war]
+    1927  ww1_bomber4
+          [from: great_war]
+    1927  bba_ww1_bomber4
+          [from: great_war]
+    1933  early_bomber
+          [from: great_war]
+    1933  bba_early_bomber
+          [from: great_war]
+    1936  tactical_bomber1
+          [from: great_war]
+    1936  bba_tactical_bomber1
+          [from: great_war]
+    1940  tactical_bomber2
+          [from: great_war]
+    1940  bba_tactical_bomber2
+          [from: great_war]
+    1944  tactical_bomber3
+          [from: great_war]
+    1944  bba_tactical_bomber3
+          [from: great_war]
+    1945  jet_tactical_bomber1
+          [from: great_war]
+    1945  bba_jet_tactical_bomber1
+          [from: great_war]
+    1950  jet_tactical_bomber2
+          [from: great_war]
+    1950  bba_jet_tactical_bomber2
+          [from: great_war]
+
+  [air / transport] — 6 techs
+    1933  early_transport_plane
+    1933  bba_early_transport_plane
+    1940  improved_transport_plane
+    1940  bba_improved_transport_plane
+    1945  bba_strategic_airlifter
+    1948  strategic_airlifter
+
+  [industry_electronics / electronics] — 41 techs
+    1890  chemical_research
+          [from: great_war]
+    1900  electronic_mechanical_engineering
+          [from: great_war]
+    1903  tank_unlocker1
+          [from: great_war]
+    1903  tank_carrier_pigeons
+          [from: great_war]
+    1907  radio
+          [from: great_war]
+    1907  torpedotech1
+          [from: great_war]
+    1907  mechanical_computing
+          [from: great_war]
+    1907  hoi4tgw_decryption
+          [from: great_war]
+    1907  hoi4tgw_encryption
+          [from: great_war]
+    1910  supertech1
+          [from: great_war]
+    1910  subhulltech1
+          [from: great_war]
+    1910  tankaircraft1
+          [from: great_war]
+    1910  dingfelder_engine1
+          [from: great_war]
+    1910  tanktrack1
+          [from: great_war]
+    1915  chemical_research2
+          [from: great_war]
+    1916  radio2
+          [from: great_war]
+    1916  torpedotech2
+          [from: great_war]
+    1916  mechanical_computing2
+          [from: great_war]
+    1917  chemical_research3
+          [from: great_war]
+    1922  supertech2
+          [from: great_war]
+    1922  torpedotech3
+          [from: great_war]
+    1922  tankaircraft2
+          [from: great_war]
+    1922  dingfelder_engine2
+          [from: great_war]
+    1922  tanktrack2
+          [from: great_war]
+    1936  electronic_ww2
+          [from: great_war]
+    1936  radio3
+          [from: great_war]
+    1936  mechanical_computing3
+          [from: great_war]
+    1936  basic_fire_control_system
+          [from: great_war]
+    1936  improved_fire_control_system
+          [from: great_war]
+    1936  advanced_fire_control_system
+          [from: great_war]
+    1938  improved_radio
+    1938  computing_machine
+          [from: great_war]
+    1938  basic_encryption
+          [from: great_war]
+    1938  basic_decryption
+          [from: great_war]
+    1940  improved_computing_machine
+          [from: great_war]
+    1940  improved_encryption
+          [from: great_war]
+    1940  improved_decryption
+          [from: great_war]
+    1941  advanced_radio
+    1942  advanced_computing_machine
+          [from: great_war]
+    1942  advanced_encryption
+          [from: great_war]
+    1942  advanced_decryption
+          [from: great_war]
+
+  [industry_electronics / industry] — 93 techs
+    1900  ww1_medicine1
+          [from: great_war]
+    1900  ww1_fortification1
+          [from: great_war]
+    1900  ww1_tools1
+          [from: great_war]
+    1900  ww1_oil1
+          [from: great_war]
+    1910  ww1_camera1
+          [from: great_war]
+    1910  ww1_medicine2
+          [from: great_war]
+    1910  ww1_fortification2
+          [from: great_war]
+    1910  ww1_tools2
+          [from: great_war]
+    1910  ww1_industry1
+          [from: great_war]
+    1910  ww1_construction1
+          [from: great_war]
+    1910  ww1_mining1
+          [from: great_war]
+    1910  ww1_oil2
+          [from: great_war]
+    1916  ww1_camera2
+          [from: great_war]
+    1916  ww1_medicine3
+          [from: great_war]
+    1916  ww1_fortification3
+          [from: great_war]
+    1916  ww1_fortification3b
+          [from: great_war]
+    1916  ww1_tools3
+          [from: great_war]
+    1916  ww1_industry2
+          [from: great_war]
+    1916  ww1_construction2
+          [from: great_war]
+    1916  ww1_mining2
+          [from: great_war]
+    1916  ww1_oil3
+          [from: great_war]
+    1916  ww1_bergiusprocess
+          [from: great_war]
+    1919  ww1_medicine4
+          [from: great_war]
+    1919  ww1_fortification5
+          [from: great_war]
+    1919  ww1_tools4
+          [from: great_war]
+    1919  ww1_industry3
+          [from: great_war]
+    1919  ww1_construction3
+          [from: great_war]
+    1922  ww1_medicine5
+          [from: great_war]
+    1922  ww1_fortification4
+          [from: great_war]
+    1922  ww1_tools5
+          [from: great_war]
+    1922  ww1_industry4
+          [from: great_war]
+    1922  ww1_construction4
+          [from: great_war]
+    1922  ww1_mining3
+          [from: great_war]
+    1926  ww1_camera3
+          [from: great_war]
+    1926  ww1_medicine6
+          [from: great_war]
+    1926  ww1_fortification4b
+          [from: great_war]
+    1926  ww1_fortification6
+          [from: great_war]
+    1926  ww1_tools6
+          [from: great_war]
+    1931  ww1_medicine7
+          [from: great_war]
+    1931  ww1_fortification4c
+          [from: great_war]
+    1931  ww1_construction5
+          [from: great_war]
+    1931  fuel_silos
+          [from: great_war]
+    1936  basic_fortification_tech
+    1936  coastal_fort_tech_1
+    1936  fuel_refining
+    1936  basic_machine_tools
+          [from: great_war]
+    1936  concentrated_industry
+          [from: great_war]
+    1936  dispersed_industry
+          [from: great_war]
+    1936  synth_oil_experiments
+          [from: great_war]
+    1936  oil_plant
+          [from: great_war]
+    1936  construction1
+          [from: great_war]
+    1936  excavation1
+          [from: great_war]
+    1937  improved_equipment_conversion
+    1937  fuel_refining2
+    1937  oil_processing
+    1937  rubber_processing
+    1937  ww1_fortification7
+          [from: great_war]
+    1937  improved_machine_tools
+          [from: great_war]
+    1937  concentrated_industry2
+          [from: great_war]
+    1937  dispersed_industry2
+          [from: great_war]
+    1937  construction2
+          [from: great_war]
+    1937  excavation2
+          [from: great_war]
+    1938  land_fort_tech_1
+    1939  advanced_equipment_conversion
+    1939  fuel_refining3
+    1939  improved_oil_processing
+    1939  improved_rubber_processing
+    1939  advanced_machine_tools
+          [from: great_war]
+    1939  concentrated_industry3
+          [from: great_war]
+    1939  dispersed_industry3
+          [from: great_war]
+    1939  improved_oil_plant
+          [from: great_war]
+    1939  construction3
+          [from: great_war]
+    1939  excavation3
+          [from: great_war]
+    1940  land_fort_tech_2
+    1940  coastal_fort_tech_2
+    1941  fuel_refining4
+    1941  advanced_oil_processing
+    1941  advanced_rubber_processing
+    1941  assembly_line_production
+          [from: great_war]
+    1941  concentrated_industry4
+          [from: great_war]
+    1941  dispersed_industry4
+          [from: great_war]
+    1941  construction4
+          [from: great_war]
+    1941  excavation4
+          [from: great_war]
+    1943  fuel_refining5
+    1943  modern_oil_processing
+    1943  modern_rubber_processing
+    1943  flexible_line
+          [from: great_war]
+    1943  streamlined_line
+          [from: great_war]
+    1943  concentrated_industry5
+          [from: great_war]
+    1943  dispersed_industry5
+          [from: great_war]
+    1943  advanced_oil_plant
+          [from: great_war]
+    1943  construction5
+          [from: great_war]
+    1943  excavation5
+          [from: great_war]
+
+  [industry_electronics / nuclear] — 6 techs
+    1940  atomic_research
+          [from: great_war]
+    1943  nuclear_reactor_heavy_water
+    1943  isotope_separation_centrifugal
+    1943  nuclear_reactor
+          [from: great_war]
+    1945  nukes
+          [from: great_war]
+    1950  thermonuclear_bombs
+
+  [industry_electronics / radar] — 6 techs
+    1936  radio_detection
+          [from: great_war]
+    1938  cavity_magnatron
+          [from: great_war]
+    1939  improved_cavity_magnatron
+          [from: great_war]
+    1940  centimetric_radar
+          [from: great_war]
+    1941  phased_array
+          [from: great_war]
+    1942  monopulse_radar
+          [from: great_war]
+
+  [industry_electronics / rockets] — 15 techs
+    1939  motorized_rocket_unit
+          [from: great_war]
+    1940  rocket_artillery
+          [from: great_war]
+    1941  rocket_artillery2
+          [from: great_war]
+    1942  rocket_artillery3
+          [from: great_war]
+    1943  sp_rockets_improved_guidance
+    1943  rocket_artillery4
+          [from: great_war]
+    1943  experimental_rockets
+          [from: great_war]
+    1944  sp_rockets_rocket_bomber
+    1944  sp_rockets_dual_chamber_rocket_engine_1
+    1944  rocket_engines
+          [from: great_war]
+    1944  jet_engines
+          [from: great_war]
+    1945  sp_rockets_improved_rocket_bomber
+    1945  improved_rocket_engines
+          [from: great_war]
+    1946  sp_rockets_dual_chamber_rocket_engine_2
+    1946  advanced_rocket_engines
+          [from: great_war]
+
+  [land / anti_air] — 9 techs
+    1915  antiair_1915
+          [from: great_war]
+    1918  antiair_1918
+          [from: great_war]
+    1922  antiair_1922
+          [from: great_war]
+    1936  interwar_antiair
+          [from: great_war]
+    1939  antiair1
+          [from: great_war]
+    1940  antiair2
+          [from: great_war]
+    1941  antiair3
+          [from: great_war]
+    1942  antiair4
+          [from: great_war]
+    1943  antiair5
+          [from: great_war]
+
+  [land / anti_tank] — 11 techs
+    1915  antitank_1915
+          [from: great_war]
+    1918  antitank_1918
+          [from: great_war]
+    1922  antitank_1922
+          [from: great_war]
+    1936  mountain_tanks
+    1936  SWE_bofors_antitank_gun
+    1936  interwar_antitank
+          [from: great_war]
+    1939  antitank1
+          [from: great_war]
+    1940  antitank2
+          [from: great_war]
+    1941  antitank3
+          [from: great_war]
+    1942  antitank4
+          [from: great_war]
+    1943  antitank5
+          [from: great_war]
+
+  [land / artillery] — 30 techs
+    1900  light_field_gun1
+          [from: great_war]
+    1900  heavy_field_gun1
+          [from: great_war]
+    1910  bonus_bertha1
+          [from: great_war]
+    1910  bonus_bertha4
+          [from: great_war]
+    1910  bonus_artillery1
+          [from: great_war]
+    1910  bonus_artillery4
+          [from: great_war]
+    1914  heavy_field_gun2
+          [from: great_war]
+    1914  light_field_gun2
+          [from: great_war]
+    1915  bonus_bertha2
+          [from: great_war]
+    1915  bonus_artillery2
+          [from: great_war]
+    1918  bonus_artillery_global
+          [from: great_war]
+    1922  heavy_field_gun3
+          [from: great_war]
+    1922  bonus_artillery3
+          [from: great_war]
+    1930  interwar_heavy_artillery
+          [from: great_war]
+    1930  bonus_bertha3
+          [from: great_war]
+    1930  gw_artillery
+          [from: great_war]
+    1936  interwar_artillery
+          [from: great_war]
+    1936  railway_gun
+          [from: great_war]
+    1939  basic_dp_light_battery
+    1939  artillery1
+          [from: great_war]
+    1940  sp_artillery_rocket_assisted_projectiles_tech
+    1940  sp_artillery_purpose_built_gun_motor_carriages_tech
+    1940  improved_dp_light_battery
+    1940  artillery2
+          [from: great_war]
+    1941  sp_shock_hardening_techniques
+    1941  artillery3
+          [from: great_war]
+    1942  sp_variable_time_fuze_shells
+    1942  artillery4
+          [from: great_war]
+    1943  artillery5
+          [from: great_war]
+    1944  advanced_dp_light_battery
+
+  [land / heavy_tanks] — 33 techs
+    1916  ww1_heavy_tank
+          [from: great_war]
+    1916  ww1_heavy_tank__nostepback
+          [from: great_war]
+    1917  ww1_heavy_tank2
+          [from: great_war]
+    1917  ww1_super_heavy_tank
+          [from: great_war]
+    1917  ww1_heavy_tank2__nostepback
+          [from: great_war]
+    1917  ww1_super_heavy_tank__nostepback
+          [from: great_war]
+    1928  ww1_heavy_tank_interwar
+          [from: great_war]
+    1928  ww1_heavy_tank_interwar__nostepback
+          [from: great_war]
+    1934  basic_heavy_tank
+          [from: great_war]
+    1934  basic_heavy_td
+          [from: great_war]
+    1934  basic_heavy_art
+          [from: great_war]
+    1934  basic_heavy_spaa
+          [from: great_war]
+    1934  basic_heavy_tank_chassis
+          [from: great_war]
+    1940  improved_heavy_tank_chassis
+          [from: great_war]
+    1941  improved_heavy_tank
+          [from: great_war]
+    1941  improved_heavy_td
+          [from: great_war]
+    1941  improved_heavy_art
+          [from: great_war]
+    1941  improved_heavy_spaa
+          [from: great_war]
+    1943  sp_armored_lc_naval_engine_conversion_tech
+    1943  sp_armored_lc_transmission_improvements_tech
+    1943  sp_armored_lc_specialized_field_manuals_tech
+    1943  sp_armored_lc_high_impact_obliterator_cannon_tech
+    1943  advanced_heavy_tank
+          [from: great_war]
+    1943  advanced_heavy_td
+          [from: great_war]
+    1943  advanced_heavy_art
+          [from: great_war]
+    1943  advanced_heavy_spaa
+          [from: great_war]
+    1943  super_heavy_tank
+          [from: great_war]
+    1943  super_heavy_td
+          [from: great_war]
+    1943  super_heavy_art
+          [from: great_war]
+    1943  super_heavy_spaa
+          [from: great_war]
+    1943  advanced_heavy_tank_chassis
+          [from: great_war]
+    1943  super_heavy_tank_chassis
+          [from: great_war]
+    1945  sp_armored_lc_weapon_fire_control_tech
+
+  [land / infantry] — 96 techs
+    1900  infantry_weapons
+          [from: great_war]
+    1900  infantry_binoculars
+          [from: great_war]
+    1900  support_weapons
+          [from: great_war]
+    1900  ww1_ambulance1
+          [from: great_war]
+    1910  ww1infantry_weapons1
+          [from: great_war]
+    1910  infantry_grenade
+          [from: great_war]
+    1910  marines
+          [from: great_war]
+    1910  tech_mountaineers
+          [from: great_war]
+    1914  ww1_infantry_equip1
+          [from: great_war]
+    1914  infantry_gasmask
+          [from: great_war]
+    1914  support_weapons2
+          [from: great_war]
+    1914  ww1_ambulance2
+          [from: great_war]
+    1916  ww1infantry_weapons2
+          [from: great_war]
+    1916  infantry_ww1_machinegun1
+          [from: great_war]
+    1916  infantry_ww1_mortar1
+          [from: great_war]
+    1916  ww1_infantry2_equip
+          [from: great_war]
+    1918  infantry_flamethrower1
+          [from: great_war]
+    1918  marines2
+          [from: great_war]
+    1918  tech_mountaineers2
+          [from: great_war]
+    1918  support_weapons3
+          [from: great_war]
+    1919  ww1_infantry_equip2
+          [from: great_war]
+    1919  infantry_ww1_machinegun2
+          [from: great_war]
+    1919  support_weapons1919
+          [from: great_war]
+    1921  ww1infantry_weapons_interwar1921
+          [from: great_war]
+    1921  support_weapons_interwar1
+          [from: great_war]
+    1924  infantry_ww1_mortar2
+          [from: great_war]
+    1924  support_weapons_interwar2
+          [from: great_war]
+    1927  ww1_transport_plane
+          [from: great_war]
+    1927  bba_ww1_transport_plane
+          [from: great_war]
+    1927  ww1infantry_weapons3
+          [from: great_war]
+    1927  support_weapons_interwar3
+          [from: great_war]
+    1930  ww1_infantry_equip3
+          [from: great_war]
+    1930  infantry_flamethrower2
+          [from: great_war]
+    1930  support_weapons4
+          [from: great_war]
+    1930  paratroopers
+          [from: great_war]
+    1936  rangers_tech
+    1936  infantry_weapons1
+          [from: great_war]
+    1936  infantry_ww1_machinegun3
+          [from: great_war]
+    1936  marines3
+          [from: great_war]
+    1936  tech_mountaineers3
+          [from: great_war]
+    1936  special_forces_mountaineers (XP)
+          [from: great_war]
+    1936  ski_troops (XP)
+          [from: great_war]
+    1936  rangers (XP)
+          [from: great_war]
+    1936  special_forces_recon (XP)
+          [from: great_war]
+    1936  mountaineers_combat_1 (XP)
+          [from: great_war]
+    1936  mountaineers_combat_2 (XP)
+          [from: great_war]
+    1936  mountaineers_combat_3 (XP)
+          [from: great_war]
+    1936  mountaineers_keystone_1 (XP)
+          [from: great_war]
+    1936  mountaineers_keystone_2 (XP)
+          [from: great_war]
+    1936  special_forces_marines (XP)
+          [from: great_war]
+    1936  marines_jungle_troops (XP)
+          [from: great_war]
+    1936  marines_shore_parties (XP)
+          [from: great_war]
+    1936  marines_recon (XP)
+          [from: great_war]
+    1936  marines_commandoes (XP)
+          [from: great_war]
+    1936  marines_expeditionary (XP)
+          [from: great_war]
+    1936  marines_commandos_demolition (XP)
+          [from: great_war]
+    1936  marines_expeditionary_blowtorch (XP)
+          [from: great_war]
+    1936  marines_commandoes_mechanised (XP)
+          [from: great_war]
+    1936  marines_commandoes_mechanised_non_mtg (XP)
+          [from: great_war]
+    1936  marines_expeditionary_support (XP)
+          [from: great_war]
+    1936  special_forces_paratroopers (XP)
+          [from: great_war]
+    1936  paras_dispersed_drop (XP)
+          [from: great_war]
+    1936  paras_combat_drop (XP)
+          [from: great_war]
+    1936  paras_airborne_light_armor (XP)
+          [from: great_war]
+    1936  paras_combat_1 (XP)
+          [from: great_war]
+    1936  paras_combat_2 (XP)
+          [from: great_war]
+    1936  paras_bonus_1 (XP)
+          [from: great_war]
+    1936  paras_bonus_2 (XP)
+          [from: great_war]
+    1936  paras_keystone_1 (XP)
+          [from: great_war]
+    1936  paras_keystone_2 (XP)
+          [from: great_war]
+    1938  tech_special_forces
+    1938  infantry_weapons2
+          [from: great_war]
+    1938  infantry_ww1_mortar3
+          [from: great_war]
+    1938  support_weapons5
+          [from: great_war]
+    1939  rangers_tech2
+    1939  improved_infantry_weapons
+          [from: great_war]
+    1939  paratroopers2
+          [from: great_war]
+    1939  marines4
+          [from: great_war]
+    1939  tech_mountaineers4
+          [from: great_war]
+    1940  advanced_special_forces
+    1940  improved_special_forces
+    1940  improved_infantry_weapons_2
+          [from: great_war]
+    1940  support_weapons6
+          [from: great_war]
+    1942  extreme_environment_training
+    1942  survival_training
+    1942  infantry_at
+          [from: great_war]
+    1942  advanced_infantry_weapons
+          [from: great_war]
+    1942  support_weapons7
+          [from: great_war]
+    1943  rangers_tech3
+    1943  infantry_at2
+          [from: great_war]
+    1943  paratroopers3
+          [from: great_war]
+    1943  marines5
+          [from: great_war]
+    1943  tech_mountaineers5
+          [from: great_war]
+    1944  elite_forces
+    1945  infantry_ww1_machinegun4
+          [from: great_war]
+    1945  advanced_infantry_weapons2
+          [from: great_war]
+
+  [land / light_tanks] — 33 techs
+    1910  gwtank
+          [from: great_war]
+    1910  gwtank__nostepback
+          [from: great_war]
+    1913  ww1_armored_car_2
+          [from: great_war]
+    1913  ww1_armored_car_2__nostepback
+          [from: great_war]
+    1916  ww1_armored_car_3
+          [from: great_war]
+    1916  ww1_armored_car_3__nostepback
+          [from: great_war]
+    1917  ww1_light_tank_b
+          [from: great_war]
+    1917  ww1_light_tank
+          [from: great_war]
+    1917  ww1_light_tank__nostepback
+          [from: great_war]
+    1918  gwtank_chassis
+    1922  ww1_armored_car_4
+          [from: great_war]
+    1922  ww1_light_tank_interwar_1
+          [from: great_war]
+    1922  ww1_armored_car_4__nostepback
+          [from: great_war]
+    1922  ww1_light_tank_interwar_1__nostepback
+          [from: great_war]
+    1928  ww1_light_tank_interwar_2
+          [from: great_war]
+    1928  ww1_light_tank_interwar_2__nostepback
+          [from: great_war]
+    1934  ww1_armored_car_5
+          [from: great_war]
+    1934  basic_light_tank
+          [from: great_war]
+    1934  basic_light_td
+          [from: great_war]
+    1934  basic_light_art
+          [from: great_war]
+    1934  basic_light_spaa
+          [from: great_war]
+    1934  ww1_armored_car_5__nostepback
+          [from: great_war]
+    1934  basic_light_tank_chassis
+          [from: great_war]
+    1936  improved_light_tank
+          [from: great_war]
+    1936  improved_light_td
+          [from: great_war]
+    1936  improved_light_art
+          [from: great_war]
+    1936  improved_light_spaa
+          [from: great_war]
+    1936  improved_light_tank_chassis
+          [from: great_war]
+    1941  advanced_light_tank
+          [from: great_war]
+    1941  advanced_light_td
+          [from: great_war]
+    1941  advanced_light_art
+          [from: great_war]
+    1941  advanced_light_spaa
+          [from: great_war]
+    1941  advanced_light_tank_chassis
+          [from: great_war]
+
+  [land / mechanised] — 5 techs
+    1941  amphibious_mechanized_infantry
+    1941  mechanised_infantry
+          [from: great_war]
+    1943  amphibious_mechanized_infantry_2
+    1943  mechanised_infantry2
+          [from: great_war]
+    1945  mechanised_infantry3
+          [from: great_war]
+
+  [land / medium_tanks] — 18 techs
+    1934  basic_medium_tank_chassis
+          [from: great_war]
+    1939  basic_medium_tank
+          [from: great_war]
+    1939  basic_medium_td
+          [from: great_war]
+    1939  basic_medium_art
+          [from: great_war]
+    1939  basic_medium_spaa
+          [from: great_war]
+    1940  improved_medium_tank_chassis
+          [from: great_war]
+    1941  improved_medium_tank
+          [from: great_war]
+    1941  improved_medium_td
+          [from: great_war]
+    1941  improved_medium_art
+          [from: great_war]
+    1941  improved_medium_spaa
+          [from: great_war]
+    1943  advanced_medium_tank
+          [from: great_war]
+    1943  advanced_medium_td
+          [from: great_war]
+    1943  advanced_medium_art
+          [from: great_war]
+    1943  advanced_medium_spaa
+          [from: great_war]
+    1943  advanced_medium_tank_chassis
+          [from: great_war]
+    1945  modern_td
+          [from: great_war]
+    1945  modern_art
+          [from: great_war]
+    1945  modern_spaa
+          [from: great_war]
+
+  [land / modern_tanks] — 2 techs
+    1945  main_battle_tank
+          [from: great_war]
+    1945  main_battle_tank_chassis
+          [from: great_war]
+
+  [land / motorised] — 7 techs
+    1900  motorised_infantry
+          [from: great_war]
+    1914  early_motorised
+          [from: great_war]
+    1919  infantry_ww1_suspension1
+          [from: great_war]
+    1921  infantry_ww1_suspension2
+          [from: great_war]
+    1927  infantry_ww1_suspension3
+          [from: great_war]
+    1936  tech_trucks
+    1936  motorised_infantry2
+          [from: great_war]
+
+  [land / support] — 64 techs
+    1900  tech_support
+          [from: great_war]
+    1900  ww1_train
+          [from: great_war]
+    1910  tech_engineers
+          [from: great_war]
+    1910  tech_recon
+          [from: great_war]
+    1910  tech_military_police
+          [from: great_war]
+    1910  tech_field_hospital
+          [from: great_war]
+    1910  tech_logistics_company
+          [from: great_war]
+    1910  tech_signal_company
+          [from: great_war]
+    1914  tech_engineers2
+          [from: great_war]
+    1914  tech_recon2
+          [from: great_war]
+    1914  tech_military_police2
+          [from: great_war]
+    1914  tech_field_hospital2
+          [from: great_war]
+    1914  tech_logistics_company2
+          [from: great_war]
+    1914  tech_signal_company2
+          [from: great_war]
+    1914  ww1_armored_train
+          [from: great_war]
+    1914  basic_train
+          [from: great_war]
+    1918  tech_engineers3
+          [from: great_war]
+    1918  tech_recon3
+          [from: great_war]
+    1918  tech_military_police3
+          [from: great_war]
+    1918  tech_field_hospital3
+          [from: great_war]
+    1918  tech_logistics_company3
+          [from: great_war]
+    1918  tech_signal_company3
+          [from: great_war]
+    1927  tech_engineers4
+          [from: great_war]
+    1927  tech_recon4
+          [from: great_war]
+    1927  tech_military_police4
+          [from: great_war]
+    1927  tech_field_hospital4
+          [from: great_war]
+    1927  tech_logistics_company4
+          [from: great_war]
+    1927  tech_signal_company4
+          [from: great_war]
+    1936  tech_recon_focus_bonus
+    1936  tech_engineers5
+          [from: great_war]
+    1936  tech_recon5
+          [from: great_war]
+    1936  tech_military_police5
+          [from: great_war]
+    1936  tech_field_hospital5
+          [from: great_war]
+    1936  tech_logistics_company5
+          [from: great_war]
+    1936  tech_signal_company5
+          [from: great_war]
+    1936  armored_train
+          [from: great_war]
+    1938  sp_armored_engineer_tech
+    1938  sp_armored_maintenance_tech
+    1938  sp_armored_signal_tech
+    1938  sp_helicopter_transport_pods_tech
+    1938  sp_helicopter_artillery_observers_tech
+    1938  sp_helicopter_med_evac_tech
+    1938  sp_armored_motorized_military_police_tech
+    1939  tech_engineers6
+          [from: great_war]
+    1939  tech_recon6
+          [from: great_war]
+    1939  tech_military_police6
+          [from: great_war]
+    1939  tech_field_hospital6
+          [from: great_war]
+    1939  tech_logistics_company6
+          [from: great_war]
+    1939  tech_signal_company6
+          [from: great_war]
+    1939  wartime_train
+          [from: great_war]
+    1942  tech_engineers7
+          [from: great_war]
+    1942  tech_recon7
+          [from: great_war]
+    1942  tech_military_police7
+          [from: great_war]
+    1942  tech_field_hospital7
+          [from: great_war]
+    1942  tech_logistics_company7
+          [from: great_war]
+    1942  tech_signal_company7
+          [from: great_war]
+    1943  night_vision
+          [from: great_war]
+    1945  tech_engineers8
+          [from: great_war]
+    1945  tech_recon8
+          [from: great_war]
+    1945  tech_military_police8
+          [from: great_war]
+    1945  tech_field_hospital8
+          [from: great_war]
+    1945  tech_logistics_company8
+          [from: great_war]
+    1945  tech_signal_company8
+          [from: great_war]
+    1946  night_vision2
+          [from: great_war]
+
+  [land / tanks_generic] — 31 techs
+    1910  tech_maintenance_company
+          [from: great_war]
+    1914  armored_car1
+    1914  tech_maintenance_company2
+          [from: great_war]
+    1915  tank_unlocker2
+          [from: great_war]
+    1915  tank_unlocker2__nostepback
+          [from: great_war]
+    1918  tech_maintenance_company3
+          [from: great_war]
+    1927  tech_maintenance_company4
+          [from: great_war]
+    1934  armor_tech_1
+          [from: great_war]
+    1934  engine_tech_1
+          [from: great_war]
+    1936  JAP_lighter_tanks
+    1936  GER_heavy_armored_car
+    1936  NOR_rikstanken_tech
+    1936  armor_tech_2
+          [from: great_war]
+    1936  engine_tech_2
+          [from: great_war]
+    1936  tech_maintenance_company5
+          [from: great_war]
+    1938  amphibious_tank_chassis
+    1939  tech_maintenance_company6
+          [from: great_war]
+    1940  amphibious_tank
+    1940  armored_car2
+    1941  amphibious_drive
+    1941  sp_armored_advanced_flamethrower_tech
+    1941  armor_tech_3
+          [from: great_war]
+    1941  engine_tech_3
+          [from: great_war]
+    1942  amphibious_tank_2
+    1942  armored_car3
+    1942  armored_car_at_upgrade
+    1942  SWE_lynx_armored_car
+    1942  tech_maintenance_company7
+          [from: great_war]
+    1944  armor_tech_4
+          [from: great_war]
+    1944  engine_tech_4
+          [from: great_war]
+    1945  tech_maintenance_company8
+          [from: great_war]
+
+  [naval / battleships] — 55 techs
+    1890  ww1_battleship0_mtg
+          [from: great_war]
+    1890  heavy_navalmodule_1890_mtg
+          [from: great_war]
+    1890  ww1_battleship0
+          [from: great_war]
+    1890  heavy_navalmodule_1890
+          [from: great_war]
+    1900  heavy_navalmodule_1900_mtg
+          [from: great_war]
+    1900  ww1_battleship1_mtg
+          [from: great_war]
+    1900  heavy_navalmodule_1900
+          [from: great_war]
+    1900  ww1_battleship1
+          [from: great_war]
+    1906  ww1_battlecruiser0_mtg
+          [from: great_war]
+    1906  ww1_battleship2_mtg
+          [from: great_war]
+    1906  ww1_battlecruiser0
+          [from: great_war]
+    1906  ww1_battleship2
+          [from: great_war]
+    1910  ww1_battlecruiser1_mtg
+          [from: great_war]
+    1910  heavy_navalmodule_1910_mtg
+          [from: great_war]
+    1910  ww1_battleship3_mtg
+          [from: great_war]
+    1910  ww1_battlecruiser1
+          [from: great_war]
+    1910  heavy_navalmodule_1910
+          [from: great_war]
+    1910  ww1_battleship3
+          [from: great_war]
+    1914  ww1_battlecruiser2_mtg
+          [from: great_war]
+    1914  heavy_navalmodule_1914_mtg
+          [from: great_war]
+    1914  ww1_battleship4_mtg
+          [from: great_war]
+    1914  ww1_battlecruiser2
+          [from: great_war]
+    1914  heavy_navalmodule_1914
+          [from: great_war]
+    1914  ww1_battleship4
+          [from: great_war]
+    1918  ww1_battlecruiser3_mtg
+          [from: great_war]
+    1918  heavy_navalmodule_1918_mtg
+          [from: great_war]
+    1918  ww1_battleship5_mtg
+          [from: great_war]
+    1918  ww1_battlecruiser3
+          [from: great_war]
+    1918  heavy_navalmodule_1918
+          [from: great_war]
+    1918  ww1_battleship5
+          [from: great_war]
+    1922  early_ship_hull_heavy
+          [from: great_war]
+    1922  early_battlecruiser_mtg
+          [from: great_war]
+    1922  heavy_navalmodule_1922_mtg
+          [from: great_war]
+    1922  early_battleship_mtg
+          [from: great_war]
+    1922  early_battlecruiser
+          [from: great_war]
+    1922  heavy_navalmodule_1922
+          [from: great_war]
+    1922  early_battleship
+          [from: great_war]
+    1936  basic_ship_hull_heavy
+          [from: great_war]
+    1936  ship_hull_super_heavy
+          [from: great_war]
+    1936  basic_heavy_armor_scheme (XP)
+          [from: great_war]
+    1936  basic_battleship_mtg
+          [from: great_war]
+    1936  heavy_battleship_mtg
+          [from: great_war]
+    1936  basic_battleship
+          [from: great_war]
+    1936  heavy_battleship
+          [from: great_war]
+    1940  improved_ship_hull_heavy
+          [from: great_war]
+    1940  improved_heavy_armor_scheme (XP)
+          [from: great_war]
+    1940  basic_battlecruiser_mtg
+          [from: great_war]
+    1940  improved_battleship_mtg
+          [from: great_war]
+    1940  basic_battlecruiser
+          [from: great_war]
+    1940  improved_battleship
+          [from: great_war]
+    1944  advanced_ship_hull_heavy
+          [from: great_war]
+    1944  advanced_battleship_mtg
+          [from: great_war]
+    1944  heavy_battleship2_mtg
+          [from: great_war]
+    1944  advanced_battleship
+          [from: great_war]
+    1944  heavy_battleship2
+          [from: great_war]
+
+  [naval / carriers] — 18 techs
+    1914  seaplane_carrier_mtg
+          [from: great_war]
+    1914  seaplane_carrier
+          [from: great_war]
+    1918  ww1_carrier_mtg
+          [from: great_war]
+    1918  ww1_carrier
+          [from: great_war]
+    1922  early_ship_hull_carrier
+          [from: great_war]
+    1922  early_carrier_mtg
+          [from: great_war]
+    1922  early_carrier
+          [from: great_war]
+    1936  basic_ship_hull_carrier
+          [from: great_war]
+    1936  basic_carrier_mtg
+          [from: great_war]
+    1936  basic_carrier
+          [from: great_war]
+    1940  improved_ship_hull_carrier
+          [from: great_war]
+    1940  improved_carrier_mtg
+          [from: great_war]
+    1940  improved_carrier
+          [from: great_war]
+    1942  sp_refined_pykrete
+    1944  sp_ice_composite_runawayas
+    1944  advanced_ship_hull_carrier
+          [from: great_war]
+    1944  advanced_carrier_mtg
+          [from: great_war]
+    1944  advanced_carrier
+          [from: great_war]
+
+  [naval / destroyers] — 35 techs
+    1890  ww1_destroyer0_mtg
+          [from: great_war]
+    1890  ww1_destroyer0
+          [from: great_war]
+    1900  ww1_destroyer1_mtg
+          [from: great_war]
+    1900  ww1_destroyer1
+          [from: great_war]
+    1906  ww1_destroyer2_mtg
+          [from: great_war]
+    1906  ww1_smoke_generator_mtg
+          [from: great_war]
+    1906  ww1_destroyer2
+          [from: great_war]
+    1906  ww1_smoke_generator
+          [from: great_war]
+    1910  ww1_destroyer3_mtg
+          [from: great_war]
+    1910  ww1_destroyer3
+          [from: great_war]
+    1914  ww1_destroyer4_mtg
+          [from: great_war]
+    1914  ww1_destroyer4
+          [from: great_war]
+    1918  ww1_destroyer5_mtg
+          [from: great_war]
+    1918  ww1_destroyer5
+          [from: great_war]
+    1922  early_ship_hull_light
+          [from: great_war]
+    1922  smoke_generator
+          [from: great_war]
+    1922  basic_depth_charges (XP)
+          [from: great_war]
+    1922  sonar
+          [from: great_war]
+    1922  early_destroyer_mtg
+          [from: great_war]
+    1922  early_destroyer
+          [from: great_war]
+    1936  basic_ship_hull_light
+          [from: great_war]
+    1936  improved_depth_charges (XP)
+          [from: great_war]
+    1936  improved_sonar
+          [from: great_war]
+    1936  basic_destroyer_mtg
+          [from: great_war]
+    1936  basic_destroyer
+          [from: great_war]
+    1939  advanced_sonar
+    1940  improved_ship_hull_light
+          [from: great_war]
+    1940  advanced_depth_charges (XP)
+          [from: great_war]
+    1940  improved_destroyer_mtg
+          [from: great_war]
+    1940  improved_destroyer
+          [from: great_war]
+    1943  modern_sonar
+    1944  advanced_ship_hull_light
+          [from: great_war]
+    1944  modern_depth_charges (XP)
+          [from: great_war]
+    1944  advanced_destroyer_mtg
+          [from: great_war]
+    1944  advanced_destroyer
+          [from: great_war]
+
+  [naval / heavy_cruisers] — 76 techs
+    1890  ww1_light_cruiser0_mtg
+          [from: great_war]
+    1890  ww1_heavy_cruiser0_mtg
+          [from: great_war]
+    1890  medium_navalmodule_1890_mtg
+          [from: great_war]
+    1890  light_navalmodule_1890_mtg
+          [from: great_war]
+    1890  ww1_light_cruiser0
+          [from: great_war]
+    1890  ww1_heavy_cruiser0
+          [from: great_war]
+    1890  medium_navalmodule_1890
+          [from: great_war]
+    1890  light_navalmodule_1890
+          [from: great_war]
+    1900  ww1_light_cruiser1_mtg
+          [from: great_war]
+    1900  ww1_heavy_cruiser1_mtg
+          [from: great_war]
+    1900  medium_navalmodule_1900_mtg
+          [from: great_war]
+    1900  light_navalmodule_1900_mtg
+          [from: great_war]
+    1900  ww1_light_cruiser1
+          [from: great_war]
+    1900  ww1_heavy_cruiser1
+          [from: great_war]
+    1900  medium_navalmodule_1900
+          [from: great_war]
+    1900  light_navalmodule_1900
+          [from: great_war]
+    1906  ww1_light_cruiser2_mtg
+          [from: great_war]
+    1906  medium_navalmodule_1906_mtg
+          [from: great_war]
+    1906  light_navalmodule_1906_mtg
+          [from: great_war]
+    1906  ww1_coastal_submarine1_mtg
+          [from: great_war]
+    1906  ww1_light_cruiser2
+          [from: great_war]
+    1906  medium_navalmodule_1906
+          [from: great_war]
+    1906  light_navalmodule_1906
+          [from: great_war]
+    1906  ww1_coastal_submarine1
+          [from: great_war]
+    1910  ww1_light_cruiser3_mtg
+          [from: great_war]
+    1910  medium_navalmodule_1910_mtg
+          [from: great_war]
+    1910  light_navalmodule_1910_mtg
+          [from: great_war]
+    1910  ww1_coastal_submarine2_mtg
+          [from: great_war]
+    1910  ww1_light_cruiser3
+          [from: great_war]
+    1910  medium_navalmodule_1910
+          [from: great_war]
+    1910  light_navalmodule_1910
+          [from: great_war]
+    1910  ww1_coastal_submarine2
+          [from: great_war]
+    1914  ww1_light_cruiser4_mtg
+          [from: great_war]
+    1914  medium_navalmodule_1914_mtg
+          [from: great_war]
+    1914  light_navalmodule_1914_mtg
+          [from: great_war]
+    1914  ww1_coastal_submarine3_mtg
+          [from: great_war]
+    1914  ww1_cruiser_submarine1_mtg
+          [from: great_war]
+    1914  ww1_light_cruiser4
+          [from: great_war]
+    1914  medium_navalmodule_1914
+          [from: great_war]
+    1914  light_navalmodule_1914
+          [from: great_war]
+    1914  ww1_coastal_submarine3
+          [from: great_war]
+    1914  ww1_cruiser_submarine1
+          [from: great_war]
+    1918  ww1_light_cruiser5_mtg
+          [from: great_war]
+    1918  medium_navalmodule_1918_mtg
+          [from: great_war]
+    1918  light_navalmodule_1918_mtg
+          [from: great_war]
+    1918  ww1_coastal_submarine4_mtg
+          [from: great_war]
+    1918  ww1_cruiser_submarine2_mtg
+          [from: great_war]
+    1918  ww1_light_cruiser5
+          [from: great_war]
+    1918  medium_navalmodule_1918
+          [from: great_war]
+    1918  light_navalmodule_1918
+          [from: great_war]
+    1918  ww1_coastal_submarine4
+          [from: great_war]
+    1918  ww1_cruiser_submarine2
+          [from: great_war]
+    1922  early_ship_hull_cruiser
+          [from: great_war]
+    1922  early_light_cruiser_mtg
+          [from: great_war]
+    1922  early_heavy_cruiser_mtg
+          [from: great_war]
+    1922  early_light_cruiser
+          [from: great_war]
+    1922  early_heavy_cruiser
+          [from: great_war]
+    1936  basic_ship_hull_cruiser
+          [from: great_war]
+    1936  improved_airplane_launcher
+          [from: great_war]
+    1936  basic_cruiser_armor_scheme (XP)
+          [from: great_war]
+    1936  basic_light_cruiser_mtg
+          [from: great_war]
+    1936  basic_heavy_cruiser_mtg
+          [from: great_war]
+    1936  basic_light_cruiser
+          [from: great_war]
+    1936  basic_heavy_cruiser
+          [from: great_war]
+    1940  improved_ship_hull_cruiser
+          [from: great_war]
+    1940  improved_cruiser_armor_scheme (XP)
+          [from: great_war]
+    1940  improved_light_cruiser_mtg
+          [from: great_war]
+    1940  improved_heavy_cruiser_mtg
+          [from: great_war]
+    1940  improved_light_cruiser
+          [from: great_war]
+    1940  improved_heavy_cruiser
+          [from: great_war]
+    1944  advanced_ship_hull_cruiser
+          [from: great_war]
+    1944  advanced_cruiser_armor_scheme (XP)
+          [from: great_war]
+    1944  advanced_light_cruiser_mtg
+          [from: great_war]
+    1944  advanced_heavy_cruiser_mtg
+          [from: great_war]
+    1944  advanced_light_cruiser
+          [from: great_war]
+    1944  advanced_heavy_cruiser
+          [from: great_war]
+
+  [naval / naval_support] — 26 techs
+    1890  ww1_moduleMTG_mines_mtg
+          [from: great_war]
+    1890  ww1_moduleMTG_mines
+          [from: great_war]
+    1900  transport_mtg
+          [from: great_war]
+    1900  transport
+          [from: great_war]
+    1922  basic_naval_mines
+          [from: great_war]
+    1922  submarine_mine_laying
+          [from: great_war]
+    1922  mtg_transport
+          [from: great_war]
+    1936  improved_naval_mines
+          [from: great_war]
+    1938  sp_multi_product_supply_ships (XP)
+    1938  degaussing
+          [from: great_war]
+    1940  improved_submarine_mine_laying
+          [from: great_war]
+    1940  mtg_landing_craft
+          [from: great_war]
+    1940  landing_craft_mtg
+          [from: great_war]
+    1940  landing_craft
+          [from: great_war]
+    1942  airdrop_mines_bba
+    1942  airsweep_mines_bba
+    1942  sp_improved_support_ship (XP)
+    1942  sp_improved_repair_ship (XP)
+    1942  advanced_naval_mines
+          [from: great_war]
+    1942  airdrop_mines
+          [from: great_war]
+    1943  sp_standard_tenshioned_replenishment_alongside_method (XP)
+    1944  airsweep_mines
+          [from: great_war]
+    1944  mtg_tank_landing_craft
+          [from: great_war]
+    1944  tank_landing_craft_mtg
+          [from: great_war]
+    1944  tank_landing_craft
+          [from: great_war]
+    1945  modern_naval_mines
+          [from: great_war]
+
+  [naval / submarines] — 26 techs
+    1900  ww1_submarine0_mtg
+          [from: great_war]
+    1900  ww1_submarine0
+          [from: great_war]
+    1906  ww1_submarine1_mtg
+          [from: great_war]
+    1906  ww1_submarine1
+          [from: great_war]
+    1910  ww1_submarine2_mtg
+          [from: great_war]
+    1910  ww1_submarine2
+          [from: great_war]
+    1914  ww1_submarine3_mtg
+          [from: great_war]
+    1914  ww1_submarine3
+          [from: great_war]
+    1918  ww1_submarine4_mtg
+          [from: great_war]
+    1918  ww1_submarine4
+          [from: great_war]
+    1922  early_ship_hull_submarine
+          [from: great_war]
+    1922  early_submarine_mtg
+          [from: great_war]
+    1922  early_submarine
+          [from: great_war]
+    1936  basic_ship_hull_submarine
+          [from: great_war]
+    1936  basic_submarine_mtg
+          [from: great_war]
+    1936  basic_submarine
+          [from: great_war]
+    1939  sp_aip_engine_improved_tech
+    1940  improved_ship_hull_submarine
+          [from: great_war]
+    1940  basic_submarine_snorkel
+          [from: great_war]
+    1940  improved_submarine_mtg
+          [from: great_war]
+    1940  improved_submarine
+          [from: great_war]
+    1943  sp_aip_engine_advanced_tech
+    1944  advanced_ship_hull_submarine
+          [from: great_war]
+    1944  improved_submarine_snorkel (XP)
+          [from: great_war]
+    1944  advanced_submarine_mtg
+          [from: great_war]
+    1944  advanced_submarine
+          [from: great_war]
+
+UNMAPPED TECHS
+------------------------------------------------------------
+These techs could not be assigned to a branch.
+Add entries to custom_mappings.txt to include them.
+
+  BEL_chasseurs_ardennais
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  BEL_chasseurs_ardennais_ncns
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ETH_improved_irregular_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  HUN_light_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  JAP_silver_wheels
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  PHI_battalion_combat_teams
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWE_sami_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWI_mountaineer_paratroopers_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  TOA_jungle_pioneers_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ToA_river_boats_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  advanced_heavy_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  advanced_light_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  advanced_medium_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  advanced_modern_tank_turret_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  advanced_ship_torpedo_launcher
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  basic_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  basic_heavy_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  basic_heavy_shell
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  basic_light_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  basic_light_shell
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  basic_medium_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  basic_medium_shell
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  basic_secondary_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  basic_torpedo
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  bba_jet_fighter1
+    categories: ['light_air', 'jet_technology']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  bba_jet_fighter2
+    categories: ['light_air', 'jet_technology']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  bba_suicide_craft
+    categories: []
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  bicycle_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  blackshirt_assault_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camelry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camicie_nere_security_militias
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\support.txt
+  coastal_defense_ships
+    categories: []
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  commercial_nuclear_reactor_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  cruiser_submarines
+    categories: []
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  cv_CAS1
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_CAS1
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  cv_CAS2
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_CAS2
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  cv_CAS3
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_CAS3
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  cv_early_fighter
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_early_fighter
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  cv_fighter1
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_fighter1
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  cv_fighter2
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_fighter2
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  cv_fighter3
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_fighter3
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  cv_naval_bomber1
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_naval_bomber1
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  cv_naval_bomber2
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_naval_bomber2
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  cv_naval_bomber3
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  cv_naval_bomber3
+    categories: ['naval_air', 'air_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\bba_air_techs.txt
+  damage_control_1
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  damage_control_2
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  damage_control_3
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  desert_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  dp_secondary_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  electric_torpedo
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  elephantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  fire_control_methods_1
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  fire_control_methods_2
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  fire_control_methods_3
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  hills_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  homing_torpedo
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  improved_heavy_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  improved_heavy_shell
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  improved_light_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  improved_light_shell
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  improved_medium_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  improved_medium_shell
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  improved_secondary_battery
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  improved_ship_torpedo_launcher
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  jet_fighter1
+    categories: ['light_air', 'jet_technology']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  jet_fighter2
+    categories: ['light_air', 'jet_technology']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  jungle_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_warfare
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  land_multi_charge_large_caliber_gun_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  lar_decryption_bonus_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\electronic_mechanical_engineering.txt
+  long_range_patrol_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  lotta_svard_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  magnetic_detonator
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  midget_submarines
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  militia_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  modern_ship_torpedo_launcher
+    categories: ['naval_equipment']
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  molotov_cocktails_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_defensive_training
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_gun
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\artillery.txt
+  mountain_warfare
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_warfare_militias_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  panzerschiffe
+    categories: []
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  penal_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  photo_reconnaisance
+    categories: ['air_equipment', 'plane_modules_tech', 'mio_cat_all_medium_aircraft_and_modules']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  pre_dreadnoughts
+    categories: []
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  sami_pathfinders_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  sp_centrifugal_jet_tech
+    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  sp_naval_proximity_fuze_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  stronghold_network_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  sturmtruppe_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  suicide_charge
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  suicide_craft
+    categories: []
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\air_techs.txt
+  torpedo_cruiser
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\naval.txt
+  torpedo_cruiser_mtg
+    categories: []
+    source: great_war / E:\SteamLibrary\steamapps\workshop\content\394360\699709023\common\technologies\MTG_naval.txt
+  uranium_tipped_bullets
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  urban_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  winter_logistics_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt

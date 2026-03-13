@@ -1,0 +1,12 @@
+{
+  "workshop_id": "699709023",
+  "slug": "great_war",
+  "display_name": "Hearts of Iron IV: The Great War",
+  "mode": "overhaul",
+  "preset": "great_war",
+  "stats": {
+    "techs_total": 789,
+    "unknown_total": 63,
+    "doctrine_total": 0
+  }
+}

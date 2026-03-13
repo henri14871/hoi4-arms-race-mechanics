@@ -1,0 +1,12 @@
+{
+  "workshop_id": "3350890356",
+  "slug": "the_fire_rises",
+  "display_name": "The Fire Rises",
+  "mode": "overhaul",
+  "preset": "the_fire_rises",
+  "stats": {
+    "techs_total": 657,
+    "unknown_total": 78,
+    "doctrine_total": 118
+  }
+}

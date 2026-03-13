@@ -1,0 +1,12 @@
+{
+  "workshop_id": "2076426030",
+  "slug": "kaiserredux",
+  "display_name": "KaiserreduX",
+  "mode": "overhaul",
+  "preset": "kaiserredux",
+  "stats": {
+    "techs_total": 572,
+    "unknown_total": 93,
+    "doctrine_total": 38
+  }
+}

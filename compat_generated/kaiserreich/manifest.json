@@ -1,0 +1,12 @@
+{
+  "workshop_id": "1521695605",
+  "slug": "kaiserreich",
+  "display_name": "Kaiserreich",
+  "mode": "overhaul",
+  "preset": "kaiserreich",
+  "stats": {
+    "techs_total": 500,
+    "unknown_total": 29,
+    "doctrine_total": 38
+  }
+}

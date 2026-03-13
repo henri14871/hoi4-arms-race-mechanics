@@ -1,0 +1,12 @@
+{
+  "workshop_id": "1458561226",
+  "slug": "cold_war_iron_curtain",
+  "display_name": "Cold War Iron Curtain: A World Divided",
+  "mode": "overhaul",
+  "preset": "cold_war_iron_curtain",
+  "stats": {
+    "techs_total": 1417,
+    "unknown_total": 300,
+    "doctrine_total": 251
+  }
+}

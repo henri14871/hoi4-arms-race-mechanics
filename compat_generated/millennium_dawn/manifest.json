@@ -1,0 +1,12 @@
+{
+  "workshop_id": "2777392649",
+  "slug": "millennium_dawn",
+  "display_name": "Millennium Dawn: A Modern Day Mod",
+  "mode": "overhaul",
+  "preset": "millennium_dawn",
+  "stats": {
+    "techs_total": 972,
+    "unknown_total": 312,
+    "doctrine_total": 6
+  }
+}

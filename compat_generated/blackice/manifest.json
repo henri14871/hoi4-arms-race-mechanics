@@ -1,0 +1,12 @@
+{
+  "workshop_id": "1137372539",
+  "slug": "blackice",
+  "display_name": "BlackICE Historical Immersion Mod",
+  "mode": "overhaul",
+  "preset": "blackice",
+  "stats": {
+    "techs_total": 2627,
+    "unknown_total": 331,
+    "doctrine_total": 312
+  }
+}

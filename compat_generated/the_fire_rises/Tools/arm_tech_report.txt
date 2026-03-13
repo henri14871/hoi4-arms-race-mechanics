@@ -1,0 +1,1542 @@
+ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+============================================================
+
+Total techs parsed:    909
+Successfully mapped:   630
+Unmapped (unknown):    123
+
+BRANCH SUMMARY
+----------------------------------------
+  air                              68 techs
+  industry_electronics            143 techs
+  land                            297 techs
+  naval                           122 techs
+
+CATEGORY DETAIL
+------------------------------------------------------------
+
+  [air / cas] — 11 techs
+    1936  armor_piercing_bombs
+    1936  air_torpedoe_1
+    1940  heavy_bombs
+    1940  air_torpedoe_2
+    1944  air_torpedoe_3
+    2000  CAS1
+          [from: the_fire_rises]
+    2000  early_bombs
+          [from: the_fire_rises]
+    2020  CAS2
+          [from: the_fire_rises]
+    2020  guided_bombs
+          [from: the_fire_rises]
+    2024  CAS3
+          [from: the_fire_rises]
+    2024  improved_guided_bombs
+          [from: the_fire_rises]
+
+  [air / fighters] — 20 techs
+    1933  early_fighter
+    1933  cv_early_fighter
+    1945  jet_fighter1
+    1945  aa_cannon_3
+    1950  jet_fighter2
+    1950  supersonic_fighter1
+    1950  supersonic_small_airframe
+    2000  fighter1
+          [from: the_fire_rises]
+    2000  scout_plane1
+          [from: the_fire_rises]
+    2000  iw_small_airframe
+          [from: the_fire_rises]
+    2018  scout_plane2
+          [from: the_fire_rises]
+    2020  fighter2
+          [from: the_fire_rises]
+    2020  basic_small_airframe
+          [from: the_fire_rises]
+    2024  fighter3
+          [from: the_fire_rises]
+    2024  improved_small_airframe
+          [from: the_fire_rises]
+    2028  advanced_small_airframe
+          [from: the_fire_rises]
+    2028  fighter4
+          [from: the_fire_rises]
+    2032  fighter5
+          [from: the_fire_rises]
+    2032  modern_small_airframe
+          [from: the_fire_rises]
+    2036  fighter6
+          [from: the_fire_rises]
+
+  [air / heavy_fighters] — 8 techs
+    1936  heavy_fighter1
+    1940  heavy_fighter2
+    1944  heavy_fighter3
+    2000  iw_medium_airframe
+          [from: the_fire_rises]
+    2020  basic_medium_airframe
+          [from: the_fire_rises]
+    2024  improved_medium_airframe
+          [from: the_fire_rises]
+    2028  advanced_medium_airframe
+          [from: the_fire_rises]
+    2032  modern_medium_airframe
+          [from: the_fire_rises]
+
+  [air / naval_bombers] — 3 techs
+    2000  naval_bomber1
+          [from: the_fire_rises]
+    2024  naval_bomber2
+          [from: the_fire_rises]
+    2032  naval_bomber3
+          [from: the_fire_rises]
+
+  [air / strategic_bombers] — 13 techs
+    1942  reinforced_wings_mothership
+    1944  miniature_fighters
+    1946  aerial_hangars
+    1950  jet_strategic_bomber1
+    2000  strategic_bomber1
+          [from: the_fire_rises]
+    2000  iw_large_airframe
+          [from: the_fire_rises]
+    2020  strategic_bomber2
+          [from: the_fire_rises]
+    2020  basic_large_airframe
+          [from: the_fire_rises]
+    2024  strategic_bomber3
+          [from: the_fire_rises]
+    2024  improved_large_airframe
+          [from: the_fire_rises]
+    2028  advanced_large_airframe
+          [from: the_fire_rises]
+    2032  strategic_bomber4
+          [from: the_fire_rises]
+    2032  modern_large_airframe
+          [from: the_fire_rises]
+
+  [air / tactical_bombers] — 7 techs
+    1933  early_bomber
+    1945  jet_tactical_bomber1
+    1950  jet_tactical_bomber2
+    2000  tactical_bomber1
+          [from: the_fire_rises]
+    2018  tactical_bomber3
+          [from: the_fire_rises]
+    2024  tactical_bomber2
+          [from: the_fire_rises]
+    2024  tactical_bomber4
+          [from: the_fire_rises]
+
+  [air / transport] — 6 techs
+    1933  early_transport_plane
+    1933  bba_early_transport_plane
+    1940  improved_transport_plane
+    1940  bba_improved_transport_plane
+    1945  bba_strategic_airlifter
+    1948  strategic_airlifter
+
+  [industry_electronics / electronics] — 32 techs
+    1936  mechanical_computing
+    1936  basic_fire_control_system
+    1936  improved_fire_control_system
+    1936  advanced_fire_control_system
+    1938  improved_radio
+    1938  computing_machine
+    1938  basic_encryption
+    1938  basic_decryption
+    1940  improved_computing_machine
+    1940  improved_encryption
+    1940  improved_decryption
+    1941  advanced_radio
+    1942  advanced_computing_machine
+    1942  advanced_encryption
+    1942  advanced_decryption
+    2015  electronic_mechanical_engineering
+          [from: the_fire_rises]
+    2015  tech_20_nanometer_mosfet
+          [from: the_fire_rises]
+    2015  radio
+          [from: the_fire_rises]
+    2019  tech_10_nm_mosfets
+          [from: the_fire_rises]
+    2021  tech_5_nm_mosfets
+          [from: the_fire_rises]
+    2023  petascale_computing
+          [from: the_fire_rises]
+    2023  early_quantum_computing
+          [from: the_fire_rises]
+    2025  modern_supercomputers
+          [from: the_fire_rises]
+    2025  quantum_supremacy
+          [from: the_fire_rises]
+    2027  photonic_computing
+          [from: the_fire_rises]
+    2027  high_temperature_superconductors
+          [from: the_fire_rises]
+    2029  exascale_computing
+          [from: the_fire_rises]
+    2029  late_stage_nisq_computing
+          [from: the_fire_rises]
+    2031  combat_supercomputers
+          [from: the_fire_rises]
+    2031  tech_10000_qubit_computing
+          [from: the_fire_rises]
+    2033  basic_nanomachines
+          [from: the_fire_rises]
+    2035  advanced_nanomachines
+          [from: the_fire_rises]
+
+  [industry_electronics / industry] — 65 techs
+    1936  basic_fortification_tech
+    1936  coastal_fort_tech_1
+    1938  land_fort_tech_1
+    1940  land_fort_tech_2
+    1940  coastal_fort_tech_2
+    2020  basic_machine_tools
+          [from: the_fire_rises]
+    2020  concentrated_industry
+          [from: the_fire_rises]
+    2020  dispersed_industry
+          [from: the_fire_rises]
+    2020  fuel_silos
+          [from: the_fire_rises]
+    2020  fuel_refining
+          [from: the_fire_rises]
+    2020  synth_oil_experiments
+          [from: the_fire_rises]
+    2020  construction1
+          [from: the_fire_rises]
+    2020  excavation1
+          [from: the_fire_rises]
+    2021  improved_machine_tools
+          [from: the_fire_rises]
+    2021  concentrated_industry2
+          [from: the_fire_rises]
+    2021  dispersed_industry2
+          [from: the_fire_rises]
+    2021  oil_processing
+          [from: the_fire_rises]
+    2021  rubber_processing
+          [from: the_fire_rises]
+    2021  construction2
+          [from: the_fire_rises]
+    2023  advanced_machine_tools
+          [from: the_fire_rises]
+    2023  improved_equipment_conversion
+          [from: the_fire_rises]
+    2023  concentrated_industry3
+          [from: the_fire_rises]
+    2023  dispersed_industry3
+          [from: the_fire_rises]
+    2023  fuel_refining2
+          [from: the_fire_rises]
+    2023  construction3
+          [from: the_fire_rises]
+    2023  excavation2
+          [from: the_fire_rises]
+    2025  assembly_line_production
+          [from: the_fire_rises]
+    2025  concentrated_industry4
+          [from: the_fire_rises]
+    2025  dispersed_industry4
+          [from: the_fire_rises]
+    2025  improved_oil_processing
+          [from: the_fire_rises]
+    2025  improved_rubber_processing
+          [from: the_fire_rises]
+    2025  construction4
+          [from: the_fire_rises]
+    2025  excavation3
+          [from: the_fire_rises]
+    2027  flexible_line
+          [from: the_fire_rises]
+    2027  streamlined_line
+          [from: the_fire_rises]
+    2027  concentrated_industry5
+          [from: the_fire_rises]
+    2027  dispersed_industry5
+          [from: the_fire_rises]
+    2027  fuel_refining3
+          [from: the_fire_rises]
+    2027  construction5
+          [from: the_fire_rises]
+    2027  excavation4
+          [from: the_fire_rises]
+    2029  industrial_software
+          [from: the_fire_rises]
+    2029  advanced_equipment_conversion
+          [from: the_fire_rises]
+    2029  concentrated_industry6
+          [from: the_fire_rises]
+    2029  dispersed_industry6
+          [from: the_fire_rises]
+    2029  advanced_oil_processing
+          [from: the_fire_rises]
+    2029  advanced_rubber_processing
+          [from: the_fire_rises]
+    2029  construction6
+          [from: the_fire_rises]
+    2029  excavation5
+          [from: the_fire_rises]
+    2031  industrial_software2
+          [from: the_fire_rises]
+    2031  concentrated_industry7
+          [from: the_fire_rises]
+    2031  dispersed_industry7
+          [from: the_fire_rises]
+    2031  fuel_refining4
+          [from: the_fire_rises]
+    2031  construction7
+          [from: the_fire_rises]
+    2033  industrial_software3
+          [from: the_fire_rises]
+    2033  concentrated_industry8
+          [from: the_fire_rises]
+    2033  dispersed_industry8
+          [from: the_fire_rises]
+    2033  modern_oil_processing
+          [from: the_fire_rises]
+    2033  modern_rubber_processing
+          [from: the_fire_rises]
+    2033  construction8
+          [from: the_fire_rises]
+    2035  industrial_software4a
+          [from: the_fire_rises]
+    2035  industrial_software4b
+          [from: the_fire_rises]
+    2035  concentrated_industry9
+          [from: the_fire_rises]
+    2035  dispersed_industry9
+          [from: the_fire_rises]
+    2035  fuel_refining5
+          [from: the_fire_rises]
+    2035  construction9
+          [from: the_fire_rises]
+
+  [industry_electronics / nuclear] — 15 techs
+    1940  atomic_research
+    1943  nuclear_reactor
+    1943  nuclear_reactor_heavy_water
+    1943  isotope_separation_centrifugal
+          [from: the_fire_rises]
+    1950  thermonuclear_bombs
+          [from: the_fire_rises]
+    2019  nuclear_reactors
+          [from: the_fire_rises]
+    2019  energy_farms
+          [from: the_fire_rises]
+    2023  nuclear_reactors1
+          [from: the_fire_rises]
+    2023  energy_farms1
+          [from: the_fire_rises]
+    2027  nuclear_reactors2
+          [from: the_fire_rises]
+    2027  energy_farms2
+          [from: the_fire_rises]
+    2031  nuclear_reactors3
+          [from: the_fire_rises]
+    2031  energy_farms3
+          [from: the_fire_rises]
+    2035  nuclear_reactors4
+          [from: the_fire_rises]
+    2035  energy_farms4
+          [from: the_fire_rises]
+
+  [industry_electronics / radar] — 12 techs
+    1938  cavity_magnatron
+    1941  phased_array
+    1942  monopulse_radar
+    2019  radio_detection
+          [from: the_fire_rises]
+    2021  decimetric_radar
+          [from: the_fire_rises]
+    2023  improved_decimetric_radar
+          [from: the_fire_rises]
+    2025  centimetric_radar
+          [from: the_fire_rises]
+    2027  improved_centimetric_radar
+          [from: the_fire_rises]
+    2029  advanced_centimetric_radar
+          [from: the_fire_rises]
+    2031  basic_quantum_radar
+          [from: the_fire_rises]
+    2033  improved_quantum_radar
+          [from: the_fire_rises]
+    2035  advanced_quantum_radar
+          [from: the_fire_rises]
+
+  [industry_electronics / rockets] — 19 techs
+    1939  motorized_rocket_unit
+    1942  experimental_rockets
+    1943  sp_rockets_improved_guidance
+    1944  rocket_engines
+    1944  sp_rockets_rocket_bomber
+    1944  jet_engines
+    1944  sp_rockets_dual_chamber_rocket_engine_1
+    1945  sp_rockets_improved_rocket_bomber
+    1945  improved_rocket_engines
+    1946  advanced_rocket_engines
+    1946  sp_rockets_dual_chamber_rocket_engine_2
+    2006  rocket_artillery
+          [from: the_fire_rises]
+    2018  rocket_artillery2
+          [from: the_fire_rises]
+    2020  suicide_drone_tech1
+          [from: the_fire_rises]
+    2024  rocket_artillery3
+          [from: the_fire_rises]
+    2024  suicide_drone_tech2
+          [from: the_fire_rises]
+    2027  rocket_artillery4
+          [from: the_fire_rises]
+    2028  suicide_drone_tech3
+          [from: the_fire_rises]
+    2032  suicide_drone_tech4
+          [from: the_fire_rises]
+
+  [land / anti_tank] — 11 techs
+    1936  mountain_tanks
+    1936  SWE_bofors_antitank_gun
+    2006  interwar_antitank
+          [from: the_fire_rises]
+    2012  antitank1
+          [from: the_fire_rises]
+    2018  antitank2
+          [from: the_fire_rises]
+    2021  antitank3
+          [from: the_fire_rises]
+    2024  antitank4
+          [from: the_fire_rises]
+    2027  antitank5
+          [from: the_fire_rises]
+    2030  antitank6
+          [from: the_fire_rises]
+    2033  antitank7
+          [from: the_fire_rises]
+    2036  antitank8
+          [from: the_fire_rises]
+
+  [land / artillery] — 29 techs
+    1936  railway_gun
+    1940  sp_artillery_rocket_assisted_projectiles_tech
+    1940  sp_artillery_purpose_built_gun_motor_carriages_tech
+    1941  sp_shock_hardening_techniques
+    1942  sp_variable_time_fuze_shells
+    2000  gw_artillery
+          [from: the_fire_rises]
+    2006  interwar_artillery
+          [from: the_fire_rises]
+    2006  tank_destroyer1
+          [from: the_fire_rises]
+    2006  sp_artillery1
+          [from: the_fire_rises]
+    2006  self_propelled_aa1
+          [from: the_fire_rises]
+    2006  interwar_antiair
+          [from: the_fire_rises]
+    2012  artillery1
+          [from: the_fire_rises]
+    2012  antiair1
+          [from: the_fire_rises]
+    2018  artillery2
+          [from: the_fire_rises]
+    2018  antiair2
+          [from: the_fire_rises]
+    2021  artillery3
+          [from: the_fire_rises]
+    2021  sp_artillery2
+          [from: the_fire_rises]
+    2021  antiair3
+          [from: the_fire_rises]
+    2024  artillery4
+          [from: the_fire_rises]
+    2024  tank_destroyer2
+          [from: the_fire_rises]
+    2024  self_propelled_aa2
+          [from: the_fire_rises]
+    2024  antiair4
+          [from: the_fire_rises]
+    2027  artillery5
+          [from: the_fire_rises]
+    2027  antiair5
+          [from: the_fire_rises]
+    2030  artillery6
+          [from: the_fire_rises]
+    2030  sp_artillery3
+          [from: the_fire_rises]
+    2030  antiair6
+          [from: the_fire_rises]
+    2033  antiair7
+          [from: the_fire_rises]
+    2036  antiair8
+          [from: the_fire_rises]
+
+  [land / heavy_tanks] — 13 techs
+    1934  basic_heavy_tank
+    1934  basic_heavy_tank_chassis
+    1940  improved_heavy_tank_chassis
+    1941  improved_heavy_tank
+    1941  super_heavy_tank
+    1941  super_heavy_tank_chassis
+    1943  advanced_heavy_tank
+    1943  advanced_heavy_tank_chassis
+    1943  sp_armored_lc_naval_engine_conversion_tech
+    1943  sp_armored_lc_transmission_improvements_tech
+    1943  sp_armored_lc_specialized_field_manuals_tech
+    1943  sp_armored_lc_high_impact_obliterator_cannon_tech
+    1945  sp_armored_lc_weapon_fire_control_tech
+
+  [land / infantry] — 66 techs
+    1918  infantry_weapons
+    1936  rangers_tech
+    1939  improved_infantry_weapons
+    1939  rangers_tech2
+    1940  improved_infantry_weapons_2
+    1942  infantry_at
+    1942  advanced_infantry_weapons
+    1943  infantry_at2
+    1943  rangers_tech3
+    1944  advanced_infantry_weapons2
+    2000  infantry_weapons1
+          [from: the_fire_rises]
+    2000  infantry_rifle_upgrade
+          [from: the_fire_rises]
+    2000  support_weapons
+          [from: the_fire_rises]
+    2000  body_armor
+          [from: the_fire_rises]
+    2000  camouflage
+          [from: the_fire_rises]
+    2000  marines
+          [from: the_fire_rises]
+    2000  tech_mountaineers
+          [from: the_fire_rises]
+    2000  tech_rangers
+          [from: the_fire_rises]
+    2000  paratroopers
+          [from: the_fire_rises]
+    2003  infantry_rifle_upgrade2
+          [from: the_fire_rises]
+    2006  infantry_weapons2
+          [from: the_fire_rises]
+    2006  support_weapons2
+          [from: the_fire_rises]
+    2006  camouflage2
+          [from: the_fire_rises]
+    2009  infantry_rifle_upgrade3
+          [from: the_fire_rises]
+    2012  upgraded_infantry_weapons1
+          [from: the_fire_rises]
+    2012  infantry_rifle_upgrade4
+          [from: the_fire_rises]
+    2012  support_weapons3
+          [from: the_fire_rises]
+    2012  body_armor2
+          [from: the_fire_rises]
+    2018  infantry_weapons3
+          [from: the_fire_rises]
+    2018  infantry_rifle_upgrade5
+          [from: the_fire_rises]
+    2018  support_weapons4
+          [from: the_fire_rises]
+    2018  camouflage3
+          [from: the_fire_rises]
+    2018  tech_special_forces
+          [from: the_fire_rises]
+    2021  upgraded_infantry_weapons2
+          [from: the_fire_rises]
+    2021  support_weapons5
+          [from: the_fire_rises]
+    2021  body_armor3
+          [from: the_fire_rises]
+    2021  paratroopers2
+          [from: the_fire_rises]
+    2021  marines2
+          [from: the_fire_rises]
+    2021  tech_mountaineers2
+          [from: the_fire_rises]
+    2021  tech_rangers2
+          [from: the_fire_rises]
+    2021  advanced_special_forces
+          [from: the_fire_rises]
+    2021  improved_special_forces
+          [from: the_fire_rises]
+    2024  infantry_weapons4
+          [from: the_fire_rises]
+    2024  infantry_rifle_upgrade6
+          [from: the_fire_rises]
+    2024  infantry_rifle_upgrade7
+          [from: the_fire_rises]
+    2024  support_weapons6
+          [from: the_fire_rises]
+    2024  body_armor4
+          [from: the_fire_rises]
+    2024  camouflage4
+          [from: the_fire_rises]
+    2024  extreme_environment_training
+          [from: the_fire_rises]
+    2024  survival_training
+          [from: the_fire_rises]
+    2026  infantry_rifle_upgrade8
+          [from: the_fire_rises]
+    2027  body_armor5
+          [from: the_fire_rises]
+    2027  paratroopers3
+          [from: the_fire_rises]
+    2027  marines3
+          [from: the_fire_rises]
+    2027  tech_mountaineers3
+          [from: the_fire_rises]
+    2027  tech_rangers3
+          [from: the_fire_rises]
+    2027  elite_forces
+          [from: the_fire_rises]
+    2030  infantry_weapons5
+          [from: the_fire_rises]
+    2030  body_armor6
+          [from: the_fire_rises]
+    2030  camouflage5
+          [from: the_fire_rises]
+    2033  upgraded_infantry_weapons3
+          [from: the_fire_rises]
+    2033  infantry_rifle_upgrade9
+          [from: the_fire_rises]
+    2033  body_armor7
+          [from: the_fire_rises]
+    2036  infantry_weapons6
+          [from: the_fire_rises]
+    2036  body_armor8
+          [from: the_fire_rises]
+    2036  camouflage6
+          [from: the_fire_rises]
+
+  [land / light_tanks] — 12 techs
+    1918  gwtank
+    1934  basic_light_tank
+    1936  improved_light_tank
+    1941  advanced_light_tank
+    1980  gwtank_chassis
+          [from: the_fire_rises]
+    2000  light_tank1
+          [from: the_fire_rises]
+    2012  light_tank2
+          [from: the_fire_rises]
+    2018  basic_light_tank_chassis
+          [from: the_fire_rises]
+    2022  improved_light_tank_chassis
+          [from: the_fire_rises]
+    2024  light_tank3
+          [from: the_fire_rises]
+    2024  advanced_light_tank_chassis
+          [from: the_fire_rises]
+    2032  light_tank4
+          [from: the_fire_rises]
+
+  [land / mechanised] — 17 techs
+    1940  mechanised_infantry
+    2000  amphibious_mechanized_infantry
+          [from: the_fire_rises]
+    2000  mechanised_infantry1
+          [from: the_fire_rises]
+    2000  light_mechanized_infantry1
+          [from: the_fire_rises]
+    2000  amphibious_mechanized_infantry1
+          [from: the_fire_rises]
+    2012  mechanised_infantry2
+          [from: the_fire_rises]
+    2012  light_mechanized_infantry2
+          [from: the_fire_rises]
+    2012  amphibious_mechanized_infantry2
+          [from: the_fire_rises]
+    2021  amphibious_mechanized_infantry_2
+          [from: the_fire_rises]
+    2021  mechanised_infantry3
+          [from: the_fire_rises]
+    2021  light_mechanized_infantry3
+          [from: the_fire_rises]
+    2024  amphibious_mechanized_infantry3
+          [from: the_fire_rises]
+    2027  mechanised_infantry4
+          [from: the_fire_rises]
+    2027  light_mechanized_infantry4
+          [from: the_fire_rises]
+    2036  amphibious_mechanized_infantry_3
+          [from: the_fire_rises]
+    2036  mechanised_infantry5
+          [from: the_fire_rises]
+    2036  light_mechanized_infantry5
+          [from: the_fire_rises]
+
+  [land / medium_tanks] — 6 techs
+    1939  basic_medium_tank
+    1941  improved_medium_tank
+    1943  advanced_medium_tank
+    1980  basic_medium_tank_chassis
+          [from: the_fire_rises]
+    2020  improved_medium_tank_chassis
+          [from: the_fire_rises]
+    2024  advanced_medium_tank_chassis
+          [from: the_fire_rises]
+
+  [land / modern_tanks] — 2 techs
+    1945  main_battle_tank
+    2032  main_battle_tank_chassis
+          [from: the_fire_rises]
+
+  [land / motorised] — 4 techs
+    1936  tech_trucks
+    2000  motorised_infantry
+          [from: the_fire_rises]
+    2024  motorised_infantry2
+          [from: the_fire_rises]
+    2036  motorised_infantry3
+          [from: the_fire_rises]
+
+  [land / support] — 58 techs
+    1936  tech_recon_focus_bonus
+    1938  sp_armored_engineer_tech
+    1938  sp_armored_maintenance_tech
+    1938  sp_armored_signal_tech
+    1938  sp_helicopter_transport_pods_tech
+    1938  sp_helicopter_artillery_observers_tech
+    1938  sp_helicopter_med_evac_tech
+    1938  sp_armored_motorized_military_police_tech
+    2000  night_vision
+          [from: the_fire_rises]
+    2006  night_vision2
+          [from: the_fire_rises]
+    2018  tech_support
+          [from: the_fire_rises]
+    2018  basic_train
+          [from: the_fire_rises]
+    2020  tech_engineers
+          [from: the_fire_rises]
+    2020  tech_recon
+          [from: the_fire_rises]
+    2020  tech_military_police
+          [from: the_fire_rises]
+    2020  tech_maintenance_company
+          [from: the_fire_rises]
+    2020  basic_railway
+          [from: the_fire_rises]
+    2020  tech_fast_rope_drills
+          [from: the_fire_rises]
+    2020  tech_improved_gps
+          [from: the_fire_rises]
+    2020  tech_field_hospital
+          [from: the_fire_rises]
+    2020  tech_logistics_company
+          [from: the_fire_rises]
+    2020  tech_signal_company
+          [from: the_fire_rises]
+    2021  night_vision3
+          [from: the_fire_rises]
+    2022  tech_combat_engineers
+          [from: the_fire_rises]
+    2022  forward_operating_base
+          [from: the_fire_rises]
+    2024  night_vision4
+          [from: the_fire_rises]
+    2024  tech_engineers2
+          [from: the_fire_rises]
+    2024  tech_recon2
+          [from: the_fire_rises]
+    2024  tech_military_police2
+          [from: the_fire_rises]
+    2024  tech_maintenance_company2
+          [from: the_fire_rises]
+    2024  tech_field_hospital2
+          [from: the_fire_rises]
+    2024  tech_logistics_company2
+          [from: the_fire_rises]
+    2024  tech_signal_company2
+          [from: the_fire_rises]
+    2024  wartime_train
+          [from: the_fire_rises]
+    2024  armored_train
+          [from: the_fire_rises]
+    2024  improved_rail_network
+          [from: the_fire_rises]
+    2024  tech_aerial_hospitals
+          [from: the_fire_rises]
+    2024  tech_improved_countermeasures
+          [from: the_fire_rises]
+    2026  tech_support1
+          [from: the_fire_rises]
+    2026  tech_thermobaric_weapons
+          [from: the_fire_rises]
+    2026  improved_logistical_hub
+          [from: the_fire_rises]
+    2026  tech_improved_rocket_pods
+          [from: the_fire_rises]
+    2027  night_vision5
+          [from: the_fire_rises]
+    2028  tech_engineers3
+          [from: the_fire_rises]
+    2028  tech_recon3
+          [from: the_fire_rises]
+    2028  tech_military_police3
+          [from: the_fire_rises]
+    2028  tech_maintenance_company3
+          [from: the_fire_rises]
+    2028  tech_field_hospital3
+          [from: the_fire_rises]
+    2028  tech_logistics_company3
+          [from: the_fire_rises]
+    2028  tech_signal_company3
+          [from: the_fire_rises]
+    2032  tech_engineers4
+          [from: the_fire_rises]
+    2032  tech_recon4
+          [from: the_fire_rises]
+    2032  tech_military_police4
+          [from: the_fire_rises]
+    2032  tech_maintenance_company4
+          [from: the_fire_rises]
+    2032  tech_field_hospital4
+          [from: the_fire_rises]
+    2032  tech_logistics_company4
+          [from: the_fire_rises]
+    2032  tech_signal_company4
+          [from: the_fire_rises]
+    2033  night_vision6
+          [from: the_fire_rises]
+
+  [land / tanks_generic] — 79 techs
+    1914  armored_car1
+    1934  basic_light_td
+    1934  basic_light_art
+    1934  basic_light_spaa
+    1934  basic_heavy_td
+    1934  basic_heavy_art
+    1934  basic_heavy_spaa
+    1936  improved_light_td
+    1936  improved_light_art
+    1936  improved_light_spaa
+    1936  JAP_lighter_tanks
+    1936  GER_heavy_armored_car
+    1936  NOR_rikstanken_tech
+    1936  PRC_Gundam
+          [from: the_fire_rises]
+    1939  basic_medium_td
+    1939  basic_medium_art
+    1939  basic_medium_spaa
+    1940  amphibious_tank
+    1940  armored_car2
+    1941  advanced_light_td
+    1941  advanced_light_art
+    1941  advanced_light_spaa
+    1941  improved_medium_td
+    1941  improved_medium_art
+    1941  improved_medium_spaa
+    1941  improved_heavy_td
+    1941  improved_heavy_art
+    1941  improved_heavy_spaa
+    1941  sp_armored_advanced_flamethrower_tech
+    1942  amphibious_tank_2
+    1942  armored_car3
+    1942  armored_car_at_upgrade
+    1942  SWE_lynx_armored_car
+    1943  advanced_medium_td
+    1943  advanced_medium_art
+    1943  advanced_medium_spaa
+    1943  advanced_heavy_td
+    1943  advanced_heavy_art
+    1943  advanced_heavy_spaa
+    1943  super_heavy_td
+    1943  super_heavy_art
+    1943  super_heavy_spaa
+    1945  modern_td
+    1945  modern_art
+    1945  modern_spaa
+    1980  main_battle_tank1
+          [from: the_fire_rises]
+    1980  apds_tech
+          [from: the_fire_rises]
+    1980  turret_mounted_mg_tech
+          [from: the_fire_rises]
+    1980  armor_tech_1
+          [from: the_fire_rises]
+    1980  legacy_armor_designs
+          [from: the_fire_rises]
+    2000  main_battle_tank2
+          [from: the_fire_rises]
+    2000  amphibious_tank1
+          [from: the_fire_rises]
+    2000  amphibious_tank_chassis
+          [from: the_fire_rises]
+    2000  auto_loader_tech
+          [from: the_fire_rises]
+    2000  armor_tech_2
+          [from: the_fire_rises]
+    2012  main_battle_tank3
+          [from: the_fire_rises]
+    2012  amphibious_drive
+          [from: the_fire_rises]
+    2012  amphibious_tank2
+          [from: the_fire_rises]
+    2018  engine_tech_1
+          [from: the_fire_rises]
+    2020  blow_out_compartment_tech
+          [from: the_fire_rises]
+    2020  third_gen_nv_tech
+          [from: the_fire_rises]
+    2020  engine_tech_2
+          [from: the_fire_rises]
+    2021  main_battle_tank4
+          [from: the_fire_rises]
+    2021  heat_tech
+          [from: the_fire_rises]
+    2021  turret_mounted_atgm_tech
+          [from: the_fire_rises]
+    2022  apfsds_tech
+          [from: the_fire_rises]
+    2022  auto_cannon_tech
+          [from: the_fire_rises]
+    2022  armor_tech_3
+          [from: the_fire_rises]
+    2024  heatfs_tech
+          [from: the_fire_rises]
+    2024  turret_mounted_manpad_tech
+          [from: the_fire_rises]
+    2024  unmanned_turret_tech
+          [from: the_fire_rises]
+    2024  third_gen_thermal_tech
+          [from: the_fire_rises]
+    2024  engine_tech_3
+          [from: the_fire_rises]
+    2024  amphibious_tank3
+          [from: the_fire_rises]
+    2028  main_battle_tank5
+          [from: the_fire_rises]
+    2028  armor_tech_4
+          [from: the_fire_rises]
+    2028  armor_tech_5
+          [from: the_fire_rises]
+    2032  engine_tech_4
+          [from: the_fire_rises]
+    2038  main_battle_tank6
+          [from: the_fire_rises]
+
+  [naval / battleships] — 16 techs
+    1922  early_battlecruiser
+    1940  basic_battlecruiser
+    2000  early_ship_hull_heavy
+          [from: the_fire_rises]
+    2000  early_battleship
+          [from: the_fire_rises]
+    2020  basic_ship_hull_heavy
+          [from: the_fire_rises]
+    2020  ship_hull_super_heavy
+          [from: the_fire_rises]
+    2020  basic_heavy_armor_scheme (XP)
+          [from: the_fire_rises]
+    2020  basic_battleship
+          [from: the_fire_rises]
+    2020  heavy_battleship
+          [from: the_fire_rises]
+    2024  improved_ship_hull_heavy
+          [from: the_fire_rises]
+    2024  ship_hull_advanced_super_heavy
+          [from: the_fire_rises]
+    2024  improved_heavy_armor_scheme (XP)
+          [from: the_fire_rises]
+    2024  improved_battleship
+          [from: the_fire_rises]
+    2028  advanced_ship_hull_heavy
+          [from: the_fire_rises]
+    2028  advanced_battleship
+          [from: the_fire_rises]
+    2028  heavy_battleship2
+          [from: the_fire_rises]
+
+  [naval / carriers] — 10 techs
+    1942  sp_refined_pykrete
+    1944  sp_ice_composite_runawayas
+    2000  early_ship_hull_carrier
+          [from: the_fire_rises]
+    2000  early_carrier
+          [from: the_fire_rises]
+    2020  basic_ship_hull_carrier
+          [from: the_fire_rises]
+    2020  basic_carrier
+          [from: the_fire_rises]
+    2024  improved_ship_hull_carrier
+          [from: the_fire_rises]
+    2024  improved_carrier
+          [from: the_fire_rises]
+    2028  advanced_ship_hull_carrier
+          [from: the_fire_rises]
+    2028  advanced_carrier
+          [from: the_fire_rises]
+
+  [naval / destroyers] — 17 techs
+    1939  advanced_sonar
+    1943  modern_sonar
+    2000  early_ship_hull_light
+          [from: the_fire_rises]
+    2000  smoke_generator
+          [from: the_fire_rises]
+    2000  basic_depth_charges (XP)
+          [from: the_fire_rises]
+    2000  sonar
+          [from: the_fire_rises]
+    2000  early_destroyer
+          [from: the_fire_rises]
+    2020  basic_ship_hull_light
+          [from: the_fire_rises]
+    2020  improved_depth_charges (XP)
+          [from: the_fire_rises]
+    2020  improved_sonar
+          [from: the_fire_rises]
+    2020  basic_destroyer
+          [from: the_fire_rises]
+    2024  improved_ship_hull_light
+          [from: the_fire_rises]
+    2024  advanced_depth_charges (XP)
+          [from: the_fire_rises]
+    2024  improved_destroyer
+          [from: the_fire_rises]
+    2028  advanced_ship_hull_light
+          [from: the_fire_rises]
+    2028  modern_depth_charges (XP)
+          [from: the_fire_rises]
+    2028  advanced_destroyer
+          [from: the_fire_rises]
+
+  [naval / heavy_cruisers] — 4 techs
+    2000  early_heavy_cruiser
+          [from: the_fire_rises]
+    2020  basic_heavy_cruiser
+          [from: the_fire_rises]
+    2024  improved_heavy_cruiser
+          [from: the_fire_rises]
+    2028  advanced_heavy_cruiser
+          [from: the_fire_rises]
+
+  [naval / light_cruisers] — 10 techs
+    2000  early_ship_hull_cruiser
+          [from: the_fire_rises]
+    2000  basic_cruiser_armor_scheme (XP)
+          [from: the_fire_rises]
+    2000  early_light_cruiser
+          [from: the_fire_rises]
+    2020  basic_ship_hull_cruiser
+          [from: the_fire_rises]
+    2020  improved_airplane_launcher
+          [from: the_fire_rises]
+    2020  basic_light_cruiser
+          [from: the_fire_rises]
+    2024  improved_ship_hull_cruiser
+          [from: the_fire_rises]
+    2024  improved_light_cruiser
+          [from: the_fire_rises]
+    2028  advanced_ship_hull_cruiser
+          [from: the_fire_rises]
+    2028  advanced_light_cruiser
+          [from: the_fire_rises]
+
+  [naval / naval_support] — 51 techs
+    1922  basic_naval_mines
+          [from: the_fire_rises]
+    1936  damage_control_1 (XP)
+          [from: the_fire_rises]
+    1936  damage_control_2 (XP)
+          [from: the_fire_rises]
+    1936  damage_control_3 (XP)
+          [from: the_fire_rises]
+    1936  fire_control_methods_1 (XP)
+          [from: the_fire_rises]
+    1936  fire_control_methods_2 (XP)
+          [from: the_fire_rises]
+    1936  fire_control_methods_3 (XP)
+          [from: the_fire_rises]
+    1938  sp_multi_product_supply_ships (XP)
+    1942  sp_improved_support_ship (XP)
+    1942  sp_improved_repair_ship (XP)
+    1943  sp_standard_tenshioned_replenishment_alongside_method (XP)
+    1980  basic_battery
+          [from: the_fire_rises]
+    1980  basic_torpedo
+          [from: the_fire_rises]
+    1980  submarine_mine_laying
+          [from: the_fire_rises]
+    1980  mtg_transport
+          [from: the_fire_rises]
+    2000  transport
+          [from: the_fire_rises]
+    2020  basic_light_battery
+          [from: the_fire_rises]
+    2020  basic_light_shell
+          [from: the_fire_rises]
+    2020  basic_medium_battery
+          [from: the_fire_rises]
+    2020  basic_heavy_battery
+          [from: the_fire_rises]
+    2020  big_gun_tech
+          [from: the_fire_rises]
+    2020  magnetic_detonator (XP)
+          [from: the_fire_rises]
+    2020  improved_ship_torpedo_launcher
+          [from: the_fire_rises]
+    2020  improved_naval_mines
+          [from: the_fire_rises]
+    2020  mtg_at_sea_refueling
+          [from: the_fire_rises]
+    2024  improved_light_battery
+          [from: the_fire_rises]
+    2024  improved_medium_battery
+          [from: the_fire_rises]
+    2024  improved_heavy_battery
+          [from: the_fire_rises]
+    2024  basic_dp_light_battery
+          [from: the_fire_rises]
+    2024  degaussing
+          [from: the_fire_rises]
+    2024  landing_craft
+          [from: the_fire_rises]
+    2026  electric_torpedo (XP)
+          [from: the_fire_rises]
+    2026  mtg_landing_craft
+          [from: the_fire_rises]
+    2028  improved_light_shell
+          [from: the_fire_rises]
+    2028  advanced_heavy_battery
+          [from: the_fire_rises]
+    2028  improved_dp_light_battery
+          [from: the_fire_rises]
+    2028  homing_torpedo (XP)
+          [from: the_fire_rises]
+    2028  advanced_ship_torpedo_launcher
+          [from: the_fire_rises]
+    2028  improved_submarine_mine_laying
+          [from: the_fire_rises]
+    2028  tank_landing_craft
+          [from: the_fire_rises]
+    2032  advanced_light_battery
+          [from: the_fire_rises]
+    2032  advanced_medium_battery
+          [from: the_fire_rises]
+    2032  advanced_dp_light_battery
+          [from: the_fire_rises]
+    2032  modern_ship_torpedo_launcher
+          [from: the_fire_rises]
+    2032  advanced_naval_mines
+          [from: the_fire_rises]
+    2032  airdrop_mines
+          [from: the_fire_rises]
+    2032  airdrop_mines_bba
+          [from: the_fire_rises]
+    2032  airsweep_mines
+          [from: the_fire_rises]
+    2032  airsweep_mines_bba
+          [from: the_fire_rises]
+    2032  mtg_tank_landing_craft
+          [from: the_fire_rises]
+    2034  modern_naval_mines
+          [from: the_fire_rises]
+
+  [naval / submarines] — 14 techs
+    1939  sp_aip_engine_improved_tech
+    1943  sp_aip_engine_advanced_tech
+    2000  early_ship_hull_submarine
+          [from: the_fire_rises]
+    2000  early_submarine
+          [from: the_fire_rises]
+    2000  early_ship_hull_nuclear_submarine
+          [from: the_fire_rises]
+    2020  basic_ship_hull_submarine
+          [from: the_fire_rises]
+    2020  basic_submarine_snorkel
+          [from: the_fire_rises]
+    2020  basic_submarine
+          [from: the_fire_rises]
+    2024  improved_ship_hull_submarine
+          [from: the_fire_rises]
+    2024  improved_submarine
+          [from: the_fire_rises]
+    2024  advanced_ship_hull_nuclear_submarine
+          [from: the_fire_rises]
+    2028  advanced_ship_hull_submarine
+          [from: the_fire_rises]
+    2028  improved_submarine_snorkel (XP)
+          [from: the_fire_rises]
+    2028  advanced_submarine
+          [from: the_fire_rises]
+
+UNMAPPED TECHS
+------------------------------------------------------------
+These techs could not be assigned to a branch.
+Add entries to custom_mappings.txt to include them.
+
+  BEL_chasseurs_ardennais
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  BEL_chasseurs_ardennais_ncns
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ETH_improved_irregular_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  HUN_light_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  JAP_silver_wheels
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  PHI_battalion_combat_teams
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  PRC_qts_14_nib
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\additional_techs.txt
+  SWE_sami_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWI_mountaineer_paratroopers_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  TOA_jungle_pioneers_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ToA_river_boats_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  aa_cannon_1
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  aa_cannon_2
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  aa_hmg
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  aa_hmg2
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  aa_lmg
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  advanced_modern_tank_turret_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  aircraft_construction
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  anti_ship_missiles
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  artificial_intel_studies
+    categories: ['artificial_intelligence']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  attack_helicopter_1
+    categories: ['medium_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\support.txt
+  attack_helicopter_2
+    categories: ['medium_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\support.txt
+  basic_heavy_shell
+    categories: ['naval_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval_Support.txt
+  basic_medium_shell
+    categories: ['naval_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval_Support.txt
+  bicycle_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  blackshirt_assault_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camelry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camicie_nere_security_militias
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\support.txt
+  casualty_increase_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\land_doctrine.txt
+  chemical_attack_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\land_doctrine.txt
+  coastal_defense_ships
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval.txt
+  commercial_nuclear_reactor_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\hidden.txt
+  cruiser_submarines
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval.txt
+  cv_CAS1
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_CAS2
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_CAS3
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_fighter1
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_fighter2
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_fighter3
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_fighter4
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_fighter5
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_fighter6
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_fighter7
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_fighter8
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_naval_bomber1
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_naval_bomber2
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_naval_bomber3
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_naval_bomber4
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_naval_bomber5
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  cv_naval_bomber6
+    categories: ['naval_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  desert_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  elephantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  engines_1
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  engines_2
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  engines_3
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  engines_4
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  fallschirmjager_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\land_doctrine.txt
+  german_logistics_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\land_doctrine.txt
+  hills_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  improved_heavy_shell
+    categories: ['naval_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval_Support.txt
+  improved_medium_shell
+    categories: ['naval_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval_Support.txt
+  infiltrator_company_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\additional_techs.txt
+  jungle_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_warfare
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_warfare_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\land_doctrine.txt
+  land_multi_charge_large_caliber_gun_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\hidden.txt
+  lar_decryption_bonus_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\electronic_mechanical_engineering.txt
+  long_range_patrol_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  lotta_svard_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  low_tier_warthunder
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\land_doctrine.txt
+  midget_submarines
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval.txt
+  militia_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  molotov_cocktails_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_defensive_training
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_gun
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\artillery.txt
+  mountain_warfare
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_warfare_militias_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  nukes
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\hidden.txt
+  operation_gul_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\land_doctrine.txt
+  panzerschiffe
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval.txt
+  penal_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  photo_reconnaisance
+    categories: ['air_equipment', 'plane_modules_tech', 'mio_cat_all_medium_aircraft_and_modules']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  power_plants
+    categories: ['energy']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\electronic_mechanical_engineering.txt
+  power_plants1
+    categories: ['energy']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\electronic_mechanical_engineering.txt
+  power_plants2
+    categories: ['energy']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\electronic_mechanical_engineering.txt
+  power_plants3
+    categories: ['energy']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\electronic_mechanical_engineering.txt
+  power_plants4
+    categories: ['energy']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\electronic_mechanical_engineering.txt
+  power_plants5
+    categories: ['energy']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\electronic_mechanical_engineering.txt
+  pre_dreadnoughts
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval.txt
+  range_improvements
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  sami_pathfinders_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  short_range_missiles
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  sp_centrifugal_jet_tech
+    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  sp_naval_proximity_fuze_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  space_marines_infantry
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\additional_techs.txt
+  stronghold_network_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\hidden.txt
+  sturmtruppe_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  suicide_charge
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  suicide_craft
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\air_techs.txt
+  support_weapons7
+    categories: ['artificial_intelligence']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\infantry.txt
+  support_weapons8
+    categories: ['artificial_intelligence']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\infantry.txt
+  survivability_studies
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\bba_air_techs.txt
+  tech_cyber_units_warfare
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\hidden.txt
+  tech_derzhavnik_battalion
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\hidden.txt
+  tech_upgraded_start_generals
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\hidden.txt
+  terminator_ai_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\land_doctrine.txt
+  torpedo_cruiser
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\naval.txt
+  torpedo_cruiser_mtg
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\MTG_naval.txt
+  transport_plane2
+    categories: ['medium_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\air_techs.txt
+  ultimate_admiral_dreadnoughts
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\land_doctrine.txt
+  uranium_tipped_bullets
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  urban_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  utility_helicopter_1
+    categories: ['medium_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\support.txt
+  utility_helicopter_2
+    categories: ['medium_air', 'air_equipment']
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\support.txt
+  winter_logistics_support_tech
+    categories: []
+    source: the_fire_rises / E:\SteamLibrary\steamapps\workshop\content\394360\3350890356\common\technologies\additional_techs.txt

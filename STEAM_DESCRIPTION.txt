@@ -1,0 +1,66 @@
+[h1]Arms Race Mechanics[/h1]
+Dynamically grants technologies to nations based on their global power, military competence, and industrial capacity. Stronger nations stay near the tech frontier. Weaker nations lag behind but never become obsolete.
+
+[h2]Features[/h2]
+[list]
+[*] Six power tiers (Micro to Superpower) based on economy, science, mobilisation, resources, and war posture
+[*] Four branch competence scores (Land, Air, Naval, Industry) control which tech categories each nation receives
+[*] Technologies granted quarterly in priority order with configurable caps
+[*] War, faction, and desperation bonuses help nations under pressure catch up
+[*] Anti-death-spiral system keeps losing nations competitive in the late game
+[*] Puppet tech sharing lets subjects benefit from their overlord's strength
+[*] Historical bias mode boosts historically advanced nations in their strongest branches
+[*] DLC-aware - techs from Man the Guns, No Step Back, and By Blood Alone are gated so players without a DLC waste zero grant slots
+[*] Built-in compatibility profiles for major overhaul and expansion mods
+[*] 13 fully configurable game rules
+[/list]
+
+[h2]Game Rules[/h2]
+[list]
+[*] Scope (AI Only / Everyone / Disabled)
+[*] Intensity (Relaxed / Balanced / Aggressive / Historical)
+[*] Compatibility Profile (Auto Detect / Vanilla / bundled major-mod profiles)
+[*] Tech Scope (Core Only / Core + Air/Naval / All Except Doctrines / Everything)
+[*] Doctrine Handling (Disabled / AI Only / Everyone)
+[*] Advanced Tech - Nuclear and Rockets (Excluded / Superpowers Only / Included)
+[*] War/Faction Catch-Up (Disabled / Standard / Enhanced)
+[*] Grant Cap (Strict / Standard / Unlimited)
+[*] Puppet Sharing (Disabled / Standard / Enhanced)
+[*] Anti-Death Spiral (Disabled / Standard / Enhanced)
+[*] Research Speed Bonuses (Full / Tier Only / Disabled)
+[/list]
+
+[h2]One-Folder Compatibility[/h2]
+ARM now ships with bundled compatibility profiles inside the main mod folder. Leave Compatibility Profile on Auto Detect and ARM will switch to the matching supported overhaul automatically. If needed, you can still force a specific profile manually in the lobby.
+
+Supported built-in profiles:
+[list]
+[*] Vanilla
+[*] Road to 56
+[*] Kaiserreich
+[*] Kaiserredux
+[*] BlackICE
+[*] Cold War Iron Curtain
+[*] Endsieg
+[*] Extended Tech Tree 1960
+[*] Novum Vexillum
+[*] Rise of Nations
+[*] The New Order
+[*] Millennium Dawn
+[*] The Fire Rises
+[*] The Great War
+[*] The Great War Redux
+[/list]
+
+[h2]How It Works[/h2]
+Every month, one-third of the world is evaluated. Each country is scored on global power and branch competence, assigned a tier, and granted eligible technologies up to a quarterly cap. Superpowers get current-year tech with 6 grants per quarter. Micro nations lag 7 years behind and get 1. The system runs AI-only by default, so players keep full control of their own research unless they change the scope rule.
+
+[h2]For Maintainers[/h2]
+The repository includes tools to rebuild the bundled compatibility profiles from installed Workshop mods and to generate support for additional tech-tree mods.
+
+[h2]Current Version[/h2]
+[b]Version:[/b] 1.0.0
+[b]HOI4:[/b] 1.17.4.1+
+[b]DLC Required:[/b] None
+[b]Dependencies:[/b] None
+[b]Achievements:[/b] No

@@ -1,0 +1,964 @@
+##############################################
+# Arms Race Mechanics — Global Power Score
+# and Branch Competence Effects
+# All effects run in COUNTRY scope
+##############################################
+
+###################################
+# Master scoring dispatcher
+###################################
+arm_calculate_global_power = {
+    arm_calculate_economy_score = yes
+    arm_calculate_science_score = yes
+    arm_calculate_mobilization_score = yes
+    arm_calculate_resource_score = yes
+    arm_calculate_war_posture_score = yes
+
+    set_variable = { arm_global_power = arm_economy_score }
+    add_to_variable = { arm_global_power = arm_science_score }
+    add_to_variable = { arm_global_power = arm_mobilization_score }
+    add_to_variable = { arm_global_power = arm_resource_score }
+    add_to_variable = { arm_global_power = arm_war_posture_score }
+}
+
+###################################
+# Economy Score
+# Diminishing returns per factory type:
+#   First 80: full weight
+#   81-160: half weight
+#   161+: quarter weight
+# Weights: civ x1.0, mil x1.5, dock x1.2
+###################################
+arm_calculate_economy_score = {
+    # ---- Civilian factories (weight 1.0) ----
+    set_temp_variable = { arm_civ_raw = num_of_civilian_factories }
+    set_variable = { arm_civ_score = 0 }
+    if = {
+        limit = { check_variable = { arm_civ_raw > 160 } }
+        # 80 full + 80*0.5 + remainder*0.25
+        set_temp_variable = { arm_civ_excess = arm_civ_raw }
+        subtract_from_temp_variable = { arm_civ_excess = 160 }
+        multiply_temp_variable = { arm_civ_excess = 0.25 }
+        set_variable = { arm_civ_score = 120 }
+        add_to_variable = { arm_civ_score = arm_civ_excess }
+    }
+    else_if = {
+        limit = { check_variable = { arm_civ_raw > 80 } }
+        # 80 full + remainder*0.5
+        set_temp_variable = { arm_civ_mid = arm_civ_raw }
+        subtract_from_temp_variable = { arm_civ_mid = 80 }
+        multiply_temp_variable = { arm_civ_mid = 0.5 }
+        set_variable = { arm_civ_score = 80 }
+        add_to_variable = { arm_civ_score = arm_civ_mid }
+    }
+    else = {
+        set_variable = { arm_civ_score = arm_civ_raw }
+    }
+    # civ weight is 1.0 — no multiplier needed
+
+    # ---- Military factories (weight 1.5) ----
+    set_temp_variable = { arm_mil_raw = num_of_military_factories }
+    set_variable = { arm_mil_score = 0 }
+    if = {
+        limit = { check_variable = { arm_mil_raw > 160 } }
+        set_temp_variable = { arm_mil_excess = arm_mil_raw }
+        subtract_from_temp_variable = { arm_mil_excess = 160 }
+        multiply_temp_variable = { arm_mil_excess = 0.25 }
+        set_variable = { arm_mil_score = 120 }
+        add_to_variable = { arm_mil_score = arm_mil_excess }
+    }
+    else_if = {
+        limit = { check_variable = { arm_mil_raw > 80 } }
+        set_temp_variable = { arm_mil_mid = arm_mil_raw }
+        subtract_from_temp_variable = { arm_mil_mid = 80 }
+        multiply_temp_variable = { arm_mil_mid = 0.5 }
+        set_variable = { arm_mil_score = 80 }
+        add_to_variable = { arm_mil_score = arm_mil_mid }
+    }
+    else = {
+        set_variable = { arm_mil_score = arm_mil_raw }
+    }
+    multiply_variable = { arm_mil_score = 1.5 }
+
+    # ---- Dockyards (weight 1.2) ----
+    set_temp_variable = { arm_dock_raw = num_of_naval_factories }
+    set_variable = { arm_dock_score = 0 }
+    if = {
+        limit = { check_variable = { arm_dock_raw > 160 } }
+        set_temp_variable = { arm_dock_excess = arm_dock_raw }
+        subtract_from_temp_variable = { arm_dock_excess = 160 }
+        multiply_temp_variable = { arm_dock_excess = 0.25 }
+        set_variable = { arm_dock_score = 120 }
+        add_to_variable = { arm_dock_score = arm_dock_excess }
+    }
+    else_if = {
+        limit = { check_variable = { arm_dock_raw > 80 } }
+        set_temp_variable = { arm_dock_mid = arm_dock_raw }
+        subtract_from_temp_variable = { arm_dock_mid = 80 }
+        multiply_temp_variable = { arm_dock_mid = 0.5 }
+        set_variable = { arm_dock_score = 80 }
+        add_to_variable = { arm_dock_score = arm_dock_mid }
+    }
+    else = {
+        set_variable = { arm_dock_score = arm_dock_raw }
+    }
+    multiply_variable = { arm_dock_score = 1.2 }
+
+    # ---- Sum economy ----
+    set_variable = { arm_economy_score = arm_civ_score }
+    add_to_variable = { arm_economy_score = arm_mil_score }
+    add_to_variable = { arm_economy_score = arm_dock_score }
+}
+
+###################################
+# Science Score
+# Research slots (threshold chain)
+###################################
+arm_calculate_science_score = {
+    set_variable = { arm_science_score = 0 }
+    if = {
+        limit = { amount_research_slots > 5 }
+        set_variable = { arm_science_score = 90 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 4 }
+        set_variable = { arm_science_score = 75 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 3 }
+        set_variable = { arm_science_score = 60 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 2 }
+        set_variable = { arm_science_score = 45 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 1 }
+        set_variable = { arm_science_score = 30 }
+    }
+    else = {
+        set_variable = { arm_science_score = 15 }
+    }
+}
+
+###################################
+# Mobilization Score
+# Battalions (variable) + manpower (threshold)
+###################################
+arm_calculate_mobilization_score = {
+    set_variable = { arm_mobilization_score = 0 }
+
+    # Battalions x0.1, capped at 15
+    set_temp_variable = { arm_bat_raw = num_battalions }
+    multiply_temp_variable = { arm_bat_raw = 0.1 }
+    clamp_temp_variable = { var = arm_bat_raw min = 0 max = 15 }
+    add_to_variable = { arm_mobilization_score = arm_bat_raw }
+
+    # Deployed manpower — threshold chain
+    if = {
+        limit = { has_manpower > 1500000 }
+        add_to_variable = { arm_mobilization_score = 30 }
+    }
+    else_if = {
+        limit = { has_manpower > 1000000 }
+        add_to_variable = { arm_mobilization_score = 20 }
+    }
+    else_if = {
+        limit = { has_manpower > 500000 }
+        add_to_variable = { arm_mobilization_score = 10 }
+    }
+    else_if = {
+        limit = { has_manpower > 250000 }
+        add_to_variable = { arm_mobilization_score = 5 }
+    }
+    else_if = {
+        limit = { has_manpower > 100000 }
+        add_to_variable = { arm_mobilization_score = 2 }
+    }
+}
+
+###################################
+# Resource Score
+# Threshold chains for all 6 resources
+# Total capped at 40
+###################################
+arm_calculate_resource_score = {
+    set_variable = { arm_resource_score = 0 }
+
+    # ---- Steel (1 pt per 8) ----
+    # Thresholds: 320->40, 240->30, 160->20, 80->10, 40->5, 16->2, 8->1
+    if = {
+        limit = { has_resources_amount = { resource = steel amount > 320 } }
+        add_to_variable = { arm_resource_score = 40 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 240 } }
+        add_to_variable = { arm_resource_score = 30 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 160 } }
+        add_to_variable = { arm_resource_score = 20 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 80 } }
+        add_to_variable = { arm_resource_score = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 40 } }
+        add_to_variable = { arm_resource_score = 5 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 16 } }
+        add_to_variable = { arm_resource_score = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 8 } }
+        add_to_variable = { arm_resource_score = 1 }
+    }
+
+    # ---- Aluminium (1 pt per 5) ----
+    # Thresholds: 150->30, 100->20, 50->10, 25->5, 10->2, 5->1
+    if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 150 } }
+        add_to_variable = { arm_resource_score = 30 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 100 } }
+        add_to_variable = { arm_resource_score = 20 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 50 } }
+        add_to_variable = { arm_resource_score = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 25 } }
+        add_to_variable = { arm_resource_score = 5 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 10 } }
+        add_to_variable = { arm_resource_score = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 5 } }
+        add_to_variable = { arm_resource_score = 1 }
+    }
+
+    # ---- Tungsten (1 pt per 4) ----
+    # Thresholds: 120->30, 80->20, 40->10, 20->5, 8->2, 4->1
+    if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 120 } }
+        add_to_variable = { arm_resource_score = 30 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 80 } }
+        add_to_variable = { arm_resource_score = 20 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 40 } }
+        add_to_variable = { arm_resource_score = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 20 } }
+        add_to_variable = { arm_resource_score = 5 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 8 } }
+        add_to_variable = { arm_resource_score = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 4 } }
+        add_to_variable = { arm_resource_score = 1 }
+    }
+
+    # ---- Chromium (1 pt per 4) ----
+    # Thresholds: 120->30, 80->20, 40->10, 20->5, 8->2, 4->1
+    if = {
+        limit = { has_resources_amount = { resource = chromium amount > 120 } }
+        add_to_variable = { arm_resource_score = 30 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 80 } }
+        add_to_variable = { arm_resource_score = 20 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 40 } }
+        add_to_variable = { arm_resource_score = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 20 } }
+        add_to_variable = { arm_resource_score = 5 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 8 } }
+        add_to_variable = { arm_resource_score = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 4 } }
+        add_to_variable = { arm_resource_score = 1 }
+    }
+
+    # ---- Rubber (1 pt per 4) ----
+    # Thresholds: 120->30, 80->20, 40->10, 20->5, 8->2, 4->1
+    if = {
+        limit = { has_resources_amount = { resource = rubber amount > 120 } }
+        add_to_variable = { arm_resource_score = 30 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 80 } }
+        add_to_variable = { arm_resource_score = 20 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 40 } }
+        add_to_variable = { arm_resource_score = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 20 } }
+        add_to_variable = { arm_resource_score = 5 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 8 } }
+        add_to_variable = { arm_resource_score = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 4 } }
+        add_to_variable = { arm_resource_score = 1 }
+    }
+
+    # ---- Oil (1 pt per 6) ----
+    # Thresholds: 180->30, 120->20, 60->10, 30->5, 12->2, 6->1
+    if = {
+        limit = { has_resources_amount = { resource = oil amount > 180 } }
+        add_to_variable = { arm_resource_score = 30 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 120 } }
+        add_to_variable = { arm_resource_score = 20 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 60 } }
+        add_to_variable = { arm_resource_score = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 30 } }
+        add_to_variable = { arm_resource_score = 5 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 12 } }
+        add_to_variable = { arm_resource_score = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 6 } }
+        add_to_variable = { arm_resource_score = 1 }
+    }
+
+    # ---- Cap total resource score at 40 ----
+    clamp_variable = { var = arm_resource_score min = 0 max = 40 }
+}
+
+###################################
+# War Posture Score
+# Stability, war support, at-war bonus,
+# political power gain approximation
+###################################
+arm_calculate_war_posture_score = {
+    set_variable = { arm_war_posture_score = 0 }
+
+    # ---- Stability (x0.5, max 50) — threshold chain at 0.1 intervals ----
+    if = {
+        limit = { has_stability > 0.9 }
+        add_to_variable = { arm_war_posture_score = 50 }
+    }
+    else_if = {
+        limit = { has_stability > 0.8 }
+        add_to_variable = { arm_war_posture_score = 45 }
+    }
+    else_if = {
+        limit = { has_stability > 0.7 }
+        add_to_variable = { arm_war_posture_score = 40 }
+    }
+    else_if = {
+        limit = { has_stability > 0.6 }
+        add_to_variable = { arm_war_posture_score = 35 }
+    }
+    else_if = {
+        limit = { has_stability > 0.5 }
+        add_to_variable = { arm_war_posture_score = 30 }
+    }
+    else_if = {
+        limit = { has_stability > 0.4 }
+        add_to_variable = { arm_war_posture_score = 25 }
+    }
+    else_if = {
+        limit = { has_stability > 0.3 }
+        add_to_variable = { arm_war_posture_score = 20 }
+    }
+    else_if = {
+        limit = { has_stability > 0.2 }
+        add_to_variable = { arm_war_posture_score = 15 }
+    }
+    else_if = {
+        limit = { has_stability > 0.1 }
+        add_to_variable = { arm_war_posture_score = 10 }
+    }
+    else = {
+        add_to_variable = { arm_war_posture_score = 5 }
+    }
+
+    # ---- War support (x0.3, max 30) — threshold chain at 0.1 intervals ----
+    if = {
+        limit = { has_war_support > 0.9 }
+        add_to_variable = { arm_war_posture_score = 30 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.8 }
+        add_to_variable = { arm_war_posture_score = 27 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.7 }
+        add_to_variable = { arm_war_posture_score = 24 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.6 }
+        add_to_variable = { arm_war_posture_score = 21 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.5 }
+        add_to_variable = { arm_war_posture_score = 18 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.4 }
+        add_to_variable = { arm_war_posture_score = 15 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.3 }
+        add_to_variable = { arm_war_posture_score = 12 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.2 }
+        add_to_variable = { arm_war_posture_score = 9 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.1 }
+        add_to_variable = { arm_war_posture_score = 6 }
+    }
+    else = {
+        add_to_variable = { arm_war_posture_score = 3 }
+    }
+
+    # ---- At war bonus (+20) ----
+    if = {
+        limit = { has_war = yes }
+        add_to_variable = { arm_war_posture_score = 20 }
+    }
+
+    # ---- Political power gain approximation (cap +20) ----
+    # PP gain cannot be read as variable; approximate via political_power thresholds
+    if = {
+        limit = { has_political_power > 400 }
+        add_to_variable = { arm_war_posture_score = 20 }
+    }
+    else_if = {
+        limit = { has_political_power > 300 }
+        add_to_variable = { arm_war_posture_score = 16 }
+    }
+    else_if = {
+        limit = { has_political_power > 200 }
+        add_to_variable = { arm_war_posture_score = 12 }
+    }
+    else_if = {
+        limit = { has_political_power > 100 }
+        add_to_variable = { arm_war_posture_score = 8 }
+    }
+    else_if = {
+        limit = { has_political_power > 50 }
+        add_to_variable = { arm_war_posture_score = 4 }
+    }
+}
+
+###################################
+# BRANCH COMPETENCE EFFECTS
+###################################
+
+###################################
+# Land Competence
+# mil_factories x1.0 (first 60 full, rest 0.5)
+# manpower thresholds (cap 25)
+# steel/10 (cap 15)
+# tungsten/6 (cap 10)
+# at war +10
+###################################
+arm_calculate_land_competence = {
+    set_variable = { arm_land_competence = 0 }
+
+    # ---- Military factories x1.0 (first 60 full, rest 0.5) ----
+    set_temp_variable = { arm_lc_mil = num_of_military_factories }
+    if = {
+        limit = { check_variable = { arm_lc_mil > 60 } }
+        set_temp_variable = { arm_lc_mil_excess = arm_lc_mil }
+        subtract_from_temp_variable = { arm_lc_mil_excess = 60 }
+        multiply_temp_variable = { arm_lc_mil_excess = 0.5 }
+        set_temp_variable = { arm_lc_mil = 60 }
+        add_to_temp_variable = { arm_lc_mil = arm_lc_mil_excess }
+    }
+    add_to_variable = { arm_land_competence = arm_lc_mil }
+
+    # ---- Deployed manpower / 40,000 capped at 25 ----
+    if = {
+        limit = { has_manpower > 1000000 }
+        add_to_variable = { arm_land_competence = 25 }
+    }
+    else_if = {
+        limit = { has_manpower > 800000 }
+        add_to_variable = { arm_land_competence = 20 }
+    }
+    else_if = {
+        limit = { has_manpower > 600000 }
+        add_to_variable = { arm_land_competence = 15 }
+    }
+    else_if = {
+        limit = { has_manpower > 400000 }
+        add_to_variable = { arm_land_competence = 10 }
+    }
+    else_if = {
+        limit = { has_manpower > 200000 }
+        add_to_variable = { arm_land_competence = 5 }
+    }
+    else_if = {
+        limit = { has_manpower > 40000 }
+        add_to_variable = { arm_land_competence = 1 }
+    }
+
+    # ---- Steel / 10 capped at 15 ----
+    if = {
+        limit = { has_resources_amount = { resource = steel amount > 150 } }
+        add_to_variable = { arm_land_competence = 15 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 120 } }
+        add_to_variable = { arm_land_competence = 12 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 80 } }
+        add_to_variable = { arm_land_competence = 8 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 50 } }
+        add_to_variable = { arm_land_competence = 5 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 20 } }
+        add_to_variable = { arm_land_competence = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 10 } }
+        add_to_variable = { arm_land_competence = 1 }
+    }
+
+    # ---- Tungsten / 6 capped at 10 ----
+    if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 60 } }
+        add_to_variable = { arm_land_competence = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 48 } }
+        add_to_variable = { arm_land_competence = 8 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 36 } }
+        add_to_variable = { arm_land_competence = 6 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 24 } }
+        add_to_variable = { arm_land_competence = 4 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 12 } }
+        add_to_variable = { arm_land_competence = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 6 } }
+        add_to_variable = { arm_land_competence = 1 }
+    }
+
+    # ---- At war +10 ----
+    if = {
+        limit = { has_war = yes }
+        add_to_variable = { arm_land_competence = 10 }
+    }
+}
+
+###################################
+# Air Competence
+# mil_factories x0.8 (first 60 full, rest 0.4)
+# aluminium/5 (cap 15)
+# rubber/5 (cap 10)
+# oil/8 (cap 10)
+# research_slots x8 (threshold chain)
+###################################
+arm_calculate_air_competence = {
+    set_variable = { arm_air_competence = 0 }
+
+    # ---- Military factories x0.8 (first 60 full, rest 0.4) ----
+    set_temp_variable = { arm_ac_mil = num_of_military_factories }
+    if = {
+        limit = { check_variable = { arm_ac_mil > 60 } }
+        set_temp_variable = { arm_ac_mil_excess = arm_ac_mil }
+        subtract_from_temp_variable = { arm_ac_mil_excess = 60 }
+        multiply_temp_variable = { arm_ac_mil_excess = 0.4 }
+        set_temp_variable = { arm_ac_mil = 60 }
+        add_to_temp_variable = { arm_ac_mil = arm_ac_mil_excess }
+    }
+    multiply_temp_variable = { arm_ac_mil = 0.8 }
+    add_to_variable = { arm_air_competence = arm_ac_mil }
+
+    # ---- Aluminium / 5 capped at 15 ----
+    if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 75 } }
+        add_to_variable = { arm_air_competence = 15 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 60 } }
+        add_to_variable = { arm_air_competence = 12 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 45 } }
+        add_to_variable = { arm_air_competence = 9 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 30 } }
+        add_to_variable = { arm_air_competence = 6 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 15 } }
+        add_to_variable = { arm_air_competence = 3 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 5 } }
+        add_to_variable = { arm_air_competence = 1 }
+    }
+
+    # ---- Rubber / 5 capped at 10 ----
+    if = {
+        limit = { has_resources_amount = { resource = rubber amount > 50 } }
+        add_to_variable = { arm_air_competence = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 40 } }
+        add_to_variable = { arm_air_competence = 8 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 30 } }
+        add_to_variable = { arm_air_competence = 6 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 20 } }
+        add_to_variable = { arm_air_competence = 4 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 10 } }
+        add_to_variable = { arm_air_competence = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = rubber amount > 5 } }
+        add_to_variable = { arm_air_competence = 1 }
+    }
+
+    # ---- Oil / 8 capped at 10 ----
+    if = {
+        limit = { has_resources_amount = { resource = oil amount > 80 } }
+        add_to_variable = { arm_air_competence = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 64 } }
+        add_to_variable = { arm_air_competence = 8 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 48 } }
+        add_to_variable = { arm_air_competence = 6 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 32 } }
+        add_to_variable = { arm_air_competence = 4 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 16 } }
+        add_to_variable = { arm_air_competence = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 8 } }
+        add_to_variable = { arm_air_competence = 1 }
+    }
+
+    # ---- Research slots x8 (threshold chain) ----
+    if = {
+        limit = { amount_research_slots > 5 }
+        add_to_variable = { arm_air_competence = 48 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 4 }
+        add_to_variable = { arm_air_competence = 40 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 3 }
+        add_to_variable = { arm_air_competence = 32 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 2 }
+        add_to_variable = { arm_air_competence = 24 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 1 }
+        add_to_variable = { arm_air_competence = 16 }
+    }
+    else = {
+        add_to_variable = { arm_air_competence = 8 }
+    }
+}
+
+###################################
+# Naval Competence
+# dockyards x2.0 (first 30 full, rest 1.0)
+# oil/8 (cap 10)
+# steel/10 (cap 10)
+# chromium/5 (cap 10)
+# research_slots x5 (threshold chain)
+###################################
+arm_calculate_naval_competence = {
+    set_variable = { arm_naval_competence = 0 }
+
+    # ---- Dockyards x2.0 (first 30 full, rest 1.0) ----
+    set_temp_variable = { arm_nc_dock = num_of_naval_factories }
+    if = {
+        limit = { check_variable = { arm_nc_dock > 30 } }
+        set_temp_variable = { arm_nc_dock_excess = arm_nc_dock }
+        subtract_from_temp_variable = { arm_nc_dock_excess = 30 }
+        multiply_temp_variable = { arm_nc_dock_excess = 1.0 }
+        set_temp_variable = { arm_nc_dock = 30 }
+        add_to_temp_variable = { arm_nc_dock = arm_nc_dock_excess }
+    }
+    multiply_temp_variable = { arm_nc_dock = 2.0 }
+    add_to_variable = { arm_naval_competence = arm_nc_dock }
+
+    # ---- Oil / 8 capped at 10 ----
+    if = {
+        limit = { has_resources_amount = { resource = oil amount > 80 } }
+        add_to_variable = { arm_naval_competence = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 64 } }
+        add_to_variable = { arm_naval_competence = 8 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 48 } }
+        add_to_variable = { arm_naval_competence = 6 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 32 } }
+        add_to_variable = { arm_naval_competence = 4 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 16 } }
+        add_to_variable = { arm_naval_competence = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = oil amount > 8 } }
+        add_to_variable = { arm_naval_competence = 1 }
+    }
+
+    # ---- Steel / 10 capped at 10 ----
+    if = {
+        limit = { has_resources_amount = { resource = steel amount > 100 } }
+        add_to_variable = { arm_naval_competence = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 80 } }
+        add_to_variable = { arm_naval_competence = 8 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 60 } }
+        add_to_variable = { arm_naval_competence = 6 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 40 } }
+        add_to_variable = { arm_naval_competence = 4 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 20 } }
+        add_to_variable = { arm_naval_competence = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = steel amount > 10 } }
+        add_to_variable = { arm_naval_competence = 1 }
+    }
+
+    # ---- Chromium / 5 capped at 10 ----
+    if = {
+        limit = { has_resources_amount = { resource = chromium amount > 50 } }
+        add_to_variable = { arm_naval_competence = 10 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 40 } }
+        add_to_variable = { arm_naval_competence = 8 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 30 } }
+        add_to_variable = { arm_naval_competence = 6 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 20 } }
+        add_to_variable = { arm_naval_competence = 4 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 10 } }
+        add_to_variable = { arm_naval_competence = 2 }
+    }
+    else_if = {
+        limit = { has_resources_amount = { resource = chromium amount > 5 } }
+        add_to_variable = { arm_naval_competence = 1 }
+    }
+
+    # ---- Research slots x5 (threshold chain) ----
+    if = {
+        limit = { amount_research_slots > 5 }
+        add_to_variable = { arm_naval_competence = 30 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 4 }
+        add_to_variable = { arm_naval_competence = 25 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 3 }
+        add_to_variable = { arm_naval_competence = 20 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 2 }
+        add_to_variable = { arm_naval_competence = 15 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 1 }
+        add_to_variable = { arm_naval_competence = 10 }
+    }
+    else = {
+        add_to_variable = { arm_naval_competence = 5 }
+    }
+}
+
+###################################
+# Industry Competence
+# civ_factories x0.8 (first 60 full, rest 0.4)
+# research_slots x12 (threshold chain)
+# stability x0.3 (max 30, threshold chain)
+# resource_breadth_bonus (+3 per resource
+#   with 8+ access, max +18)
+###################################
+arm_calculate_industry_competence = {
+    set_variable = { arm_industry_competence = 0 }
+
+    # ---- Civilian factories x0.8 (first 60 full, rest 0.4) ----
+    set_temp_variable = { arm_ic_civ = num_of_civilian_factories }
+    if = {
+        limit = { check_variable = { arm_ic_civ > 60 } }
+        set_temp_variable = { arm_ic_civ_excess = arm_ic_civ }
+        subtract_from_temp_variable = { arm_ic_civ_excess = 60 }
+        multiply_temp_variable = { arm_ic_civ_excess = 0.4 }
+        set_temp_variable = { arm_ic_civ = 60 }
+        add_to_temp_variable = { arm_ic_civ = arm_ic_civ_excess }
+    }
+    multiply_temp_variable = { arm_ic_civ = 0.8 }
+    add_to_variable = { arm_industry_competence = arm_ic_civ }
+
+    # ---- Research slots x12 (threshold chain) ----
+    if = {
+        limit = { amount_research_slots > 5 }
+        add_to_variable = { arm_industry_competence = 72 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 4 }
+        add_to_variable = { arm_industry_competence = 60 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 3 }
+        add_to_variable = { arm_industry_competence = 48 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 2 }
+        add_to_variable = { arm_industry_competence = 36 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 1 }
+        add_to_variable = { arm_industry_competence = 24 }
+    }
+    else = {
+        add_to_variable = { arm_industry_competence = 12 }
+    }
+
+    # ---- Stability x0.3 (max 30) — threshold chain at 0.1 intervals ----
+    if = {
+        limit = { has_stability > 0.9 }
+        add_to_variable = { arm_industry_competence = 30 }
+    }
+    else_if = {
+        limit = { has_stability > 0.8 }
+        add_to_variable = { arm_industry_competence = 27 }
+    }
+    else_if = {
+        limit = { has_stability > 0.7 }
+        add_to_variable = { arm_industry_competence = 24 }
+    }
+    else_if = {
+        limit = { has_stability > 0.6 }
+        add_to_variable = { arm_industry_competence = 21 }
+    }
+    else_if = {
+        limit = { has_stability > 0.5 }
+        add_to_variable = { arm_industry_competence = 18 }
+    }
+    else_if = {
+        limit = { has_stability > 0.4 }
+        add_to_variable = { arm_industry_competence = 15 }
+    }
+    else_if = {
+        limit = { has_stability > 0.3 }
+        add_to_variable = { arm_industry_competence = 12 }
+    }
+    else_if = {
+        limit = { has_stability > 0.2 }
+        add_to_variable = { arm_industry_competence = 9 }
+    }
+    else_if = {
+        limit = { has_stability > 0.1 }
+        add_to_variable = { arm_industry_competence = 6 }
+    }
+    else = {
+        add_to_variable = { arm_industry_competence = 3 }
+    }
+
+    # ---- Resource breadth bonus (+3 per resource with 8+ access, max +18) ----
+    set_temp_variable = { arm_breadth = 0 }
+    if = {
+        limit = { has_resources_amount = { resource = steel amount > 8 } }
+        add_to_temp_variable = { arm_breadth = 3 }
+    }
+    if = {
+        limit = { has_resources_amount = { resource = aluminium amount > 8 } }
+        add_to_temp_variable = { arm_breadth = 3 }
+    }
+    if = {
+        limit = { has_resources_amount = { resource = tungsten amount > 8 } }
+        add_to_temp_variable = { arm_breadth = 3 }
+    }
+    if = {
+        limit = { has_resources_amount = { resource = chromium amount > 8 } }
+        add_to_temp_variable = { arm_breadth = 3 }
+    }
+    if = {
+        limit = { has_resources_amount = { resource = rubber amount > 8 } }
+        add_to_temp_variable = { arm_breadth = 3 }
+    }
+    if = {
+        limit = { has_resources_amount = { resource = oil amount > 8 } }
+        add_to_temp_variable = { arm_breadth = 3 }
+    }
+    clamp_temp_variable = { var = arm_breadth min = 0 max = 18 }
+    add_to_variable = { arm_industry_competence = arm_breadth }
+}

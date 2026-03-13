@@ -1,0 +1,2059 @@
+ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+============================================================
+
+Total techs parsed:    1199
+Successfully mapped:   827
+Unmapped (unknown):    142
+
+BRANCH SUMMARY
+----------------------------------------
+  air                              79 techs
+  industry_electronics            175 techs
+  land                            385 techs
+  naval                           188 techs
+
+CATEGORY DETAIL
+------------------------------------------------------------
+
+  [air / cas] — 14 techs
+    1918  early_CAS
+          [from: endsieg]
+    1922  early_bombs
+          [from: endsieg]
+    1925  basic_CAS
+          [from: endsieg]
+    1936  armor_piercing_bombs
+    1936  air_torpedoe_1
+    1936  CAS1
+          [from: endsieg]
+    1936  cv_CAS1
+          [from: endsieg]
+    1940  heavy_bombs
+    1940  air_torpedoe_2
+    1940  CAS2
+          [from: endsieg]
+    1940  cv_CAS2
+          [from: endsieg]
+    1944  air_torpedoe_3
+    1944  CAS3
+          [from: endsieg]
+    1944  cv_CAS3
+          [from: endsieg]
+
+  [air / fighters] — 22 techs
+    1912  ww1_scout_plane
+          [from: endsieg]
+    1912  ww1_early_scout_plane
+          [from: endsieg]
+    1914  prototype_fighter
+          [from: endsieg]
+    1914  early_prototype_fighter
+          [from: endsieg]
+    1916  basic_fighter
+          [from: endsieg]
+    1916  early_basic_fighter
+          [from: endsieg]
+    1918  improved_fighter
+          [from: endsieg]
+    1918  early_improved_fighter
+          [from: endsieg]
+    1926  iw_small_airframe
+          [from: endsieg]
+    1928  early_fighter
+          [from: endsieg]
+    1936  fighter1
+          [from: endsieg]
+    1936  scout_plane1
+          [from: endsieg]
+    1936  basic_small_airframe
+          [from: endsieg]
+    1940  fighter2
+          [from: endsieg]
+    1940  scout_plane2
+          [from: endsieg]
+    1940  improved_small_airframe
+          [from: endsieg]
+    1944  fighter3
+          [from: endsieg]
+    1944  advanced_small_airframe
+          [from: endsieg]
+    1945  aa_cannon_3
+    1945  modern_small_airframe
+          [from: endsieg]
+    1950  supersonic_fighter1
+    1950  supersonic_small_airframe
+
+  [air / heavy_fighters] — 8 techs
+    1926  iw_medium_airframe
+          [from: endsieg]
+    1936  heavy_fighter1
+          [from: endsieg]
+    1936  basic_medium_airframe
+          [from: endsieg]
+    1940  heavy_fighter2
+          [from: endsieg]
+    1940  improved_medium_airframe
+          [from: endsieg]
+    1944  heavy_fighter3
+          [from: endsieg]
+    1944  advanced_medium_airframe
+          [from: endsieg]
+    1945  modern_medium_airframe
+          [from: endsieg]
+
+  [air / naval_bombers] — 5 techs
+    1917  early_naval_bomber
+          [from: endsieg]
+    1924  interwars_naval_bomber
+          [from: endsieg]
+    1936  naval_bomber1
+          [from: endsieg]
+    1940  naval_bomber2
+          [from: endsieg]
+    1944  naval_bomber3
+          [from: endsieg]
+
+  [air / strategic_bombers] — 12 techs
+    1926  iw_large_airframe
+          [from: endsieg]
+    1936  strategic_bomber1
+          [from: endsieg]
+    1936  basic_large_airframe
+          [from: endsieg]
+    1940  strategic_bomber2
+          [from: endsieg]
+    1940  improved_large_airframe
+          [from: endsieg]
+    1942  reinforced_wings_mothership
+    1944  miniature_fighters
+    1944  strategic_bomber3
+          [from: endsieg]
+    1944  advanced_large_airframe
+          [from: endsieg]
+    1946  aerial_hangars
+    1950  jet_strategic_bomber1
+          [from: endsieg]
+    1950  modern_large_airframe
+          [from: endsieg]
+
+  [air / tactical_bombers] — 12 techs
+    1914  ww1_early_bomber
+          [from: endsieg]
+    1914  early_ww1_early_bomber
+          [from: endsieg]
+    1916  basic_bomber
+          [from: endsieg]
+    1916  early_basic_bomber
+          [from: endsieg]
+    1918  improved_bomber
+          [from: endsieg]
+    1918  early_improved_bomber
+          [from: endsieg]
+    1928  early_bomber
+          [from: endsieg]
+    1936  tactical_bomber1
+          [from: endsieg]
+    1940  tactical_bomber2
+          [from: endsieg]
+    1944  tactical_bomber3
+          [from: endsieg]
+    1945  jet_tactical_bomber1
+          [from: endsieg]
+    1950  jet_tactical_bomber2
+          [from: endsieg]
+
+  [air / transport] — 6 techs
+    1933  early_transport_plane
+    1933  bba_early_transport_plane
+    1940  improved_transport_plane
+    1940  bba_improved_transport_plane
+    1945  bba_strategic_airlifter
+    1948  strategic_airlifter
+
+  [industry_electronics / electronics] — 31 techs
+    1905  census_tabulating
+          [from: endsieg]
+    1911  automatic_feed_tab
+          [from: endsieg]
+    1918  cipher_machine
+          [from: endsieg]
+    1923  mechanical_computing
+          [from: endsieg]
+    1923  teleprinter
+          [from: endsieg]
+    1928  accounting_machine
+          [from: endsieg]
+    1936  ww1_basic_fire_control_system
+          [from: endsieg]
+    1936  ww1_improved_fire_control_system
+          [from: endsieg]
+    1936  ww1_advanced_fire_control_system
+          [from: endsieg]
+    1936  electronic_mechanical_engineering
+          [from: endsieg]
+    1936  basic_fire_control_system
+          [from: endsieg]
+    1936  improved_fire_control_system
+          [from: endsieg]
+    1936  advanced_fire_control_system
+          [from: endsieg]
+    1936  radio
+          [from: endsieg]
+    1938  improved_radio
+    1938  computing_machine
+    1938  basic_encryption
+    1938  basic_decryption
+    1939  improved_computing
+          [from: endsieg]
+    1940  improved_computing_machine
+    1940  improved_encryption
+    1940  improved_decryption
+    1941  advanced_radio
+    1942  advanced_computing_machine
+    1942  advanced_encryption
+    1942  advanced_decryption
+    1942  advanced_computing
+          [from: endsieg]
+    1945  future_computing_machine
+          [from: endsieg]
+    1948  future_computing_machine_2
+          [from: endsieg]
+    1951  future_computing_machine_3
+          [from: endsieg]
+    1954  future_computing_machine_4
+          [from: endsieg]
+
+  [industry_electronics / industry] — 100 techs
+    1905  bunker
+          [from: endsieg]
+    1912  early_machine_tools
+          [from: endsieg]
+    1912  trench_warfare
+          [from: endsieg]
+    1912  construction1
+          [from: endsieg]
+    1914  improved_early_machine_tools
+          [from: endsieg]
+    1914  total_war1
+          [from: endsieg]
+    1914  wood_flooring
+          [from: endsieg]
+    1914  construction2
+          [from: endsieg]
+    1916  advanced_early_machine_tools
+          [from: endsieg]
+    1916  total_war2
+          [from: endsieg]
+    1916  fuel_silos
+          [from: endsieg]
+    1916  better_trench_conditions
+          [from: endsieg]
+    1916  construction3
+          [from: endsieg]
+    1918  demobilization_machine_tools
+          [from: endsieg]
+    1918  total_war3
+          [from: endsieg]
+    1918  anti_air52
+          [from: endsieg]
+    1918  construction4
+          [from: endsieg]
+    1920  demobilization2
+          [from: endsieg]
+    1920  constructiondemob
+          [from: endsieg]
+    1924  construction5
+          [from: endsieg]
+    1930  construction6
+          [from: endsieg]
+    1934  basic_machine_tools
+          [from: endsieg]
+    1934  concentrated_industry
+          [from: endsieg]
+    1934  dispersed_industry
+          [from: endsieg]
+    1934  construction7
+          [from: endsieg]
+    1934  excavation1
+          [from: endsieg]
+    1936  basic_fortification_tech
+    1936  coastal_fort_tech_1
+    1936  fuel_refining
+          [from: endsieg]
+    1936  synth_oil_experiments
+          [from: endsieg]
+    1936  synth_rubber_experiments
+          [from: endsieg]
+    1937  improved_equipment_conversion
+    1937  oil_processing
+    1937  rubber_processing
+    1937  improved_machine_tools
+          [from: endsieg]
+    1937  concentrated_industry2
+          [from: endsieg]
+    1937  dispersed_industry2
+          [from: endsieg]
+    1937  construction8
+          [from: endsieg]
+    1937  excavation2
+          [from: endsieg]
+    1938  land_fort_tech_1
+    1939  advanced_equipment_conversion
+    1939  improved_oil_processing
+    1939  improved_rubber_processing
+    1939  advanced_machine_tools
+          [from: endsieg]
+    1939  concentrated_industry3
+          [from: endsieg]
+    1939  dispersed_industry3
+          [from: endsieg]
+    1939  fuel_refining2
+          [from: endsieg]
+    1939  oil_plant
+          [from: endsieg]
+    1939  rubber_plant
+          [from: endsieg]
+    1939  construction9
+          [from: endsieg]
+    1939  excavation3
+          [from: endsieg]
+    1940  land_fort_tech_2
+    1940  coastal_fort_tech_2
+    1941  advanced_oil_processing
+    1941  advanced_rubber_processing
+    1941  assembly_line_production
+          [from: endsieg]
+    1941  concentrated_industry4
+          [from: endsieg]
+    1941  dispersed_industry4
+          [from: endsieg]
+    1941  fuel_refining3
+          [from: endsieg]
+    1941  improved_oil_plant
+          [from: endsieg]
+    1941  improved_rubber_plant
+          [from: endsieg]
+    1941  construction10
+          [from: endsieg]
+    1941  excavation4
+          [from: endsieg]
+    1943  modern_oil_processing
+    1943  modern_rubber_processing
+    1943  flexible_line
+          [from: endsieg]
+    1943  streamlined_line
+          [from: endsieg]
+    1943  concentrated_industry5
+          [from: endsieg]
+    1943  dispersed_industry5
+          [from: endsieg]
+    1943  fuel_refining4
+          [from: endsieg]
+    1943  advanced_oil_plant
+          [from: endsieg]
+    1943  advanced_rubber_plant
+          [from: endsieg]
+    1943  construction11
+          [from: endsieg]
+    1943  excavation5
+          [from: endsieg]
+    1945  flexible_line_a
+          [from: endsieg]
+    1945  streamlined_line_a
+          [from: endsieg]
+    1945  concentrated_industry_a
+          [from: endsieg]
+    1945  dispersed_industry_a
+          [from: endsieg]
+    1945  construction_a
+          [from: endsieg]
+    1945  excavation_a
+          [from: endsieg]
+    1947  fuel_refining5
+          [from: endsieg]
+    1947  advanced_oil_plant_2
+          [from: endsieg]
+    1947  advanced_rubber_plant_2
+          [from: endsieg]
+    1948  streamlined_line_b
+          [from: endsieg]
+    1948  concentrated_industry_b
+          [from: endsieg]
+    1948  dispersed_industry_b
+          [from: endsieg]
+    1948  construction_b
+          [from: endsieg]
+    1948  excavation_b
+          [from: endsieg]
+    1951  streamlined_line_c
+          [from: endsieg]
+    1951  concentrated_industry_c
+          [from: endsieg]
+    1951  dispersed_industry_c
+          [from: endsieg]
+    1951  advanced_oil_plant_3
+          [from: endsieg]
+    1951  advanced_rubber_plant_3
+          [from: endsieg]
+    1951  construction_c
+          [from: endsieg]
+    1951  excavation_c
+          [from: endsieg]
+    1954  streamlined_line_d
+          [from: endsieg]
+    1954  concentrated_industry_d
+          [from: endsieg]
+    1954  dispersed_industry_d
+          [from: endsieg]
+    1954  construction_d
+          [from: endsieg]
+    1954  excavation_d
+          [from: endsieg]
+
+  [industry_electronics / nuclear] — 9 techs
+    1940  atomic_research
+          [from: endsieg]
+    1943  nuclear_reactor_heavy_water
+    1943  isotope_separation_centrifugal
+    1943  nuclear_reactor
+          [from: endsieg]
+    1945  nukes
+          [from: endsieg]
+    1948  nuke_naval
+          [from: endsieg]
+    1950  thermonuclear_bombs
+    1951  nukes_2
+          [from: endsieg]
+    1955  nukes_3
+          [from: endsieg]
+
+  [industry_electronics / radar] — 12 techs
+    1936  radio_detection
+          [from: endsieg]
+    1938  cavity_magnatron
+    1938  decimetric_radar
+          [from: endsieg]
+    1939  improved_decimetric_radar
+          [from: endsieg]
+    1940  centimetric_radar
+          [from: endsieg]
+    1941  phased_array
+    1942  monopulse_radar
+    1942  improved_centimetric_radar
+          [from: endsieg]
+    1945  advanced_centimetric_radar
+          [from: endsieg]
+    1948  future_radar
+          [from: endsieg]
+    1951  future_radar_2
+          [from: endsieg]
+    1954  future_radar_3
+          [from: endsieg]
+
+  [industry_electronics / rockets] — 23 techs
+    1939  motorized_rocket_unit
+          [from: endsieg]
+    1941  rocket_artillery
+          [from: endsieg]
+    1942  rocket_artillery2
+          [from: endsieg]
+    1943  sp_rockets_improved_guidance
+    1943  rocket_artillery3
+          [from: endsieg]
+    1943  experimental_rockets
+          [from: endsieg]
+    1944  sp_rockets_rocket_bomber
+    1944  sp_rockets_dual_chamber_rocket_engine_1
+    1944  rocket_artillery4
+          [from: endsieg]
+    1944  rocket_engines
+          [from: endsieg]
+    1944  jet_engines
+          [from: endsieg]
+    1945  sp_rockets_improved_rocket_bomber
+    1945  rocket_artillery_a
+          [from: endsieg]
+    1945  improved_rocket_engines
+          [from: endsieg]
+    1946  sp_rockets_dual_chamber_rocket_engine_2
+    1946  rocket_artillery_b
+          [from: endsieg]
+    1946  advanced_rocket_engines
+          [from: endsieg]
+    1948  rocket_artillery_c
+          [from: endsieg]
+    1951  rocket_artillery_d
+          [from: endsieg]
+    1951  semi_modern_rocket_engines
+          [from: endsieg]
+    1954  rocket_artillery_e
+          [from: endsieg]
+    1957  modern_rocket_engines
+          [from: endsieg]
+    1959  nuke_rocket_engines
+          [from: endsieg]
+
+  [land / anti_tank] — 14 techs
+    1918  early_antitank
+          [from: endsieg]
+    1936  mountain_tanks
+    1936  SWE_bofors_antitank_gun
+    1936  interwar_antitank
+          [from: endsieg]
+    1939  antitank1
+          [from: endsieg]
+    1940  antitank2
+          [from: endsieg]
+    1941  antitank3
+          [from: endsieg]
+    1942  antitank4
+          [from: endsieg]
+    1943  antitank5
+          [from: endsieg]
+    1944  antitank_a
+          [from: endsieg]
+    1945  antitank_b
+          [from: endsieg]
+    1948  antitank_c
+          [from: endsieg]
+    1951  antitank_d
+          [from: endsieg]
+    1954  antitank_e
+          [from: endsieg]
+
+  [land / artillery] — 54 techs
+    1905  horse_artillery
+          [from: endsieg]
+    1910  horse_artillery2
+          [from: endsieg]
+    1910  early_railway_gun
+          [from: endsieg]
+    1912  early_artillery_1
+          [from: endsieg]
+    1914  early_artillery_2
+          [from: endsieg]
+    1914  howitzer
+          [from: endsieg]
+    1916  early_artillery_3
+          [from: endsieg]
+    1916  howitzer2
+          [from: endsieg]
+    1917  superartillery
+          [from: endsieg]
+    1918  early_artillery_4
+          [from: endsieg]
+    1918  howitzer3
+          [from: endsieg]
+    1918  anti_air
+          [from: endsieg]
+    1922  early_artillery_5
+          [from: endsieg]
+    1922  howitzer4
+          [from: endsieg]
+    1925  anti_air2
+          [from: endsieg]
+    1926  early_artillery_6
+          [from: endsieg]
+    1926  howitzer5
+          [from: endsieg]
+    1930  early_artillery_7
+          [from: endsieg]
+    1930  anti_air3
+          [from: endsieg]
+    1932  howitzer6
+          [from: endsieg]
+    1936  gw_artillery
+    1936  interwar_artillery
+          [from: endsieg]
+    1936  howitzer7
+          [from: endsieg]
+    1936  interwar_antiair
+          [from: endsieg]
+    1936  railway_gun
+          [from: endsieg]
+    1939  superartillery2
+          [from: endsieg]
+    1939  antiair1
+          [from: endsieg]
+    1940  sp_artillery_rocket_assisted_projectiles_tech
+    1940  sp_artillery_purpose_built_gun_motor_carriages_tech
+    1940  artillery1
+          [from: endsieg]
+    1940  howitzer8
+          [from: endsieg]
+    1940  antiair2
+          [from: endsieg]
+    1941  sp_shock_hardening_techniques
+    1941  artillery2
+          [from: endsieg]
+    1941  howitzer9
+          [from: endsieg]
+    1941  antiair3
+          [from: endsieg]
+    1942  sp_variable_time_fuze_shells
+    1942  artillery3
+          [from: endsieg]
+    1942  howitzer10
+          [from: endsieg]
+    1942  antiair4
+          [from: endsieg]
+    1943  artillery4
+          [from: endsieg]
+    1943  antiair5
+          [from: endsieg]
+    1944  artillery5
+          [from: endsieg]
+    1944  antiair_a
+          [from: endsieg]
+    1945  artillery_b
+          [from: endsieg]
+    1945  howitzer11
+          [from: endsieg]
+    1945  antiair_b
+          [from: endsieg]
+    1948  antiair_c
+          [from: endsieg]
+    1949  artillery_c
+          [from: endsieg]
+    1950  howitzer12
+          [from: endsieg]
+    1951  artillery_d
+          [from: endsieg]
+    1951  antiair_d
+          [from: endsieg]
+    1954  artillery_e
+          [from: endsieg]
+    1954  antiair_e
+          [from: endsieg]
+
+  [land / heavy_tanks] — 15 techs
+    1934  basic_heavy_tank
+          [from: endsieg]
+    1934  basic_heavy_tank_chassis
+          [from: endsieg]
+    1940  improved_heavy_tank_chassis
+          [from: endsieg]
+    1941  improved_heavy_tank
+          [from: endsieg]
+    1943  sp_armored_lc_naval_engine_conversion_tech
+    1943  sp_armored_lc_transmission_improvements_tech
+    1943  sp_armored_lc_specialized_field_manuals_tech
+    1943  sp_armored_lc_high_impact_obliterator_cannon_tech
+    1943  advanced_heavy_tank
+          [from: endsieg]
+    1943  super_heavy_tank
+          [from: endsieg]
+    1943  advanced_heavy_tank_chassis
+          [from: endsieg]
+    1943  super_heavy_tank_chassis
+          [from: endsieg]
+    1945  sp_armored_lc_weapon_fire_control_tech
+    1947  super_heavy_tank_a
+          [from: endsieg]
+    1951  super_heavy_tank_b
+          [from: endsieg]
+
+  [land / infantry] — 63 techs
+    1905  early_infantry_weapons
+          [from: endsieg]
+    1910  marines
+          [from: endsieg]
+    1910  tech_mountaineers
+          [from: endsieg]
+    1912  hand_grenade
+          [from: endsieg]
+    1914  early_infantry_weapons2
+          [from: endsieg]
+    1914  early_infantry_equip
+          [from: endsieg]
+    1914  frag_grenade
+          [from: endsieg]
+    1914  gas_mask
+          [from: endsieg]
+    1914  machine_gun
+          [from: endsieg]
+    1915  gas_mask2
+          [from: endsieg]
+    1916  early_infantry_weapons3
+          [from: endsieg]
+    1916  gas_mask3
+          [from: endsieg]
+    1916  machine_gun2
+          [from: endsieg]
+    1917  early_infantry_equip2
+          [from: endsieg]
+    1918  support_weapons
+    1918  early_infantry_weapons4
+          [from: endsieg]
+    1918  early_infantry_weapons5
+          [from: endsieg]
+    1918  marines2
+          [from: endsieg]
+    1918  machine_gun3
+          [from: endsieg]
+    1920  early_infantry_equip3
+          [from: endsieg]
+    1923  early_infantry_weapons6
+          [from: endsieg]
+    1924  machine_gun4
+          [from: endsieg]
+    1928  interwars_infantry_equip
+          [from: endsieg]
+    1928  interwar_machine_gun
+          [from: endsieg]
+    1932  interwars_infantry_equip2
+          [from: endsieg]
+    1934  infantry_weapons
+          [from: endsieg]
+    1936  rangers_tech
+    1936  infantry_weapons1
+          [from: endsieg]
+    1936  marines3
+          [from: endsieg]
+    1936  modern_machine_gun
+          [from: endsieg]
+    1936  paratroopers
+          [from: endsieg]
+    1938  tech_special_forces
+    1938  support_weapons2
+    1938  infantry_weapons2
+          [from: endsieg]
+    1939  rangers_tech2
+    1939  improved_infantry_weapons
+          [from: endsieg]
+    1939  tech_mountaineers2
+          [from: endsieg]
+    1939  paratroopers2
+          [from: endsieg]
+    1940  advanced_special_forces
+    1940  improved_special_forces
+    1940  support_weapons3
+    1940  improved_infantry_weapons_2
+          [from: endsieg]
+    1942  extreme_environment_training
+    1942  survival_training
+    1942  support_weapons4
+    1942  infantry_at
+          [from: endsieg]
+    1942  advanced_infantry_weapons
+          [from: endsieg]
+    1943  rangers_tech3
+    1943  tech_mountaineers3
+          [from: endsieg]
+    1944  elite_forces
+    1944  infantry_at2
+          [from: endsieg]
+    1944  advanced_infantry_weapons2
+          [from: endsieg]
+    1944  paratroopers3
+          [from: endsieg]
+    1946  advanced_infantry_weapons_a
+          [from: endsieg]
+    1947  infantry_at_a
+          [from: endsieg]
+    1948  advanced_infantry_weapons_b
+          [from: endsieg]
+    1950  infantry_at_b
+          [from: endsieg]
+    1950  advanced_infantry_weapons_c
+          [from: endsieg]
+    1952  advanced_infantry_weapons_d
+          [from: endsieg]
+    1953  infantry_at_c
+          [from: endsieg]
+    1954  advanced_infantry_weapons_e
+          [from: endsieg]
+    1956  infantry_at_d
+          [from: endsieg]
+    1956  advanced_infantry_weapons_f
+          [from: endsieg]
+
+  [land / light_tanks] — 40 techs
+    1905  eg_early_armored_car
+          [from: endsieg]
+    1905  early_armored_car
+          [from: endsieg]
+    1910  eg_armored_car2
+          [from: endsieg]
+    1910  early_armored_car2
+          [from: endsieg]
+    1914  eg_armored_car3
+          [from: endsieg]
+    1914  armored_car1
+          [from: endsieg]
+    1916  eg_armored_car4
+          [from: endsieg]
+    1916  eg_tank_engine
+          [from: endsieg]
+    1916  eg_tank_armor
+          [from: endsieg]
+    1916  eg_tank_gun
+          [from: endsieg]
+    1916  early_armored_car4
+          [from: endsieg]
+    1916  tank_engine
+          [from: endsieg]
+    1916  tank_armor
+          [from: endsieg]
+    1916  tank_gun
+          [from: endsieg]
+    1916  early_tank
+          [from: endsieg]
+    1917  eg_early_tank
+          [from: endsieg]
+    1918  eg_armored_car5
+          [from: endsieg]
+    1918  early_armored_car5
+          [from: endsieg]
+    1918  early_tank2
+          [from: endsieg]
+    1920  eg_early_tank2
+          [from: endsieg]
+    1920  early_tank3
+          [from: endsieg]
+    1922  gwtank_chassis
+          [from: endsieg]
+    1925  eg_armored_car6
+          [from: endsieg]
+    1925  eg_early_tank3
+          [from: endsieg]
+    1925  early_armored_car6
+          [from: endsieg]
+    1930  gwtank
+          [from: endsieg]
+    1934  eg_armored_car7
+          [from: endsieg]
+    1934  basic_light_tank
+          [from: endsieg]
+    1934  early_armored_car7
+          [from: endsieg]
+    1934  basic_light_tank_chassis
+          [from: endsieg]
+    1936  improved_light_tank
+          [from: endsieg]
+    1936  improved_light_tank_chassis
+          [from: endsieg]
+    1939  eg_armored_car8
+          [from: endsieg]
+    1939  armored_car2
+          [from: endsieg]
+    1941  advanced_light_tank
+          [from: endsieg]
+    1941  advanced_light_tank_chassis
+          [from: endsieg]
+    1942  eg_armored_car9
+          [from: endsieg]
+    1942  armored_car3
+          [from: endsieg]
+    1943  advanced_light_tank_a
+          [from: endsieg]
+    1945  advanced_light_tank_b
+          [from: endsieg]
+
+  [land / mechanised] — 7 techs
+    1941  mechanised_infantry
+          [from: endsieg]
+    1941  amphibious_mechanized_infantry
+          [from: endsieg]
+    1943  amphibious_mechanized_infantry_2
+          [from: endsieg]
+    1943  mechanised_infantry2
+          [from: endsieg]
+    1945  mechanised_infantry3
+          [from: endsieg]
+    1948  mechanised_infantry_a
+          [from: endsieg]
+    1951  mechanised_infantry_b
+          [from: endsieg]
+
+  [land / medium_tanks] — 11 techs
+    1936  basic_medium_tank_chassis
+          [from: endsieg]
+    1939  basic_medium_tank
+          [from: endsieg]
+    1940  improved_medium_tank_chassis
+          [from: endsieg]
+    1941  improved_medium_tank
+          [from: endsieg]
+    1943  advanced_medium_tank
+          [from: endsieg]
+    1943  advanced_medium_tank_chassis
+          [from: endsieg]
+    1947  main_battle_tank_a
+          [from: endsieg]
+    1949  main_battle_tank_b
+          [from: endsieg]
+    1951  main_battle_tank_c
+          [from: endsieg]
+    1953  main_battle_tank_d
+          [from: endsieg]
+    1955  main_battle_tank_e
+          [from: endsieg]
+
+  [land / modern_tanks] — 2 techs
+    1945  main_battle_tank
+          [from: endsieg]
+    1945  main_battle_tank_chassis
+          [from: endsieg]
+
+  [land / motorised] — 5 techs
+    1900  horses
+          [from: endsieg]
+    1910  bicycles
+          [from: endsieg]
+    1920  early_motorised_infantry
+          [from: endsieg]
+    1935  motorised_infantry
+          [from: endsieg]
+    1936  tech_trucks
+
+  [land / support] — 74 techs
+    1900  rations
+          [from: endsieg]
+    1900  tech_support
+          [from: endsieg]
+    1910  tech_recon
+          [from: endsieg]
+    1910  tech_military_police
+          [from: endsieg]
+    1910  early_basic_train
+          [from: endsieg]
+    1910  early_armored_train
+          [from: endsieg]
+    1912  tech_engineers
+          [from: endsieg]
+    1914  tech_engineers2
+          [from: endsieg]
+    1914  tech_recon2
+          [from: endsieg]
+    1914  tech_military_police2
+          [from: endsieg]
+    1914  early_wartime_train
+          [from: endsieg]
+    1916  fuel
+          [from: endsieg]
+    1916  tech_engineers3
+          [from: endsieg]
+    1916  tech_recon3
+          [from: endsieg]
+    1916  tech_military_police3
+          [from: endsieg]
+    1918  tech_engineers4
+          [from: endsieg]
+    1918  tech_recon4
+          [from: endsieg]
+    1918  tech_military_police4
+          [from: endsieg]
+    1936  tech_recon_focus_bonus
+    1936  tech_engineers5
+          [from: endsieg]
+    1936  tech_recon5
+          [from: endsieg]
+    1936  tech_military_police_5
+          [from: endsieg]
+    1936  basic_train
+          [from: endsieg]
+    1936  armored_train
+          [from: endsieg]
+    1936  tech_field_hospital
+          [from: endsieg]
+    1936  tech_logistics_company
+          [from: endsieg]
+    1936  tech_signal_company
+          [from: endsieg]
+    1938  sp_armored_engineer_tech
+    1938  sp_armored_maintenance_tech
+    1938  sp_armored_signal_tech
+    1938  sp_helicopter_transport_pods_tech
+    1938  sp_helicopter_artillery_observers_tech
+    1938  sp_helicopter_med_evac_tech
+    1938  sp_armored_motorized_military_police_tech
+    1939  tech_engineers6
+          [from: endsieg]
+    1939  tech_recon6
+          [from: endsieg]
+    1939  tech_military_police_6
+          [from: endsieg]
+    1939  tech_field_hospital2
+          [from: endsieg]
+    1939  tech_logistics_company2
+          [from: endsieg]
+    1939  tech_signal_company2
+          [from: endsieg]
+    1939  wartime_train
+          [from: endsieg]
+    1942  night_vision
+          [from: endsieg]
+    1942  tech_engineers7
+          [from: endsieg]
+    1942  tech_recon7
+          [from: endsieg]
+    1942  tech_military_police_7
+          [from: endsieg]
+    1942  tech_field_hospital3
+          [from: endsieg]
+    1942  tech_logistics_company3
+          [from: endsieg]
+    1942  tech_signal_company3
+          [from: endsieg]
+    1945  tech_engineers8
+          [from: endsieg]
+    1945  tech_recon8
+          [from: endsieg]
+    1945  tech_military_police_8
+          [from: endsieg]
+    1945  tech_field_hospital4
+          [from: endsieg]
+    1945  tech_logistics_company4
+          [from: endsieg]
+    1945  tech_signal_company4
+          [from: endsieg]
+    1946  night_vision2
+          [from: endsieg]
+    1948  tech_engineers_a
+          [from: endsieg]
+    1948  tech_recon_a
+          [from: endsieg]
+    1948  tech_military_police_a
+          [from: endsieg]
+    1948  tech_field_hospital_a
+          [from: endsieg]
+    1948  tech_logistics_company_a
+          [from: endsieg]
+    1948  tech_signal_company_a
+          [from: endsieg]
+    1950  night_vision3
+          [from: endsieg]
+    1951  tech_engineers_b
+          [from: endsieg]
+    1951  tech_recon_b
+          [from: endsieg]
+    1951  tech_military_police_b
+          [from: endsieg]
+    1951  tech_field_hospital_b
+          [from: endsieg]
+    1951  tech_logistics_company_b
+          [from: endsieg]
+    1951  tech_signal_company_b
+          [from: endsieg]
+    1954  tech_engineers_c
+          [from: endsieg]
+    1954  tech_recon_c
+          [from: endsieg]
+    1954  tech_military_police_c
+          [from: endsieg]
+    1954  tech_field_hospital_c
+          [from: endsieg]
+    1954  tech_logistics_company_c
+          [from: endsieg]
+    1954  tech_signal_company_c
+          [from: endsieg]
+
+  [land / tanks_generic] — 100 techs
+    1910  tech_maintenance_company
+          [from: endsieg]
+    1910  tech_mortar_company1
+          [from: endsieg]
+    1914  tech_maintenance_company2
+          [from: endsieg]
+    1914  tech_mortar_company2
+          [from: endsieg]
+    1916  tech_maintenance_company3
+          [from: endsieg]
+    1916  tech_mortar_company3
+          [from: endsieg]
+    1918  tech_maintenance_company4
+          [from: endsieg]
+    1918  tech_mortar_company4
+          [from: endsieg]
+    1934  basic_light_td
+          [from: endsieg]
+    1934  basic_light_art
+          [from: endsieg]
+    1934  basic_light_spaa
+          [from: endsieg]
+    1934  basic_heavy_td
+          [from: endsieg]
+    1934  basic_heavy_art
+          [from: endsieg]
+    1934  basic_heavy_spaa
+          [from: endsieg]
+    1934  armor_tech_1
+          [from: endsieg]
+    1934  engine_tech_1
+          [from: endsieg]
+    1936  JAP_lighter_tanks
+    1936  GER_heavy_armored_car
+    1936  NOR_rikstanken_tech
+    1936  improved_light_td
+          [from: endsieg]
+    1936  improved_light_art
+          [from: endsieg]
+    1936  improved_light_spaa
+          [from: endsieg]
+    1936  armor_tech_2
+          [from: endsieg]
+    1936  engine_tech_2
+          [from: endsieg]
+    1936  tech_maintenance_company5
+          [from: endsieg]
+    1936  tech_mortar_company5
+          [from: endsieg]
+    1938  amphibious_tank_chassis
+          [from: endsieg]
+    1939  basic_medium_td
+          [from: endsieg]
+    1939  basic_medium_art
+          [from: endsieg]
+    1939  basic_medium_spaa
+          [from: endsieg]
+    1939  tech_maintenance_company6
+          [from: endsieg]
+    1939  tech_mortar_company6
+          [from: endsieg]
+    1940  amphibious_tank
+          [from: endsieg]
+    1941  sp_armored_advanced_flamethrower_tech
+    1941  advanced_light_td
+          [from: endsieg]
+    1941  advanced_light_art
+          [from: endsieg]
+    1941  advanced_light_spaa
+          [from: endsieg]
+    1941  improved_medium_td
+          [from: endsieg]
+    1941  improved_medium_art
+          [from: endsieg]
+    1941  improved_medium_spaa
+          [from: endsieg]
+    1941  improved_heavy_td
+          [from: endsieg]
+    1941  improved_heavy_art
+          [from: endsieg]
+    1941  improved_heavy_spaa
+          [from: endsieg]
+    1941  amphibious_drive
+          [from: endsieg]
+    1941  armor_tech_3
+          [from: endsieg]
+    1941  engine_tech_3
+          [from: endsieg]
+    1942  SWE_lynx_armored_car
+    1942  amphibious_tank_2
+          [from: endsieg]
+    1942  armored_car_at_upgrade
+          [from: endsieg]
+    1942  tech_maintenance_company7
+          [from: endsieg]
+    1942  tech_mortar_company7
+          [from: endsieg]
+    1943  advanced_light_tank_td_a
+          [from: endsieg]
+    1943  advanced_light_tank_art_a
+          [from: endsieg]
+    1943  advanced_light_tank_spaa_a
+          [from: endsieg]
+    1943  advanced_medium_td
+          [from: endsieg]
+    1943  advanced_medium_art
+          [from: endsieg]
+    1943  advanced_medium_spaa
+          [from: endsieg]
+    1943  advanced_heavy_td
+          [from: endsieg]
+    1943  advanced_heavy_art
+          [from: endsieg]
+    1943  advanced_heavy_spaa
+          [from: endsieg]
+    1944  armor_tech_4
+          [from: endsieg]
+    1944  engine_tech_4
+          [from: endsieg]
+    1945  advanced_light_tank_td_b
+          [from: endsieg]
+    1945  advanced_light_tank_art_b
+          [from: endsieg]
+    1945  advanced_light_tank_spaa_b
+          [from: endsieg]
+    1945  modern_td
+          [from: endsieg]
+    1945  modern_art
+          [from: endsieg]
+    1945  modern_spaa
+          [from: endsieg]
+    1945  super_heavy_td
+          [from: endsieg]
+    1945  super_heavy_art
+          [from: endsieg]
+    1945  super_heavy_spaa
+          [from: endsieg]
+    1945  tech_maintenance_company8
+          [from: endsieg]
+    1945  tech_mortar_company8
+          [from: endsieg]
+    1947  main_battle_tank_td_a
+          [from: endsieg]
+    1947  main_battle_tank_art_a
+          [from: endsieg]
+    1947  main_battle_tank_spaa_a
+          [from: endsieg]
+    1947  super_heavy_tank_td_a
+          [from: endsieg]
+    1947  super_heavy_tank_art_a
+          [from: endsieg]
+    1947  super_heavy_tank_spaa_a
+          [from: endsieg]
+    1948  tech_maintenance_company_a
+          [from: endsieg]
+    1948  tech_mortar_company_a
+          [from: endsieg]
+    1949  main_battle_tank_td_b
+          [from: endsieg]
+    1949  main_battle_tank_art_b
+          [from: endsieg]
+    1949  main_battle_tank_spaa_b
+          [from: endsieg]
+    1951  main_battle_tank_td_c
+          [from: endsieg]
+    1951  main_battle_tank_art_c
+          [from: endsieg]
+    1951  main_battle_tank_spaa_c
+          [from: endsieg]
+    1951  super_heavy_tank_td_b
+          [from: endsieg]
+    1951  super_heavy_tank_art_b
+          [from: endsieg]
+    1951  super_heavy_tank_spaa_b
+          [from: endsieg]
+    1951  tech_maintenance_company_b
+          [from: endsieg]
+    1951  tech_mortar_company_b
+          [from: endsieg]
+    1953  main_battle_tank_td_d
+          [from: endsieg]
+    1953  main_battle_tank_art_d
+          [from: endsieg]
+    1953  main_battle_tank_spaa_d
+          [from: endsieg]
+    1954  tech_maintenance_company_c
+          [from: endsieg]
+    1954  tech_mortar_company_c
+          [from: endsieg]
+    1955  main_battle_tank_td_e
+          [from: endsieg]
+    1955  main_battle_tank_art_e
+          [from: endsieg]
+    1955  main_battle_tank_spaa_e
+          [from: endsieg]
+
+  [naval / battleships] — 21 techs
+    1905  ww1_early_ship_hull_heavy
+          [from: endsieg]
+    1910  ww1_basic_ship_hull_heavy
+          [from: endsieg]
+    1910  ww1_basic_heavy_armor_scheme (XP)
+          [from: endsieg]
+    1914  ww1_improved_ship_hull_heavy
+          [from: endsieg]
+    1914  ww1_improved_heavy_armor_scheme (XP)
+          [from: endsieg]
+    1918  ww1_advanced_ship_hull_heavy
+          [from: endsieg]
+    1922  early_ship_hull_heavy
+          [from: endsieg]
+    1922  early_battlecruiser
+          [from: endsieg]
+    1922  early_battleship
+          [from: endsieg]
+    1936  basic_ship_hull_heavy
+          [from: endsieg]
+    1936  ship_hull_super_heavy
+          [from: endsieg]
+    1936  basic_heavy_armor_scheme (XP)
+          [from: endsieg]
+    1936  improved_heavy_armor_scheme (XP)
+          [from: endsieg]
+    1936  basic_battleship
+          [from: endsieg]
+    1936  heavy_battleship
+          [from: endsieg]
+    1940  improved_ship_hull_heavy
+          [from: endsieg]
+    1940  basic_battlecruiser
+          [from: endsieg]
+    1940  improved_battleship
+          [from: endsieg]
+    1944  advanced_ship_hull_heavy
+          [from: endsieg]
+    1944  advanced_battleship
+          [from: endsieg]
+    1944  heavy_battleship2
+          [from: endsieg]
+
+  [naval / carriers] — 10 techs
+    1922  early_ship_hull_carrier
+          [from: endsieg]
+    1922  early_carrier
+          [from: endsieg]
+    1936  basic_ship_hull_carrier
+          [from: endsieg]
+    1936  basic_carrier
+          [from: endsieg]
+    1940  improved_ship_hull_carrier
+          [from: endsieg]
+    1940  improved_carrier
+          [from: endsieg]
+    1942  sp_refined_pykrete
+    1944  sp_ice_composite_runawayas
+    1944  advanced_ship_hull_carrier
+          [from: endsieg]
+    1944  advanced_carrier
+          [from: endsieg]
+
+  [naval / destroyers] — 28 techs
+    1905  ww1_early_ship_hull_light
+          [from: endsieg]
+    1905  ww1_smoke_generator
+          [from: endsieg]
+    1905  ww1_basic_depth_charges (XP)
+          [from: endsieg]
+    1905  ww1_sonar
+          [from: endsieg]
+    1910  ww1_basic_ship_hull_light
+          [from: endsieg]
+    1910  ww1_improved_depth_charges (XP)
+          [from: endsieg]
+    1910  ww1_improved_sonar
+          [from: endsieg]
+    1914  ww1_improved_ship_hull_light
+          [from: endsieg]
+    1914  ww1_advanced_depth_charges (XP)
+          [from: endsieg]
+    1918  ww1_advanced_ship_hull_light
+          [from: endsieg]
+    1918  ww1_modern_depth_charges (XP)
+          [from: endsieg]
+    1922  early_ship_hull_light
+          [from: endsieg]
+    1922  smoke_generator
+          [from: endsieg]
+    1922  basic_depth_charges (XP)
+          [from: endsieg]
+    1922  sonar
+          [from: endsieg]
+    1922  early_destroyer
+          [from: endsieg]
+    1936  basic_ship_hull_light
+          [from: endsieg]
+    1936  improved_depth_charges (XP)
+          [from: endsieg]
+    1936  improved_sonar
+          [from: endsieg]
+    1936  basic_destroyer
+          [from: endsieg]
+    1939  advanced_sonar
+    1940  improved_ship_hull_light
+          [from: endsieg]
+    1940  advanced_depth_charges (XP)
+          [from: endsieg]
+    1940  improved_destroyer
+          [from: endsieg]
+    1943  modern_sonar
+    1944  advanced_ship_hull_light
+          [from: endsieg]
+    1944  modern_depth_charges (XP)
+          [from: endsieg]
+    1944  advanced_destroyer
+          [from: endsieg]
+
+  [naval / heavy_cruisers] — 4 techs
+    1922  early_heavy_cruiser
+          [from: endsieg]
+    1936  basic_heavy_cruiser
+          [from: endsieg]
+    1940  improved_heavy_cruiser
+          [from: endsieg]
+    1944  advanced_heavy_cruiser
+          [from: endsieg]
+
+  [naval / light_cruisers] — 17 techs
+    1905  ww1_early_ship_hull_cruiser
+          [from: endsieg]
+    1910  ww1_basic_ship_hull_cruiser
+          [from: endsieg]
+    1910  ww1_basic_cruiser_armor_scheme (XP)
+          [from: endsieg]
+    1914  ww1_improved_ship_hull_cruiser
+          [from: endsieg]
+    1914  ww1_improved_cruiser_armor_scheme (XP)
+          [from: endsieg]
+    1918  ww1_advanced_ship_hull_cruiser
+          [from: endsieg]
+    1922  early_ship_hull_cruiser
+          [from: endsieg]
+    1922  basic_cruiser_armor_scheme (XP)
+          [from: endsieg]
+    1922  early_light_cruiser
+          [from: endsieg]
+    1936  basic_ship_hull_cruiser
+          [from: endsieg]
+    1936  improved_airplane_launcher
+          [from: endsieg]
+    1936  basic_light_cruiser
+          [from: endsieg]
+    1940  improved_ship_hull_cruiser
+          [from: endsieg]
+    1940  improved_light_cruiser
+          [from: endsieg]
+    1944  advanced_ship_hull_cruiser
+          [from: endsieg]
+    1944  advanced_light_cruiser
+          [from: endsieg]
+    1944  ww1_advanced_cruiser_armor_scheme (XP)
+          [from: endsieg]
+
+  [naval / naval_support] — 90 techs
+    1905  ww1_basic_torpedo
+          [from: endsieg]
+    1905  ww1_basic_battery
+          [from: endsieg]
+    1905  ww1_basic_secondary_battery
+          [from: endsieg]
+    1905  ww1_basic_naval_mines
+          [from: endsieg]
+    1905  ww1_submarine_mine_laying
+          [from: endsieg]
+    1905  ww1_transport
+          [from: endsieg]
+    1910  ww1_magnetic_detonator (XP)
+          [from: endsieg]
+    1910  ww1_improved_ship_torpedo_launcher
+          [from: endsieg]
+    1910  ww1_basic_light_battery
+          [from: endsieg]
+    1910  ww1_basic_light_shell (XP)
+          [from: endsieg]
+    1910  ww1_basic_medium_battery
+          [from: endsieg]
+    1910  ww1_basic_heavy_battery
+          [from: endsieg]
+    1910  ww1_improved_secondary_battery
+          [from: endsieg]
+    1910  ww1_improved_naval_mines
+          [from: endsieg]
+    1912  ww1_degaussing
+          [from: endsieg]
+    1914  ww1_electric_torpedo (XP)
+          [from: endsieg]
+    1914  ww1_advanced_ship_torpedo_launcher
+          [from: endsieg]
+    1914  ww1_improved_light_battery
+          [from: endsieg]
+    1914  ww1_improved_medium_battery
+          [from: endsieg]
+    1914  ww1_improved_heavy_battery
+          [from: endsieg]
+    1914  ww1_dp_secondary_battery
+          [from: endsieg]
+    1914  ww1_improved_submarine_mine_laying
+          [from: endsieg]
+    1914  ww1_landing_craft
+          [from: endsieg]
+    1916  ww1_homing_torpedo (XP)
+          [from: endsieg]
+    1916  ww1_improved_light_shell (XP)
+          [from: endsieg]
+    1916  ww1_advanced_naval_mines
+          [from: endsieg]
+    1916  ww1_airdrop_mines
+          [from: endsieg]
+    1918  ww1_modern_ship_torpedo_launcher
+          [from: endsieg]
+    1918  ww1_advanced_light_battery
+          [from: endsieg]
+    1918  ww1_advanced_medium_battery
+          [from: endsieg]
+    1918  ww1_advanced_heavy_battery
+          [from: endsieg]
+    1918  ww1_airsweep_mines
+          [from: endsieg]
+    1918  ww1_tank_landing_craft
+          [from: endsieg]
+    1919  ww1_modern_naval_mines
+          [from: endsieg]
+    1922  basic_battery
+          [from: endsieg]
+    1922  basic_torpedo
+          [from: endsieg]
+    1922  basic_naval_mines
+          [from: endsieg]
+    1922  submarine_mine_laying
+          [from: endsieg]
+    1922  mtg_transport
+          [from: endsieg]
+    1922  transport
+          [from: endsieg]
+    1936  basic_light_battery
+          [from: endsieg]
+    1936  basic_light_shell
+          [from: endsieg]
+    1936  basic_medium_battery
+          [from: endsieg]
+    1936  basic_heavy_battery
+          [from: endsieg]
+    1936  magnetic_detonator (XP)
+          [from: endsieg]
+    1936  improved_ship_torpedo_launcher
+          [from: endsieg]
+    1936  damage_control_1 (XP)
+          [from: endsieg]
+    1936  damage_control_2 (XP)
+          [from: endsieg]
+    1936  damage_control_3 (XP)
+          [from: endsieg]
+    1936  fire_control_methods_1 (XP)
+          [from: endsieg]
+    1936  fire_control_methods_2 (XP)
+          [from: endsieg]
+    1936  fire_control_methods_3 (XP)
+          [from: endsieg]
+    1936  improved_naval_mines
+          [from: endsieg]
+    1936  ww1_damage_control_1 (XP)
+          [from: endsieg]
+    1936  ww1_damage_control_2 (XP)
+          [from: endsieg]
+    1936  ww1_damage_control_3 (XP)
+          [from: endsieg]
+    1936  ww1_fire_control_methods_1 (XP)
+          [from: endsieg]
+    1936  ww1_fire_control_methods_2 (XP)
+          [from: endsieg]
+    1936  ww1_fire_control_methods_3 (XP)
+          [from: endsieg]
+    1938  sp_multi_product_supply_ships (XP)
+    1938  degaussing
+          [from: endsieg]
+    1939  improved_light_battery
+          [from: endsieg]
+    1939  improved_medium_battery
+          [from: endsieg]
+    1939  improved_heavy_battery
+          [from: endsieg]
+    1939  basic_dp_light_battery
+          [from: endsieg]
+    1939  improved_dp_light_battery
+          [from: endsieg]
+    1940  electric_torpedo (XP)
+          [from: endsieg]
+    1940  advanced_ship_torpedo_launcher
+          [from: endsieg]
+    1940  improved_submarine_mine_laying
+          [from: endsieg]
+    1940  mtg_landing_craft
+          [from: endsieg]
+    1940  landing_craft
+          [from: endsieg]
+    1942  sp_improved_support_ship (XP)
+    1942  sp_improved_repair_ship (XP)
+    1942  improved_light_shell
+          [from: endsieg]
+    1942  homing_torpedo (XP)
+          [from: endsieg]
+    1942  advanced_naval_mines
+          [from: endsieg]
+    1942  airdrop_mines
+          [from: endsieg]
+    1942  airdrop_mines_bba
+          [from: endsieg]
+    1943  sp_standard_tenshioned_replenishment_alongside_method (XP)
+    1944  advanced_light_battery
+          [from: endsieg]
+    1944  advanced_medium_battery
+          [from: endsieg]
+    1944  advanced_heavy_battery
+          [from: endsieg]
+    1944  advanced_dp_light_battery
+          [from: endsieg]
+    1944  basic_dp_medium_battery
+          [from: endsieg]
+    1944  modern_ship_torpedo_launcher
+          [from: endsieg]
+    1944  airsweep_mines
+          [from: endsieg]
+    1944  airsweep_mines_bba
+          [from: endsieg]
+    1944  mtg_tank_landing_craft
+          [from: endsieg]
+    1944  tank_landing_craft
+          [from: endsieg]
+    1945  modern_naval_mines
+          [from: endsieg]
+
+  [naval / submarines] — 18 techs
+    1905  ww1_early_ship_hull_submarine
+          [from: endsieg]
+    1910  ww1_basic_ship_hull_submarine
+          [from: endsieg]
+    1914  ww1_improved_ship_hull_submarine
+          [from: endsieg]
+    1914  ww1_basic_submarine_snorkel
+          [from: endsieg]
+    1918  ww1_advanced_ship_hull_submarine
+          [from: endsieg]
+    1918  ww1_improved_submarine_snorkel (XP)
+          [from: endsieg]
+    1922  early_ship_hull_submarine
+          [from: endsieg]
+    1922  early_submarine
+          [from: endsieg]
+    1936  basic_ship_hull_submarine
+          [from: endsieg]
+    1936  basic_submarine
+          [from: endsieg]
+    1939  sp_aip_engine_improved_tech
+    1940  improved_ship_hull_submarine
+          [from: endsieg]
+    1940  basic_submarine_snorkel
+          [from: endsieg]
+    1940  improved_submarine
+          [from: endsieg]
+    1943  sp_aip_engine_advanced_tech
+    1944  advanced_ship_hull_submarine
+          [from: endsieg]
+    1944  improved_submarine_snorkel (XP)
+          [from: endsieg]
+    1944  advanced_submarine
+          [from: endsieg]
+
+UNMAPPED TECHS
+------------------------------------------------------------
+These techs could not be assigned to a branch.
+Add entries to custom_mappings.txt to include them.
+
+  BEL_chasseurs_ardennais
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  BEL_chasseurs_ardennais_ncns
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ETH_improved_irregular_infantry_tech
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  HUN_light_infantry_tech
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  JAP_silver_wheels
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  PHI_battalion_combat_teams
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWE_sami_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWI_mountaineer_paratroopers_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  TOA_jungle_pioneers_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ToA_river_boats_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  aa_cannon_1
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  aa_cannon_2
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  aa_hmg
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  aa_lmg
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_guns']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  advanced_modern_tank_turret_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  air_armaments
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  aircraft_construction
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  airframe
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  basic_heavy_shell
+    categories: ['naval_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval_Support.txt
+  basic_medium_shell
+    categories: ['naval_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval_Support.txt
+  bicycle_infantry
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  blackshirt_assault_battalion_tech
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  camelry
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  camicie_nere_security_militias
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\support.txt
+  coastal_defense_ships
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval.txt
+  commercial_nuclear_reactor_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  cruiser_submarines
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval.txt
+  cv_early_fighter
+    categories: ['naval_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  cv_fighter1
+    categories: ['naval_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  cv_fighter2
+    categories: ['naval_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  cv_fighter3
+    categories: ['naval_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  cv_naval_bomber0
+    categories: ['naval_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  cv_naval_bomber01
+    categories: ['naval_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  cv_naval_bomber1
+    categories: ['naval_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  cv_naval_bomber2
+    categories: ['naval_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  cv_naval_bomber3
+    categories: ['naval_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  desert_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  early_air_armaments
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_airframe
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_engine
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_experimental_aircraft
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_fighter_airframe
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_fighter_engine
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_fuel_tank2
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_fuselage
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_heavy_airframe
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_heavy_bomb
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_heavy_engine
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_light_bomb
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_medium_bomb
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  early_support_weapons
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  early_support_weapons2
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  early_support_weapons3
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  early_support_weapons4
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  early_support_weapons5
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  elephantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  engine
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  engine3
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  engines_1
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  engines_2
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  engines_3
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  engines_4
+    categories: ['air_equipment', 'plane_modules_tech', 'cat_air_engine']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  experimental_aircraft
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  fighter_airframe
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  fighter_engine
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  fuel_tank2
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  fuselage
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  heavy_airframe
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  heavy_bomb
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  heavy_engine
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  hills_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  improved_heavy_shell
+    categories: ['naval_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval_Support.txt
+  improved_medium_shell
+    categories: ['naval_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval_Support.txt
+  interwar_support_weapons
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  interwar_support_weapons2
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  interwar_support_weapons3
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  interwar_support_weapons4
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  jet_fighter1
+    categories: ['light_air', 'jet_technology']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  jet_fighter2
+    categories: ['light_air', 'jet_technology']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  jungle_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_warfare
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  land_multi_charge_large_caliber_gun_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  lar_decryption_bonus_tech
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\electronic_mechanical_engineering.txt
+  light_bomb
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  long_range_patrol_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  lotta_svard_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  masterful_blitz
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\land_doctrine.txt
+  medium_bomb
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  midget_submarines
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval.txt
+  militia_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  modern_support_weapons
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  modern_support_weapons2
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  modern_support_weapons3
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  modern_support_weapons4
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  modern_support_weapons5
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  molotov_cocktails_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_defensive_training
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_gun
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\artillery.txt
+  mountain_warfare
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  mountain_warfare_militias_tech
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  panzerschiffe
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval.txt
+  penal_infantry
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  photo_reconnaisance
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  pre_dreadnoughts
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval.txt
+  range_improvements
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  sami_pathfinders_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  sp_centrifugal_jet_tech
+    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  sp_naval_proximity_fuze_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  stronghold_network_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  sturmtruppe_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  suicide_charge
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  suicide_craft
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  support_weapons_a
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  support_weapons_b
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  support_weapons_c
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  support_weapons_d
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  support_weapons_e
+    categories: ['support_weapons']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\infantry.txt
+  survivability_studies
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\bba_air_techs.txt
+  torpedo_bomb
+    categories: ['air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  torpedo_cruiser
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\naval.txt
+  torpedo_cruiser_mtg
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\MTG_naval.txt
+  transport_plane
+    categories: ['medium_air', 'air_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\air_techs.txt
+  uranium_tipped_bullets
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  urban_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  winter_logistics_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ww1_basic_heavy_shell
+    categories: ['naval_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\ww1_naval.txt
+  ww1_basic_medium_shell
+    categories: ['naval_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\ww1_naval.txt
+  ww1_coastal_defense_ships
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\ww1_naval.txt
+  ww1_cruiser_submarines
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\ww1_naval.txt
+  ww1_improved_heavy_shell
+    categories: ['naval_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\ww1_naval.txt
+  ww1_improved_medium_shell
+    categories: ['naval_equipment']
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\ww1_naval.txt
+  ww1_panzerschiffe
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\ww1_naval.txt
+  ww1_pre_dreadnoughts
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\ww1_naval.txt
+  ww1_torpedo_cruiser_mtg
+    categories: []
+    source: endsieg / E:\SteamLibrary\steamapps\workshop\content\394360\1532883122\common\technologies\ww1_naval.txt

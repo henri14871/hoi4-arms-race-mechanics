@@ -1,0 +1,12 @@
+{
+  "workshop_id": "2026448968",
+  "slug": "rise_of_nations",
+  "display_name": "Rise of Nations",
+  "mode": "overhaul",
+  "preset": "rise_of_nations",
+  "stats": {
+    "techs_total": 2339,
+    "unknown_total": 344,
+    "doctrine_total": 317
+  }
+}

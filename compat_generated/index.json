@@ -1,0 +1,172 @@
+{
+  "generated_bundles": [
+    {
+      "workshop_id": "1137372539",
+      "slug": "blackice",
+      "display_name": "BlackICE Historical Immersion Mod",
+      "mode": "overhaul",
+      "preset": "blackice",
+      "stats": {
+        "techs_total": 2627,
+        "unknown_total": 331,
+        "doctrine_total": 312
+      }
+    },
+    {
+      "workshop_id": "1458561226",
+      "slug": "cold_war_iron_curtain",
+      "display_name": "Cold War Iron Curtain: A World Divided",
+      "mode": "overhaul",
+      "preset": "cold_war_iron_curtain",
+      "stats": {
+        "techs_total": 1417,
+        "unknown_total": 300,
+        "doctrine_total": 251
+      }
+    },
+    {
+      "workshop_id": "1521695605",
+      "slug": "kaiserreich",
+      "display_name": "Kaiserreich",
+      "mode": "overhaul",
+      "preset": "kaiserreich",
+      "stats": {
+        "techs_total": 500,
+        "unknown_total": 29,
+        "doctrine_total": 38
+      }
+    },
+    {
+      "workshop_id": "1532883122",
+      "slug": "endsieg",
+      "display_name": "EndsiegDEV",
+      "mode": "overhaul",
+      "preset": "endsieg",
+      "stats": {
+        "techs_total": 1021,
+        "unknown_total": 105,
+        "doctrine_total": 192
+      }
+    },
+    {
+      "workshop_id": "1778255798",
+      "slug": "extended_tech_tree_1960",
+      "display_name": "Extended Tech Tree 1960",
+      "mode": "expansion",
+      "preset": "extended_tech_tree_1960",
+      "stats": {
+        "techs_total": 766,
+        "unknown_total": 85,
+        "doctrine_total": 59
+      }
+    },
+    {
+      "workshop_id": "1827273767",
+      "slug": "novum_vexillum",
+      "display_name": "Novum Vexillum",
+      "mode": "overhaul",
+      "preset": "novum_vexillum",
+      "stats": {
+        "techs_total": 618,
+        "unknown_total": 88,
+        "doctrine_total": 0
+      }
+    },
+    {
+      "workshop_id": "2026448968",
+      "slug": "rise_of_nations",
+      "display_name": "Rise of Nations",
+      "mode": "overhaul",
+      "preset": "rise_of_nations",
+      "stats": {
+        "techs_total": 2339,
+        "unknown_total": 344,
+        "doctrine_total": 317
+      }
+    },
+    {
+      "workshop_id": "2076426030",
+      "slug": "kaiserredux",
+      "display_name": "KaiserreduX",
+      "mode": "overhaul",
+      "preset": "kaiserredux",
+      "stats": {
+        "techs_total": 572,
+        "unknown_total": 93,
+        "doctrine_total": 38
+      }
+    },
+    {
+      "workshop_id": "2438003901",
+      "slug": "the_new_order",
+      "display_name": "The New Order: Last Days of Europe",
+      "mode": "overhaul",
+      "preset": "the_new_order",
+      "stats": {
+        "techs_total": 897,
+        "unknown_total": 135,
+        "doctrine_total": 0
+      }
+    },
+    {
+      "workshop_id": "2777392649",
+      "slug": "millennium_dawn",
+      "display_name": "Millennium Dawn: A Modern Day Mod",
+      "mode": "overhaul",
+      "preset": "millennium_dawn",
+      "stats": {
+        "techs_total": 972,
+        "unknown_total": 312,
+        "doctrine_total": 6
+      }
+    },
+    {
+      "workshop_id": "3350890356",
+      "slug": "the_fire_rises",
+      "display_name": "The Fire Rises",
+      "mode": "overhaul",
+      "preset": "the_fire_rises",
+      "stats": {
+        "techs_total": 657,
+        "unknown_total": 78,
+        "doctrine_total": 118
+      }
+    },
+    {
+      "workshop_id": "3365515312",
+      "slug": "great_war_redux",
+      "display_name": "The Great War Redux - 1.17.*",
+      "mode": "overhaul",
+      "preset": "great_war_redux",
+      "stats": {
+        "techs_total": 384,
+        "unknown_total": 21,
+        "doctrine_total": 0
+      }
+    },
+    {
+      "workshop_id": "699709023",
+      "slug": "great_war",
+      "display_name": "Hearts of Iron IV: The Great War",
+      "mode": "overhaul",
+      "preset": "great_war",
+      "stats": {
+        "techs_total": 789,
+        "unknown_total": 63,
+        "doctrine_total": 0
+      }
+    },
+    {
+      "workshop_id": "820260968",
+      "slug": "road_to_56",
+      "display_name": "The Road to 56",
+      "mode": "expansion",
+      "preset": "road_to_56",
+      "stats": {
+        "techs_total": 948,
+        "unknown_total": 137,
+        "doctrine_total": 67
+      }
+    }
+  ]
+}

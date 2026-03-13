@@ -1,0 +1,4687 @@
+ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+============================================================
+
+Total techs parsed:    2480
+Successfully mapped:   1781
+Unmapped (unknown):    382
+
+BRANCH SUMMARY
+----------------------------------------
+  air                             261 techs
+  industry_electronics            383 techs
+  land                            876 techs
+  naval                           261 techs
+
+CATEGORY DETAIL
+------------------------------------------------------------
+
+  [air / cas] — 60 techs
+    1915  bba_tac_bombing_1915
+          [from: rise_of_nations]
+    1915  bba_strat_bombing_1915
+          [from: rise_of_nations]
+    1916  bba_nav_1916_bomb_locks
+          [from: rise_of_nations]
+    1918  early_CAS
+          [from: rise_of_nations]
+    1922  early_bombs
+    1925  basic_CAS
+          [from: rise_of_nations]
+    1926  bba_nav_1926_bomb_locks
+          [from: rise_of_nations]
+    1926  bba_tac_bombing_1926
+          [from: rise_of_nations]
+    1930  bba_nav_aerial_torpedo_1930
+          [from: rise_of_nations]
+    1936  armor_piercing_bombs
+    1936  air_torpedoe_1
+    1936  CAS1
+          [from: rise_of_nations]
+    1936  napalm_bombs_tech
+          [from: rise_of_nations]
+    1936  bba_nav_dive_brakes
+          [from: rise_of_nations]
+    1936  bba_strat_bombing_1936
+          [from: rise_of_nations]
+    1940  heavy_bombs
+    1940  air_torpedoe_2
+    1940  CAS2
+          [from: rise_of_nations]
+    1940  bba_nav_aerial_torpedo_1940
+          [from: rise_of_nations]
+    1940  bba_tac_bombing_1940
+          [from: rise_of_nations]
+    1940  bba_strat_bombing_1940
+          [from: rise_of_nations]
+    1941  bba_nav_1941_bomb_locks
+          [from: rise_of_nations]
+    1941  bba_at_gun_1941
+          [from: rise_of_nations]
+    1943  bba_tac_chaff
+          [from: rise_of_nations]
+    1944  air_torpedoe_3
+    1944  CAS3
+          [from: rise_of_nations]
+    1944  bba_nav_1944_bomb_locks
+          [from: rise_of_nations]
+    1944  bba_at_gun_1944
+          [from: rise_of_nations]
+    1945  bba_tac_bombing_1945
+          [from: rise_of_nations]
+    1945  bba_strat_bombing_1945
+          [from: rise_of_nations]
+    1945  jet_CAS_a
+          [from: rise_of_nations]
+    1950  jet_CAS_b
+          [from: rise_of_nations]
+    1955  jet_CAS_c
+          [from: rise_of_nations]
+    1955  bba_at_gun_1955
+          [from: rise_of_nations]
+    1955  bba_tac_bombing_1955
+          [from: rise_of_nations]
+    1955  bba_strat_bombing_1955
+          [from: rise_of_nations]
+    1960  jet_CAS_d
+          [from: rise_of_nations]
+    1960  bba_strat_bombing_1960
+          [from: rise_of_nations]
+    1965  jet_CAS_e
+          [from: rise_of_nations]
+    1965  bba_at_gun_1965
+          [from: rise_of_nations]
+    1965  bba_tac_bombing_1965
+          [from: rise_of_nations]
+    1970  jet_CAS_f
+          [from: rise_of_nations]
+    1975  jet_CAS_g
+          [from: rise_of_nations]
+    1975  bba_tac_bombing_1975
+          [from: rise_of_nations]
+    1980  bba_at_gun_1980
+          [from: rise_of_nations]
+    1980  bba_strat_bombing_1980
+          [from: rise_of_nations]
+    1985  jet_CAS_h
+          [from: rise_of_nations]
+    1985  bba_tac_bombing_1985
+          [from: rise_of_nations]
+    1990  jet_CAS_i
+          [from: rise_of_nations]
+    1995  bba_tac_bombing_1995
+          [from: rise_of_nations]
+    2000  bba_strat_bombing_2000
+          [from: rise_of_nations]
+    2005  bba_tac_bombing_2005
+          [from: rise_of_nations]
+    2015  bba_tac_bombing_2015
+          [from: rise_of_nations]
+    2020  bba_strat_bombing_2020
+          [from: rise_of_nations]
+    2025  bba_tac_bombing_2025
+          [from: rise_of_nations]
+    2035  bba_tac_bombing_2035
+          [from: rise_of_nations]
+    2040  bba_strat_bombing_2040
+          [from: rise_of_nations]
+    2045  bba_tac_bombing_2045
+          [from: rise_of_nations]
+    2055  bba_tac_bombing_2055
+          [from: rise_of_nations]
+    2060  bba_strat_bombing_2060
+          [from: rise_of_nations]
+
+  [air / fighters] — 68 techs
+    1912  scout_plane
+          [from: rise_of_nations]
+    1914  early_fighter_1914
+          [from: rise_of_nations]
+    1916  basic_fighter
+          [from: rise_of_nations]
+    1918  improved_fighter
+          [from: rise_of_nations]
+    1922  aa_lmg
+    1922  engines_1
+    1926  iw_small_airframe
+    1928  early_fighter
+          [from: rise_of_nations]
+    1928  bba_small_aircraft_frame_1928
+          [from: rise_of_nations]
+    1933  bba_small_aircraft_frame_1933
+          [from: rise_of_nations]
+    1936  scout_plane1
+    1936  basic_small_airframe
+    1936  engines_2
+    1936  range_improvements
+    1936  aircraft_construction
+    1936  fighter1
+          [from: rise_of_nations]
+    1936  bba_small_aircraft_frame_1936
+          [from: rise_of_nations]
+    1939  survivability_studies
+    1939  aa_hmg
+    1939  aa_cannon_1
+    1940  scout_plane2
+    1940  improved_small_airframe
+    1940  engines_3
+    1940  fighter2
+          [from: rise_of_nations]
+    1940  bba_small_aircraft_frame_1940
+          [from: rise_of_nations]
+    1942  mothership
+          [from: rise_of_nations]
+    1943  aa_cannon_2
+    1943  bba_small_aircraft_frame_1943
+          [from: rise_of_nations]
+    1943  reinforced_wings_mothership
+          [from: rise_of_nations]
+    1944  advanced_small_airframe
+    1944  engines_4
+    1944  fighter3
+          [from: rise_of_nations]
+    1944  miniature_fighters
+          [from: rise_of_nations]
+    1945  modern_small_airframe
+    1945  aa_cannon_3
+    1945  bba_small_aircraft_frame_1945
+          [from: rise_of_nations]
+    1946  aerial_hangars
+          [from: rise_of_nations]
+    1950  supersonic_fighter1
+    1950  supersonic_small_airframe
+    1950  bba_small_aircraft_frame_1950
+          [from: rise_of_nations]
+    1955  bba_small_aircraft_frame_1955
+          [from: rise_of_nations]
+    1955  gen2_mpa
+          [from: rise_of_nations]
+    1960  bba_small_aircraft_frame_1960
+          [from: rise_of_nations]
+    1965  bba_small_aircraft_frame_1965
+          [from: rise_of_nations]
+    1970  gen3_mpa
+          [from: rise_of_nations]
+    1970  bba_small_aircraft_frame_1970
+          [from: rise_of_nations]
+    1975  bba_small_aircraft_frame_1975
+          [from: rise_of_nations]
+    1980  bba_small_aircraft_frame_1980
+          [from: rise_of_nations]
+    1985  bba_small_aircraft_frame_1985
+          [from: rise_of_nations]
+    1990  gen4_mpa
+          [from: rise_of_nations]
+    1990  bba_small_aircraft_frame_1990
+          [from: rise_of_nations]
+    1995  bba_small_aircraft_frame_1995
+          [from: rise_of_nations]
+    2000  gen5_mpa
+          [from: rise_of_nations]
+    2000  bba_small_aircraft_frame_2000
+          [from: rise_of_nations]
+    2005  bba_small_aircraft_frame_2005
+          [from: rise_of_nations]
+    2010  bba_small_aircraft_frame_2010
+          [from: rise_of_nations]
+    2015  bba_small_aircraft_frame_2015
+          [from: rise_of_nations]
+    2016  modern_gen5_mpa
+          [from: rise_of_nations]
+    2020  bba_small_aircraft_frame_2020
+          [from: rise_of_nations]
+    2025  bba_small_aircraft_frame_2025
+          [from: rise_of_nations]
+    2030  gen6_mpa
+          [from: rise_of_nations]
+    2030  bba_small_aircraft_frame_2030
+          [from: rise_of_nations]
+    2035  bba_small_aircraft_frame_2035
+          [from: rise_of_nations]
+    2040  bba_small_aircraft_frame_2040
+          [from: rise_of_nations]
+    2045  bba_small_aircraft_frame_2045
+          [from: rise_of_nations]
+    2050  bba_small_aircraft_frame_2050
+          [from: rise_of_nations]
+    2055  bba_small_aircraft_frame_2055
+          [from: rise_of_nations]
+    2060  bba_small_aircraft_frame_2060
+          [from: rise_of_nations]
+
+  [air / heavy_fighters] — 48 techs
+    1926  iw_medium_airframe
+    1928  bba_medium_aircraft_frame_1928
+          [from: rise_of_nations]
+    1933  bba_medium_aircraft_frame_1933
+          [from: rise_of_nations]
+    1936  basic_medium_airframe
+    1936  heavy_fighter1
+          [from: rise_of_nations]
+    1936  bba_medium_aircraft_frame_1936
+          [from: rise_of_nations]
+    1940  improved_medium_airframe
+    1940  heavy_fighter2
+          [from: rise_of_nations]
+    1940  bba_medium_aircraft_frame_1940
+          [from: rise_of_nations]
+    1943  bba_medium_aircraft_frame_1943
+          [from: rise_of_nations]
+    1944  advanced_medium_airframe
+    1944  heavy_fighter3
+          [from: rise_of_nations]
+    1945  modern_medium_airframe
+    1945  bba_medium_aircraft_frame_1945
+          [from: rise_of_nations]
+    1950  bba_medium_aircraft_frame_1950
+          [from: rise_of_nations]
+    1955  bba_medium_aircraft_frame_1955
+          [from: rise_of_nations]
+    1955  bba_hardpoints_1955
+          [from: rise_of_nations]
+    1960  bba_medium_aircraft_frame_1960
+          [from: rise_of_nations]
+    1965  bba_medium_aircraft_frame_1965
+          [from: rise_of_nations]
+    1965  bba_hardpoints_1965
+          [from: rise_of_nations]
+    1970  bba_medium_aircraft_frame_1970
+          [from: rise_of_nations]
+    1975  bba_medium_aircraft_frame_1975
+          [from: rise_of_nations]
+    1975  bba_hardpoints_1975
+          [from: rise_of_nations]
+    1980  bba_medium_aircraft_frame_1980
+          [from: rise_of_nations]
+    1985  bba_medium_aircraft_frame_1985
+          [from: rise_of_nations]
+    1985  bba_hardpoints_1985
+          [from: rise_of_nations]
+    1990  bba_medium_aircraft_frame_1990
+          [from: rise_of_nations]
+    1995  bba_medium_aircraft_frame_1995
+          [from: rise_of_nations]
+    1995  bba_hardpoints_1995
+          [from: rise_of_nations]
+    2000  bba_medium_aircraft_frame_2000
+          [from: rise_of_nations]
+    2005  bba_medium_aircraft_frame_2005
+          [from: rise_of_nations]
+    2005  bba_hardpoints_2005
+          [from: rise_of_nations]
+    2010  bba_medium_aircraft_frame_2010
+          [from: rise_of_nations]
+    2015  bba_medium_aircraft_frame_2015
+          [from: rise_of_nations]
+    2015  bba_hardpoints_2015
+          [from: rise_of_nations]
+    2020  bba_medium_aircraft_frame_2020
+          [from: rise_of_nations]
+    2025  bba_medium_aircraft_frame_2025
+          [from: rise_of_nations]
+    2025  bba_hardpoints_2025
+          [from: rise_of_nations]
+    2030  bba_medium_aircraft_frame_2030
+          [from: rise_of_nations]
+    2035  bba_medium_aircraft_frame_2035
+          [from: rise_of_nations]
+    2035  bba_hardpoints_2035
+          [from: rise_of_nations]
+    2040  bba_medium_aircraft_frame_2040
+          [from: rise_of_nations]
+    2045  bba_medium_aircraft_frame_2045
+          [from: rise_of_nations]
+    2045  bba_hardpoints_2045
+          [from: rise_of_nations]
+    2050  bba_medium_aircraft_frame_2050
+          [from: rise_of_nations]
+    2055  bba_medium_aircraft_frame_2055
+          [from: rise_of_nations]
+    2055  bba_hardpoints_2055
+          [from: rise_of_nations]
+    2060  bba_medium_aircraft_frame_2060
+          [from: rise_of_nations]
+
+  [air / naval_bombers] — 5 techs
+    1917  early_naval_bomber
+          [from: rise_of_nations]
+    1924  interwars_naval_bomber
+          [from: rise_of_nations]
+    1936  naval_bomber1
+          [from: rise_of_nations]
+    1940  naval_bomber2
+          [from: rise_of_nations]
+    1944  naval_bomber3
+          [from: rise_of_nations]
+
+  [air / strategic_bombers] — 55 techs
+    1901  RON_Zepellin_1901
+          [from: rise_of_nations]
+    1902  bba_RON_zeppelin_1901
+          [from: rise_of_nations]
+    1903  RON_Zepellin_Upgrade
+          [from: rise_of_nations]
+    1903  bba_RON_airship_infrastructure
+          [from: rise_of_nations]
+    1905  bba_RON_airship_armor
+          [from: rise_of_nations]
+    1906  RON_Zepellin_1906
+          [from: rise_of_nations]
+    1908  RON_Zepellin_Upgrade2
+          [from: rise_of_nations]
+    1908  bba_RON_zeppelin_1908
+          [from: rise_of_nations]
+    1909  bba_RON_military_zeppelins
+          [from: rise_of_nations]
+    1912  ww1_zeppelin1
+          [from: rise_of_nations]
+    1913  bba_RON_zeppelin_1913
+          [from: rise_of_nations]
+    1916  bba_large_aircraft_frame_1916
+          [from: rise_of_nations]
+    1918  ww1_zeppelin2
+          [from: rise_of_nations]
+    1920  bba_large_aircraft_frame_1920
+          [from: rise_of_nations]
+    1920  bba_strat_parasite_fighters_1920
+          [from: rise_of_nations]
+    1920  bba_RON_zeppelin_1920
+          [from: rise_of_nations]
+    1926  iw_large_airframe
+    1926  bba_strat_powered_turrets
+          [from: rise_of_nations]
+    1928  bba_large_aircraft_frame_1928
+          [from: rise_of_nations]
+    1928  bba_RON_zeppelin_1928
+          [from: rise_of_nations]
+    1933  bba_large_aircraft_frame_1933
+          [from: rise_of_nations]
+    1936  basic_large_airframe
+    1936  bba_large_aircraft_frame_1936
+          [from: rise_of_nations]
+    1936  strategic_bomber1
+          [from: rise_of_nations]
+    1940  improved_large_airframe
+    1940  strategic_bomber2
+          [from: rise_of_nations]
+    1940  bba_large_aircraft_frame_1940
+          [from: rise_of_nations]
+    1943  bba_large_aircraft_frame_1943
+          [from: rise_of_nations]
+    1944  advanced_large_airframe
+    1944  strategic_bomber3
+          [from: rise_of_nations]
+    1945  modern_large_airframe
+    1945  bba_large_aircraft_frame_1945
+          [from: rise_of_nations]
+    1950  bba_large_aircraft_frame_1950
+          [from: rise_of_nations]
+    1950  bba_strat_parasite_fighters_1950
+          [from: rise_of_nations]
+    1950  jet_strategic_bomber1
+          [from: rise_of_nations]
+    1955  jet_strategic_bomber_a
+          [from: rise_of_nations]
+    1960  jet_strategic_bomber_b
+          [from: rise_of_nations]
+    1960  bba_large_aircraft_frame_1960
+          [from: rise_of_nations]
+    1965  jet_strategic_bomber_c
+          [from: rise_of_nations]
+    1970  jet_strategic_bomber_d
+          [from: rise_of_nations]
+    1970  bba_large_aircraft_frame_1970
+          [from: rise_of_nations]
+    1975  jet_strategic_bomber_e
+          [from: rise_of_nations]
+    1980  bba_large_aircraft_frame_1980
+          [from: rise_of_nations]
+    1990  bba_large_aircraft_frame_1990
+          [from: rise_of_nations]
+    1995  jet_strategic_bomber_f
+          [from: rise_of_nations]
+    2000  jet_strategic_bomber_g
+          [from: rise_of_nations]
+    2000  bba_large_aircraft_frame_2000
+          [from: rise_of_nations]
+    2010  bba_large_aircraft_frame_2010
+          [from: rise_of_nations]
+    2020  jet_strategic_bomber_h
+          [from: rise_of_nations]
+    2020  bba_large_aircraft_frame_2020
+          [from: rise_of_nations]
+    2030  jet_strategic_bomber_i
+          [from: rise_of_nations]
+    2030  bba_large_aircraft_frame_2030
+          [from: rise_of_nations]
+    2040  bba_large_aircraft_frame_2040
+          [from: rise_of_nations]
+    2050  bba_large_aircraft_frame_2050
+          [from: rise_of_nations]
+    2060  bba_large_aircraft_frame_2060
+          [from: rise_of_nations]
+
+  [air / tactical_bombers] — 19 techs
+    1914  early_bomber_1914
+          [from: rise_of_nations]
+    1916  basic_bomber
+          [from: rise_of_nations]
+    1918  improved_bomber
+          [from: rise_of_nations]
+    1928  early_bomber
+          [from: rise_of_nations]
+    1936  tactical_bomber1
+          [from: rise_of_nations]
+    1940  tactical_bomber2
+          [from: rise_of_nations]
+    1944  tactical_bomber3
+          [from: rise_of_nations]
+    1945  jet_tactical_bomber1
+          [from: rise_of_nations]
+    1950  jet_tactical_bomber2
+          [from: rise_of_nations]
+    1955  jet_tactical_bomber_a
+          [from: rise_of_nations]
+    1965  jet_tactical_bomber_b
+          [from: rise_of_nations]
+    1970  jet_tactical_bomber_c
+          [from: rise_of_nations]
+    1975  jet_tactical_bomber_d
+          [from: rise_of_nations]
+    1985  jet_tactical_bomber_e
+          [from: rise_of_nations]
+    1990  jet_tactical_bomber_f
+          [from: rise_of_nations]
+    1995  gen1_ucav
+          [from: rise_of_nations]
+    2008  gen2_ucav
+          [from: rise_of_nations]
+    2016  gen3_ucav
+          [from: rise_of_nations]
+    2025  gen4_ucav
+          [from: rise_of_nations]
+
+  [air / transport] — 6 techs
+    1933  early_transport_plane
+    1933  bba_early_transport_plane
+    1940  improved_transport_plane
+    1940  bba_improved_transport_plane
+    1945  bba_strategic_airlifter
+    1948  strategic_airlifter
+
+  [industry_electronics / electronics] — 74 techs
+    1890  chemical_research
+          [from: rise_of_nations]
+    1890  RON_Electrical_Engineering
+          [from: rise_of_nations]
+    1900  ww1_electronic_mechanical_engineering
+          [from: rise_of_nations]
+    1902  RON_Periscope
+          [from: rise_of_nations]
+    1902  RON_Gas_Turbines
+          [from: rise_of_nations]
+    1902  RON_Early_Circuit_Boards
+          [from: rise_of_nations]
+    1902  RON_Late_Telegraph
+          [from: rise_of_nations]
+    1902  RON_Submarine_Blueprint
+          [from: rise_of_nations]
+    1904  RON_Analog_Engineering
+          [from: rise_of_nations]
+    1904  RON_Printing_Press
+          [from: rise_of_nations]
+    1904  RON_Information_Study
+          [from: rise_of_nations]
+    1907  ww1_radio
+          [from: rise_of_nations]
+    1907  torpedotech1
+          [from: rise_of_nations]
+    1907  ww1_mechanical_computing
+          [from: rise_of_nations]
+    1907  hoi4tgw_decryption
+          [from: rise_of_nations]
+    1907  hoi4tgw_encryption
+          [from: rise_of_nations]
+    1908  RON_Improved_Electrical_Engineering
+          [from: rise_of_nations]
+    1908  RON_Television_Broadcasting
+          [from: rise_of_nations]
+    1908  RON_Headset
+          [from: rise_of_nations]
+    1910  supertech1
+          [from: rise_of_nations]
+    1910  subhulltech1
+          [from: rise_of_nations]
+    1910  tankaircraft1
+          [from: rise_of_nations]
+    1910  dingfelder_engine1
+          [from: rise_of_nations]
+    1910  tanktrack1
+          [from: rise_of_nations]
+    1915  chemical_research2
+          [from: rise_of_nations]
+    1916  ww1_radio2
+          [from: rise_of_nations]
+    1916  torpedotech2
+          [from: rise_of_nations]
+    1916  ww1_mechanical_computing2
+          [from: rise_of_nations]
+    1917  chemical_research3
+          [from: rise_of_nations]
+    1922  supertech2
+          [from: rise_of_nations]
+    1922  torpedotech3
+          [from: rise_of_nations]
+    1922  tankaircraft2
+          [from: rise_of_nations]
+    1922  dingfelder_engine2
+          [from: rise_of_nations]
+    1922  tanktrack2
+          [from: rise_of_nations]
+    1930  electronic_mechanical_engineering
+          [from: rise_of_nations]
+    1936  radio
+          [from: rise_of_nations]
+    1936  mechanical_computing
+          [from: rise_of_nations]
+    1936  basic_fire_control_system
+          [from: rise_of_nations]
+    1936  improved_fire_control_system
+          [from: rise_of_nations]
+    1936  advanced_fire_control_system
+          [from: rise_of_nations]
+    1938  improved_radio
+    1938  computing_machine
+          [from: rise_of_nations]
+    1938  basic_encryption
+          [from: rise_of_nations]
+    1938  basic_decryption
+          [from: rise_of_nations]
+    1940  improved_computing_machine
+          [from: rise_of_nations]
+    1940  improved_encryption
+          [from: rise_of_nations]
+    1940  improved_decryption
+          [from: rise_of_nations]
+    1941  advanced_radio
+    1942  advanced_computing_machine
+          [from: rise_of_nations]
+    1942  advanced_encryption
+          [from: rise_of_nations]
+    1942  advanced_decryption
+          [from: rise_of_nations]
+    1945  computing_machine_1945
+          [from: rise_of_nations]
+    1950  computing_machine_1950
+          [from: rise_of_nations]
+    1955  future_computing_machine
+          [from: rise_of_nations]
+    1955  future_encryption
+          [from: rise_of_nations]
+    1955  future_decryption
+          [from: rise_of_nations]
+    1970  future_computing_machine_2
+          [from: rise_of_nations]
+    1970  future_encryption_2
+          [from: rise_of_nations]
+    1970  future_decryption_2
+          [from: rise_of_nations]
+    1980  future_computing_machine_3
+          [from: rise_of_nations]
+    1980  future_encryption_3
+          [from: rise_of_nations]
+    1980  future_decryption_3
+          [from: rise_of_nations]
+    1990  modern_communication_systems
+          [from: rise_of_nations]
+    1990  modern_university_systems
+          [from: rise_of_nations]
+    1990  internet
+          [from: rise_of_nations]
+    2000  protected_networks
+          [from: rise_of_nations]
+    2000  encryption_algorithm_1
+          [from: rise_of_nations]
+    2000  decryption_algorithm_1
+          [from: rise_of_nations]
+    2002  encryption_algorithm_2
+          [from: rise_of_nations]
+    2002  decryption_algorithm_2
+          [from: rise_of_nations]
+    2004  modern_hardware_1
+          [from: rise_of_nations]
+    2006  encryption_algorithm_3
+          [from: rise_of_nations]
+    2006  decryption_algorithm_3
+          [from: rise_of_nations]
+    2008  modern_hardware_2
+          [from: rise_of_nations]
+
+  [industry_electronics / industry] — 152 techs
+    1890  RON_19th_Century_Industrial_Techniques
+          [from: rise_of_nations]
+    1900  RON_Early_Machine_Tools
+          [from: rise_of_nations]
+    1900  RON_Early_Production
+          [from: rise_of_nations]
+    1900  RON_Early_Construction
+          [from: rise_of_nations]
+    1900  RON_Early_Oil_Drilling
+          [from: rise_of_nations]
+    1901  RON_Extended_Machine_Tools
+          [from: rise_of_nations]
+    1901  RON_Trench_Digging_Techniques
+          [from: rise_of_nations]
+    1901  RON_Early_Assembly_Lines
+          [from: rise_of_nations]
+    1901  RON_Jenny_Coupler
+          [from: rise_of_nations]
+    1903  RON_Additional_Machinery
+          [from: rise_of_nations]
+    1903  RON_Improved_Early_Assembly_Lines
+          [from: rise_of_nations]
+    1903  RON_Tarmac
+          [from: rise_of_nations]
+    1903  RON_Mercury_Arc_Valve
+          [from: rise_of_nations]
+    1905  RON_Early_Heavy_Machinery
+          [from: rise_of_nations]
+    1905  RON_Machine_Guides
+          [from: rise_of_nations]
+    1905  RON_Improved_Sandstone_Building
+          [from: rise_of_nations]
+    1905  RON_Dragline_Excavation
+          [from: rise_of_nations]
+    1905  RON_Liquid_Ring_Pump
+          [from: rise_of_nations]
+    1907  RON_Improved_Heavy_Machinery
+          [from: rise_of_nations]
+    1907  RON_Early_Automation
+          [from: rise_of_nations]
+    1907  RON_Early_Excavation
+          [from: rise_of_nations]
+    1907  RON_Plastic_Parts
+          [from: rise_of_nations]
+    1909  RON_Multi_Purpose_Machine_Tools
+          [from: rise_of_nations]
+    1909  RON_Improved_Early_Automation
+          [from: rise_of_nations]
+    1909  RON_Neon_Lamps
+          [from: rise_of_nations]
+    1909  RON_Cellophane
+          [from: rise_of_nations]
+    1909  RON_Oil_Drilling_Techniques
+          [from: rise_of_nations]
+    1912  trench_warfare
+          [from: rise_of_nations]
+    1912  early_machine_tools
+          [from: rise_of_nations]
+    1912  ww1_construction1
+          [from: rise_of_nations]
+    1912  ww1_oil1
+          [from: rise_of_nations]
+    1914  wood_flooring
+          [from: rise_of_nations]
+    1914  improved_early_machine_tools
+          [from: rise_of_nations]
+    1914  total_war1
+          [from: rise_of_nations]
+    1914  ww1_construction2
+          [from: rise_of_nations]
+    1914  ww1_oil2
+          [from: rise_of_nations]
+    1916  better_trench_conditions
+          [from: rise_of_nations]
+    1916  ww1_fortification3b
+          [from: rise_of_nations]
+    1916  advanced_early_machine_tools
+          [from: rise_of_nations]
+    1916  total_war2
+          [from: rise_of_nations]
+    1916  ww1_construction3
+          [from: rise_of_nations]
+    1916  ww1_oil3
+          [from: rise_of_nations]
+    1916  ww1_bergiusprocess
+          [from: rise_of_nations]
+    1918  total_war3
+          [from: rise_of_nations]
+    1918  ww1_construction4
+          [from: rise_of_nations]
+    1920  demobilization_machine_tools
+          [from: rise_of_nations]
+    1920  demobilization2
+          [from: rise_of_nations]
+    1920  constructiondemob
+          [from: rise_of_nations]
+    1922  ww1_fortification5
+          [from: rise_of_nations]
+    1924  ww1_construction5
+          [from: rise_of_nations]
+    1930  ww1_construction6
+          [from: rise_of_nations]
+    1933  anti_air52
+          [from: rise_of_nations]
+    1936  basic_fortification_tech
+    1936  coastal_fort_tech_1
+    1936  ww1_fortification6
+          [from: rise_of_nations]
+    1936  basic_machine_tools
+          [from: rise_of_nations]
+    1936  concentrated_industry
+          [from: rise_of_nations]
+    1936  dispersed_industry
+          [from: rise_of_nations]
+    1936  fuel_silos
+          [from: rise_of_nations]
+    1936  fuel_refining
+          [from: rise_of_nations]
+    1936  synth_oil_experiments
+          [from: rise_of_nations]
+    1936  construction1
+          [from: rise_of_nations]
+    1936  excavation1
+          [from: rise_of_nations]
+    1937  improved_machine_tools
+          [from: rise_of_nations]
+    1937  improved_equipment_conversion
+          [from: rise_of_nations]
+    1937  concentrated_industry2
+          [from: rise_of_nations]
+    1937  dispersed_industry2
+          [from: rise_of_nations]
+    1937  fuel_refining2
+          [from: rise_of_nations]
+    1937  oil_processing
+          [from: rise_of_nations]
+    1937  rubber_processing
+          [from: rise_of_nations]
+    1937  construction2
+          [from: rise_of_nations]
+    1937  excavation2
+          [from: rise_of_nations]
+    1938  land_fort_tech_1
+    1939  advanced_machine_tools
+          [from: rise_of_nations]
+    1939  advanced_equipment_conversion
+          [from: rise_of_nations]
+    1939  concentrated_industry3
+          [from: rise_of_nations]
+    1939  dispersed_industry3
+          [from: rise_of_nations]
+    1939  fuel_refining3
+          [from: rise_of_nations]
+    1939  improved_oil_processing
+          [from: rise_of_nations]
+    1939  improved_rubber_processing
+          [from: rise_of_nations]
+    1939  construction3
+          [from: rise_of_nations]
+    1939  excavation3
+          [from: rise_of_nations]
+    1940  land_fort_tech_2
+    1940  coastal_fort_tech_2
+    1941  assembly_line_production
+          [from: rise_of_nations]
+    1941  concentrated_industry4
+          [from: rise_of_nations]
+    1941  dispersed_industry4
+          [from: rise_of_nations]
+    1941  fuel_refining4
+          [from: rise_of_nations]
+    1941  advanced_oil_processing
+          [from: rise_of_nations]
+    1941  advanced_rubber_processing
+          [from: rise_of_nations]
+    1941  construction4
+          [from: rise_of_nations]
+    1941  excavation4
+          [from: rise_of_nations]
+    1943  flexible_line
+          [from: rise_of_nations]
+    1943  streamlined_line
+          [from: rise_of_nations]
+    1943  concentrated_industry5
+          [from: rise_of_nations]
+    1943  dispersed_industry5
+          [from: rise_of_nations]
+    1943  fuel_refining5
+          [from: rise_of_nations]
+    1943  modern_oil_processing
+          [from: rise_of_nations]
+    1943  modern_rubber_processing
+          [from: rise_of_nations]
+    1943  construction5
+          [from: rise_of_nations]
+    1943  excavation5
+          [from: rise_of_nations]
+    1946  demobilization_ww2_a
+          [from: rise_of_nations]
+    1946  demobilization_ww2_b
+          [from: rise_of_nations]
+    1946  demobilization_ww2_c
+          [from: rise_of_nations]
+    1946  demobilization_ww2_d
+          [from: rise_of_nations]
+    1946  demobilization_ww2_g
+          [from: rise_of_nations]
+    1946  demobilization_ww2_e
+          [from: rise_of_nations]
+    1946  demobilization_ww2_f
+          [from: rise_of_nations]
+    1955  construction_a
+          [from: rise_of_nations]
+    1955  excavation_a
+          [from: rise_of_nations]
+    1955  flexible_line_a
+          [from: rise_of_nations]
+    1955  streamlined_line_a
+          [from: rise_of_nations]
+    1955  oil1
+          [from: rise_of_nations]
+    1955  missile_aa
+          [from: rise_of_nations]
+    1970  missile_aa2
+          [from: rise_of_nations]
+    1970  flexible_line_b
+          [from: rise_of_nations]
+    1970  streamlined_line_b
+          [from: rise_of_nations]
+    1970  concentrated_industry_a
+          [from: rise_of_nations]
+    1970  oil2
+          [from: rise_of_nations]
+    1990  missile_aa3
+          [from: rise_of_nations]
+    1990  flexible_line_c
+          [from: rise_of_nations]
+    1990  streamlined_line_c
+          [from: rise_of_nations]
+    1990  dispersed_industry_a
+          [from: rise_of_nations]
+    2000  missile_aa4
+          [from: rise_of_nations]
+    2000  construction_b
+          [from: rise_of_nations]
+    2000  flexible_line_d
+          [from: rise_of_nations]
+    2002  excavation_b
+          [from: rise_of_nations]
+    2002  concentrated_industry_b
+          [from: rise_of_nations]
+    2004  oil3
+          [from: rise_of_nations]
+    2006  construction_c
+          [from: rise_of_nations]
+    2006  flexible_line_e
+          [from: rise_of_nations]
+    2006  dispersed_industry_b
+          [from: rise_of_nations]
+    2008  streamlined_line_d
+          [from: rise_of_nations]
+    2008  concentrated_industry_c
+          [from: rise_of_nations]
+    2010  missile_aa5
+          [from: rise_of_nations]
+    2010  excavation_c
+          [from: rise_of_nations]
+    2012  flexible_line_f
+          [from: rise_of_nations]
+    2012  dispersed_industry_c
+          [from: rise_of_nations]
+    2014  oil4
+          [from: rise_of_nations]
+    2016  construction_d
+          [from: rise_of_nations]
+    2016  concentrated_industry_d
+          [from: rise_of_nations]
+    2018  excavation_d
+          [from: rise_of_nations]
+    2018  dispersed_industry_d
+          [from: rise_of_nations]
+    2020  missile_aa6
+          [from: rise_of_nations]
+    2020  flexible_line_g
+          [from: rise_of_nations]
+    2020  streamlined_line_e
+          [from: rise_of_nations]
+    2025  construction_e
+          [from: rise_of_nations]
+    2025  excavation_e
+          [from: rise_of_nations]
+    2025  dispersed_industry_e
+          [from: rise_of_nations]
+    2030  missile_aa7
+          [from: rise_of_nations]
+    2030  concentrated_industry_e
+          [from: rise_of_nations]
+    2030  dispersed_industry_f
+          [from: rise_of_nations]
+
+  [industry_electronics / nuclear] — 45 techs
+    1910  RON_Radioactive_Materials
+          [from: rise_of_nations]
+    1915  RON_Radiography
+          [from: rise_of_nations]
+    1938  RON_Nuclear_Fission
+          [from: rise_of_nations]
+    1940  atomic_research
+          [from: rise_of_nations]
+    1943  nuclear_reactor_heavy_water
+          [from: rise_of_nations]
+    1943  isotope_separation_centrifugal
+          [from: rise_of_nations]
+    1943  nuclear_reactor
+          [from: rise_of_nations]
+    1945  nukes
+          [from: rise_of_nations]
+    1945  RON_Nuclear_Reactor_MK1
+          [from: rise_of_nations]
+    1950  thermonuclear_bombs
+          [from: rise_of_nations]
+    1950  RON_Thermonuclear_Bomb
+          [from: rise_of_nations]
+    1950  RON_Tomahawk_Reactor
+          [from: rise_of_nations]
+    1950  RON_SRBM1
+          [from: rise_of_nations]
+    1957  RON_IRBM1
+          [from: rise_of_nations]
+    1957  RON_ICBM1
+          [from: rise_of_nations]
+    1965  RON_Thermonuclear_Bomb2
+          [from: rise_of_nations]
+    1965  RON_SRBM2
+          [from: rise_of_nations]
+    1965  RON_MIRV
+          [from: rise_of_nations]
+    1965  RON_Fission_Reactor1
+          [from: rise_of_nations]
+    1980  RON_Thermonuclear_Bomb3
+          [from: rise_of_nations]
+    1980  RON_SRBM3
+          [from: rise_of_nations]
+    1980  RON_IRBM2
+          [from: rise_of_nations]
+    1980  RON_ICBM2
+          [from: rise_of_nations]
+    1995  RON_Neutron_Bomb
+          [from: rise_of_nations]
+    1995  RON_SRBM4
+          [from: rise_of_nations]
+    1995  RON_IRBM3
+          [from: rise_of_nations]
+    1995  RON_ICBM3
+          [from: rise_of_nations]
+    1995  RON_Fission_Reactor2
+          [from: rise_of_nations]
+    2010  RON_Improved_Miniaturization
+          [from: rise_of_nations]
+    2010  RON_SRBM5
+          [from: rise_of_nations]
+    2010  RON_IRBM4
+          [from: rise_of_nations]
+    2010  RON_MHD_Department
+          [from: rise_of_nations]
+    2010  RON_Fission_Reactor3
+          [from: rise_of_nations]
+    2025  RON_Orbital_Launch_Site
+          [from: rise_of_nations]
+    2025  RON_SRBM6
+          [from: rise_of_nations]
+    2025  RON_IRBM5
+          [from: rise_of_nations]
+    2025  RON_ICBM4
+          [from: rise_of_nations]
+    2025  RON_EPR_Technology
+          [from: rise_of_nations]
+    2040  RON_Antimatter_Bomb
+          [from: rise_of_nations]
+    2040  RON_Fusion_Reactor
+          [from: rise_of_nations]
+    2040  bba_fusion_engine_2040
+          [from: rise_of_nations]
+    2045  bba_fusion_engine_2045
+          [from: rise_of_nations]
+    2050  bba_fusion_engine_2050
+          [from: rise_of_nations]
+    2055  bba_fusion_engine_2055
+          [from: rise_of_nations]
+    2060  bba_fusion_engine_2060
+          [from: rise_of_nations]
+
+  [industry_electronics / radar] — 29 techs
+    1936  radio_detection
+          [from: rise_of_nations]
+    1938  cavity_magnatron
+          [from: rise_of_nations]
+    1939  improved_decimetric_radar
+          [from: rise_of_nations]
+    1940  centimetric_radar
+          [from: rise_of_nations]
+    1941  phased_array
+          [from: rise_of_nations]
+    1942  monopulse_radar
+          [from: rise_of_nations]
+    1945  radar_1945
+          [from: rise_of_nations]
+    1950  radar_1950
+          [from: rise_of_nations]
+    1955  bba_armor_ecm_1955
+          [from: rise_of_nations]
+    1955  future_radar
+          [from: rise_of_nations]
+    1960  radar_1960
+          [from: rise_of_nations]
+    1965  bba_armor_ecm_1965
+          [from: rise_of_nations]
+    1970  future_radar_2
+          [from: rise_of_nations]
+    1975  bba_armor_ecm_1975
+          [from: rise_of_nations]
+    1980  future_radar_3
+          [from: rise_of_nations]
+    1985  bba_armor_ecm_1985
+          [from: rise_of_nations]
+    1995  bba_armor_ecm_1995
+          [from: rise_of_nations]
+    2000  modern_detection_devices
+          [from: rise_of_nations]
+    2005  bba_armor_ecm_2005
+          [from: rise_of_nations]
+    2010  radar_2010
+          [from: rise_of_nations]
+    2015  bba_armor_ecm_2015
+          [from: rise_of_nations]
+    2020  radar_2020
+          [from: rise_of_nations]
+    2025  bba_armor_ecm_2025
+          [from: rise_of_nations]
+    2030  radar_2030
+          [from: rise_of_nations]
+    2035  bba_armor_ecm_2035
+          [from: rise_of_nations]
+    2040  radar_2040
+          [from: rise_of_nations]
+    2045  bba_armor_ecm_2045
+          [from: rise_of_nations]
+    2050  radar_2050
+          [from: rise_of_nations]
+    2055  bba_armor_ecm_2055
+          [from: rise_of_nations]
+
+  [industry_electronics / rockets] — 83 techs
+    1926  RON_Early_Rocketry
+          [from: rise_of_nations]
+    1930  RON_Pulsoreactors
+          [from: rise_of_nations]
+    1938  RON_Integrated_Guidance_System
+          [from: rise_of_nations]
+    1939  motorized_rocket_unit
+          [from: rise_of_nations]
+    1940  rocket_artillery
+          [from: rise_of_nations]
+    1941  rocket_artillery2
+          [from: rise_of_nations]
+    1942  rocket_artillery3
+          [from: rise_of_nations]
+    1943  sp_rockets_improved_guidance
+    1943  rocket_artillery4
+          [from: rise_of_nations]
+    1943  experimental_rockets
+          [from: rise_of_nations]
+    1944  sp_rockets_rocket_bomber
+    1944  rocket_engines
+          [from: rise_of_nations]
+    1944  jet_engines
+          [from: rise_of_nations]
+    1944  sp_rockets_dual_chamber_rocket_engine_1
+          [from: rise_of_nations]
+    1945  sp_rockets_improved_rocket_bomber
+    1945  improved_rocket_engines
+          [from: rise_of_nations]
+    1946  advanced_rocket_engines
+          [from: rise_of_nations]
+    1946  sp_rockets_dual_chamber_rocket_engine_2
+          [from: rise_of_nations]
+    1948  RON_Multi_Staged_Rockets
+          [from: rise_of_nations]
+    1950  rocket_artillery_a
+          [from: rise_of_nations]
+    1950  motorized_rocket_unit2
+          [from: rise_of_nations]
+    1950  RON_Develop_Missiles
+          [from: rise_of_nations]
+    1957  RON_STAM
+          [from: rise_of_nations]
+    1957  RON_ATAM
+          [from: rise_of_nations]
+    1957  RON_ATS
+          [from: rise_of_nations]
+    1957  RON_ASHM
+          [from: rise_of_nations]
+    1957  RON_ATM
+          [from: rise_of_nations]
+    1960  rocket_artillery_b
+          [from: rise_of_nations]
+    1960  motorized_rocket_unit3
+          [from: rise_of_nations]
+    1961  RON_Manned_Orbital_Flights
+          [from: rise_of_nations]
+    1961  RON_Interplanetary_Probes
+          [from: rise_of_nations]
+    1962  RON_First_Moon_Flyby
+          [from: rise_of_nations]
+    1962  RON_Venus_Flyby
+          [from: rise_of_nations]
+    1965  RON_STAM2
+          [from: rise_of_nations]
+    1965  RON_ATAM2
+          [from: rise_of_nations]
+    1965  RON_ATS2
+          [from: rise_of_nations]
+    1965  RON_ASHM2
+          [from: rise_of_nations]
+    1965  RON_ATM2
+          [from: rise_of_nations]
+    1966  RON_Moon_Soft_Landing
+          [from: rise_of_nations]
+    1968  RON_Massive_Rockets
+          [from: rise_of_nations]
+    1968  RON_Lunar_Modules
+          [from: rise_of_nations]
+    1969  RON_First_Man_On_The_Moon
+          [from: rise_of_nations]
+    1970  motorized_rocket_unit4
+          [from: rise_of_nations]
+    1970  MD_motorized_rocket_unit
+          [from: rise_of_nations]
+    1971  RON_Martian_Orbit
+          [from: rise_of_nations]
+    1975  RON_Venus_Landing
+          [from: rise_of_nations]
+    1976  RON_Martian_Landing
+          [from: rise_of_nations]
+    1977  RON_The_Grand_Tour
+          [from: rise_of_nations]
+    1980  rocket_artillery1_md
+          [from: rise_of_nations]
+    1980  motorized_rocket_unit5
+          [from: rise_of_nations]
+    1981  RON_A_New_Era
+          [from: rise_of_nations]
+    1981  RON_STAM3
+          [from: rise_of_nations]
+    1981  RON_ATAM3
+          [from: rise_of_nations]
+    1981  RON_ATS3
+          [from: rise_of_nations]
+    1981  RON_ASHM3
+          [from: rise_of_nations]
+    1981  RON_ATM3
+          [from: rise_of_nations]
+    1990  rocket_artillery2_md
+          [from: rise_of_nations]
+    1990  motorized_rocket_unit6
+          [from: rise_of_nations]
+    1997  RON_STAM4
+          [from: rise_of_nations]
+    1997  RON_ATAM4
+          [from: rise_of_nations]
+    1997  RON_ATS4
+          [from: rise_of_nations]
+    1997  RON_ASHM4
+          [from: rise_of_nations]
+    1997  RON_ATM4
+          [from: rise_of_nations]
+    2000  motorized_rocket_unit7
+          [from: rise_of_nations]
+    2000  RON_Modernization
+          [from: rise_of_nations]
+    2003  rocket_artillery3_md
+          [from: rise_of_nations]
+    2009  rocket_artillery4_md
+          [from: rise_of_nations]
+    2010  motorized_rocket_unit8
+          [from: rise_of_nations]
+    2012  RON_Leave_The_Solar_System
+          [from: rise_of_nations]
+    2012  RON_STAM5
+          [from: rise_of_nations]
+    2012  RON_ATAM5
+          [from: rise_of_nations]
+    2012  RON_ATS5
+          [from: rise_of_nations]
+    2012  RON_ASHM5
+          [from: rise_of_nations]
+    2012  RON_ATM5
+          [from: rise_of_nations]
+    2014  RON_Comet_Landing
+          [from: rise_of_nations]
+    2015  RON_Reusability_Era
+          [from: rise_of_nations]
+    2020  motorized_rocket_unit9
+          [from: rise_of_nations]
+    2025  RON_First_Man_On_Mars
+          [from: rise_of_nations]
+    2025  RON_STAM6
+          [from: rise_of_nations]
+    2025  RON_ATAM6
+          [from: rise_of_nations]
+    2025  RON_ATS6
+          [from: rise_of_nations]
+    2025  RON_ASHM6
+          [from: rise_of_nations]
+    2025  RON_ATM6
+          [from: rise_of_nations]
+
+  [land / anti_tank] — 17 techs
+    1918  early_antitank
+          [from: rise_of_nations]
+    1936  mountain_tanks
+    1936  SWE_bofors_antitank_gun
+    1936  interwar_antitank
+          [from: rise_of_nations]
+    1939  antitank1
+          [from: rise_of_nations]
+    1940  antitank2
+          [from: rise_of_nations]
+    1941  antitank3
+          [from: rise_of_nations]
+    1942  antitank4
+          [from: rise_of_nations]
+    1943  antitank5
+          [from: rise_of_nations]
+    1950  antitank_a
+          [from: rise_of_nations]
+    1960  antitank_b
+          [from: rise_of_nations]
+    1980  antitank1_md
+          [from: rise_of_nations]
+    2000  antitank2_md
+          [from: rise_of_nations]
+    2003  antitank3_md
+          [from: rise_of_nations]
+    2006  antitank4_md
+          [from: rise_of_nations]
+    2009  antitank5_md
+          [from: rise_of_nations]
+    2015  antitank6_md
+          [from: rise_of_nations]
+
+  [land / artillery] — 118 techs
+    1890  RON_Basic_Light_Field_Gun
+          [from: rise_of_nations]
+    1890  RON_Observation_Balloon_1890
+          [from: rise_of_nations]
+    1900  light_field_gun1
+          [from: rise_of_nations]
+    1900  heavy_field_gun1
+          [from: rise_of_nations]
+    1900  railway_gun_0
+          [from: rise_of_nations]
+    1901  RON_Improved_Artillery_Shells
+          [from: rise_of_nations]
+    1901  RON_Heavy_Artillery_Upgrade
+          [from: rise_of_nations]
+    1901  RON_Improved_Heavy_Engine
+          [from: rise_of_nations]
+    1901  RON_Balloon_Teathering
+          [from: rise_of_nations]
+    1903  RON_Dense_Artillery_Shells
+          [from: rise_of_nations]
+    1903  RON_Metal_Wheels
+          [from: rise_of_nations]
+    1903  RON_Early_Field_Artillery
+          [from: rise_of_nations]
+    1903  RON_Improved_Shield
+          [from: rise_of_nations]
+    1903  RON_Basic_Early_Heavy_Artillery
+          [from: rise_of_nations]
+    1905  RON_Bigger_Barrel
+          [from: rise_of_nations]
+    1905  RON_Longer_Spade
+          [from: rise_of_nations]
+    1905  RON_Metal_Wheels2
+          [from: rise_of_nations]
+    1905  RON_Replacement_Parts2
+          [from: rise_of_nations]
+    1905  RON_Observation_Balloon_1905
+          [from: rise_of_nations]
+    1906  RON_Replacement_Parts
+          [from: rise_of_nations]
+    1906  RON_Improved_Early_Field_Artillery
+          [from: rise_of_nations]
+    1906  RON_Improved_Early_Heavy_Artillery
+          [from: rise_of_nations]
+    1907  RON_Stronger_Equilibrator
+          [from: rise_of_nations]
+    1907  RON_Heavier_Wheels
+          [from: rise_of_nations]
+    1907  RON_Maintainence_Crews
+          [from: rise_of_nations]
+    1907  RON_Canvas_Weaving
+          [from: rise_of_nations]
+    1907  RON_Basket_Improvement
+          [from: rise_of_nations]
+    1908  RON_Dedicated_Artillery_Squads
+          [from: rise_of_nations]
+    1908  RON_Improved_Light_Armor
+          [from: rise_of_nations]
+    1908  RON_Advanced_Early_Field_Artillery
+          [from: rise_of_nations]
+    1908  RON_Improved_Mobile_Heavy_Armor
+          [from: rise_of_nations]
+    1908  RON_Advanced_Early_Heavy_Artillery
+          [from: rise_of_nations]
+    1909  RON_Higher_Rate_Of_Fire
+          [from: rise_of_nations]
+    1910  RON_Better_Siege_Engines
+          [from: rise_of_nations]
+    1910  bonus_bertha1
+          [from: rise_of_nations]
+    1910  bonus_bertha4
+          [from: rise_of_nations]
+    1910  bonus_artillery1
+          [from: rise_of_nations]
+    1910  bonus_artillery4
+          [from: rise_of_nations]
+    1910  railway_gun_1
+          [from: rise_of_nations]
+    1910  RON_Observation_Balloon_1910
+          [from: rise_of_nations]
+    1914  heavy_field_gun2
+          [from: rise_of_nations]
+    1914  light_field_gun2
+          [from: rise_of_nations]
+    1915  railway_gun_2
+          [from: rise_of_nations]
+    1915  light_railway_gun_0
+          [from: rise_of_nations]
+    1917  superartillery1
+          [from: rise_of_nations]
+    1918  bonus_bertha2
+          [from: rise_of_nations]
+    1918  bonus_artillery2
+          [from: rise_of_nations]
+    1918  anti_air
+          [from: rise_of_nations]
+    1920  light_railway_gun_1
+          [from: rise_of_nations]
+    1922  heavy_field_gun3
+          [from: rise_of_nations]
+    1922  bonus_artillery3
+          [from: rise_of_nations]
+    1925  anti_air2
+          [from: rise_of_nations]
+    1925  railway_gun_3
+          [from: rise_of_nations]
+    1930  gw_artillery
+          [from: rise_of_nations]
+    1930  anti_air3
+          [from: rise_of_nations]
+    1930  basic_heavy_artillery
+          [from: rise_of_nations]
+    1930  light_railway_gun_2
+          [from: rise_of_nations]
+    1933  superartillery2
+          [from: rise_of_nations]
+    1933  railartillery2
+          [from: rise_of_nations]
+    1935  railway_gun_4
+          [from: rise_of_nations]
+    1936  railway_gun
+    1936  interwar_artillery
+          [from: rise_of_nations]
+    1936  interwar_antiair
+          [from: rise_of_nations]
+    1936  heavy_artillery_upgrade1
+          [from: rise_of_nations]
+    1939  artillery1
+          [from: rise_of_nations]
+    1939  antiair1
+          [from: rise_of_nations]
+    1939  superartillery3
+          [from: rise_of_nations]
+    1939  railartillery3
+          [from: rise_of_nations]
+    1939  improved_heavy_artillery
+          [from: rise_of_nations]
+    1940  sp_artillery_rocket_assisted_projectiles_tech
+    1940  sp_artillery_purpose_built_gun_motor_carriages_tech
+    1940  artillery2
+          [from: rise_of_nations]
+    1940  antiair2
+          [from: rise_of_nations]
+    1940  heavy_artillery_upgrade2
+          [from: rise_of_nations]
+    1941  sp_shock_hardening_techniques
+    1941  artillery3
+          [from: rise_of_nations]
+    1941  antiair3
+          [from: rise_of_nations]
+    1941  heavy_artillery_upgrade3
+          [from: rise_of_nations]
+    1942  sp_variable_time_fuze_shells
+    1942  artillery4
+          [from: rise_of_nations]
+    1942  antiair4
+          [from: rise_of_nations]
+    1942  advanced_heavy_artillery
+          [from: rise_of_nations]
+    1943  artillery5
+          [from: rise_of_nations]
+    1943  antiair5
+          [from: rise_of_nations]
+    1943  heavy_artillery_upgrade4
+          [from: rise_of_nations]
+    1950  antiair_a
+          [from: rise_of_nations]
+    1950  basic_heavy_artillery_cw
+          [from: rise_of_nations]
+    1950  basic_light_artillery_cw
+          [from: rise_of_nations]
+    1960  antiair_b
+          [from: rise_of_nations]
+    1960  sam_carrier
+          [from: rise_of_nations]
+    1970  antiair1_md
+          [from: rise_of_nations]
+    1970  sam_carrier2
+          [from: rise_of_nations]
+    1970  improved_heavy_artillery_cw
+          [from: rise_of_nations]
+    1970  improved_light_artillery_cw
+          [from: rise_of_nations]
+    1980  sam_carrier3
+          [from: rise_of_nations]
+    1980  heavy_artillery_upgrade5
+          [from: rise_of_nations]
+    1980  light_artillery_upgrade5
+          [from: rise_of_nations]
+    1990  antiair2_md
+          [from: rise_of_nations]
+    1990  sam_carrier4
+          [from: rise_of_nations]
+    1990  advanced_heavy_artillery_cw
+          [from: rise_of_nations]
+    1990  advanced_light_artillery_cw
+          [from: rise_of_nations]
+    2000  sam_carrier5
+          [from: rise_of_nations]
+    2000  basic_heavy_artillery_md
+          [from: rise_of_nations]
+    2000  basic_light_artillery_md
+          [from: rise_of_nations]
+    2003  antiair3_md
+          [from: rise_of_nations]
+    2003  heavy_artillery_upgrade6
+          [from: rise_of_nations]
+    2003  light_artillery_upgrade6
+          [from: rise_of_nations]
+    2006  heavy_artillery_upgrade7
+          [from: rise_of_nations]
+    2006  light_artillery_upgrade7
+          [from: rise_of_nations]
+    2008  improved_heavy_artillery_md
+          [from: rise_of_nations]
+    2008  improved_light_artillery_md
+          [from: rise_of_nations]
+    2009  antiair4_md
+          [from: rise_of_nations]
+    2010  sam_carrier6
+          [from: rise_of_nations]
+    2012  antiair5_md
+          [from: rise_of_nations]
+    2015  antiair6_md
+          [from: rise_of_nations]
+    2016  advanced_heavy_artillery_md
+          [from: rise_of_nations]
+    2016  advanced_light_artillery_md
+          [from: rise_of_nations]
+    2020  sam_carrier7
+          [from: rise_of_nations]
+
+  [land / heavy_tanks] — 34 techs
+    1916  gwtank_chassis_heavy
+          [from: rise_of_nations]
+    1934  basic_heavy_tank
+          [from: rise_of_nations]
+    1934  early_infantry_tank
+          [from: rise_of_nations]
+    1934  basic_heavy_tank_chassis
+          [from: rise_of_nations]
+    1934  early_infantry_tank_chassis
+          [from: rise_of_nations]
+    1936  basic_infantry_tank
+          [from: rise_of_nations]
+    1936  basic_infantry_tank_chassis
+          [from: rise_of_nations]
+    1939  basic_infantry_tank2
+          [from: rise_of_nations]
+    1939  basic_infantry_tank_chassis2
+          [from: rise_of_nations]
+    1941  improved_heavy_tank
+          [from: rise_of_nations]
+    1941  improved_infantry_tank
+          [from: rise_of_nations]
+    1941  improved_heavy_tank_chassis
+          [from: rise_of_nations]
+    1941  improved_infantry_tank_chassis
+          [from: rise_of_nations]
+    1943  sp_armored_lc_naval_engine_conversion_tech
+    1943  sp_armored_lc_transmission_improvements_tech
+    1943  sp_armored_lc_specialized_field_manuals_tech
+    1943  sp_armored_lc_high_impact_obliterator_cannon_tech
+    1943  advanced_heavy_tank
+          [from: rise_of_nations]
+    1943  super_heavy_tank
+          [from: rise_of_nations]
+    1943  advanced_infantry_tank
+          [from: rise_of_nations]
+    1943  monster_tank
+          [from: rise_of_nations]
+    1943  advanced_heavy_tank_chassis
+          [from: rise_of_nations]
+    1943  advanced_infantry_tank_chassis
+          [from: rise_of_nations]
+    1943  super_heavy_tank_chassis
+          [from: rise_of_nations]
+    1943  monster_tank_chassis
+          [from: rise_of_nations]
+    1945  sp_armored_lc_weapon_fire_control_tech
+    1945  super_heavy_tank_a
+          [from: rise_of_nations]
+    1945  advanced_heavy_tank_x
+          [from: rise_of_nations]
+    1945  advanced_infantry_tank2
+          [from: rise_of_nations]
+    1945  monster_tank2
+          [from: rise_of_nations]
+    1945  advanced_heavy_tank_chassis_x
+          [from: rise_of_nations]
+    1945  advanced_infantry_tank_chassis2
+          [from: rise_of_nations]
+    1945  super_heavy_tank_chassis_a
+          [from: rise_of_nations]
+    1945  monster_tank_chassis2
+          [from: rise_of_nations]
+
+  [land / infantry] — 191 techs
+    1890  early_infantry_weapons_1890
+          [from: rise_of_nations]
+    1900  early_infantry_weapons_1900
+          [from: rise_of_nations]
+    1900  marines
+          [from: rise_of_nations]
+    1900  tech_mountaineers
+          [from: rise_of_nations]
+    1900  jaegers
+          [from: rise_of_nations]
+    1900  jungletroops
+          [from: rise_of_nations]
+    1900  shocktroops
+          [from: rise_of_nations]
+    1900  desertinfantry_at
+          [from: rise_of_nations]
+    1902  RON_Support_Innovations
+          [from: rise_of_nations]
+    1902  RON_Improved_Early_Rifle
+          [from: rise_of_nations]
+    1902  RON_Early_Chemical_Explosives
+          [from: rise_of_nations]
+    1903  RON_Support_Innovations2
+          [from: rise_of_nations]
+    1904  RON_Support_Innovations3
+          [from: rise_of_nations]
+    1904  RON_Advanced_Early_Rifle
+          [from: rise_of_nations]
+    1904  RON_Explosion_Trigger
+          [from: rise_of_nations]
+    1906  RON_Support_Innovations4
+          [from: rise_of_nations]
+    1906  RON_Completed_Early_Rifle
+          [from: rise_of_nations]
+    1907  RON_Plastic_Lined_Equipment
+          [from: rise_of_nations]
+    1908  RON_Support_Innovations5
+          [from: rise_of_nations]
+    1908  RON_Semi_Automatic_Rifles
+          [from: rise_of_nations]
+    1908  RON_Implanted_Gun_Prototypes
+          [from: rise_of_nations]
+    1909  RON_Supressor
+          [from: rise_of_nations]
+    1909  RON_Early_Infantry_Equipment
+          [from: rise_of_nations]
+    1909  RON_Automatic_Implanted_Guns
+          [from: rise_of_nations]
+    1910  early_infantry_weapons
+          [from: rise_of_nations]
+    1910  early_support_weapons
+          [from: rise_of_nations]
+    1910  early_support_weapons2
+          [from: rise_of_nations]
+    1913  hand_grenade
+          [from: rise_of_nations]
+    1914  early_infantry_weapons2
+          [from: rise_of_nations]
+    1914  early_infantry_equip
+          [from: rise_of_nations]
+    1914  early_support_weapons3
+          [from: rise_of_nations]
+    1914  frag_grenade
+          [from: rise_of_nations]
+    1914  gas_mask
+          [from: rise_of_nations]
+    1914  machine_gun
+          [from: rise_of_nations]
+    1915  gas_mask2
+          [from: rise_of_nations]
+    1916  early_infantry_weapons3
+          [from: rise_of_nations]
+    1916  early_support_weapons4
+          [from: rise_of_nations]
+    1916  gas_mask3
+          [from: rise_of_nations]
+    1916  machine_gun2
+          [from: rise_of_nations]
+    1917  early_infantry_equip2
+          [from: rise_of_nations]
+    1918  support_weapons
+    1918  early_infantry_weapons4
+          [from: rise_of_nations]
+    1918  early_infantry_weapons5
+          [from: rise_of_nations]
+    1918  early_support_weapons5
+          [from: rise_of_nations]
+    1918  machine_gun3
+          [from: rise_of_nations]
+    1920  early_infantry_equip3
+          [from: rise_of_nations]
+    1922  interwar_support_weapons
+          [from: rise_of_nations]
+    1924  machine_gun4
+          [from: rise_of_nations]
+    1926  interwar_support_weapons2
+          [from: rise_of_nations]
+    1928  interwars_infantry_equip
+          [from: rise_of_nations]
+    1928  interwar_machine_gun
+          [from: rise_of_nations]
+    1930  interwar_support_weapons3
+          [from: rise_of_nations]
+    1932  interwars_infantry_equip2
+          [from: rise_of_nations]
+    1932  interwar_support_weapons4
+          [from: rise_of_nations]
+    1933  infantry_weapons
+          [from: rise_of_nations]
+    1936  infantry_weapons1
+          [from: rise_of_nations]
+    1936  paratroopers
+          [from: rise_of_nations]
+    1936  marines2
+          [from: rise_of_nations]
+    1936  tech_mountaineers2
+          [from: rise_of_nations]
+    1936  modern_support_weapons
+          [from: rise_of_nations]
+    1936  modern_machine_gun
+          [from: rise_of_nations]
+    1936  jaegers2
+          [from: rise_of_nations]
+    1936  jungletroops2
+          [from: rise_of_nations]
+    1936  shocktroops2
+          [from: rise_of_nations]
+    1936  desertinfantry_at2
+          [from: rise_of_nations]
+    1936  rangers_tech
+          [from: rise_of_nations]
+    1936  sas_research1
+          [from: rise_of_nations]
+    1936  sas_research2
+          [from: rise_of_nations]
+    1936  support_weapons_sas
+          [from: rise_of_nations]
+    1936  support_weapons2_sas
+          [from: rise_of_nations]
+    1936  support_weapons3_sas
+          [from: rise_of_nations]
+    1936  support_weapons4_sas
+          [from: rise_of_nations]
+    1936  NOR_mountain_men
+          [from: rise_of_nations]
+    1936  NOR_concealed_skirmishers
+          [from: rise_of_nations]
+    1938  infantry_weapons2
+          [from: rise_of_nations]
+    1938  tech_special_forces
+          [from: rise_of_nations]
+    1938  support_weapons2
+          [from: rise_of_nations]
+    1939  improved_infantry_weapons
+          [from: rise_of_nations]
+    1939  paratroopers2
+          [from: rise_of_nations]
+    1939  rangers_tech2
+          [from: rise_of_nations]
+    1940  improved_infantry_weapons_2
+          [from: rise_of_nations]
+    1940  advanced_special_forces
+          [from: rise_of_nations]
+    1940  improved_special_forces
+          [from: rise_of_nations]
+    1940  support_weapons3
+          [from: rise_of_nations]
+    1942  infantry_at
+          [from: rise_of_nations]
+    1942  advanced_infantry_weapons
+          [from: rise_of_nations]
+    1942  paratroopers3
+          [from: rise_of_nations]
+    1942  marines3
+          [from: rise_of_nations]
+    1942  tech_mountaineers3
+          [from: rise_of_nations]
+    1942  support_weapons4
+          [from: rise_of_nations]
+    1942  jaegers3
+          [from: rise_of_nations]
+    1942  jungletroops3
+          [from: rise_of_nations]
+    1942  shocktroops3
+          [from: rise_of_nations]
+    1942  desertinfantry_at3
+          [from: rise_of_nations]
+    1943  infantry_at2
+          [from: rise_of_nations]
+    1943  extreme_environment_training
+          [from: rise_of_nations]
+    1943  survival_training
+          [from: rise_of_nations]
+    1943  rangers_tech3
+          [from: rise_of_nations]
+    1944  advanced_infantry_weapons2
+          [from: rise_of_nations]
+    1945  paratroopers_a
+          [from: rise_of_nations]
+    1945  marines_a
+          [from: rise_of_nations]
+    1945  mountaineers_a
+          [from: rise_of_nations]
+    1945  jaegers4
+          [from: rise_of_nations]
+    1945  jungletroops4
+          [from: rise_of_nations]
+    1945  shocktroops4
+          [from: rise_of_nations]
+    1945  desertinfantry_at4
+          [from: rise_of_nations]
+    1946  elite_forces
+          [from: rise_of_nations]
+    1946  advanced_infantry_weapons_a
+          [from: rise_of_nations]
+    1946  support_weapons_a
+          [from: rise_of_nations]
+    1947  infantry_at_a
+          [from: rise_of_nations]
+    1949  advanced_infantry_weapons_b
+          [from: rise_of_nations]
+    1949  paratroopers_b
+          [from: rise_of_nations]
+    1949  marines_b
+          [from: rise_of_nations]
+    1949  mountaineers_b
+          [from: rise_of_nations]
+    1949  jaegers5
+          [from: rise_of_nations]
+    1949  jungletroops5
+          [from: rise_of_nations]
+    1949  shocktroops5
+          [from: rise_of_nations]
+    1949  desertinfantry_at5
+          [from: rise_of_nations]
+    1950  elite_forces_02
+          [from: rise_of_nations]
+    1952  advanced_infantry_weapons_c
+          [from: rise_of_nations]
+    1952  infantry_at_b
+          [from: rise_of_nations]
+    1952  support_weapons_b
+          [from: rise_of_nations]
+    1953  paratroopers_c
+          [from: rise_of_nations]
+    1953  marines_c
+          [from: rise_of_nations]
+    1953  mountaineers_c
+          [from: rise_of_nations]
+    1953  jaegers6
+          [from: rise_of_nations]
+    1953  jungletroops6
+          [from: rise_of_nations]
+    1953  shocktroops6
+          [from: rise_of_nations]
+    1953  desertinfantry_at6
+          [from: rise_of_nations]
+    1954  elite_forces_03
+          [from: rise_of_nations]
+    1956  advanced_infantry_weapons_d
+          [from: rise_of_nations]
+    1958  infantry_at_c
+          [from: rise_of_nations]
+    1960  advanced_infantry_weapons_e
+          [from: rise_of_nations]
+    1960  support_weapons_c
+          [from: rise_of_nations]
+    1970  CW_support_weapons
+          [from: rise_of_nations]
+    1970  body_armor
+          [from: rise_of_nations]
+    1970  camouflage
+          [from: rise_of_nations]
+    1970  MD_special_forces
+          [from: rise_of_nations]
+    1975  advanced_infantry_weapons_f
+          [from: rise_of_nations]
+    1990  advanced_infantry_weapons_g
+          [from: rise_of_nations]
+    1990  squad_automatic_weapon
+          [from: rise_of_nations]
+    1990  tandem_charge_warheads
+          [from: rise_of_nations]
+    1990  body_armor2
+          [from: rise_of_nations]
+    1990  MD_special_forces2
+          [from: rise_of_nations]
+    1994  advanced_infantry_weapons_h
+          [from: rise_of_nations]
+    1995  MD_infantry_weapons2
+          [from: rise_of_nations]
+    1995  rail_integration_system
+          [from: rise_of_nations]
+    1995  MD_support_weapons2
+          [from: rise_of_nations]
+    2000  advanced_infantry_weapons_j
+          [from: rise_of_nations]
+    2000  red_dot_sight
+          [from: rise_of_nations]
+    2000  body_armor3
+          [from: rise_of_nations]
+    2002  red_laser_sight
+          [from: rise_of_nations]
+    2002  holographic_sight
+          [from: rise_of_nations]
+    2002  MD_support_weapons3
+          [from: rise_of_nations]
+    2002  camouflage2
+          [from: rise_of_nations]
+    2004  thermal_weapon_sight
+          [from: rise_of_nations]
+    2004  weapon_mounted_light
+          [from: rise_of_nations]
+    2004  MD_special_forces3
+          [from: rise_of_nations]
+    2006  green_laser_sight
+          [from: rise_of_nations]
+    2006  camouflage3
+          [from: rise_of_nations]
+    2008  advanced_infantry_weapons_k
+          [from: rise_of_nations]
+    2008  body_armor4
+          [from: rise_of_nations]
+    2010  MD_improved_infantry_weapons_2
+          [from: rise_of_nations]
+    2010  improved_rail_integration_system
+          [from: rise_of_nations]
+    2010  MD_support_weapons4
+          [from: rise_of_nations]
+    2010  MD_special_forces4
+          [from: rise_of_nations]
+    2012  green_laser_interdiction_system
+          [from: rise_of_nations]
+    2012  body_armor5
+          [from: rise_of_nations]
+    2014  integrated_ballistics_computer
+          [from: rise_of_nations]
+    2014  MD_support_weapons5
+          [from: rise_of_nations]
+    2014  camouflage4
+          [from: rise_of_nations]
+    2016  advanced_infantry_weapons_l
+          [from: rise_of_nations]
+    2016  precision_guided_firearms
+          [from: rise_of_nations]
+    2016  body_armor6
+          [from: rise_of_nations]
+    2018  MD_advanced_infantry_weapons2
+          [from: rise_of_nations]
+    2018  MD_lightweight_small_arms
+          [from: rise_of_nations]
+    2018  MD_support_weapons6
+          [from: rise_of_nations]
+    2018  body_armor7
+          [from: rise_of_nations]
+    2020  MD_cased_telescoped_small_arms
+          [from: rise_of_nations]
+    2020  advanced_infantry_weapons_m
+          [from: rise_of_nations]
+    2020  camouflage5
+          [from: rise_of_nations]
+    2020  MD_special_forces5
+          [from: rise_of_nations]
+    2025  future_rail_integration_system
+          [from: rise_of_nations]
+    2025  laser_guided_small_arms
+          [from: rise_of_nations]
+    2025  body_armor8
+          [from: rise_of_nations]
+    2030  advanced_infantry_weapons_n
+          [from: rise_of_nations]
+    2030  smart_ammunition
+          [from: rise_of_nations]
+    2030  MD_support_weapons7
+          [from: rise_of_nations]
+    2030  body_armor9
+          [from: rise_of_nations]
+    2030  camouflage6
+          [from: rise_of_nations]
+    2030  MD_special_forces6
+          [from: rise_of_nations]
+
+  [land / light_tanks] — 40 techs
+    1910  NSB_early_tank_engine
+          [from: rise_of_nations]
+    1910  NSB_early_tank_engine
+          [from: rise_of_nations]
+    1916  tank_engine
+          [from: rise_of_nations]
+    1916  tank_armor
+          [from: rise_of_nations]
+    1916  tank_gun
+          [from: rise_of_nations]
+    1916  NSB_early_tank_gun
+          [from: rise_of_nations]
+    1916  gwtank_chassis_2
+          [from: rise_of_nations]
+    1916  gwtank_chassis_heavy_2
+          [from: rise_of_nations]
+    1916  gwtank_chassis
+          [from: rise_of_nations]
+    1917  tank_gun_1
+          [from: rise_of_nations]
+    1917  early_tank
+          [from: rise_of_nations]
+    1918  gwtank
+    1920  early_tank2
+          [from: rise_of_nations]
+    1925  early_tank3
+          [from: rise_of_nations]
+    1925  tank_gun_2
+          [from: rise_of_nations]
+    1930  modern_tank_design
+          [from: rise_of_nations]
+    1930  modern_tank_chassis_design
+          [from: rise_of_nations]
+    1934  basic_light_tank
+          [from: rise_of_nations]
+    1934  basic_light_tank_chassis
+          [from: rise_of_nations]
+    1936  improved_light_tank
+          [from: rise_of_nations]
+    1936  tank_gun_3
+          [from: rise_of_nations]
+    1936  improved_light_tank_chassis
+          [from: rise_of_nations]
+    1941  advanced_light_tank
+          [from: rise_of_nations]
+    1941  advanced_light_tank_chassis
+          [from: rise_of_nations]
+    1945  advanced_light_tank_a
+          [from: rise_of_nations]
+    1945  advanced_light_tank_chassis_a
+          [from: rise_of_nations]
+    1951  advanced_light_tank_b
+          [from: rise_of_nations]
+    1951  advanced_light_tank_chassis_b
+          [from: rise_of_nations]
+    1960  advanced_light_tank_c
+          [from: rise_of_nations]
+    1960  advanced_light_tank_chassis_c
+          [from: rise_of_nations]
+    1976  advanced_light_tank_d
+          [from: rise_of_nations]
+    1976  advanced_light_tank_chassis_d
+          [from: rise_of_nations]
+    1980  tank_gun_4
+          [from: rise_of_nations]
+    1991  advanced_light_tank_e
+          [from: rise_of_nations]
+    1991  advanced_light_tank_chassis_e
+          [from: rise_of_nations]
+    2010  advanced_light_tank_f
+          [from: rise_of_nations]
+    2010  tank_gun_5
+          [from: rise_of_nations]
+    2010  advanced_light_tank_chassis_f
+          [from: rise_of_nations]
+    2025  advanced_light_tank_g
+          [from: rise_of_nations]
+    2025  advanced_light_tank_chassis_g
+          [from: rise_of_nations]
+
+  [land / mechanised] — 29 techs
+    1940  mechanised_infantry
+          [from: rise_of_nations]
+    1941  amphibious_mechanized_infantry
+          [from: rise_of_nations]
+    1942  mechanised_infantry2
+          [from: rise_of_nations]
+    1943  amphibious_mechanized_infantry_2
+          [from: rise_of_nations]
+    1945  mechanised_infantry3
+          [from: rise_of_nations]
+    1945  mechanized_heavy_infantry3
+          [from: rise_of_nations]
+    1949  mechanised_infantry_a
+          [from: rise_of_nations]
+    1949  amphibious_mechanized_infantry_3
+          [from: rise_of_nations]
+    1949  mechanized_heavy_infantry4
+          [from: rise_of_nations]
+    1960  mechanised_infantry_b
+          [from: rise_of_nations]
+    1960  amphibious_mechanized_infantry_4
+          [from: rise_of_nations]
+    1960  mechanized_heavy_infantry5
+          [from: rise_of_nations]
+    1970  amphibious_mechanized_infantry_5
+          [from: rise_of_nations]
+    1975  mechanised_infantry_c
+          [from: rise_of_nations]
+    1975  mechanized_heavy_infantry6
+          [from: rise_of_nations]
+    1980  amphibious_mechanized_infantry_6
+          [from: rise_of_nations]
+    1984  mechanised_infantry_d
+          [from: rise_of_nations]
+    1984  mechanized_heavy_infantry7
+          [from: rise_of_nations]
+    1990  amphibious_mechanized_infantry_7
+          [from: rise_of_nations]
+    1995  mechanised_infantry_e
+          [from: rise_of_nations]
+    1995  mechanized_heavy_infantry8
+          [from: rise_of_nations]
+    2006  mechanised_infantry_f
+          [from: rise_of_nations]
+    2006  mechanized_heavy_infantry9
+          [from: rise_of_nations]
+    2016  mechanised_infantry_g
+          [from: rise_of_nations]
+    2016  mechanized_heavy_infantry10
+          [from: rise_of_nations]
+    2020  mechanised_infantry_h
+          [from: rise_of_nations]
+    2020  mechanized_heavy_infantry11
+          [from: rise_of_nations]
+    2030  mechanised_infantry_i
+          [from: rise_of_nations]
+    2030  mechanized_heavy_infantry12
+          [from: rise_of_nations]
+
+  [land / medium_tanks] — 37 techs
+    1939  basic_medium_tank
+          [from: rise_of_nations]
+    1939  basic_medium_assault_gun
+          [from: rise_of_nations]
+    1939  basic_medium_tank_chassis
+          [from: rise_of_nations]
+    1939  basic_medium_assault_gun_chassis
+          [from: rise_of_nations]
+    1941  improved_medium_tank
+          [from: rise_of_nations]
+    1941  improved_medium_assault_gun
+          [from: rise_of_nations]
+    1941  improved_medium_tank_chassis
+          [from: rise_of_nations]
+    1941  improved_medium_assault_gun_chassis
+          [from: rise_of_nations]
+    1943  advanced_medium_tank
+          [from: rise_of_nations]
+    1943  advanced_medium_assault_gun
+          [from: rise_of_nations]
+    1943  advanced_medium_assault_gun_chassis
+          [from: rise_of_nations]
+    1949  main_battle_tank_a
+          [from: rise_of_nations]
+    1949  main_battle_tank_chassis_a
+          [from: rise_of_nations]
+    1951  main_battle_tank_b
+          [from: rise_of_nations]
+    1951  main_battle_tank_chassis_b
+          [from: rise_of_nations]
+    1956  main_battle_tank_c
+          [from: rise_of_nations]
+    1956  main_battle_tank_chassis_c
+          [from: rise_of_nations]
+    1960  main_battle_tank_d
+          [from: rise_of_nations]
+    1960  main_battle_tank_chassis_d
+          [from: rise_of_nations]
+    1964  main_battle_tank_e
+          [from: rise_of_nations]
+    1964  main_battle_tank_chassis_e
+          [from: rise_of_nations]
+    1976  main_battle_tank_f
+          [from: rise_of_nations]
+    1976  main_battle_tank_chassis_f
+          [from: rise_of_nations]
+    1985  main_battle_tank_g
+          [from: rise_of_nations]
+    1985  main_battle_tank_chassis_g
+          [from: rise_of_nations]
+    1991  main_battle_tank_h
+          [from: rise_of_nations]
+    1991  main_battle_tank_chassis_h
+          [from: rise_of_nations]
+    2000  main_battle_tank_i
+          [from: rise_of_nations]
+    2000  main_battle_tank_chassis_i
+          [from: rise_of_nations]
+    2010  main_battle_tank_j
+          [from: rise_of_nations]
+    2010  main_battle_tank_chassis_j
+          [from: rise_of_nations]
+    2018  main_battle_tank_k
+          [from: rise_of_nations]
+    2018  main_battle_tank_chassis_k
+          [from: rise_of_nations]
+    2025  main_battle_tank_l
+          [from: rise_of_nations]
+    2025  main_battle_tank_chassis_l
+          [from: rise_of_nations]
+    2030  main_battle_tank_m
+          [from: rise_of_nations]
+    2030  main_battle_tank_chassis_m
+          [from: rise_of_nations]
+
+  [land / modern_tanks] — 2 techs
+    1945  main_battle_tank
+          [from: rise_of_nations]
+    1945  main_battle_tank_chassis
+          [from: rise_of_nations]
+
+  [land / motorised] — 18 techs
+    1900  horses
+          [from: rise_of_nations]
+    1900  ww1_motorised_infantry
+          [from: rise_of_nations]
+    1903  RON_Trained_Horses
+          [from: rise_of_nations]
+    1905  RON_Early_Motor_Vehicles
+          [from: rise_of_nations]
+    1906  RON_Rubber_Wheels
+          [from: rise_of_nations]
+    1908  RON_Improved_Motor_Engines
+          [from: rise_of_nations]
+    1909  RON_Laminated_Glass
+          [from: rise_of_nations]
+    1910  RON_Motorized
+          [from: rise_of_nations]
+    1914  early_motorised
+          [from: rise_of_nations]
+    1936  tech_trucks
+    1936  motorised_infantry
+          [from: rise_of_nations]
+    1949  motorised_infantry2
+          [from: rise_of_nations]
+    1960  motorised_infantry3
+          [from: rise_of_nations]
+    1970  motorised_infantry4
+          [from: rise_of_nations]
+    1980  motorised_infantry5
+          [from: rise_of_nations]
+    1990  motorised_infantry6
+          [from: rise_of_nations]
+    2000  motorised_infantry7
+          [from: rise_of_nations]
+    2010  motorised_infantry8
+          [from: rise_of_nations]
+
+  [land / support] — 213 techs
+    1890  tech_support
+          [from: rise_of_nations]
+    1890  armored_train_0
+          [from: rise_of_nations]
+    1900  sniper_1900
+          [from: rise_of_nations]
+    1900  flamethrower_1900
+          [from: rise_of_nations]
+    1900  tech_mortar
+          [from: rise_of_nations]
+    1900  WW1_tech_engineers
+          [from: rise_of_nations]
+    1900  WW1_tech_recon
+          [from: rise_of_nations]
+    1900  WW1_tech_military_police
+          [from: rise_of_nations]
+    1900  basic_train
+          [from: rise_of_nations]
+    1900  steam_train_1
+          [from: rise_of_nations]
+    1900  rail_infrastructure_0
+          [from: rise_of_nations]
+    1900  field_hospital_1900
+          [from: rise_of_nations]
+    1900  logistics_company_1900
+          [from: rise_of_nations]
+    1900  signal_company_1900
+          [from: rise_of_nations]
+    1904  sniper_1904
+          [from: rise_of_nations]
+    1904  flamethrower_1904
+          [from: rise_of_nations]
+    1904  mortar_1904
+          [from: rise_of_nations]
+    1904  field_hospital_1904
+          [from: rise_of_nations]
+    1904  logistics_company_1904
+          [from: rise_of_nations]
+    1904  signal_company_1904
+          [from: rise_of_nations]
+    1904  engineers_1904
+          [from: rise_of_nations]
+    1904  recon_1904
+          [from: rise_of_nations]
+    1904  military_police_1904
+          [from: rise_of_nations]
+    1908  sniper_1908
+          [from: rise_of_nations]
+    1908  flamethrower_1908
+          [from: rise_of_nations]
+    1908  mortar_1908
+          [from: rise_of_nations]
+    1908  field_hospital_1908
+          [from: rise_of_nations]
+    1908  logistics_company_1908
+          [from: rise_of_nations]
+    1908  signal_company_1908
+          [from: rise_of_nations]
+    1908  engineers_1908
+          [from: rise_of_nations]
+    1908  recon_1908
+          [from: rise_of_nations]
+    1908  military_police_1908
+          [from: rise_of_nations]
+    1910  sniper_1910
+          [from: rise_of_nations]
+    1910  flamethrower_1910
+          [from: rise_of_nations]
+    1910  tech_mortar2
+          [from: rise_of_nations]
+    1910  field_hospital_1910
+          [from: rise_of_nations]
+    1910  logistics_company_1910
+          [from: rise_of_nations]
+    1910  signal_company_1910
+          [from: rise_of_nations]
+    1910  WW1_tech_engineers2
+          [from: rise_of_nations]
+    1910  WW1_tech_recon2
+          [from: rise_of_nations]
+    1910  WW1_tech_military_police2
+          [from: rise_of_nations]
+    1910  steam_train_2
+          [from: rise_of_nations]
+    1910  armored_train_1
+          [from: rise_of_nations]
+    1910  rail_infrastructure_1
+          [from: rise_of_nations]
+    1914  sniper_1914
+          [from: rise_of_nations]
+    1914  flamethrower_1914
+          [from: rise_of_nations]
+    1914  tech_mortar3
+          [from: rise_of_nations]
+    1914  field_hospital_1914
+          [from: rise_of_nations]
+    1914  logistics_company_1914
+          [from: rise_of_nations]
+    1914  signal_company_1914
+          [from: rise_of_nations]
+    1914  WW1_tech_engineers3
+          [from: rise_of_nations]
+    1914  WW1_tech_recon3
+          [from: rise_of_nations]
+    1914  WW1_tech_military_police3
+          [from: rise_of_nations]
+    1915  rail_infrastructure_2
+          [from: rise_of_nations]
+    1918  sniper_1918
+          [from: rise_of_nations]
+    1918  flamethrower_1918
+          [from: rise_of_nations]
+    1918  tech_mortar4
+          [from: rise_of_nations]
+    1918  field_hospital_1918
+          [from: rise_of_nations]
+    1918  logistics_company_1918
+          [from: rise_of_nations]
+    1918  signal_company_1918
+          [from: rise_of_nations]
+    1918  WW1_tech_engineers4
+          [from: rise_of_nations]
+    1918  WW1_tech_recon4
+          [from: rise_of_nations]
+    1918  WW1_tech_military_police4
+          [from: rise_of_nations]
+    1920  diesel_train_1
+          [from: rise_of_nations]
+    1920  armored_train_2
+          [from: rise_of_nations]
+    1920  rail_infrastructure_3
+          [from: rise_of_nations]
+    1930  diesel_train_2
+          [from: rise_of_nations]
+    1930  armored_train_3
+          [from: rise_of_nations]
+    1930  rail_infrastructure_4
+          [from: rise_of_nations]
+    1930  rail_yard_0
+          [from: rise_of_nations]
+    1936  armored_train
+    1936  tech_recon_focus_bonus
+    1936  tech_sniper
+          [from: rise_of_nations]
+    1936  tech_flamethrower
+          [from: rise_of_nations]
+    1936  tech_mortar_a
+          [from: rise_of_nations]
+    1936  tech_engineers
+          [from: rise_of_nations]
+    1936  tech_recon
+          [from: rise_of_nations]
+    1936  tech_military_police
+          [from: rise_of_nations]
+    1936  tech_maintenance_company
+          [from: rise_of_nations]
+    1936  tech_field_hospital
+          [from: rise_of_nations]
+    1936  tech_logistics_company
+          [from: rise_of_nations]
+    1936  tech_signal_company
+          [from: rise_of_nations]
+    1938  sp_armored_engineer_tech
+    1938  sp_armored_maintenance_tech
+    1938  sp_armored_signal_tech
+    1938  sp_helicopter_transport_pods_tech
+    1938  sp_helicopter_artillery_observers_tech
+    1938  sp_helicopter_med_evac_tech
+    1938  sp_armored_motorized_military_police_tech
+    1939  wartime_train
+    1939  tech_sniper2
+          [from: rise_of_nations]
+    1939  tech_flamethrower2
+          [from: rise_of_nations]
+    1939  tech_mortar_b
+          [from: rise_of_nations]
+    1939  tech_engineers2
+          [from: rise_of_nations]
+    1939  tech_recon2
+          [from: rise_of_nations]
+    1939  tech_military_police2
+          [from: rise_of_nations]
+    1939  tech_maintenance_company2
+          [from: rise_of_nations]
+    1939  tech_field_hospital2
+          [from: rise_of_nations]
+    1939  tech_logistics_company2
+          [from: rise_of_nations]
+    1939  tech_signal_company2
+          [from: rise_of_nations]
+    1940  austerity_train_1
+          [from: rise_of_nations]
+    1940  armored_train_4
+          [from: rise_of_nations]
+    1940  rail_infrastructure_5
+          [from: rise_of_nations]
+    1940  rail_yard_1
+          [from: rise_of_nations]
+    1942  tech_sniper3
+          [from: rise_of_nations]
+    1942  tech_flamethrower3
+          [from: rise_of_nations]
+    1942  tech_mortar_c
+          [from: rise_of_nations]
+    1942  tech_engineers3
+          [from: rise_of_nations]
+    1942  tech_recon3
+          [from: rise_of_nations]
+    1942  tech_military_police3
+          [from: rise_of_nations]
+    1942  tech_maintenance_company3
+          [from: rise_of_nations]
+    1942  tech_field_hospital3
+          [from: rise_of_nations]
+    1942  tech_logistics_company3
+          [from: rise_of_nations]
+    1942  tech_signal_company3
+          [from: rise_of_nations]
+    1942  austerity_train_2
+          [from: rise_of_nations]
+    1944  night_vision
+          [from: rise_of_nations]
+    1945  tech_sniper4
+          [from: rise_of_nations]
+    1945  tech_flamethrower4
+          [from: rise_of_nations]
+    1945  tech_mortar_d
+          [from: rise_of_nations]
+    1945  tech_engineers4
+          [from: rise_of_nations]
+    1945  tech_recon4
+          [from: rise_of_nations]
+    1945  tech_military_police4
+          [from: rise_of_nations]
+    1945  tech_maintenance_company4
+          [from: rise_of_nations]
+    1945  tech_field_hospital4
+          [from: rise_of_nations]
+    1945  tech_logistics_company4
+          [from: rise_of_nations]
+    1945  tech_signal_company4
+          [from: rise_of_nations]
+    1949  night_vision2
+          [from: rise_of_nations]
+    1950  diesel_train_3
+          [from: rise_of_nations]
+    1950  armored_train_5
+          [from: rise_of_nations]
+    1950  rail_electrification_0
+          [from: rise_of_nations]
+    1950  rail_yard_2
+          [from: rise_of_nations]
+    1956  night_vision_a
+          [from: rise_of_nations]
+    1960  tech_sniper_a
+          [from: rise_of_nations]
+    1960  tech_flamethrower_a
+          [from: rise_of_nations]
+    1960  tech_mortar_e
+          [from: rise_of_nations]
+    1960  tech_signal_company_a
+          [from: rise_of_nations]
+    1960  tech_engineers_a
+          [from: rise_of_nations]
+    1960  tech_recon_a
+          [from: rise_of_nations]
+    1960  tech_military_police_a
+          [from: rise_of_nations]
+    1960  tech_maintenance_company_a
+          [from: rise_of_nations]
+    1960  tech_field_hospital_a
+          [from: rise_of_nations]
+    1960  tech_logistics_company_a
+          [from: rise_of_nations]
+    1960  electric_train_1
+          [from: rise_of_nations]
+    1960  rail_electrification_1
+          [from: rise_of_nations]
+    1960  rail_yard_3
+          [from: rise_of_nations]
+    1970  MD_night_vision
+          [from: rise_of_nations]
+    1975  tech_sniper_b
+          [from: rise_of_nations]
+    1975  tech_flamethrower_b
+          [from: rise_of_nations]
+    1975  tech_mortar_f
+          [from: rise_of_nations]
+    1975  tech_signal_company_b
+          [from: rise_of_nations]
+    1975  tech_engineers_b
+          [from: rise_of_nations]
+    1975  tech_recon_b
+          [from: rise_of_nations]
+    1975  tech_military_police_b
+          [from: rise_of_nations]
+    1975  tech_maintenance_company_b
+          [from: rise_of_nations]
+    1975  tech_field_hospital_b
+          [from: rise_of_nations]
+    1975  tech_logistics_company_b
+          [from: rise_of_nations]
+    1980  electric_train_2
+          [from: rise_of_nations]
+    1980  rail_electrification_2
+          [from: rise_of_nations]
+    1980  rail_yard_4
+          [from: rise_of_nations]
+    1990  MD_night_vision2
+          [from: rise_of_nations]
+    1990  tech_sniper_c
+          [from: rise_of_nations]
+    1990  tech_flamethrower_c
+          [from: rise_of_nations]
+    1990  tech_mortar_g
+          [from: rise_of_nations]
+    1990  tech_signal_company_c
+          [from: rise_of_nations]
+    1990  tech_engineers_c
+          [from: rise_of_nations]
+    1990  tech_recon_c
+          [from: rise_of_nations]
+    1990  tech_military_police_c
+          [from: rise_of_nations]
+    1990  tech_maintenance_company_c
+          [from: rise_of_nations]
+    1990  tech_field_hospital_c
+          [from: rise_of_nations]
+    1990  tech_logistics_company_c
+          [from: rise_of_nations]
+    2000  MD_night_vision3
+          [from: rise_of_nations]
+    2000  electric_train_3
+          [from: rise_of_nations]
+    2000  rail_electrification_3
+          [from: rise_of_nations]
+    2000  rail_yard_5
+          [from: rise_of_nations]
+    2003  tech_sniper_d
+          [from: rise_of_nations]
+    2003  tech_flamethrower_d
+          [from: rise_of_nations]
+    2003  tech_mortar_h
+          [from: rise_of_nations]
+    2003  tech_signal_company_d
+          [from: rise_of_nations]
+    2003  tech_engineers_d
+          [from: rise_of_nations]
+    2003  tech_recon_d
+          [from: rise_of_nations]
+    2003  tech_military_police_d
+          [from: rise_of_nations]
+    2003  tech_maintenance_company_d
+          [from: rise_of_nations]
+    2003  tech_field_hospital_d
+          [from: rise_of_nations]
+    2003  tech_logistics_company_d
+          [from: rise_of_nations]
+    2008  MD_night_vision4
+          [from: rise_of_nations]
+    2008  tech_sniper_e
+          [from: rise_of_nations]
+    2008  tech_flamethrower_e
+          [from: rise_of_nations]
+    2008  tech_mortar_j
+          [from: rise_of_nations]
+    2008  tech_signal_company_e
+          [from: rise_of_nations]
+    2008  tech_engineers_e
+          [from: rise_of_nations]
+    2008  tech_recon_e
+          [from: rise_of_nations]
+    2008  tech_military_police_e
+          [from: rise_of_nations]
+    2008  tech_maintenance_company_e
+          [from: rise_of_nations]
+    2008  tech_field_hospital_e
+          [from: rise_of_nations]
+    2008  tech_logistics_company_e
+          [from: rise_of_nations]
+    2014  tech_sniper_f
+          [from: rise_of_nations]
+    2014  tech_flamethrower_f
+          [from: rise_of_nations]
+    2014  tech_mortar_k
+          [from: rise_of_nations]
+    2014  tech_signal_company_f
+          [from: rise_of_nations]
+    2014  tech_engineers_f
+          [from: rise_of_nations]
+    2014  tech_recon_f
+          [from: rise_of_nations]
+    2014  tech_military_police_f
+          [from: rise_of_nations]
+    2014  tech_maintenance_company_f
+          [from: rise_of_nations]
+    2014  tech_field_hospital_f
+          [from: rise_of_nations]
+    2014  tech_logistics_company_f
+          [from: rise_of_nations]
+    2018  MD_night_vision5
+          [from: rise_of_nations]
+    2020  electric_train_4
+          [from: rise_of_nations]
+    2020  rail_electrification_4
+          [from: rise_of_nations]
+    2020  rail_yard_6
+          [from: rise_of_nations]
+    2025  MD_night_vision6
+          [from: rise_of_nations]
+    2040  maglev_train_1
+          [from: rise_of_nations]
+    2040  rail_electrification_5
+          [from: rise_of_nations]
+    2040  rail_yard_7
+          [from: rise_of_nations]
+
+  [land / tanks_generic] — 177 techs
+    1899  dnc_armoured_car
+          [from: rise_of_nations]
+    1899  NSB_dnc_armoured_car
+          [from: rise_of_nations]
+    1900  early_armored_car_concepts
+          [from: rise_of_nations]
+    1900  WW1_tech_maintenance_company
+          [from: rise_of_nations]
+    1904  maintenance_company_1904
+          [from: rise_of_nations]
+    1905  RON_Early_Armored_Car
+          [from: rise_of_nations]
+    1905  RON_NSB_Early_Armored_Car
+          [from: rise_of_nations]
+    1906  Opel_Darracq
+          [from: rise_of_nations]
+    1906  Ehrhardt_BAK_1906
+          [from: rise_of_nations]
+    1908  maintenance_company_1908
+          [from: rise_of_nations]
+    1910  ww1_armoured_car
+          [from: rise_of_nations]
+    1910  ww1_NSB_armoured_car
+          [from: rise_of_nations]
+    1910  WW1_tech_maintenance_company2
+          [from: rise_of_nations]
+    1914  armored_car1
+    1914  ww1_armoured_car2
+          [from: rise_of_nations]
+    1914  Leichte_M1914
+          [from: rise_of_nations]
+    1914  ww1_NSB_armoured_car2
+          [from: rise_of_nations]
+    1914  WW1_tech_maintenance_company3
+          [from: rise_of_nations]
+    1915  Bussing_A5P
+          [from: rise_of_nations]
+    1915  Ehrhardt_EV4
+          [from: rise_of_nations]
+    1915  Daimler_15
+          [from: rise_of_nations]
+    1916  engine_tech_1
+          [from: rise_of_nations]
+    1918  gw_armoured_car
+          [from: rise_of_nations]
+    1918  engine_tech_2
+          [from: rise_of_nations]
+    1918  NSB_gw_armoured_car
+          [from: rise_of_nations]
+    1918  WW1_tech_maintenance_company4
+          [from: rise_of_nations]
+    1920  DZVR_1919_21
+          [from: rise_of_nations]
+    1930  engine_tech_3
+          [from: rise_of_nations]
+    1934  basic_light_td
+          [from: rise_of_nations]
+    1934  basic_light_art
+          [from: rise_of_nations]
+    1934  basic_light_spaa
+          [from: rise_of_nations]
+    1934  basic_heavy_td
+          [from: rise_of_nations]
+    1934  basic_heavy_art
+          [from: rise_of_nations]
+    1934  basic_heavy_spaa
+          [from: rise_of_nations]
+    1934  early_armoured_car
+          [from: rise_of_nations]
+    1934  NSB_early_armoured_car
+          [from: rise_of_nations]
+    1936  JAP_lighter_tanks
+    1936  GER_heavy_armored_car
+    1936  armor_tech_1
+    1936  NOR_rikstanken_tech
+    1936  improved_light_td
+          [from: rise_of_nations]
+    1936  improved_light_art
+          [from: rise_of_nations]
+    1936  improved_light_spaa
+          [from: rise_of_nations]
+    1936  basic_armoured_car
+          [from: rise_of_nations]
+    1936  engine_tech_4
+          [from: rise_of_nations]
+    1936  NSB_basic_armoured_car
+          [from: rise_of_nations]
+    1936  zombietech
+          [from: rise_of_nations]
+    1938  amphibious_tank_chassis
+    1938  armor_tech_2
+    1939  basic_medium_td
+          [from: rise_of_nations]
+    1939  basic_medium_art
+          [from: rise_of_nations]
+    1939  basic_medium_spaa
+          [from: rise_of_nations]
+    1939  basic_armoured_car2
+          [from: rise_of_nations]
+    1939  NSB_basic_armoured_car2
+          [from: rise_of_nations]
+    1940  armored_car2
+    1940  amphibious_tank
+          [from: rise_of_nations]
+    1941  amphibious_drive
+    1941  armor_tech_3
+    1941  sp_armored_advanced_flamethrower_tech
+    1941  advanced_light_td
+          [from: rise_of_nations]
+    1941  advanced_light_art
+          [from: rise_of_nations]
+    1941  advanced_light_spaa
+          [from: rise_of_nations]
+    1941  improved_medium_td
+          [from: rise_of_nations]
+    1941  improved_medium_art
+          [from: rise_of_nations]
+    1941  improved_medium_spaa
+          [from: rise_of_nations]
+    1941  improved_heavy_td
+          [from: rise_of_nations]
+    1941  improved_heavy_art
+          [from: rise_of_nations]
+    1941  improved_heavy_spaa
+          [from: rise_of_nations]
+    1941  improved_armoured_car
+          [from: rise_of_nations]
+    1941  NSB_improved_armoured_car
+          [from: rise_of_nations]
+    1942  armored_car3
+    1942  armored_car_at_upgrade
+    1942  SWE_lynx_armored_car
+    1942  amphibious_tank_2
+          [from: rise_of_nations]
+    1943  advanced_medium_td
+          [from: rise_of_nations]
+    1943  advanced_medium_art
+          [from: rise_of_nations]
+    1943  advanced_medium_spaa
+          [from: rise_of_nations]
+    1943  advanced_heavy_td
+          [from: rise_of_nations]
+    1943  advanced_heavy_art
+          [from: rise_of_nations]
+    1943  advanced_heavy_spaa
+          [from: rise_of_nations]
+    1943  super_heavy_td
+          [from: rise_of_nations]
+    1943  super_heavy_art
+          [from: rise_of_nations]
+    1943  super_heavy_spaa
+          [from: rise_of_nations]
+    1943  advanced_armoured_car
+          [from: rise_of_nations]
+    1943  NSB_advanced_armoured_car
+          [from: rise_of_nations]
+    1944  armor_tech_4
+    1944  engine_tech_5
+          [from: rise_of_nations]
+    1945  modern_td
+          [from: rise_of_nations]
+    1945  modern_art
+          [from: rise_of_nations]
+    1945  modern_spaa
+          [from: rise_of_nations]
+    1945  super_heavy_tank_td_a
+          [from: rise_of_nations]
+    1945  super_heavy_tank_art_a
+          [from: rise_of_nations]
+    1945  super_heavy_tank_spaa_a
+          [from: rise_of_nations]
+    1945  advanced_light_tank_td_a
+          [from: rise_of_nations]
+    1945  advanced_light_tank_art_a
+          [from: rise_of_nations]
+    1945  advanced_light_tank_spaa_a
+          [from: rise_of_nations]
+    1945  advanced_heavy_td_x
+          [from: rise_of_nations]
+    1945  advanced_heavy_art_x
+          [from: rise_of_nations]
+    1945  advanced_heavy_spaa_x
+          [from: rise_of_nations]
+    1945  advanced_armoured_car2
+          [from: rise_of_nations]
+    1945  NSB_advanced_armoured_car2
+          [from: rise_of_nations]
+    1949  amphibious_tank_3
+          [from: rise_of_nations]
+    1949  main_battle_tank_td_a
+          [from: rise_of_nations]
+    1949  main_battle_tank_art_a
+          [from: rise_of_nations]
+    1949  main_battle_tank_spaa_a
+          [from: rise_of_nations]
+    1949  engine_tech_6
+          [from: rise_of_nations]
+    1950  cw_sp_artillery1
+          [from: rise_of_nations]
+    1951  main_battle_tank_td_b
+          [from: rise_of_nations]
+    1951  main_battle_tank_art_b
+          [from: rise_of_nations]
+    1951  main_battle_tank_spaa_b
+          [from: rise_of_nations]
+    1955  cw_sp_artillery_upgrade1
+          [from: rise_of_nations]
+    1956  main_battle_tank_td_c
+          [from: rise_of_nations]
+    1956  main_battle_tank_art_c
+          [from: rise_of_nations]
+    1956  main_battle_tank_spaa_c
+          [from: rise_of_nations]
+    1960  main_battle_tank_td_d
+          [from: rise_of_nations]
+    1960  main_battle_tank_art_d
+          [from: rise_of_nations]
+    1960  main_battle_tank_spaa_d
+          [from: rise_of_nations]
+    1960  advanced_armoured_car3
+          [from: rise_of_nations]
+    1960  cw_sp_artillery2
+          [from: rise_of_nations]
+    1960  NSB_advanced_armoured_car3
+          [from: rise_of_nations]
+    1963  amphibious_tank_4
+          [from: rise_of_nations]
+    1964  main_battle_tank_td_e
+          [from: rise_of_nations]
+    1964  main_battle_tank_art_e
+          [from: rise_of_nations]
+    1964  main_battle_tank_spaa_e
+          [from: rise_of_nations]
+    1965  cw_sp_artillery_upgrade2
+          [from: rise_of_nations]
+    1970  cw_sp_artillery3
+          [from: rise_of_nations]
+    1970  engine_tech_7
+          [from: rise_of_nations]
+    1975  cw_sp_artillery_upgrade3
+          [from: rise_of_nations]
+    1976  main_battle_tank_td_f
+          [from: rise_of_nations]
+    1976  main_battle_tank_art_f
+          [from: rise_of_nations]
+    1976  main_battle_tank_spaa_f
+          [from: rise_of_nations]
+    1976  advanced_armoured_car4
+          [from: rise_of_nations]
+    1976  NSB_advanced_armoured_car4
+          [from: rise_of_nations]
+    1980  sp_artillery1
+          [from: rise_of_nations]
+    1985  main_battle_tank_td_g
+          [from: rise_of_nations]
+    1985  main_battle_tank_art_g
+          [from: rise_of_nations]
+    1985  main_battle_tank_spaa_g
+          [from: rise_of_nations]
+    1985  advanced_armoured_car5
+          [from: rise_of_nations]
+    1985  NSB_advanced_armoured_car5
+          [from: rise_of_nations]
+    1990  engine_tech_8
+          [from: rise_of_nations]
+    1991  main_battle_tank_td_h
+          [from: rise_of_nations]
+    1991  main_battle_tank_art_h
+          [from: rise_of_nations]
+    1991  main_battle_tank_spaa_h
+          [from: rise_of_nations]
+    1991  advanced_armoured_car6
+          [from: rise_of_nations]
+    1991  NSB_advanced_armoured_car6
+          [from: rise_of_nations]
+    1997  amphibious_tank_5
+          [from: rise_of_nations]
+    2000  main_battle_tank_td_i
+          [from: rise_of_nations]
+    2000  main_battle_tank_art_i
+          [from: rise_of_nations]
+    2000  main_battle_tank_spaa_i
+          [from: rise_of_nations]
+    2000  advanced_armoured_car7
+          [from: rise_of_nations]
+    2000  sp_artillery2
+          [from: rise_of_nations]
+    2000  NSB_advanced_armoured_car7
+          [from: rise_of_nations]
+    2006  amphibious_tank_6
+          [from: rise_of_nations]
+    2006  sp_artillery3
+          [from: rise_of_nations]
+    2010  main_battle_tank_td_j
+          [from: rise_of_nations]
+    2010  main_battle_tank_art_j
+          [from: rise_of_nations]
+    2010  main_battle_tank_spaa_j
+          [from: rise_of_nations]
+    2010  engine_tech_9
+          [from: rise_of_nations]
+    2012  sp_artillery4
+          [from: rise_of_nations]
+    2015  sp_artillery5
+          [from: rise_of_nations]
+    2018  main_battle_tank_td_k
+          [from: rise_of_nations]
+    2018  main_battle_tank_art_k
+          [from: rise_of_nations]
+    2018  main_battle_tank_spaa_k
+          [from: rise_of_nations]
+    2018  advanced_armoured_car8
+          [from: rise_of_nations]
+    2018  NSB_advanced_armoured_car8
+          [from: rise_of_nations]
+    2025  main_battle_tank_td_l
+          [from: rise_of_nations]
+    2025  main_battle_tank_art_l
+          [from: rise_of_nations]
+    2025  main_battle_tank_spaa_l
+          [from: rise_of_nations]
+    2025  advanced_armoured_car9
+          [from: rise_of_nations]
+    2025  engine_tech_10
+          [from: rise_of_nations]
+    2025  NSB_advanced_armoured_car9
+          [from: rise_of_nations]
+    2030  main_battle_tank_td_m
+          [from: rise_of_nations]
+    2030  main_battle_tank_art_m
+          [from: rise_of_nations]
+    2030  main_battle_tank_spaa_m
+          [from: rise_of_nations]
+    2030  advanced_armoured_car10
+          [from: rise_of_nations]
+    2030  engine_tech_11
+          [from: rise_of_nations]
+    2030  NSB_advanced_armoured_car10
+          [from: rise_of_nations]
+
+  [naval / battleships] — 34 techs
+    1890  early_ship_hull_dreadnought
+          [from: rise_of_nations]
+    1890  ww1_battleship0
+          [from: rise_of_nations]
+    1900  ww1_battleship1
+          [from: rise_of_nations]
+    1906  ship_hull_dreadnought_1
+          [from: rise_of_nations]
+    1906  ww1_battlecruiser0
+          [from: rise_of_nations]
+    1906  ww1_battleship2
+          [from: rise_of_nations]
+    1910  ship_hull_dreadnought_2
+          [from: rise_of_nations]
+    1910  ww1_battlecruiser1
+          [from: rise_of_nations]
+    1910  ww1_battleship3
+          [from: rise_of_nations]
+    1914  ship_hull_dreadnought_3
+          [from: rise_of_nations]
+    1914  ww1_battlecruiser2
+          [from: rise_of_nations]
+    1914  ww1_battleship4
+          [from: rise_of_nations]
+    1918  ww1_battlecruiser3
+          [from: rise_of_nations]
+    1918  ww1_battleship5
+          [from: rise_of_nations]
+    1922  early_ship_hull_heavy
+          [from: rise_of_nations]
+    1922  early_battlecruiser
+          [from: rise_of_nations]
+    1922  early_battleship
+          [from: rise_of_nations]
+    1936  basic_ship_hull_heavy
+          [from: rise_of_nations]
+    1936  ship_hull_super_heavy
+          [from: rise_of_nations]
+    1936  basic_heavy_armor_scheme (XP)
+          [from: rise_of_nations]
+    1936  basic_battleship
+          [from: rise_of_nations]
+    1936  heavy_battleship
+          [from: rise_of_nations]
+    1940  improved_ship_hull_heavy
+          [from: rise_of_nations]
+    1940  improved_heavy_armor_scheme (XP)
+          [from: rise_of_nations]
+    1940  basic_battlecruiser
+          [from: rise_of_nations]
+    1940  improved_battleship
+          [from: rise_of_nations]
+    1944  advanced_ship_hull_heavy
+          [from: rise_of_nations]
+    1944  cw_battle_cruiser0
+          [from: rise_of_nations]
+    1944  advanced_battleship
+          [from: rise_of_nations]
+    1944  heavy_battleship2
+          [from: rise_of_nations]
+    1948  cw_battle_cruiser1
+          [from: rise_of_nations]
+    1948  cw_battleship0
+          [from: rise_of_nations]
+    1952  cw_battleship1
+          [from: rise_of_nations]
+    1956  cw_battleship2
+          [from: rise_of_nations]
+
+  [naval / carriers] — 26 techs
+    1914  seaplane_carrier
+          [from: rise_of_nations]
+    1918  early_ship_hull_carrier
+          [from: rise_of_nations]
+    1918  ww1_carrier
+          [from: rise_of_nations]
+    1922  seaplane_tender
+          [from: rise_of_nations]
+    1922  early_carrier
+          [from: rise_of_nations]
+    1936  basic_ship_hull_carrier
+          [from: rise_of_nations]
+    1936  basic_carrier
+          [from: rise_of_nations]
+    1940  improved_ship_hull_carrier
+          [from: rise_of_nations]
+    1940  improved_carrier
+          [from: rise_of_nations]
+    1942  sp_refined_pykrete
+    1944  sp_ice_composite_runawayas
+    1944  advanced_ship_hull_carrier
+          [from: rise_of_nations]
+    1944  advanced_carrier
+          [from: rise_of_nations]
+    1948  cw_carrier0
+          [from: rise_of_nations]
+    1952  cw_carrier1
+          [from: rise_of_nations]
+    1956  cw_carrier2
+          [from: rise_of_nations]
+    1960  mtg_cw_landing_craft
+          [from: rise_of_nations]
+    1960  md_carrier1
+          [from: rise_of_nations]
+    1965  cw_landing_craft
+          [from: rise_of_nations]
+    1980  mtg_amphibious_assault_ship
+          [from: rise_of_nations]
+    1980  md_carrier2
+          [from: rise_of_nations]
+    1985  amphibious_assault_ship
+          [from: rise_of_nations]
+    2004  md_carrier3
+          [from: rise_of_nations]
+    2012  md_carrier4
+          [from: rise_of_nations]
+    2018  md_carrier5
+          [from: rise_of_nations]
+    2030  md_carrier6
+          [from: rise_of_nations]
+
+  [naval / destroyers] — 36 techs
+    1890  ww1_destroyer0
+          [from: rise_of_nations]
+    1900  mtg_ww1_destroyer1
+          [from: rise_of_nations]
+    1900  ww1_destroyer1
+          [from: rise_of_nations]
+    1906  ww1_destroyer2
+          [from: rise_of_nations]
+    1910  mtg_ww1_destroyer2
+          [from: rise_of_nations]
+    1910  ww1_destroyer3
+          [from: rise_of_nations]
+    1910  smoke_generator_early
+          [from: rise_of_nations]
+    1914  mtg_ww1_destroyer3
+          [from: rise_of_nations]
+    1914  ww1_destroyer4
+          [from: rise_of_nations]
+    1918  ww1_destroyer5
+          [from: rise_of_nations]
+    1922  early_ship_hull_light
+          [from: rise_of_nations]
+    1922  basic_depth_charges (XP)
+          [from: rise_of_nations]
+    1922  sonar
+          [from: rise_of_nations]
+    1922  early_destroyer
+          [from: rise_of_nations]
+    1922  smoke_generator
+          [from: rise_of_nations]
+    1936  basic_ship_hull_light
+          [from: rise_of_nations]
+    1936  improved_depth_charges (XP)
+          [from: rise_of_nations]
+    1936  improved_sonar
+          [from: rise_of_nations]
+    1936  basic_destroyer
+          [from: rise_of_nations]
+    1939  advanced_sonar
+    1940  improved_ship_hull_light
+          [from: rise_of_nations]
+    1940  advanced_depth_charges (XP)
+          [from: rise_of_nations]
+    1940  improved_destroyer
+          [from: rise_of_nations]
+    1943  modern_sonar
+    1944  advanced_ship_hull_light
+          [from: rise_of_nations]
+    1944  modern_depth_charges (XP)
+          [from: rise_of_nations]
+    1944  advanced_destroyer
+          [from: rise_of_nations]
+    1948  cw_destroyer0
+          [from: rise_of_nations]
+    1952  cw_destroyer1
+          [from: rise_of_nations]
+    1956  cw_destroyer2
+          [from: rise_of_nations]
+    1960  md_destroyer1
+          [from: rise_of_nations]
+    1980  md_destroyer2
+          [from: rise_of_nations]
+    2000  md_destroyer3
+          [from: rise_of_nations]
+    2008  md_destroyer4
+          [from: rise_of_nations]
+    2020  md_destroyer5
+          [from: rise_of_nations]
+    2030  md_destroyer6
+          [from: rise_of_nations]
+
+  [naval / heavy_cruisers] — 15 techs
+    1890  ww1_heavy_cruiser0
+          [from: rise_of_nations]
+    1900  ww1_heavy_cruiser1
+          [from: rise_of_nations]
+    1922  early_heavy_cruiser
+          [from: rise_of_nations]
+    1936  basic_heavy_cruiser
+          [from: rise_of_nations]
+    1940  improved_heavy_cruiser
+          [from: rise_of_nations]
+    1944  advanced_heavy_cruiser
+          [from: rise_of_nations]
+    1948  cw_heavy_cruiser0
+          [from: rise_of_nations]
+    1952  cw_heavy_cruiser1
+          [from: rise_of_nations]
+    1956  cw_heavy_cruiser2
+          [from: rise_of_nations]
+    1960  missile_cruiser1
+          [from: rise_of_nations]
+    2000  missile_cruiser2
+          [from: rise_of_nations]
+    2006  missile_cruiser3
+          [from: rise_of_nations]
+    2010  missile_cruiser4
+          [from: rise_of_nations]
+    2020  missile_cruiser5
+          [from: rise_of_nations]
+    2030  missile_cruiser6
+          [from: rise_of_nations]
+
+  [naval / light_cruisers] — 29 techs
+    1890  ww1_light_cruiser0
+          [from: rise_of_nations]
+    1900  ww1_light_cruiser1
+          [from: rise_of_nations]
+    1906  battlecruiser_hull_1
+          [from: rise_of_nations]
+    1906  ww1_light_cruiser2
+          [from: rise_of_nations]
+    1906  ww1_coastal_submarine1
+          [from: rise_of_nations]
+    1910  battlecruiser_hull_2
+          [from: rise_of_nations]
+    1910  ww1_light_cruiser3
+          [from: rise_of_nations]
+    1910  ww1_coastal_submarine2
+          [from: rise_of_nations]
+    1914  ww1_light_cruiser4
+          [from: rise_of_nations]
+    1914  ww1_coastal_submarine3
+          [from: rise_of_nations]
+    1914  ww1_cruiser_submarine1
+          [from: rise_of_nations]
+    1918  ww1_light_cruiser5
+          [from: rise_of_nations]
+    1918  ww1_coastal_submarine4
+          [from: rise_of_nations]
+    1918  ww1_cruiser_submarine2
+          [from: rise_of_nations]
+    1922  early_ship_hull_cruiser
+          [from: rise_of_nations]
+    1922  early_light_cruiser
+          [from: rise_of_nations]
+    1936  basic_ship_hull_cruiser
+          [from: rise_of_nations]
+    1936  improved_airplane_launcher
+          [from: rise_of_nations]
+    1936  basic_cruiser_armor_scheme (XP)
+          [from: rise_of_nations]
+    1936  basic_light_cruiser
+          [from: rise_of_nations]
+    1940  improved_ship_hull_cruiser
+          [from: rise_of_nations]
+    1940  improved_cruiser_armor_scheme (XP)
+          [from: rise_of_nations]
+    1940  improved_light_cruiser
+          [from: rise_of_nations]
+    1944  advanced_ship_hull_cruiser
+          [from: rise_of_nations]
+    1944  advanced_cruiser_armor_scheme (XP)
+          [from: rise_of_nations]
+    1944  advanced_light_cruiser
+          [from: rise_of_nations]
+    1948  cw_light_cruiser0
+          [from: rise_of_nations]
+    1952  cw_light_cruiser1
+          [from: rise_of_nations]
+    1956  cw_light_cruiser2
+          [from: rise_of_nations]
+
+  [naval / naval_support] — 92 techs
+    1890  early_torpedo
+          [from: rise_of_nations]
+    1890  ww1_moduleMTG_mines
+          [from: rise_of_nations]
+    1900  mtg_transport
+          [from: rise_of_nations]
+    1900  transport
+          [from: rise_of_nations]
+    1918  basic_torpedo
+          [from: rise_of_nations]
+    1922  basic_battery
+          [from: rise_of_nations]
+    1922  basic_secondary_battery
+          [from: rise_of_nations]
+    1922  basic_naval_mines
+          [from: rise_of_nations]
+    1922  submarine_mine_laying
+          [from: rise_of_nations]
+    1922  basic_battery
+          [from: rise_of_nations]
+    1922  basic_torpedo
+          [from: rise_of_nations]
+    1922  basic_naval_mines
+          [from: rise_of_nations]
+    1922  submarine_mine_laying
+          [from: rise_of_nations]
+    1922  mtg_transport
+          [from: rise_of_nations]
+    1936  magnetic_detonator (XP)
+          [from: rise_of_nations]
+    1936  improved_ship_torpedo_launcher
+          [from: rise_of_nations]
+    1936  basic_light_battery
+          [from: rise_of_nations]
+    1936  basic_light_shell (XP)
+          [from: rise_of_nations]
+    1936  basic_medium_battery
+          [from: rise_of_nations]
+    1936  basic_heavy_battery
+          [from: rise_of_nations]
+    1936  improved_secondary_battery
+          [from: rise_of_nations]
+    1936  damage_control_1 (XP)
+          [from: rise_of_nations]
+    1936  damage_control_2 (XP)
+          [from: rise_of_nations]
+    1936  damage_control_3 (XP)
+          [from: rise_of_nations]
+    1936  fire_control_methods_1 (XP)
+          [from: rise_of_nations]
+    1936  fire_control_methods_2 (XP)
+          [from: rise_of_nations]
+    1936  fire_control_methods_3 (XP)
+          [from: rise_of_nations]
+    1936  improved_naval_mines
+          [from: rise_of_nations]
+    1936  basic_light_battery
+          [from: rise_of_nations]
+    1936  basic_light_shell
+          [from: rise_of_nations]
+    1936  basic_medium_battery
+          [from: rise_of_nations]
+    1936  basic_heavy_battery
+          [from: rise_of_nations]
+    1936  magnetic_detonator (XP)
+          [from: rise_of_nations]
+    1936  improved_ship_torpedo_launcher
+          [from: rise_of_nations]
+    1936  damage_control_1 (XP)
+          [from: rise_of_nations]
+    1936  damage_control_2 (XP)
+          [from: rise_of_nations]
+    1936  damage_control_3 (XP)
+          [from: rise_of_nations]
+    1936  fire_control_methods_1 (XP)
+          [from: rise_of_nations]
+    1936  fire_control_methods_2 (XP)
+          [from: rise_of_nations]
+    1936  fire_control_methods_3 (XP)
+          [from: rise_of_nations]
+    1936  improved_naval_mines
+          [from: rise_of_nations]
+    1938  sp_multi_product_supply_ships (XP)
+    1938  degaussing
+          [from: rise_of_nations]
+    1938  degaussing
+          [from: rise_of_nations]
+    1939  improved_light_battery
+          [from: rise_of_nations]
+    1939  improved_medium_battery
+          [from: rise_of_nations]
+    1939  improved_heavy_battery
+          [from: rise_of_nations]
+    1939  basic_dp_light_battery
+          [from: rise_of_nations]
+    1939  improved_dp_light_battery
+          [from: rise_of_nations]
+    1940  electric_torpedo (XP)
+          [from: rise_of_nations]
+    1940  advanced_ship_torpedo_launcher
+          [from: rise_of_nations]
+    1940  improved_light_battery
+          [from: rise_of_nations]
+    1940  improved_medium_battery
+          [from: rise_of_nations]
+    1940  improved_heavy_battery
+          [from: rise_of_nations]
+    1940  dp_secondary_battery
+          [from: rise_of_nations]
+    1940  improved_submarine_mine_laying
+          [from: rise_of_nations]
+    1940  mtg_landing_craft
+          [from: rise_of_nations]
+    1940  electric_torpedo (XP)
+          [from: rise_of_nations]
+    1940  advanced_ship_torpedo_launcher
+          [from: rise_of_nations]
+    1940  improved_submarine_mine_laying
+          [from: rise_of_nations]
+    1940  mtg_landing_craft
+          [from: rise_of_nations]
+    1940  landing_craft
+          [from: rise_of_nations]
+    1942  sp_improved_support_ship (XP)
+    1942  sp_improved_repair_ship (XP)
+    1942  homing_torpedo (XP)
+          [from: rise_of_nations]
+    1942  improved_light_shell (XP)
+          [from: rise_of_nations]
+    1942  advanced_naval_mines
+          [from: rise_of_nations]
+    1942  airdrop_mines
+          [from: rise_of_nations]
+    1942  improved_light_shell
+          [from: rise_of_nations]
+    1942  homing_torpedo (XP)
+          [from: rise_of_nations]
+    1942  advanced_naval_mines
+          [from: rise_of_nations]
+    1942  airdrop_mines
+          [from: rise_of_nations]
+    1942  airdrop_mines_bba
+          [from: rise_of_nations]
+    1943  sp_standard_tenshioned_replenishment_alongside_method (XP)
+    1944  modern_ship_torpedo_launcher
+          [from: rise_of_nations]
+    1944  advanced_light_battery
+          [from: rise_of_nations]
+    1944  advanced_medium_battery
+          [from: rise_of_nations]
+    1944  advanced_heavy_battery
+          [from: rise_of_nations]
+    1944  airsweep_mines
+          [from: rise_of_nations]
+    1944  mtg_tank_landing_craft
+          [from: rise_of_nations]
+    1944  advanced_light_battery
+          [from: rise_of_nations]
+    1944  advanced_medium_battery
+          [from: rise_of_nations]
+    1944  advanced_heavy_battery
+          [from: rise_of_nations]
+    1944  advanced_dp_light_battery
+          [from: rise_of_nations]
+    1944  basic_dp_medium_battery
+          [from: rise_of_nations]
+    1944  modern_ship_torpedo_launcher
+          [from: rise_of_nations]
+    1944  airsweep_mines
+          [from: rise_of_nations]
+    1944  airsweep_mines_bba
+          [from: rise_of_nations]
+    1944  mtg_tank_landing_craft
+          [from: rise_of_nations]
+    1944  tank_landing_craft
+          [from: rise_of_nations]
+    1945  modern_naval_mines
+          [from: rise_of_nations]
+    1945  modern_naval_mines
+          [from: rise_of_nations]
+
+  [naval / submarines] — 29 techs
+    1900  ww1_submarine0
+          [from: rise_of_nations]
+    1900  early_ship_hull_submarine_ww1
+          [from: rise_of_nations]
+    1906  ww1_submarine1
+          [from: rise_of_nations]
+    1910  early_ship_hull_submarine_ww1_2
+          [from: rise_of_nations]
+    1910  ww1_submarine2
+          [from: rise_of_nations]
+    1914  ww1_submarine3
+          [from: rise_of_nations]
+    1918  ww1_submarine4
+          [from: rise_of_nations]
+    1922  early_submarine
+          [from: rise_of_nations]
+    1922  early_ship_hull_submarine
+          [from: rise_of_nations]
+    1936  basic_ship_hull_submarine
+          [from: rise_of_nations]
+    1936  basic_submarine
+          [from: rise_of_nations]
+    1939  sp_aip_engine_improved_tech
+    1940  improved_ship_hull_submarine
+          [from: rise_of_nations]
+    1940  basic_submarine_snorkel
+          [from: rise_of_nations]
+    1940  improved_submarine
+          [from: rise_of_nations]
+    1943  sp_aip_engine_advanced_tech
+    1944  advanced_ship_hull_submarine
+          [from: rise_of_nations]
+    1944  improved_submarine_snorkel (XP)
+          [from: rise_of_nations]
+    1944  advanced_submarine
+          [from: rise_of_nations]
+    1948  cw1_ship_hull_submarine
+          [from: rise_of_nations]
+    1948  cw_submarine0
+          [from: rise_of_nations]
+    1952  cw_submarine1
+          [from: rise_of_nations]
+    1956  cw_submarine2
+          [from: rise_of_nations]
+    1960  md_submarine1
+          [from: rise_of_nations]
+    1980  md_submarine2
+          [from: rise_of_nations]
+    2006  md_submarine3
+          [from: rise_of_nations]
+    2014  md_submarine4
+          [from: rise_of_nations]
+    2025  md_submarine5
+          [from: rise_of_nations]
+    2030  md_submarine6
+          [from: rise_of_nations]
+
+UNMAPPED TECHS
+------------------------------------------------------------
+These techs could not be assigned to a branch.
+Add entries to custom_mappings.txt to include them.
+
+  BEL_chasseurs_ardennais
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  BEL_chasseurs_ardennais_ncns
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ETH_improved_irregular_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  GER_SHUTZSTAFFEL_units_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Germany_Techs.txt
+  GER_WEHRMACHT_units_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Germany_Techs.txt
+  HUN_light_infantry_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\infantry.txt
+  JAP_move_on_horses_TECH
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Japan_Techs.txt
+  JAP_silver_wheels
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  PHI_battalion_combat_teams
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  RON_Air_Engine_Improvements
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  RON_Bomber_1910
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  RON_Defibrillator
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Double_Tap
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Early_Spy_Satellite
+    categories: ['space_research']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\space.txt
+  RON_Element_115
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Fighter_1490
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  RON_Fighter_1890
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  RON_Fighter_1903
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  RON_Fighter_1906
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  RON_Fighter_1908
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  RON_First_Aid_Kit
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_First_Satellite
+    categories: ['space_research']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\space.txt
+  RON_First_Spacewalk
+    categories: ['space_research']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\space.txt
+  RON_Juggernog
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Life_Support
+    categories: ['space_research']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\space.txt
+  RON_Mars_Colony
+    categories: ['space_research']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\space.txt
+  RON_Martian_Rover
+    categories: ['space_research']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\space.txt
+  RON_Monkey_Bombs
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Moon_Base
+    categories: ['space_research']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\space.txt
+  RON_Mystery_Box
+    categories: ['zombies_tech', 'wonder_weapon']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Orbital_Stations
+    categories: ['space_research']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\space.txt
+  RON_Pack_A_Punch
+    categories: ['zombies_tech', 'wonder_weapon']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Pain_Pills
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Quick_Revive
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Ray_Gun
+    categories: ['zombies_tech', 'wonder_weapon']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Ray_Gun_V2
+    categories: ['zombies_tech', 'wonder_weapon']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Speed_Cola
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Teleporter
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Thermonuclear_Bomb_hidden
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\wmd.txt
+  RON_Thundergun
+    categories: ['zombies_tech', 'wonder_weapon']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Zeus_Cannon
+    categories: ['zombies_tech', 'wonder_weapon']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Zombie_Mechanized
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  RON_Zombie_Motorized
+    categories: ['zombies_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\zombies.txt
+  SWE_sami_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWI_mountaineer_paratroopers_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  TOA_jungle_pioneers_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ToA_river_boats_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  adapte_montana
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Colombia_Techs.txt
+  advanced_medium_tank_chassis
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  advanced_modern_tank_turret_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\special_projects_tech.txt
+  air_armaments
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  airframe
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  attack_helicopter_1
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  attack_helicopter_2
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  attack_helicopter_3
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  attack_helicopter_4
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  attack_helicopter_5
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  attack_helicopter_6
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  attack_helicopter_7
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  attack_helicopter_8
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  awaite
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Colombia_Techs.txt
+  basic_heavy_shell
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval.txt
+  basic_heavy_shell
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval_Support.txt
+  basic_medium_shell
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval.txt
+  basic_medium_shell
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval_Support.txt
+  bba_RON_Fighter_1490
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_RON_Fighter_1890
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_RON_Fighter_1903
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_airframe
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_1926
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_1936
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_1943
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_1950
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_1960
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_1970
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_non_strategic_materials
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_stealth_1980
+    categories: ['plane_modules_tech', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_stealth_2000
+    categories: ['plane_modules_tech', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_stealth_2020
+    categories: ['plane_modules_tech', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_stealth_2040
+    categories: ['plane_modules_tech', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_armor_stealth_2060
+    categories: ['plane_modules_tech', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_attack_helicopter_1
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_attack_helicopter_2
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_attack_helicopter_3
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_attack_helicopter_4
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_attack_helicopter_5
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_attack_helicopter_6
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_attack_helicopter_7
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_attack_helicopter_8
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_autocannons_1916
+    categories: ['cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_autocannons_1940
+    categories: ['cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_autocannons_1943
+    categories: ['cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_autocannons_1945
+    categories: ['cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_autocannons_1955
+    categories: ['cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_autocannons_1965
+    categories: ['cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_autocannons_1980
+    categories: ['cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_cargo_helicopter_1
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_cargo_helicopter_2
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_cargo_helicopter_3
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_cargo_helicopter_4
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_cargo_helicopter_5
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_cargo_helicopter_6
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_cargo_helicopter_7
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_cargo_helicopter_8
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_cargo_helicopter_9
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_early_helicopter
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_engine
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_engine_1918
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_engine_1926
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_engine_1928
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_engine_1933
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_engine_1936
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_engine_1940
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_engine_1943
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_experimental_aircraft
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_fuselage
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_improved_aircraft_engine
+    categories: ['light_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1950
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1955
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1960
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1965
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1970
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1975
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1980
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1985
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1990
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_1995
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_2000
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_2005
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_2010
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_2015
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_2020
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_2025
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_2030
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_2035
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_jet_engine_2040
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_metal_construction
+    categories: ['plane_modules_tech', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_mg_deflectors
+    categories: ['light_air', 'cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_mg_heavy_mg
+    categories: ['light_air', 'cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_mg_sync_gears
+    categories: ['light_air', 'cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_mg_twin_guns
+    categories: ['light_air', 'cat_air_guns', 'plane_modules_tech', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_mg_wing_mountings
+    categories: ['light_air', 'cat_air_guns', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_military_balloons
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_nav_aerial_torpedo
+    categories: ['cat_torpedoes', 'torpedotech', 'naval_air', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_nav_aerial_torpedo_1945
+    categories: ['naval_air', 'air_equipment', 'plane_modules_tech', 'torpedotech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_nav_aerial_torpedo_1950
+    categories: ['naval_air', 'air_equipment', 'plane_modules_tech', 'torpedotech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_naval_aviation
+    categories: ['naval_air', 'plane_modules_tech', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_range_aa_refueling
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_range_drop_tanks
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_range_extra_fuel_tanks
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_range_self_sealing_fuel_tanks
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scout_helicopter_1
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scout_helicopter_2
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scout_helicopter_3
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scout_helicopter_4
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scout_helicopter_5
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scout_helicopter_6
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scout_helicopter_7
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scout_helicopter_8
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scout_helicopter_9
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scramjet_engine_2030
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scramjet_engine_2035
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scramjet_engine_2040
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scramjet_engine_2045
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scramjet_engine_2050
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scramjet_engine_2055
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_scramjet_engine_2060
+    categories: ['plane_modules_tech', 'cat_air_engine', 'air_equipment', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_small_aircraft_frame_1912
+    categories: ['light_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_small_aircraft_frame_1914
+    categories: ['light_air', 'air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_small_aircraft_frame_1916
+    categories: ['light_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_small_aircraft_frame_1920
+    categories: ['plane_modules_tech', 'light_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_small_aircraft_frame_1924
+    categories: ['plane_modules_tech', 'light_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_transport_plane
+    categories: ['medium_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_transport_plane_2
+    categories: ['medium_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_transport_plane_3
+    categories: ['medium_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_transport_plane_4
+    categories: ['medium_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_wings_flying_wing
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_wings_swept
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_wings_variable_sweep
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_wright_flyer
+    categories: ['light_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_wwi_airfields
+    categories: ['light_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bba_wwi_weapons_development
+    categories: ['air_equipment', 'plane_modules_tech']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  bicycle_infantry
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\infantry.txt
+  blackshirt_assault_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camelry
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\infantry.txt
+  camicie_nere_security_militias
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\support.txt
+  cargo_helicopter_1
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cargo_helicopter_2
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cargo_helicopter_3
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cargo_helicopter_4
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cargo_helicopter_5
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cargo_helicopter_6
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cargo_helicopter_7
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cargo_helicopter_8
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cargo_helicopter_9
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  coastal_defense_ships
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval.txt
+  commercial_nuclear_reactor_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\special_projects_tech.txt
+  cooling_unit
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  cooling_unit_1
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  cooling_unit_2
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  corvette1
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  corvette2
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  corvette3
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  corvette4
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  corvette5
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  corvette6
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  cruiser_submarines
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval.txt
+  cv_CAS1
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cv_CAS2
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cv_CAS3
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cv_early_fighter
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cv_fighter1
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cv_fighter2
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cv_fighter3
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cv_multirole1
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  cv_naval_bomber1
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cv_naval_bomber2
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  cv_naval_bomber3
+    categories: ['naval_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  desert_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  early_helicopter
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  elephantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  engine
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  engine3
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  experimental_aircraft
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  fighter_airframe
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  fighter_bomber1
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  fighter_bomber2
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  fighter_engine
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  frigate1
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  frigate2
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  frigate3
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  frigate4
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  frigate5
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  frigate6
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  fuselage
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  hills_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  improved_heavy_shell
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval.txt
+  improved_heavy_shell
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval_Support.txt
+  improved_medium_shell
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval.txt
+  improved_medium_shell
+    categories: ['naval_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval_Support.txt
+  jet_fighter1
+    categories: ['light_air', 'jet_technology', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter2
+    categories: ['light_air', 'jet_technology', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_a
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_b
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_c
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_d
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_e
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_f
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_g
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_h
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_i
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_j
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_k
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_l
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_m
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_fighter_n
+    categories: ['light_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_interceptor_a
+    categories: ['medium_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_interceptor_b
+    categories: ['medium_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_interceptor_c
+    categories: ['medium_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_interceptor_d
+    categories: ['medium_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_interceptor_e
+    categories: ['medium_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_interceptor_f
+    categories: ['medium_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_interceptor_g
+    categories: ['medium_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_interceptor_h
+    categories: ['medium_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  jet_interceptor_i
+    categories: ['medium_air', 'jet_technology']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  junglares
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Colombia_Techs.txt
+  junglares_2
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Colombia_Techs.txt
+  jungle_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_warfare
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\infantry.txt
+  land_multi_charge_large_caliber_gun_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\special_projects_tech.txt
+  lar_decryption_bonus_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\electronic_mechanical_engineering.txt
+  light_bomb
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  local_blitzkrieg
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Peru_Techs.txt
+  long_range_patrol_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  lotta_svard_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mas_montana
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Colombia_Techs.txt
+  medium_bomb
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  mega_ship_hull_carrier
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\special_projects_tech.txt
+  mega_zeppelin
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\special_projects_tech.txt
+  midget_submarines
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  militia_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  modern_fighter1
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  molotov_cocktails_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  motti_warfare
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Sweden_Techs.txt
+  mountain_defensive_training
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_gun
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\artillery.txt
+  mountain_warfare
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\infantry.txt
+  mountain_warfare_militias_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  panzerschiffe
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval.txt
+  penal_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  photo_reconnaisance
+    categories: ['air_equipment', 'plane_modules_tech', 'mio_cat_all_medium_aircraft_and_modules']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  pre_dreadnoughts
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval.txt
+  sami_pathfinders_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  scout_helicopter_1
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  scout_helicopter_2
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  scout_helicopter_3
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  scout_helicopter_4
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  scout_helicopter_5
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  scout_helicopter_6
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  scout_helicopter_7
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  scout_helicopter_8
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  scout_helicopter_9
+    categories: ['helicopter']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  selva_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Brazil_Techs.txt
+  sov_tech_guard_units
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_Soviet_Techs.txt
+  sp_centrifugal_jet_tech
+    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  sp_naval_proximity_fuze_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  sp_naval_repair_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  sp_naval_underway_replenishment_pick_b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\naval.txt
+  stronghold_network_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\special_projects_tech.txt
+  sturmtruppe_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  suicide_charge
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\bba_air_techs.txt
+  suicide_craft
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  tank_armor_10a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_10b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_11a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_11b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_12a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_12b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_1a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_1b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_2a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_2b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_3a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_3b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_4a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_4b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_5a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_5b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_6a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_6b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_7a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_7b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_8a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_8b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_9a
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_armor_9b
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq_1
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq_2
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq_3
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq_4
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq_5
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq_6
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq_7
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq_8
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  tank_support_eq_9
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\NSB_armor.txt
+  torpedo_bomb
+    categories: ['air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  torpedo_cruiser
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\naval.txt
+  torpedo_cruiser_mtg
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\MTG_naval.txt
+  transport_plane
+    categories: ['medium_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  transport_plane_2
+    categories: ['medium_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  transport_plane_20
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  transport_plane_3
+    categories: ['medium_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  transport_plane_4
+    categories: ['medium_air', 'air_equipment']
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\air_techs.txt
+  uranium_tipped_bullets
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  urban_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  usa_advanced_bomber_formations_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_airborne_radar_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_cia_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_external_fuel_tanks_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_magic_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_napalm_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_norden_bombsite_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_optimal_supply_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_radar_guided_artillery_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_shipboard_radar_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_superior_ground_support_payloads_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_t2_bombsite_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_tech_mechanized_artillery_units
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_tech_mechanized_thunder
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_tech_support_artillery_units
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_tech_support_tank_destroyer_units
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_tech_tsubodai_campaigns
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_the_simplex_method_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  usa_theory_of_duality_tech
+    categories: []
+    source: rise_of_nations / E:\SteamLibrary\steamapps\workshop\content\394360\2026448968\common\technologies\RON_USA_Techs.txt
+  winter_logistics_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt

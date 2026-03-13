@@ -1,0 +1,12 @@
+{
+  "workshop_id": "1827273767",
+  "slug": "novum_vexillum",
+  "display_name": "Novum Vexillum",
+  "mode": "overhaul",
+  "preset": "novum_vexillum",
+  "stats": {
+    "techs_total": 618,
+    "unknown_total": 88,
+    "doctrine_total": 0
+  }
+}

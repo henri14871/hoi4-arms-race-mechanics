@@ -1,0 +1,12 @@
+{
+  "workshop_id": "2438003901",
+  "slug": "the_new_order",
+  "display_name": "The New Order: Last Days of Europe",
+  "mode": "overhaul",
+  "preset": "the_new_order",
+  "stats": {
+    "techs_total": 897,
+    "unknown_total": 135,
+    "doctrine_total": 0
+  }
+}

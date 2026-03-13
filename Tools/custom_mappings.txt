@@ -1,0 +1,29 @@
+# ═══════════════════════════════════════════════════════════════════
+# Arms Race Mechanics — Custom Category Mappings
+# ═══════════════════════════════════════════════════════════════════
+#
+# If a mod uses custom category tags that the generator doesn't
+# recognise, add them here. One mapping per line.
+#
+# Format:
+#   category_tag_name -> branch / category
+#
+# Branches:    land, air, naval, industry_electronics, doctrine
+# Categories:  infantry, artillery, support, motorised, mechanised,
+#              light_tanks, medium_tanks, heavy_tanks, modern_tanks,
+#              fighters, heavy_fighters, cas, tactical_bombers,
+#              strategic_bombers, naval_bombers, transport,
+#              destroyers, submarines, light_cruisers, heavy_cruisers,
+#              battleships, carriers, naval_support,
+#              industry, electronics, radar, nuclear, rockets,
+#              land_doctrine, naval_doctrine, air_doctrine
+#
+# Examples:
+#   my_mod_special_armor -> land / medium_tanks
+#   custom_radar_system -> industry_electronics / radar
+#   kaiserreich_light_tank -> land / light_tanks
+#   millennium_dawn_stealth -> air / fighters
+#
+# Lines starting with # are ignored.
+# ═══════════════════════════════════════════════════════════════════
+

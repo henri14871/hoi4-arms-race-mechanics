@@ -1,0 +1,12 @@
+{
+  "workshop_id": "3365515312",
+  "slug": "great_war_redux",
+  "display_name": "The Great War Redux - 1.17.*",
+  "mode": "overhaul",
+  "preset": "great_war_redux",
+  "stats": {
+    "techs_total": 384,
+    "unknown_total": 21,
+    "doctrine_total": 0
+  }
+}

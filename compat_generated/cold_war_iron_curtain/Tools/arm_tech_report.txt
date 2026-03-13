@@ -1,0 +1,3291 @@
+ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+============================================================
+
+Total techs parsed:    1918
+Successfully mapped:   1273
+Unmapped (unknown):    356
+
+BRANCH SUMMARY
+----------------------------------------
+  air                             149 techs
+  industry_electronics            406 techs
+  land                            470 techs
+  naval                           248 techs
+
+CATEGORY DETAIL
+------------------------------------------------------------
+
+  [air / cas] — 6 techs
+    1922  early_bombs
+    1936  armor_piercing_bombs
+    1936  air_torpedoe_1
+    1940  heavy_bombs
+    1940  air_torpedoe_2
+    1944  air_torpedoe_3
+
+  [air / fighters] — 84 techs
+    1922  aa_lmg
+    1922  engines_1
+    1926  iw_small_airframe
+    1933  cv_early_fighter
+    1933  early_fighter
+          [from: cold_war_iron_curtain]
+    1936  scout_plane1
+    1936  basic_small_airframe
+    1936  engines_2
+    1936  range_improvements
+    1936  aircraft_construction
+    1936  heavy_fighter1
+          [from: cold_war_iron_curtain]
+    1936  fighter1
+          [from: cold_war_iron_curtain]
+    1936  cv_fighter1
+          [from: cold_war_iron_curtain]
+    1939  survivability_studies
+    1939  aa_hmg
+    1939  aa_cannon_1
+    1940  scout_plane2
+    1940  improved_small_airframe
+    1940  engines_3
+    1940  heavy_fighter2
+          [from: cold_war_iron_curtain]
+    1940  fighter2
+          [from: cold_war_iron_curtain]
+    1940  cv_fighter2
+          [from: cold_war_iron_curtain]
+    1940  recon0
+          [from: cold_war_iron_curtain]
+    1943  aa_cannon_2
+    1944  advanced_small_airframe
+    1944  engines_4
+    1944  heavy_fighter3
+          [from: cold_war_iron_curtain]
+    1944  fighter3
+          [from: cold_war_iron_curtain]
+    1944  cv_fighter3
+          [from: cold_war_iron_curtain]
+    1945  jet_fighter1
+    1945  modern_small_airframe
+    1945  aa_cannon_3
+    1946  jet_interceptor1
+          [from: cold_war_iron_curtain]
+    1946  jet_multirole1
+          [from: cold_war_iron_curtain]
+    1946  cv_jet_multirole1
+          [from: cold_war_iron_curtain]
+    1946  jet_light1
+          [from: cold_war_iron_curtain]
+    1948  jet_multirole2
+          [from: cold_war_iron_curtain]
+    1948  jet_recon0
+          [from: cold_war_iron_curtain]
+    1948  jet_interceptor2
+          [from: cold_war_iron_curtain]
+    1948  cv_jet_multirole2
+          [from: cold_war_iron_curtain]
+    1950  jet_fighter2
+    1950  supersonic_fighter1
+    1950  supersonic_small_airframe
+    1950  jet_multirole3
+          [from: cold_war_iron_curtain]
+    1950  jet_light2
+          [from: cold_war_iron_curtain]
+    1950  jet_interceptor3
+          [from: cold_war_iron_curtain]
+    1950  cv_jet_multirole3
+          [from: cold_war_iron_curtain]
+    1950  high_mach_jet_interceptor1
+          [from: cold_war_iron_curtain]
+    1955  jet_multirole4
+          [from: cold_war_iron_curtain]
+    1955  cv_jet_multirole4
+          [from: cold_war_iron_curtain]
+    1955  jet_interceptor4
+          [from: cold_war_iron_curtain]
+    1955  high_mach_jet_interceptor2
+          [from: cold_war_iron_curtain]
+    1960  jet_interceptor5
+          [from: cold_war_iron_curtain]
+    1960  high_mach_jet_interceptor3
+          [from: cold_war_iron_curtain]
+    1960  jet_light3
+          [from: cold_war_iron_curtain]
+    1960  jet_multirole5
+          [from: cold_war_iron_curtain]
+    1960  cv_jet_multirole5
+          [from: cold_war_iron_curtain]
+    1965  jet_interceptor6
+          [from: cold_war_iron_curtain]
+    1965  jet_multirole6
+          [from: cold_war_iron_curtain]
+    1965  cv_jet_multirole6
+          [from: cold_war_iron_curtain]
+    1965  high_mach_jet_interceptor4
+          [from: cold_war_iron_curtain]
+    1970  jet_recon1
+          [from: cold_war_iron_curtain]
+    1970  jet_interceptor7
+          [from: cold_war_iron_curtain]
+    1970  jet_multirole7
+          [from: cold_war_iron_curtain]
+    1970  cv_jet_multirole7
+          [from: cold_war_iron_curtain]
+    1970  jump_jet1
+          [from: cold_war_iron_curtain]
+    1970  jet_light4
+          [from: cold_war_iron_curtain]
+    1975  jet_interceptor8
+          [from: cold_war_iron_curtain]
+    1975  jet_multirole8
+          [from: cold_war_iron_curtain]
+    1975  cv_jet_multirole8
+          [from: cold_war_iron_curtain]
+    1975  jump_jet2
+          [from: cold_war_iron_curtain]
+    1980  jet_interceptor9
+          [from: cold_war_iron_curtain]
+    1980  jet_multirole9
+          [from: cold_war_iron_curtain]
+    1980  cv_jet_multirole9
+          [from: cold_war_iron_curtain]
+    1980  jump_jet3
+          [from: cold_war_iron_curtain]
+    1980  jet_light5
+          [from: cold_war_iron_curtain]
+    1985  jet_multirole10
+          [from: cold_war_iron_curtain]
+    1985  cv_jet_multirole10
+          [from: cold_war_iron_curtain]
+    1985  jump_jet4
+          [from: cold_war_iron_curtain]
+    1995  jet_recon2
+          [from: cold_war_iron_curtain]
+    1995  stealth_fighter
+          [from: cold_war_iron_curtain]
+    2005  mr_stealth
+          [from: cold_war_iron_curtain]
+    2005  cv_mr_stealth
+          [from: cold_war_iron_curtain]
+    2005  jump_stealth
+          [from: cold_war_iron_curtain]
+
+  [air / heavy_fighters] — 5 techs
+    1926  iw_medium_airframe
+    1936  basic_medium_airframe
+    1940  improved_medium_airframe
+    1944  advanced_medium_airframe
+    1945  modern_medium_airframe
+
+  [air / naval_bombers] — 3 techs
+    1936  cv_naval_bomber1
+    1940  cv_naval_bomber2
+    1944  cv_naval_bomber3
+
+  [air / strategic_bombers] — 8 techs
+    1926  iw_large_airframe
+    1936  basic_large_airframe
+    1940  improved_large_airframe
+    1942  reinforced_wings_mothership
+    1944  advanced_large_airframe
+    1944  miniature_fighters
+    1945  modern_large_airframe
+    1946  aerial_hangars
+
+  [air / tactical_bombers] — 37 techs
+    1933  early_bomber
+          [from: cold_war_iron_curtain]
+    1936  naval_bomber1
+          [from: cold_war_iron_curtain]
+    1936  tactical_bomber1
+          [from: cold_war_iron_curtain]
+    1936  strategic_bomber1
+          [from: cold_war_iron_curtain]
+    1940  naval_bomber2
+          [from: cold_war_iron_curtain]
+    1940  tactical_bomber2
+          [from: cold_war_iron_curtain]
+    1940  strategic_bomber2
+          [from: cold_war_iron_curtain]
+    1944  naval_bomber3
+          [from: cold_war_iron_curtain]
+    1944  tactical_bomber3
+          [from: cold_war_iron_curtain]
+    1944  strategic_bomber3
+          [from: cold_war_iron_curtain]
+    1946  jet_tactical_bomber1
+          [from: cold_war_iron_curtain]
+    1948  naval_bomber4
+          [from: cold_war_iron_curtain]
+    1948  jet_tactical_bomber2
+          [from: cold_war_iron_curtain]
+    1948  jet_strategic_bomber1
+          [from: cold_war_iron_curtain]
+    1950  jet_strategic_bomber2
+          [from: cold_war_iron_curtain]
+    1955  naval_bomber5
+          [from: cold_war_iron_curtain]
+    1955  jet_tactical_bomber3
+          [from: cold_war_iron_curtain]
+    1955  jet_strategic_bomber3
+          [from: cold_war_iron_curtain]
+    1960  jet_strategic_bomber4
+          [from: cold_war_iron_curtain]
+    1960  mach2stratbomber
+          [from: cold_war_iron_curtain]
+    1965  naval_bomber6
+          [from: cold_war_iron_curtain]
+    1965  jet_tactical_bomber4
+          [from: cold_war_iron_curtain]
+    1965  mach3stratbomber
+          [from: cold_war_iron_curtain]
+    1970  jet_tactical_bomber5
+          [from: cold_war_iron_curtain]
+    1970  jet_strategic_bomber5
+          [from: cold_war_iron_curtain]
+    1970  improvedmach2stratbomber
+          [from: cold_war_iron_curtain]
+    1975  naval_bomber7
+          [from: cold_war_iron_curtain]
+    1975  jet_tactical_bomber6
+          [from: cold_war_iron_curtain]
+    1980  stealth_tactical_bomber1
+          [from: cold_war_iron_curtain]
+    1985  jet_tactical_bomber7
+          [from: cold_war_iron_curtain]
+    1995  stealth_tactical_bomber2
+          [from: cold_war_iron_curtain]
+    1995  stealth_strategic_bomber1
+          [from: cold_war_iron_curtain]
+    1995  mach2stratbomber3
+          [from: cold_war_iron_curtain]
+    2005  naval_bomber8
+          [from: cold_war_iron_curtain]
+    2005  jet_tactical_bomber8
+          [from: cold_war_iron_curtain]
+    2005  stealth_strategic_bomber2
+          [from: cold_war_iron_curtain]
+    2005  mach6stratbomber
+          [from: cold_war_iron_curtain]
+
+  [air / transport] — 6 techs
+    1933  early_transport_plane
+    1933  bba_early_transport_plane
+    1940  improved_transport_plane
+    1940  bba_improved_transport_plane
+    1945  bba_strategic_airlifter
+    1948  strategic_airlifter
+
+  [industry_electronics / electronics] — 116 techs
+    1936  electronic_mechanical_engineering
+    1936  mechanical_computing
+    1936  basic_fire_control_system
+    1936  improved_fire_control_system
+    1936  advanced_fire_control_system
+    1938  improved_radio
+    1938  computing_machine
+    1938  basic_encryption
+    1938  basic_decryption
+    1940  improved_computing_machine
+    1940  improved_encryption
+    1940  improved_decryption
+    1940  radio
+          [from: cold_war_iron_curtain]
+    1941  advanced_radio
+    1942  advanced_computing_machine
+    1942  advanced_encryption
+    1942  advanced_decryption
+    1945  ww_pc
+          [from: cold_war_iron_curtain]
+    1945  hardware_I
+          [from: cold_war_iron_curtain]
+    1945  software_I
+          [from: cold_war_iron_curtain]
+    1945  transistor_I
+          [from: cold_war_iron_curtain]
+    1945  supercomputer_I
+          [from: cold_war_iron_curtain]
+    1950  hardware_II
+          [from: cold_war_iron_curtain]
+    1950  software_II
+          [from: cold_war_iron_curtain]
+    1950  coms_I
+          [from: cold_war_iron_curtain]
+    1950  decryption_I
+          [from: cold_war_iron_curtain]
+    1950  enc_I
+          [from: cold_war_iron_curtain]
+    1950  transistor_II
+          [from: cold_war_iron_curtain]
+    1950  consumer_electronics_I
+          [from: cold_war_iron_curtain]
+    1955  software_III
+          [from: cold_war_iron_curtain]
+    1955  hardware_III
+          [from: cold_war_iron_curtain]
+    1955  transistor_III
+          [from: cold_war_iron_curtain]
+    1960  hardware_IV
+          [from: cold_war_iron_curtain]
+    1960  software_IV
+          [from: cold_war_iron_curtain]
+    1960  coms_II
+          [from: cold_war_iron_curtain]
+    1960  decryption_II
+          [from: cold_war_iron_curtain]
+    1960  enc_II
+          [from: cold_war_iron_curtain]
+    1960  transistor_IV
+          [from: cold_war_iron_curtain]
+    1960  consumer_electronics_II
+          [from: cold_war_iron_curtain]
+    1960  supercomputer_II
+          [from: cold_war_iron_curtain]
+    1965  hardware_V
+          [from: cold_war_iron_curtain]
+    1965  software_V
+          [from: cold_war_iron_curtain]
+    1965  transistor_V
+          [from: cold_war_iron_curtain]
+    1970  hardware_VI
+          [from: cold_war_iron_curtain]
+    1970  software_VI
+          [from: cold_war_iron_curtain]
+    1970  coms_III
+          [from: cold_war_iron_curtain]
+    1970  decryption_III
+          [from: cold_war_iron_curtain]
+    1970  enc_III
+          [from: cold_war_iron_curtain]
+    1970  transistor_VI
+          [from: cold_war_iron_curtain]
+    1970  consumer_electronics_III
+          [from: cold_war_iron_curtain]
+    1970  interwebs_I
+          [from: cold_war_iron_curtain]
+    1975  hardware_VII
+          [from: cold_war_iron_curtain]
+    1975  software_VII
+          [from: cold_war_iron_curtain]
+    1975  interwebs_II
+          [from: cold_war_iron_curtain]
+    1975  transistor_VII
+          [from: cold_war_iron_curtain]
+    1975  supercomputer_III
+          [from: cold_war_iron_curtain]
+    1980  hardware_VIII
+          [from: cold_war_iron_curtain]
+    1980  software_VIII
+          [from: cold_war_iron_curtain]
+    1980  coms_IV
+          [from: cold_war_iron_curtain]
+    1980  decryption_IV
+          [from: cold_war_iron_curtain]
+    1980  enc_IV
+          [from: cold_war_iron_curtain]
+    1980  transistor_VIII
+          [from: cold_war_iron_curtain]
+    1980  consumer_electronics_IV
+          [from: cold_war_iron_curtain]
+    1980  interwebs_III
+          [from: cold_war_iron_curtain]
+    1985  hardware_IX
+          [from: cold_war_iron_curtain]
+    1985  software_IX
+          [from: cold_war_iron_curtain]
+    1985  transistor_IX
+          [from: cold_war_iron_curtain]
+    1985  interwebs_IV
+          [from: cold_war_iron_curtain]
+    1985  supercomputer_IV
+          [from: cold_war_iron_curtain]
+    1990  hardware_X
+          [from: cold_war_iron_curtain]
+    1990  software_X
+          [from: cold_war_iron_curtain]
+    1990  coms_V
+          [from: cold_war_iron_curtain]
+    1990  decryption_V
+          [from: cold_war_iron_curtain]
+    1990  enc_V
+          [from: cold_war_iron_curtain]
+    1990  interwebs_V
+          [from: cold_war_iron_curtain]
+    1990  transistor_X
+          [from: cold_war_iron_curtain]
+    1990  consumer_electronics_V
+          [from: cold_war_iron_curtain]
+    1990  supercomputer_V
+          [from: cold_war_iron_curtain]
+    1995  hardware_XI
+          [from: cold_war_iron_curtain]
+    1995  software_XI
+          [from: cold_war_iron_curtain]
+    1995  transistor_XI
+          [from: cold_war_iron_curtain]
+    1995  interwebs_VI
+          [from: cold_war_iron_curtain]
+    2000  hardware_XII
+          [from: cold_war_iron_curtain]
+    2000  software_XII
+          [from: cold_war_iron_curtain]
+    2000  coms_VI
+          [from: cold_war_iron_curtain]
+    2000  decryption_VI
+          [from: cold_war_iron_curtain]
+    2000  enc_VI
+          [from: cold_war_iron_curtain]
+    2000  interwebs_VII
+          [from: cold_war_iron_curtain]
+    2000  transistor_XII
+          [from: cold_war_iron_curtain]
+    2000  consumer_electronics_VI
+          [from: cold_war_iron_curtain]
+    2005  hardware_XIII
+          [from: cold_war_iron_curtain]
+    2005  software_XIII
+          [from: cold_war_iron_curtain]
+    2005  interwebs_VIII
+          [from: cold_war_iron_curtain]
+    2005  transistor_XIII
+          [from: cold_war_iron_curtain]
+    2005  supercomputer_VI
+          [from: cold_war_iron_curtain]
+    2010  hardware_XIV
+          [from: cold_war_iron_curtain]
+    2010  software_XIV
+          [from: cold_war_iron_curtain]
+    2010  coms_VII
+          [from: cold_war_iron_curtain]
+    2010  decryption_VII
+          [from: cold_war_iron_curtain]
+    2010  enc_VII
+          [from: cold_war_iron_curtain]
+    2010  interwebs_IX
+          [from: cold_war_iron_curtain]
+    2010  transistor_XIV
+          [from: cold_war_iron_curtain]
+    2010  consumer_electronics_VII
+          [from: cold_war_iron_curtain]
+    2015  hardware_XV
+          [from: cold_war_iron_curtain]
+    2015  software_XV
+          [from: cold_war_iron_curtain]
+    2015  interwebs_X
+          [from: cold_war_iron_curtain]
+    2015  transistor_XV
+          [from: cold_war_iron_curtain]
+    2015  supercomputer_VII
+          [from: cold_war_iron_curtain]
+    2020  hardware_XVI
+          [from: cold_war_iron_curtain]
+    2020  software_XVI
+          [from: cold_war_iron_curtain]
+    2020  coms_VIII
+          [from: cold_war_iron_curtain]
+    2020  decryption_VIII
+          [from: cold_war_iron_curtain]
+    2020  enc_VIII
+          [from: cold_war_iron_curtain]
+    2020  interwebs_XI
+          [from: cold_war_iron_curtain]
+    2020  transistor_XVI
+          [from: cold_war_iron_curtain]
+    2020  consumer_electronics_VIII
+          [from: cold_war_iron_curtain]
+
+  [industry_electronics / industry] — 150 techs
+    1936  basic_fortification_tech
+    1936  coastal_fort_tech_1
+    1936  basic_machine_tools
+    1936  concentrated_industry
+    1936  dispersed_industry
+    1936  fuel_silos
+    1936  fuel_refining
+    1936  synth_oil_experiments
+    1936  construction1
+    1936  excavation1
+    1937  improved_machine_tools
+    1937  improved_equipment_conversion
+    1937  concentrated_industry2
+    1937  dispersed_industry2
+    1937  fuel_refining2
+    1937  oil_processing
+    1937  rubber_processing
+    1937  construction2
+    1937  excavation2
+    1938  land_fort_tech_1
+    1939  advanced_machine_tools
+    1939  advanced_equipment_conversion
+    1939  concentrated_industry3
+    1939  dispersed_industry3
+    1939  fuel_refining3
+    1939  improved_oil_processing
+    1939  improved_rubber_processing
+    1939  construction3
+    1939  excavation3
+    1940  land_fort_tech_2
+    1940  coastal_fort_tech_2
+    1941  assembly_line_production
+    1941  concentrated_industry4
+    1941  dispersed_industry4
+    1941  fuel_refining4
+    1941  advanced_oil_processing
+    1941  advanced_rubber_processing
+    1941  construction4
+    1941  excavation4
+    1943  flexible_line
+    1943  streamlined_line
+    1943  concentrated_industry5
+    1943  dispersed_industry5
+    1943  fuel_refining5
+    1943  modern_oil_processing
+    1943  modern_rubber_processing
+    1943  construction5
+    1943  excavation5
+    1945  ww_production
+          [from: cold_war_iron_curtain]
+    1945  ww_construction
+          [from: cold_war_iron_curtain]
+    1945  ww_oil
+          [from: cold_war_iron_curtain]
+    1945  ww_infra
+          [from: cold_war_iron_curtain]
+    1950  logistics_I
+          [from: cold_war_iron_curtain]
+    1950  production_efficiency_I
+          [from: cold_war_iron_curtain]
+    1950  management_I
+          [from: cold_war_iron_curtain]
+    1950  civil_engineering_I
+          [from: cold_war_iron_curtain]
+    1950  materials_I
+          [from: cold_war_iron_curtain]
+    1950  chemistry_I
+          [from: cold_war_iron_curtain]
+    1955  logistics_II
+          [from: cold_war_iron_curtain]
+    1955  production_efficiency_II
+          [from: cold_war_iron_curtain]
+    1955  management_II
+          [from: cold_war_iron_curtain]
+    1955  civil_engineering_II
+          [from: cold_war_iron_curtain]
+    1955  excavation_I
+          [from: cold_war_iron_curtain]
+    1960  logistics_III
+          [from: cold_war_iron_curtain]
+    1960  production_efficiency_III
+          [from: cold_war_iron_curtain]
+    1960  management_III_A
+          [from: cold_war_iron_curtain]
+    1960  management_III_B
+          [from: cold_war_iron_curtain]
+    1960  civil_engineering_III
+          [from: cold_war_iron_curtain]
+    1960  materials_II
+          [from: cold_war_iron_curtain]
+    1960  plastics_I
+          [from: cold_war_iron_curtain]
+    1965  logistics_IV_A
+          [from: cold_war_iron_curtain]
+    1965  logistics_IV_B
+          [from: cold_war_iron_curtain]
+    1965  production_efficiency_IV
+          [from: cold_war_iron_curtain]
+    1965  civil_engineering_IV
+          [from: cold_war_iron_curtain]
+    1965  excavation_II
+          [from: cold_war_iron_curtain]
+    1965  chemistry_II
+          [from: cold_war_iron_curtain]
+    1970  logistics_V_A
+          [from: cold_war_iron_curtain]
+    1970  logistics_V_B
+          [from: cold_war_iron_curtain]
+    1970  production_efficiency_V
+          [from: cold_war_iron_curtain]
+    1970  management_IV
+          [from: cold_war_iron_curtain]
+    1970  management_IV_A
+          [from: cold_war_iron_curtain]
+    1970  civil_engineering_V
+          [from: cold_war_iron_curtain]
+    1970  materials_III
+          [from: cold_war_iron_curtain]
+    1970  plastics_II
+          [from: cold_war_iron_curtain]
+    1975  logistics_VI
+          [from: cold_war_iron_curtain]
+    1975  logistics_VI_A
+          [from: cold_war_iron_curtain]
+    1975  management_V_A
+          [from: cold_war_iron_curtain]
+    1975  management_V_B
+          [from: cold_war_iron_curtain]
+    1975  civil_engineering_VI
+          [from: cold_war_iron_curtain]
+    1975  excavation_III
+          [from: cold_war_iron_curtain]
+    1975  chemistry_III
+          [from: cold_war_iron_curtain]
+    1975  production_efficiency_VI
+          [from: cold_war_iron_curtain]
+    1975  industrial_robots_I
+          [from: cold_war_iron_curtain]
+    1980  civil_engineering_VII
+          [from: cold_war_iron_curtain]
+    1980  materials_IV
+          [from: cold_war_iron_curtain]
+    1980  plastics_III
+          [from: cold_war_iron_curtain]
+    1980  production_efficiency_VII
+          [from: cold_war_iron_curtain]
+    1980  industrial_robots_II
+          [from: cold_war_iron_curtain]
+    1980  logistics_VII_A
+          [from: cold_war_iron_curtain]
+    1980  logistics_VII_B
+          [from: cold_war_iron_curtain]
+    1985  management_VI
+          [from: cold_war_iron_curtain]
+    1985  civil_engineering_VIII
+          [from: cold_war_iron_curtain]
+    1985  excavation_IV
+          [from: cold_war_iron_curtain]
+    1985  chemistry_IV
+          [from: cold_war_iron_curtain]
+    1985  logistics_VIII_A
+          [from: cold_war_iron_curtain]
+    1985  logistics_VIII_B
+          [from: cold_war_iron_curtain]
+    1985  production_efficiency_VIII
+          [from: cold_war_iron_curtain]
+    1985  industrial_robots_III
+          [from: cold_war_iron_curtain]
+    1990  management_VII_A
+          [from: cold_war_iron_curtain]
+    1990  management_VII_B
+          [from: cold_war_iron_curtain]
+    1990  civil_engineering_IX
+          [from: cold_war_iron_curtain]
+    1990  materials_V
+          [from: cold_war_iron_curtain]
+    1990  plastics_IV
+          [from: cold_war_iron_curtain]
+    1990  production_efficiency_IX
+          [from: cold_war_iron_curtain]
+    1990  industrial_robots_IV
+          [from: cold_war_iron_curtain]
+    1990  logistics_IX
+          [from: cold_war_iron_curtain]
+    1995  management_VIII
+          [from: cold_war_iron_curtain]
+    1995  excavation_V
+          [from: cold_war_iron_curtain]
+    1995  chemistry_V
+          [from: cold_war_iron_curtain]
+    1995  logistics_X
+          [from: cold_war_iron_curtain]
+    1995  production_efficiency_X
+          [from: cold_war_iron_curtain]
+    1995  industrial_robots_V
+          [from: cold_war_iron_curtain]
+    1995  civil_engineering_X
+          [from: cold_war_iron_curtain]
+    2000  management_IX
+          [from: cold_war_iron_curtain]
+    2000  materials_VI
+          [from: cold_war_iron_curtain]
+    2000  plastics_V
+          [from: cold_war_iron_curtain]
+    2000  logistics_XI
+          [from: cold_war_iron_curtain]
+    2000  civil_engineering_XI
+          [from: cold_war_iron_curtain]
+    2000  factory_automation_I
+          [from: cold_war_iron_curtain]
+    2005  management_X
+          [from: cold_war_iron_curtain]
+    2005  civil_engineering_XII
+          [from: cold_war_iron_curtain]
+    2005  excavation_VI
+          [from: cold_war_iron_curtain]
+    2005  chemistry_VI
+          [from: cold_war_iron_curtain]
+    2005  logistics_XII
+          [from: cold_war_iron_curtain]
+    2005  factory_automation_II
+          [from: cold_war_iron_curtain]
+    2010  civil_engineering_XIII
+          [from: cold_war_iron_curtain]
+    2010  materials_VII
+          [from: cold_war_iron_curtain]
+    2010  plastics_VI
+          [from: cold_war_iron_curtain]
+    2010  logistics_XIII
+          [from: cold_war_iron_curtain]
+    2015  management_XI_A
+          [from: cold_war_iron_curtain]
+    2015  management_XI_B
+          [from: cold_war_iron_curtain]
+    2015  civil_engineering_XIV
+          [from: cold_war_iron_curtain]
+    2015  excavation_VII
+          [from: cold_war_iron_curtain]
+    2015  chemistry_VII
+          [from: cold_war_iron_curtain]
+    2015  factory_automation_III
+          [from: cold_war_iron_curtain]
+    2020  civil_engineering_XV
+          [from: cold_war_iron_curtain]
+    2020  materials_VIII
+          [from: cold_war_iron_curtain]
+    2020  plastics_VII
+          [from: cold_war_iron_curtain]
+    2020  logistics_XIV
+          [from: cold_war_iron_curtain]
+    2020  factory_automation_IV
+          [from: cold_war_iron_curtain]
+
+  [industry_electronics / nuclear] — 60 techs
+    1940  atomic_research
+          [from: cold_war_iron_curtain]
+    1943  nuclear_reactor
+    1943  nuclear_reactor_heavy_water
+    1943  isotope_separation_centrifugal
+    1943  atomic_weapons
+          [from: cold_war_iron_curtain]
+    1943  atomic_reactor_0
+          [from: cold_war_iron_curtain]
+    1945  nukes
+    1945  atomic_weapons_armament_0
+          [from: cold_war_iron_curtain]
+    1950  thermonuclear_bombs
+    1950  srbm1
+          [from: cold_war_iron_curtain]
+    1950  atomic_reactor_naval_0
+          [from: cold_war_iron_curtain]
+    1950  atomic_reactor_fission_0
+          [from: cold_war_iron_curtain]
+    1955  atomic_weapons_delivery_I
+          [from: cold_war_iron_curtain]
+    1955  srbm2
+          [from: cold_war_iron_curtain]
+    1955  slbm1
+          [from: cold_war_iron_curtain]
+    1955  irbm1
+          [from: cold_war_iron_curtain]
+    1955  atomic_weapons_armament_I
+          [from: cold_war_iron_curtain]
+    1960  srbm3
+          [from: cold_war_iron_curtain]
+    1960  slbm2
+          [from: cold_war_iron_curtain]
+    1960  irbm2
+          [from: cold_war_iron_curtain]
+    1960  atomic_weapons_delivery_Ia
+          [from: cold_war_iron_curtain]
+    1960  atomic_reactor_I
+          [from: cold_war_iron_curtain]
+    1965  srbm4
+          [from: cold_war_iron_curtain]
+    1965  slbm3
+          [from: cold_war_iron_curtain]
+    1965  irbm3
+          [from: cold_war_iron_curtain]
+    1965  icbm1
+          [from: cold_war_iron_curtain]
+    1965  atomic_weapons_armament_II
+          [from: cold_war_iron_curtain]
+    1965  atomic_weapons_delivery_II
+          [from: cold_war_iron_curtain]
+    1965  nuclearstratbomber1
+          [from: cold_war_iron_curtain]
+    1970  srbm5
+          [from: cold_war_iron_curtain]
+    1970  slbm4
+          [from: cold_war_iron_curtain]
+    1970  irbm4
+          [from: cold_war_iron_curtain]
+    1970  icbm2
+          [from: cold_war_iron_curtain]
+    1970  atomic_reactor_naval_I
+          [from: cold_war_iron_curtain]
+    1970  atomic_reactor_fission_I
+          [from: cold_war_iron_curtain]
+    1975  srbm6
+          [from: cold_war_iron_curtain]
+    1975  irbm5
+          [from: cold_war_iron_curtain]
+    1975  atomic_weapons_delivery_III
+          [from: cold_war_iron_curtain]
+    1975  atomic_reactor_fusion_0
+          [from: cold_war_iron_curtain]
+    1980  slbm5
+          [from: cold_war_iron_curtain]
+    1980  icbm3
+          [from: cold_war_iron_curtain]
+    1980  atomic_reactor_II
+          [from: cold_war_iron_curtain]
+    1985  srbm7
+          [from: cold_war_iron_curtain]
+    1985  irbm6
+          [from: cold_war_iron_curtain]
+    1985  atomic_reactor_fusion_I
+          [from: cold_war_iron_curtain]
+    1990  slbm6
+          [from: cold_war_iron_curtain]
+    1990  icbm4
+          [from: cold_war_iron_curtain]
+    1990  atomic_weapons_delivery_IV
+          [from: cold_war_iron_curtain]
+    1995  srbm8
+          [from: cold_war_iron_curtain]
+    1995  irbm7
+          [from: cold_war_iron_curtain]
+    1995  atomic_reactor_naval_II
+          [from: cold_war_iron_curtain]
+    1995  atomic_reactor_fission_II
+          [from: cold_war_iron_curtain]
+    1995  atomic_reactor_fusion_II
+          [from: cold_war_iron_curtain]
+    2000  slbm7
+          [from: cold_war_iron_curtain]
+    2000  icbm5
+          [from: cold_war_iron_curtain]
+    2005  srbm9
+          [from: cold_war_iron_curtain]
+    2005  irbm8
+          [from: cold_war_iron_curtain]
+    2005  atomic_weapons_delivery_V
+          [from: cold_war_iron_curtain]
+    2005  nuclearstratbomber2
+          [from: cold_war_iron_curtain]
+    2005  atomic_reactor_fusion_III
+          [from: cold_war_iron_curtain]
+
+  [industry_electronics / radar] — 13 techs
+    1936  radio_detection
+    1938  cavity_magnatron
+    1940  centimetric_radar
+    1941  phased_array
+    1942  monopulse_radar
+    1950  radar_0
+          [from: cold_war_iron_curtain]
+    1960  radar_I
+          [from: cold_war_iron_curtain]
+    1970  radar_II
+          [from: cold_war_iron_curtain]
+    1980  radar_III
+          [from: cold_war_iron_curtain]
+    1990  radar_IV
+          [from: cold_war_iron_curtain]
+    2000  radar_V
+          [from: cold_war_iron_curtain]
+    2010  radar_VI
+          [from: cold_war_iron_curtain]
+    2020  radar_VII
+          [from: cold_war_iron_curtain]
+
+  [industry_electronics / rockets] — 67 techs
+    1939  motorized_rocket_unit
+    1940  rocket_artillery
+    1940  sp_rocket1
+          [from: cold_war_iron_curtain]
+    1941  rocket_artillery2
+    1942  rocket_artillery3
+    1942  experimental_rockets
+    1943  rocket_artillery4
+    1943  sp_rockets_improved_guidance
+    1944  sp_rockets_rocket_bomber
+    1944  sp_rockets_dual_chamber_rocket_engine_1
+    1944  rocket_engines
+          [from: cold_war_iron_curtain]
+    1944  advanced_rocket_engines
+          [from: cold_war_iron_curtain]
+    1944  jet_engines
+          [from: cold_war_iron_curtain]
+    1945  sp_rockets_improved_rocket_bomber
+    1945  improved_rocket_engines
+    1946  sp_rockets_dual_chamber_rocket_engine_2
+    1947  prototype_agm
+          [from: cold_war_iron_curtain]
+    1947  prototype_aa
+          [from: cold_war_iron_curtain]
+    1950  agm_0
+          [from: cold_war_iron_curtain]
+    1955  sam_short_range_0
+          [from: cold_war_iron_curtain]
+    1955  atgm_0
+          [from: cold_war_iron_curtain]
+    1955  cruisemissile_0
+          [from: cold_war_iron_curtain]
+    1955  aam_short_range_0
+          [from: cold_war_iron_curtain]
+    1960  sp_rocket2
+          [from: cold_war_iron_curtain]
+    1960  aam_long_range_0
+          [from: cold_war_iron_curtain]
+    1960  agm_1
+          [from: cold_war_iron_curtain]
+    1960  sam_long_range_0
+          [from: cold_war_iron_curtain]
+    1960  atgm_carrier_0
+          [from: cold_war_iron_curtain]
+    1965  sam_short_range_1
+          [from: cold_war_iron_curtain]
+    1965  aam_short_range_1
+          [from: cold_war_iron_curtain]
+    1965  atgm_1
+          [from: cold_war_iron_curtain]
+    1965  cruisemissile_1
+          [from: cold_war_iron_curtain]
+    1970  sam_long_range_1
+          [from: cold_war_iron_curtain]
+    1970  aam_long_range_1
+          [from: cold_war_iron_curtain]
+    1970  agm_2
+          [from: cold_war_iron_curtain]
+    1970  atgm_carrier_1
+          [from: cold_war_iron_curtain]
+    1975  sp_rocket3
+          [from: cold_war_iron_curtain]
+    1975  sam_short_range_2
+          [from: cold_war_iron_curtain]
+    1975  aam_short_range_2
+          [from: cold_war_iron_curtain]
+    1975  atgm_2
+          [from: cold_war_iron_curtain]
+    1975  cruisemissile_2
+          [from: cold_war_iron_curtain]
+    1980  sam_long_range_2
+          [from: cold_war_iron_curtain]
+    1980  aam_long_range_2
+          [from: cold_war_iron_curtain]
+    1980  agm_3
+          [from: cold_war_iron_curtain]
+    1980  atgm_carrier_2
+          [from: cold_war_iron_curtain]
+    1985  sam_short_range_3
+          [from: cold_war_iron_curtain]
+    1985  aam_short_range_3
+          [from: cold_war_iron_curtain]
+    1985  atgm_3
+          [from: cold_war_iron_curtain]
+    1985  cruisemissile_3
+          [from: cold_war_iron_curtain]
+    1990  sp_rocket4
+          [from: cold_war_iron_curtain]
+    1990  sam_long_range_3
+          [from: cold_war_iron_curtain]
+    1990  aam_long_range_3
+          [from: cold_war_iron_curtain]
+    1990  agm_4
+          [from: cold_war_iron_curtain]
+    1990  atgm_carrier_3
+          [from: cold_war_iron_curtain]
+    1995  sam_short_range_4
+          [from: cold_war_iron_curtain]
+    1995  aam_short_range_4
+          [from: cold_war_iron_curtain]
+    1995  atgm_4
+          [from: cold_war_iron_curtain]
+    1995  cruisemissile_4
+          [from: cold_war_iron_curtain]
+    2000  sam_long_range_4
+          [from: cold_war_iron_curtain]
+    2000  aam_long_range_4
+          [from: cold_war_iron_curtain]
+    2000  agm_5
+          [from: cold_war_iron_curtain]
+    2000  atgm_carrier_4
+          [from: cold_war_iron_curtain]
+    2005  sp_rocket5
+          [from: cold_war_iron_curtain]
+    2005  sam_short_range_5
+          [from: cold_war_iron_curtain]
+    2005  aam_short_range_5
+          [from: cold_war_iron_curtain]
+    2005  atgm_5
+          [from: cold_war_iron_curtain]
+    2005  cruisemissile_5
+          [from: cold_war_iron_curtain]
+
+  [land / anti_air] — 6 techs
+    1936  interwar_antiair
+    1939  antiair1
+    1940  antiair2
+    1941  antiair3
+    1942  antiair4
+    1943  antiair5
+
+  [land / anti_tank] — 8 techs
+    1936  mountain_tanks
+    1936  interwar_antitank
+    1936  SWE_bofors_antitank_gun
+    1939  antitank1
+    1940  antitank2
+    1941  antitank3
+    1942  antitank4
+    1943  antitank5
+
+  [land / artillery] — 106 techs
+    1922  basic_battery
+    1935  autocannon_1
+          [from: cold_war_iron_curtain]
+    1935  artillery_1
+          [from: cold_war_iron_curtain]
+    1935  direct_fire_gun_1
+          [from: cold_war_iron_curtain]
+    1936  gw_artillery
+    1936  interwar_artillery
+    1936  basic_light_battery
+    1936  basic_light_shell
+    1936  basic_heavy_battery
+    1936  basic_heavy_shell
+    1936  railway_gun
+    1939  artillery1
+    1939  improved_light_battery
+    1939  improved_heavy_battery
+    1939  basic_dp_light_battery
+    1940  artillery2
+    1940  sp_artillery_rocket_assisted_projectiles_tech
+    1940  sp_artillery_purpose_built_gun_motor_carriages_tech
+    1940  improved_dp_light_battery
+    1940  spaag_1
+          [from: cold_war_iron_curtain]
+    1940  light_artillery_1
+          [from: cold_war_iron_curtain]
+    1940  heavy_artillery_1
+          [from: cold_war_iron_curtain]
+    1940  tank_destroyer_1
+          [from: cold_war_iron_curtain]
+    1941  artillery3
+    1941  sp_shock_hardening_techniques
+    1942  artillery4
+    1942  sp_variable_time_fuze_shells
+    1942  improved_light_shell
+    1942  improved_heavy_shell
+    1943  artillery5
+    1944  advanced_light_battery
+    1944  advanced_heavy_battery
+    1944  advanced_dp_light_battery
+    1945  cannon_ammo_1
+          [from: cold_war_iron_curtain]
+    1945  aa_upgrade_1
+          [from: cold_war_iron_curtain]
+    1945  sp_artillery_1
+          [from: cold_war_iron_curtain]
+    1945  light_sp_artillery_1
+          [from: cold_war_iron_curtain]
+    1945  art_ammo_1
+          [from: cold_war_iron_curtain]
+    1945  art_upgrade_1
+          [from: cold_war_iron_curtain]
+    1945  at_ammo_1
+          [from: cold_war_iron_curtain]
+    1945  at_upgrade_1
+          [from: cold_war_iron_curtain]
+    1945  heavy_sp_artillery_1
+          [from: cold_war_iron_curtain]
+    1950  direct_fire_gun_2
+          [from: cold_war_iron_curtain]
+    1950  autocannon_2
+          [from: cold_war_iron_curtain]
+    1950  artillery_2
+          [from: cold_war_iron_curtain]
+    1955  spaag_2
+          [from: cold_war_iron_curtain]
+    1955  light_artillery_2
+          [from: cold_war_iron_curtain]
+    1955  heavy_artillery_2
+          [from: cold_war_iron_curtain]
+    1955  tank_destroyer_2
+          [from: cold_war_iron_curtain]
+    1960  cannon_ammo_2
+          [from: cold_war_iron_curtain]
+    1960  aa_upgrade_2
+          [from: cold_war_iron_curtain]
+    1960  art_ammo_2
+          [from: cold_war_iron_curtain]
+    1960  art_upgrade_2
+          [from: cold_war_iron_curtain]
+    1960  at_ammo_2
+          [from: cold_war_iron_curtain]
+    1960  at_upgrade_2
+          [from: cold_war_iron_curtain]
+    1960  sp_artillery_2
+          [from: cold_war_iron_curtain]
+    1960  light_sp_artillery_2
+          [from: cold_war_iron_curtain]
+    1960  heavy_sp_artillery_2
+          [from: cold_war_iron_curtain]
+    1965  autocannon_3
+          [from: cold_war_iron_curtain]
+    1965  direct_fire_gun_3
+          [from: cold_war_iron_curtain]
+    1965  artillery_3
+          [from: cold_war_iron_curtain]
+    1970  spaag_3
+          [from: cold_war_iron_curtain]
+    1970  heavy_artillery_3
+          [from: cold_war_iron_curtain]
+    1970  tank_destroyer_3
+          [from: cold_war_iron_curtain]
+    1970  light_artillery_3
+          [from: cold_war_iron_curtain]
+    1975  cannon_ammo_3
+          [from: cold_war_iron_curtain]
+    1975  aa_upgrade_3
+          [from: cold_war_iron_curtain]
+    1975  art_ammo_3
+          [from: cold_war_iron_curtain]
+    1975  art_upgrade_3
+          [from: cold_war_iron_curtain]
+    1975  at_ammo_3
+          [from: cold_war_iron_curtain]
+    1975  at_upgrade_3
+          [from: cold_war_iron_curtain]
+    1975  sp_artillery_3
+          [from: cold_war_iron_curtain]
+    1975  light_sp_artillery_3
+          [from: cold_war_iron_curtain]
+    1975  heavy_sp_artillery_3
+          [from: cold_war_iron_curtain]
+    1980  artillery_4
+          [from: cold_war_iron_curtain]
+    1980  autocannon_4
+          [from: cold_war_iron_curtain]
+    1980  direct_fire_gun_4
+          [from: cold_war_iron_curtain]
+    1985  spaag_4
+          [from: cold_war_iron_curtain]
+    1985  light_artillery_4
+          [from: cold_war_iron_curtain]
+    1985  heavy_artillery_4
+          [from: cold_war_iron_curtain]
+    1985  tank_destroyer_4
+          [from: cold_war_iron_curtain]
+    1990  cannon_ammo_4
+          [from: cold_war_iron_curtain]
+    1990  aa_upgrade_4
+          [from: cold_war_iron_curtain]
+    1990  art_ammo_4
+          [from: cold_war_iron_curtain]
+    1990  art_upgrade_4
+          [from: cold_war_iron_curtain]
+    1990  at_ammo_4
+          [from: cold_war_iron_curtain]
+    1990  at_upgrade_4
+          [from: cold_war_iron_curtain]
+    1990  sp_artillery_4
+          [from: cold_war_iron_curtain]
+    1990  light_sp_artillery_4
+          [from: cold_war_iron_curtain]
+    1990  heavy_sp_artillery_4
+          [from: cold_war_iron_curtain]
+    1995  autocannon_5
+          [from: cold_war_iron_curtain]
+    1995  artillery_5
+          [from: cold_war_iron_curtain]
+    1995  direct_fire_gun_5
+          [from: cold_war_iron_curtain]
+    2000  spaag_5
+          [from: cold_war_iron_curtain]
+    2000  light_artillery_5
+          [from: cold_war_iron_curtain]
+    2000  heavy_artillery_5
+          [from: cold_war_iron_curtain]
+    2000  tank_destroyer_5
+          [from: cold_war_iron_curtain]
+    2005  cannon_ammo_5
+          [from: cold_war_iron_curtain]
+    2005  aa_upgrade_5
+          [from: cold_war_iron_curtain]
+    2005  art_ammo_5
+          [from: cold_war_iron_curtain]
+    2005  art_upgrade_5
+          [from: cold_war_iron_curtain]
+    2005  at_ammo_5
+          [from: cold_war_iron_curtain]
+    2005  at_upgrade_5
+          [from: cold_war_iron_curtain]
+    2005  sp_artillery_5
+          [from: cold_war_iron_curtain]
+    2005  light_sp_artillery_5
+          [from: cold_war_iron_curtain]
+    2005  heavy_sp_artillery_5
+          [from: cold_war_iron_curtain]
+
+  [land / heavy_tanks] — 20 techs
+    1934  basic_heavy_tank
+    1934  basic_heavy_tank_chassis
+    1940  improved_heavy_tank_chassis
+    1941  improved_heavy_tank
+    1941  super_heavy_tank
+    1941  super_heavy_tank_chassis
+    1942  heavy_tanks_1
+          [from: cold_war_iron_curtain]
+    1943  advanced_heavy_tank
+    1943  advanced_heavy_tank_chassis
+    1943  sp_armored_lc_naval_engine_conversion_tech
+    1943  sp_armored_lc_transmission_improvements_tech
+    1943  sp_armored_lc_specialized_field_manuals_tech
+    1943  sp_armored_lc_high_impact_obliterator_cannon_tech
+    1944  heavy_tanks_2
+          [from: cold_war_iron_curtain]
+    1944  super_heavy_tanks_1
+          [from: cold_war_iron_curtain]
+    1945  sp_armored_lc_weapon_fire_control_tech
+    1947  heavy_tanks_3
+          [from: cold_war_iron_curtain]
+    1947  super_heavy_tanks_2
+          [from: cold_war_iron_curtain]
+    1950  heavy_tanks_4
+          [from: cold_war_iron_curtain]
+    1960  heavy_tanks_5
+          [from: cold_war_iron_curtain]
+
+  [land / infantry] — 147 techs
+    1918  infantry_weapons
+    1918  support_weapons
+    1935  infantry_equip_1
+          [from: cold_war_iron_curtain]
+    1935  mountain_warfare_1
+          [from: cold_war_iron_curtain]
+    1935  amphibious_warfare_1
+          [from: cold_war_iron_curtain]
+    1936  infantry_weapons1
+    1936  paratroopers
+    1936  marines
+    1936  tech_mountaineers
+    1936  rangers_tech
+    1938  infantry_weapons2
+    1938  tech_special_forces
+    1938  support_weapons2
+    1939  improved_infantry_weapons
+    1939  paratroopers2
+    1939  marines2
+    1939  tech_mountaineers2
+    1939  rangers_tech2
+    1940  improved_infantry_weapons_2
+    1940  advanced_special_forces
+    1940  improved_special_forces
+    1940  support_weapons3
+    1940  squad_weapons_1
+          [from: cold_war_iron_curtain]
+    1940  team_weapons_1
+          [from: cold_war_iron_curtain]
+    1940  specialist_1
+          [from: cold_war_iron_curtain]
+    1940  ammo_explosives_1
+          [from: cold_war_iron_curtain]
+    1940  army_sp_forces_1
+          [from: cold_war_iron_curtain]
+    1940  airborne_operations_1
+          [from: cold_war_iron_curtain]
+    1940  amphibious_warfare_2
+          [from: cold_war_iron_curtain]
+    1940  landing_craft_1
+          [from: cold_war_iron_curtain]
+    1940  combat_divers_1
+          [from: cold_war_iron_curtain]
+    1942  infantry_at
+    1942  advanced_infantry_weapons
+    1942  extreme_environment_training
+    1942  survival_training
+    1942  support_weapons4
+    1942  motorised_infantry
+          [from: cold_war_iron_curtain]
+    1943  infantry_at2
+    1943  paratroopers3
+    1943  marines3
+    1943  tech_mountaineers3
+    1943  rangers_tech3
+    1944  advanced_infantry_weapons2
+    1944  elite_forces
+    1944  mechanized_infantry
+          [from: cold_war_iron_curtain]
+    1944  mechanized_infantry2
+          [from: cold_war_iron_curtain]
+    1944  amphibious1
+          [from: cold_war_iron_curtain]
+    1945  manpats_1
+          [from: cold_war_iron_curtain]
+    1945  hmg_1
+          [from: cold_war_iron_curtain]
+    1945  protection_equip_1
+          [from: cold_war_iron_curtain]
+    1945  desert_warfare_1
+          [from: cold_war_iron_curtain]
+    1945  mountain_warfare_2
+          [from: cold_war_iron_curtain]
+    1945  cover_air_operations_1
+          [from: cold_war_iron_curtain]
+    1945  landing_craft_2
+          [from: cold_war_iron_curtain]
+    1945  amphibious_warfare_3
+          [from: cold_war_iron_curtain]
+    1947  mechanized_infantry3
+          [from: cold_war_iron_curtain]
+    1947  mechanized_heavy_infantry
+          [from: cold_war_iron_curtain]
+    1947  motorised_infantry_2
+          [from: cold_war_iron_curtain]
+    1950  mechanized_infantry4
+          [from: cold_war_iron_curtain]
+    1950  amphibious2
+          [from: cold_war_iron_curtain]
+    1950  infantry_equip_2
+          [from: cold_war_iron_curtain]
+    1950  army_sp_forces_2
+          [from: cold_war_iron_curtain]
+    1950  airborne_operations_2
+          [from: cold_war_iron_curtain]
+    1950  combat_divers_2
+          [from: cold_war_iron_curtain]
+    1950  mechanized_heavy_infantry2
+          [from: cold_war_iron_curtain]
+    1955  squad_weapons_2
+          [from: cold_war_iron_curtain]
+    1955  team_weapons_2
+          [from: cold_war_iron_curtain]
+    1955  specialist_2
+          [from: cold_war_iron_curtain]
+    1955  ammo_explosives_2
+          [from: cold_war_iron_curtain]
+    1960  motorised_infantry_3
+          [from: cold_war_iron_curtain]
+    1960  desert_warfare_2
+          [from: cold_war_iron_curtain]
+    1960  mountain_warfare_3
+          [from: cold_war_iron_curtain]
+    1960  cover_air_operations_2
+          [from: cold_war_iron_curtain]
+    1960  amphibious_warfare_4
+          [from: cold_war_iron_curtain]
+    1960  landing_craft_3
+          [from: cold_war_iron_curtain]
+    1960  mechanized_infantry5
+          [from: cold_war_iron_curtain]
+    1960  mechanized_heavy_infantry3
+          [from: cold_war_iron_curtain]
+    1960  manpats_2
+          [from: cold_war_iron_curtain]
+    1960  manpads_1
+          [from: cold_war_iron_curtain]
+    1960  protection_equip_2
+          [from: cold_war_iron_curtain]
+    1960  air_assault_operations_1
+          [from: cold_war_iron_curtain]
+    1965  infantry_equip_3
+          [from: cold_war_iron_curtain]
+    1965  army_sp_forces_3
+          [from: cold_war_iron_curtain]
+    1965  airborne_operations_3
+          [from: cold_war_iron_curtain]
+    1965  combat_divers_3
+          [from: cold_war_iron_curtain]
+    1965  mechanized_infantry6
+          [from: cold_war_iron_curtain]
+    1965  mechanized_heavy_infantry4
+          [from: cold_war_iron_curtain]
+    1965  amphibious3
+          [from: cold_war_iron_curtain]
+    1970  army_sp_forces_4
+          [from: cold_war_iron_curtain]
+    1970  squad_weapons_3
+          [from: cold_war_iron_curtain]
+    1970  team_weapons_3
+          [from: cold_war_iron_curtain]
+    1970  specialist_3
+          [from: cold_war_iron_curtain]
+    1970  ammo_explosives_3
+          [from: cold_war_iron_curtain]
+    1975  mountain_warfare_4
+          [from: cold_war_iron_curtain]
+    1975  air_assault_operations_2
+          [from: cold_war_iron_curtain]
+    1975  cover_air_operations_3
+          [from: cold_war_iron_curtain]
+    1975  amphibious_warfare_5
+          [from: cold_war_iron_curtain]
+    1975  landing_craft_4
+          [from: cold_war_iron_curtain]
+    1975  mechanized_heavy_infantry5
+          [from: cold_war_iron_curtain]
+    1975  motorised_infantry_4
+          [from: cold_war_iron_curtain]
+    1975  mechanized_infantry7
+          [from: cold_war_iron_curtain]
+    1975  manpats_3
+          [from: cold_war_iron_curtain]
+    1975  manpads_2
+          [from: cold_war_iron_curtain]
+    1975  protection_equip_3
+          [from: cold_war_iron_curtain]
+    1980  infantry_equip_4
+          [from: cold_war_iron_curtain]
+    1980  airborne_operations_4
+          [from: cold_war_iron_curtain]
+    1980  combat_divers_4
+          [from: cold_war_iron_curtain]
+    1985  mechanized_infantry8
+          [from: cold_war_iron_curtain]
+    1985  mechanized_heavy_infantry6
+          [from: cold_war_iron_curtain]
+    1985  amphibious4
+          [from: cold_war_iron_curtain]
+    1985  squad_weapons_4
+          [from: cold_war_iron_curtain]
+    1985  team_weapons_4
+          [from: cold_war_iron_curtain]
+    1985  specialist_4
+          [from: cold_war_iron_curtain]
+    1985  ammo_explosives_4
+          [from: cold_war_iron_curtain]
+    1990  desert_warfare_3
+          [from: cold_war_iron_curtain]
+    1990  mountain_warfare_5
+          [from: cold_war_iron_curtain]
+    1990  air_assault_operations_3
+          [from: cold_war_iron_curtain]
+    1990  cover_air_operations_4
+          [from: cold_war_iron_curtain]
+    1990  amphibious_warfare_6
+          [from: cold_war_iron_curtain]
+    1990  landing_craft_5
+          [from: cold_war_iron_curtain]
+    1990  manpats_4
+          [from: cold_war_iron_curtain]
+    1990  manpads_3
+          [from: cold_war_iron_curtain]
+    1990  protection_equip_4
+          [from: cold_war_iron_curtain]
+    1995  army_sp_forces_5
+          [from: cold_war_iron_curtain]
+    1995  airborne_operations_5
+          [from: cold_war_iron_curtain]
+    1995  combat_divers_5
+          [from: cold_war_iron_curtain]
+    1995  mechanized_infantry9
+          [from: cold_war_iron_curtain]
+    1995  mechanized_heavy_infantry7
+          [from: cold_war_iron_curtain]
+    1995  motorised_infantry_5
+          [from: cold_war_iron_curtain]
+    1995  infantry_equip_5
+          [from: cold_war_iron_curtain]
+    2000  army_sp_forces_6
+          [from: cold_war_iron_curtain]
+    2000  squad_weapons_5
+          [from: cold_war_iron_curtain]
+    2000  team_weapons_5
+          [from: cold_war_iron_curtain]
+    2000  specialist_5
+          [from: cold_war_iron_curtain]
+    2000  ammo_explosives_5
+          [from: cold_war_iron_curtain]
+    2005  desert_warfare_4
+          [from: cold_war_iron_curtain]
+    2005  mountain_warfare_6
+          [from: cold_war_iron_curtain]
+    2005  cover_air_operations_5
+          [from: cold_war_iron_curtain]
+    2005  landing_craft_6
+          [from: cold_war_iron_curtain]
+    2005  combat_divers_6
+          [from: cold_war_iron_curtain]
+    2005  mechanized_infantry10
+          [from: cold_war_iron_curtain]
+    2005  mechanized_heavy_infantry8
+          [from: cold_war_iron_curtain]
+    2005  amphibious5
+          [from: cold_war_iron_curtain]
+    2005  airborne_operations_6
+          [from: cold_war_iron_curtain]
+    2005  manpats_5
+          [from: cold_war_iron_curtain]
+    2005  manpads_4
+          [from: cold_war_iron_curtain]
+    2005  protection_equip_5
+          [from: cold_war_iron_curtain]
+
+  [land / light_tanks] — 14 techs
+    1918  gwtank
+    1918  gwtank_chassis
+    1934  basic_light_tank
+    1934  basic_light_tank_chassis
+    1936  improved_light_tank
+    1936  improved_light_tank_chassis
+    1941  advanced_light_tank
+    1941  advanced_light_tank_chassis
+    1942  light_tanks_1
+          [from: cold_war_iron_curtain]
+    1944  light_tanks_2
+          [from: cold_war_iron_curtain]
+    1947  light_tanks_3
+          [from: cold_war_iron_curtain]
+    1960  light_tanks_4
+          [from: cold_war_iron_curtain]
+    1975  light_tanks_5
+          [from: cold_war_iron_curtain]
+    1995  light_tanks_6
+          [from: cold_war_iron_curtain]
+
+  [land / mechanised] — 5 techs
+    1940  mechanised_infantry
+    1941  amphibious_mechanized_infantry
+    1942  mechanised_infantry2
+    1943  amphibious_mechanized_infantry_2
+    1944  mechanised_infantry3
+
+  [land / medium_tanks] — 16 techs
+    1938  basic_medium_tank_chassis
+    1939  basic_medium_tank
+    1940  improved_medium_tank_chassis
+    1941  improved_medium_tank
+    1942  main_battle_tanks
+          [from: cold_war_iron_curtain]
+    1943  advanced_medium_tank
+    1943  advanced_medium_tank_chassis
+    1944  main_battle_tanks_1
+          [from: cold_war_iron_curtain]
+    1947  main_battle_tanks_2
+          [from: cold_war_iron_curtain]
+    1950  main_battle_tanks_3
+          [from: cold_war_iron_curtain]
+    1960  main_battle_tanks_4
+          [from: cold_war_iron_curtain]
+    1965  main_battle_tanks_5
+          [from: cold_war_iron_curtain]
+    1975  main_battle_tanks_6
+          [from: cold_war_iron_curtain]
+    1985  main_battle_tanks_7
+          [from: cold_war_iron_curtain]
+    1995  main_battle_tanks_8
+          [from: cold_war_iron_curtain]
+    2005  main_battle_tanks_9
+          [from: cold_war_iron_curtain]
+
+  [land / modern_tanks] — 2 techs
+    1945  main_battle_tank
+    1945  main_battle_tank_chassis
+
+  [land / motorised] — 1 techs
+    1936  tech_trucks
+
+  [land / support] — 82 techs
+    1910  basic_train
+          [from: cold_war_iron_curtain]
+    1935  tech_support
+          [from: cold_war_iron_curtain]
+    1936  tech_recon_focus_bonus
+    1938  sp_armored_engineer_tech
+    1938  sp_armored_maintenance_tech
+    1938  sp_armored_signal_tech
+    1938  sp_helicopter_transport_pods_tech
+    1938  sp_helicopter_artillery_observers_tech
+    1938  sp_helicopter_med_evac_tech
+    1938  sp_armored_motorized_military_police_tech
+    1940  combat_support
+          [from: cold_war_iron_curtain]
+    1940  combat_service_support
+          [from: cold_war_iron_curtain]
+    1943  night_vision
+    1945  tech_engineers
+          [from: cold_war_iron_curtain]
+    1945  tech_recon
+          [from: cold_war_iron_curtain]
+    1945  tech_military_police
+          [from: cold_war_iron_curtain]
+    1945  tech_armor_engineers
+          [from: cold_war_iron_curtain]
+    1945  tech_mech_recon
+          [from: cold_war_iron_curtain]
+    1945  tech_signal_company
+          [from: cold_war_iron_curtain]
+    1945  tech_logistics_company
+          [from: cold_war_iron_curtain]
+    1945  tech_field_hospital
+          [from: cold_war_iron_curtain]
+    1946  night_vision2
+    1950  tech_engineers2
+          [from: cold_war_iron_curtain]
+    1950  tech_recon2
+          [from: cold_war_iron_curtain]
+    1950  tech_military_police2
+          [from: cold_war_iron_curtain]
+    1950  tech_signal_company2
+          [from: cold_war_iron_curtain]
+    1950  tech_logistics_company2
+          [from: cold_war_iron_curtain]
+    1950  tech_field_hospital2
+          [from: cold_war_iron_curtain]
+    1950  tech_armor_engineers2
+          [from: cold_war_iron_curtain]
+    1950  tech_mech_recon2
+          [from: cold_war_iron_curtain]
+    1960  tech_engineers3
+          [from: cold_war_iron_curtain]
+    1960  tech_recon3
+          [from: cold_war_iron_curtain]
+    1960  tech_military_police3
+          [from: cold_war_iron_curtain]
+    1960  wartime_train
+          [from: cold_war_iron_curtain]
+    1960  tech_signal_company3
+          [from: cold_war_iron_curtain]
+    1960  tech_logistics_company3
+          [from: cold_war_iron_curtain]
+    1960  tech_field_hospital3
+          [from: cold_war_iron_curtain]
+    1960  tech_field_hospital_helicopter3
+          [from: cold_war_iron_curtain]
+    1960  tech_armor_engineers3
+          [from: cold_war_iron_curtain]
+    1960  tech_mech_recon3
+          [from: cold_war_iron_curtain]
+    1960  tech_logistics_company_helicopter3
+          [from: cold_war_iron_curtain]
+    1970  tech_engineers4
+          [from: cold_war_iron_curtain]
+    1970  tech_recon4
+          [from: cold_war_iron_curtain]
+    1970  tech_military_police4
+          [from: cold_war_iron_curtain]
+    1970  tech_signal_company4
+          [from: cold_war_iron_curtain]
+    1970  tech_logistics_company4
+          [from: cold_war_iron_curtain]
+    1970  tech_field_hospital4
+          [from: cold_war_iron_curtain]
+    1970  tech_field_hospital_helicopter4
+          [from: cold_war_iron_curtain]
+    1970  tech_armor_engineers4
+          [from: cold_war_iron_curtain]
+    1970  tech_mech_recon4
+          [from: cold_war_iron_curtain]
+    1970  tech_logistics_company_helicopter4
+          [from: cold_war_iron_curtain]
+    1980  tech_engineers5
+          [from: cold_war_iron_curtain]
+    1980  tech_recon5
+          [from: cold_war_iron_curtain]
+    1980  tech_military_police5
+          [from: cold_war_iron_curtain]
+    1980  tech_signal_company5
+          [from: cold_war_iron_curtain]
+    1980  tech_logistics_company5
+          [from: cold_war_iron_curtain]
+    1980  tech_field_hospital5
+          [from: cold_war_iron_curtain]
+    1980  tech_field_hospital_helicopter5
+          [from: cold_war_iron_curtain]
+    1980  tech_armor_engineers5
+          [from: cold_war_iron_curtain]
+    1980  tech_mech_recon5
+          [from: cold_war_iron_curtain]
+    1980  tech_logistics_company_helicopter5
+          [from: cold_war_iron_curtain]
+    1990  tech_engineers6
+          [from: cold_war_iron_curtain]
+    1990  tech_recon6
+          [from: cold_war_iron_curtain]
+    1990  tech_military_police6
+          [from: cold_war_iron_curtain]
+    1990  tech_signal_company6
+          [from: cold_war_iron_curtain]
+    1990  tech_logistics_company6
+          [from: cold_war_iron_curtain]
+    1990  tech_field_hospital6
+          [from: cold_war_iron_curtain]
+    1990  tech_field_hospital_helicopter6
+          [from: cold_war_iron_curtain]
+    1990  tech_armor_engineers6
+          [from: cold_war_iron_curtain]
+    1990  tech_mech_recon6
+          [from: cold_war_iron_curtain]
+    1990  tech_logistics_company_helicopter6
+          [from: cold_war_iron_curtain]
+    2000  tech_engineers7
+          [from: cold_war_iron_curtain]
+    2000  tech_recon7
+          [from: cold_war_iron_curtain]
+    2000  tech_military_police7
+          [from: cold_war_iron_curtain]
+    2000  armored_train
+          [from: cold_war_iron_curtain]
+    2000  tech_signal_company7
+          [from: cold_war_iron_curtain]
+    2000  tech_logistics_company7
+          [from: cold_war_iron_curtain]
+    2000  tech_field_hospital7
+          [from: cold_war_iron_curtain]
+    2000  tech_field_hospital_helicopter7
+          [from: cold_war_iron_curtain]
+    2000  tech_armor_engineers7
+          [from: cold_war_iron_curtain]
+    2000  tech_mech_recon7
+          [from: cold_war_iron_curtain]
+    2000  tech_logistics_company_helicopter7
+          [from: cold_war_iron_curtain]
+
+  [land / tanks_generic] — 63 techs
+    1914  armored_car1
+    1918  iw_armored_vehicles
+          [from: cold_war_iron_curtain]
+    1934  basic_light_td
+    1934  basic_light_art
+    1934  basic_light_spaa
+    1934  basic_heavy_td
+    1934  basic_heavy_art
+    1934  basic_heavy_spaa
+    1934  engine_tech_1
+    1936  improved_light_td
+    1936  improved_light_art
+    1936  improved_light_spaa
+    1936  JAP_lighter_tanks
+    1936  GER_heavy_armored_car
+    1936  armor_tech_1
+    1936  NOR_rikstanken_tech
+    1938  amphibious_tank_chassis
+    1938  armor_tech_2
+    1938  engine_tech_2
+    1939  basic_medium_td
+    1939  basic_medium_art
+    1939  basic_medium_spaa
+    1940  amphibious_tank
+    1940  armored_car2
+    1941  advanced_light_td
+    1941  advanced_light_art
+    1941  advanced_light_spaa
+    1941  improved_medium_td
+    1941  improved_medium_art
+    1941  improved_medium_spaa
+    1941  improved_heavy_td
+    1941  improved_heavy_art
+    1941  improved_heavy_spaa
+    1941  amphibious_drive
+    1941  armor_tech_3
+    1941  engine_tech_3
+    1941  sp_armored_advanced_flamethrower_tech
+    1942  amphibious_tank_2
+    1942  armored_car3
+    1942  armored_car_at_upgrade
+    1942  SWE_lynx_armored_car
+    1943  advanced_medium_td
+    1943  advanced_medium_art
+    1943  advanced_medium_spaa
+    1943  advanced_heavy_td
+    1943  advanced_heavy_art
+    1943  advanced_heavy_spaa
+    1943  super_heavy_td
+    1943  super_heavy_art
+    1943  super_heavy_spaa
+    1944  armor_tech_4
+    1944  engine_tech_4
+    1945  modern_td
+    1945  modern_art
+    1945  modern_spaa
+    1945  tech_maintenance_company
+          [from: cold_war_iron_curtain]
+    1950  tech_maintenance_company2
+          [from: cold_war_iron_curtain]
+    1960  tech_maintenance_company3
+          [from: cold_war_iron_curtain]
+    1960  super_heavy_tanks_3
+          [from: cold_war_iron_curtain]
+    1970  tech_maintenance_company4
+          [from: cold_war_iron_curtain]
+    1980  tech_maintenance_company5
+          [from: cold_war_iron_curtain]
+    1990  tech_maintenance_company6
+          [from: cold_war_iron_curtain]
+    2000  tech_maintenance_company7
+          [from: cold_war_iron_curtain]
+
+  [naval / battleships] — 15 techs
+    1922  early_ship_hull_heavy
+    1922  early_battlecruiser
+    1922  early_battleship
+    1936  basic_ship_hull_heavy
+    1936  ship_hull_super_heavy
+    1936  basic_heavy_armor_scheme (XP)
+    1936  improved_heavy_armor_scheme (XP)
+    1936  basic_battleship
+    1936  heavy_battleship
+    1939  improved_ship_hull_heavy
+    1940  basic_battlecruiser
+    1940  improved_battleship
+    1943  advanced_ship_hull_heavy
+    1944  advanced_battleship
+    1944  heavy_battleship2
+
+  [naval / carriers] — 34 techs
+    1922  early_ship_hull_carrier
+    1922  early_carrier
+    1935  ww_carriers
+          [from: cold_war_iron_curtain]
+    1936  basic_ship_hull_carrier
+    1936  basic_carrier
+    1939  improved_ship_hull_carrier
+    1940  improved_carrier
+    1940  carrier_hull_0
+          [from: cold_war_iron_curtain]
+    1942  sp_refined_pykrete
+    1943  advanced_ship_hull_carrier
+    1944  sp_ice_composite_runawayas
+    1944  advanced_carrier
+    1945  carrier_hull_light_0
+          [from: cold_war_iron_curtain]
+    1950  carrier_0
+          [from: cold_war_iron_curtain]
+    1955  carrier_hull_1
+          [from: cold_war_iron_curtain]
+    1960  carrier_hull_light_1
+          [from: cold_war_iron_curtain]
+    1960  carrier_hull_super_1
+          [from: cold_war_iron_curtain]
+    1960  supercarrier_0
+          [from: cold_war_iron_curtain]
+    1960  carrier_1
+          [from: cold_war_iron_curtain]
+    1970  carrier_hull_2
+          [from: cold_war_iron_curtain]
+    1970  carrier_2
+          [from: cold_war_iron_curtain]
+    1975  carrier_hull_light_2
+          [from: cold_war_iron_curtain]
+    1975  carrier_hull_super_2
+          [from: cold_war_iron_curtain]
+    1980  carrier_3
+          [from: cold_war_iron_curtain]
+    1980  supercarrier_1
+          [from: cold_war_iron_curtain]
+    1985  carrier_hull_3
+          [from: cold_war_iron_curtain]
+    1990  carrier_hull_light_3
+          [from: cold_war_iron_curtain]
+    1990  carrier_hull_super_3
+          [from: cold_war_iron_curtain]
+    1990  carrier_4
+          [from: cold_war_iron_curtain]
+    2000  carrier_hull_4
+          [from: cold_war_iron_curtain]
+    2000  supercarrier_2
+          [from: cold_war_iron_curtain]
+    2000  carrier_5
+          [from: cold_war_iron_curtain]
+    2005  carrier_hull_light_4
+          [from: cold_war_iron_curtain]
+    2005  carrier_hull_super_4
+          [from: cold_war_iron_curtain]
+
+  [naval / destroyers] — 17 techs
+    1922  early_ship_hull_light
+    1922  smoke_generator
+    1922  basic_depth_charges (XP)
+    1922  sonar
+    1922  early_destroyer
+    1936  basic_ship_hull_light
+    1936  improved_depth_charges (XP)
+    1936  improved_sonar
+    1936  basic_destroyer
+    1939  improved_ship_hull_light
+    1939  advanced_depth_charges (XP)
+    1939  advanced_sonar
+    1940  improved_destroyer
+    1943  advanced_ship_hull_light
+    1943  modern_depth_charges (XP)
+    1943  modern_sonar
+    1944  advanced_destroyer
+
+  [naval / heavy_cruisers] — 5 techs
+    1922  basic_cruiser_armor_scheme (XP)
+    1922  early_heavy_cruiser
+    1936  basic_heavy_cruiser
+    1940  improved_heavy_cruiser
+    1944  advanced_heavy_cruiser
+
+  [naval / light_cruisers] — 8 techs
+    1922  early_ship_hull_cruiser
+    1922  early_light_cruiser
+    1936  basic_ship_hull_cruiser
+    1936  basic_light_cruiser
+    1939  improved_ship_hull_cruiser
+    1940  improved_light_cruiser
+    1943  advanced_ship_hull_cruiser
+    1944  advanced_light_cruiser
+
+  [naval / naval_support] — 104 techs
+    1922  basic_torpedo
+    1922  basic_naval_mines
+    1922  submarine_mine_laying
+    1922  mtg_transport
+    1922  transport
+    1935  ww_armaments
+          [from: cold_war_iron_curtain]
+    1935  detection_ww
+          [from: cold_war_iron_curtain]
+    1936  magnetic_detonator (XP)
+    1936  improved_ship_torpedo_launcher
+    1936  damage_control_1 (XP)
+    1936  damage_control_2 (XP)
+    1936  damage_control_3 (XP)
+    1936  fire_control_methods_1 (XP)
+    1936  fire_control_methods_2 (XP)
+    1936  fire_control_methods_3 (XP)
+    1936  improved_naval_mines
+    1938  degaussing
+    1938  sp_multi_product_supply_ships (XP)
+    1940  advanced_ship_torpedo_launcher
+    1940  improved_submarine_mine_laying
+    1940  advanced_naval_mines
+    1940  mtg_landing_craft
+    1940  landing_craft
+    1940  conventional_sub_engines_0
+          [from: cold_war_iron_curtain]
+    1940  ship_armament_light_0
+          [from: cold_war_iron_curtain]
+    1940  ship_armament_medium_0
+          [from: cold_war_iron_curtain]
+    1940  subkiller_0
+          [from: cold_war_iron_curtain]
+    1942  homing_torpedo (XP)
+    1942  airdrop_mines
+    1942  airdrop_mines_bba
+    1942  airsweep_mines
+    1942  airsweep_mines_bba
+    1942  sp_improved_support_ship (XP)
+    1942  sp_improved_repair_ship (XP)
+    1943  sp_standard_tenshioned_replenishment_alongside_method (XP)
+    1944  modern_ship_torpedo_launcher
+    1944  mtg_tank_landing_craft
+    1944  tank_landing_craft
+    1945  radar_aa_0
+          [from: cold_war_iron_curtain]
+    1945  radar_naval_0
+          [from: cold_war_iron_curtain]
+    1945  countermeasures_0
+          [from: cold_war_iron_curtain]
+    1945  maritime_sonar_0
+          [from: cold_war_iron_curtain]
+    1950  ship_armament_heavy_0
+          [from: cold_war_iron_curtain]
+    1950  subkiller_1
+          [from: cold_war_iron_curtain]
+    1955  naval_helicopter_1
+          [from: cold_war_iron_curtain]
+    1955  conventional_sub_engines_1
+          [from: cold_war_iron_curtain]
+    1955  ship_armament_medium_1
+          [from: cold_war_iron_curtain]
+    1955  countermeasures_1
+          [from: cold_war_iron_curtain]
+    1955  radar_aa_1
+          [from: cold_war_iron_curtain]
+    1955  radar_naval_1
+          [from: cold_war_iron_curtain]
+    1955  maritime_sonar_1
+          [from: cold_war_iron_curtain]
+    1960  nuclear_sub_engines_0
+          [from: cold_war_iron_curtain]
+    1960  nuclear_sub_engines_1
+          [from: cold_war_iron_curtain]
+    1960  nuclear_sub_engines_2
+          [from: cold_war_iron_curtain]
+    1960  sub_batteries_0
+          [from: cold_war_iron_curtain]
+    1960  ship_armament_light_1
+          [from: cold_war_iron_curtain]
+    1960  subkiller_2
+          [from: cold_war_iron_curtain]
+    1960  naval_helicopter_2
+          [from: cold_war_iron_curtain]
+    1965  ship_armament_super_heavy_0
+          [from: cold_war_iron_curtain]
+    1965  naval_helicopter_3
+          [from: cold_war_iron_curtain]
+    1965  ship_armament_heavy_1
+          [from: cold_war_iron_curtain]
+    1965  radar_naval_2
+          [from: cold_war_iron_curtain]
+    1965  countermeasures_2
+          [from: cold_war_iron_curtain]
+    1970  conventional_sub_engines_2
+          [from: cold_war_iron_curtain]
+    1970  ship_armament_aa_2
+          [from: cold_war_iron_curtain]
+    1970  ship_armament_medium_2
+          [from: cold_war_iron_curtain]
+    1970  maritime_sonar_2
+          [from: cold_war_iron_curtain]
+    1970  subkiller_3
+          [from: cold_war_iron_curtain]
+    1970  radar_aa_2
+          [from: cold_war_iron_curtain]
+    1975  naval_helicopter_4
+          [from: cold_war_iron_curtain]
+    1975  ship_armament_light_2
+          [from: cold_war_iron_curtain]
+    1975  radar_naval_3
+          [from: cold_war_iron_curtain]
+    1975  countermeasures_3
+          [from: cold_war_iron_curtain]
+    1980  sub_batteries_1
+          [from: cold_war_iron_curtain]
+    1980  ship_armament_super_heavy_1
+          [from: cold_war_iron_curtain]
+    1980  ship_armament_heavy_2
+          [from: cold_war_iron_curtain]
+    1980  subkiller_4
+          [from: cold_war_iron_curtain]
+    1985  conventional_sub_engines_3
+          [from: cold_war_iron_curtain]
+    1985  naval_helicopter_5
+          [from: cold_war_iron_curtain]
+    1985  ship_armament_aa_3
+          [from: cold_war_iron_curtain]
+    1985  radar_aa_3
+          [from: cold_war_iron_curtain]
+    1985  radar_naval_4
+          [from: cold_war_iron_curtain]
+    1985  maritime_sonar_3
+          [from: cold_war_iron_curtain]
+    1985  countermeasures_4
+          [from: cold_war_iron_curtain]
+    1990  ship_armament_medium_3
+          [from: cold_war_iron_curtain]
+    1990  subkiller_5
+          [from: cold_war_iron_curtain]
+    1990  ship_armament_light_3
+          [from: cold_war_iron_curtain]
+    1995  naval_helicopter_6
+          [from: cold_war_iron_curtain]
+    1995  naval_uav_1
+          [from: cold_war_iron_curtain]
+    1995  ship_armament_heavy_3
+          [from: cold_war_iron_curtain]
+    1995  radar_naval_5
+          [from: cold_war_iron_curtain]
+    1995  countermeasures_5
+          [from: cold_war_iron_curtain]
+    2000  conventional_sub_engines_4
+          [from: cold_war_iron_curtain]
+    2000  sub_batteries_2
+          [from: cold_war_iron_curtain]
+    2000  naval_uav_2
+          [from: cold_war_iron_curtain]
+    2000  ship_armament_aa_4
+          [from: cold_war_iron_curtain]
+    2000  ship_armament_light_4
+          [from: cold_war_iron_curtain]
+    2000  ship_armament_medium_4
+          [from: cold_war_iron_curtain]
+    2000  radar_aa_4
+          [from: cold_war_iron_curtain]
+    2000  maritime_sonar_4
+          [from: cold_war_iron_curtain]
+    2000  subkiller_6
+          [from: cold_war_iron_curtain]
+    2005  naval_helicopter_7
+          [from: cold_war_iron_curtain]
+    2005  naval_uav_3
+          [from: cold_war_iron_curtain]
+    2005  countermeasures_6
+          [from: cold_war_iron_curtain]
+
+  [naval / submarines] — 65 techs
+    1922  early_ship_hull_submarine
+    1922  early_submarine
+    1935  ww_submarines
+          [from: cold_war_iron_curtain]
+    1935  torpedo_ww
+          [from: cold_war_iron_curtain]
+    1936  basic_ship_hull_submarine
+    1936  basic_submarine
+    1939  improved_ship_hull_submarine
+    1939  basic_submarine_snorkel
+    1939  sp_aip_engine_improved_tech
+    1940  improved_submarine
+    1940  ww_submarines_proletariat
+          [from: cold_war_iron_curtain]
+    1943  advanced_ship_hull_submarine
+    1943  improved_submarine_snorkel (XP)
+    1943  sp_aip_engine_advanced_tech
+    1944  advanced_submarine
+    1944  sub_hull_large_single_0
+          [from: cold_war_iron_curtain]
+    1945  torpedo_small_0
+          [from: cold_war_iron_curtain]
+    1950  sub_hull_small_single_0
+          [from: cold_war_iron_curtain]
+    1950  attack_submarine_0
+          [from: cold_war_iron_curtain]
+    1950  ballistic_submarine_0
+          [from: cold_war_iron_curtain]
+    1955  sub_hull_large_single_1
+          [from: cold_war_iron_curtain]
+    1955  heavy_sam_0
+          [from: cold_war_iron_curtain]
+    1955  ashm_0
+          [from: cold_war_iron_curtain]
+    1960  sub_hull_large_double_0
+          [from: cold_war_iron_curtain]
+    1960  torpedo_large_0
+          [from: cold_war_iron_curtain]
+    1960  torpedo_small_1
+          [from: cold_war_iron_curtain]
+    1960  attack_submarine_1
+          [from: cold_war_iron_curtain]
+    1960  ballistic_submarine_1
+          [from: cold_war_iron_curtain]
+    1965  sub_hull_large_single_2
+          [from: cold_war_iron_curtain]
+    1965  sub_hull_small_single_1
+          [from: cold_war_iron_curtain]
+    1965  heavy_sam_1
+          [from: cold_war_iron_curtain]
+    1965  ashm_1
+          [from: cold_war_iron_curtain]
+    1970  sub_hull_large_double_1
+          [from: cold_war_iron_curtain]
+    1970  light_sam_0
+          [from: cold_war_iron_curtain]
+    1970  dual_purpose_arm_0
+          [from: cold_war_iron_curtain]
+    1970  ballistic_submarine_2
+          [from: cold_war_iron_curtain]
+    1970  attack_submarine_2
+          [from: cold_war_iron_curtain]
+    1975  sub_hull_large_single_3
+          [from: cold_war_iron_curtain]
+    1975  torpedo_large_1
+          [from: cold_war_iron_curtain]
+    1975  heavy_sam_2
+          [from: cold_war_iron_curtain]
+    1975  ashm_2
+          [from: cold_war_iron_curtain]
+    1975  torpedo_small_2
+          [from: cold_war_iron_curtain]
+    1980  sub_hull_small_single_2
+          [from: cold_war_iron_curtain]
+    1980  sub_hull_large_double_2
+          [from: cold_war_iron_curtain]
+    1980  vls_0
+          [from: cold_war_iron_curtain]
+    1980  attack_submarine_3
+          [from: cold_war_iron_curtain]
+    1980  ballistic_submarine_3
+          [from: cold_war_iron_curtain]
+    1985  sub_hull_large_single_4
+          [from: cold_war_iron_curtain]
+    1985  heavy_sam_3
+          [from: cold_war_iron_curtain]
+    1985  light_sam_1
+          [from: cold_war_iron_curtain]
+    1985  ashm_3
+          [from: cold_war_iron_curtain]
+    1990  torpedo_large_2
+          [from: cold_war_iron_curtain]
+    1990  torpedo_small_3
+          [from: cold_war_iron_curtain]
+    1990  attack_submarine_4
+          [from: cold_war_iron_curtain]
+    1990  ballistic_submarine_4
+          [from: cold_war_iron_curtain]
+    1995  sub_hull_small_single_3
+          [from: cold_war_iron_curtain]
+    1995  heavy_sam_4
+          [from: cold_war_iron_curtain]
+    1995  ashm_4
+          [from: cold_war_iron_curtain]
+    2000  light_sam_2
+          [from: cold_war_iron_curtain]
+    2000  vls_1
+          [from: cold_war_iron_curtain]
+    2000  attack_submarine_5
+          [from: cold_war_iron_curtain]
+    2000  ballistic_submarine_5
+          [from: cold_war_iron_curtain]
+    2005  sub_hull_small_single_4
+          [from: cold_war_iron_curtain]
+    2005  sub_hull_large_double_3
+          [from: cold_war_iron_curtain]
+    2005  torpedo_small_4
+          [from: cold_war_iron_curtain]
+
+UNMAPPED TECHS
+------------------------------------------------------------
+These techs could not be assigned to a branch.
+Add entries to custom_mappings.txt to include them.
+
+  BEL_chasseurs_ardennais
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  BEL_chasseurs_ardennais_ncns
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  CAS1
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  CAS2
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  CAS3
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  CAS4
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  ETH_improved_irregular_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  HUN_light_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  JAP_silver_wheels
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  MIO_Technology_Armor_2
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Armor_2
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Armor_3
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Armor_4
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Armor_5
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Armor_6
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Artillery_1
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Artillery_2
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Artillery_3
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Artillery_4
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Artillery_5
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Artillery_6
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Infantry_Equipment_1
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Infantry_Equipment_2
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Infantry_Equipment_3
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Infantry_Equipment_4
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Infantry_Equipment_5
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Infantry_Equipment_6
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  MIO_Technology_Infantry_Equipment_7
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  NBC_research
+    categories: ['nbc']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  PHI_battalion_combat_teams
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWE_sami_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWI_mountaineer_paratroopers_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  TOA_jungle_pioneers_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ToA_river_boats_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  advanced_modern_tank_turret_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  advanced_plumbing
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  aerosub_0
+    categories: ['apocalyptic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\hidden_techs.txt
+  agriculture_I
+    categories: ['agriculture', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  agriculture_II
+    categories: ['agriculture', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  agriculture_III
+    categories: ['agriculture', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  agriculture_IV
+    categories: ['agriculture', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  agriculture_V
+    categories: ['agriculture', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  agriculture_VI
+    categories: ['agriculture', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  agriculture_VII
+    categories: ['agriculture', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  agriculture_VIII
+    categories: ['agriculture', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  aluminum_lithium
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  anti_slosh_baffles
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  attack_helicopter_1
+    categories: ['helicopter', 'helicopter_attack']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  attack_helicopter_2
+    categories: ['helicopter', 'helicopter_attack']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  attack_helicopter_3
+    categories: ['helicopter', 'helicopter_attack']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  attack_helicopter_4
+    categories: ['helicopter', 'helicopter_attack']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  attack_helicopter_5
+    categories: ['helicopter', 'helicopter_attack']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  b_commando_1
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  b_commando_2
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  b_commando_3
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  b_commando_4
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  balloon_tanks
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  battle_hull_heavy_0
+    categories: ['apocalyptic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\hidden_techs.txt
+  battle_hull_light_0
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  battle_hull_light_1
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  battle_hull_light_2
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  battle_hull_light_3
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  battle_hull_light_4
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  battle_hull_medium_0
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  battle_hull_medium_1
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  battle_hull_medium_2
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  battle_hull_medium_3
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  battle_hull_medium_4
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  battlecruiser_0
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  battlecruiser_1
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  battlecruiser_2
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  battlecruiser_3
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  battlecruiser_4
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  battlecruiser_5
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull', 'battle_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  bicycle_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  biofuels_II
+    categories: ['agriculture', 'biofuels', 'altvehicles']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  blackshirt_assault_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  broadband_internet
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  camelry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camicie_nere_security_militias
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\support.txt
+  carbon_fiber
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  carbon_fiber2
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  cargo_helicopter_1
+    categories: ['helicopter', 'helicopter_logistic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  cargo_helicopter_2
+    categories: ['helicopter', 'helicopter_logistic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  cargo_helicopter_3
+    categories: ['helicopter', 'helicopter_logistic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  cargo_helicopter_4
+    categories: ['helicopter', 'helicopter_logistic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  cargo_helicopter_5
+    categories: ['helicopter', 'helicopter_logistic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  cargo_helicopter_6
+    categories: ['helicopter', 'helicopter_logistic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  cas_stealth
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'air_stealth']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cas_uav_1
+    categories: ['helicopter', 'drone_uav', 'drone_uav_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  cas_uav_2
+    categories: ['helicopter', 'drone_uav', 'drone_uav_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  cas_uav_3
+    categories: ['helicopter', 'drone_uav', 'drone_uav_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  closed_core_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  coastal_defense_ships
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  commercial_nuclear_reactor_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  common_bulkhead
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  continuous_pressurization
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  coup_one
+    categories: ['apocalyptic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\hidden_techs.txt
+  cruiser_0
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  cruiser_1
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  cruiser_2
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  cruiser_3
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  cruiser_4
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  cruiser_5
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'battle_hull_light']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  cruiser_submarines
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  cryogenic_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  cv_CAS1
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_CAS2
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_CAS3
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS1
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS10
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS2
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS3
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS4
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS5
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS6
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS7
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS8
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  cv_jet_CAS9
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas', 'naval_air']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  desert_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  desert_warfare_expertise
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  destroyer_0
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  destroyer_1
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  destroyer_2
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  destroyer_3
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  destroyer_4
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  destroyer_5
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  directional_antenna
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  droplet_core_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  dual_mode_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  dusty_fission_fragment
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  early_helicopter
+    categories: ['helicopter']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  ecoenergy_I
+    categories: ['infrastructure', 'energy', 'ecoenergy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  ecoenergy_II
+    categories: ['infrastructure', 'energy', 'ecoenergy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  ecoenergy_III
+    categories: ['infrastructure', 'energy', 'ecoenergy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  ecoenergy_IV
+    categories: ['infrastructure', 'energy', 'ecoenergy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  ecoenergy_V
+    categories: ['infrastructure', 'energy', 'ecoenergy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  ecoenergy_VI
+    categories: ['infrastructure', 'energy', 'ecoenergy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  ecoenergy_VII
+    categories: ['infrastructure', 'energy', 'ecoenergy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  electriccars
+    categories: ['energy', 'altvehicles']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  elephantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  external_tanks
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  fission_fragment
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  forest_warfare
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  frigate_0
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  frigate_1
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  frigate_2
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  frigate_3
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  frigate_4
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  frigate_5
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  gas_I
+    categories: ['infrastructure', 'energy', 'gas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  gas_II
+    categories: ['infrastructure', 'energy', 'gas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  gas_III
+    categories: ['infrastructure', 'energy', 'gas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  gas_IV
+    categories: ['infrastructure', 'energy', 'gas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  geosynchronous_network
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  grid_I
+    categories: ['infrastructure', 'energy', 'grid']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  grid_II
+    categories: ['infrastructure', 'energy', 'grid']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  grid_III
+    categories: ['infrastructure', 'energy', 'grid']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  grid_IV
+    categories: ['infrastructure', 'energy', 'grid']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  grid_V
+    categories: ['infrastructure', 'energy', 'grid']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  grid_VI
+    categories: ['infrastructure', 'energy', 'grid']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  grid_VII
+    categories: ['infrastructure', 'energy', 'grid']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  grid_VIII
+    categories: ['infrastructure', 'energy', 'grid']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  helium_pressurization
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  hills_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  hybrid_propellant
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  hydrogen_cells
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  i_infantry_1
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  i_infantry_2
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  i_infantry_3
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  i_infantry_4
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  inframanagement_I
+    categories: ['infrastructure', 'inframanagement']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframanagement_II
+    categories: ['infrastructure', 'inframanagement']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframanagement_III
+    categories: ['infrastructure', 'inframanagement']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframanagement_IV
+    categories: ['infrastructure', 'inframanagement']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframanagement_V
+    categories: ['infrastructure', 'inframanagement']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframanagement_VI
+    categories: ['infrastructure', 'inframanagement']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframanagement_VII
+    categories: ['infrastructure', 'inframanagement']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframanagement_VIII
+    categories: ['infrastructure', 'inframanagement']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframunicipal_I
+    categories: ['infrastructure', 'inframunicipal']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframunicipal_II
+    categories: ['infrastructure', 'inframunicipal']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframunicipal_III
+    categories: ['infrastructure', 'inframunicipal']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframunicipal_IV
+    categories: ['infrastructure', 'inframunicipal']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframunicipal_V
+    categories: ['infrastructure', 'inframunicipal']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframunicipal_VI
+    categories: ['infrastructure', 'inframunicipal']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframunicipal_VII
+    categories: ['infrastructure', 'inframunicipal']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  inframunicipal_VIII
+    categories: ['infrastructure', 'inframunicipal']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  infrastate_I
+    categories: ['infrastructure', 'infrastate']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  infrastate_II
+    categories: ['infrastructure', 'infrastate']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  infrastate_III
+    categories: ['infrastructure', 'infrastate']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  infrastate_IV
+    categories: ['infrastructure', 'infrastate']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  infrastate_V
+    categories: ['infrastructure', 'infrastate']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  infrastate_VI
+    categories: ['infrastructure', 'infrastate']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  infrastate_VII
+    categories: ['infrastructure', 'infrastate']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  jet_CAS1
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  jet_CAS2
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  jet_CAS3
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  jet_CAS4
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  jet_CAS5
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  jet_CAS6
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  jet_CAS7
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  jet_CAS8
+    categories: ['air_equipment', 'air_single_engine', 'cas_cas']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\light_air.txt
+  jungle_expertise
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  jungle_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_warfare
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  land_multi_charge_large_caliber_gun_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  lar_decryption_bonus_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\electronic_mechanical_engineering.txt
+  laser_communications
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  lightweight_tanks
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  liquid_core_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  liquid_propellant
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  lithium_batteries
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  long_range_patrol_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  lotta_svard_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  masterful_blitz
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\land_doctrine.txt
+  mercury_batteries
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  methane_fuel_cells
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  midget_submarines
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  militia_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  molotov_cocktails_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_defensive_training
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_gun
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\artillery.txt
+  mountain_warfare
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_warfare_militias_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mp_uav_1
+    categories: ['helicopter', 'drone_uav', 'drone_uav_mp']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  mp_uav_2
+    categories: ['helicopter', 'drone_uav', 'drone_uav_mp']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  naval_aa_singularity
+    categories: ['apocalyptic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\hidden_techs.txt
+  naval_asm_singularity
+    categories: ['apocalyptic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\hidden_techs.txt
+  naval_sam_singularity
+    categories: ['apocalyptic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\hidden_techs.txt
+  nbc_biological_weapon_1
+    categories: ['nbc', 'nbc_biological']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_biological_weapon_2
+    categories: ['nbc', 'nbc_biological']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_biological_weapon_3
+    categories: ['nbc', 'nbc_biological']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_biological_weapon_4
+    categories: ['nbc', 'nbc_biological']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_chemical_weapon_3
+    categories: ['nbc', 'nbc_chemical']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_nerve_weapon_0
+    categories: ['nbc', 'nbc_nerve']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_nerve_weapon_1
+    categories: ['nbc', 'nbc_nerve']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_nerve_weapon_2
+    categories: ['nbc', 'nbc_nerve']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_nerve_weapon_3
+    categories: ['nbc', 'nbc_nerve']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_nerve_weapon_4
+    categories: ['nbc', 'nbc_nerve']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nbc_nerve_weapon_5
+    categories: ['nbc', 'nbc_nerve']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\wmd.txt
+  nickel_batteries
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  nuclear_pulse_propulsion
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  nuclear_pulse_propulsion2
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  open_core_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  orbital_construction
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  organic_I
+    categories: ['agriculture', 'organic', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  organic_II
+    categories: ['agriculture', 'organic', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  organic_III
+    categories: ['agriculture', 'organic', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  organic_IV
+    categories: ['agriculture', 'organic', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  organic_V
+    categories: ['agriculture', 'organic', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  organic_VI
+    categories: ['agriculture', 'organic', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  organic_VII
+    categories: ['agriculture', 'organic', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  panzerschiffe
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  pebble_core_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  penal_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  photo_reconnaisance
+    categories: ['air_equipment', 'plane_modules_tech', 'mio_cat_all_medium_aircraft_and_modules']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  pre_dreadnoughts
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  precooled_rocket_engines
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  pressure_vessel1
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  pressure_vessel2
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  pressure_vessel3
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  pressure_vessel4
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  pressure_vessel5
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  pressure_vessel6
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  radioisotope_generators
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  regionally_aligned_forces
+    categories: ['apocalyptic']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\hidden_techs.txt
+  renewables_I
+    categories: ['infrastructure', 'energy', 'renewables']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  renewables_II
+    categories: ['infrastructure', 'energy', 'renewables']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  renewables_III
+    categories: ['infrastructure', 'energy', 'renewables']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  renewables_IV
+    categories: ['infrastructure', 'energy', 'renewables']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  renewables_V
+    categories: ['infrastructure', 'energy', 'renewables']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  renewables_VI
+    categories: ['infrastructure', 'energy', 'renewables']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  renewables_VII
+    categories: ['infrastructure', 'energy', 'renewables']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  renewables_conversion
+    categories: ['infrastructure', 'energy', 'renewables', 'ecoenergy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  sami_pathfinders_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  scout_helicopter_1
+    categories: ['helicopter', 'helicopter_recon']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  scout_helicopter_2
+    categories: ['helicopter', 'helicopter_recon']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  scout_helicopter_3
+    categories: ['helicopter', 'helicopter_recon']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  scout_helicopter_4
+    categories: ['helicopter', 'helicopter_recon']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  scout_helicopter_5
+    categories: ['helicopter', 'helicopter_recon']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  screen_aviation_1
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_weapon', 'screen_aviation']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  screen_aviation_2
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_weapon', 'screen_aviation']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  screen_aviation_3
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_weapon', 'screen_aviation']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  screen_aviation_4
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_weapon', 'screen_aviation']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  screen_hull_heavy_0
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  screen_hull_heavy_1
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  screen_hull_heavy_2
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  screen_hull_heavy_3
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  screen_hull_heavy_4
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  screen_hull_medium_0
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  screen_hull_medium_1
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  screen_hull_medium_2
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  screen_hull_medium_3
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  screen_hull_medium_4
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_medium']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  sf_tactics_training_1
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  sf_tactics_training_2
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  sf_tactics_training_3
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  solar_panels
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  solid_core_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  solid_propellant
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  sp_centrifugal_jet_tech
+    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  sp_naval_proximity_fuze_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_c
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_a
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_b
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  special_operations
+    categories: ['sf_forces']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\infantry.txt
+  sstv_transmission
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  stainless_steel
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  stronghold_network_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  sturmtruppe_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  suicide_charge
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\bba_air_techs.txt
+  suicide_craft
+    categories: []
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  temperature_control
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  titanium_frame
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  torpedo_cruiser
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\naval.txt
+  torpedo_cruiser_mtg
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  tracking_solar_panels
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  transport1
+    categories: ['air_equipment', 'air_quad_engine', 'air_logistics']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  transport2
+    categories: ['air_equipment', 'air_quad_engine', 'air_logistics']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  transport3
+    categories: ['air_equipment', 'air_quad_engine', 'air_logistics']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  transport4
+    categories: ['air_equipment', 'air_quad_engine', 'air_logistics']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  transport5
+    categories: ['air_equipment', 'air_quad_engine', 'air_logistics']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  transport6
+    categories: ['air_equipment', 'air_quad_engine', 'air_logistics']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  transport7
+    categories: ['air_equipment', 'air_quad_engine', 'air_logistics']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  transport8
+    categories: ['air_equipment', 'air_quad_engine', 'air_logistics']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  transport9
+    categories: ['air_equipment', 'air_quad_engine', 'air_logistics']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\air_techs.txt
+  tripropellant_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  uav
+    categories: ['helicopter', 'drone_uav']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  uranium_tipped_bullets
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  urban_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  utility_helicopter_1
+    categories: ['helicopter', 'helicopter_utility']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  utility_helicopter_2
+    categories: ['helicopter', 'helicopter_utility']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  utility_helicopter_3
+    categories: ['helicopter', 'helicopter_utility']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  utility_helicopter_4
+    categories: ['helicopter', 'helicopter_utility']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  utility_helicopter_5
+    categories: ['helicopter', 'helicopter_utility']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  utility_helicopter_6
+    categories: ['helicopter', 'helicopter_utility']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  utility_helicopter_7
+    categories: ['helicopter', 'helicopter_utility']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\helicopter.txt
+  variable_thrust_rocket
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  water_I
+    categories: ['agriculture', 'water', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  water_II
+    categories: ['agriculture', 'water', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  water_III
+    categories: ['agriculture', 'water', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  water_IV
+    categories: ['agriculture', 'water', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  water_V
+    categories: ['agriculture', 'water', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  water_VI
+    categories: ['agriculture', 'water', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  water_VII
+    categories: ['agriculture', 'water', 'rgo']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\industry.txt
+  winter_logistics_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  woodmetal_frames
+    categories: ['space_research']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\space.txt
+  ww_capitals
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_navallarge.txt
+  ww_capitals_proletariat
+    categories: ['naval_equipment', 'capital_tech', 'capital_tech_hull']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt
+  ww_screens
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull', 'screen_hull_heavy']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\MTG_naval.txt
+  ww_screens_proletariat
+    categories: ['naval_equipment', 'screen_tech', 'screen_tech_hull']
+    source: cold_war_iron_curtain / E:\SteamLibrary\steamapps\workshop\content\394360\1458561226\common\technologies\naval.txt

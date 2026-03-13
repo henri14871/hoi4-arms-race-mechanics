@@ -1,0 +1,1198 @@
+ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+============================================================
+
+Total techs parsed:    581
+Successfully mapped:   474
+Unmapped (unknown):    69
+
+BRANCH SUMMARY
+----------------------------------------
+  air                              81 techs
+  industry_electronics             91 techs
+  land                            203 techs
+  naval                            99 techs
+
+CATEGORY DETAIL
+------------------------------------------------------------
+
+  [air / cas] — 12 techs
+    1922  early_bombs
+          [from: kaiserreich]
+    1936  CAS1
+          [from: kaiserreich]
+    1936  cv_CAS1
+          [from: kaiserreich]
+    1936  armor_piercing_bombs
+          [from: kaiserreich]
+    1936  air_torpedoe_1
+          [from: kaiserreich]
+    1940  CAS2
+          [from: kaiserreich]
+    1940  cv_CAS2
+          [from: kaiserreich]
+    1940  heavy_bombs
+          [from: kaiserreich]
+    1940  air_torpedoe_2
+          [from: kaiserreich]
+    1944  CAS3
+          [from: kaiserreich]
+    1944  cv_CAS3
+          [from: kaiserreich]
+    1944  air_torpedoe_3
+          [from: kaiserreich]
+
+  [air / fighters] — 31 techs
+    1922  aa_lmg
+          [from: kaiserreich]
+    1922  engines_1
+          [from: kaiserreich]
+    1926  iw_small_airframe
+          [from: kaiserreich]
+    1933  early_fighter
+          [from: kaiserreich]
+    1933  cv_early_fighter
+          [from: kaiserreich]
+    1936  fighter1
+          [from: kaiserreich]
+    1936  cv_fighter1
+          [from: kaiserreich]
+    1936  scout_plane1
+          [from: kaiserreich]
+    1936  basic_small_airframe
+          [from: kaiserreich]
+    1936  engines_2
+          [from: kaiserreich]
+    1936  range_improvements
+          [from: kaiserreich]
+    1936  aircraft_construction
+          [from: kaiserreich]
+    1939  survivability_studies
+          [from: kaiserreich]
+    1939  aa_hmg
+          [from: kaiserreich]
+    1939  aa_cannon_1
+          [from: kaiserreich]
+    1940  fighter2
+          [from: kaiserreich]
+    1940  cv_fighter2
+          [from: kaiserreich]
+    1940  scout_plane2
+          [from: kaiserreich]
+    1940  improved_small_airframe
+          [from: kaiserreich]
+    1940  engines_3
+          [from: kaiserreich]
+    1943  aa_cannon_2
+          [from: kaiserreich]
+    1944  fighter3
+          [from: kaiserreich]
+    1944  cv_fighter3
+          [from: kaiserreich]
+    1944  advanced_small_airframe
+          [from: kaiserreich]
+    1944  engines_4
+          [from: kaiserreich]
+    1945  jet_fighter1
+          [from: kaiserreich]
+    1945  modern_small_airframe
+          [from: kaiserreich]
+    1945  aa_cannon_3
+          [from: kaiserreich]
+    1950  supersonic_fighter1
+    1950  supersonic_small_airframe
+    1950  jet_fighter2
+          [from: kaiserreich]
+
+  [air / heavy_fighters] — 8 techs
+    1926  iw_medium_airframe
+          [from: kaiserreich]
+    1936  heavy_fighter1
+          [from: kaiserreich]
+    1936  basic_medium_airframe
+          [from: kaiserreich]
+    1940  heavy_fighter2
+          [from: kaiserreich]
+    1940  improved_medium_airframe
+          [from: kaiserreich]
+    1944  heavy_fighter3
+          [from: kaiserreich]
+    1944  advanced_medium_airframe
+          [from: kaiserreich]
+    1945  modern_medium_airframe
+          [from: kaiserreich]
+
+  [air / naval_bombers] — 6 techs
+    1936  naval_bomber1
+          [from: kaiserreich]
+    1936  cv_naval_bomber1
+          [from: kaiserreich]
+    1940  naval_bomber2
+          [from: kaiserreich]
+    1940  cv_naval_bomber2
+          [from: kaiserreich]
+    1944  naval_bomber3
+          [from: kaiserreich]
+    1944  cv_naval_bomber3
+          [from: kaiserreich]
+
+  [air / strategic_bombers] — 12 techs
+    1926  iw_large_airframe
+          [from: kaiserreich]
+    1936  strategic_bomber1
+          [from: kaiserreich]
+    1936  basic_large_airframe
+          [from: kaiserreich]
+    1940  strategic_bomber2
+          [from: kaiserreich]
+    1940  improved_large_airframe
+          [from: kaiserreich]
+    1942  reinforced_wings_mothership
+          [from: kaiserreich]
+    1944  strategic_bomber3
+          [from: kaiserreich]
+    1944  advanced_large_airframe
+          [from: kaiserreich]
+    1944  miniature_fighters
+          [from: kaiserreich]
+    1945  modern_large_airframe
+          [from: kaiserreich]
+    1946  aerial_hangars
+          [from: kaiserreich]
+    1950  jet_strategic_bomber1
+          [from: kaiserreich]
+
+  [air / tactical_bombers] — 6 techs
+    1933  early_bomber
+          [from: kaiserreich]
+    1936  tactical_bomber1
+          [from: kaiserreich]
+    1940  tactical_bomber2
+          [from: kaiserreich]
+    1944  tactical_bomber3
+          [from: kaiserreich]
+    1945  jet_tactical_bomber1
+          [from: kaiserreich]
+    1950  jet_tactical_bomber2
+          [from: kaiserreich]
+
+  [air / transport] — 6 techs
+    1933  early_transport_plane
+          [from: kaiserreich]
+    1933  bba_early_transport_plane
+          [from: kaiserreich]
+    1940  improved_transport_plane
+          [from: kaiserreich]
+    1940  bba_improved_transport_plane
+          [from: kaiserreich]
+    1945  bba_strategic_airlifter
+          [from: kaiserreich]
+    1948  strategic_airlifter
+          [from: kaiserreich]
+
+  [industry_electronics / electronics] — 17 techs
+    1936  electronic_mechanical_engineering
+          [from: kaiserreich]
+    1936  radio
+          [from: kaiserreich]
+    1936  mechanical_computing
+          [from: kaiserreich]
+    1936  basic_fire_control_system
+          [from: kaiserreich]
+    1936  improved_fire_control_system
+          [from: kaiserreich]
+    1936  advanced_fire_control_system
+          [from: kaiserreich]
+    1938  improved_radio
+          [from: kaiserreich]
+    1938  computing_machine
+          [from: kaiserreich]
+    1938  basic_encryption
+          [from: kaiserreich]
+    1938  basic_decryption
+          [from: kaiserreich]
+    1940  improved_computing_machine
+          [from: kaiserreich]
+    1940  improved_encryption
+          [from: kaiserreich]
+    1940  improved_decryption
+          [from: kaiserreich]
+    1941  advanced_radio
+          [from: kaiserreich]
+    1942  advanced_computing_machine
+          [from: kaiserreich]
+    1942  advanced_encryption
+          [from: kaiserreich]
+    1942  advanced_decryption
+          [from: kaiserreich]
+
+  [industry_electronics / industry] — 48 techs
+    1936  basic_fortification_tech
+          [from: kaiserreich]
+    1936  coastal_fort_tech_1
+          [from: kaiserreich]
+    1936  basic_machine_tools
+          [from: kaiserreich]
+    1936  concentrated_industry
+          [from: kaiserreich]
+    1936  dispersed_industry
+          [from: kaiserreich]
+    1936  fuel_silos
+          [from: kaiserreich]
+    1936  fuel_refining
+          [from: kaiserreich]
+    1936  synth_oil_experiments
+          [from: kaiserreich]
+    1936  construction1
+          [from: kaiserreich]
+    1936  excavation1
+          [from: kaiserreich]
+    1937  improved_machine_tools
+          [from: kaiserreich]
+    1937  improved_equipment_conversion
+          [from: kaiserreich]
+    1937  concentrated_industry2
+          [from: kaiserreich]
+    1937  dispersed_industry2
+          [from: kaiserreich]
+    1937  fuel_refining2
+          [from: kaiserreich]
+    1937  oil_processing
+          [from: kaiserreich]
+    1937  rubber_processing
+          [from: kaiserreich]
+    1937  construction2
+          [from: kaiserreich]
+    1937  excavation2
+          [from: kaiserreich]
+    1938  land_fort_tech_1
+          [from: kaiserreich]
+    1939  advanced_machine_tools
+          [from: kaiserreich]
+    1939  advanced_equipment_conversion
+          [from: kaiserreich]
+    1939  concentrated_industry3
+          [from: kaiserreich]
+    1939  dispersed_industry3
+          [from: kaiserreich]
+    1939  fuel_refining3
+          [from: kaiserreich]
+    1939  improved_oil_processing
+          [from: kaiserreich]
+    1939  improved_rubber_processing
+          [from: kaiserreich]
+    1939  construction3
+          [from: kaiserreich]
+    1939  excavation3
+          [from: kaiserreich]
+    1940  land_fort_tech_2
+          [from: kaiserreich]
+    1940  coastal_fort_tech_2
+          [from: kaiserreich]
+    1941  assembly_line_production
+          [from: kaiserreich]
+    1941  concentrated_industry4
+          [from: kaiserreich]
+    1941  dispersed_industry4
+          [from: kaiserreich]
+    1941  fuel_refining4
+          [from: kaiserreich]
+    1941  advanced_oil_processing
+          [from: kaiserreich]
+    1941  advanced_rubber_processing
+          [from: kaiserreich]
+    1941  construction4
+          [from: kaiserreich]
+    1941  excavation4
+          [from: kaiserreich]
+    1943  flexible_line
+          [from: kaiserreich]
+    1943  streamlined_line
+          [from: kaiserreich]
+    1943  concentrated_industry5
+          [from: kaiserreich]
+    1943  dispersed_industry5
+          [from: kaiserreich]
+    1943  fuel_refining5
+          [from: kaiserreich]
+    1943  modern_oil_processing
+          [from: kaiserreich]
+    1943  modern_rubber_processing
+          [from: kaiserreich]
+    1943  construction5
+          [from: kaiserreich]
+    1943  excavation5
+          [from: kaiserreich]
+
+  [industry_electronics / nuclear] — 6 techs
+    1940  atomic_research
+          [from: kaiserreich]
+    1943  nuclear_reactor
+          [from: kaiserreich]
+    1943  nuclear_reactor_heavy_water
+          [from: kaiserreich]
+    1943  isotope_separation_centrifugal
+          [from: kaiserreich]
+    1945  nukes
+          [from: kaiserreich]
+    1950  thermonuclear_bombs
+          [from: kaiserreich]
+
+  [industry_electronics / radar] — 5 techs
+    1936  radio_detection
+          [from: kaiserreich]
+    1938  cavity_magnatron
+          [from: kaiserreich]
+    1940  centimetric_radar
+          [from: kaiserreich]
+    1941  phased_array
+          [from: kaiserreich]
+    1942  monopulse_radar
+          [from: kaiserreich]
+
+  [industry_electronics / rockets] — 15 techs
+    1939  motorized_rocket_unit
+          [from: kaiserreich]
+    1940  rocket_artillery
+          [from: kaiserreich]
+    1941  rocket_artillery2
+          [from: kaiserreich]
+    1942  rocket_artillery3
+          [from: kaiserreich]
+    1942  experimental_rockets
+          [from: kaiserreich]
+    1943  rocket_artillery4
+          [from: kaiserreich]
+    1943  sp_rockets_improved_guidance
+          [from: kaiserreich]
+    1944  rocket_engines
+          [from: kaiserreich]
+    1944  sp_rockets_rocket_bomber
+          [from: kaiserreich]
+    1944  jet_engines
+          [from: kaiserreich]
+    1944  sp_rockets_dual_chamber_rocket_engine_1
+          [from: kaiserreich]
+    1945  sp_rockets_improved_rocket_bomber
+          [from: kaiserreich]
+    1945  improved_rocket_engines
+          [from: kaiserreich]
+    1946  advanced_rocket_engines
+          [from: kaiserreich]
+    1946  sp_rockets_dual_chamber_rocket_engine_2
+          [from: kaiserreich]
+
+  [land / anti_air] — 6 techs
+    1936  interwar_antiair
+          [from: kaiserreich]
+    1939  antiair1
+          [from: kaiserreich]
+    1940  antiair2
+          [from: kaiserreich]
+    1941  antiair3
+          [from: kaiserreich]
+    1942  antiair4
+          [from: kaiserreich]
+    1943  antiair5
+          [from: kaiserreich]
+
+  [land / anti_tank] — 8 techs
+    1936  mountain_tanks
+    1936  SWE_bofors_antitank_gun
+    1936  interwar_antitank
+          [from: kaiserreich]
+    1939  antitank1
+          [from: kaiserreich]
+    1940  antitank2
+          [from: kaiserreich]
+    1941  antitank3
+          [from: kaiserreich]
+    1942  antitank4
+          [from: kaiserreich]
+    1943  antitank5
+          [from: kaiserreich]
+
+  [land / artillery] — 26 techs
+    1922  basic_battery
+          [from: kaiserreich]
+    1936  gw_artillery
+          [from: kaiserreich]
+    1936  interwar_artillery
+          [from: kaiserreich]
+    1936  basic_light_battery
+          [from: kaiserreich]
+    1936  basic_light_shell
+          [from: kaiserreich]
+    1936  basic_heavy_battery
+          [from: kaiserreich]
+    1936  basic_heavy_shell
+          [from: kaiserreich]
+    1936  railway_gun
+          [from: kaiserreich]
+    1939  artillery1
+          [from: kaiserreich]
+    1939  improved_light_battery
+          [from: kaiserreich]
+    1939  improved_heavy_battery
+          [from: kaiserreich]
+    1939  basic_dp_light_battery
+          [from: kaiserreich]
+    1940  artillery2
+          [from: kaiserreich]
+    1940  sp_artillery_rocket_assisted_projectiles_tech
+          [from: kaiserreich]
+    1940  sp_artillery_purpose_built_gun_motor_carriages_tech
+          [from: kaiserreich]
+    1940  improved_dp_light_battery
+          [from: kaiserreich]
+    1941  artillery3
+          [from: kaiserreich]
+    1941  sp_shock_hardening_techniques
+          [from: kaiserreich]
+    1942  artillery4
+          [from: kaiserreich]
+    1942  sp_variable_time_fuze_shells
+          [from: kaiserreich]
+    1942  improved_light_shell
+          [from: kaiserreich]
+    1942  improved_heavy_shell
+          [from: kaiserreich]
+    1943  artillery5
+          [from: kaiserreich]
+    1944  advanced_light_battery
+          [from: kaiserreich]
+    1944  advanced_heavy_battery
+          [from: kaiserreich]
+    1944  advanced_dp_light_battery
+          [from: kaiserreich]
+
+  [land / heavy_tanks] — 13 techs
+    1934  basic_heavy_tank
+          [from: kaiserreich]
+    1934  basic_heavy_tank_chassis
+          [from: kaiserreich]
+    1940  improved_heavy_tank_chassis
+          [from: kaiserreich]
+    1941  improved_heavy_tank
+          [from: kaiserreich]
+    1941  super_heavy_tank
+          [from: kaiserreich]
+    1941  super_heavy_tank_chassis
+          [from: kaiserreich]
+    1943  advanced_heavy_tank
+          [from: kaiserreich]
+    1943  advanced_heavy_tank_chassis
+          [from: kaiserreich]
+    1943  sp_armored_lc_naval_engine_conversion_tech
+          [from: kaiserreich]
+    1943  sp_armored_lc_transmission_improvements_tech
+          [from: kaiserreich]
+    1943  sp_armored_lc_specialized_field_manuals_tech
+          [from: kaiserreich]
+    1943  sp_armored_lc_high_impact_obliterator_cannon_tech
+          [from: kaiserreich]
+    1945  sp_armored_lc_weapon_fire_control_tech
+          [from: kaiserreich]
+
+  [land / infantry] — 31 techs
+    1918  infantry_weapons
+          [from: kaiserreich]
+    1918  support_weapons
+          [from: kaiserreich]
+    1936  infantry_weapons1
+          [from: kaiserreich]
+    1936  paratroopers
+          [from: kaiserreich]
+    1936  marines
+          [from: kaiserreich]
+    1936  tech_mountaineers
+          [from: kaiserreich]
+    1936  rangers_tech
+          [from: kaiserreich]
+    1938  infantry_weapons2
+          [from: kaiserreich]
+    1938  tech_special_forces
+          [from: kaiserreich]
+    1938  support_weapons2
+          [from: kaiserreich]
+    1939  improved_infantry_weapons
+          [from: kaiserreich]
+    1939  paratroopers2
+          [from: kaiserreich]
+    1939  marines2
+          [from: kaiserreich]
+    1939  tech_mountaineers2
+          [from: kaiserreich]
+    1939  rangers_tech2
+          [from: kaiserreich]
+    1940  improved_infantry_weapons_2
+          [from: kaiserreich]
+    1940  advanced_special_forces
+          [from: kaiserreich]
+    1940  improved_special_forces
+          [from: kaiserreich]
+    1940  support_weapons3
+          [from: kaiserreich]
+    1942  infantry_at
+          [from: kaiserreich]
+    1942  advanced_infantry_weapons
+          [from: kaiserreich]
+    1942  extreme_environment_training
+          [from: kaiserreich]
+    1942  survival_training
+          [from: kaiserreich]
+    1942  support_weapons4
+          [from: kaiserreich]
+    1943  infantry_at2
+          [from: kaiserreich]
+    1943  paratroopers3
+          [from: kaiserreich]
+    1943  marines3
+          [from: kaiserreich]
+    1943  tech_mountaineers3
+          [from: kaiserreich]
+    1943  rangers_tech3
+          [from: kaiserreich]
+    1944  advanced_infantry_weapons2
+          [from: kaiserreich]
+    1944  elite_forces
+          [from: kaiserreich]
+
+  [land / light_tanks] — 8 techs
+    1918  gwtank
+          [from: kaiserreich]
+    1918  gwtank_chassis
+          [from: kaiserreich]
+    1934  basic_light_tank
+          [from: kaiserreich]
+    1934  basic_light_tank_chassis
+          [from: kaiserreich]
+    1936  improved_light_tank
+          [from: kaiserreich]
+    1936  improved_light_tank_chassis
+          [from: kaiserreich]
+    1941  advanced_light_tank
+          [from: kaiserreich]
+    1941  advanced_light_tank_chassis
+          [from: kaiserreich]
+
+  [land / mechanised] — 5 techs
+    1940  mechanised_infantry
+          [from: kaiserreich]
+    1941  amphibious_mechanized_infantry
+          [from: kaiserreich]
+    1942  mechanised_infantry2
+          [from: kaiserreich]
+    1943  amphibious_mechanized_infantry_2
+          [from: kaiserreich]
+    1944  mechanised_infantry3
+          [from: kaiserreich]
+
+  [land / medium_tanks] — 6 techs
+    1938  basic_medium_tank_chassis
+          [from: kaiserreich]
+    1939  basic_medium_tank
+          [from: kaiserreich]
+    1940  improved_medium_tank_chassis
+          [from: kaiserreich]
+    1941  improved_medium_tank
+          [from: kaiserreich]
+    1943  advanced_medium_tank
+          [from: kaiserreich]
+    1943  advanced_medium_tank_chassis
+          [from: kaiserreich]
+
+  [land / modern_tanks] — 2 techs
+    1945  main_battle_tank
+          [from: kaiserreich]
+    1945  main_battle_tank_chassis
+          [from: kaiserreich]
+
+  [land / motorised] — 2 techs
+    1936  tech_trucks
+          [from: kaiserreich]
+    1936  motorised_infantry
+          [from: kaiserreich]
+
+  [land / support] — 42 techs
+    1910  basic_train
+          [from: kaiserreich]
+    1918  tech_support
+          [from: kaiserreich]
+    1936  tech_recon_focus_bonus
+    1936  tech_engineers
+          [from: kaiserreich]
+    1936  tech_recon
+          [from: kaiserreich]
+    1936  tech_military_police
+          [from: kaiserreich]
+    1936  tech_maintenance_company
+          [from: kaiserreich]
+    1936  armored_train
+          [from: kaiserreich]
+    1936  tech_field_hospital
+          [from: kaiserreich]
+    1936  tech_logistics_company
+          [from: kaiserreich]
+    1936  tech_signal_company
+          [from: kaiserreich]
+    1938  sp_armored_engineer_tech
+          [from: kaiserreich]
+    1938  sp_armored_maintenance_tech
+          [from: kaiserreich]
+    1938  sp_armored_signal_tech
+          [from: kaiserreich]
+    1938  sp_helicopter_transport_pods_tech
+          [from: kaiserreich]
+    1938  sp_helicopter_artillery_observers_tech
+          [from: kaiserreich]
+    1938  sp_helicopter_med_evac_tech
+          [from: kaiserreich]
+    1938  sp_armored_motorized_military_police_tech
+          [from: kaiserreich]
+    1939  tech_engineers2
+          [from: kaiserreich]
+    1939  tech_recon2
+          [from: kaiserreich]
+    1939  tech_military_police2
+          [from: kaiserreich]
+    1939  tech_maintenance_company2
+          [from: kaiserreich]
+    1939  tech_field_hospital2
+          [from: kaiserreich]
+    1939  tech_logistics_company2
+          [from: kaiserreich]
+    1939  tech_signal_company2
+          [from: kaiserreich]
+    1939  wartime_train
+          [from: kaiserreich]
+    1942  tech_engineers3
+          [from: kaiserreich]
+    1942  tech_recon3
+          [from: kaiserreich]
+    1942  tech_military_police3
+          [from: kaiserreich]
+    1942  tech_maintenance_company3
+          [from: kaiserreich]
+    1942  tech_field_hospital3
+          [from: kaiserreich]
+    1942  tech_logistics_company3
+          [from: kaiserreich]
+    1942  tech_signal_company3
+          [from: kaiserreich]
+    1943  night_vision
+          [from: kaiserreich]
+    1945  tech_engineers4
+          [from: kaiserreich]
+    1945  tech_recon4
+          [from: kaiserreich]
+    1945  tech_military_police4
+          [from: kaiserreich]
+    1945  tech_maintenance_company4
+          [from: kaiserreich]
+    1945  tech_field_hospital4
+          [from: kaiserreich]
+    1945  tech_logistics_company4
+          [from: kaiserreich]
+    1945  tech_signal_company4
+          [from: kaiserreich]
+    1946  night_vision2
+          [from: kaiserreich]
+
+  [land / tanks_generic] — 54 techs
+    1914  armored_car1
+          [from: kaiserreich]
+    1934  basic_light_td
+          [from: kaiserreich]
+    1934  basic_light_art
+          [from: kaiserreich]
+    1934  basic_light_spaa
+          [from: kaiserreich]
+    1934  basic_heavy_td
+          [from: kaiserreich]
+    1934  basic_heavy_art
+          [from: kaiserreich]
+    1934  basic_heavy_spaa
+          [from: kaiserreich]
+    1934  engine_tech_1
+          [from: kaiserreich]
+    1936  JAP_lighter_tanks
+    1936  GER_heavy_armored_car
+    1936  NOR_rikstanken_tech
+    1936  improved_light_td
+          [from: kaiserreich]
+    1936  improved_light_art
+          [from: kaiserreich]
+    1936  improved_light_spaa
+          [from: kaiserreich]
+    1936  armor_tech_1
+          [from: kaiserreich]
+    1938  amphibious_tank_chassis
+          [from: kaiserreich]
+    1938  armor_tech_2
+          [from: kaiserreich]
+    1938  engine_tech_2
+          [from: kaiserreich]
+    1939  basic_medium_td
+          [from: kaiserreich]
+    1939  basic_medium_art
+          [from: kaiserreich]
+    1939  basic_medium_spaa
+          [from: kaiserreich]
+    1940  amphibious_tank
+          [from: kaiserreich]
+    1940  armored_car2
+          [from: kaiserreich]
+    1941  advanced_light_td
+          [from: kaiserreich]
+    1941  advanced_light_art
+          [from: kaiserreich]
+    1941  advanced_light_spaa
+          [from: kaiserreich]
+    1941  improved_medium_td
+          [from: kaiserreich]
+    1941  improved_medium_art
+          [from: kaiserreich]
+    1941  improved_medium_spaa
+          [from: kaiserreich]
+    1941  improved_heavy_td
+          [from: kaiserreich]
+    1941  improved_heavy_art
+          [from: kaiserreich]
+    1941  improved_heavy_spaa
+          [from: kaiserreich]
+    1941  amphibious_drive
+          [from: kaiserreich]
+    1941  armor_tech_3
+          [from: kaiserreich]
+    1941  engine_tech_3
+          [from: kaiserreich]
+    1941  sp_armored_advanced_flamethrower_tech
+          [from: kaiserreich]
+    1942  SWE_lynx_armored_car
+    1942  amphibious_tank_2
+          [from: kaiserreich]
+    1942  armored_car3
+          [from: kaiserreich]
+    1942  armored_car_at_upgrade
+          [from: kaiserreich]
+    1943  advanced_medium_td
+          [from: kaiserreich]
+    1943  advanced_medium_art
+          [from: kaiserreich]
+    1943  advanced_medium_spaa
+          [from: kaiserreich]
+    1943  advanced_heavy_td
+          [from: kaiserreich]
+    1943  advanced_heavy_art
+          [from: kaiserreich]
+    1943  advanced_heavy_spaa
+          [from: kaiserreich]
+    1943  super_heavy_td
+          [from: kaiserreich]
+    1943  super_heavy_art
+          [from: kaiserreich]
+    1943  super_heavy_spaa
+          [from: kaiserreich]
+    1944  armor_tech_4
+          [from: kaiserreich]
+    1944  engine_tech_4
+          [from: kaiserreich]
+    1945  modern_td
+          [from: kaiserreich]
+    1945  modern_art
+          [from: kaiserreich]
+    1945  modern_spaa
+          [from: kaiserreich]
+
+  [naval / battleships] — 15 techs
+    1922  early_battlecruiser
+    1922  early_battleship
+    1922  early_ship_hull_heavy
+          [from: kaiserreich]
+    1936  ship_hull_super_heavy
+    1936  basic_battleship
+    1936  heavy_battleship
+    1936  basic_ship_hull_heavy
+          [from: kaiserreich]
+    1936  basic_heavy_armor_scheme (XP)
+          [from: kaiserreich]
+    1936  improved_heavy_armor_scheme (XP)
+          [from: kaiserreich]
+    1939  improved_ship_hull_heavy
+          [from: kaiserreich]
+    1940  basic_battlecruiser
+    1940  improved_battleship
+    1943  advanced_ship_hull_heavy
+          [from: kaiserreich]
+    1944  advanced_battleship
+    1944  heavy_battleship2
+
+  [naval / carriers] — 10 techs
+    1922  early_carrier
+    1922  early_ship_hull_carrier
+          [from: kaiserreich]
+    1936  basic_carrier
+    1936  basic_ship_hull_carrier
+          [from: kaiserreich]
+    1939  improved_ship_hull_carrier
+          [from: kaiserreich]
+    1940  improved_carrier
+    1942  sp_refined_pykrete
+          [from: kaiserreich]
+    1943  advanced_ship_hull_carrier
+          [from: kaiserreich]
+    1944  advanced_carrier
+    1944  sp_ice_composite_runawayas
+          [from: kaiserreich]
+
+  [naval / destroyers] — 17 techs
+    1922  early_destroyer
+    1922  early_ship_hull_light
+          [from: kaiserreich]
+    1922  smoke_generator
+          [from: kaiserreich]
+    1922  basic_depth_charges (XP)
+          [from: kaiserreich]
+    1922  sonar
+          [from: kaiserreich]
+    1936  basic_destroyer
+    1936  basic_ship_hull_light
+          [from: kaiserreich]
+    1936  improved_depth_charges (XP)
+          [from: kaiserreich]
+    1936  improved_sonar
+          [from: kaiserreich]
+    1939  improved_ship_hull_light
+          [from: kaiserreich]
+    1939  advanced_depth_charges (XP)
+          [from: kaiserreich]
+    1939  advanced_sonar
+          [from: kaiserreich]
+    1940  improved_destroyer
+    1943  advanced_ship_hull_light
+          [from: kaiserreich]
+    1943  modern_depth_charges (XP)
+          [from: kaiserreich]
+    1943  modern_sonar
+          [from: kaiserreich]
+    1944  advanced_destroyer
+
+  [naval / heavy_cruisers] — 5 techs
+    1922  early_heavy_cruiser
+    1922  basic_cruiser_armor_scheme (XP)
+          [from: kaiserreich]
+    1936  basic_heavy_cruiser
+    1940  improved_heavy_cruiser
+    1944  advanced_heavy_cruiser
+
+  [naval / light_cruisers] — 8 techs
+    1922  early_light_cruiser
+    1922  early_ship_hull_cruiser
+          [from: kaiserreich]
+    1936  basic_light_cruiser
+    1936  basic_ship_hull_cruiser
+          [from: kaiserreich]
+    1939  improved_ship_hull_cruiser
+          [from: kaiserreich]
+    1940  improved_light_cruiser
+    1943  advanced_ship_hull_cruiser
+          [from: kaiserreich]
+    1944  advanced_light_cruiser
+
+  [naval / naval_support] — 32 techs
+    1922  transport
+    1922  basic_torpedo
+          [from: kaiserreich]
+    1922  basic_naval_mines
+          [from: kaiserreich]
+    1922  submarine_mine_laying
+          [from: kaiserreich]
+    1922  mtg_transport
+          [from: kaiserreich]
+    1936  magnetic_detonator (XP)
+          [from: kaiserreich]
+    1936  improved_ship_torpedo_launcher
+          [from: kaiserreich]
+    1936  damage_control_1 (XP)
+          [from: kaiserreich]
+    1936  damage_control_2 (XP)
+          [from: kaiserreich]
+    1936  damage_control_3 (XP)
+          [from: kaiserreich]
+    1936  fire_control_methods_1 (XP)
+          [from: kaiserreich]
+    1936  fire_control_methods_2 (XP)
+          [from: kaiserreich]
+    1936  fire_control_methods_3 (XP)
+          [from: kaiserreich]
+    1936  improved_naval_mines
+          [from: kaiserreich]
+    1938  degaussing
+          [from: kaiserreich]
+    1938  sp_multi_product_supply_ships (XP)
+          [from: kaiserreich]
+    1940  landing_craft
+    1940  advanced_ship_torpedo_launcher
+          [from: kaiserreich]
+    1940  improved_submarine_mine_laying
+          [from: kaiserreich]
+    1940  advanced_naval_mines
+          [from: kaiserreich]
+    1940  mtg_landing_craft
+          [from: kaiserreich]
+    1942  homing_torpedo (XP)
+          [from: kaiserreich]
+    1942  airdrop_mines
+          [from: kaiserreich]
+    1942  airdrop_mines_bba
+          [from: kaiserreich]
+    1942  airsweep_mines
+          [from: kaiserreich]
+    1942  airsweep_mines_bba
+          [from: kaiserreich]
+    1942  sp_improved_support_ship (XP)
+          [from: kaiserreich]
+    1942  sp_improved_repair_ship (XP)
+          [from: kaiserreich]
+    1943  sp_standard_tenshioned_replenishment_alongside_method (XP)
+          [from: kaiserreich]
+    1944  tank_landing_craft
+    1944  modern_ship_torpedo_launcher
+          [from: kaiserreich]
+    1944  mtg_tank_landing_craft
+          [from: kaiserreich]
+
+  [naval / submarines] — 12 techs
+    1922  early_submarine
+    1922  early_ship_hull_submarine
+          [from: kaiserreich]
+    1936  basic_submarine
+    1936  basic_ship_hull_submarine
+          [from: kaiserreich]
+    1939  improved_ship_hull_submarine
+          [from: kaiserreich]
+    1939  basic_submarine_snorkel
+          [from: kaiserreich]
+    1939  sp_aip_engine_improved_tech
+          [from: kaiserreich]
+    1940  improved_submarine
+    1943  advanced_ship_hull_submarine
+          [from: kaiserreich]
+    1943  improved_submarine_snorkel (XP)
+          [from: kaiserreich]
+    1943  sp_aip_engine_advanced_tech
+          [from: kaiserreich]
+    1944  advanced_submarine
+
+UNMAPPED TECHS
+------------------------------------------------------------
+These techs could not be assigned to a branch.
+Add entries to custom_mappings.txt to include them.
+
+  BEL_chasseurs_ardennais
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  BEL_chasseurs_ardennais_ncns
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ETH_improved_irregular_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  HUN_light_infantry_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  JAP_silver_wheels
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  PHI_battalion_combat_teams
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWE_sami_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  SWI_mountaineer_paratroopers_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  TOA_jungle_pioneers_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  ToA_river_boats_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  advanced_modern_tank_turret_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\special_projects_tech.txt
+  bicycle_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  blackshirt_assault_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camelry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  camicie_nere_security_militias
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\support.txt
+  coastal_defense_ships
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  commercial_nuclear_reactor_tech
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\special_projects_tech.txt
+  cruiser_submarines
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  desert_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  elephantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  hills_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  jungle_warfare
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  land_multi_charge_large_caliber_gun_tech
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\special_projects_tech.txt
+  lar_decryption_bonus_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\electronic_mechanical_engineering.txt
+  long_range_patrol_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  lotta_svard_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  midget_submarines
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  militia_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  molotov_cocktails_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_defensive_training
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_gun
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\artillery.txt
+  mountain_warfare
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  mountain_warfare_militias_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  panzerschiffe
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  penal_infantry
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  photo_reconnaisance
+    categories: ['air_equipment', 'plane_modules_tech', 'mio_cat_all_medium_aircraft_and_modules']
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\bba_air_techs.txt
+  pre_dreadnoughts
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  sami_pathfinders_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  sp_centrifugal_jet_tech
+    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\bba_air_techs.txt
+  sp_naval_proximity_fuze_tech
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_a
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_b
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  sp_naval_repair_ships_pick_c
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_a
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_b
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  sp_naval_support_ships_pick_c
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_a
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  sp_naval_underway_replenishment_pick_b
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
+  stronghold_network_tech
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\special_projects_tech.txt
+  sturmtruppe_battalion_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  suicide_charge
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\bba_air_techs.txt
+  suicide_craft
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\air_techs.txt
+  tech_assault_battalion
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_bicycle_battalion
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_camelry
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_gtd_unlock_cruiser_sub_modules
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_irregulars
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_jungle_pioneers_support
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_long_range_patrol_support
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_militias
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_penal_battalion
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_sturmtruppe_battalion
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  tech_winter_logistics_support
+    categories: []
+    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\hidden.txt
+  torpedo_cruiser
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\naval.txt
+  torpedo_cruiser_mtg
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\MTG_naval.txt
+  uranium_tipped_bullets
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  urban_training_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
+  winter_logistics_support_tech
+    categories: []
+    source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
