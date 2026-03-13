@@ -31,9 +31,9 @@ arm_auto_research_intensity = {
 	group = "ARM_RULES_GROUP"
 
 	option = {
-		name = ARM_RELAXED
-		text = "ARM_OPT_RELAXED"
-		desc = "ARM_DESC_RELAXED"
+		name = ARM_REALISTIC
+		text = "ARM_OPT_REALISTIC"
+		desc = "ARM_DESC_REALISTIC"
 		allow_achievements = no
 	}
 	default = {
@@ -42,9 +42,9 @@ arm_auto_research_intensity = {
 		desc = "ARM_DESC_BALANCED"
 	}
 	option = {
-		name = ARM_AGGRESSIVE
-		text = "ARM_OPT_AGGRESSIVE"
-		desc = "ARM_DESC_AGGRESSIVE"
+		name = ARM_ARCADE
+		text = "ARM_OPT_ARCADE"
+		desc = "ARM_DESC_ARCADE"
 		allow_achievements = no
 	}
 	option = {

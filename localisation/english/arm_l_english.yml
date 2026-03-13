@@ -19,17 +19,17 @@
 
  ###########################################
  # GAME RULE 2: arm_auto_research_intensity
- ###########################################
- ARM_RULE_auto_research_intensity:0 "Auto-Research Intensity"
- ARM_RULE_auto_research_intensity_desc:0 "Controls how quickly nations catch up technologically."
- ARM_OPT_RELAXED:0 "Relaxed"
-ARM_DESC_RELAXED:0 "All lag values increased by 1.0 year, and auto-grants stay at least 2 years behind the current frontier. Nations catch up more slowly."
+###########################################
+ ARM_RULE_auto_research_intensity:0 "ARM Mode"
+ ARM_RULE_auto_research_intensity_desc:0 "Controls whether ARM prioritizes realism, balance, arcade catch-up, or historically-biased major powers."
+ ARM_OPT_REALISTIC:0 "Realistic"
+ARM_DESC_REALISTIC:0 "Conservative progression. All lag values increase by 1.0 year, and auto-grants stay at least 2 years behind the current frontier."
  ARM_OPT_BALANCED:0 "Balanced"
-ARM_DESC_BALANCED:0 "Standard lag values with a 1-year frontier buffer. ARM maintains a strong baseline, but manual research still owns the leading edge."
- ARM_OPT_AGGRESSIVE:0 "Aggressive"
-ARM_DESC_AGGRESSIVE:0 "All lag values reduced by 0.5 years. Nations catch up faster and can reach current-year tech if they fully close their lag."
- ARM_OPT_HISTORICAL:0 "Historical Bias"
-ARM_DESC_HISTORICAL:0 "Standard values plus historical competence bonuses for major nations, while keeping a 1-year frontier buffer."
+ARM_DESC_BALANCED:0 "Best of both worlds. Standard lag values with a 1-year frontier buffer, keeping nations plausible without making weaker countries feel dead on arrival."
+ ARM_OPT_ARCADE:0 "Arcade"
+ARM_DESC_ARCADE:0 "Faster catch-up. All lag values are reduced by 0.5 years and there is no mandatory frontier buffer if a nation fully closes the gap."
+ ARM_OPT_HISTORICAL:0 "Historical"
+ARM_DESC_HISTORICAL:0 "Uses Realistic mode values plus historical competence bonuses for major nations."
 
  ###########################################
  # GAME RULE 3: arm_compat_profile
@@ -361,10 +361,10 @@ arm_event.102.desc:0 "Base Lag: [?arm_base_lag]\n\nEffective Land Lag: [?arm_eff
  ARM_AI_ONLY:0 "AI Only"
  ARM_EVERYONE:0 "Everyone"
  ARM_DISABLED:0 "Disabled"
- ARM_RELAXED:0 "Relaxed"
- ARM_BALANCED:0 "Balanced"
- ARM_AGGRESSIVE:0 "Aggressive"
- ARM_HISTORICAL:0 "Historical Bias"
+ARM_REALISTIC:0 "Realistic"
+ARM_BALANCED:0 "Balanced"
+ARM_ARCADE:0 "Arcade"
+ARM_HISTORICAL:0 "Historical"
  ARM_CORE_ONLY:0 "Core Only"
  ARM_CORE_AIR_NAVAL:0 "Core + Air/Naval"
  ARM_ALL_EXCEPT_DOCTRINES:0 "All Except Doctrines"

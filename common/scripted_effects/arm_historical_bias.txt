@@ -1,11 +1,11 @@
 ###############################################################################
-# arm_historical_bias.txt — Historical Bias Modifiers
+# arm_historical_bias.txt — Historical Mode Bias Modifiers
 # Arms Race Mechanics mod
 #
 # Contains:
 #   arm_apply_historical_bias — adds competence bonuses to major nations
 #
-# Called when game rule arm_auto_research_intensity = ARM_HISTORICAL.
+# Called when ARM mode is set to ARM_HISTORICAL.
 # Runs in COUNTRY SCOPE after base competence scores are calculated.
 ###############################################################################
 

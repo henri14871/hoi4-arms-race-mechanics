@@ -206,17 +206,20 @@ arm_assign_power_tier = {
     # ARM_CAP_STANDARD: use as-is (no change)
 
     # ===================================================
-    # Rule 2 — Intensity modifier on base lag
+    # Rule 2 — ARM mode modifier on base lag
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -1056,17 +1059,20 @@ arm_convert_effective_lag_to_year_gap = {
 arm_apply_frontier_buffer_to_year_gap = {
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
             check_variable = { var = arm_temp_lag_year_gap value = 2 compare = less_than }
         }
         set_variable = { arm_temp_lag_year_gap = 2 }
     }
     else_if = {
         limit = {
-            NOT = { has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE } }
+            NOT = { has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE } }
             check_variable = { var = arm_temp_lag_year_gap value = 1 compare = less_than }
         }
-        # Balanced and Historical keep auto-grants one full year behind the frontier.
+        # Balanced keeps auto-grants one full year behind the frontier.
         set_variable = { arm_temp_lag_year_gap = 1 }
     }
 }

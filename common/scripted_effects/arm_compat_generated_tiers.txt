@@ -199,13 +199,16 @@ arm_assign_power_tier_blackice = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -444,13 +447,16 @@ arm_assign_power_tier_cold_war_iron_curtain = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -689,13 +695,16 @@ arm_assign_power_tier_kaiserreich = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -934,13 +943,16 @@ arm_assign_power_tier_endsieg = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -1179,13 +1191,16 @@ arm_assign_power_tier_extended_tech_tree_1960 = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -1424,13 +1439,16 @@ arm_assign_power_tier_novum_vexillum = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -1669,13 +1687,16 @@ arm_assign_power_tier_rise_of_nations = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -1914,13 +1935,16 @@ arm_assign_power_tier_kaiserredux = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -2159,13 +2183,16 @@ arm_assign_power_tier_the_new_order = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -2404,13 +2431,16 @@ arm_assign_power_tier_millennium_dawn = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -2649,13 +2679,16 @@ arm_assign_power_tier_the_fire_rises = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -2894,13 +2927,16 @@ arm_assign_power_tier_great_war_redux = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -3139,13 +3175,16 @@ arm_assign_power_tier_great_war = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }
@@ -3384,13 +3423,16 @@ arm_assign_power_tier_road_to_56 = {
     # ===================================================
     if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_RELAXED }
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
         }
         add_to_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
         }
         subtract_from_variable = { arm_base_lag = 0.5 }
         clamp_variable = { var = arm_base_lag min = 0 max = 40 }

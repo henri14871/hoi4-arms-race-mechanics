@@ -25,7 +25,7 @@ arm_refresh_country_state_runtime = {
     arm_calculate_naval_competence = yes
     arm_calculate_industry_competence = yes
 
-    # Step 1b: Apply historical bias if enabled
+    # Step 1b: Apply historical major-power bias if Historical mode is enabled
     if = {
         limit = {
             has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
