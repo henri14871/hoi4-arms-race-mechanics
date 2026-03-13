@@ -18,7 +18,7 @@ on_actions = {
             set_variable = { global.arm_current_year = 0 }
             set_variable = { global.arm_month_counter = 0 }
             set_variable = { global.arm_bucket_counter = 0 }
-            set_variable = { global.arm_start_year = year }
+            set_variable = { global.arm_start_year = 0 }
             set_variable = { global.arm_start_month_offset = 0 }
             set_variable = { global.arm_elapsed_months = 0 }
 
@@ -34,6 +34,7 @@ on_actions = {
             # Detect actual start year and compat profile from a valid country scope.
             random_country = {
                 limit = { always = yes }
+                set_variable = { var = global.arm_start_year value = year }
                 arm_update_current_year = yes
                 arm_auto_detect_compat_profile = yes
             }

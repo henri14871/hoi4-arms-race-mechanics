@@ -415,6 +415,21 @@ def rename_tier_effect(block_text: str, slug: str) -> str:
     )
 
 
+def sanitize_runtime_effect_text(text: str) -> str:
+    """Normalize generated scripted effects before shipping them in the mod."""
+    lines = []
+    for raw_line in text.replace("\r\n", "\n").replace("\r", "\n").split("\n"):
+        stripped = raw_line.lstrip()
+        if stripped.startswith("#"):
+            continue
+        lines.append(raw_line)
+
+    sanitized = "\n".join(lines)
+    sanitized = sanitized.replace("has_technology =", "has_tech =")
+    sanitized = sanitized.replace("has_technology=", "has_tech=")
+    return sanitized
+
+
 def build_profile_limit_lines(slug: str, indent: str = "        ") -> list[str]:
     lines = [f"{indent}OR = {{"]
     lines.append(f"{indent}    has_game_rule = {{ rule = arm_compat_profile option = {PROFILE_OPTION_KEYS[slug]} }}")
@@ -582,7 +597,10 @@ def main():
             continue
 
         tech_text = techlist_path.read_text(encoding="utf-8-sig")
-        renamed_tech_text = rename_grant_effects(tech_text, slug)
+        renamed_tech_text = rename_grant_effects(
+            sanitize_runtime_effect_text(tech_text),
+            slug,
+        )
         output_tech_path = SCRIPTED_EFFECTS_DIR / f"arm_compat_generated_{slug}.txt"
         header = (
             "###############################################################################\n"

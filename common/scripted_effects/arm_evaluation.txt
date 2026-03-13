@@ -69,11 +69,11 @@ arm_assign_power_tier = {
         set_variable = { arm_tier_index = 4 }
     }
 
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 225 (220+5)
+    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
     if = {
         limit = {
             check_variable = { arm_tier_index < 5 }
-            check_variable = { arm_global_power > 225 }
+            check_variable = { arm_global_power > 305 }
         }
         set_variable = { arm_tier_index = 5 }
     }
@@ -83,11 +83,11 @@ arm_assign_power_tier = {
     # Threshold - 5 hysteresis to demote
     # ===================================================
 
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 215 (220-5)
+    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
     if = {
         limit = {
             check_variable = { arm_tier_index > 4 }
-            check_variable = { arm_global_power < 215 }
+            check_variable = { arm_global_power < 295 }
         }
         set_variable = { arm_tier_index = 4 }
     }
@@ -1116,16 +1116,16 @@ arm_compute_effective_lag = {
 # game year to produce the target tech year per branch.
 #---------------------------------------------------------
 arm_compute_target_years = {
-    set_variable = { arm_target_year_land = global.arm_current_year }
+    set_variable = { var = arm_target_year_land value = global.arm_current_year }
     subtract_from_variable = { arm_target_year_land = arm_effective_land_lag }
 
-    set_variable = { arm_target_year_air = global.arm_current_year }
+    set_variable = { var = arm_target_year_air value = global.arm_current_year }
     subtract_from_variable = { arm_target_year_air = arm_effective_air_lag }
 
-    set_variable = { arm_target_year_naval = global.arm_current_year }
+    set_variable = { var = arm_target_year_naval value = global.arm_current_year }
     subtract_from_variable = { arm_target_year_naval = arm_effective_naval_lag }
 
-    set_variable = { arm_target_year_industry = global.arm_current_year }
+    set_variable = { var = arm_target_year_industry value = global.arm_current_year }
     subtract_from_variable = { arm_target_year_industry = arm_effective_industry_lag }
 }
 

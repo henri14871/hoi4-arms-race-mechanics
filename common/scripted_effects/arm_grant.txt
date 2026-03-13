@@ -15,6 +15,9 @@
 # ---------------------------------------------------------------------------
 arm_refresh_country_state = {
 
+    # Keep the derived current year fresh for debug views and manual evaluation.
+    arm_update_current_year = yes
+
     # Step 1: Calculate scores
     arm_calculate_global_power = yes
     arm_calculate_land_competence = yes
@@ -104,10 +107,15 @@ arm_grant_doctrines = {
 # Rebuilds a fractional in-game year from startup year + elapsed months.
 # ---------------------------------------------------------------------------
 arm_update_current_year = {
-    set_temp_variable = { arm_elapsed_years = global.arm_start_month_offset }
+    if = {
+        limit = { check_variable = { global.arm_start_year < 1 } }
+        set_variable = { var = global.arm_start_year value = year }
+    }
+
+    set_temp_variable = { var = arm_elapsed_years value = global.arm_start_month_offset }
     add_to_temp_variable = { arm_elapsed_years = global.arm_elapsed_months }
     divide_variable = { var = arm_elapsed_years value = 12 }
 
-    set_variable = { global.arm_current_year = global.arm_start_year }
+    set_variable = { var = global.arm_current_year value = global.arm_start_year }
     add_to_variable = { global.arm_current_year = arm_elapsed_years }
 }

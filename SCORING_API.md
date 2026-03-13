@@ -72,7 +72,7 @@ After calling `arm_assign_power_tier`:
 
 | Index | Name | Power threshold | Promote at | Demote at | Base lag | Quarterly cap |
 |---|---|---|---|---|---|---|
-| 5 | Superpower | 220 | >225 | <215 | 0.0 | 6 |
+| 5 | Superpower | 300 | >305 | <295 | 0.0 | 6 |
 | 4 | Great Power | 150 | >155 | <145 | 0.5 | 5 |
 | 3 | Regional Power | 90 | >95 | <85 | 1.5 | 4 |
 | 2 | Minor Industrial | 45 | >50 | <40 | 3.0 | 3 |

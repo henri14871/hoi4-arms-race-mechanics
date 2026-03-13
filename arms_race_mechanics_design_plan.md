@@ -1,4 +1,4 @@
-# Arms Race Mechanics — Consolidated Design Plan
+﻿# Arms Race Mechanics â€” Consolidated Design Plan
 
 ## Concept
 
@@ -51,7 +51,7 @@ The system also provides **tier-based research speed bonuses** that make manual 
 
 ---
 
-# Phase 1 — Scoring Model
+# Phase 1 â€” Scoring Model
 
 ## 1.1 Global Power Score
 
@@ -88,9 +88,9 @@ Suggested weight sources:
 
 Suggested weighting:
 
-* civilian factories × 1.0
-* military factories × 1.5
-* dockyards × 1.2
+* civilian factories Ã— 1.0
+* military factories Ã— 1.5
+* dockyards Ã— 1.2
 
 Reasoning:
 
@@ -105,13 +105,13 @@ Raw factory counts should use **logarithmic scaling** above a threshold to preve
 Suggested model:
 
 * first 80 factories of each type: count at full weight
-* factories 81–160: count at 50% weight
+* factories 81â€“160: count at 50% weight
 * factories 161+: count at 25% weight
 
 Example: a country with 200 military factories would score:
 
 ```text
-(80 × 1.5) + (80 × 0.75) + (40 × 0.375) = 120 + 60 + 15 = 195 economy from mils
+(80 Ã— 1.5) + (80 Ã— 0.75) + (40 Ã— 0.375) = 120 + 60 + 15 = 195 economy from mils
 ```
 
 This keeps the USA clearly dominant without letting a 1945 industrial monster score 500+ on economy alone and distort every other variable into irrelevance.
@@ -127,8 +127,8 @@ Suggested weight sources:
 
 Suggested weighting:
 
-* research slots × 15
-* research speed bonus: (total_research_speed_modifier - 1.0) × 20, capped at +30
+* research slots Ã— 15
+* research speed bonus: (total_research_speed_modifier - 1.0) Ã— 20, capped at +30
 
 Research slots should remain the single strongest clean indicator of national R&D capacity. Research speed modifiers from national spirits, advisors, and focuses provide a modest additional signal but should not dominate.
 
@@ -143,8 +143,8 @@ Suggested weight sources:
 
 Suggested weighting:
 
-* deployed manpower ÷ 50,000, **capped at 30 points**
-* division count × 0.1, **capped at 15 points**
+* deployed manpower Ã· 50,000, **capped at 30 points**
+* division count Ã— 0.1, **capped at 15 points**
 
 The cap is critical. Without it, the USSR or China could score 60+ from manpower alone, which would overinflate their tier relative to their actual industrial sophistication. Large armies indicate urgency and feedback loops, but they do not substitute for factories and research infrastructure.
 
@@ -178,10 +178,10 @@ Suggested sources:
 
 Suggested weighting:
 
-* stability × 0.5 (max 50 points at 100% stability)
-* war support × 0.3 (max 30 points at 100% war support)
+* stability Ã— 0.5 (max 50 points at 100% stability)
+* war support Ã— 0.3 (max 30 points at 100% war support)
 * at war = +20
-* political power gain rate × 10, **capped at +20**
+* political power gain rate Ã— 10, **capped at +20**
 
 This should be meaningful but not large enough to let weak states become pseudo-majors by being unstable or permanently mobilised.
 
@@ -208,11 +208,11 @@ Formula:
 
 ```text
 land_competence =
-    (military_factories × 1.0, first 60 at full, rest at 0.5)
+    (military_factories Ã— 1.0, first 60 at full, rest at 0.5)
   + (deployed_manpower / 40,000, capped at 25)
   + (steel / 10, capped at 15)
   + (tungsten / 6, capped at 10)
-  + (at_war × 10)
+  + (at_war Ã— 10)
 ```
 
 Max theoretical: ~120
@@ -231,11 +231,11 @@ Formula:
 
 ```text
 air_competence =
-    (military_factories × 0.8, first 60 at full, rest at 0.4)
+    (military_factories Ã— 0.8, first 60 at full, rest at 0.4)
   + (aluminium / 5, capped at 15)
   + (rubber / 5, capped at 10)
   + (oil / 8, capped at 10)
-  + (research_slots × 8)
+  + (research_slots Ã— 8)
 ```
 
 Max theoretical: ~110
@@ -256,11 +256,11 @@ Formula:
 
 ```text
 naval_competence =
-    (dockyards × 2.0, first 30 at full, rest at 1.0)
+    (dockyards Ã— 2.0, first 30 at full, rest at 1.0)
   + (oil / 8, capped at 10)
   + (steel / 10, capped at 10)
   + (chromium / 5, capped at 10)
-  + (research_slots × 5)
+  + (research_slots Ã— 5)
 ```
 
 Max theoretical: ~105
@@ -280,9 +280,9 @@ Formula:
 
 ```text
 industry_electronics_competence =
-    (civilian_factories × 0.8, first 60 at full, rest at 0.4)
-  + (research_slots × 12)
-  + (stability × 0.3, max 30)
+    (civilian_factories Ã— 0.8, first 60 at full, rest at 0.4)
+  + (research_slots Ã— 12)
+  + (stability Ã— 0.3, max 30)
   + (resource_breadth_bonus)
 ```
 
@@ -303,17 +303,17 @@ This controls:
 
 Branch competence feeds into two systems:
 
-**1. Category gating** — each tech category requires a minimum branch score to qualify:
+**1. Category gating** â€” each tech category requires a minimum branch score to qualify:
 
 | Branch Score | Access Level |
 |---|---|
-| 0–14 | No branch access (too weak to sustain this domain) |
-| 15–34 | Basic access (early-war tech only, e.g. 1936–1939 equivalents) |
-| 35–59 | Standard access (mid-war tech, e.g. up to 1941–1942) |
-| 60–84 | Advanced access (full mid-to-late war range) |
+| 0â€“14 | No branch access (too weak to sustain this domain) |
+| 15â€“34 | Basic access (early-war tech only, e.g. 1936â€“1939 equivalents) |
+| 35â€“59 | Standard access (mid-war tech, e.g. up to 1941â€“1942) |
+| 60â€“84 | Advanced access (full mid-to-late war range) |
 | 85+ | Cutting-edge access (latest generation, modern/jet/advanced) |
 
-**2. Lag reduction bonus** — a country whose branch score significantly exceeds the average for its global tier can reduce lag in that branch:
+**2. Lag reduction bonus** â€” a country whose branch score significantly exceeds the average for its global tier can reduce lag in that branch:
 
 ```text
 branch_lag_bonus = 0.0
@@ -338,7 +338,7 @@ Tier averages should be calibrated during testing. Starting estimates:
 
 ---
 
-# Phase 2 — Power Tiers
+# Phase 2 â€” Power Tiers
 
 Global Power Score maps countries into dynamic tiers.
 
@@ -352,12 +352,12 @@ These tiers determine:
 
 | Tier             | Global Power Score | Intended Position                | Base Lag  |
 | ---------------- | ------------------ | -------------------------------- | --------- |
-| Superpower       | 220+               | Near current frontier            | 0.0 years |
-| Great Power      | 150–219            | Slightly behind frontier         | 0.5 years |
-| Regional Power   | 90–149             | Competitive but not cutting-edge | 1.5 years |
-| Minor Industrial | 45–89              | Gradual modernisation            | 3.0 years |
-| Minor            | 20–44              | Delayed basics                   | 4.5 years |
-| Micro            | 0–19               | Minimal industrial modernity     | 6.0 years |
+| Superpower       | 300+               | Near current frontier            | 0.0 years |
+| Great Power      | 150â€“299            | Slightly behind frontier         | 0.5 years |
+| Regional Power   | 90â€“149             | Competitive but not cutting-edge | 1.5 years |
+| Minor Industrial | 45â€“89              | Gradual modernisation            | 3.0 years |
+| Minor            | 20â€“44              | Delayed basics                   | 4.5 years |
+| Micro            | 0â€“19               | Minimal industrial modernity     | 6.0 years |
 
 These tiers update dynamically. A country that industrialises aggressively can move upward and start receiving more advanced categories faster.
 
@@ -370,7 +370,7 @@ To prevent this, tiers use **asymmetric thresholds**:
 * **Promotion**: requires score to exceed the tier boundary by +5
 * **Demotion**: requires score to drop below the tier boundary by -5
 
-Example: a country with a score of 152 would promote to Great Power (needs 150+5=155? No — stays Regional). At 156, it promotes. Once at Great Power, it only demotes back at 144 (150-5=145? Stays Great Power). At 144, it demotes.
+Example: a country with a score of 152 would promote to Great Power (needs 150+5=155? No â€” stays Regional). At 156, it promotes. Once at Great Power, it only demotes back at 144 (150-5=145? Stays Great Power). At 144, it demotes.
 
 This creates a 10-point dead zone around each boundary that prevents oscillation.
 
@@ -378,7 +378,7 @@ Implementation: store the country's current tier as a variable. On each evaluati
 
 ---
 
-# Phase 3 — Effective Lag by Branch
+# Phase 3 â€” Effective Lag by Branch
 
 Base lag is determined by global tier, then modified by branch competence and strategic bonuses.
 
@@ -461,11 +461,11 @@ This models shared doctrine, imported methods, technical cooperation, and integr
 
 If a country is **actively receiving lend-lease** from a Great Power or Superpower (defined as receiving any equipment deliveries in the last 90 days), the faction bonus increases by an additional -0.25 years. This stacks with the base faction bonus.
 
-This models direct technology transfer — a nation receiving modern equipment from a major ally learns from that equipment.
+This models direct technology transfer â€” a nation receiving modern equipment from a major ally learns from that equipment.
 
 ### Desperation Bonus
 
-A country that is **at war and has lost significant core territory** should receive a modest lag reduction on combat-critical categories. This prevents the "death spiral" where losing territory → losing factories → losing tier → falling behind in tech → losing harder.
+A country that is **at war and has lost significant core territory** should receive a modest lag reduction on combat-critical categories. This prevents the "death spiral" where losing territory â†’ losing factories â†’ losing tier â†’ falling behind in tech â†’ losing harder.
 
 Suggested trigger:
 
@@ -477,7 +477,7 @@ Suggested bonus:
 * only applies while at war
 * does not apply to capitulated nations
 
-This models the historical phenomenon of nations under existential pressure (USSR 1941–42, Germany 1944–45) frantically accelerating weapons development despite industrial losses.
+This models the historical phenomenon of nations under existential pressure (USSR 1941â€“42, Germany 1944â€“45) frantically accelerating weapons development despite industrial losses.
 
 ### Puppet Bonus
 
@@ -489,11 +489,11 @@ Suggested model:
 * if the overlord is Superpower, the puppet gains -1.0 years
 * only applies to categories the puppet would otherwise qualify for (does not unlock new categories)
 
-This models colonial/imperial technology transfer — India building equipment to British specs, Manchukuo receiving Japanese technical standards, etc.
+This models colonial/imperial technology transfer â€” India building equipment to British specs, Manchukuo receiving Japanese technical standards, etc.
 
 ---
 
-# Phase 4 — Category Access System
+# Phase 4 â€” Category Access System
 
 The system should not merely decide **when** a country gets tech. It must decide **what kinds** of tech it can plausibly get.
 
@@ -607,7 +607,7 @@ This prevents absurd outcomes such as Nepal eventually receiving strategic bombe
 
 ---
 
-# Phase 5 — Technology Eligibility Logic
+# Phase 5 â€” Technology Eligibility Logic
 
 A technology is eligible for auto-grant only if all of the following are true:
 
@@ -628,7 +628,7 @@ This should be strict. The system should never indiscriminately dump techs.
 
 ---
 
-# Phase 6 — Dynamic Tech Pool System
+# Phase 6 â€” Dynamic Tech Pool System
 
 The system should **not** scan the entire technology tree at runtime every pulse, but it also should **not** rely on manually hand-written curated lists that break whenever a mod changes the tech tree.
 
@@ -636,57 +636,57 @@ The solution is **auto-generated tech lists** produced by a Python tool that rea
 
 ## How It Works
 
-Every HOI4 technology — vanilla or modded — has a `categories = { ... }` block containing tags like `infantry_weapons`, `cat_fighter`, `armor`, etc. These tags are mandatory because the game uses them for research speed bonuses. The generator tool reads these tags and maps each tech to an ARM branch and category automatically.
+Every HOI4 technology â€” vanilla or modded â€” has a `categories = { ... }` block containing tags like `infantry_weapons`, `cat_fighter`, `armor`, etc. These tags are mandatory because the game uses them for research speed bonuses. The generator tool reads these tags and maps each tech to an ARM branch and category automatically.
 
 The tool reads the tech files, extracts every tech's ID, `start_year`, `categories`, and `dependencies`, then outputs HOI4 scripted effect files that the ARM pulse logic calls directly.
 
-## Category Tag → Branch Mapping
+## Category Tag â†’ Branch Mapping
 
 The core mapping table handles all standard vanilla tags and common modded conventions:
 
 ```text
 # Land branch
-infantry_weapons, infantry_tech            → land / infantry
-artillery, cat_artillery                   → land / artillery
-support_tech, engineer_tech, recon_tech    → land / support
-motorized_equipment                        → land / motorised
-cat_mechanized                             → land / mechanised
-cat_light_armor                            → land / light_tanks
-cat_medium_armor                           → land / medium_tanks
-cat_heavy_armor, cat_super_heavy_armor     → land / heavy_tanks
-cat_modern_armor                           → land / modern_tanks
+infantry_weapons, infantry_tech            â†’ land / infantry
+artillery, cat_artillery                   â†’ land / artillery
+support_tech, engineer_tech, recon_tech    â†’ land / support
+motorized_equipment                        â†’ land / motorised
+cat_mechanized                             â†’ land / mechanised
+cat_light_armor                            â†’ land / light_tanks
+cat_medium_armor                           â†’ land / medium_tanks
+cat_heavy_armor, cat_super_heavy_armor     â†’ land / heavy_tanks
+cat_modern_armor                           â†’ land / modern_tanks
 
 # Air branch
-cat_fighter, light_fighter                 → air / fighters
-cat_heavy_fighter                          → air / heavy_fighters
-cas_bomber, cat_cas                        → air / cas
-cat_tactical_bomber                        → air / tactical_bombers
-cat_strategic_bomber                       → air / strategic_bombers
-naval_bomber                               → air / naval_bombers
-tp_tech                                    → air / transport
+cat_fighter, light_fighter                 â†’ air / fighters
+cat_heavy_fighter                          â†’ air / heavy_fighters
+cas_bomber, cat_cas                        â†’ air / cas
+cat_tactical_bomber                        â†’ air / tactical_bombers
+cat_strategic_bomber                       â†’ air / strategic_bombers
+naval_bomber                               â†’ air / naval_bombers
+tp_tech                                    â†’ air / transport
 
 # Naval branch
-dd_tech                                    → naval / destroyers
-cl_tech                                    → naval / light_cruisers
-ca_tech                                    → naval / heavy_cruisers
-bb_tech                                    → naval / battleships
-cv_tech                                    → naval / carriers
-ss_tech, sub_tech                          → naval / submarines
+dd_tech                                    â†’ naval / destroyers
+cl_tech                                    â†’ naval / light_cruisers
+ca_tech                                    â†’ naval / heavy_cruisers
+bb_tech                                    â†’ naval / battleships
+cv_tech                                    â†’ naval / carriers
+ss_tech, sub_tech                          â†’ naval / submarines
 
 # Industry / Electronics branch
-industry, construction_tech                → industry_electronics / industry
-electronics, computing_tech                → industry_electronics / electronics
-radar_tech                                 → industry_electronics / radar
-nuclear                                    → industry_electronics / nuclear
-rocketry                                   → industry_electronics / rockets
+industry, construction_tech                â†’ industry_electronics / industry
+electronics, computing_tech                â†’ industry_electronics / electronics
+radar_tech                                 â†’ industry_electronics / radar
+nuclear                                    â†’ industry_electronics / nuclear
+rocketry                                   â†’ industry_electronics / rockets
 
 # Doctrines
-land_doctrine, cat_mobile_warfare, etc.    → doctrine / land_doctrine
-naval_doctrine, cat_fleet_in_being, etc.   → doctrine / naval_doctrine
-air_doctrine                               → doctrine / air_doctrine
+land_doctrine, cat_mobile_warfare, etc.    â†’ doctrine / land_doctrine
+naval_doctrine, cat_fleet_in_being, etc.   â†’ doctrine / naval_doctrine
+air_doctrine                               â†’ doctrine / air_doctrine
 ```
 
-Any modded tech that uses standard category tags — which they almost all do because the game requires them — gets correctly assigned automatically. The tool doesn't need to know what `my_cool_modded_rifle_3` is. It sees `infantry_weapons` in the categories and maps it.
+Any modded tech that uses standard category tags â€” which they almost all do because the game requires them â€” gets correctly assigned automatically. The tool doesn't need to know what `my_cool_modded_rifle_3` is. It sees `infantry_weapons` in the categories and maps it.
 
 ## Fallback Keyword Matching
 
@@ -706,7 +706,7 @@ One line per tag. Run the tool again and it picks them up.
 Minimum tier is assigned automatically based on the tech's category and dependency depth:
 
 * Category determines the base tier (infantry = Micro, fighters = Minor Industrial, heavy tanks = Great Power, nuclear = Superpower)
-* Dependency chain depth adjusts upward — techs with 3+ prerequisites are bumped to Regional, 4+ to Great Power
+* Dependency chain depth adjusts upward â€” techs with 3+ prerequisites are bumped to Regional, 4+ to Great Power
 * This gets 90%+ of techs assigned correctly without manual intervention
 
 ## Generated Output Format
@@ -715,7 +715,7 @@ The tool outputs HOI4 scripted effect files with one effect per branch/category:
 
 ```text
 arm_grant_land_infantry = {
-    # infantry_weapons1 — 1936
+    # infantry_weapons1 â€” 1936
     if = {
         limit = {
             NOT = { has_technology = infantry_weapons1 }
@@ -725,7 +725,7 @@ arm_grant_land_infantry = {
         add_technology = infantry_weapons1
         add_to_variable = { arm_grant_counter = 1 }
     }
-    # infantry_weapons2 — 1939
+    # infantry_weapons2 â€” 1939
     if = {
         limit = {
             NOT = { has_technology = infantry_weapons2 }
@@ -761,12 +761,12 @@ The tool also generates a human-readable report listing every tech found, its as
 
 ## Advantages Over Hand-Written Lists
 
-1. **Universal compatibility** — any mod that uses standard category tags works automatically
-2. **No maintenance** — when a mod updates and adds techs, re-run the tool
-3. **Transparent** — the report shows exactly what was mapped and what was missed
-4. **Extensible** — custom_mappings.txt handles edge cases without touching code
-5. **Performance** — output is pre-compiled scripted effects, same performance as hand-written lists
-6. **Mod author friendly** — mod authors can run the tool and ship the output as a built-in compatibility file
+1. **Universal compatibility** â€” any mod that uses standard category tags works automatically
+2. **No maintenance** â€” when a mod updates and adds techs, re-run the tool
+3. **Transparent** â€” the report shows exactly what was mapped and what was missed
+4. **Extensible** â€” custom_mappings.txt handles edge cases without touching code
+5. **Performance** â€” output is pre-compiled scripted effects, same performance as hand-written lists
+6. **Mod author friendly** â€” mod authors can run the tool and ship the output as a built-in compatibility file
 
 ## What Ships With The Mod
 
@@ -777,7 +777,7 @@ The tool also generates a human-readable report listing every tech found, its as
 
 ---
 
-# Phase 7 — Time and Date Logic
+# Phase 7 â€” Time and Date Logic
 
 Half-year gaps should not be rounded away into blunt whole years.
 
@@ -817,7 +817,7 @@ Example: in January 1943, a country with 1.5-year land lag has `target_year = 19
 
 ---
 
-# Phase 8 — Pulse Logic and Performance Architecture
+# Phase 8 â€” Pulse Logic and Performance Architecture
 
 Performance is one of the main technical risks of the entire design.
 
@@ -846,9 +846,9 @@ Each month, only one bucket is processed.
 
 Example:
 
-* January / April / July / October → Bucket A
-* February / May / August / November → Bucket B
-* March / June / September / December → Bucket C
+* January / April / July / October â†’ Bucket A
+* February / May / August / November â†’ Bucket B
+* March / June / September / December â†’ Bucket C
 
 Each country is therefore evaluated once per quarter, not once per month.
 
@@ -867,9 +867,9 @@ on_startup:
 
 Alternatively, use alphabetical grouping by first letter of tag:
 
-* A–I → Bucket A
-* J–R → Bucket B
-* S–Z → Bucket C
+* Aâ€“I â†’ Bucket A
+* Jâ€“R â†’ Bucket B
+* Sâ€“Z â†’ Bucket C
 
 The key requirement is that assignment is **deterministic, stable, and evenly distributed**.
 
@@ -893,7 +893,7 @@ This immediately skips dozens of micro-nations with zero industry and saves sign
 
 ---
 
-# Phase 9 — Grant Cap and Priority Logic
+# Phase 9 â€” Grant Cap and Priority Logic
 
 Technology should not all arrive at once when a country crosses a year threshold or rises a tier.
 
@@ -935,11 +935,11 @@ If the AI is **currently researching** a technology that the auto-research syste
 * **Grant the tech immediately** and free the research slot
 * The AI will then pick a new research project on its next research tick
 
-This is beneficial — it effectively gives the AI a free research slot redirect, which means the AI can focus its manual slots on things the auto-research system doesn't cover (doctrines, ahead-of-time, niche techs).
+This is beneficial â€” it effectively gives the AI a free research slot redirect, which means the AI can focus its manual slots on things the auto-research system doesn't cover (doctrines, ahead-of-time, niche techs).
 
 ---
 
-# Phase 10 — Player Handling
+# Phase 10 â€” Player Handling
 
 By default, the player should **not** receive automatic research.
 
@@ -972,7 +972,7 @@ This prevents one human player getting free tech while others don't, which would
 
 ---
 
-# Phase 11 — Research Mechanic Preservation
+# Phase 11 â€” Research Mechanic Preservation
 
 This is arguably the most important design phase in the entire mod. Auto-research must act as a **passive floor**, not a replacement for manual research. The research mechanic should feel *more* rewarding for powerful nations, not less. A player or AI that actively manages their research slots should always outperform one that leaves them idle.
 
@@ -980,7 +980,7 @@ This is arguably the most important design phase in the entire mod. Auto-researc
 
 The auto-research system has several built-in limitations that make manual research valuable:
 
-* **Timing**: auto-research grants tech quarterly, subject to priority order and grant caps. Manual research delivers whenever you finish it. In a war, 3–6 months of delay is the difference between winning and losing an air campaign.
+* **Timing**: auto-research grants tech quarterly, subject to priority order and grant caps. Manual research delivers whenever you finish it. In a war, 3â€“6 months of delay is the difference between winning and losing an air campaign.
 * **Ahead-of-time**: auto-research **never** grants tech before its base year. Manual research is the only way to get tech early. This is the single biggest advantage of active research management.
 * **Priority control**: auto-research follows a fixed priority list (infantry first, electronics last). Manual research lets you jump the queue on whatever you actually need right now.
 * **Excluded categories**: doctrines (by default), nuclear/rocket tech (by default), and XP-gated variants are never auto-granted. These must be manually researched.
@@ -1015,7 +1015,7 @@ Apply as a national spirit with `research_speed_factor` modifier. The spirit is 
 
 ## 11.3 Ahead-of-Time Penalty Reduction
 
-This is the most impactful research bonus. Vanilla ahead-of-time penalties are brutal — researching something a year early can double the research time. For powerful nations, this penalty should be reduced, making aggressive ahead-of-time research viable.
+This is the most impactful research bonus. Vanilla ahead-of-time penalties are brutal â€” researching something a year early can double the research time. For powerful nations, this penalty should be reduced, making aggressive ahead-of-time research viable.
 
 | Tier | Ahead-of-Time Penalty Reduction |
 |---|---|
@@ -1053,10 +1053,10 @@ Branch competence score maps to a branch-specific research speed modifier:
 | Branch Score | Research Speed in That Branch |
 |---|---|
 | 85+ (cutting-edge) | +10% |
-| 60–84 (advanced) | +5% |
-| 35–59 (standard) | +0% |
-| 15–34 (basic) | -5% |
-| 0–14 (none) | -10% |
+| 60â€“84 (advanced) | +5% |
+| 35â€“59 (standard) | +0% |
+| 15â€“34 (basic) | -5% |
+| 0â€“14 (none) | -10% |
 
 These **stack** with the tier-based general research speed bonus.
 
@@ -1083,11 +1083,11 @@ The combined effect of all three systems creates a clean hierarchy:
 
 ### For Superpowers (USA, late-game USSR, late-game Germany)
 
-* Auto-research provides a floor — you'll never fall behind on basics
+* Auto-research provides a floor â€” you'll never fall behind on basics
 * +15% general research speed makes your slots highly productive
-* Halved ahead-of-time penalties let you push 6–12 months ahead of the floor
-* Strong branch scores give another +5–10% in your best domains
-* **Net effect**: a well-managed Superpower is always 6–12 months ahead of where auto-research alone would place them. Research slots feel powerful and impactful. You'd never leave a slot empty.
+* Halved ahead-of-time penalties let you push 6â€“12 months ahead of the floor
+* Strong branch scores give another +5â€“10% in your best domains
+* **Net effect**: a well-managed Superpower is always 6â€“12 months ahead of where auto-research alone would place them. Research slots feel powerful and impactful. You'd never leave a slot empty.
 
 ### For Great Powers (UK, Japan, Italy, France)
 
@@ -1100,7 +1100,7 @@ The combined effect of all three systems creates a clean hierarchy:
 
 * Auto-research handles most of your catch-up
 * +5% speed is modest but helps
-* Ahead-of-time reduction is small — pushing ahead is hard but not impossible
+* Ahead-of-time reduction is small â€” pushing ahead is hard but not impossible
 * **Net effect**: research matters for specific priorities but you're mostly relying on the floor. Your slots are best used on areas auto-research hasn't reached yet rather than trying to race ahead.
 
 ### For Minor Industrial and Below
@@ -1108,7 +1108,7 @@ The combined effect of all three systems creates a clean hierarchy:
 * Auto-research is your primary tech source
 * No speed bonuses (or penalties for Minor/Micro)
 * Ahead-of-time research is impractical
-* **Net effect**: your 1–2 research slots are best used on categories auto-research doesn't cover (doctrines, niche picks) or on whatever you need most urgently. The floor carries you.
+* **Net effect**: your 1â€“2 research slots are best used on categories auto-research doesn't cover (doctrines, niche picks) or on whatever you need most urgently. The floor carries you.
 
 ## 11.6 Technology Permanence Rule
 
@@ -1123,9 +1123,9 @@ This is a hard design rule, not optional. Revoking tech would:
 * create nonsensical gameplay (divisions suddenly weaker with no explanation)
 * violate basic realism (nations don't un-learn engineering)
 
-The natural consequence of power loss is already modelled: lower tier → wider lag → fewer grants → slower manual research. The country falls behind the frontier gradually without losing what it already has.
+The natural consequence of power loss is already modelled: lower tier â†’ wider lag â†’ fewer grants â†’ slower manual research. The country falls behind the frontier gradually without losing what it already has.
 
-## 11.7 Game Rule — Research Speed Bonuses
+## 11.7 Game Rule â€” Research Speed Bonuses
 
 This system should be controllable by game rule.
 
@@ -1137,7 +1137,7 @@ This system should be controllable by game rule.
 
 ---
 
-# Phase 12 — War, Faction, and Special Situations
+# Phase 12 â€” War, Faction, and Special Situations
 
 ## 12.1 War Acceleration
 
@@ -1246,7 +1246,7 @@ This prevents the scenario where Germany in 1944 loses half its factories, drops
 
 ---
 
-# Phase 13 — Advanced Technology Handling
+# Phase 13 â€” Advanced Technology Handling
 
 ## Nuclear and Rocket Technology
 
@@ -1280,16 +1280,16 @@ Recommended doctrine policy:
 
 ### Doctrine Path Selection
 
-This is the critical problem with doctrine auto-research. HOI4 land doctrines have **mutually exclusive branches** (e.g. Superior Firepower splits into Integrated Support vs Dispersed Support). The system cannot simply grant "the next doctrine" — it must choose a path.
+This is the critical problem with doctrine auto-research. HOI4 land doctrines have **mutually exclusive branches** (e.g. Superior Firepower splits into Integrated Support vs Dispersed Support). The system cannot simply grant "the next doctrine" â€” it must choose a path.
 
 Recommended approach:
 
 * **At game start**, assign each AI country a **doctrine path preference** stored as a variable
 * Path preference should be chosen based on historical alignment or national strengths:
-  - Countries with high land competence and manpower → Mass Assault path
-  - Countries with high industry competence → Superior Firepower (Integrated)
-  - Countries with high air competence → Grand Battleplan or Superior Firepower (Dispersed)
-  - Historical overrides for majors (Germany → Mobile Warfare, USSR → Deep Battle, UK → Grand Battleplan, etc.)
+  - Countries with high land competence and manpower â†’ Mass Assault path
+  - Countries with high industry competence â†’ Superior Firepower (Integrated)
+  - Countries with high air competence â†’ Grand Battleplan or Superior Firepower (Dispersed)
+  - Historical overrides for majors (Germany â†’ Mobile Warfare, USSR â†’ Deep Battle, UK â†’ Grand Battleplan, etc.)
 * The auto-research system only grants doctrines that are on the assigned path
 * Alternatively, **use HOI4's existing AI doctrine weights** if accessible via script, since the AI already has path preferences coded
 
@@ -1315,7 +1315,7 @@ This prevents hidden breakage and preserves branch identity.
 
 ---
 
-# Phase 14 — Modern HOI4 Scope Boundaries
+# Phase 14 â€” Modern HOI4 Scope Boundaries
 
 Modern HOI4 includes systems such as:
 
@@ -1343,7 +1343,7 @@ This prevents scope explosion while keeping the core mechanic clean.
 
 ---
 
-# Phase 15 — Game Start Initialisation
+# Phase 15 â€” Game Start Initialisation
 
 The system needs defined behaviour for the first evaluation cycle.
 
@@ -1368,13 +1368,13 @@ This avoids a massive first-tick tech dump while still catching countries up nat
 
 ---
 
-# Phase 16 — Game Rules
+# Phase 16 â€” Game Rules
 
 All game rules should live in the standard HOI4 game rules framework and be readable by the pulse logic.
 
 The system should use a compact but complete rule set.
 
-## Rule 1 — Auto-Research Scope
+## Rule 1 â€” Auto-Research Scope
 
 | Option                        | Effect                                        |
 | ----------------------------- | --------------------------------------------- |
@@ -1382,7 +1382,7 @@ The system should use a compact but complete rule set.
 | Enabled (Everyone)            | Applies to all countries including the player  |
 | Disabled                      | System inactive                               |
 
-## Rule 2 — Auto-Research Intensity
+## Rule 2 â€” Auto-Research Intensity
 
 | Option               | Effect                                                                       |
 | -------------------- | ---------------------------------------------------------------------------- |
@@ -1393,7 +1393,7 @@ The system should use a compact but complete rule set.
 
 Historical Bias should not replace the dynamic system. It should only slightly weight known historical strengths (e.g. Germany +10 land competence, UK +10 naval competence, Japan +10 naval competence).
 
-## Rule 3 — Tech Scope
+## Rule 3 â€” Tech Scope
 
 | Option                       | Effect                                                              |
 | ---------------------------- | ------------------------------------------------------------------- |
@@ -1402,7 +1402,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 | All Except Doctrines         | Includes nearly all eligible hardware and support tech              |
 | Everything                   | Includes doctrines and advanced branches subject to all other gates |
 
-## Rule 4 — Doctrine Handling
+## Rule 4 â€” Doctrine Handling
 
 | Option                       | Effect                                              |
 | ---------------------------- | --------------------------------------------------- |
@@ -1410,7 +1410,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 | AI Only                      | Only AI countries auto-receive doctrine progression  |
 | Everyone                     | Player and AI receive doctrine auto-research         |
 
-## Rule 5 — Advanced Technology
+## Rule 5 â€” Advanced Technology
 
 | Option               | Effect                                     |
 | -------------------- | ------------------------------------------ |
@@ -1418,7 +1418,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 | Superpowers Only     | Only top-tier states may auto-receive them |
 | Included             | Follows normal category and branch gating  |
 
-## Rule 6 — War and Faction Catch-Up
+## Rule 6 â€” War and Faction Catch-Up
 
 | Option               | Effect                               |
 | -------------------- | ------------------------------------ |
@@ -1426,7 +1426,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 | Standard *(default)* | Use standard war and faction bonuses |
 | Enhanced             | Use stronger war and faction bonuses |
 
-## Rule 7 — Grant Cap
+## Rule 7 â€” Grant Cap
 
 | Option               | Effect                                     |
 | -------------------- | ------------------------------------------ |
@@ -1434,7 +1434,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 | Standard *(default)* | Use default cap table                      |
 | Unlimited            | All eligible techs can grant at evaluation |
 
-## Rule 8 — Notifications
+## Rule 8 â€” Notifications
 
 | Option                         | Effect                                                          |
 | ------------------------------ | --------------------------------------------------------------- |
@@ -1442,7 +1442,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 | Major Nations Only *(default)* | Notify only for major milestone grants in Great Powers or above |
 | All Notifications              | Notify for every grant                                          |
 
-## Rule 9 — Power Score Visibility
+## Rule 9 â€” Power Score Visibility
 
 | Option                       | Effect                                                      |
 | ---------------------------- | ----------------------------------------------------------- |
@@ -1450,7 +1450,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 | Own Country Only *(default)* | Show the player their own score/tier via national spirit     |
 | All Countries                | Show all countries' score/tier for transparency and testing  |
 
-## Rule 10 — Puppet Technology Sharing
+## Rule 10 â€” Puppet Technology Sharing
 
 | Option               | Effect                                               |
 | -------------------- | ---------------------------------------------------- |
@@ -1458,7 +1458,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 | Standard *(default)* | Puppets gain lag reduction based on overlord tier     |
 | Enhanced             | Puppet bonus values doubled                          |
 
-## Rule 11 — Anti-Death-Spiral
+## Rule 11 â€” Anti-Death-Spiral
 
 | Option               | Effect                                                                |
 | -------------------- | --------------------------------------------------------------------- |
@@ -1466,7 +1466,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 | Standard *(default)* | Countries losing 20%+ core territory get combat tech lag reduction    |
 | Enhanced             | Lower threshold (10%+ territory) and stronger bonus                   |
 
-## Rule 12 — Research Speed Bonuses
+## Rule 12 â€” Research Speed Bonuses
 
 | Option               | Effect                                                                                          |
 | -------------------- | ----------------------------------------------------------------------------------------------- |
@@ -1476,7 +1476,7 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 
 ---
 
-# Phase 17 — Scripting Structure
+# Phase 17 â€” Scripting Structure
 
 ## Suggested Folder Layout
 
@@ -1499,42 +1499,42 @@ Historical Bias should not replace the dynamic system. It should only slightly w
 
 ### Scripted Effects
 
-* `calculate_global_power` — runs the full global power formula
-* `calculate_branch_competence` — runs all four branch formulas
-* `assign_power_tier` — maps score to tier with hysteresis
-* `assign_allowed_categories` — sets category flags per tier + branch
-* `compute_effective_lag` — calculates per-branch lag with all modifiers
-* `evaluate_and_grant_technologies` — runs the curated list check and grants up to cap
-* `update_research_speed_spirit` — applies/updates the tier and branch research speed national spirit
+* `calculate_global_power` â€” runs the full global power formula
+* `calculate_branch_competence` â€” runs all four branch formulas
+* `assign_power_tier` â€” maps score to tier with hysteresis
+* `assign_allowed_categories` â€” sets category flags per tier + branch
+* `compute_effective_lag` â€” calculates per-branch lag with all modifiers
+* `evaluate_and_grant_technologies` â€” runs the curated list check and grants up to cap
+* `update_research_speed_spirit` â€” applies/updates the tier and branch research speed national spirit
 
 ### Scripted Triggers
 
-* `auto_research_system_enabled` — checks Rule 1
-* `country_eligible_for_auto_research` — checks AI status, capitulation, factory minimum
-* `category_allowed_for_country` — checks tier ceiling + branch score
-* `tech_eligible_for_grant` — checks prerequisites, year, XP gate, doctrine path
-* `player_included_check` — checks Rule 1 setting for player inclusion
+* `auto_research_system_enabled` â€” checks Rule 1
+* `country_eligible_for_auto_research` â€” checks AI status, capitulation, factory minimum
+* `category_allowed_for_country` â€” checks tier ceiling + branch score
+* `tech_eligible_for_grant` â€” checks prerequisites, year, XP gate, doctrine path
+* `player_included_check` â€” checks Rule 1 setting for player inclusion
 
 ### On Actions
 
-* `on_startup` — initial score calculation, bucket assignment, tier storage
-* `on_monthly` — triggers the appropriate bucket's evaluation
+* `on_startup` â€” initial score calculation, bucket assignment, tier storage
+* `on_monthly` â€” triggers the appropriate bucket's evaluation
 
 ### Decisions
 
-* `debug_view_power_score` — visible only if Rule 9 allows, shows score breakdown
-* `debug_view_tier` — shows current tier and branch competences
-* `debug_force_evaluation` — manually triggers an evaluation cycle (testing only)
+* `debug_view_power_score` â€” visible only if Rule 9 allows, shows score breakdown
+* `debug_view_tier` â€” shows current tier and branch competences
+* `debug_force_evaluation` â€” manually triggers an evaluation cycle (testing only)
 
 ### Events
 
-* `auto_research.1` — major milestone notification (new tank generation, jet fighters, etc.)
-* `auto_research.100–199` — debug reporting events
-* `auto_research.200–299` — optional news event hooks for player awareness
+* `auto_research.1` â€” major milestone notification (new tank generation, jet fighters, etc.)
+* `auto_research.100â€“199` â€” debug reporting events
+* `auto_research.200â€“299` â€” optional news event hooks for player awareness
 
 ---
 
-# Phase 18 — Implementation Logic Pseudocode
+# Phase 18 â€” Implementation Logic Pseudocode
 
 ## Country Evaluation Loop
 
@@ -1566,7 +1566,7 @@ FOR each country in current evaluation bucket:
 
     SET grant_counter = 0
 
-    FOR each priority category (in priority order 1–11):
+    FOR each priority category (in priority order 1â€“11):
         IF grant_counter >= quarterly_cap:
             break
 
@@ -1606,7 +1606,7 @@ FOR each country in current evaluation bucket:
 
 ---
 
-# Phase 19 — Balancing Guidelines
+# Phase 19 â€” Balancing Guidelines
 
 ## What to Watch During Testing
 
@@ -1635,8 +1635,8 @@ The system should be observed against countries with very different profiles:
 
 Additionally, test specific scenarios:
 
-* **USSR 1941–42**: loses massive territory. Does desperation bonus keep them fielding plausible infantry/fighters?
-* **Germany 1944–45**: losing factories and territory. Does tech remain at a believable level?
+* **USSR 1941â€“42**: loses massive territory. Does desperation bonus keep them fielding plausible infantry/fighters?
+* **Germany 1944â€“45**: losing factories and territory. Does tech remain at a believable level?
 * **India as British puppet**: does puppet bonus give them appropriate but not excessive tech?
 * **Italy switching factions**: does faction bonus update correctly?
 * **Sweden neutral**: no war bonus, no faction bonus. Does it still progress at a reasonable regional pace?
@@ -1653,13 +1653,13 @@ That spread should expose whether the model properly distinguishes:
 
 ---
 
-# Phase 20 — Compatibility
+# Phase 20 â€” Compatibility
 
 The dynamic tech pool system (Phase 6) and the generator tool make compatibility the mod's strongest feature rather than its weakest.
 
 ## Compatibility Tiers
 
-### Tier 1 — Works Out of the Box (~70% of popular mods)
+### Tier 1 â€” Works Out of the Box (~70% of popular mods)
 
 Mods that don't touch the tech tree at all:
 
@@ -1670,9 +1670,9 @@ Mods that don't touch the tech tree at all:
 * map mods
 * division template mods
 
-The scoring system reads factories, resources, research slots, and manpower — all of which exist in every mod. The pre-generated vanilla tech lists handle all vanilla techs. Zero user action needed.
+The scoring system reads factories, resources, research slots, and manpower â€” all of which exist in every mod. The pre-generated vanilla tech lists handle all vanilla techs. Zero user action needed.
 
-### Tier 2 — Run the Generator (~20% of popular mods)
+### Tier 2 â€” Run the Generator (~20% of popular mods)
 
 Mods that add techs to the existing vanilla tree or extend it:
 
@@ -1688,7 +1688,7 @@ python arm_tech_generator.py --hoi4 /path/to/hoi4 --mods /path/to/mod --mode exp
 
 This generates an additional tech list file that sits alongside the vanilla lists. Both load. Both work. Takes 10 seconds.
 
-### Tier 3 — Run the Generator with Preset (~10% of popular mods)
+### Tier 3 â€” Run the Generator with Preset (~10% of popular mods)
 
 Total overhaul mods that replace the tech tree entirely:
 
@@ -1734,7 +1734,7 @@ Everything goes into the main ARM mod folder. One folder, one Workshop item, one
 
 ---
 
-# Phase 21 — Final Design Position
+# Phase 21 â€” Final Design Position
 
 This mod should be understood as:
 
@@ -1763,27 +1763,28 @@ It is:
 
 The following gaps have been addressed:
 
-1. **Branch competence now has concrete formulas** with actual weights, caps, and diminishing returns — not just "suggested sources."
-2. **Branch competence thresholds are defined** — specific score ranges map to access levels, and the category table now includes minimum branch scores.
+1. **Branch competence now has concrete formulas** with actual weights, caps, and diminishing returns â€” not just "suggested sources."
+2. **Branch competence thresholds are defined** â€” specific score ranges map to access levels, and the category table now includes minimum branch scores.
 3. **Diminishing returns on factory counts** prevent late-game score inflation from breaking tier spacing.
 4. **All sub-scores have caps** to prevent any single variable from dominating the global power score.
 5. **Tier hysteresis** prevents countries from oscillating between tiers at boundaries.
-6. **Desperation bonus** prevents the losing-nation death spiral where territory loss → factory loss → tier drop → tech collapse.
+6. **Desperation bonus** prevents the losing-nation death spiral where territory loss â†’ factory loss â†’ tier drop â†’ tech collapse.
 7. **Puppet/subject handling** with autonomy-level scaling.
 8. **Lend-lease enhancement** to faction bonus.
 9. **Defensive war modifier** for nations under direct invasion.
 10. **Doctrine path selection logic** for when doctrine auto-research is enabled.
-11. **Multiplayer handling** — all human players excluded, not just "the player."
-12. **Game start initialisation** — defined behaviour for day one and non-1936 bookmarks.
-13. **Active research interaction** — what happens when auto-grant overlaps with AI's current research.
-14. **Bucket assignment method** — concrete algorithm instead of "deterministic method."
+11. **Multiplayer handling** â€” all human players excluded, not just "the player."
+12. **Game start initialisation** â€” defined behaviour for day one and non-1936 bookmarks.
+13. **Active research interaction** â€” what happens when auto-grant overlaps with AI's current research.
+14. **Bucket assignment method** â€” concrete algorithm instead of "deterministic method."
 15. **Early exit optimisation** for zero-industry nations.
 16. **Curated tech pool now includes example vanilla tech IDs** as a starting reference.
-17. **Date comparison method** — concrete approach for half-year precision using HOI4's date system.
-18. **Two additional game rules** — Puppet Technology Sharing and Anti-Death-Spiral.
+17. **Date comparison method** â€” concrete approach for half-year precision using HOI4's date system.
+18. **Two additional game rules** â€” Puppet Technology Sharing and Anti-Death-Spiral.
 19. **Specific scenario test cases** added to balancing guidelines (USSR 1941, Germany 1944, etc.).
 20. **Compatibility template** recommendation for overhaul mod support.
-21. **Research Mechanic Preservation (Phase 11)** — dedicated system ensuring manual research remains valuable at every tier, with tier-based research speed bonuses, ahead-of-time penalty reduction, and branch-specific research speed modifiers.
-22. **Technology Permanence Rule** — explicit hard design rule that granted techs are never revoked under any circumstances.
-23. **New game rule (Rule 12)** — Research Speed Bonuses with Full/Tier Only/Disabled options.
-24. **New design principles** — auto-research is a floor not a ceiling, tech is permanent, powerful nations research faster.
+21. **Research Mechanic Preservation (Phase 11)** â€” dedicated system ensuring manual research remains valuable at every tier, with tier-based research speed bonuses, ahead-of-time penalty reduction, and branch-specific research speed modifiers.
+22. **Technology Permanence Rule** â€” explicit hard design rule that granted techs are never revoked under any circumstances.
+23. **New game rule (Rule 12)** â€” Research Speed Bonuses with Full/Tier Only/Disabled options.
+24. **New design principles** â€” auto-research is a floor not a ceiling, tech is permanent, powerful nations research faster.
+
