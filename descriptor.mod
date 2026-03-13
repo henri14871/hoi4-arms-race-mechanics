@@ -6,6 +6,7 @@ tags={
 	"Technologies"
 }
 name="Arms Race Mechanics"
-path="mod/ArmsRaceMechanics"
-supported_version="1.17.4.1"
 picture="thumbnail.png"
+supported_version="1.17.4.1"
+path="C:/Users/henri/OneDrive/Documents/Paradox Interactive/Hearts of Iron IV/mod/ArmsRaceMechanics"
+remote_file_id="3683996696"

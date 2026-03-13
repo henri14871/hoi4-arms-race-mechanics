@@ -77,6 +77,10 @@ ARM ships with built-in compatibility profiles that auto-detect your mod setup. 
 
 Just enable both mods and leave Compatibility Profile on Auto Detect. ARM handles the rest.
 
+[h2]GitHub[/h2]
+Source, issue tracking, and updates:
+[url=https://github.com/henri14871/hoi4-arms-race-mechanics]github.com/henri14871/hoi4-arms-race-mechanics[/url]
+
 [h2]Current Version[/h2]
 [b]Version:[/b] 1.0.0
 [b]HOI4:[/b] 1.17.4.1+

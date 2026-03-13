@@ -10,6 +10,8 @@ ARM fixes that by giving each country a credible technological baseline based on
 
 **Version:** 1.0.0 | **HOI4:** 1.17.4.1+ | **DLC Required:** None
 
+**Steam Workshop:** https://steamcommunity.com/sharedfiles/filedetails/?id=3683996696
+
 ---
 
 ## What changes in your game
