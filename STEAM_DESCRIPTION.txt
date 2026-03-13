@@ -1,11 +1,12 @@
 [h1]Arms Race Mechanics[/h1]
-Dynamically grants technologies to nations based on their global power, military competence, and industrial capacity. Stronger nations stay near the tech frontier. Weaker nations lag behind but never become obsolete.
+Dynamically grants technologies to nations based on their global power, military competence, and industrial capacity. Stronger nations stay near the tech frontier. Weaker nations lag behind but never become obsolete. It does not make HOI4's normal research mechanics useless. It makes them more engaging by giving countries a believable baseline while keeping timing, specialization, and player priorities important.
 
 [h2]Features[/h2]
 [list]
 [*] Six power tiers (Micro to Superpower) based on economy, science, mobilisation, resources, and war posture
 [*] Four branch competence scores (Land, Air, Naval, Industry) control which tech categories each nation receives
 [*] Technologies granted quarterly in priority order with configurable caps
+[*] Supplements normal research instead of replacing it - you still choose what to rush, delay, and specialize in
 [*] War, faction, and desperation bonuses help nations under pressure catch up
 [*] Anti-death-spiral system keeps losing nations competitive in the late game
 [*] Puppet tech sharing lets subjects benefit from their overlord's strength
@@ -53,7 +54,7 @@ Supported built-in profiles:
 [/list]
 
 [h2]How It Works[/h2]
-Every month, one-third of the world is evaluated. Each country is scored on global power and branch competence, assigned a tier, and granted eligible technologies up to a quarterly cap. Superpowers get current-year tech with 6 grants per quarter. Micro nations lag 7 years behind and get 1. The system runs AI-only by default, so players keep full control of their own research unless they change the scope rule.
+Every month, one-third of the world is evaluated. Each country is scored on global power and branch competence, assigned a tier, and granted eligible technologies up to a quarterly cap. Superpowers get current-year tech with 6 grants per quarter. Micro nations lag 7 years behind and get 1. The system runs AI-only by default, so players keep full control of their own research unless they change the scope rule. The goal is to create a more believable and competitive tech race, not to remove research decisions from the game.
 
 [h2]For Maintainers[/h2]
 The repository includes tools to rebuild the bundled compatibility profiles from installed Workshop mods and to generate support for additional tech-tree mods.

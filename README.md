@@ -1,6 +1,6 @@
 # Arms Race Mechanics
 
-A Hearts of Iron IV mod that dynamically grants technologies to nations based on their global power, military competence, and industrial capacity, making the world's tech race feel realistic without scripting every country by hand.
+A Hearts of Iron IV mod that dynamically grants technologies to nations based on their global power, military competence, and industrial capacity, making the world's tech race feel realistic without scripting every country by hand. It does not make the normal research system pointless. Instead, it makes research more engaging by giving every country a more believable technological baseline while leaving meaningful choices, timing, specialization, and player priorities intact.
 
 **Version:** 1.0.0 | **HOI4:** 1.17.4.1
 
@@ -12,6 +12,11 @@ A Hearts of Iron IV mod that dynamically grants technologies to nations based on
 - Nations are ranked into six power tiers (Micro through Superpower) based on economy, science, mobilisation, resources, and war posture
 - Stronger nations research faster and unlock more tech categories; weaker nations lag behind but never become completely obsolete
 - Technologies are granted quarterly in strict priority order (infantry first, nuclear and rockets last)
+
+**Research remains meaningful**
+- ARM supplements the standard HOI4 research game instead of replacing it
+- Players still decide what to prioritize, what to rush, and how to specialize beyond the system's baseline grants
+- The result is a more active tech race: fewer dead-end AI countries, stronger competition, and more interesting timing decisions
 
 **Branch competence system**
 - Four independent competence scores (Land, Air, Naval, Industry/Electronics) control which categories a nation can receive
@@ -52,6 +57,8 @@ A Hearts of Iron IV mod that dynamically grants technologies to nations based on
 ---
 
 ## How it works
+
+ARM is designed to support the normal research game, not erase it. Countries get baseline technological catch-up based on their real position in the world, but research slots, timing, focus choices, and specialization still decide who actually leads.
 
 Every month, one-third of the world's countries are evaluated (3-bucket round-robin for performance). Each country's evaluation:
 
