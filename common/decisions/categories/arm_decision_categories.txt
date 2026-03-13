@@ -12,5 +12,6 @@ arm_debug_category = {
 		}
 	}
 
+	visible_when_empty = yes
 	priority = 50
 }

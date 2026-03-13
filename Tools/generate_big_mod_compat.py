@@ -258,16 +258,56 @@ def resolve_preset(generator, profile: dict) -> dict | None:
 
 def apply_thresholds_to_evaluation(text: str, thresholds: dict) -> str:
     replacements = [
-        (r"(arm_tier_index < 1\s*\}\s*check_variable = \{\s*arm_global_power > )\d+(\s*\})", thresholds["minor"] + 5),
-        (r"(arm_tier_index < 2\s*\}\s*check_variable = \{\s*arm_global_power > )\d+(\s*\})", thresholds["minor_industrial"] + 5),
-        (r"(arm_tier_index < 3\s*\}\s*check_variable = \{\s*arm_global_power > )\d+(\s*\})", thresholds["regional_power"] + 5),
-        (r"(arm_tier_index < 4\s*\}\s*check_variable = \{\s*arm_global_power > )\d+(\s*\})", thresholds["great_power"] + 5),
-        (r"(arm_tier_index < 5\s*\}\s*check_variable = \{\s*arm_global_power > )\d+(\s*\})", thresholds["superpower"] + 5),
-        (r"(arm_tier_index > 4\s*\}\s*check_variable = \{\s*arm_global_power < )\d+(\s*\})", thresholds["superpower"] - 5),
-        (r"(arm_tier_index > 3\s*\}\s*check_variable = \{\s*arm_global_power < )\d+(\s*\})", thresholds["great_power"] - 5),
-        (r"(arm_tier_index > 2\s*\}\s*check_variable = \{\s*arm_global_power < )\d+(\s*\})", thresholds["regional_power"] - 5),
-        (r"(arm_tier_index > 1\s*\}\s*check_variable = \{\s*arm_global_power < )\d+(\s*\})", thresholds["minor_industrial"] - 5),
-        (r"(arm_tier_index > 0\s*\}\s*check_variable = \{\s*arm_global_power < )\d+(\s*\})", thresholds["minor"] - 5),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 1 compare = less_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
+            thresholds["minor"] + 5,
+        ),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 2 compare = less_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
+            thresholds["minor_industrial"] + 5,
+        ),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 3 compare = less_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
+            thresholds["regional_power"] + 5,
+        ),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 4 compare = less_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
+            thresholds["great_power"] + 5,
+        ),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 5 compare = less_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
+            thresholds["superpower"] + 5,
+        ),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 4 compare = greater_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
+            thresholds["superpower"] - 5,
+        ),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 3 compare = greater_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
+            thresholds["great_power"] - 5,
+        ),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 2 compare = greater_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
+            thresholds["regional_power"] - 5,
+        ),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 1 compare = greater_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
+            thresholds["minor_industrial"] - 5,
+        ),
+        (
+            r"(check_variable = \{\s*var = arm_tier_index value = 0 compare = greater_than\s*\}\s*"
+            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
+            thresholds["minor"] - 5,
+        ),
     ]
 
     updated = text

@@ -5,6 +5,594 @@
 ##############################################
 
 ###################################
+# Cached score inputs
+###################################
+arm_prepare_score_inputs = {
+    # Research slots drive science and three branch scores.
+    set_variable = { arm_cached_science_score = 8 }
+    set_variable = { arm_cached_air_slots_bonus = 8 }
+    set_variable = { arm_cached_naval_slots_bonus = 5 }
+    set_variable = { arm_cached_industry_slots_bonus = 12 }
+    if = {
+        limit = { amount_research_slots > 5 }
+        set_variable = { arm_cached_science_score = 70 }
+        set_variable = { arm_cached_air_slots_bonus = 48 }
+        set_variable = { arm_cached_naval_slots_bonus = 30 }
+        set_variable = { arm_cached_industry_slots_bonus = 72 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 4 }
+        set_variable = { arm_cached_science_score = 55 }
+        set_variable = { arm_cached_air_slots_bonus = 40 }
+        set_variable = { arm_cached_naval_slots_bonus = 25 }
+        set_variable = { arm_cached_industry_slots_bonus = 60 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 3 }
+        set_variable = { arm_cached_science_score = 40 }
+        set_variable = { arm_cached_air_slots_bonus = 32 }
+        set_variable = { arm_cached_naval_slots_bonus = 20 }
+        set_variable = { arm_cached_industry_slots_bonus = 48 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 2 }
+        set_variable = { arm_cached_science_score = 28 }
+        set_variable = { arm_cached_air_slots_bonus = 24 }
+        set_variable = { arm_cached_naval_slots_bonus = 15 }
+        set_variable = { arm_cached_industry_slots_bonus = 36 }
+    }
+    else_if = {
+        limit = { amount_research_slots > 1 }
+        set_variable = { arm_cached_science_score = 16 }
+        set_variable = { arm_cached_air_slots_bonus = 16 }
+        set_variable = { arm_cached_naval_slots_bonus = 10 }
+        set_variable = { arm_cached_industry_slots_bonus = 24 }
+    }
+
+    # Stability affects posture and industry competence.
+    set_variable = { arm_cached_war_posture_stability_bonus = 3 }
+    set_variable = { arm_cached_industry_stability_bonus = 3 }
+    if = {
+        limit = { has_stability > 0.9 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 30 }
+        set_variable = { arm_cached_industry_stability_bonus = 30 }
+    }
+    else_if = {
+        limit = { has_stability > 0.8 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 27 }
+        set_variable = { arm_cached_industry_stability_bonus = 27 }
+    }
+    else_if = {
+        limit = { has_stability > 0.7 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 24 }
+        set_variable = { arm_cached_industry_stability_bonus = 24 }
+    }
+    else_if = {
+        limit = { has_stability > 0.6 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 21 }
+        set_variable = { arm_cached_industry_stability_bonus = 21 }
+    }
+    else_if = {
+        limit = { has_stability > 0.5 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 18 }
+        set_variable = { arm_cached_industry_stability_bonus = 18 }
+    }
+    else_if = {
+        limit = { has_stability > 0.4 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 15 }
+        set_variable = { arm_cached_industry_stability_bonus = 15 }
+    }
+    else_if = {
+        limit = { has_stability > 0.3 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 12 }
+        set_variable = { arm_cached_industry_stability_bonus = 12 }
+    }
+    else_if = {
+        limit = { has_stability > 0.2 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 9 }
+        set_variable = { arm_cached_industry_stability_bonus = 9 }
+    }
+    else_if = {
+        limit = { has_stability > 0.1 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 6 }
+        set_variable = { arm_cached_industry_stability_bonus = 6 }
+    }
+
+    set_variable = { arm_cached_war_support_bonus = 2 }
+    if = {
+        limit = { has_war_support > 0.9 }
+        set_variable = { arm_cached_war_support_bonus = 20 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.8 }
+        set_variable = { arm_cached_war_support_bonus = 18 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.7 }
+        set_variable = { arm_cached_war_support_bonus = 16 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.6 }
+        set_variable = { arm_cached_war_support_bonus = 14 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.5 }
+        set_variable = { arm_cached_war_support_bonus = 12 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.4 }
+        set_variable = { arm_cached_war_support_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.3 }
+        set_variable = { arm_cached_war_support_bonus = 8 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.2 }
+        set_variable = { arm_cached_war_support_bonus = 6 }
+    }
+    else_if = {
+        limit = { has_war_support > 0.1 }
+        set_variable = { arm_cached_war_support_bonus = 4 }
+    }
+
+    set_variable = { arm_cached_pp_bonus = 0 }
+    if = {
+        limit = { has_political_power > 400 }
+        set_variable = { arm_cached_pp_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_political_power > 300 }
+        set_variable = { arm_cached_pp_bonus = 8 }
+    }
+    else_if = {
+        limit = { has_political_power > 200 }
+        set_variable = { arm_cached_pp_bonus = 6 }
+    }
+    else_if = {
+        limit = { has_political_power > 100 }
+        set_variable = { arm_cached_pp_bonus = 4 }
+    }
+    else_if = {
+        limit = { has_political_power > 50 }
+        set_variable = { arm_cached_pp_bonus = 2 }
+    }
+
+    set_variable = { arm_cached_mobilization_manpower_bonus = 0 }
+    set_variable = { arm_cached_land_manpower_bonus = 0 }
+    if = {
+        limit = { has_manpower > 1500000 }
+        set_variable = { arm_cached_mobilization_manpower_bonus = 30 }
+    }
+    else_if = {
+        limit = { has_manpower > 1000000 }
+        set_variable = { arm_cached_mobilization_manpower_bonus = 20 }
+    }
+    else_if = {
+        limit = { has_manpower > 500000 }
+        set_variable = { arm_cached_mobilization_manpower_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_manpower > 250000 }
+        set_variable = { arm_cached_mobilization_manpower_bonus = 5 }
+    }
+    else_if = {
+        limit = { has_manpower > 100000 }
+        set_variable = { arm_cached_mobilization_manpower_bonus = 2 }
+    }
+
+    if = {
+        limit = { has_manpower > 1000000 }
+        set_variable = { arm_cached_land_manpower_bonus = 25 }
+    }
+    else_if = {
+        limit = { has_manpower > 800000 }
+        set_variable = { arm_cached_land_manpower_bonus = 20 }
+    }
+    else_if = {
+        limit = { has_manpower > 600000 }
+        set_variable = { arm_cached_land_manpower_bonus = 15 }
+    }
+    else_if = {
+        limit = { has_manpower > 400000 }
+        set_variable = { arm_cached_land_manpower_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_manpower > 200000 }
+        set_variable = { arm_cached_land_manpower_bonus = 5 }
+    }
+    else_if = {
+        limit = { has_manpower > 40000 }
+        set_variable = { arm_cached_land_manpower_bonus = 1 }
+    }
+
+    # Resource bands for the global resource score.
+    set_variable = { arm_resource_band_steel = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = steel amount > 320 extracted = yes } }
+        set_variable = { arm_resource_band_steel = 40 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 240 extracted = yes } }
+        set_variable = { arm_resource_band_steel = 30 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 160 extracted = yes } }
+        set_variable = { arm_resource_band_steel = 20 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 80 extracted = yes } }
+        set_variable = { arm_resource_band_steel = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 40 extracted = yes } }
+        set_variable = { arm_resource_band_steel = 5 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 16 extracted = yes } }
+        set_variable = { arm_resource_band_steel = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 8 extracted = yes } }
+        set_variable = { arm_resource_band_steel = 1 }
+    }
+
+    set_variable = { arm_resource_band_aluminium = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 150 extracted = yes } }
+        set_variable = { arm_resource_band_aluminium = 30 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 100 extracted = yes } }
+        set_variable = { arm_resource_band_aluminium = 20 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 50 extracted = yes } }
+        set_variable = { arm_resource_band_aluminium = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 25 extracted = yes } }
+        set_variable = { arm_resource_band_aluminium = 5 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 10 extracted = yes } }
+        set_variable = { arm_resource_band_aluminium = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 5 extracted = yes } }
+        set_variable = { arm_resource_band_aluminium = 1 }
+    }
+
+    set_variable = { arm_resource_band_tungsten = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 120 extracted = yes } }
+        set_variable = { arm_resource_band_tungsten = 30 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 80 extracted = yes } }
+        set_variable = { arm_resource_band_tungsten = 20 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 40 extracted = yes } }
+        set_variable = { arm_resource_band_tungsten = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 20 extracted = yes } }
+        set_variable = { arm_resource_band_tungsten = 5 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 8 extracted = yes } }
+        set_variable = { arm_resource_band_tungsten = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 4 extracted = yes } }
+        set_variable = { arm_resource_band_tungsten = 1 }
+    }
+
+    set_variable = { arm_resource_band_chromium = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 120 extracted = yes } }
+        set_variable = { arm_resource_band_chromium = 30 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 80 extracted = yes } }
+        set_variable = { arm_resource_band_chromium = 20 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 40 extracted = yes } }
+        set_variable = { arm_resource_band_chromium = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 20 extracted = yes } }
+        set_variable = { arm_resource_band_chromium = 5 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 8 extracted = yes } }
+        set_variable = { arm_resource_band_chromium = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 4 extracted = yes } }
+        set_variable = { arm_resource_band_chromium = 1 }
+    }
+
+    set_variable = { arm_resource_band_rubber = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 120 extracted = yes } }
+        set_variable = { arm_resource_band_rubber = 30 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 80 extracted = yes } }
+        set_variable = { arm_resource_band_rubber = 20 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 40 extracted = yes } }
+        set_variable = { arm_resource_band_rubber = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 20 extracted = yes } }
+        set_variable = { arm_resource_band_rubber = 5 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 8 extracted = yes } }
+        set_variable = { arm_resource_band_rubber = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 4 extracted = yes } }
+        set_variable = { arm_resource_band_rubber = 1 }
+    }
+
+    set_variable = { arm_resource_band_oil = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = oil amount > 180 extracted = yes } }
+        set_variable = { arm_resource_band_oil = 30 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 120 extracted = yes } }
+        set_variable = { arm_resource_band_oil = 20 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 60 extracted = yes } }
+        set_variable = { arm_resource_band_oil = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 30 extracted = yes } }
+        set_variable = { arm_resource_band_oil = 5 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 12 extracted = yes } }
+        set_variable = { arm_resource_band_oil = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 6 extracted = yes } }
+        set_variable = { arm_resource_band_oil = 1 }
+    }
+
+    set_variable = { arm_cached_total_resource_score = arm_resource_band_steel }
+    add_to_variable = { arm_cached_total_resource_score = arm_resource_band_aluminium }
+    add_to_variable = { arm_cached_total_resource_score = arm_resource_band_tungsten }
+    add_to_variable = { arm_cached_total_resource_score = arm_resource_band_chromium }
+    add_to_variable = { arm_cached_total_resource_score = arm_resource_band_rubber }
+    add_to_variable = { arm_cached_total_resource_score = arm_resource_band_oil }
+    clamp_variable = { var = arm_cached_total_resource_score min = 0 max = 40 }
+
+    set_variable = { arm_cached_land_steel_bonus = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = steel amount > 150 extracted = yes } }
+        set_variable = { arm_cached_land_steel_bonus = 15 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 120 extracted = yes } }
+        set_variable = { arm_cached_land_steel_bonus = 12 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 80 extracted = yes } }
+        set_variable = { arm_cached_land_steel_bonus = 8 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 50 extracted = yes } }
+        set_variable = { arm_cached_land_steel_bonus = 5 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 20 extracted = yes } }
+        set_variable = { arm_cached_land_steel_bonus = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 10 extracted = yes } }
+        set_variable = { arm_cached_land_steel_bonus = 1 }
+    }
+
+    set_variable = { arm_cached_land_tungsten_bonus = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 60 extracted = yes } }
+        set_variable = { arm_cached_land_tungsten_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 48 extracted = yes } }
+        set_variable = { arm_cached_land_tungsten_bonus = 8 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 36 extracted = yes } }
+        set_variable = { arm_cached_land_tungsten_bonus = 6 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 24 extracted = yes } }
+        set_variable = { arm_cached_land_tungsten_bonus = 4 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 12 extracted = yes } }
+        set_variable = { arm_cached_land_tungsten_bonus = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 6 extracted = yes } }
+        set_variable = { arm_cached_land_tungsten_bonus = 1 }
+    }
+
+    set_variable = { arm_cached_air_aluminium_bonus = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 75 extracted = yes } }
+        set_variable = { arm_cached_air_aluminium_bonus = 15 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 60 extracted = yes } }
+        set_variable = { arm_cached_air_aluminium_bonus = 12 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 45 extracted = yes } }
+        set_variable = { arm_cached_air_aluminium_bonus = 9 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 30 extracted = yes } }
+        set_variable = { arm_cached_air_aluminium_bonus = 6 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 15 extracted = yes } }
+        set_variable = { arm_cached_air_aluminium_bonus = 3 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 5 extracted = yes } }
+        set_variable = { arm_cached_air_aluminium_bonus = 1 }
+    }
+
+    set_variable = { arm_cached_air_rubber_bonus = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 50 extracted = yes } }
+        set_variable = { arm_cached_air_rubber_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 40 extracted = yes } }
+        set_variable = { arm_cached_air_rubber_bonus = 8 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 30 extracted = yes } }
+        set_variable = { arm_cached_air_rubber_bonus = 6 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 20 extracted = yes } }
+        set_variable = { arm_cached_air_rubber_bonus = 4 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 10 extracted = yes } }
+        set_variable = { arm_cached_air_rubber_bonus = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 5 extracted = yes } }
+        set_variable = { arm_cached_air_rubber_bonus = 1 }
+    }
+
+    set_variable = { arm_cached_air_oil_bonus = 0 }
+    set_variable = { arm_cached_naval_oil_bonus = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = oil amount > 80 extracted = yes } }
+        set_variable = { arm_cached_air_oil_bonus = 10 }
+        set_variable = { arm_cached_naval_oil_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 64 extracted = yes } }
+        set_variable = { arm_cached_air_oil_bonus = 8 }
+        set_variable = { arm_cached_naval_oil_bonus = 8 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 48 extracted = yes } }
+        set_variable = { arm_cached_air_oil_bonus = 6 }
+        set_variable = { arm_cached_naval_oil_bonus = 6 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 32 extracted = yes } }
+        set_variable = { arm_cached_air_oil_bonus = 4 }
+        set_variable = { arm_cached_naval_oil_bonus = 4 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 16 extracted = yes } }
+        set_variable = { arm_cached_air_oil_bonus = 2 }
+        set_variable = { arm_cached_naval_oil_bonus = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = oil amount > 8 extracted = yes } }
+        set_variable = { arm_cached_air_oil_bonus = 1 }
+        set_variable = { arm_cached_naval_oil_bonus = 1 }
+    }
+
+    set_variable = { arm_cached_naval_steel_bonus = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = steel amount > 100 extracted = yes } }
+        set_variable = { arm_cached_naval_steel_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 80 extracted = yes } }
+        set_variable = { arm_cached_naval_steel_bonus = 8 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 60 extracted = yes } }
+        set_variable = { arm_cached_naval_steel_bonus = 6 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 40 extracted = yes } }
+        set_variable = { arm_cached_naval_steel_bonus = 4 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 20 extracted = yes } }
+        set_variable = { arm_cached_naval_steel_bonus = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = steel amount > 10 extracted = yes } }
+        set_variable = { arm_cached_naval_steel_bonus = 1 }
+    }
+
+    set_variable = { arm_cached_naval_chromium_bonus = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 50 extracted = yes } }
+        set_variable = { arm_cached_naval_chromium_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 40 extracted = yes } }
+        set_variable = { arm_cached_naval_chromium_bonus = 8 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 30 extracted = yes } }
+        set_variable = { arm_cached_naval_chromium_bonus = 6 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 20 extracted = yes } }
+        set_variable = { arm_cached_naval_chromium_bonus = 4 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 10 extracted = yes } }
+        set_variable = { arm_cached_naval_chromium_bonus = 2 }
+    }
+    else_if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 5 extracted = yes } }
+        set_variable = { arm_cached_naval_chromium_bonus = 1 }
+    }
+
+    set_variable = { arm_cached_industry_breadth_bonus = 0 }
+    if = {
+        limit = { has_resources_in_country = { resource = steel amount > 8 extracted = yes } }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+    }
+    if = {
+        limit = { has_resources_in_country = { resource = aluminium amount > 8 extracted = yes } }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+    }
+    if = {
+        limit = { has_resources_in_country = { resource = tungsten amount > 8 extracted = yes } }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+    }
+    if = {
+        limit = { has_resources_in_country = { resource = chromium amount > 8 extracted = yes } }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+    }
+    if = {
+        limit = { has_resources_in_country = { resource = rubber amount > 8 extracted = yes } }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+    }
+    if = {
+        limit = { has_resources_in_country = { resource = oil amount > 8 extracted = yes } }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+    }
+    clamp_variable = { var = arm_cached_industry_breadth_bonus min = 0 max = 18 }
+}
+
+###################################
 # Master scoring dispatcher
 ###################################
 arm_calculate_global_power = {
@@ -115,30 +703,7 @@ arm_calculate_economy_score = {
 # Research slots (threshold chain)
 ###################################
 arm_calculate_science_score = {
-    set_variable = { arm_science_score = 0 }
-    if = {
-        limit = { amount_research_slots > 5 }
-        set_variable = { arm_science_score = 70 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 4 }
-        set_variable = { arm_science_score = 55 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 3 }
-        set_variable = { arm_science_score = 40 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 2 }
-        set_variable = { arm_science_score = 28 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 1 }
-        set_variable = { arm_science_score = 16 }
-    }
-    else = {
-        set_variable = { arm_science_score = 8 }
-    }
+    set_variable = { arm_science_score = arm_cached_science_score }
 }
 
 ###################################
@@ -155,26 +720,7 @@ arm_calculate_mobilization_score = {
     add_to_variable = { arm_mobilization_score = arm_bat_raw }
 
     # Deployed manpower — threshold chain
-    if = {
-        limit = { has_manpower > 1500000 }
-        add_to_variable = { arm_mobilization_score = 30 }
-    }
-    else_if = {
-        limit = { has_manpower > 1000000 }
-        add_to_variable = { arm_mobilization_score = 20 }
-    }
-    else_if = {
-        limit = { has_manpower > 500000 }
-        add_to_variable = { arm_mobilization_score = 10 }
-    }
-    else_if = {
-        limit = { has_manpower > 250000 }
-        add_to_variable = { arm_mobilization_score = 5 }
-    }
-    else_if = {
-        limit = { has_manpower > 100000 }
-        add_to_variable = { arm_mobilization_score = 2 }
-    }
+    add_to_variable = { arm_mobilization_score = arm_cached_mobilization_manpower_bonus }
 }
 
 ###################################
@@ -183,176 +729,7 @@ arm_calculate_mobilization_score = {
 # Total capped at 40
 ###################################
 arm_calculate_resource_score = {
-    set_variable = { arm_resource_score = 0 }
-
-    # ---- Steel (1 pt per 8) ----
-    # Thresholds: 320->40, 240->30, 160->20, 80->10, 40->5, 16->2, 8->1
-    if = {
-        limit = { has_resources_in_country = { resource = steel amount > 320 extracted = yes } }
-        add_to_variable = { arm_resource_score = 40 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 240 extracted = yes } }
-        add_to_variable = { arm_resource_score = 30 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 160 extracted = yes } }
-        add_to_variable = { arm_resource_score = 20 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 80 extracted = yes } }
-        add_to_variable = { arm_resource_score = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 40 extracted = yes } }
-        add_to_variable = { arm_resource_score = 5 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 16 extracted = yes } }
-        add_to_variable = { arm_resource_score = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 8 extracted = yes } }
-        add_to_variable = { arm_resource_score = 1 }
-    }
-
-    # ---- Aluminium (1 pt per 5) ----
-    # Thresholds: 150->30, 100->20, 50->10, 25->5, 10->2, 5->1
-    if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 150 extracted = yes } }
-        add_to_variable = { arm_resource_score = 30 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 100 extracted = yes } }
-        add_to_variable = { arm_resource_score = 20 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 50 extracted = yes } }
-        add_to_variable = { arm_resource_score = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 25 extracted = yes } }
-        add_to_variable = { arm_resource_score = 5 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 10 extracted = yes } }
-        add_to_variable = { arm_resource_score = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 5 extracted = yes } }
-        add_to_variable = { arm_resource_score = 1 }
-    }
-
-    # ---- Tungsten (1 pt per 4) ----
-    # Thresholds: 120->30, 80->20, 40->10, 20->5, 8->2, 4->1
-    if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 120 extracted = yes } }
-        add_to_variable = { arm_resource_score = 30 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 80 extracted = yes } }
-        add_to_variable = { arm_resource_score = 20 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 40 extracted = yes } }
-        add_to_variable = { arm_resource_score = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 20 extracted = yes } }
-        add_to_variable = { arm_resource_score = 5 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 8 extracted = yes } }
-        add_to_variable = { arm_resource_score = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 4 extracted = yes } }
-        add_to_variable = { arm_resource_score = 1 }
-    }
-
-    # ---- Chromium (1 pt per 4) ----
-    # Thresholds: 120->30, 80->20, 40->10, 20->5, 8->2, 4->1
-    if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 120 extracted = yes } }
-        add_to_variable = { arm_resource_score = 30 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 80 extracted = yes } }
-        add_to_variable = { arm_resource_score = 20 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 40 extracted = yes } }
-        add_to_variable = { arm_resource_score = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 20 extracted = yes } }
-        add_to_variable = { arm_resource_score = 5 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 8 extracted = yes } }
-        add_to_variable = { arm_resource_score = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 4 extracted = yes } }
-        add_to_variable = { arm_resource_score = 1 }
-    }
-
-    # ---- Rubber (1 pt per 4) ----
-    # Thresholds: 120->30, 80->20, 40->10, 20->5, 8->2, 4->1
-    if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 120 extracted = yes } }
-        add_to_variable = { arm_resource_score = 30 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 80 extracted = yes } }
-        add_to_variable = { arm_resource_score = 20 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 40 extracted = yes } }
-        add_to_variable = { arm_resource_score = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 20 extracted = yes } }
-        add_to_variable = { arm_resource_score = 5 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 8 extracted = yes } }
-        add_to_variable = { arm_resource_score = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 4 extracted = yes } }
-        add_to_variable = { arm_resource_score = 1 }
-    }
-
-    # ---- Oil (1 pt per 6) ----
-    # Thresholds: 180->30, 120->20, 60->10, 30->5, 12->2, 6->1
-    if = {
-        limit = { has_resources_in_country = { resource = oil amount > 180 extracted = yes } }
-        add_to_variable = { arm_resource_score = 30 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 120 extracted = yes } }
-        add_to_variable = { arm_resource_score = 20 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 60 extracted = yes } }
-        add_to_variable = { arm_resource_score = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 30 extracted = yes } }
-        add_to_variable = { arm_resource_score = 5 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 12 extracted = yes } }
-        add_to_variable = { arm_resource_score = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 6 extracted = yes } }
-        add_to_variable = { arm_resource_score = 1 }
-    }
-
-    # ---- Cap total resource score at 40 ----
-    clamp_variable = { var = arm_resource_score min = 0 max = 40 }
+    set_variable = { arm_resource_score = arm_cached_total_resource_score }
 }
 
 ###################################
@@ -361,118 +738,15 @@ arm_calculate_resource_score = {
 # political power gain approximation
 ###################################
 arm_calculate_war_posture_score = {
-    set_variable = { arm_war_posture_score = 0 }
+    set_variable = { arm_war_posture_score = arm_cached_war_posture_stability_bonus }
+    add_to_variable = { arm_war_posture_score = arm_cached_war_support_bonus }
 
-    # ---- Stability (max 30) — threshold chain at 0.1 intervals ----
-    if = {
-        limit = { has_stability > 0.9 }
-        add_to_variable = { arm_war_posture_score = 30 }
-    }
-    else_if = {
-        limit = { has_stability > 0.8 }
-        add_to_variable = { arm_war_posture_score = 27 }
-    }
-    else_if = {
-        limit = { has_stability > 0.7 }
-        add_to_variable = { arm_war_posture_score = 24 }
-    }
-    else_if = {
-        limit = { has_stability > 0.6 }
-        add_to_variable = { arm_war_posture_score = 21 }
-    }
-    else_if = {
-        limit = { has_stability > 0.5 }
-        add_to_variable = { arm_war_posture_score = 18 }
-    }
-    else_if = {
-        limit = { has_stability > 0.4 }
-        add_to_variable = { arm_war_posture_score = 15 }
-    }
-    else_if = {
-        limit = { has_stability > 0.3 }
-        add_to_variable = { arm_war_posture_score = 12 }
-    }
-    else_if = {
-        limit = { has_stability > 0.2 }
-        add_to_variable = { arm_war_posture_score = 9 }
-    }
-    else_if = {
-        limit = { has_stability > 0.1 }
-        add_to_variable = { arm_war_posture_score = 6 }
-    }
-    else = {
-        add_to_variable = { arm_war_posture_score = 3 }
-    }
-
-    # ---- War support (max 20) — threshold chain at 0.1 intervals ----
-    if = {
-        limit = { has_war_support > 0.9 }
-        add_to_variable = { arm_war_posture_score = 20 }
-    }
-    else_if = {
-        limit = { has_war_support > 0.8 }
-        add_to_variable = { arm_war_posture_score = 18 }
-    }
-    else_if = {
-        limit = { has_war_support > 0.7 }
-        add_to_variable = { arm_war_posture_score = 16 }
-    }
-    else_if = {
-        limit = { has_war_support > 0.6 }
-        add_to_variable = { arm_war_posture_score = 14 }
-    }
-    else_if = {
-        limit = { has_war_support > 0.5 }
-        add_to_variable = { arm_war_posture_score = 12 }
-    }
-    else_if = {
-        limit = { has_war_support > 0.4 }
-        add_to_variable = { arm_war_posture_score = 10 }
-    }
-    else_if = {
-        limit = { has_war_support > 0.3 }
-        add_to_variable = { arm_war_posture_score = 8 }
-    }
-    else_if = {
-        limit = { has_war_support > 0.2 }
-        add_to_variable = { arm_war_posture_score = 6 }
-    }
-    else_if = {
-        limit = { has_war_support > 0.1 }
-        add_to_variable = { arm_war_posture_score = 4 }
-    }
-    else = {
-        add_to_variable = { arm_war_posture_score = 2 }
-    }
-
-    # ---- At war bonus (+15) ----
     if = {
         limit = { has_war = yes }
         add_to_variable = { arm_war_posture_score = 15 }
     }
 
-    # ---- Political power gain approximation (cap +10) ----
-    # PP gain cannot be read as variable; approximate via political_power thresholds
-    if = {
-        limit = { has_political_power > 400 }
-        add_to_variable = { arm_war_posture_score = 10 }
-    }
-    else_if = {
-        limit = { has_political_power > 300 }
-        add_to_variable = { arm_war_posture_score = 8 }
-    }
-    else_if = {
-        limit = { has_political_power > 200 }
-        add_to_variable = { arm_war_posture_score = 6 }
-    }
-    else_if = {
-        limit = { has_political_power > 100 }
-        add_to_variable = { arm_war_posture_score = 4 }
-    }
-    else_if = {
-        limit = { has_political_power > 50 }
-        add_to_variable = { arm_war_posture_score = 2 }
-    }
+    add_to_variable = { arm_war_posture_score = arm_cached_pp_bonus }
 }
 
 ###################################
@@ -502,83 +776,11 @@ arm_calculate_land_competence = {
     }
     add_to_variable = { arm_land_competence = arm_lc_mil }
 
-    # ---- Deployed manpower / 40,000 capped at 25 ----
-    if = {
-        limit = { has_manpower > 1000000 }
-        add_to_variable = { arm_land_competence = 25 }
-    }
-    else_if = {
-        limit = { has_manpower > 800000 }
-        add_to_variable = { arm_land_competence = 20 }
-    }
-    else_if = {
-        limit = { has_manpower > 600000 }
-        add_to_variable = { arm_land_competence = 15 }
-    }
-    else_if = {
-        limit = { has_manpower > 400000 }
-        add_to_variable = { arm_land_competence = 10 }
-    }
-    else_if = {
-        limit = { has_manpower > 200000 }
-        add_to_variable = { arm_land_competence = 5 }
-    }
-    else_if = {
-        limit = { has_manpower > 40000 }
-        add_to_variable = { arm_land_competence = 1 }
-    }
+    add_to_variable = { arm_land_competence = arm_cached_land_manpower_bonus }
 
-    # ---- Steel / 10 capped at 15 ----
-    if = {
-        limit = { has_resources_in_country = { resource = steel amount > 150 extracted = yes } }
-        add_to_variable = { arm_land_competence = 15 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 120 extracted = yes } }
-        add_to_variable = { arm_land_competence = 12 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 80 extracted = yes } }
-        add_to_variable = { arm_land_competence = 8 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 50 extracted = yes } }
-        add_to_variable = { arm_land_competence = 5 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 20 extracted = yes } }
-        add_to_variable = { arm_land_competence = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 10 extracted = yes } }
-        add_to_variable = { arm_land_competence = 1 }
-    }
+    add_to_variable = { arm_land_competence = arm_cached_land_steel_bonus }
 
-    # ---- Tungsten / 6 capped at 10 ----
-    if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 60 extracted = yes } }
-        add_to_variable = { arm_land_competence = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 48 extracted = yes } }
-        add_to_variable = { arm_land_competence = 8 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 36 extracted = yes } }
-        add_to_variable = { arm_land_competence = 6 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 24 extracted = yes } }
-        add_to_variable = { arm_land_competence = 4 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 12 extracted = yes } }
-        add_to_variable = { arm_land_competence = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 6 extracted = yes } }
-        add_to_variable = { arm_land_competence = 1 }
-    }
+    add_to_variable = { arm_land_competence = arm_cached_land_tungsten_bonus }
 
     # ---- At war +10 ----
     if = {
@@ -611,108 +813,13 @@ arm_calculate_air_competence = {
     multiply_temp_variable = { arm_ac_mil = 0.8 }
     add_to_variable = { arm_air_competence = arm_ac_mil }
 
-    # ---- Aluminium / 5 capped at 15 ----
-    if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 75 extracted = yes } }
-        add_to_variable = { arm_air_competence = 15 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 60 extracted = yes } }
-        add_to_variable = { arm_air_competence = 12 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 45 extracted = yes } }
-        add_to_variable = { arm_air_competence = 9 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 30 extracted = yes } }
-        add_to_variable = { arm_air_competence = 6 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 15 extracted = yes } }
-        add_to_variable = { arm_air_competence = 3 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 5 extracted = yes } }
-        add_to_variable = { arm_air_competence = 1 }
-    }
+    add_to_variable = { arm_air_competence = arm_cached_air_aluminium_bonus }
 
-    # ---- Rubber / 5 capped at 10 ----
-    if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 50 extracted = yes } }
-        add_to_variable = { arm_air_competence = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 40 extracted = yes } }
-        add_to_variable = { arm_air_competence = 8 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 30 extracted = yes } }
-        add_to_variable = { arm_air_competence = 6 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 20 extracted = yes } }
-        add_to_variable = { arm_air_competence = 4 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 10 extracted = yes } }
-        add_to_variable = { arm_air_competence = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 5 extracted = yes } }
-        add_to_variable = { arm_air_competence = 1 }
-    }
+    add_to_variable = { arm_air_competence = arm_cached_air_rubber_bonus }
 
-    # ---- Oil / 8 capped at 10 ----
-    if = {
-        limit = { has_resources_in_country = { resource = oil amount > 80 extracted = yes } }
-        add_to_variable = { arm_air_competence = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 64 extracted = yes } }
-        add_to_variable = { arm_air_competence = 8 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 48 extracted = yes } }
-        add_to_variable = { arm_air_competence = 6 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 32 extracted = yes } }
-        add_to_variable = { arm_air_competence = 4 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 16 extracted = yes } }
-        add_to_variable = { arm_air_competence = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 8 extracted = yes } }
-        add_to_variable = { arm_air_competence = 1 }
-    }
+    add_to_variable = { arm_air_competence = arm_cached_air_oil_bonus }
 
-    # ---- Research slots x8 (threshold chain) ----
-    if = {
-        limit = { amount_research_slots > 5 }
-        add_to_variable = { arm_air_competence = 48 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 4 }
-        add_to_variable = { arm_air_competence = 40 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 3 }
-        add_to_variable = { arm_air_competence = 32 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 2 }
-        add_to_variable = { arm_air_competence = 24 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 1 }
-        add_to_variable = { arm_air_competence = 16 }
-    }
-    else = {
-        add_to_variable = { arm_air_competence = 8 }
-    }
+    add_to_variable = { arm_air_competence = arm_cached_air_slots_bonus }
 }
 
 ###################################
@@ -739,108 +846,13 @@ arm_calculate_naval_competence = {
     multiply_temp_variable = { arm_nc_dock = 2.0 }
     add_to_variable = { arm_naval_competence = arm_nc_dock }
 
-    # ---- Oil / 8 capped at 10 ----
-    if = {
-        limit = { has_resources_in_country = { resource = oil amount > 80 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 64 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 8 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 48 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 6 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 32 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 4 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 16 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = oil amount > 8 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 1 }
-    }
+    add_to_variable = { arm_naval_competence = arm_cached_naval_oil_bonus }
 
-    # ---- Steel / 10 capped at 10 ----
-    if = {
-        limit = { has_resources_in_country = { resource = steel amount > 100 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 80 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 8 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 60 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 6 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 40 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 4 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 20 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = steel amount > 10 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 1 }
-    }
+    add_to_variable = { arm_naval_competence = arm_cached_naval_steel_bonus }
 
-    # ---- Chromium / 5 capped at 10 ----
-    if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 50 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 10 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 40 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 8 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 30 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 6 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 20 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 4 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 10 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 2 }
-    }
-    else_if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 5 extracted = yes } }
-        add_to_variable = { arm_naval_competence = 1 }
-    }
+    add_to_variable = { arm_naval_competence = arm_cached_naval_chromium_bonus }
 
-    # ---- Research slots x5 (threshold chain) ----
-    if = {
-        limit = { amount_research_slots > 5 }
-        add_to_variable = { arm_naval_competence = 30 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 4 }
-        add_to_variable = { arm_naval_competence = 25 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 3 }
-        add_to_variable = { arm_naval_competence = 20 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 2 }
-        add_to_variable = { arm_naval_competence = 15 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 1 }
-        add_to_variable = { arm_naval_competence = 10 }
-    }
-    else = {
-        add_to_variable = { arm_naval_competence = 5 }
-    }
+    add_to_variable = { arm_naval_competence = arm_cached_naval_slots_bonus }
 }
 
 ###################################
@@ -868,97 +880,11 @@ arm_calculate_industry_competence = {
     add_to_variable = { arm_industry_competence = arm_ic_civ }
 
     # ---- Research slots x12 (threshold chain) ----
-    if = {
-        limit = { amount_research_slots > 5 }
-        add_to_variable = { arm_industry_competence = 72 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 4 }
-        add_to_variable = { arm_industry_competence = 60 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 3 }
-        add_to_variable = { arm_industry_competence = 48 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 2 }
-        add_to_variable = { arm_industry_competence = 36 }
-    }
-    else_if = {
-        limit = { amount_research_slots > 1 }
-        add_to_variable = { arm_industry_competence = 24 }
-    }
-    else = {
-        add_to_variable = { arm_industry_competence = 12 }
-    }
+    add_to_variable = { arm_industry_competence = arm_cached_industry_slots_bonus }
 
     # ---- Stability x0.3 (max 30) — threshold chain at 0.1 intervals ----
-    if = {
-        limit = { has_stability > 0.9 }
-        add_to_variable = { arm_industry_competence = 30 }
-    }
-    else_if = {
-        limit = { has_stability > 0.8 }
-        add_to_variable = { arm_industry_competence = 27 }
-    }
-    else_if = {
-        limit = { has_stability > 0.7 }
-        add_to_variable = { arm_industry_competence = 24 }
-    }
-    else_if = {
-        limit = { has_stability > 0.6 }
-        add_to_variable = { arm_industry_competence = 21 }
-    }
-    else_if = {
-        limit = { has_stability > 0.5 }
-        add_to_variable = { arm_industry_competence = 18 }
-    }
-    else_if = {
-        limit = { has_stability > 0.4 }
-        add_to_variable = { arm_industry_competence = 15 }
-    }
-    else_if = {
-        limit = { has_stability > 0.3 }
-        add_to_variable = { arm_industry_competence = 12 }
-    }
-    else_if = {
-        limit = { has_stability > 0.2 }
-        add_to_variable = { arm_industry_competence = 9 }
-    }
-    else_if = {
-        limit = { has_stability > 0.1 }
-        add_to_variable = { arm_industry_competence = 6 }
-    }
-    else = {
-        add_to_variable = { arm_industry_competence = 3 }
-    }
+    add_to_variable = { arm_industry_competence = arm_cached_industry_stability_bonus }
 
     # ---- Resource breadth bonus (+3 per resource with 8+ access, max +18) ----
-    set_temp_variable = { arm_breadth = 0 }
-    if = {
-        limit = { has_resources_in_country = { resource = steel amount > 8 extracted = yes } }
-        add_to_temp_variable = { arm_breadth = 3 }
-    }
-    if = {
-        limit = { has_resources_in_country = { resource = aluminium amount > 8 extracted = yes } }
-        add_to_temp_variable = { arm_breadth = 3 }
-    }
-    if = {
-        limit = { has_resources_in_country = { resource = tungsten amount > 8 extracted = yes } }
-        add_to_temp_variable = { arm_breadth = 3 }
-    }
-    if = {
-        limit = { has_resources_in_country = { resource = chromium amount > 8 extracted = yes } }
-        add_to_temp_variable = { arm_breadth = 3 }
-    }
-    if = {
-        limit = { has_resources_in_country = { resource = rubber amount > 8 extracted = yes } }
-        add_to_temp_variable = { arm_breadth = 3 }
-    }
-    if = {
-        limit = { has_resources_in_country = { resource = oil amount > 8 extracted = yes } }
-        add_to_temp_variable = { arm_breadth = 3 }
-    }
-    clamp_temp_variable = { var = arm_breadth min = 0 max = 18 }
-    add_to_variable = { arm_industry_competence = arm_breadth }
+    add_to_variable = { arm_industry_competence = arm_cached_industry_breadth_bonus }
 }

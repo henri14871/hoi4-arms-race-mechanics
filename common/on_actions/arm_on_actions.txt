@@ -59,7 +59,43 @@ on_actions = {
                 set_variable = { arm_grant_counter = 0 }
 
                 # Run initial scoring state (but do NOT grant tech on startup)
-                arm_refresh_country_state = yes
+                arm_refresh_country_state_runtime = yes
+            }
+        }
+    }
+
+    # ===================================================================
+    # ON DAILY
+    # Clears the one-day guard used by the weekly player UI refresh path.
+    # ===================================================================
+    on_daily = {
+        effect = {
+            if = {
+                limit = { has_global_flag = arm_ui_weekly_year_updated }
+                clr_global_flag = arm_ui_weekly_year_updated
+            }
+        }
+    }
+
+    # ===================================================================
+    # ON WEEKLY
+    # Refresh visible ARM state for human countries without granting techs.
+    # ===================================================================
+    on_weekly = {
+        effect = {
+            if = {
+                limit = {
+                    is_ai = no
+                    NOT = { has_game_rule = { rule = arm_power_visibility option = ARM_VIS_HIDDEN } }
+                }
+
+                if = {
+                    limit = { NOT = { has_global_flag = arm_ui_weekly_year_updated } }
+                    arm_update_current_year = yes
+                    set_global_flag = arm_ui_weekly_year_updated
+                }
+
+                arm_refresh_country_state_runtime = yes
             }
         }
     }
@@ -100,7 +136,7 @@ on_actions = {
                         check_variable = { var = arm_bucket value = var:arm_current_bucket compare = equals }
                         arm_country_eligible = yes
                     }
-                    arm_evaluate_and_grant = yes
+                    arm_evaluate_and_grant_runtime = yes
                 }
 
                 # Increment month counter

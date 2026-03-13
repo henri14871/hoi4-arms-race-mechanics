@@ -9,14 +9,14 @@
 ###############################################################################
 
 # ---------------------------------------------------------------------------
-# arm_refresh_country_state
-# Recomputes all persistent ARM state for a country without granting techs.
-# Safe for startup initialization and debug refreshes.
+# arm_refresh_country_state_runtime
+# Recomputes persistent ARM state for runtime pulses.
+# Assumes global.arm_current_year has already been updated.
 # ---------------------------------------------------------------------------
-arm_refresh_country_state = {
+arm_refresh_country_state_runtime = {
 
-    # Keep the derived current year fresh for debug views and manual evaluation.
-    arm_update_current_year = yes
+    # Prepare cached score inputs once per refresh.
+    arm_prepare_score_inputs = yes
 
     # Step 1: Calculate scores
     arm_calculate_global_power = yes
@@ -53,6 +53,18 @@ arm_refresh_country_state = {
 }
 
 # ---------------------------------------------------------------------------
+# arm_refresh_country_state
+# Recomputes all persistent ARM state for a country without granting techs.
+# Safe for startup initialization and debug refreshes.
+# ---------------------------------------------------------------------------
+arm_refresh_country_state = {
+
+    # Keep the derived current year fresh for debug views and manual evaluation.
+    arm_update_current_year = yes
+    arm_refresh_country_state_runtime = yes
+}
+
+# ---------------------------------------------------------------------------
 # arm_evaluate_and_grant
 # Runs in COUNTRY SCOPE. Called for each country during its bucket's
 # evaluation month.
@@ -60,6 +72,24 @@ arm_refresh_country_state = {
 arm_evaluate_and_grant = {
 
     arm_refresh_country_state = yes
+
+    # Step 7: Reset grant counter
+    set_variable = { arm_grant_counter = 0 }
+
+    # Step 8: Grant technologies using the active compatibility profile
+    arm_grant_techs_for_profile = yes
+
+    # Step 9: Doctrines (if the active profile supports them)
+    arm_grant_doctrines_for_profile = yes
+}
+
+# ---------------------------------------------------------------------------
+# arm_evaluate_and_grant_runtime
+# Runtime-only variant used by monthly pulses after the year has been resolved.
+# ---------------------------------------------------------------------------
+arm_evaluate_and_grant_runtime = {
+
+    arm_refresh_country_state_runtime = yes
 
     # Step 7: Reset grant counter
     set_variable = { arm_grant_counter = 0 }

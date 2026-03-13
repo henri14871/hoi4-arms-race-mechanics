@@ -306,7 +306,7 @@ arm_event.102.desc:0 "Base Lag: [?arm_base_lag]\n\nEffective Land Lag: [?arm_eff
  # DECISION CATEGORY
  ###########################################
  arm_debug_category:0 "Arms Race Mechanics"
- arm_debug_category_desc:0 "Debug and information decisions for the Arms Race Mechanics system."
+ arm_debug_category_desc:0 "§YTier§!: [arm_ui_tier_status]   §YPower§!: [?arm_global_power|1]   §YCap§!: [?arm_quarterly_cap|0]\n§YLand§!: [arm_ui_land_status] ([?arm_land_competence|1])   §YLag§!: [arm_ui_land_lag]\n§YAir§!: [arm_ui_air_status] ([?arm_air_competence|1])   §YLag§!: [arm_ui_air_lag]\n§YNaval§!: [arm_ui_naval_status] ([?arm_naval_competence|1])   §YLag§!: [arm_ui_naval_lag]\n§YIndustry§!: [arm_ui_industry_status] ([?arm_industry_competence|1])   §YLag§!: [arm_ui_industry_lag]"
 
  ###########################################
  # DECISION NAMES AND DESCRIPTIONS
@@ -319,6 +319,41 @@ arm_event.102.desc:0 "Base Lag: [?arm_base_lag]\n\nEffective Land Lag: [?arm_eff
  arm_view_effective_lag_desc:0 "Opens a report showing your nation's effective technology lag per branch, target years, and grant cap."
  arm_force_evaluation:0 "Force Evaluation (Debug)"
  arm_force_evaluation_desc:0 "Manually triggers the full ARM evaluation and tech grant pipeline for your nation. This recalculates scores, assigns tiers, and grants eligible technologies immediately."
+
+ ###########################################
+ # ARM DASHBOARD UI
+ ###########################################
+ arm_ui_tier_superpower:0 "§H$arm_tier_superpower$§!"
+ arm_ui_tier_great_power:0 "§G$arm_tier_great_power$§!"
+ arm_ui_tier_regional_power:0 "§Y$arm_tier_regional_power$§!"
+ arm_ui_tier_minor_industrial:0 "§O$arm_tier_minor_industrial$§!"
+ arm_ui_tier_minor:0 "§R$arm_tier_minor$§!"
+ arm_ui_tier_micro:0 "§g$arm_tier_micro$§!"
+ arm_ui_branch_cutting_edge:0 "§HCutting Edge§!"
+ arm_ui_branch_advanced:0 "§GAdvanced§!"
+ arm_ui_branch_standard:0 "§YStandard§!"
+ arm_ui_branch_basic:0 "§OBasic§!"
+ arm_ui_branch_minimal:0 "§RMinimal§!"
+ arm_ui_land_lag_le_1:0 "§G[?arm_effective_land_lag|1]y§!"
+ arm_ui_land_lag_le_2:0 "§H[?arm_effective_land_lag|1]y§!"
+ arm_ui_land_lag_le_4:0 "§Y[?arm_effective_land_lag|1]y§!"
+ arm_ui_land_lag_le_6:0 "§O[?arm_effective_land_lag|1]y§!"
+ arm_ui_land_lag_gt_6:0 "§R[?arm_effective_land_lag|1]y§!"
+ arm_ui_air_lag_le_1:0 "§G[?arm_effective_air_lag|1]y§!"
+ arm_ui_air_lag_le_2:0 "§H[?arm_effective_air_lag|1]y§!"
+ arm_ui_air_lag_le_4:0 "§Y[?arm_effective_air_lag|1]y§!"
+ arm_ui_air_lag_le_6:0 "§O[?arm_effective_air_lag|1]y§!"
+ arm_ui_air_lag_gt_6:0 "§R[?arm_effective_air_lag|1]y§!"
+ arm_ui_naval_lag_le_1:0 "§G[?arm_effective_naval_lag|1]y§!"
+ arm_ui_naval_lag_le_2:0 "§H[?arm_effective_naval_lag|1]y§!"
+ arm_ui_naval_lag_le_4:0 "§Y[?arm_effective_naval_lag|1]y§!"
+ arm_ui_naval_lag_le_6:0 "§O[?arm_effective_naval_lag|1]y§!"
+ arm_ui_naval_lag_gt_6:0 "§R[?arm_effective_naval_lag|1]y§!"
+ arm_ui_industry_lag_le_1:0 "§G[?arm_effective_industry_lag|1]y§!"
+ arm_ui_industry_lag_le_2:0 "§H[?arm_effective_industry_lag|1]y§!"
+ arm_ui_industry_lag_le_4:0 "§Y[?arm_effective_industry_lag|1]y§!"
+ arm_ui_industry_lag_le_6:0 "§O[?arm_effective_industry_lag|1]y§!"
+ arm_ui_industry_lag_gt_6:0 "§R[?arm_effective_industry_lag|1]y§!"
 
  ###########################################
  # GAME RULE OPTION NAME KEYS

@@ -1,305 +1,194 @@
 # Arms Race Mechanics - Research Speed Spirit Swap Logic
 # Scripted effect: arm_update_research_speed_spirit
 # Runs in COUNTRY scope. Called during each evaluation cycle.
-#
-# Expects these variables to already be set:
-#   arm_tier_index (0-5)
-#   arm_land_competence, arm_air_competence, arm_naval_competence, arm_industry_competence
-#
-# Rule 12 flags:
-#   ARM_RSB_DISABLED  - remove all spirits, do nothing
-#   ARM_RSB_TIER_ONLY - only tier spirit, remove branch spirits
-#   ARM_RSB_FULL      - swap both tier and branch spirits
+
+arm_clear_tier_research_spirits = {
+    if = { limit = { has_idea = arm_tier_superpower } remove_ideas = arm_tier_superpower }
+    if = { limit = { has_idea = arm_tier_great_power } remove_ideas = arm_tier_great_power }
+    if = { limit = { has_idea = arm_tier_regional_power } remove_ideas = arm_tier_regional_power }
+    if = { limit = { has_idea = arm_tier_minor_industrial } remove_ideas = arm_tier_minor_industrial }
+    if = { limit = { has_idea = arm_tier_minor } remove_ideas = arm_tier_minor }
+    if = { limit = { has_idea = arm_tier_micro } remove_ideas = arm_tier_micro }
+}
+
+arm_clear_land_research_spirits = {
+    if = { limit = { has_idea = arm_land_cutting_edge } remove_ideas = arm_land_cutting_edge }
+    if = { limit = { has_idea = arm_land_advanced } remove_ideas = arm_land_advanced }
+    if = { limit = { has_idea = arm_land_standard } remove_ideas = arm_land_standard }
+    if = { limit = { has_idea = arm_land_basic } remove_ideas = arm_land_basic }
+    if = { limit = { has_idea = arm_land_none } remove_ideas = arm_land_none }
+}
+
+arm_clear_air_research_spirits = {
+    if = { limit = { has_idea = arm_air_cutting_edge } remove_ideas = arm_air_cutting_edge }
+    if = { limit = { has_idea = arm_air_advanced } remove_ideas = arm_air_advanced }
+    if = { limit = { has_idea = arm_air_standard } remove_ideas = arm_air_standard }
+    if = { limit = { has_idea = arm_air_basic } remove_ideas = arm_air_basic }
+    if = { limit = { has_idea = arm_air_none } remove_ideas = arm_air_none }
+}
+
+arm_clear_naval_research_spirits = {
+    if = { limit = { has_idea = arm_naval_cutting_edge } remove_ideas = arm_naval_cutting_edge }
+    if = { limit = { has_idea = arm_naval_advanced } remove_ideas = arm_naval_advanced }
+    if = { limit = { has_idea = arm_naval_standard } remove_ideas = arm_naval_standard }
+    if = { limit = { has_idea = arm_naval_basic } remove_ideas = arm_naval_basic }
+    if = { limit = { has_idea = arm_naval_none } remove_ideas = arm_naval_none }
+}
+
+arm_clear_industry_research_spirits = {
+    if = { limit = { has_idea = arm_industry_cutting_edge } remove_ideas = arm_industry_cutting_edge }
+    if = { limit = { has_idea = arm_industry_advanced } remove_ideas = arm_industry_advanced }
+    if = { limit = { has_idea = arm_industry_standard } remove_ideas = arm_industry_standard }
+    if = { limit = { has_idea = arm_industry_basic } remove_ideas = arm_industry_basic }
+    if = { limit = { has_idea = arm_industry_none } remove_ideas = arm_industry_none }
+}
+
+arm_apply_tier_research_spirit = {
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 5 compare = equals }
+            OR = {
+                NOT = { has_idea = arm_tier_superpower }
+                has_idea = arm_tier_great_power
+                has_idea = arm_tier_regional_power
+                has_idea = arm_tier_minor_industrial
+                has_idea = arm_tier_minor
+                has_idea = arm_tier_micro
+            }
+        }
+        arm_clear_tier_research_spirits = yes
+        add_ideas = arm_tier_superpower
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = equals }
+            OR = {
+                NOT = { has_idea = arm_tier_great_power }
+                has_idea = arm_tier_superpower
+                has_idea = arm_tier_regional_power
+                has_idea = arm_tier_minor_industrial
+                has_idea = arm_tier_minor
+                has_idea = arm_tier_micro
+            }
+        }
+        arm_clear_tier_research_spirits = yes
+        add_ideas = arm_tier_great_power
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = equals }
+            OR = {
+                NOT = { has_idea = arm_tier_regional_power }
+                has_idea = arm_tier_superpower
+                has_idea = arm_tier_great_power
+                has_idea = arm_tier_minor_industrial
+                has_idea = arm_tier_minor
+                has_idea = arm_tier_micro
+            }
+        }
+        arm_clear_tier_research_spirits = yes
+        add_ideas = arm_tier_regional_power
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = equals }
+            OR = {
+                NOT = { has_idea = arm_tier_minor_industrial }
+                has_idea = arm_tier_superpower
+                has_idea = arm_tier_great_power
+                has_idea = arm_tier_regional_power
+                has_idea = arm_tier_minor
+                has_idea = arm_tier_micro
+            }
+        }
+        arm_clear_tier_research_spirits = yes
+        add_ideas = arm_tier_minor_industrial
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = equals }
+            OR = {
+                NOT = { has_idea = arm_tier_minor }
+                has_idea = arm_tier_superpower
+                has_idea = arm_tier_great_power
+                has_idea = arm_tier_regional_power
+                has_idea = arm_tier_minor_industrial
+                has_idea = arm_tier_micro
+            }
+        }
+        arm_clear_tier_research_spirits = yes
+        add_ideas = arm_tier_minor
+    }
+    else_if = {
+        limit = {
+            OR = {
+                NOT = { has_idea = arm_tier_micro }
+                has_idea = arm_tier_superpower
+                has_idea = arm_tier_great_power
+                has_idea = arm_tier_regional_power
+                has_idea = arm_tier_minor_industrial
+                has_idea = arm_tier_minor
+            }
+        }
+        arm_clear_tier_research_spirits = yes
+        add_ideas = arm_tier_micro
+    }
+}
+
+arm_apply_land_research_spirit = {
+    if = { limit = { check_variable = { var = arm_land_competence value = 84 compare = greater_than } OR = { NOT = { has_idea = arm_land_cutting_edge } has_idea = arm_land_advanced has_idea = arm_land_standard has_idea = arm_land_basic has_idea = arm_land_none } } arm_clear_land_research_spirits = yes add_ideas = arm_land_cutting_edge }
+    else_if = { limit = { check_variable = { var = arm_land_competence value = 59 compare = greater_than } OR = { NOT = { has_idea = arm_land_advanced } has_idea = arm_land_cutting_edge has_idea = arm_land_standard has_idea = arm_land_basic has_idea = arm_land_none } } arm_clear_land_research_spirits = yes add_ideas = arm_land_advanced }
+    else_if = { limit = { check_variable = { var = arm_land_competence value = 34 compare = greater_than } OR = { NOT = { has_idea = arm_land_standard } has_idea = arm_land_cutting_edge has_idea = arm_land_advanced has_idea = arm_land_basic has_idea = arm_land_none } } arm_clear_land_research_spirits = yes add_ideas = arm_land_standard }
+    else_if = { limit = { check_variable = { var = arm_land_competence value = 14 compare = greater_than } OR = { NOT = { has_idea = arm_land_basic } has_idea = arm_land_cutting_edge has_idea = arm_land_advanced has_idea = arm_land_standard has_idea = arm_land_none } } arm_clear_land_research_spirits = yes add_ideas = arm_land_basic }
+    else_if = { limit = { OR = { NOT = { has_idea = arm_land_none } has_idea = arm_land_cutting_edge has_idea = arm_land_advanced has_idea = arm_land_standard has_idea = arm_land_basic } } arm_clear_land_research_spirits = yes add_ideas = arm_land_none }
+}
+
+arm_apply_air_research_spirit = {
+    if = { limit = { check_variable = { var = arm_air_competence value = 84 compare = greater_than } OR = { NOT = { has_idea = arm_air_cutting_edge } has_idea = arm_air_advanced has_idea = arm_air_standard has_idea = arm_air_basic has_idea = arm_air_none } } arm_clear_air_research_spirits = yes add_ideas = arm_air_cutting_edge }
+    else_if = { limit = { check_variable = { var = arm_air_competence value = 59 compare = greater_than } OR = { NOT = { has_idea = arm_air_advanced } has_idea = arm_air_cutting_edge has_idea = arm_air_standard has_idea = arm_air_basic has_idea = arm_air_none } } arm_clear_air_research_spirits = yes add_ideas = arm_air_advanced }
+    else_if = { limit = { check_variable = { var = arm_air_competence value = 34 compare = greater_than } OR = { NOT = { has_idea = arm_air_standard } has_idea = arm_air_cutting_edge has_idea = arm_air_advanced has_idea = arm_air_basic has_idea = arm_air_none } } arm_clear_air_research_spirits = yes add_ideas = arm_air_standard }
+    else_if = { limit = { check_variable = { var = arm_air_competence value = 14 compare = greater_than } OR = { NOT = { has_idea = arm_air_basic } has_idea = arm_air_cutting_edge has_idea = arm_air_advanced has_idea = arm_air_standard has_idea = arm_air_none } } arm_clear_air_research_spirits = yes add_ideas = arm_air_basic }
+    else_if = { limit = { OR = { NOT = { has_idea = arm_air_none } has_idea = arm_air_cutting_edge has_idea = arm_air_advanced has_idea = arm_air_standard has_idea = arm_air_basic } } arm_clear_air_research_spirits = yes add_ideas = arm_air_none }
+}
+
+arm_apply_naval_research_spirit = {
+    if = { limit = { check_variable = { var = arm_naval_competence value = 84 compare = greater_than } OR = { NOT = { has_idea = arm_naval_cutting_edge } has_idea = arm_naval_advanced has_idea = arm_naval_standard has_idea = arm_naval_basic has_idea = arm_naval_none } } arm_clear_naval_research_spirits = yes add_ideas = arm_naval_cutting_edge }
+    else_if = { limit = { check_variable = { var = arm_naval_competence value = 59 compare = greater_than } OR = { NOT = { has_idea = arm_naval_advanced } has_idea = arm_naval_cutting_edge has_idea = arm_naval_standard has_idea = arm_naval_basic has_idea = arm_naval_none } } arm_clear_naval_research_spirits = yes add_ideas = arm_naval_advanced }
+    else_if = { limit = { check_variable = { var = arm_naval_competence value = 34 compare = greater_than } OR = { NOT = { has_idea = arm_naval_standard } has_idea = arm_naval_cutting_edge has_idea = arm_naval_advanced has_idea = arm_naval_basic has_idea = arm_naval_none } } arm_clear_naval_research_spirits = yes add_ideas = arm_naval_standard }
+    else_if = { limit = { check_variable = { var = arm_naval_competence value = 14 compare = greater_than } OR = { NOT = { has_idea = arm_naval_basic } has_idea = arm_naval_cutting_edge has_idea = arm_naval_advanced has_idea = arm_naval_standard has_idea = arm_naval_none } } arm_clear_naval_research_spirits = yes add_ideas = arm_naval_basic }
+    else_if = { limit = { OR = { NOT = { has_idea = arm_naval_none } has_idea = arm_naval_cutting_edge has_idea = arm_naval_advanced has_idea = arm_naval_standard has_idea = arm_naval_basic } } arm_clear_naval_research_spirits = yes add_ideas = arm_naval_none }
+}
+
+arm_apply_industry_research_spirit = {
+    if = { limit = { check_variable = { var = arm_industry_competence value = 84 compare = greater_than } OR = { NOT = { has_idea = arm_industry_cutting_edge } has_idea = arm_industry_advanced has_idea = arm_industry_standard has_idea = arm_industry_basic has_idea = arm_industry_none } } arm_clear_industry_research_spirits = yes add_ideas = arm_industry_cutting_edge }
+    else_if = { limit = { check_variable = { var = arm_industry_competence value = 59 compare = greater_than } OR = { NOT = { has_idea = arm_industry_advanced } has_idea = arm_industry_cutting_edge has_idea = arm_industry_standard has_idea = arm_industry_basic has_idea = arm_industry_none } } arm_clear_industry_research_spirits = yes add_ideas = arm_industry_advanced }
+    else_if = { limit = { check_variable = { var = arm_industry_competence value = 34 compare = greater_than } OR = { NOT = { has_idea = arm_industry_standard } has_idea = arm_industry_cutting_edge has_idea = arm_industry_advanced has_idea = arm_industry_basic has_idea = arm_industry_none } } arm_clear_industry_research_spirits = yes add_ideas = arm_industry_standard }
+    else_if = { limit = { check_variable = { var = arm_industry_competence value = 14 compare = greater_than } OR = { NOT = { has_idea = arm_industry_basic } has_idea = arm_industry_cutting_edge has_idea = arm_industry_advanced has_idea = arm_industry_standard has_idea = arm_industry_none } } arm_clear_industry_research_spirits = yes add_ideas = arm_industry_basic }
+    else_if = { limit = { OR = { NOT = { has_idea = arm_industry_none } has_idea = arm_industry_cutting_edge has_idea = arm_industry_advanced has_idea = arm_industry_standard has_idea = arm_industry_basic } } arm_clear_industry_research_spirits = yes add_ideas = arm_industry_none }
+}
 
 arm_update_research_speed_spirit = {
-
-	##################################################
-	# Rule 12 check: ARM_RSB_DISABLED
-	# Remove ALL arm spirits and return
-	##################################################
-	if = {
-		limit = { has_game_rule = { rule = arm_research_speed_bonuses option = ARM_RSB_DISABLED } }
-
-		# Remove all tier spirits
-		if = { limit = { has_idea = arm_tier_superpower } remove_ideas = arm_tier_superpower }
-		if = { limit = { has_idea = arm_tier_great_power } remove_ideas = arm_tier_great_power }
-		if = { limit = { has_idea = arm_tier_regional_power } remove_ideas = arm_tier_regional_power }
-		if = { limit = { has_idea = arm_tier_minor_industrial } remove_ideas = arm_tier_minor_industrial }
-		if = { limit = { has_idea = arm_tier_minor } remove_ideas = arm_tier_minor }
-		if = { limit = { has_idea = arm_tier_micro } remove_ideas = arm_tier_micro }
-
-		# Remove all land branch spirits
-		if = { limit = { has_idea = arm_land_cutting_edge } remove_ideas = arm_land_cutting_edge }
-		if = { limit = { has_idea = arm_land_advanced } remove_ideas = arm_land_advanced }
-		if = { limit = { has_idea = arm_land_standard } remove_ideas = arm_land_standard }
-		if = { limit = { has_idea = arm_land_basic } remove_ideas = arm_land_basic }
-		if = { limit = { has_idea = arm_land_none } remove_ideas = arm_land_none }
-
-		# Remove all air branch spirits
-		if = { limit = { has_idea = arm_air_cutting_edge } remove_ideas = arm_air_cutting_edge }
-		if = { limit = { has_idea = arm_air_advanced } remove_ideas = arm_air_advanced }
-		if = { limit = { has_idea = arm_air_standard } remove_ideas = arm_air_standard }
-		if = { limit = { has_idea = arm_air_basic } remove_ideas = arm_air_basic }
-		if = { limit = { has_idea = arm_air_none } remove_ideas = arm_air_none }
-
-		# Remove all naval branch spirits
-		if = { limit = { has_idea = arm_naval_cutting_edge } remove_ideas = arm_naval_cutting_edge }
-		if = { limit = { has_idea = arm_naval_advanced } remove_ideas = arm_naval_advanced }
-		if = { limit = { has_idea = arm_naval_standard } remove_ideas = arm_naval_standard }
-		if = { limit = { has_idea = arm_naval_basic } remove_ideas = arm_naval_basic }
-		if = { limit = { has_idea = arm_naval_none } remove_ideas = arm_naval_none }
-
-		# Remove all industry branch spirits
-		if = { limit = { has_idea = arm_industry_cutting_edge } remove_ideas = arm_industry_cutting_edge }
-		if = { limit = { has_idea = arm_industry_advanced } remove_ideas = arm_industry_advanced }
-		if = { limit = { has_idea = arm_industry_standard } remove_ideas = arm_industry_standard }
-		if = { limit = { has_idea = arm_industry_basic } remove_ideas = arm_industry_basic }
-		if = { limit = { has_idea = arm_industry_none } remove_ideas = arm_industry_none }
-	}
-
-	##################################################
-	# Rule 12 check: ARM_RSB_TIER_ONLY
-	# Swap tier spirit, remove all branch spirits
-	##################################################
-	else_if = {
-		limit = { has_game_rule = { rule = arm_research_speed_bonuses option = ARM_RSB_TIER_ONLY } }
-
-		# --- TIER SPIRIT SWAP ---
-
-		# Remove all tier spirits first
-		if = { limit = { has_idea = arm_tier_superpower } remove_ideas = arm_tier_superpower }
-		if = { limit = { has_idea = arm_tier_great_power } remove_ideas = arm_tier_great_power }
-		if = { limit = { has_idea = arm_tier_regional_power } remove_ideas = arm_tier_regional_power }
-		if = { limit = { has_idea = arm_tier_minor_industrial } remove_ideas = arm_tier_minor_industrial }
-		if = { limit = { has_idea = arm_tier_minor } remove_ideas = arm_tier_minor }
-		if = { limit = { has_idea = arm_tier_micro } remove_ideas = arm_tier_micro }
-
-		# Add correct tier spirit based on arm_tier_index
-		if = {
-			limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-			add_ideas = arm_tier_superpower
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-			add_ideas = arm_tier_great_power
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-			add_ideas = arm_tier_regional_power
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-			add_ideas = arm_tier_minor_industrial
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-			add_ideas = arm_tier_minor
-		}
-		else = {
-			add_ideas = arm_tier_micro
-		}
-
-		# --- REMOVE ALL BRANCH SPIRITS ---
-
-		# Remove all land branch spirits
-		if = { limit = { has_idea = arm_land_cutting_edge } remove_ideas = arm_land_cutting_edge }
-		if = { limit = { has_idea = arm_land_advanced } remove_ideas = arm_land_advanced }
-		if = { limit = { has_idea = arm_land_standard } remove_ideas = arm_land_standard }
-		if = { limit = { has_idea = arm_land_basic } remove_ideas = arm_land_basic }
-		if = { limit = { has_idea = arm_land_none } remove_ideas = arm_land_none }
-
-		# Remove all air branch spirits
-		if = { limit = { has_idea = arm_air_cutting_edge } remove_ideas = arm_air_cutting_edge }
-		if = { limit = { has_idea = arm_air_advanced } remove_ideas = arm_air_advanced }
-		if = { limit = { has_idea = arm_air_standard } remove_ideas = arm_air_standard }
-		if = { limit = { has_idea = arm_air_basic } remove_ideas = arm_air_basic }
-		if = { limit = { has_idea = arm_air_none } remove_ideas = arm_air_none }
-
-		# Remove all naval branch spirits
-		if = { limit = { has_idea = arm_naval_cutting_edge } remove_ideas = arm_naval_cutting_edge }
-		if = { limit = { has_idea = arm_naval_advanced } remove_ideas = arm_naval_advanced }
-		if = { limit = { has_idea = arm_naval_standard } remove_ideas = arm_naval_standard }
-		if = { limit = { has_idea = arm_naval_basic } remove_ideas = arm_naval_basic }
-		if = { limit = { has_idea = arm_naval_none } remove_ideas = arm_naval_none }
-
-		# Remove all industry branch spirits
-		if = { limit = { has_idea = arm_industry_cutting_edge } remove_ideas = arm_industry_cutting_edge }
-		if = { limit = { has_idea = arm_industry_advanced } remove_ideas = arm_industry_advanced }
-		if = { limit = { has_idea = arm_industry_standard } remove_ideas = arm_industry_standard }
-		if = { limit = { has_idea = arm_industry_basic } remove_ideas = arm_industry_basic }
-		if = { limit = { has_idea = arm_industry_none } remove_ideas = arm_industry_none }
-	}
-
-	##################################################
-	# Rule 12 check: ARM_RSB_FULL (or default)
-	# Swap both tier and branch spirits
-	##################################################
-	else_if = {
-		limit = { has_game_rule = { rule = arm_research_speed_bonuses option = ARM_RSB_FULL } }
-
-		# ==========================================
-		# TIER SPIRIT SWAP
-		# ==========================================
-
-		# Remove all tier spirits first
-		if = { limit = { has_idea = arm_tier_superpower } remove_ideas = arm_tier_superpower }
-		if = { limit = { has_idea = arm_tier_great_power } remove_ideas = arm_tier_great_power }
-		if = { limit = { has_idea = arm_tier_regional_power } remove_ideas = arm_tier_regional_power }
-		if = { limit = { has_idea = arm_tier_minor_industrial } remove_ideas = arm_tier_minor_industrial }
-		if = { limit = { has_idea = arm_tier_minor } remove_ideas = arm_tier_minor }
-		if = { limit = { has_idea = arm_tier_micro } remove_ideas = arm_tier_micro }
-
-		# Add correct tier spirit based on arm_tier_index
-		if = {
-			limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-			add_ideas = arm_tier_superpower
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-			add_ideas = arm_tier_great_power
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-			add_ideas = arm_tier_regional_power
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-			add_ideas = arm_tier_minor_industrial
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-			add_ideas = arm_tier_minor
-		}
-		else = {
-			add_ideas = arm_tier_micro
-		}
-
-		# ==========================================
-		# LAND BRANCH SPIRIT SWAP
-		# ==========================================
-
-		# Remove all land branch spirits
-		if = { limit = { has_idea = arm_land_cutting_edge } remove_ideas = arm_land_cutting_edge }
-		if = { limit = { has_idea = arm_land_advanced } remove_ideas = arm_land_advanced }
-		if = { limit = { has_idea = arm_land_standard } remove_ideas = arm_land_standard }
-		if = { limit = { has_idea = arm_land_basic } remove_ideas = arm_land_basic }
-		if = { limit = { has_idea = arm_land_none } remove_ideas = arm_land_none }
-
-		# Add correct land spirit based on arm_land_competence
-		if = {
-			limit = { check_variable = { var = arm_land_competence value = 84 compare = greater_than } }
-			add_ideas = arm_land_cutting_edge
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_land_competence value = 59 compare = greater_than } }
-			add_ideas = arm_land_advanced
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_land_competence value = 34 compare = greater_than } }
-			add_ideas = arm_land_standard
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_land_competence value = 14 compare = greater_than } }
-			add_ideas = arm_land_basic
-		}
-		else = {
-			add_ideas = arm_land_none
-		}
-
-		# ==========================================
-		# AIR BRANCH SPIRIT SWAP
-		# ==========================================
-
-		# Remove all air branch spirits
-		if = { limit = { has_idea = arm_air_cutting_edge } remove_ideas = arm_air_cutting_edge }
-		if = { limit = { has_idea = arm_air_advanced } remove_ideas = arm_air_advanced }
-		if = { limit = { has_idea = arm_air_standard } remove_ideas = arm_air_standard }
-		if = { limit = { has_idea = arm_air_basic } remove_ideas = arm_air_basic }
-		if = { limit = { has_idea = arm_air_none } remove_ideas = arm_air_none }
-
-		# Add correct air spirit based on arm_air_competence
-		if = {
-			limit = { check_variable = { var = arm_air_competence value = 84 compare = greater_than } }
-			add_ideas = arm_air_cutting_edge
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_air_competence value = 59 compare = greater_than } }
-			add_ideas = arm_air_advanced
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_air_competence value = 34 compare = greater_than } }
-			add_ideas = arm_air_standard
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_air_competence value = 14 compare = greater_than } }
-			add_ideas = arm_air_basic
-		}
-		else = {
-			add_ideas = arm_air_none
-		}
-
-		# ==========================================
-		# NAVAL BRANCH SPIRIT SWAP
-		# ==========================================
-
-		# Remove all naval branch spirits
-		if = { limit = { has_idea = arm_naval_cutting_edge } remove_ideas = arm_naval_cutting_edge }
-		if = { limit = { has_idea = arm_naval_advanced } remove_ideas = arm_naval_advanced }
-		if = { limit = { has_idea = arm_naval_standard } remove_ideas = arm_naval_standard }
-		if = { limit = { has_idea = arm_naval_basic } remove_ideas = arm_naval_basic }
-		if = { limit = { has_idea = arm_naval_none } remove_ideas = arm_naval_none }
-
-		# Add correct naval spirit based on arm_naval_competence
-		if = {
-			limit = { check_variable = { var = arm_naval_competence value = 84 compare = greater_than } }
-			add_ideas = arm_naval_cutting_edge
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_naval_competence value = 59 compare = greater_than } }
-			add_ideas = arm_naval_advanced
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_naval_competence value = 34 compare = greater_than } }
-			add_ideas = arm_naval_standard
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_naval_competence value = 14 compare = greater_than } }
-			add_ideas = arm_naval_basic
-		}
-		else = {
-			add_ideas = arm_naval_none
-		}
-
-		# ==========================================
-		# INDUSTRY/ELECTRONICS BRANCH SPIRIT SWAP
-		# ==========================================
-
-		# Remove all industry branch spirits
-		if = { limit = { has_idea = arm_industry_cutting_edge } remove_ideas = arm_industry_cutting_edge }
-		if = { limit = { has_idea = arm_industry_advanced } remove_ideas = arm_industry_advanced }
-		if = { limit = { has_idea = arm_industry_standard } remove_ideas = arm_industry_standard }
-		if = { limit = { has_idea = arm_industry_basic } remove_ideas = arm_industry_basic }
-		if = { limit = { has_idea = arm_industry_none } remove_ideas = arm_industry_none }
-
-		# Add correct industry spirit based on arm_industry_competence
-		if = {
-			limit = { check_variable = { var = arm_industry_competence value = 84 compare = greater_than } }
-			add_ideas = arm_industry_cutting_edge
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_industry_competence value = 59 compare = greater_than } }
-			add_ideas = arm_industry_advanced
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_industry_competence value = 34 compare = greater_than } }
-			add_ideas = arm_industry_standard
-		}
-		else_if = {
-			limit = { check_variable = { var = arm_industry_competence value = 14 compare = greater_than } }
-			add_ideas = arm_industry_basic
-		}
-		else = {
-			add_ideas = arm_industry_none
-		}
-	}
+    if = {
+        limit = { has_game_rule = { rule = arm_research_speed_bonuses option = ARM_RSB_DISABLED } }
+        arm_clear_tier_research_spirits = yes
+        arm_clear_land_research_spirits = yes
+        arm_clear_air_research_spirits = yes
+        arm_clear_naval_research_spirits = yes
+        arm_clear_industry_research_spirits = yes
+    }
+    else_if = {
+        limit = { has_game_rule = { rule = arm_research_speed_bonuses option = ARM_RSB_TIER_ONLY } }
+        arm_apply_tier_research_spirit = yes
+        arm_clear_land_research_spirits = yes
+        arm_clear_air_research_spirits = yes
+        arm_clear_naval_research_spirits = yes
+        arm_clear_industry_research_spirits = yes
+    }
+    else = {
+        arm_apply_tier_research_spirit = yes
+        arm_apply_land_research_spirit = yes
+        arm_apply_air_research_spirit = yes
+        arm_apply_naval_research_spirit = yes
+        arm_apply_industry_research_spirit = yes
+    }
 }

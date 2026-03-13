@@ -286,6 +286,12 @@ DLC_FILE_MAP = {
     "bba_air_techs.txt":        "By Blood Alone",
 }
 
+# Some techs live in DLC-branded files but are gated by a different DLC in-game.
+DLC_TECH_OVERRIDES = {
+    "sp_refined_pykrete": "Gotterdammerung",
+    "sp_ice_composite_runawayas": "Gotterdammerung",
+}
+
 
 # ============================================================================
 # DATA STRUCTURES
@@ -364,7 +370,7 @@ def parse_tech_files(tech_dir: Path, mod_name: str = "vanilla", verbose: bool = 
         dlc_name = DLC_FILE_MAP.get(filepath.name.lower(), "")
         if dlc_name:
             for t in file_techs:
-                t.dlc_required = dlc_name
+                t.dlc_required = DLC_TECH_OVERRIDES.get(t.tech_id, dlc_name)
 
         techs.extend(file_techs)
 
@@ -796,40 +802,112 @@ def is_runtime_supported_tech(tech: TechDef) -> bool:
 
 
 def append_grant_limit_lines(lines: list, tech: TechDef, counter_var: str = "arm_grant_counter",
-                             cap_var: str = "arm_quarterly_cap"):
+                             cap_var: str = "arm_quarterly_cap", indent: str = "            "):
     lines.append(
-        f"            check_variable = {{ var = {counter_var} value = {cap_var} compare = less_than }}"
+        f"{indent}check_variable = {{ var = {counter_var} value = {cap_var} compare = less_than }}"
     )
     lines.append(
-        f"            check_variable = {{ var = {target_year_var_for_branch(tech.branch)} "
+        f"{indent}check_variable = {{ var = {target_year_var_for_branch(tech.branch)} "
         f"value = {tech.start_year} compare = greater_than_or_equals }}"
     )
 
     tier_index = TIER_ORDER.index(tech.min_tier) if tech.min_tier in TIER_ORDER else 0
     if tier_index > 0:
         lines.append(
-            f"            check_variable = {{ var = arm_tier_index value = {tier_index} "
+            f"{indent}check_variable = {{ var = arm_tier_index value = {tier_index} "
             f"compare = greater_than_or_equals }}"
         )
 
     if tech.min_branch_score > 0:
         lines.append(
-            f"            check_variable = {{ var = {competence_var_for_branch(tech.branch)} "
+            f"{indent}check_variable = {{ var = {competence_var_for_branch(tech.branch)} "
             f"value = {tech.min_branch_score} compare = greater_than_or_equals }}"
         )
 
     category_flag = category_flag_for(tech.category)
     if category_flag:
-        lines.append(f"            has_country_flag = {category_flag}")
+        lines.append(f"{indent}has_country_flag = {category_flag}")
 
     if tech.category in ADVANCED_TECH_CATEGORIES:
-        lines.append("            arm_advanced_tech_allowed = yes")
+        lines.append(f"{indent}arm_advanced_tech_allowed = yes")
 
     for dep in tech.dependencies:
-        lines.append(f"            has_tech = {dep}")
+        lines.append(f"{indent}has_tech = {dep}")
 
     if tech.dlc_required:
-        lines.append(f'            has_dlc = "{tech.dlc_required}"')
+        lines.append(f'{indent}has_dlc = "{tech.dlc_required}"')
+
+
+def append_group_outer_limit_lines(lines: list, tech_list: list[TechDef],
+                                   counter_var: str = "arm_grant_counter",
+                                   cap_var: str = "arm_quarterly_cap",
+                                   indent: str = "            "):
+    if not tech_list:
+        return
+
+    first = tech_list[0]
+    earliest_year = min(tech.start_year for tech in tech_list)
+    lines.append(
+        f"{indent}check_variable = {{ var = {counter_var} value = {cap_var} compare = less_than }}"
+    )
+    lines.append(
+        f"{indent}check_variable = {{ var = {target_year_var_for_branch(first.branch)} "
+        f"value = {earliest_year} compare = greater_than_or_equals }}"
+    )
+
+    category_flag = category_flag_for(first.category)
+    if category_flag:
+        lines.append(f"{indent}has_country_flag = {category_flag}")
+
+    min_tier_index = min(
+        (TIER_ORDER.index(tech.min_tier) if tech.min_tier in TIER_ORDER else 0)
+        for tech in tech_list
+    )
+    if min_tier_index > 0:
+        lines.append(
+            f"{indent}check_variable = {{ var = arm_tier_index value = {min_tier_index} "
+            f"compare = greater_than_or_equals }}"
+        )
+
+    min_branch_score = min(tech.min_branch_score for tech in tech_list)
+    if min_branch_score > 0:
+        lines.append(
+            f"{indent}check_variable = {{ var = {competence_var_for_branch(first.branch)} "
+            f"value = {min_branch_score} compare = greater_than_or_equals }}"
+        )
+
+    if first.category in ADVANCED_TECH_CATEGORIES:
+        lines.append(f"{indent}arm_advanced_tech_allowed = yes")
+
+    shared_dlc = tech_list[0].dlc_required
+    if shared_dlc and all(tech.dlc_required == shared_dlc for tech in tech_list):
+        lines.append(f'{indent}has_dlc = "{shared_dlc}"')
+
+
+def append_generated_grant_effect(lines: list, effect_name: str, tech_list: list[TechDef]):
+    lines.append(f"{effect_name} = {{")
+    lines.append("    if = {")
+    lines.append("        limit = {")
+    append_group_outer_limit_lines(lines, tech_list)
+    lines.append("        }")
+
+    for tech in tech_list:
+        if tech.is_xp_gated:
+            lines.append(f"        # SKIPPED (XP-gated): {tech.tech_id}")
+            continue
+
+        lines.append(f"        # {tech.tech_id} - {tech.start_year}")
+        lines.append("        if = {")
+        lines.append("            limit = {")
+        lines.append(f"                NOT = {{ has_tech = {tech.tech_id} }}")
+        append_grant_limit_lines(lines, tech, indent="                ")
+        lines.append("            }")
+        lines.append(f"            set_technology = {{ {tech.tech_id} = 1 popup = no }}")
+        lines.append("            add_to_variable = { arm_grant_counter = 1 }")
+        lines.append("        }")
+
+    lines.append("    }")
+    lines.append("}")
 
 
 def generate_output_files(techs: list, output_dir: Path, mode: str, mod_name: str,
@@ -913,7 +991,8 @@ def generate_output_files(techs: list, output_dir: Path, mode: str, mod_name: st
             lines.append("")
         
         # Write the actual scripted effect
-        lines.append(f"{effect_name} = {{")
+        append_generated_grant_effect(lines, effect_name, tech_list)
+        continue
         
         for tech in tech_list:
             # XP gate check
@@ -1050,7 +1129,8 @@ def generate_mod_output_files(techs: list, output_dir: Path, mod_suffix: str,
                          f"{dep_str}{flag_str}")
             lines.append("")
 
-        lines.append(f"{effect_name} = {{")
+        append_generated_grant_effect(lines, effect_name, tech_list)
+        continue
 
         for tech in tech_list:
             if tech.is_xp_gated:
@@ -1126,7 +1206,12 @@ def generate_mod_output_files(techs: list, output_dir: Path, mod_suffix: str,
         if branch == "doctrine":
             has_doctrines = True
             continue
-        orch.append(f"        arm_grant_{branch}_{category}_{mod_suffix} = yes")
+        orch.append(f"        if = {{")
+        orch.append(f"            limit = {{")
+        orch.append(f"                check_variable = {{ var = arm_grant_counter value = arm_quarterly_cap compare = less_than }}")
+        orch.append(f"            }}")
+        orch.append(f"            arm_grant_{branch}_{category}_{mod_suffix} = yes")
+        orch.append(f"        }}")
 
     if has_doctrines:
         orch.append(f"")

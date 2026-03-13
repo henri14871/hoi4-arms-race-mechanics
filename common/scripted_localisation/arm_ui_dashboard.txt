@@ -1,0 +1,228 @@
+defined_text = {
+    name = arm_ui_tier_status
+
+    text = {
+        localization_key = arm_ui_tier_superpower
+        trigger = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_tier_great_power
+        trigger = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_tier_regional_power
+        trigger = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_tier_minor_industrial
+        trigger = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_tier_minor
+        trigger = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_tier_micro
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_land_status
+
+    text = {
+        localization_key = arm_ui_branch_cutting_edge
+        trigger = { check_variable = { var = arm_land_competence value = 84 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_advanced
+        trigger = { check_variable = { var = arm_land_competence value = 59 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_standard
+        trigger = { check_variable = { var = arm_land_competence value = 34 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_basic
+        trigger = { check_variable = { var = arm_land_competence value = 14 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_minimal
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_air_status
+
+    text = {
+        localization_key = arm_ui_branch_cutting_edge
+        trigger = { check_variable = { var = arm_air_competence value = 84 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_advanced
+        trigger = { check_variable = { var = arm_air_competence value = 59 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_standard
+        trigger = { check_variable = { var = arm_air_competence value = 34 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_basic
+        trigger = { check_variable = { var = arm_air_competence value = 14 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_minimal
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_naval_status
+
+    text = {
+        localization_key = arm_ui_branch_cutting_edge
+        trigger = { check_variable = { var = arm_naval_competence value = 84 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_advanced
+        trigger = { check_variable = { var = arm_naval_competence value = 59 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_standard
+        trigger = { check_variable = { var = arm_naval_competence value = 34 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_basic
+        trigger = { check_variable = { var = arm_naval_competence value = 14 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_minimal
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_industry_status
+
+    text = {
+        localization_key = arm_ui_branch_cutting_edge
+        trigger = { check_variable = { var = arm_industry_competence value = 84 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_advanced
+        trigger = { check_variable = { var = arm_industry_competence value = 59 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_standard
+        trigger = { check_variable = { var = arm_industry_competence value = 34 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_basic
+        trigger = { check_variable = { var = arm_industry_competence value = 14 compare = greater_than } }
+    }
+    text = {
+        localization_key = arm_ui_branch_minimal
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_land_lag
+
+    text = {
+        localization_key = arm_ui_land_lag_le_1
+        trigger = { check_variable = { var = arm_effective_land_lag value = 1.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_land_lag_le_2
+        trigger = { check_variable = { var = arm_effective_land_lag value = 2.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_land_lag_le_4
+        trigger = { check_variable = { var = arm_effective_land_lag value = 4.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_land_lag_le_6
+        trigger = { check_variable = { var = arm_effective_land_lag value = 6.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_land_lag_gt_6
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_air_lag
+
+    text = {
+        localization_key = arm_ui_air_lag_le_1
+        trigger = { check_variable = { var = arm_effective_air_lag value = 1.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_air_lag_le_2
+        trigger = { check_variable = { var = arm_effective_air_lag value = 2.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_air_lag_le_4
+        trigger = { check_variable = { var = arm_effective_air_lag value = 4.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_air_lag_le_6
+        trigger = { check_variable = { var = arm_effective_air_lag value = 6.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_air_lag_gt_6
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_naval_lag
+
+    text = {
+        localization_key = arm_ui_naval_lag_le_1
+        trigger = { check_variable = { var = arm_effective_naval_lag value = 1.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_naval_lag_le_2
+        trigger = { check_variable = { var = arm_effective_naval_lag value = 2.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_naval_lag_le_4
+        trigger = { check_variable = { var = arm_effective_naval_lag value = 4.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_naval_lag_le_6
+        trigger = { check_variable = { var = arm_effective_naval_lag value = 6.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_naval_lag_gt_6
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_industry_lag
+
+    text = {
+        localization_key = arm_ui_industry_lag_le_1
+        trigger = { check_variable = { var = arm_effective_industry_lag value = 1.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_industry_lag_le_2
+        trigger = { check_variable = { var = arm_effective_industry_lag value = 2.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_industry_lag_le_4
+        trigger = { check_variable = { var = arm_effective_industry_lag value = 4.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_industry_lag_le_6
+        trigger = { check_variable = { var = arm_effective_industry_lag value = 6.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_industry_lag_gt_6
+        trigger = { always = yes }
+    }
+}

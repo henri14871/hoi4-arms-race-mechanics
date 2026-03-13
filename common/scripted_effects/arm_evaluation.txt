@@ -640,24 +640,138 @@ arm_assign_allowed_categories = {
 }
 
 #---------------------------------------------------------
+# Effect 3a: arm_prepare_country_context_cache
+#
+# Caches the expensive country-context checks that are reused
+# across multiple branch lag calculations in the same refresh.
+#---------------------------------------------------------
+arm_prepare_country_context_cache = {
+    set_variable = { arm_context_war_bonus = 0 }
+    set_variable = { arm_context_desperation_bonus = 0 }
+    set_variable = { arm_context_combat_bonus = 0 }
+    set_variable = { arm_context_defensive_bonus = 0 }
+    set_variable = { arm_context_faction_bonus = 0 }
+    set_variable = { arm_context_lend_lease_bonus = 0 }
+    set_variable = { arm_context_puppet_bonus = 0 }
+
+    if = {
+        limit = { has_war = yes }
+        if = {
+            limit = {
+                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_ENHANCED }
+            }
+            set_variable = { arm_context_war_bonus = 1.0 }
+        }
+        else_if = {
+            limit = {
+                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_STANDARD }
+            }
+            set_variable = { arm_context_war_bonus = 0.5 }
+        }
+    }
+
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_anti_death_spiral option = ARM_ADS_ENHANCED }
+        }
+        if = {
+            limit = { surrender_progress > 0.2 }
+            set_variable = { arm_context_desperation_bonus = 0.75 }
+        }
+        else_if = {
+            limit = { surrender_progress > 0.1 }
+            set_variable = { arm_context_desperation_bonus = 0.5 }
+        }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_anti_death_spiral option = ARM_ADS_STANDARD }
+        }
+        if = {
+            limit = { surrender_progress > 0.4 }
+            set_variable = { arm_context_desperation_bonus = 0.75 }
+        }
+        else_if = {
+            limit = { surrender_progress > 0.2 }
+            set_variable = { arm_context_desperation_bonus = 0.5 }
+        }
+    }
+
+    if = {
+        limit = {
+            check_variable = { var = arm_context_desperation_bonus value = arm_context_war_bonus compare = greater_than }
+        }
+        set_variable = { arm_context_combat_bonus = arm_context_desperation_bonus }
+    }
+    else = {
+        set_variable = { arm_context_combat_bonus = arm_context_war_bonus }
+    }
+
+    if = {
+        limit = { arm_is_defensive_war = yes }
+        set_variable = { arm_context_defensive_bonus = 0.25 }
+    }
+
+    if = {
+        limit = { arm_is_in_faction_with_major = yes }
+        if = {
+            limit = {
+                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_ENHANCED }
+            }
+            set_variable = { arm_context_faction_bonus = 1.0 }
+        }
+        else_if = {
+            limit = {
+                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_STANDARD }
+            }
+            set_variable = { arm_context_faction_bonus = 0.5 }
+        }
+
+        if = {
+            limit = {
+                any_country = {
+                    is_lend_leasing = ROOT
+                    check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+                }
+            }
+            set_variable = { arm_context_lend_lease_bonus = 0.25 }
+        }
+    }
+
+    if = {
+        limit = {
+            arm_is_puppet_eligible = yes
+            overlord = {
+                check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            }
+        }
+        set_variable = { arm_context_puppet_bonus = 1.0 }
+    }
+    else_if = {
+        limit = {
+            arm_is_puppet_eligible = yes
+            overlord = {
+                check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            }
+        }
+        set_variable = { arm_context_puppet_bonus = 0.5 }
+    }
+}
+
+#---------------------------------------------------------
 # Effect 3: arm_compute_effective_lag
 #
 # Computes per-branch effective lag from arm_base_lag,
-# applying competence bonuses, war bonuses, faction bonuses,
-# lend-lease, desperation, and puppet overlord bonuses.
-#
-# Combat branches: land, air
-# Tech-sharing branches: all four (industry especially
-#   benefits from faction/lend-lease)
+# applying competence bonuses plus cached country-context bonuses.
 #---------------------------------------------------------
 arm_compute_effective_lag = {
+    arm_prepare_country_context_cache = yes
 
     # ===================================================
-    # LAND branch — combat category
+    # LAND branch - combat category
     # ===================================================
     set_variable = { arm_effective_land_lag = arm_base_lag }
 
-    # --- Branch competence adjustment (land) ---
     set_variable = { arm_land_comp_threshold_minus_20 = arm_tier_avg }
     subtract_from_variable = { arm_land_comp_threshold_minus_20 = 20 }
     set_variable = { arm_land_comp_threshold_minus_40 = arm_tier_avg }
@@ -692,133 +806,34 @@ arm_compute_effective_lag = {
         subtract_from_variable = { arm_effective_land_lag = 0.5 }
     }
 
-    # --- War bonus (land is combat) ---
-    # Compute war bonus and desperation bonus separately, take higher
-    set_variable = { arm_land_war_bonus = 0 }
-    set_variable = { arm_land_desperation_bonus = 0 }
-
     if = {
-        limit = { has_war = yes }
-        if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_ENHANCED }
-            }
-            set_variable = { arm_land_war_bonus = 1.0 }
-        }
-        else_if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_STANDARD }
-            }
-            set_variable = { arm_land_war_bonus = 0.5 }
-        }
+        limit = { check_variable = { var = arm_context_combat_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_land_lag = arm_context_combat_bonus }
     }
-
-    # --- Desperation bonus (land — combat, does not stack with war bonus) ---
     if = {
-        limit = {
-            has_game_rule = { rule = arm_anti_death_spiral option = ARM_ADS_ENHANCED }
-        }
-        if = {
-            limit = { surrender_progress > 0.2 }
-            set_variable = { arm_land_desperation_bonus = 0.75 }
-        }
-        else_if = {
-            limit = { surrender_progress > 0.1 }
-            set_variable = { arm_land_desperation_bonus = 0.5 }
-        }
+        limit = { check_variable = { var = arm_context_defensive_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_land_lag = arm_context_defensive_bonus }
     }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_anti_death_spiral option = ARM_ADS_STANDARD }
-        }
-        if = {
-            limit = { surrender_progress > 0.4 }
-            set_variable = { arm_land_desperation_bonus = 0.75 }
-        }
-        else_if = {
-            limit = { surrender_progress > 0.2 }
-            set_variable = { arm_land_desperation_bonus = 0.5 }
-        }
-    }
-
-    # Take the higher of war bonus and desperation bonus
     if = {
-        limit = {
-            check_variable = { var = arm_land_desperation_bonus value = arm_land_war_bonus compare = greater_than }
-        }
-        subtract_from_variable = { arm_effective_land_lag = arm_land_desperation_bonus }
+        limit = { check_variable = { var = arm_context_faction_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_land_lag = arm_context_faction_bonus }
     }
-    else = {
-        subtract_from_variable = { arm_effective_land_lag = arm_land_war_bonus }
-    }
-
-    # --- Defensive war bonus (land — combat) ---
     if = {
-        limit = {
-            arm_is_defensive_war = yes
-        }
-        subtract_from_variable = { arm_effective_land_lag = 0.25 }
+        limit = { check_variable = { var = arm_context_lend_lease_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_land_lag = arm_context_lend_lease_bonus }
     }
-
-    # --- Faction bonus (land benefits from tech sharing) ---
     if = {
-        limit = {
-            arm_is_in_faction_with_major = yes
-        }
-        if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_ENHANCED }
-            }
-            subtract_from_variable = { arm_effective_land_lag = 1.0 }
-        }
-        else_if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_STANDARD }
-            }
-            subtract_from_variable = { arm_effective_land_lag = 0.5 }
-        }
-
-        # --- Lend-lease enhancement (land) ---
-        if = {
-            limit = {
-                any_country = {
-                    is_lend_leasing = ROOT
-                    check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-                }
-            }
-            subtract_from_variable = { arm_effective_land_lag = 0.25 }
-        }
+        limit = { check_variable = { var = arm_context_puppet_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_land_lag = arm_context_puppet_bonus }
     }
 
-    # --- Puppet bonus (land) ---
-    if = {
-        limit = {
-            arm_is_puppet_eligible = yes
-            overlord = {
-                check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            }
-        }
-        subtract_from_variable = { arm_effective_land_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            arm_is_puppet_eligible = yes
-            overlord = {
-                check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            }
-        }
-        subtract_from_variable = { arm_effective_land_lag = 0.5 }
-    }
-
-    # Clamp land lag
     clamp_variable = { var = arm_effective_land_lag min = 0 max = 40 }
 
     # ===================================================
-    # AIR branch — combat category
+    # AIR branch - combat category
     # ===================================================
     set_variable = { arm_effective_air_lag = arm_base_lag }
 
-    # --- Branch competence adjustment (air) ---
     set_variable = { arm_air_comp_threshold_minus_20 = arm_tier_avg }
     subtract_from_variable = { arm_air_comp_threshold_minus_20 = 20 }
     set_variable = { arm_air_comp_threshold_minus_40 = arm_tier_avg }
@@ -853,133 +868,34 @@ arm_compute_effective_lag = {
         subtract_from_variable = { arm_effective_air_lag = 0.5 }
     }
 
-    # --- War bonus (air is combat) ---
-    set_variable = { arm_air_war_bonus = 0 }
-    set_variable = { arm_air_desperation_bonus = 0 }
-
     if = {
-        limit = { has_war = yes }
-        if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_ENHANCED }
-            }
-            set_variable = { arm_air_war_bonus = 1.0 }
-        }
-        else_if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_STANDARD }
-            }
-            set_variable = { arm_air_war_bonus = 0.5 }
-        }
+        limit = { check_variable = { var = arm_context_combat_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_air_lag = arm_context_combat_bonus }
     }
-
-    # --- Desperation bonus (air — combat) ---
     if = {
-        limit = {
-            has_game_rule = { rule = arm_anti_death_spiral option = ARM_ADS_ENHANCED }
-        }
-        if = {
-            limit = { surrender_progress > 0.2 }
-            set_variable = { arm_air_desperation_bonus = 0.75 }
-        }
-        else_if = {
-            limit = { surrender_progress > 0.1 }
-            set_variable = { arm_air_desperation_bonus = 0.5 }
-        }
+        limit = { check_variable = { var = arm_context_defensive_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_air_lag = arm_context_defensive_bonus }
     }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_anti_death_spiral option = ARM_ADS_STANDARD }
-        }
-        if = {
-            limit = { surrender_progress > 0.4 }
-            set_variable = { arm_air_desperation_bonus = 0.75 }
-        }
-        else_if = {
-            limit = { surrender_progress > 0.2 }
-            set_variable = { arm_air_desperation_bonus = 0.5 }
-        }
-    }
-
-    # Take the higher of war bonus and desperation bonus
     if = {
-        limit = {
-            check_variable = { var = arm_air_desperation_bonus value = arm_air_war_bonus compare = greater_than }
-        }
-        subtract_from_variable = { arm_effective_air_lag = arm_air_desperation_bonus }
+        limit = { check_variable = { var = arm_context_faction_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_air_lag = arm_context_faction_bonus }
     }
-    else = {
-        subtract_from_variable = { arm_effective_air_lag = arm_air_war_bonus }
-    }
-
-    # --- Defensive war bonus (air — combat) ---
     if = {
-        limit = {
-            arm_is_defensive_war = yes
-        }
-        subtract_from_variable = { arm_effective_air_lag = 0.25 }
+        limit = { check_variable = { var = arm_context_lend_lease_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_air_lag = arm_context_lend_lease_bonus }
     }
-
-    # --- Faction bonus (air) ---
     if = {
-        limit = {
-            arm_is_in_faction_with_major = yes
-        }
-        if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_ENHANCED }
-            }
-            subtract_from_variable = { arm_effective_air_lag = 1.0 }
-        }
-        else_if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_STANDARD }
-            }
-            subtract_from_variable = { arm_effective_air_lag = 0.5 }
-        }
-
-        # --- Lend-lease enhancement (air) ---
-        if = {
-            limit = {
-                any_country = {
-                    is_lend_leasing = ROOT
-                    check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-                }
-            }
-            subtract_from_variable = { arm_effective_air_lag = 0.25 }
-        }
+        limit = { check_variable = { var = arm_context_puppet_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_air_lag = arm_context_puppet_bonus }
     }
 
-    # --- Puppet bonus (air) ---
-    if = {
-        limit = {
-            arm_is_puppet_eligible = yes
-            overlord = {
-                check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            }
-        }
-        subtract_from_variable = { arm_effective_air_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            arm_is_puppet_eligible = yes
-            overlord = {
-                check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            }
-        }
-        subtract_from_variable = { arm_effective_air_lag = 0.5 }
-    }
-
-    # Clamp air lag
     clamp_variable = { var = arm_effective_air_lag min = 0 max = 40 }
 
     # ===================================================
-    # NAVAL branch — NOT a combat category for war/desperation
-    # but IS a tech-sharing (faction) category
+    # NAVAL branch - tech-sharing category only
     # ===================================================
     set_variable = { arm_effective_naval_lag = arm_base_lag }
 
-    # --- Branch competence adjustment (naval) ---
     set_variable = { arm_naval_comp_threshold_minus_20 = arm_tier_avg }
     subtract_from_variable = { arm_naval_comp_threshold_minus_20 = 20 }
     set_variable = { arm_naval_comp_threshold_minus_40 = arm_tier_avg }
@@ -1014,68 +930,26 @@ arm_compute_effective_lag = {
         subtract_from_variable = { arm_effective_naval_lag = 0.5 }
     }
 
-    # Naval does NOT get war bonus or desperation bonus (not combat)
-
-    # --- Faction bonus (naval) ---
     if = {
-        limit = {
-            arm_is_in_faction_with_major = yes
-        }
-        if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_ENHANCED }
-            }
-            subtract_from_variable = { arm_effective_naval_lag = 1.0 }
-        }
-        else_if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_STANDARD }
-            }
-            subtract_from_variable = { arm_effective_naval_lag = 0.5 }
-        }
-
-        # --- Lend-lease enhancement (naval) ---
-        if = {
-            limit = {
-                any_country = {
-                    is_lend_leasing = ROOT
-                    check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-                }
-            }
-            subtract_from_variable = { arm_effective_naval_lag = 0.25 }
-        }
+        limit = { check_variable = { var = arm_context_faction_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_naval_lag = arm_context_faction_bonus }
     }
-
-    # --- Puppet bonus (naval) ---
     if = {
-        limit = {
-            arm_is_puppet_eligible = yes
-            overlord = {
-                check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            }
-        }
-        subtract_from_variable = { arm_effective_naval_lag = 1.0 }
+        limit = { check_variable = { var = arm_context_lend_lease_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_naval_lag = arm_context_lend_lease_bonus }
     }
-    else_if = {
-        limit = {
-            arm_is_puppet_eligible = yes
-            overlord = {
-                check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            }
-        }
-        subtract_from_variable = { arm_effective_naval_lag = 0.5 }
+    if = {
+        limit = { check_variable = { var = arm_context_puppet_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_naval_lag = arm_context_puppet_bonus }
     }
 
-    # Clamp naval lag
     clamp_variable = { var = arm_effective_naval_lag min = 0 max = 40 }
 
     # ===================================================
-    # INDUSTRY branch — NOT a combat category
-    # IS a tech-sharing (faction) category
+    # INDUSTRY branch - tech-sharing category only
     # ===================================================
     set_variable = { arm_effective_industry_lag = arm_base_lag }
 
-    # --- Branch competence adjustment (industry) ---
     set_variable = { arm_ind_comp_threshold_minus_20 = arm_tier_avg }
     subtract_from_variable = { arm_ind_comp_threshold_minus_20 = 20 }
     set_variable = { arm_ind_comp_threshold_minus_40 = arm_tier_avg }
@@ -1110,59 +984,19 @@ arm_compute_effective_lag = {
         subtract_from_variable = { arm_effective_industry_lag = 0.5 }
     }
 
-    # Industry does NOT get war bonus or desperation bonus (not combat)
-
-    # --- Faction bonus (industry) ---
     if = {
-        limit = {
-            arm_is_in_faction_with_major = yes
-        }
-        if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_ENHANCED }
-            }
-            subtract_from_variable = { arm_effective_industry_lag = 1.0 }
-        }
-        else_if = {
-            limit = {
-                has_game_rule = { rule = arm_war_faction_catchup option = ARM_WF_STANDARD }
-            }
-            subtract_from_variable = { arm_effective_industry_lag = 0.5 }
-        }
-
-        # --- Lend-lease enhancement (industry) ---
-        if = {
-            limit = {
-                any_country = {
-                    is_lend_leasing = ROOT
-                    check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-                }
-            }
-            subtract_from_variable = { arm_effective_industry_lag = 0.25 }
-        }
+        limit = { check_variable = { var = arm_context_faction_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_industry_lag = arm_context_faction_bonus }
     }
-
-    # --- Puppet bonus (industry) ---
     if = {
-        limit = {
-            arm_is_puppet_eligible = yes
-            overlord = {
-                check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            }
-        }
-        subtract_from_variable = { arm_effective_industry_lag = 1.0 }
+        limit = { check_variable = { var = arm_context_lend_lease_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_industry_lag = arm_context_lend_lease_bonus }
     }
-    else_if = {
-        limit = {
-            arm_is_puppet_eligible = yes
-            overlord = {
-                check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            }
-        }
-        subtract_from_variable = { arm_effective_industry_lag = 0.5 }
+    if = {
+        limit = { check_variable = { var = arm_context_puppet_bonus value = 0 compare = greater_than } }
+        subtract_from_variable = { arm_effective_industry_lag = arm_context_puppet_bonus }
     }
 
-    # Clamp industry lag
     clamp_variable = { var = arm_effective_industry_lag min = 0 max = 40 }
 }
 
