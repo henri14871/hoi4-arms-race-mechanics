@@ -23,7 +23,7 @@ arm_grant_air_cas = {
             has_country_flag = arm_cat_cas
             has_dlc = "By Blood Alone"
         }
-        add_technology = early_bombs
+        set_technology = { early_bombs = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -35,7 +35,7 @@ arm_grant_air_cas = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_cas
         }
-        add_technology = CAS1
+        set_technology = { CAS1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -47,7 +47,7 @@ arm_grant_air_cas = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_cas
         }
-        add_technology = cv_CAS1
+        set_technology = { cv_CAS1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -60,7 +60,7 @@ arm_grant_air_cas = {
             has_country_flag = arm_cat_cas
             has_dlc = "By Blood Alone"
         }
-        add_technology = armor_piercing_bombs
+        set_technology = { armor_piercing_bombs = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -73,7 +73,7 @@ arm_grant_air_cas = {
             has_country_flag = arm_cat_cas
             has_dlc = "By Blood Alone"
         }
-        add_technology = air_torpedoe_1
+        set_technology = { air_torpedoe_1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -85,7 +85,7 @@ arm_grant_air_cas = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_cas
         }
-        add_technology = CAS2
+        set_technology = { CAS2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -97,7 +97,7 @@ arm_grant_air_cas = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_cas
         }
-        add_technology = cv_CAS2
+        set_technology = { cv_CAS2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -110,7 +110,7 @@ arm_grant_air_cas = {
             has_country_flag = arm_cat_cas
             has_dlc = "By Blood Alone"
         }
-        add_technology = heavy_bombs
+        set_technology = { heavy_bombs = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -123,7 +123,7 @@ arm_grant_air_cas = {
             has_country_flag = arm_cat_cas
             has_dlc = "By Blood Alone"
         }
-        add_technology = air_torpedoe_2
+        set_technology = { air_torpedoe_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -135,7 +135,7 @@ arm_grant_air_cas = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_cas
         }
-        add_technology = CAS3
+        set_technology = { CAS3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -147,7 +147,7 @@ arm_grant_air_cas = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_cas
         }
-        add_technology = cv_CAS3
+        set_technology = { cv_CAS3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -160,7 +160,7 @@ arm_grant_air_cas = {
             has_country_flag = arm_cat_cas
             has_dlc = "By Blood Alone"
         }
-        add_technology = air_torpedoe_3
+        set_technology = { air_torpedoe_3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -208,7 +208,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = aa_lmg
+        set_technology = { aa_lmg = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -221,7 +221,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = engines_1
+        set_technology = { engines_1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -234,7 +234,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = iw_small_airframe
+        set_technology = { iw_small_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -246,7 +246,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = early_fighter
+        set_technology = { early_fighter = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -258,7 +258,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = cv_early_fighter
+        set_technology = { cv_early_fighter = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -270,7 +270,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = fighter1
+        set_technology = { fighter1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -282,7 +282,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = cv_fighter1
+        set_technology = { cv_fighter1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -294,7 +294,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = scout_plane1
+        set_technology = { scout_plane1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -307,7 +307,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = basic_small_airframe
+        set_technology = { basic_small_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -320,7 +320,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = engines_2
+        set_technology = { engines_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -333,7 +333,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = range_improvements
+        set_technology = { range_improvements = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -346,7 +346,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = aircraft_construction
+        set_technology = { aircraft_construction = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -359,7 +359,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = survivability_studies
+        set_technology = { survivability_studies = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -372,7 +372,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = aa_hmg
+        set_technology = { aa_hmg = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -385,7 +385,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = aa_cannon_1
+        set_technology = { aa_cannon_1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -397,7 +397,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = fighter2
+        set_technology = { fighter2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -409,7 +409,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = cv_fighter2
+        set_technology = { cv_fighter2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -421,7 +421,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = scout_plane2
+        set_technology = { scout_plane2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -434,7 +434,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = improved_small_airframe
+        set_technology = { improved_small_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -447,7 +447,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = engines_3
+        set_technology = { engines_3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -460,7 +460,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = aa_cannon_2
+        set_technology = { aa_cannon_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -472,7 +472,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = fighter3
+        set_technology = { fighter3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -484,7 +484,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = cv_fighter3
+        set_technology = { cv_fighter3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -497,7 +497,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = advanced_small_airframe
+        set_technology = { advanced_small_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -510,7 +510,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = engines_4
+        set_technology = { engines_4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -522,7 +522,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = jet_fighter1
+        set_technology = { jet_fighter1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -535,7 +535,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = modern_small_airframe
+        set_technology = { modern_small_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -548,7 +548,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = aa_cannon_3
+        set_technology = { aa_cannon_3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -560,7 +560,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = jet_fighter2
+        set_technology = { jet_fighter2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -572,7 +572,7 @@ arm_grant_air_fighters = {
             check_variable = { var = arm_air_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_fighters
         }
-        add_technology = supersonic_fighter1
+        set_technology = { supersonic_fighter1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -585,7 +585,7 @@ arm_grant_air_fighters = {
             has_country_flag = arm_cat_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = supersonic_small_airframe
+        set_technology = { supersonic_small_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -610,7 +610,7 @@ arm_grant_air_heavy_fighters = {
             has_country_flag = arm_cat_heavy_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = iw_medium_airframe
+        set_technology = { iw_medium_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -622,7 +622,7 @@ arm_grant_air_heavy_fighters = {
             check_variable = { var = arm_air_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_fighters
         }
-        add_technology = heavy_fighter1
+        set_technology = { heavy_fighter1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -635,7 +635,7 @@ arm_grant_air_heavy_fighters = {
             has_country_flag = arm_cat_heavy_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = basic_medium_airframe
+        set_technology = { basic_medium_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -647,7 +647,7 @@ arm_grant_air_heavy_fighters = {
             check_variable = { var = arm_air_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_fighters
         }
-        add_technology = heavy_fighter2
+        set_technology = { heavy_fighter2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -660,7 +660,7 @@ arm_grant_air_heavy_fighters = {
             has_country_flag = arm_cat_heavy_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = improved_medium_airframe
+        set_technology = { improved_medium_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -672,7 +672,7 @@ arm_grant_air_heavy_fighters = {
             check_variable = { var = arm_air_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_fighters
         }
-        add_technology = heavy_fighter3
+        set_technology = { heavy_fighter3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -685,7 +685,7 @@ arm_grant_air_heavy_fighters = {
             has_country_flag = arm_cat_heavy_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = advanced_medium_airframe
+        set_technology = { advanced_medium_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -698,7 +698,7 @@ arm_grant_air_heavy_fighters = {
             has_country_flag = arm_cat_heavy_fighters
             has_dlc = "By Blood Alone"
         }
-        add_technology = modern_medium_airframe
+        set_technology = { modern_medium_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -720,7 +720,7 @@ arm_grant_air_naval_bombers = {
             check_variable = { var = arm_air_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_naval_bombers
         }
-        add_technology = naval_bomber1
+        set_technology = { naval_bomber1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -732,7 +732,7 @@ arm_grant_air_naval_bombers = {
             check_variable = { var = arm_air_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_naval_bombers
         }
-        add_technology = cv_naval_bomber1
+        set_technology = { cv_naval_bomber1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -744,7 +744,7 @@ arm_grant_air_naval_bombers = {
             check_variable = { var = arm_air_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_naval_bombers
         }
-        add_technology = naval_bomber2
+        set_technology = { naval_bomber2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -756,7 +756,7 @@ arm_grant_air_naval_bombers = {
             check_variable = { var = arm_air_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_naval_bombers
         }
-        add_technology = cv_naval_bomber2
+        set_technology = { cv_naval_bomber2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -768,7 +768,7 @@ arm_grant_air_naval_bombers = {
             check_variable = { var = arm_air_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_naval_bombers
         }
-        add_technology = naval_bomber3
+        set_technology = { naval_bomber3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -780,7 +780,7 @@ arm_grant_air_naval_bombers = {
             check_variable = { var = arm_air_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_naval_bombers
         }
-        add_technology = cv_naval_bomber3
+        set_technology = { cv_naval_bomber3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -809,7 +809,7 @@ arm_grant_air_strategic_bombers = {
             has_country_flag = arm_cat_strategic_bombers
             has_dlc = "By Blood Alone"
         }
-        add_technology = iw_large_airframe
+        set_technology = { iw_large_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -821,7 +821,7 @@ arm_grant_air_strategic_bombers = {
             check_variable = { var = arm_air_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_strategic_bombers
         }
-        add_technology = strategic_bomber1
+        set_technology = { strategic_bomber1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -834,7 +834,7 @@ arm_grant_air_strategic_bombers = {
             has_country_flag = arm_cat_strategic_bombers
             has_dlc = "By Blood Alone"
         }
-        add_technology = basic_large_airframe
+        set_technology = { basic_large_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -846,7 +846,7 @@ arm_grant_air_strategic_bombers = {
             check_variable = { var = arm_air_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_strategic_bombers
         }
-        add_technology = strategic_bomber2
+        set_technology = { strategic_bomber2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -859,7 +859,7 @@ arm_grant_air_strategic_bombers = {
             has_country_flag = arm_cat_strategic_bombers
             has_dlc = "By Blood Alone"
         }
-        add_technology = improved_large_airframe
+        set_technology = { improved_large_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -872,7 +872,7 @@ arm_grant_air_strategic_bombers = {
             has_country_flag = arm_cat_strategic_bombers
             has_dlc = "By Blood Alone"
         }
-        add_technology = reinforced_wings_mothership
+        set_technology = { reinforced_wings_mothership = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -884,7 +884,7 @@ arm_grant_air_strategic_bombers = {
             check_variable = { var = arm_air_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_strategic_bombers
         }
-        add_technology = strategic_bomber3
+        set_technology = { strategic_bomber3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -897,7 +897,7 @@ arm_grant_air_strategic_bombers = {
             has_country_flag = arm_cat_strategic_bombers
             has_dlc = "By Blood Alone"
         }
-        add_technology = advanced_large_airframe
+        set_technology = { advanced_large_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -910,7 +910,7 @@ arm_grant_air_strategic_bombers = {
             has_country_flag = arm_cat_strategic_bombers
             has_dlc = "By Blood Alone"
         }
-        add_technology = miniature_fighters
+        set_technology = { miniature_fighters = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -923,7 +923,7 @@ arm_grant_air_strategic_bombers = {
             has_country_flag = arm_cat_strategic_bombers
             has_dlc = "By Blood Alone"
         }
-        add_technology = modern_large_airframe
+        set_technology = { modern_large_airframe = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -936,7 +936,7 @@ arm_grant_air_strategic_bombers = {
             has_country_flag = arm_cat_strategic_bombers
             has_dlc = "By Blood Alone"
         }
-        add_technology = aerial_hangars
+        set_technology = { aerial_hangars = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -948,7 +948,7 @@ arm_grant_air_strategic_bombers = {
             check_variable = { var = arm_air_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_strategic_bombers
         }
-        add_technology = jet_strategic_bomber1
+        set_technology = { jet_strategic_bomber1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -970,7 +970,7 @@ arm_grant_air_tactical_bombers = {
             check_variable = { var = arm_air_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tactical_bombers
         }
-        add_technology = early_bomber
+        set_technology = { early_bomber = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -982,7 +982,7 @@ arm_grant_air_tactical_bombers = {
             check_variable = { var = arm_air_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tactical_bombers
         }
-        add_technology = tactical_bomber1
+        set_technology = { tactical_bomber1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -994,7 +994,7 @@ arm_grant_air_tactical_bombers = {
             check_variable = { var = arm_air_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tactical_bombers
         }
-        add_technology = tactical_bomber2
+        set_technology = { tactical_bomber2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1006,7 +1006,7 @@ arm_grant_air_tactical_bombers = {
             check_variable = { var = arm_air_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tactical_bombers
         }
-        add_technology = tactical_bomber3
+        set_technology = { tactical_bomber3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1018,7 +1018,7 @@ arm_grant_air_tactical_bombers = {
             check_variable = { var = arm_air_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tactical_bombers
         }
-        add_technology = jet_tactical_bomber1
+        set_technology = { jet_tactical_bomber1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1030,7 +1030,7 @@ arm_grant_air_tactical_bombers = {
             check_variable = { var = arm_air_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tactical_bombers
         }
-        add_technology = jet_tactical_bomber2
+        set_technology = { jet_tactical_bomber2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -1052,7 +1052,7 @@ arm_grant_air_transport = {
             check_variable = { var = arm_air_competence value = 20 compare = greater_than_or_equals }
             has_country_flag = arm_cat_transport
         }
-        add_technology = early_transport_plane
+        set_technology = { early_transport_plane = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1065,7 +1065,7 @@ arm_grant_air_transport = {
             has_country_flag = arm_cat_transport
             has_dlc = "By Blood Alone"
         }
-        add_technology = bba_early_transport_plane
+        set_technology = { bba_early_transport_plane = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1077,7 +1077,7 @@ arm_grant_air_transport = {
             check_variable = { var = arm_air_competence value = 20 compare = greater_than_or_equals }
             has_country_flag = arm_cat_transport
         }
-        add_technology = improved_transport_plane
+        set_technology = { improved_transport_plane = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1090,7 +1090,7 @@ arm_grant_air_transport = {
             has_country_flag = arm_cat_transport
             has_dlc = "By Blood Alone"
         }
-        add_technology = bba_improved_transport_plane
+        set_technology = { bba_improved_transport_plane = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1103,7 +1103,7 @@ arm_grant_air_transport = {
             has_country_flag = arm_cat_transport
             has_dlc = "By Blood Alone"
         }
-        add_technology = bba_strategic_airlifter
+        set_technology = { bba_strategic_airlifter = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1115,7 +1115,7 @@ arm_grant_air_transport = {
             check_variable = { var = arm_air_competence value = 20 compare = greater_than_or_equals }
             has_country_flag = arm_cat_transport
         }
-        add_technology = strategic_airlifter
+        set_technology = { strategic_airlifter = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -1148,7 +1148,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = electronic_mechanical_engineering
+        set_technology = { electronic_mechanical_engineering = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1160,7 +1160,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = radio
+        set_technology = { radio = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1172,7 +1172,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = mechanical_computing
+        set_technology = { mechanical_computing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1184,7 +1184,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = basic_fire_control_system
+        set_technology = { basic_fire_control_system = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1196,7 +1196,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = improved_fire_control_system
+        set_technology = { improved_fire_control_system = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1208,7 +1208,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = advanced_fire_control_system
+        set_technology = { advanced_fire_control_system = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1220,7 +1220,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = improved_radio
+        set_technology = { improved_radio = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1232,7 +1232,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = computing_machine
+        set_technology = { computing_machine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1244,7 +1244,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = basic_encryption
+        set_technology = { basic_encryption = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1256,7 +1256,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = basic_decryption
+        set_technology = { basic_decryption = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1268,7 +1268,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = improved_computing_machine
+        set_technology = { improved_computing_machine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1280,7 +1280,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = improved_encryption
+        set_technology = { improved_encryption = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1292,7 +1292,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = improved_decryption
+        set_technology = { improved_decryption = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1304,7 +1304,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = advanced_radio
+        set_technology = { advanced_radio = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1316,7 +1316,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = advanced_computing_machine
+        set_technology = { advanced_computing_machine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1328,7 +1328,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = advanced_encryption
+        set_technology = { advanced_encryption = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1340,7 +1340,7 @@ arm_grant_industry_electronics_electronics = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_electronics
         }
-        add_technology = advanced_decryption
+        set_technology = { advanced_decryption = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -1404,7 +1404,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = basic_fortification_tech
+        set_technology = { basic_fortification_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1416,7 +1416,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = coastal_fort_tech_1
+        set_technology = { coastal_fort_tech_1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1428,7 +1428,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = basic_machine_tools
+        set_technology = { basic_machine_tools = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1440,7 +1440,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = concentrated_industry
+        set_technology = { concentrated_industry = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1452,7 +1452,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = dispersed_industry
+        set_technology = { dispersed_industry = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1464,7 +1464,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = fuel_silos
+        set_technology = { fuel_silos = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1476,7 +1476,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = fuel_refining
+        set_technology = { fuel_refining = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1488,7 +1488,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = synth_oil_experiments
+        set_technology = { synth_oil_experiments = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1500,7 +1500,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = construction1
+        set_technology = { construction1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1512,7 +1512,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = excavation1
+        set_technology = { excavation1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1524,7 +1524,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = improved_machine_tools
+        set_technology = { improved_machine_tools = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1536,7 +1536,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = improved_equipment_conversion
+        set_technology = { improved_equipment_conversion = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1548,7 +1548,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = concentrated_industry2
+        set_technology = { concentrated_industry2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1560,7 +1560,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = dispersed_industry2
+        set_technology = { dispersed_industry2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1572,7 +1572,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = fuel_refining2
+        set_technology = { fuel_refining2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1584,7 +1584,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = oil_processing
+        set_technology = { oil_processing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1596,7 +1596,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = rubber_processing
+        set_technology = { rubber_processing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1608,7 +1608,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = construction2
+        set_technology = { construction2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1620,7 +1620,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = excavation2
+        set_technology = { excavation2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1632,7 +1632,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = land_fort_tech_1
+        set_technology = { land_fort_tech_1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1644,7 +1644,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = advanced_machine_tools
+        set_technology = { advanced_machine_tools = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1656,7 +1656,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = advanced_equipment_conversion
+        set_technology = { advanced_equipment_conversion = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1668,7 +1668,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = concentrated_industry3
+        set_technology = { concentrated_industry3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1680,7 +1680,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = dispersed_industry3
+        set_technology = { dispersed_industry3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1692,7 +1692,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = fuel_refining3
+        set_technology = { fuel_refining3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1704,7 +1704,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = improved_oil_processing
+        set_technology = { improved_oil_processing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1716,7 +1716,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = improved_rubber_processing
+        set_technology = { improved_rubber_processing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1728,7 +1728,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = construction3
+        set_technology = { construction3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1740,7 +1740,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = excavation3
+        set_technology = { excavation3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1752,7 +1752,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = land_fort_tech_2
+        set_technology = { land_fort_tech_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1764,7 +1764,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = coastal_fort_tech_2
+        set_technology = { coastal_fort_tech_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1776,7 +1776,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = assembly_line_production
+        set_technology = { assembly_line_production = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1788,7 +1788,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = concentrated_industry4
+        set_technology = { concentrated_industry4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1800,7 +1800,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = dispersed_industry4
+        set_technology = { dispersed_industry4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1812,7 +1812,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = fuel_refining4
+        set_technology = { fuel_refining4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1824,7 +1824,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = advanced_oil_processing
+        set_technology = { advanced_oil_processing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1836,7 +1836,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = advanced_rubber_processing
+        set_technology = { advanced_rubber_processing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1848,7 +1848,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = construction4
+        set_technology = { construction4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1860,7 +1860,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = excavation4
+        set_technology = { excavation4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1872,7 +1872,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = flexible_line
+        set_technology = { flexible_line = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1884,7 +1884,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = streamlined_line
+        set_technology = { streamlined_line = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1896,7 +1896,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = concentrated_industry5
+        set_technology = { concentrated_industry5 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1908,7 +1908,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = dispersed_industry5
+        set_technology = { dispersed_industry5 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1920,7 +1920,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = fuel_refining5
+        set_technology = { fuel_refining5 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1932,7 +1932,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = modern_oil_processing
+        set_technology = { modern_oil_processing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1944,7 +1944,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = modern_rubber_processing
+        set_technology = { modern_rubber_processing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1956,7 +1956,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = construction5
+        set_technology = { construction5 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -1968,7 +1968,7 @@ arm_grant_industry_electronics_industry = {
             check_variable = { var = arm_industry_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_industry
         }
-        add_technology = excavation5
+        set_technology = { excavation5 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -1991,7 +1991,7 @@ arm_grant_industry_electronics_nuclear = {
             has_country_flag = arm_cat_nuclear
             arm_advanced_tech_allowed = yes
         }
-        add_technology = atomic_research
+        set_technology = { atomic_research = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2004,7 +2004,7 @@ arm_grant_industry_electronics_nuclear = {
             has_country_flag = arm_cat_nuclear
             arm_advanced_tech_allowed = yes
         }
-        add_technology = nuclear_reactor
+        set_technology = { nuclear_reactor = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2017,7 +2017,7 @@ arm_grant_industry_electronics_nuclear = {
             has_country_flag = arm_cat_nuclear
             arm_advanced_tech_allowed = yes
         }
-        add_technology = nuclear_reactor_heavy_water
+        set_technology = { nuclear_reactor_heavy_water = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2030,7 +2030,7 @@ arm_grant_industry_electronics_nuclear = {
             has_country_flag = arm_cat_nuclear
             arm_advanced_tech_allowed = yes
         }
-        add_technology = isotope_separation_centrifugal
+        set_technology = { isotope_separation_centrifugal = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2043,7 +2043,7 @@ arm_grant_industry_electronics_nuclear = {
             has_country_flag = arm_cat_nuclear
             arm_advanced_tech_allowed = yes
         }
-        add_technology = nukes
+        set_technology = { nukes = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2056,7 +2056,7 @@ arm_grant_industry_electronics_nuclear = {
             has_country_flag = arm_cat_nuclear
             arm_advanced_tech_allowed = yes
         }
-        add_technology = thermonuclear_bombs
+        set_technology = { thermonuclear_bombs = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -2077,7 +2077,7 @@ arm_grant_industry_electronics_radar = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_radar
         }
-        add_technology = radio_detection
+        set_technology = { radio_detection = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2089,7 +2089,7 @@ arm_grant_industry_electronics_radar = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_radar
         }
-        add_technology = cavity_magnatron
+        set_technology = { cavity_magnatron = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2101,7 +2101,7 @@ arm_grant_industry_electronics_radar = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_radar
         }
-        add_technology = centimetric_radar
+        set_technology = { centimetric_radar = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2113,7 +2113,7 @@ arm_grant_industry_electronics_radar = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_radar
         }
-        add_technology = phased_array
+        set_technology = { phased_array = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2125,7 +2125,7 @@ arm_grant_industry_electronics_radar = {
             check_variable = { var = arm_industry_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_radar
         }
-        add_technology = monopulse_radar
+        set_technology = { monopulse_radar = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -2158,7 +2158,7 @@ arm_grant_industry_electronics_rockets = {
             arm_advanced_tech_allowed = yes
             has_tech = rocket_artillery
         }
-        add_technology = motorized_rocket_unit
+        set_technology = { motorized_rocket_unit = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2171,7 +2171,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = rocket_artillery
+        set_technology = { rocket_artillery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2184,7 +2184,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = rocket_artillery2
+        set_technology = { rocket_artillery2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2197,7 +2197,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = rocket_artillery3
+        set_technology = { rocket_artillery3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2210,7 +2210,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = experimental_rockets
+        set_technology = { experimental_rockets = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2223,7 +2223,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = rocket_artillery4
+        set_technology = { rocket_artillery4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2236,7 +2236,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = sp_rockets_improved_guidance
+        set_technology = { sp_rockets_improved_guidance = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2249,7 +2249,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = rocket_engines
+        set_technology = { rocket_engines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2262,7 +2262,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = sp_rockets_rocket_bomber
+        set_technology = { sp_rockets_rocket_bomber = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2275,7 +2275,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = jet_engines
+        set_technology = { jet_engines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2288,7 +2288,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = sp_rockets_dual_chamber_rocket_engine_1
+        set_technology = { sp_rockets_dual_chamber_rocket_engine_1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2301,7 +2301,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = sp_rockets_improved_rocket_bomber
+        set_technology = { sp_rockets_improved_rocket_bomber = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2314,7 +2314,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = improved_rocket_engines
+        set_technology = { improved_rocket_engines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2327,7 +2327,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = advanced_rocket_engines
+        set_technology = { advanced_rocket_engines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2340,7 +2340,7 @@ arm_grant_industry_electronics_rockets = {
             has_country_flag = arm_cat_rockets
             arm_advanced_tech_allowed = yes
         }
-        add_technology = sp_rockets_dual_chamber_rocket_engine_2
+        set_technology = { sp_rockets_dual_chamber_rocket_engine_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -2362,7 +2362,7 @@ arm_grant_land_anti_air = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_air
         }
-        add_technology = interwar_antiair
+        set_technology = { interwar_antiair = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2374,7 +2374,7 @@ arm_grant_land_anti_air = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_air
         }
-        add_technology = antiair1
+        set_technology = { antiair1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2386,7 +2386,7 @@ arm_grant_land_anti_air = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_air
         }
-        add_technology = antiair2
+        set_technology = { antiair2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2398,7 +2398,7 @@ arm_grant_land_anti_air = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_air
         }
-        add_technology = antiair3
+        set_technology = { antiair3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2410,7 +2410,7 @@ arm_grant_land_anti_air = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_air
         }
-        add_technology = antiair4
+        set_technology = { antiair4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2422,7 +2422,7 @@ arm_grant_land_anti_air = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_air
         }
-        add_technology = antiair5
+        set_technology = { antiair5 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -2446,7 +2446,7 @@ arm_grant_land_anti_tank = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_tank
         }
-        add_technology = mountain_tanks
+        set_technology = { mountain_tanks = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2458,7 +2458,7 @@ arm_grant_land_anti_tank = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_tank
         }
-        add_technology = interwar_antitank
+        set_technology = { interwar_antitank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2470,7 +2470,7 @@ arm_grant_land_anti_tank = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_tank
         }
-        add_technology = SWE_bofors_antitank_gun
+        set_technology = { SWE_bofors_antitank_gun = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2482,7 +2482,7 @@ arm_grant_land_anti_tank = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_tank
         }
-        add_technology = antitank1
+        set_technology = { antitank1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2494,7 +2494,7 @@ arm_grant_land_anti_tank = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_tank
         }
-        add_technology = antitank2
+        set_technology = { antitank2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2506,7 +2506,7 @@ arm_grant_land_anti_tank = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_tank
         }
-        add_technology = antitank3
+        set_technology = { antitank3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2518,7 +2518,7 @@ arm_grant_land_anti_tank = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_tank
         }
-        add_technology = antitank4
+        set_technology = { antitank4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2530,7 +2530,7 @@ arm_grant_land_anti_tank = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_anti_tank
         }
-        add_technology = antitank5
+        set_technology = { antitank5 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -2573,7 +2573,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_battery
+        set_technology = { basic_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2585,7 +2585,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = gw_artillery
+        set_technology = { gw_artillery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2597,7 +2597,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = interwar_artillery
+        set_technology = { interwar_artillery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2610,7 +2610,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_light_battery
+        set_technology = { basic_light_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2623,7 +2623,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_light_shell
+        set_technology = { basic_light_shell = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2636,7 +2636,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_heavy_battery
+        set_technology = { basic_heavy_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2649,7 +2649,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_heavy_shell
+        set_technology = { basic_heavy_shell = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2661,7 +2661,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = railway_gun
+        set_technology = { railway_gun = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2673,7 +2673,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = artillery1
+        set_technology = { artillery1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2686,7 +2686,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_light_battery
+        set_technology = { improved_light_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2699,7 +2699,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_heavy_battery
+        set_technology = { improved_heavy_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2712,7 +2712,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_dp_light_battery
+        set_technology = { basic_dp_light_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2724,7 +2724,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = artillery2
+        set_technology = { artillery2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2736,7 +2736,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = sp_artillery_rocket_assisted_projectiles_tech
+        set_technology = { sp_artillery_rocket_assisted_projectiles_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2748,7 +2748,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = sp_artillery_purpose_built_gun_motor_carriages_tech
+        set_technology = { sp_artillery_purpose_built_gun_motor_carriages_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2761,7 +2761,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_dp_light_battery
+        set_technology = { improved_dp_light_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2773,7 +2773,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = artillery3
+        set_technology = { artillery3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2785,7 +2785,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = sp_shock_hardening_techniques
+        set_technology = { sp_shock_hardening_techniques = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2797,7 +2797,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = artillery4
+        set_technology = { artillery4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2809,7 +2809,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = sp_variable_time_fuze_shells
+        set_technology = { sp_variable_time_fuze_shells = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2822,7 +2822,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_light_shell
+        set_technology = { improved_light_shell = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2835,7 +2835,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_heavy_shell
+        set_technology = { improved_heavy_shell = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2847,7 +2847,7 @@ arm_grant_land_artillery = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_artillery
         }
-        add_technology = artillery5
+        set_technology = { artillery5 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2860,7 +2860,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_light_battery
+        set_technology = { advanced_light_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2873,7 +2873,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_heavy_battery
+        set_technology = { advanced_heavy_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2886,7 +2886,7 @@ arm_grant_land_artillery = {
             has_country_flag = arm_cat_artillery
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_dp_light_battery
+        set_technology = { advanced_dp_light_battery = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -2915,7 +2915,7 @@ arm_grant_land_heavy_tanks = {
             check_variable = { var = arm_land_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_tanks
         }
-        add_technology = basic_heavy_tank
+        set_technology = { basic_heavy_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2928,7 +2928,7 @@ arm_grant_land_heavy_tanks = {
             has_country_flag = arm_cat_heavy_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = basic_heavy_tank_chassis
+        set_technology = { basic_heavy_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2941,7 +2941,7 @@ arm_grant_land_heavy_tanks = {
             has_country_flag = arm_cat_heavy_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = improved_heavy_tank_chassis
+        set_technology = { improved_heavy_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2953,7 +2953,7 @@ arm_grant_land_heavy_tanks = {
             check_variable = { var = arm_land_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_tanks
         }
-        add_technology = improved_heavy_tank
+        set_technology = { improved_heavy_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2965,7 +2965,7 @@ arm_grant_land_heavy_tanks = {
             check_variable = { var = arm_land_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_tanks
         }
-        add_technology = super_heavy_tank
+        set_technology = { super_heavy_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2978,7 +2978,7 @@ arm_grant_land_heavy_tanks = {
             has_country_flag = arm_cat_heavy_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = super_heavy_tank_chassis
+        set_technology = { super_heavy_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -2990,7 +2990,7 @@ arm_grant_land_heavy_tanks = {
             check_variable = { var = arm_land_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_tanks
         }
-        add_technology = advanced_heavy_tank
+        set_technology = { advanced_heavy_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3003,7 +3003,7 @@ arm_grant_land_heavy_tanks = {
             has_country_flag = arm_cat_heavy_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = advanced_heavy_tank_chassis
+        set_technology = { advanced_heavy_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3016,7 +3016,7 @@ arm_grant_land_heavy_tanks = {
             has_country_flag = arm_cat_heavy_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = sp_armored_lc_naval_engine_conversion_tech
+        set_technology = { sp_armored_lc_naval_engine_conversion_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3029,7 +3029,7 @@ arm_grant_land_heavy_tanks = {
             has_country_flag = arm_cat_heavy_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = sp_armored_lc_transmission_improvements_tech
+        set_technology = { sp_armored_lc_transmission_improvements_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3042,7 +3042,7 @@ arm_grant_land_heavy_tanks = {
             has_country_flag = arm_cat_heavy_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = sp_armored_lc_specialized_field_manuals_tech
+        set_technology = { sp_armored_lc_specialized_field_manuals_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3055,7 +3055,7 @@ arm_grant_land_heavy_tanks = {
             has_country_flag = arm_cat_heavy_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = sp_armored_lc_high_impact_obliterator_cannon_tech
+        set_technology = { sp_armored_lc_high_impact_obliterator_cannon_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3068,7 +3068,7 @@ arm_grant_land_heavy_tanks = {
             has_country_flag = arm_cat_heavy_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = sp_armored_lc_weapon_fire_control_tech
+        set_technology = { sp_armored_lc_weapon_fire_control_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -3113,7 +3113,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1918 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = infantry_weapons
+        set_technology = { infantry_weapons = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3123,7 +3123,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1918 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = support_weapons
+        set_technology = { support_weapons = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3133,7 +3133,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1936 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = infantry_weapons1
+        set_technology = { infantry_weapons1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3143,7 +3143,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1936 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = paratroopers
+        set_technology = { paratroopers = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3153,7 +3153,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1936 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = marines
+        set_technology = { marines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3163,7 +3163,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1936 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = tech_mountaineers
+        set_technology = { tech_mountaineers = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3173,7 +3173,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1936 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = rangers_tech
+        set_technology = { rangers_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3183,7 +3183,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1938 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = infantry_weapons2
+        set_technology = { infantry_weapons2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3193,7 +3193,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1938 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = tech_special_forces
+        set_technology = { tech_special_forces = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3203,7 +3203,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1938 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = support_weapons2
+        set_technology = { support_weapons2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3213,7 +3213,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1939 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = improved_infantry_weapons
+        set_technology = { improved_infantry_weapons = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3223,7 +3223,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1939 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = paratroopers2
+        set_technology = { paratroopers2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3233,7 +3233,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1939 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = marines2
+        set_technology = { marines2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3243,7 +3243,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1939 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = tech_mountaineers2
+        set_technology = { tech_mountaineers2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3253,7 +3253,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1939 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = rangers_tech2
+        set_technology = { rangers_tech2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3263,7 +3263,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1940 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = improved_infantry_weapons_2
+        set_technology = { improved_infantry_weapons_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3273,7 +3273,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1940 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = advanced_special_forces
+        set_technology = { advanced_special_forces = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3283,7 +3283,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1940 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = improved_special_forces
+        set_technology = { improved_special_forces = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3293,7 +3293,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1940 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = support_weapons3
+        set_technology = { support_weapons3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3303,7 +3303,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1942 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = infantry_at
+        set_technology = { infantry_at = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3313,7 +3313,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1942 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = advanced_infantry_weapons
+        set_technology = { advanced_infantry_weapons = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3323,7 +3323,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1942 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = extreme_environment_training
+        set_technology = { extreme_environment_training = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3333,7 +3333,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1942 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = survival_training
+        set_technology = { survival_training = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3343,7 +3343,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1942 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = support_weapons4
+        set_technology = { support_weapons4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3353,7 +3353,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1943 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = infantry_at2
+        set_technology = { infantry_at2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3363,7 +3363,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1943 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = paratroopers3
+        set_technology = { paratroopers3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3373,7 +3373,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1943 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = marines3
+        set_technology = { marines3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3383,7 +3383,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1943 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = tech_mountaineers3
+        set_technology = { tech_mountaineers3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3393,7 +3393,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1943 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = rangers_tech3
+        set_technology = { rangers_tech3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3403,7 +3403,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1944 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = advanced_infantry_weapons2
+        set_technology = { advanced_infantry_weapons2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3413,7 +3413,7 @@ arm_grant_land_infantry = {
             check_variable = { var = arm_target_year_land value = 1944 compare = greater_than_or_equals }
             has_country_flag = arm_cat_infantry
         }
-        add_technology = elite_forces
+        set_technology = { elite_forces = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -3437,7 +3437,7 @@ arm_grant_land_light_tanks = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_light_tanks
         }
-        add_technology = gwtank
+        set_technology = { gwtank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3450,7 +3450,7 @@ arm_grant_land_light_tanks = {
             has_country_flag = arm_cat_light_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = gwtank_chassis
+        set_technology = { gwtank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3462,7 +3462,7 @@ arm_grant_land_light_tanks = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_light_tanks
         }
-        add_technology = basic_light_tank
+        set_technology = { basic_light_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3475,7 +3475,7 @@ arm_grant_land_light_tanks = {
             has_country_flag = arm_cat_light_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = basic_light_tank_chassis
+        set_technology = { basic_light_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3487,7 +3487,7 @@ arm_grant_land_light_tanks = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_light_tanks
         }
-        add_technology = improved_light_tank
+        set_technology = { improved_light_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3500,7 +3500,7 @@ arm_grant_land_light_tanks = {
             has_country_flag = arm_cat_light_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = improved_light_tank_chassis
+        set_technology = { improved_light_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3512,7 +3512,7 @@ arm_grant_land_light_tanks = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_light_tanks
         }
-        add_technology = advanced_light_tank
+        set_technology = { advanced_light_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3525,7 +3525,7 @@ arm_grant_land_light_tanks = {
             has_country_flag = arm_cat_light_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = advanced_light_tank_chassis
+        set_technology = { advanced_light_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -3546,7 +3546,7 @@ arm_grant_land_mechanised = {
             check_variable = { var = arm_land_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_mechanised
         }
-        add_technology = mechanised_infantry
+        set_technology = { mechanised_infantry = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3558,7 +3558,7 @@ arm_grant_land_mechanised = {
             check_variable = { var = arm_land_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_mechanised
         }
-        add_technology = amphibious_mechanized_infantry
+        set_technology = { amphibious_mechanized_infantry = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3570,7 +3570,7 @@ arm_grant_land_mechanised = {
             check_variable = { var = arm_land_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_mechanised
         }
-        add_technology = mechanised_infantry2
+        set_technology = { mechanised_infantry2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3582,7 +3582,7 @@ arm_grant_land_mechanised = {
             check_variable = { var = arm_land_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_mechanised
         }
-        add_technology = amphibious_mechanized_infantry_2
+        set_technology = { amphibious_mechanized_infantry_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3594,7 +3594,7 @@ arm_grant_land_mechanised = {
             check_variable = { var = arm_land_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_mechanised
         }
-        add_technology = mechanised_infantry3
+        set_technology = { mechanised_infantry3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -3617,7 +3617,7 @@ arm_grant_land_medium_tanks = {
             has_country_flag = arm_cat_medium_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = basic_medium_tank_chassis
+        set_technology = { basic_medium_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3629,7 +3629,7 @@ arm_grant_land_medium_tanks = {
             check_variable = { var = arm_land_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_medium_tanks
         }
-        add_technology = basic_medium_tank
+        set_technology = { basic_medium_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3642,7 +3642,7 @@ arm_grant_land_medium_tanks = {
             has_country_flag = arm_cat_medium_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = improved_medium_tank_chassis
+        set_technology = { improved_medium_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3654,7 +3654,7 @@ arm_grant_land_medium_tanks = {
             check_variable = { var = arm_land_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_medium_tanks
         }
-        add_technology = improved_medium_tank
+        set_technology = { improved_medium_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3666,7 +3666,7 @@ arm_grant_land_medium_tanks = {
             check_variable = { var = arm_land_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_medium_tanks
         }
-        add_technology = advanced_medium_tank
+        set_technology = { advanced_medium_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3679,7 +3679,7 @@ arm_grant_land_medium_tanks = {
             has_country_flag = arm_cat_medium_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = advanced_medium_tank_chassis
+        set_technology = { advanced_medium_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -3697,7 +3697,7 @@ arm_grant_land_modern_tanks = {
             check_variable = { var = arm_land_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_modern_tanks
         }
-        add_technology = main_battle_tank
+        set_technology = { main_battle_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3710,7 +3710,7 @@ arm_grant_land_modern_tanks = {
             has_country_flag = arm_cat_modern_tanks
             has_dlc = "No Step Back"
         }
-        add_technology = main_battle_tank_chassis
+        set_technology = { main_battle_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -3728,7 +3728,7 @@ arm_grant_land_motorised = {
             check_variable = { var = arm_land_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_motorised
         }
-        add_technology = tech_trucks
+        set_technology = { tech_trucks = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3740,7 +3740,7 @@ arm_grant_land_motorised = {
             check_variable = { var = arm_land_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_motorised
         }
-        add_technology = motorised_infantry
+        set_technology = { motorised_infantry = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -3798,7 +3798,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = basic_train
+        set_technology = { basic_train = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3810,7 +3810,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_support
+        set_technology = { tech_support = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3822,7 +3822,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_engineers
+        set_technology = { tech_engineers = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3834,7 +3834,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_recon
+        set_technology = { tech_recon = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3846,7 +3846,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_military_police
+        set_technology = { tech_military_police = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3858,7 +3858,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_maintenance_company
+        set_technology = { tech_maintenance_company = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3870,7 +3870,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = armored_train
+        set_technology = { armored_train = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3882,7 +3882,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_recon_focus_bonus
+        set_technology = { tech_recon_focus_bonus = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3895,7 +3895,7 @@ arm_grant_land_support = {
             has_country_flag = arm_cat_support
             has_tech = motorised_infantry
         }
-        add_technology = tech_field_hospital
+        set_technology = { tech_field_hospital = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3908,7 +3908,7 @@ arm_grant_land_support = {
             has_country_flag = arm_cat_support
             has_tech = motorised_infantry
         }
-        add_technology = tech_logistics_company
+        set_technology = { tech_logistics_company = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3922,7 +3922,7 @@ arm_grant_land_support = {
             has_tech = radio
             has_tech = motorised_infantry
         }
-        add_technology = tech_signal_company
+        set_technology = { tech_signal_company = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3934,7 +3934,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = sp_armored_engineer_tech
+        set_technology = { sp_armored_engineer_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3946,7 +3946,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = sp_armored_maintenance_tech
+        set_technology = { sp_armored_maintenance_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3958,7 +3958,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = sp_armored_signal_tech
+        set_technology = { sp_armored_signal_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3970,7 +3970,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = sp_helicopter_transport_pods_tech
+        set_technology = { sp_helicopter_transport_pods_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3982,7 +3982,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = sp_helicopter_artillery_observers_tech
+        set_technology = { sp_helicopter_artillery_observers_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -3994,7 +3994,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = sp_helicopter_med_evac_tech
+        set_technology = { sp_helicopter_med_evac_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4006,7 +4006,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = sp_armored_motorized_military_police_tech
+        set_technology = { sp_armored_motorized_military_police_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4018,7 +4018,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_engineers2
+        set_technology = { tech_engineers2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4030,7 +4030,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_recon2
+        set_technology = { tech_recon2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4042,7 +4042,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_military_police2
+        set_technology = { tech_military_police2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4054,7 +4054,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_maintenance_company2
+        set_technology = { tech_maintenance_company2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4066,7 +4066,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_field_hospital2
+        set_technology = { tech_field_hospital2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4078,7 +4078,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_logistics_company2
+        set_technology = { tech_logistics_company2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4090,7 +4090,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_signal_company2
+        set_technology = { tech_signal_company2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4102,7 +4102,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = wartime_train
+        set_technology = { wartime_train = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4114,7 +4114,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_engineers3
+        set_technology = { tech_engineers3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4126,7 +4126,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_recon3
+        set_technology = { tech_recon3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4138,7 +4138,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_military_police3
+        set_technology = { tech_military_police3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4150,7 +4150,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_maintenance_company3
+        set_technology = { tech_maintenance_company3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4162,7 +4162,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_field_hospital3
+        set_technology = { tech_field_hospital3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4174,7 +4174,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_logistics_company3
+        set_technology = { tech_logistics_company3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4186,7 +4186,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_signal_company3
+        set_technology = { tech_signal_company3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4198,7 +4198,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = night_vision
+        set_technology = { night_vision = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4210,7 +4210,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_engineers4
+        set_technology = { tech_engineers4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4222,7 +4222,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_recon4
+        set_technology = { tech_recon4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4234,7 +4234,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_military_police4
+        set_technology = { tech_military_police4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4246,7 +4246,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_maintenance_company4
+        set_technology = { tech_maintenance_company4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4258,7 +4258,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_field_hospital4
+        set_technology = { tech_field_hospital4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4270,7 +4270,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_logistics_company4
+        set_technology = { tech_logistics_company4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4282,7 +4282,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = tech_signal_company4
+        set_technology = { tech_signal_company4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4294,7 +4294,7 @@ arm_grant_land_support = {
             check_variable = { var = arm_land_competence value = 15 compare = greater_than_or_equals }
             has_country_flag = arm_cat_support
         }
-        add_technology = night_vision2
+        set_technology = { night_vision2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -4364,7 +4364,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = armored_car1
+        set_technology = { armored_car1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4376,7 +4376,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = basic_light_td
+        set_technology = { basic_light_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4388,7 +4388,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = basic_light_art
+        set_technology = { basic_light_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4400,7 +4400,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = basic_light_spaa
+        set_technology = { basic_light_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4412,7 +4412,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = basic_heavy_td
+        set_technology = { basic_heavy_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4424,7 +4424,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = basic_heavy_art
+        set_technology = { basic_heavy_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4436,7 +4436,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = basic_heavy_spaa
+        set_technology = { basic_heavy_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4449,7 +4449,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = engine_tech_1
+        set_technology = { engine_tech_1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4461,7 +4461,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = improved_light_td
+        set_technology = { improved_light_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4473,7 +4473,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = improved_light_art
+        set_technology = { improved_light_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4485,7 +4485,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = improved_light_spaa
+        set_technology = { improved_light_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4497,7 +4497,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = JAP_lighter_tanks
+        set_technology = { JAP_lighter_tanks = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4509,7 +4509,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = GER_heavy_armored_car
+        set_technology = { GER_heavy_armored_car = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4522,7 +4522,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = armor_tech_1
+        set_technology = { armor_tech_1 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4535,7 +4535,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = NOR_rikstanken_tech
+        set_technology = { NOR_rikstanken_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4548,7 +4548,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = amphibious_tank_chassis
+        set_technology = { amphibious_tank_chassis = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4561,7 +4561,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = armor_tech_2
+        set_technology = { armor_tech_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4574,7 +4574,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = engine_tech_2
+        set_technology = { engine_tech_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4586,7 +4586,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = basic_medium_td
+        set_technology = { basic_medium_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4598,7 +4598,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = basic_medium_art
+        set_technology = { basic_medium_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4610,7 +4610,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = basic_medium_spaa
+        set_technology = { basic_medium_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4622,7 +4622,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = amphibious_tank
+        set_technology = { amphibious_tank = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4634,7 +4634,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = armored_car2
+        set_technology = { armored_car2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4646,7 +4646,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = advanced_light_td
+        set_technology = { advanced_light_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4658,7 +4658,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = advanced_light_art
+        set_technology = { advanced_light_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4670,7 +4670,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = advanced_light_spaa
+        set_technology = { advanced_light_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4682,7 +4682,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = improved_medium_td
+        set_technology = { improved_medium_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4694,7 +4694,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = improved_medium_art
+        set_technology = { improved_medium_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4706,7 +4706,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = improved_medium_spaa
+        set_technology = { improved_medium_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4718,7 +4718,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = improved_heavy_td
+        set_technology = { improved_heavy_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4730,7 +4730,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = improved_heavy_art
+        set_technology = { improved_heavy_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4742,7 +4742,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = improved_heavy_spaa
+        set_technology = { improved_heavy_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4755,7 +4755,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = amphibious_drive
+        set_technology = { amphibious_drive = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4768,7 +4768,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = armor_tech_3
+        set_technology = { armor_tech_3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4781,7 +4781,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = engine_tech_3
+        set_technology = { engine_tech_3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4794,7 +4794,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = sp_armored_advanced_flamethrower_tech
+        set_technology = { sp_armored_advanced_flamethrower_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4806,7 +4806,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = amphibious_tank_2
+        set_technology = { amphibious_tank_2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4818,7 +4818,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = armored_car3
+        set_technology = { armored_car3 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4830,7 +4830,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = armored_car_at_upgrade
+        set_technology = { armored_car_at_upgrade = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4842,7 +4842,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = SWE_lynx_armored_car
+        set_technology = { SWE_lynx_armored_car = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4854,7 +4854,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = advanced_medium_td
+        set_technology = { advanced_medium_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4866,7 +4866,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = advanced_medium_art
+        set_technology = { advanced_medium_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4878,7 +4878,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = advanced_medium_spaa
+        set_technology = { advanced_medium_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4890,7 +4890,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = advanced_heavy_td
+        set_technology = { advanced_heavy_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4902,7 +4902,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = advanced_heavy_art
+        set_technology = { advanced_heavy_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4914,7 +4914,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = advanced_heavy_spaa
+        set_technology = { advanced_heavy_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4926,7 +4926,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = super_heavy_td
+        set_technology = { super_heavy_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4938,7 +4938,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = super_heavy_art
+        set_technology = { super_heavy_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4950,7 +4950,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = super_heavy_spaa
+        set_technology = { super_heavy_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4963,7 +4963,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = armor_tech_4
+        set_technology = { armor_tech_4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4976,7 +4976,7 @@ arm_grant_land_tanks_generic = {
             has_country_flag = arm_cat_tanks_generic
             has_dlc = "No Step Back"
         }
-        add_technology = engine_tech_4
+        set_technology = { engine_tech_4 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -4988,7 +4988,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = modern_td
+        set_technology = { modern_td = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5000,7 +5000,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = modern_art
+        set_technology = { modern_art = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5012,7 +5012,7 @@ arm_grant_land_tanks_generic = {
             check_variable = { var = arm_land_competence value = 35 compare = greater_than_or_equals }
             has_country_flag = arm_cat_tanks_generic
         }
-        add_technology = modern_spaa
+        set_technology = { modern_spaa = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -5044,7 +5044,7 @@ arm_grant_naval_battleships = {
             has_country_flag = arm_cat_battleships
             has_dlc = "Man the Guns"
         }
-        add_technology = early_ship_hull_heavy
+        set_technology = { early_ship_hull_heavy = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5056,7 +5056,7 @@ arm_grant_naval_battleships = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_battleships
         }
-        add_technology = early_battlecruiser
+        set_technology = { early_battlecruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5068,7 +5068,7 @@ arm_grant_naval_battleships = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_battleships
         }
-        add_technology = early_battleship
+        set_technology = { early_battleship = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5081,7 +5081,7 @@ arm_grant_naval_battleships = {
             has_country_flag = arm_cat_battleships
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_ship_hull_heavy
+        set_technology = { basic_ship_hull_heavy = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5094,7 +5094,7 @@ arm_grant_naval_battleships = {
             has_country_flag = arm_cat_battleships
             has_dlc = "Man the Guns"
         }
-        add_technology = ship_hull_super_heavy
+        set_technology = { ship_hull_super_heavy = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5106,7 +5106,7 @@ arm_grant_naval_battleships = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_battleships
         }
-        add_technology = basic_battleship
+        set_technology = { basic_battleship = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5118,7 +5118,7 @@ arm_grant_naval_battleships = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_battleships
         }
-        add_technology = heavy_battleship
+        set_technology = { heavy_battleship = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5131,7 +5131,7 @@ arm_grant_naval_battleships = {
             has_country_flag = arm_cat_battleships
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_ship_hull_heavy
+        set_technology = { improved_ship_hull_heavy = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5143,7 +5143,7 @@ arm_grant_naval_battleships = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_battleships
         }
-        add_technology = basic_battlecruiser
+        set_technology = { basic_battlecruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5155,7 +5155,7 @@ arm_grant_naval_battleships = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_battleships
         }
-        add_technology = improved_battleship
+        set_technology = { improved_battleship = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5168,7 +5168,7 @@ arm_grant_naval_battleships = {
             has_country_flag = arm_cat_battleships
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_ship_hull_heavy
+        set_technology = { advanced_ship_hull_heavy = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5180,7 +5180,7 @@ arm_grant_naval_battleships = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_battleships
         }
-        add_technology = advanced_battleship
+        set_technology = { advanced_battleship = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5192,7 +5192,7 @@ arm_grant_naval_battleships = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_battleships
         }
-        add_technology = heavy_battleship2
+        set_technology = { heavy_battleship2 = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -5219,7 +5219,7 @@ arm_grant_naval_carriers = {
             has_country_flag = arm_cat_carriers
             has_dlc = "Man the Guns"
         }
-        add_technology = early_ship_hull_carrier
+        set_technology = { early_ship_hull_carrier = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5231,7 +5231,7 @@ arm_grant_naval_carriers = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_carriers
         }
-        add_technology = early_carrier
+        set_technology = { early_carrier = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5244,7 +5244,7 @@ arm_grant_naval_carriers = {
             has_country_flag = arm_cat_carriers
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_ship_hull_carrier
+        set_technology = { basic_ship_hull_carrier = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5256,7 +5256,7 @@ arm_grant_naval_carriers = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_carriers
         }
-        add_technology = basic_carrier
+        set_technology = { basic_carrier = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5269,7 +5269,7 @@ arm_grant_naval_carriers = {
             has_country_flag = arm_cat_carriers
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_ship_hull_carrier
+        set_technology = { improved_ship_hull_carrier = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5281,7 +5281,7 @@ arm_grant_naval_carriers = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_carriers
         }
-        add_technology = improved_carrier
+        set_technology = { improved_carrier = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5294,7 +5294,7 @@ arm_grant_naval_carriers = {
             has_country_flag = arm_cat_carriers
             has_dlc = "Man the Guns"
         }
-        add_technology = sp_refined_pykrete
+        set_technology = { sp_refined_pykrete = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5307,7 +5307,7 @@ arm_grant_naval_carriers = {
             has_country_flag = arm_cat_carriers
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_ship_hull_carrier
+        set_technology = { advanced_ship_hull_carrier = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5320,7 +5320,7 @@ arm_grant_naval_carriers = {
             has_country_flag = arm_cat_carriers
             has_dlc = "Man the Guns"
         }
-        add_technology = sp_ice_composite_runawayas
+        set_technology = { sp_ice_composite_runawayas = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5332,7 +5332,7 @@ arm_grant_naval_carriers = {
             check_variable = { var = arm_naval_competence value = 70 compare = greater_than_or_equals }
             has_country_flag = arm_cat_carriers
         }
-        add_technology = advanced_carrier
+        set_technology = { advanced_carrier = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -5366,7 +5366,7 @@ arm_grant_naval_destroyers = {
             has_country_flag = arm_cat_destroyers
             has_dlc = "Man the Guns"
         }
-        add_technology = early_ship_hull_light
+        set_technology = { early_ship_hull_light = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5379,7 +5379,7 @@ arm_grant_naval_destroyers = {
             has_country_flag = arm_cat_destroyers
             has_dlc = "Man the Guns"
         }
-        add_technology = smoke_generator
+        set_technology = { smoke_generator = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5392,7 +5392,7 @@ arm_grant_naval_destroyers = {
             has_country_flag = arm_cat_destroyers
             has_dlc = "Man the Guns"
         }
-        add_technology = sonar
+        set_technology = { sonar = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5404,7 +5404,7 @@ arm_grant_naval_destroyers = {
             check_variable = { var = arm_naval_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_destroyers
         }
-        add_technology = early_destroyer
+        set_technology = { early_destroyer = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5417,7 +5417,7 @@ arm_grant_naval_destroyers = {
             has_country_flag = arm_cat_destroyers
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_ship_hull_light
+        set_technology = { basic_ship_hull_light = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5430,7 +5430,7 @@ arm_grant_naval_destroyers = {
             has_country_flag = arm_cat_destroyers
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_sonar
+        set_technology = { improved_sonar = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5442,7 +5442,7 @@ arm_grant_naval_destroyers = {
             check_variable = { var = arm_naval_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_destroyers
         }
-        add_technology = basic_destroyer
+        set_technology = { basic_destroyer = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5455,7 +5455,7 @@ arm_grant_naval_destroyers = {
             has_country_flag = arm_cat_destroyers
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_ship_hull_light
+        set_technology = { improved_ship_hull_light = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5468,7 +5468,7 @@ arm_grant_naval_destroyers = {
             has_country_flag = arm_cat_destroyers
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_sonar
+        set_technology = { advanced_sonar = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5480,7 +5480,7 @@ arm_grant_naval_destroyers = {
             check_variable = { var = arm_naval_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_destroyers
         }
-        add_technology = improved_destroyer
+        set_technology = { improved_destroyer = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5493,7 +5493,7 @@ arm_grant_naval_destroyers = {
             has_country_flag = arm_cat_destroyers
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_ship_hull_light
+        set_technology = { advanced_ship_hull_light = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5506,7 +5506,7 @@ arm_grant_naval_destroyers = {
             has_country_flag = arm_cat_destroyers
             has_dlc = "Man the Guns"
         }
-        add_technology = modern_sonar
+        set_technology = { modern_sonar = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5518,7 +5518,7 @@ arm_grant_naval_destroyers = {
             check_variable = { var = arm_naval_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_destroyers
         }
-        add_technology = advanced_destroyer
+        set_technology = { advanced_destroyer = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -5539,7 +5539,7 @@ arm_grant_naval_heavy_cruisers = {
             check_variable = { var = arm_naval_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_cruisers
         }
-        add_technology = early_heavy_cruiser
+        set_technology = { early_heavy_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5551,7 +5551,7 @@ arm_grant_naval_heavy_cruisers = {
             check_variable = { var = arm_naval_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_cruisers
         }
-        add_technology = basic_heavy_cruiser
+        set_technology = { basic_heavy_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5563,7 +5563,7 @@ arm_grant_naval_heavy_cruisers = {
             check_variable = { var = arm_naval_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_cruisers
         }
-        add_technology = improved_heavy_cruiser
+        set_technology = { improved_heavy_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5575,7 +5575,7 @@ arm_grant_naval_heavy_cruisers = {
             check_variable = { var = arm_naval_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_heavy_cruisers
         }
-        add_technology = advanced_heavy_cruiser
+        set_technology = { advanced_heavy_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -5600,7 +5600,7 @@ arm_grant_naval_light_cruisers = {
             has_country_flag = arm_cat_light_cruisers
             has_dlc = "Man the Guns"
         }
-        add_technology = early_ship_hull_cruiser
+        set_technology = { early_ship_hull_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5612,7 +5612,7 @@ arm_grant_naval_light_cruisers = {
             check_variable = { var = arm_naval_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_light_cruisers
         }
-        add_technology = early_light_cruiser
+        set_technology = { early_light_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5625,7 +5625,7 @@ arm_grant_naval_light_cruisers = {
             has_country_flag = arm_cat_light_cruisers
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_ship_hull_cruiser
+        set_technology = { basic_ship_hull_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5637,7 +5637,7 @@ arm_grant_naval_light_cruisers = {
             check_variable = { var = arm_naval_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_light_cruisers
         }
-        add_technology = basic_light_cruiser
+        set_technology = { basic_light_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5650,7 +5650,7 @@ arm_grant_naval_light_cruisers = {
             has_country_flag = arm_cat_light_cruisers
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_ship_hull_cruiser
+        set_technology = { improved_ship_hull_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5662,7 +5662,7 @@ arm_grant_naval_light_cruisers = {
             check_variable = { var = arm_naval_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_light_cruisers
         }
-        add_technology = improved_light_cruiser
+        set_technology = { improved_light_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5675,7 +5675,7 @@ arm_grant_naval_light_cruisers = {
             has_country_flag = arm_cat_light_cruisers
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_ship_hull_cruiser
+        set_technology = { advanced_ship_hull_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5687,7 +5687,7 @@ arm_grant_naval_light_cruisers = {
             check_variable = { var = arm_naval_competence value = 45 compare = greater_than_or_equals }
             has_country_flag = arm_cat_light_cruisers
         }
-        add_technology = advanced_light_cruiser
+        set_technology = { advanced_light_cruiser = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -5736,7 +5736,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_torpedo
+        set_technology = { basic_torpedo = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5749,7 +5749,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_naval_mines
+        set_technology = { basic_naval_mines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5762,7 +5762,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = submarine_mine_laying
+        set_technology = { submarine_mine_laying = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5775,7 +5775,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = mtg_transport
+        set_technology = { mtg_transport = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5787,7 +5787,7 @@ arm_grant_naval_naval_support = {
             check_variable = { var = arm_naval_competence value = 20 compare = greater_than_or_equals }
             has_country_flag = arm_cat_naval_support
         }
-        add_technology = transport
+        set_technology = { transport = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5800,7 +5800,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_ship_torpedo_launcher
+        set_technology = { improved_ship_torpedo_launcher = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5813,7 +5813,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_naval_mines
+        set_technology = { improved_naval_mines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5826,7 +5826,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = degaussing
+        set_technology = { degaussing = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5839,7 +5839,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_ship_torpedo_launcher
+        set_technology = { advanced_ship_torpedo_launcher = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5852,7 +5852,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_submarine_mine_laying
+        set_technology = { improved_submarine_mine_laying = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5865,7 +5865,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_naval_mines
+        set_technology = { advanced_naval_mines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5878,7 +5878,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = mtg_landing_craft
+        set_technology = { mtg_landing_craft = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5890,7 +5890,7 @@ arm_grant_naval_naval_support = {
             check_variable = { var = arm_naval_competence value = 20 compare = greater_than_or_equals }
             has_country_flag = arm_cat_naval_support
         }
-        add_technology = landing_craft
+        set_technology = { landing_craft = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5903,7 +5903,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = airdrop_mines
+        set_technology = { airdrop_mines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5916,7 +5916,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = airdrop_mines_bba
+        set_technology = { airdrop_mines_bba = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5929,7 +5929,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = airsweep_mines
+        set_technology = { airsweep_mines = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5942,7 +5942,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = airsweep_mines_bba
+        set_technology = { airsweep_mines_bba = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5955,7 +5955,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = modern_ship_torpedo_launcher
+        set_technology = { modern_ship_torpedo_launcher = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5968,7 +5968,7 @@ arm_grant_naval_naval_support = {
             has_country_flag = arm_cat_naval_support
             has_dlc = "Man the Guns"
         }
-        add_technology = mtg_tank_landing_craft
+        set_technology = { mtg_tank_landing_craft = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -5980,7 +5980,7 @@ arm_grant_naval_naval_support = {
             check_variable = { var = arm_naval_competence value = 20 compare = greater_than_or_equals }
             has_country_flag = arm_cat_naval_support
         }
-        add_technology = tank_landing_craft
+        set_technology = { tank_landing_craft = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }
@@ -6009,7 +6009,7 @@ arm_grant_naval_submarines = {
             has_country_flag = arm_cat_submarines
             has_dlc = "Man the Guns"
         }
-        add_technology = early_ship_hull_submarine
+        set_technology = { early_ship_hull_submarine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6021,7 +6021,7 @@ arm_grant_naval_submarines = {
             check_variable = { var = arm_naval_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_submarines
         }
-        add_technology = early_submarine
+        set_technology = { early_submarine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6034,7 +6034,7 @@ arm_grant_naval_submarines = {
             has_country_flag = arm_cat_submarines
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_ship_hull_submarine
+        set_technology = { basic_ship_hull_submarine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6046,7 +6046,7 @@ arm_grant_naval_submarines = {
             check_variable = { var = arm_naval_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_submarines
         }
-        add_technology = basic_submarine
+        set_technology = { basic_submarine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6059,7 +6059,7 @@ arm_grant_naval_submarines = {
             has_country_flag = arm_cat_submarines
             has_dlc = "Man the Guns"
         }
-        add_technology = improved_ship_hull_submarine
+        set_technology = { improved_ship_hull_submarine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6072,7 +6072,7 @@ arm_grant_naval_submarines = {
             has_country_flag = arm_cat_submarines
             has_dlc = "Man the Guns"
         }
-        add_technology = basic_submarine_snorkel
+        set_technology = { basic_submarine_snorkel = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6085,7 +6085,7 @@ arm_grant_naval_submarines = {
             has_country_flag = arm_cat_submarines
             has_dlc = "Man the Guns"
         }
-        add_technology = sp_aip_engine_improved_tech
+        set_technology = { sp_aip_engine_improved_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6097,7 +6097,7 @@ arm_grant_naval_submarines = {
             check_variable = { var = arm_naval_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_submarines
         }
-        add_technology = improved_submarine
+        set_technology = { improved_submarine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6110,7 +6110,7 @@ arm_grant_naval_submarines = {
             has_country_flag = arm_cat_submarines
             has_dlc = "Man the Guns"
         }
-        add_technology = advanced_ship_hull_submarine
+        set_technology = { advanced_ship_hull_submarine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6123,7 +6123,7 @@ arm_grant_naval_submarines = {
             has_country_flag = arm_cat_submarines
             has_dlc = "Man the Guns"
         }
-        add_technology = sp_aip_engine_advanced_tech
+        set_technology = { sp_aip_engine_advanced_tech = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
     if = {
@@ -6135,7 +6135,7 @@ arm_grant_naval_submarines = {
             check_variable = { var = arm_naval_competence value = 25 compare = greater_than_or_equals }
             has_country_flag = arm_cat_submarines
         }
-        add_technology = advanced_submarine
+        set_technology = { advanced_submarine = 1 popup = no }
         add_to_variable = { arm_grant_counter = 1 }
     }
 }

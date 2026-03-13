@@ -436,6 +436,11 @@ def sanitize_runtime_effect_text(text: str) -> str:
     sanitized = sanitized.replace("has_technology =", "has_tech =")
     sanitized = sanitized.replace("has_technology=", "has_tech=")
     sanitized = re.sub(
+        r"(?m)^(\s*)add_technology\s*=\s*([A-Za-z0-9_:.+-]+)\s*$",
+        lambda m: f"{m.group(1)}set_technology = {{ {m.group(2)} = 1 popup = no }}",
+        sanitized,
+    )
+    sanitized = re.sub(
         r"check_variable\s*=\s*\{\s*([A-Za-z0-9_:.]+)\s*(>=|<=|>|<|=)\s*([A-Za-z0-9_:.+-]+)\s*\}",
         lambda m: (
             "check_variable = { "

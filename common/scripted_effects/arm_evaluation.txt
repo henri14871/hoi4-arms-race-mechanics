@@ -133,11 +133,12 @@ arm_assign_power_tier = {
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_base_lag = 0.0 }
+        # Superpowers stay near the frontier, but should not be universally perfect.
+        set_variable = { arm_base_lag = 0.5 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 0.5 }
+        set_variable = { arm_base_lag = 1.0 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
@@ -656,13 +657,29 @@ arm_compute_effective_lag = {
     # ===================================================
     set_variable = { arm_effective_land_lag = arm_base_lag }
 
-    # --- Branch competence bonus (land) ---
+    # --- Branch competence adjustment (land) ---
+    set_variable = { arm_land_comp_threshold_minus_20 = arm_tier_avg }
+    subtract_from_variable = { arm_land_comp_threshold_minus_20 = 20 }
+    set_variable = { arm_land_comp_threshold_minus_40 = arm_tier_avg }
+    subtract_from_variable = { arm_land_comp_threshold_minus_40 = 40 }
     set_variable = { arm_land_comp_threshold_20 = arm_tier_avg }
     add_to_variable = { arm_land_comp_threshold_20 = 20 }
     set_variable = { arm_land_comp_threshold_40 = arm_tier_avg }
     add_to_variable = { arm_land_comp_threshold_40 = 40 }
 
     if = {
+        limit = {
+            check_variable = { var = arm_land_competence value = arm_land_comp_threshold_minus_40 compare = less_than }
+        }
+        add_to_variable = { arm_effective_land_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_land_competence value = arm_land_comp_threshold_minus_20 compare = less_than }
+        }
+        add_to_variable = { arm_effective_land_lag = 0.5 }
+    }
+    else_if = {
         limit = {
             check_variable = { var = arm_land_competence value = arm_land_comp_threshold_40 compare = greater_than }
         }
@@ -801,13 +818,29 @@ arm_compute_effective_lag = {
     # ===================================================
     set_variable = { arm_effective_air_lag = arm_base_lag }
 
-    # --- Branch competence bonus (air) ---
+    # --- Branch competence adjustment (air) ---
+    set_variable = { arm_air_comp_threshold_minus_20 = arm_tier_avg }
+    subtract_from_variable = { arm_air_comp_threshold_minus_20 = 20 }
+    set_variable = { arm_air_comp_threshold_minus_40 = arm_tier_avg }
+    subtract_from_variable = { arm_air_comp_threshold_minus_40 = 40 }
     set_variable = { arm_air_comp_threshold_20 = arm_tier_avg }
     add_to_variable = { arm_air_comp_threshold_20 = 20 }
     set_variable = { arm_air_comp_threshold_40 = arm_tier_avg }
     add_to_variable = { arm_air_comp_threshold_40 = 40 }
 
     if = {
+        limit = {
+            check_variable = { var = arm_air_competence value = arm_air_comp_threshold_minus_40 compare = less_than }
+        }
+        add_to_variable = { arm_effective_air_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_air_competence value = arm_air_comp_threshold_minus_20 compare = less_than }
+        }
+        add_to_variable = { arm_effective_air_lag = 0.5 }
+    }
+    else_if = {
         limit = {
             check_variable = { var = arm_air_competence value = arm_air_comp_threshold_40 compare = greater_than }
         }
@@ -946,13 +979,29 @@ arm_compute_effective_lag = {
     # ===================================================
     set_variable = { arm_effective_naval_lag = arm_base_lag }
 
-    # --- Branch competence bonus (naval) ---
+    # --- Branch competence adjustment (naval) ---
+    set_variable = { arm_naval_comp_threshold_minus_20 = arm_tier_avg }
+    subtract_from_variable = { arm_naval_comp_threshold_minus_20 = 20 }
+    set_variable = { arm_naval_comp_threshold_minus_40 = arm_tier_avg }
+    subtract_from_variable = { arm_naval_comp_threshold_minus_40 = 40 }
     set_variable = { arm_naval_comp_threshold_20 = arm_tier_avg }
     add_to_variable = { arm_naval_comp_threshold_20 = 20 }
     set_variable = { arm_naval_comp_threshold_40 = arm_tier_avg }
     add_to_variable = { arm_naval_comp_threshold_40 = 40 }
 
     if = {
+        limit = {
+            check_variable = { var = arm_naval_competence value = arm_naval_comp_threshold_minus_40 compare = less_than }
+        }
+        add_to_variable = { arm_effective_naval_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_naval_competence value = arm_naval_comp_threshold_minus_20 compare = less_than }
+        }
+        add_to_variable = { arm_effective_naval_lag = 0.5 }
+    }
+    else_if = {
         limit = {
             check_variable = { var = arm_naval_competence value = arm_naval_comp_threshold_40 compare = greater_than }
         }
@@ -1026,13 +1075,29 @@ arm_compute_effective_lag = {
     # ===================================================
     set_variable = { arm_effective_industry_lag = arm_base_lag }
 
-    # --- Branch competence bonus (industry) ---
+    # --- Branch competence adjustment (industry) ---
+    set_variable = { arm_ind_comp_threshold_minus_20 = arm_tier_avg }
+    subtract_from_variable = { arm_ind_comp_threshold_minus_20 = 20 }
+    set_variable = { arm_ind_comp_threshold_minus_40 = arm_tier_avg }
+    subtract_from_variable = { arm_ind_comp_threshold_minus_40 = 40 }
     set_variable = { arm_ind_comp_threshold_20 = arm_tier_avg }
     add_to_variable = { arm_ind_comp_threshold_20 = 20 }
     set_variable = { arm_ind_comp_threshold_40 = arm_tier_avg }
     add_to_variable = { arm_ind_comp_threshold_40 = 40 }
 
     if = {
+        limit = {
+            check_variable = { var = arm_industry_competence value = arm_ind_comp_threshold_minus_40 compare = less_than }
+        }
+        add_to_variable = { arm_effective_industry_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_industry_competence value = arm_ind_comp_threshold_minus_20 compare = less_than }
+        }
+        add_to_variable = { arm_effective_industry_lag = 0.5 }
+    }
+    else_if = {
         limit = {
             check_variable = { var = arm_industry_competence value = arm_ind_comp_threshold_40 compare = greater_than }
         }

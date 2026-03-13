@@ -31,10 +31,9 @@ on_actions = {
                 set_variable = { global.arm_start_month_offset = 7 }
             }
 
-            # Detect actual start year and compat profile from a valid country scope.
+            # Resolve current year and compat profile from a valid country scope.
             random_country = {
                 limit = { always = yes }
-                set_variable = { var = global.arm_start_year value = year }
                 arm_update_current_year = yes
                 arm_auto_detect_compat_profile = yes
             }

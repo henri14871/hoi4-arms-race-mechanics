@@ -66,7 +66,7 @@ Evaluation runs monthly on a rotating third of all countries for performance. Th
 | Scope | AI Only | AI Only / Everyone / Disabled |
 | Intensity | Balanced | Relaxed / Balanced / Aggressive / Historical |
 | Compatibility Profile | Auto Detect | Auto Detect / Vanilla / bundled major-mod profiles |
-| Tech Scope | Core + Air/Naval | Core Only / Core + Air/Naval / All Except Doctrines / Everything |
+| Tech Scope | All Except Doctrines | Core Only / Core + Air/Naval / All Except Doctrines / Everything |
 | Doctrine Handling | Disabled | Disabled / AI Only / Everyone |
 | Advanced Tech | Excluded | Excluded / Superpowers Only / Included |
 | War/Faction Catch-Up | Standard | Disabled / Standard / Enhanced |

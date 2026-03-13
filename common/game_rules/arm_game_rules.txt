@@ -166,14 +166,14 @@ arm_tech_scope = {
 		allow_achievements = no
 	}
 	default = {
-		name = ARM_CORE_AIR_NAVAL
-		text = "ARM_OPT_CORE_AIR_NAVAL"
-		desc = "ARM_DESC_CORE_AIR_NAVAL"
-	}
-	option = {
 		name = ARM_ALL_EXCEPT_DOCTRINES
 		text = "ARM_OPT_ALL_EXCEPT_DOCTRINES"
 		desc = "ARM_DESC_ALL_EXCEPT_DOCTRINES"
+	}
+	option = {
+		name = ARM_CORE_AIR_NAVAL
+		text = "ARM_OPT_CORE_AIR_NAVAL"
+		desc = "ARM_DESC_CORE_AIR_NAVAL"
 		allow_achievements = no
 	}
 	option = {

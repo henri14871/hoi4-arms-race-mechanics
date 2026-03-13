@@ -891,7 +891,7 @@ def generate_output_files(techs: list, output_dir: Path, mode: str, mod_name: st
         lines.append("")
         
         # Write tech data as comments + scripted checks
-        # The actual ARM pulse logic reads these and uses add_technology
+        # The actual ARM pulse logic reads these and grants tech with set_technology.
         for tech in tech_list:
             flags = []
             if tech.is_doctrine:
@@ -928,7 +928,7 @@ def generate_output_files(techs: list, output_dir: Path, mode: str, mod_name: st
             append_grant_limit_lines(lines, tech)
 
             lines.append(f"        }}")
-            lines.append(f"        add_technology = {tech.tech_id}")
+            lines.append(f"        set_technology = {{ {tech.tech_id} = 1 popup = no }}")
             lines.append(f"        add_to_variable = {{ arm_grant_counter = 1 }}")
             lines.append(f"    }}")
         
@@ -1064,7 +1064,7 @@ def generate_mod_output_files(techs: list, output_dir: Path, mod_suffix: str,
             append_grant_limit_lines(lines, tech)
 
             lines.append(f"        }}")
-            lines.append(f"        add_technology = {tech.tech_id}")
+            lines.append(f"        set_technology = {{ {tech.tech_id} = 1 popup = no }}")
             lines.append(f"        add_to_variable = {{ arm_grant_counter = 1 }}")
             lines.append(f"    }}")
 
