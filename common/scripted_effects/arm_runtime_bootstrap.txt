@@ -1,0 +1,56 @@
+###############################################################################
+# arm_runtime_bootstrap.txt - Save-safe ARM bootstrap
+# Arms Race Mechanics mod
+#
+# Initializes ARM globals and country state for both fresh campaigns and
+# existing saves that install the mod later.
+###############################################################################
+
+arm_bootstrap_runtime_state = {
+
+    # Reset the global counters ARM expects before per-country setup.
+    set_variable = { global.arm_current_year = 0 }
+    set_variable = { global.arm_month_counter = 0 }
+    set_variable = { global.arm_bucket_counter = 0 }
+    set_variable = { global.arm_start_year = 0 }
+    # Reserved for future scheduling logic; currently unused by runtime pulses.
+    set_variable = { global.arm_start_month_offset = 0 }
+    set_variable = { global.arm_elapsed_months = 0 }
+
+    # Resolve current year and active compat profile from a valid country scope.
+    random_country = {
+        limit = { always = yes }
+        arm_update_current_year = yes
+        arm_auto_detect_compat_profile = yes
+    }
+
+    every_country = {
+
+        # Fresh saves added mid-campaign have no bucket assignment yet.
+        if = {
+            limit = { NOT = { has_country_flag = arm_bucket_initialized } }
+            set_variable = { arm_bucket = global.arm_bucket_counter }
+            add_to_variable = { global.arm_bucket_counter = 1 }
+            if = {
+                limit = { check_variable = { var = global.arm_bucket_counter value = 2 compare = greater_than } }
+                set_variable = { global.arm_bucket_counter = 0 }
+            }
+            set_country_flag = arm_bucket_initialized
+        }
+
+        # Legacy saves without ARM state need a full first-time refresh.
+        if = {
+            limit = { NOT = { has_country_flag = arm_tier_initialized } }
+            set_variable = { arm_tier_index = 0 }
+            set_variable = { arm_global_power = 0 }
+            set_variable = { arm_land_competence = 0 }
+            set_variable = { arm_air_competence = 0 }
+            set_variable = { arm_naval_competence = 0 }
+            set_variable = { arm_industry_competence = 0 }
+            set_variable = { arm_grant_counter = 0 }
+            arm_refresh_country_state_runtime = yes
+        }
+    }
+
+    set_global_flag = arm_runtime_bootstrapped
+}

@@ -226,3 +226,124 @@ defined_text = {
         trigger = { always = yes }
     }
 }
+
+defined_text = {
+    name = arm_ui_next_grant_window
+
+    text = {
+        localization_key = arm_ui_next_grant_1_month
+        trigger = { check_variable = { var = arm_months_to_next_grant value = 1 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_next_grant_2_months
+        trigger = { check_variable = { var = arm_months_to_next_grant value = 2 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_next_grant_3_months
+        trigger = { check_variable = { var = arm_months_to_next_grant value = 3 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_next_grant_unknown
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_land_target_year
+
+    text = {
+        localization_key = arm_ui_land_target_year_le_1
+        trigger = { check_variable = { var = arm_effective_land_lag value = 1.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_land_target_year_le_2
+        trigger = { check_variable = { var = arm_effective_land_lag value = 2.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_land_target_year_le_4
+        trigger = { check_variable = { var = arm_effective_land_lag value = 4.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_land_target_year_le_6
+        trigger = { check_variable = { var = arm_effective_land_lag value = 6.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_land_target_year_gt_6
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_air_target_year
+
+    text = {
+        localization_key = arm_ui_air_target_year_le_1
+        trigger = { check_variable = { var = arm_effective_air_lag value = 1.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_air_target_year_le_2
+        trigger = { check_variable = { var = arm_effective_air_lag value = 2.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_air_target_year_le_4
+        trigger = { check_variable = { var = arm_effective_air_lag value = 4.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_air_target_year_le_6
+        trigger = { check_variable = { var = arm_effective_air_lag value = 6.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_air_target_year_gt_6
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_naval_target_year
+
+    text = {
+        localization_key = arm_ui_naval_target_year_le_1
+        trigger = { check_variable = { var = arm_effective_naval_lag value = 1.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_naval_target_year_le_2
+        trigger = { check_variable = { var = arm_effective_naval_lag value = 2.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_naval_target_year_le_4
+        trigger = { check_variable = { var = arm_effective_naval_lag value = 4.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_naval_target_year_le_6
+        trigger = { check_variable = { var = arm_effective_naval_lag value = 6.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_naval_target_year_gt_6
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_industry_target_year
+
+    text = {
+        localization_key = arm_ui_industry_target_year_le_1
+        trigger = { check_variable = { var = arm_effective_industry_lag value = 1.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_industry_target_year_le_2
+        trigger = { check_variable = { var = arm_effective_industry_lag value = 2.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_industry_target_year_le_4
+        trigger = { check_variable = { var = arm_effective_industry_lag value = 4.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_industry_target_year_le_6
+        trigger = { check_variable = { var = arm_effective_industry_lag value = 6.0 compare = less_than_or_equals } }
+    }
+    text = {
+        localization_key = arm_ui_industry_target_year_gt_6
+        trigger = { always = yes }
+    }
+}

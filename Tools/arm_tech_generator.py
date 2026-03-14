@@ -884,30 +884,76 @@ def append_group_outer_limit_lines(lines: list, tech_list: list[TechDef],
         lines.append(f'{indent}has_dlc = "{shared_dlc}"')
 
 
+def split_techs_by_start_year(tech_list: list[TechDef]) -> list[tuple[int, list[TechDef]]]:
+    grouped: list[tuple[int, list[TechDef]]] = []
+    for tech in tech_list:
+        if not grouped or grouped[-1][0] != tech.start_year:
+            grouped.append((tech.start_year, [tech]))
+        else:
+            grouped[-1][1].append(tech)
+    return grouped
+
+
+def append_generated_grant_tech_blocks(lines: list, tech_list: list[TechDef], indent: str = "        "):
+    child_indent = f"{indent}    "
+    grandchild_indent = f"{child_indent}    "
+    for tech in tech_list:
+        if tech.is_xp_gated:
+            lines.append(f"{indent}# SKIPPED (XP-gated): {tech.tech_id}")
+            continue
+
+        lines.append(f"{indent}# {tech.tech_id} - {tech.start_year}")
+        lines.append(f"{indent}if = {{")
+        lines.append(f"{child_indent}limit = {{")
+        lines.append(f"{grandchild_indent}NOT = {{ has_tech = {tech.tech_id} }}")
+        append_grant_limit_lines(lines, tech, indent=grandchild_indent)
+        lines.append(f"{child_indent}}}")
+        lines.append(f"{child_indent}set_technology = {{ {tech.tech_id} = 1 popup = no }}")
+        lines.append(f"{child_indent}add_to_variable = {{ arm_grant_counter = 1 }}")
+        lines.append(f"{indent}}}")
+
+
 def append_generated_grant_effect(lines: list, effect_name: str, tech_list: list[TechDef]):
+    year_groups = split_techs_by_start_year(tech_list)
+    target_year_var = target_year_var_for_branch(tech_list[0].branch) if tech_list else ""
+
     lines.append(f"{effect_name} = {{")
     lines.append("    if = {")
     lines.append("        limit = {")
     append_group_outer_limit_lines(lines, tech_list)
     lines.append("        }")
 
-    for tech in tech_list:
-        if tech.is_xp_gated:
-            lines.append(f"        # SKIPPED (XP-gated): {tech.tech_id}")
-            continue
-
-        lines.append(f"        # {tech.tech_id} - {tech.start_year}")
-        lines.append("        if = {")
-        lines.append("            limit = {")
-        lines.append(f"                NOT = {{ has_tech = {tech.tech_id} }}")
-        append_grant_limit_lines(lines, tech, indent="                ")
-        lines.append("            }")
-        lines.append(f"            set_technology = {{ {tech.tech_id} = 1 popup = no }}")
-        lines.append("            add_to_variable = { arm_grant_counter = 1 }")
-        lines.append("        }")
+    if len(year_groups) <= 1:
+        append_generated_grant_tech_blocks(lines, tech_list)
+    else:
+        lines.append("        # Year-sliced dispatch avoids scanning future tech eras every pulse.")
+        for start_year, year_techs in year_groups:
+            subeffect_name = f"{effect_name}_y{start_year}"
+            lines.append("        if = {")
+            lines.append("            limit = {")
+            lines.append("                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }")
+            lines.append(
+                f"                check_variable = {{ var = {target_year_var} value = {start_year} compare = greater_than_or_equals }}"
+            )
+            lines.append("            }")
+            lines.append(f"            {subeffect_name} = yes")
+            lines.append("        }")
 
     lines.append("    }")
     lines.append("}")
+
+    if len(year_groups) > 1:
+        for start_year, year_techs in year_groups:
+            subeffect_name = f"{effect_name}_y{start_year}"
+            lines.append("")
+            lines.append(f"{subeffect_name} = {{")
+            lines.append("    if = {")
+            lines.append("        limit = {")
+            append_group_outer_limit_lines(lines, year_techs)
+            lines.append("        }")
+            append_generated_grant_tech_blocks(lines, year_techs)
+            lines.append("    }")
+            lines.append("}")
 
 
 def generate_output_files(techs: list, output_dir: Path, mode: str, mod_name: str,

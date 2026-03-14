@@ -127,7 +127,7 @@ arm_assign_power_tier_blackice = {
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
+        set_variable = { arm_base_lag = 2.5 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
@@ -195,7 +195,7 @@ arm_assign_power_tier_blackice = {
     # ARM_CAP_STANDARD: use as-is (no change)
 
     # ===================================================
-    # Rule 2 — Intensity modifier on base lag
+    # Rule 2 — ARM mode modifier on base lag
     # ===================================================
     if = {
         limit = {
@@ -375,7 +375,7 @@ arm_assign_power_tier_cold_war_iron_curtain = {
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
+        set_variable = { arm_base_lag = 2.5 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
@@ -443,255 +443,7 @@ arm_assign_power_tier_cold_war_iron_curtain = {
     # ARM_CAP_STANDARD: use as-is (no change)
 
     # ===================================================
-    # Rule 2 — Intensity modifier on base lag
-    # ===================================================
-    if = {
-        limit = {
-            OR = {
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
-            }
-        }
-        add_to_variable = { arm_base_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
-        }
-        subtract_from_variable = { arm_base_lag = 0.75 }
-        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
-    }
-
-    # ===================================================
-    # Set tier average for competence bonus calculations
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_tier_avg = 90 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_tier_avg = 65 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_tier_avg = 40 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_tier_avg = 25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_tier_avg = 12 }
-    }
-    else = {
-        set_variable = { arm_tier_avg = 5 }
-    }
-
-    # --- Fire tier change event if tier changed ---
-    if = {
-        limit = {
-            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
-            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
-        }
-        country_event = { id = arm_event.2 }
-    }
-}
-
-arm_assign_power_tier_kaiserreich = {
-
-    # --- Initialize tier if it has never been set ---
-    if = {
-        limit = {
-            NOT = { has_country_flag = arm_tier_initialized }
-        }
-        set_variable = { arm_tier_index = 0 }
-        set_country_flag = arm_tier_initialized
-    }
-
-    # Save old tier for change detection
-    set_variable = { arm_old_tier_index = arm_tier_index }
-
-    # ===================================================
-    # PROMOTIONS (ascending — only if currently below)
-    # Threshold + 5 hysteresis to promote
-    # ===================================================
-
-    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = less_than }
-            check_variable = { var = arm_global_power value = 27 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = less_than }
-            check_variable = { var = arm_global_power value = 55 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = less_than }
-            check_variable = { var = arm_global_power value = 105 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = less_than }
-            check_variable = { var = arm_global_power value = 175 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 5 compare = less_than }
-            check_variable = { var = arm_global_power value = 255 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 5 }
-    }
-
-    # ===================================================
-    # DEMOTIONS (descending — only if currently above)
-    # Threshold - 5 hysteresis to demote
-    # ===================================================
-
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_global_power value = 245 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            check_variable = { var = arm_global_power value = 165 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
-            check_variable = { var = arm_global_power value = 95 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
-            check_variable = { var = arm_global_power value = 45 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
-            check_variable = { var = arm_global_power value = 17 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 0 }
-    }
-
-    # ===================================================
-    # Base lag by tier
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        # Superpowers stay near the frontier, but should not be universally perfect.
-        set_variable = { arm_base_lag = 0.25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_base_lag = 2.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_base_lag = 3.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_base_lag = 4.5 }
-    }
-    else = {
-        set_variable = { arm_base_lag = 6.0 }
-    }
-
-    # ===================================================
-    # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
-    }
-    else = {
-        set_variable = { arm_quarterly_cap = 1 }
-    }
-
-    # ===================================================
-    # Rule 7 — Grant cap modifier
-    # ===================================================
-    if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
-        }
-        # Divide by 2, round up: add 1 then divide by 2 (integer)
-        add_to_variable = { arm_quarterly_cap = 1 }
-        divide_variable = { arm_quarterly_cap = 2 }
-        # Clamp to at least 1
-        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
-        }
-        set_variable = { arm_quarterly_cap = 999 }
-    }
-    # ARM_CAP_STANDARD: use as-is (no change)
-
-    # ===================================================
-    # Rule 2 — Intensity modifier on base lag
+    # Rule 2 — ARM mode modifier on base lag
     # ===================================================
     if = {
         limit = {
@@ -871,7 +623,7 @@ arm_assign_power_tier_endsieg = {
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
+        set_variable = { arm_base_lag = 2.5 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
@@ -939,7 +691,7 @@ arm_assign_power_tier_endsieg = {
     # ARM_CAP_STANDARD: use as-is (no change)
 
     # ===================================================
-    # Rule 2 — Intensity modifier on base lag
+    # Rule 2 — ARM mode modifier on base lag
     # ===================================================
     if = {
         limit = {
@@ -1119,7 +871,7 @@ arm_assign_power_tier_extended_tech_tree_1960 = {
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
+        set_variable = { arm_base_lag = 2.5 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
@@ -1187,1743 +939,7 @@ arm_assign_power_tier_extended_tech_tree_1960 = {
     # ARM_CAP_STANDARD: use as-is (no change)
 
     # ===================================================
-    # Rule 2 — Intensity modifier on base lag
-    # ===================================================
-    if = {
-        limit = {
-            OR = {
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
-            }
-        }
-        add_to_variable = { arm_base_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
-        }
-        subtract_from_variable = { arm_base_lag = 0.75 }
-        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
-    }
-
-    # ===================================================
-    # Set tier average for competence bonus calculations
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_tier_avg = 90 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_tier_avg = 65 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_tier_avg = 40 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_tier_avg = 25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_tier_avg = 12 }
-    }
-    else = {
-        set_variable = { arm_tier_avg = 5 }
-    }
-
-    # --- Fire tier change event if tier changed ---
-    if = {
-        limit = {
-            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
-            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
-        }
-        country_event = { id = arm_event.2 }
-    }
-}
-
-arm_assign_power_tier_novum_vexillum = {
-
-    # --- Initialize tier if it has never been set ---
-    if = {
-        limit = {
-            NOT = { has_country_flag = arm_tier_initialized }
-        }
-        set_variable = { arm_tier_index = 0 }
-        set_country_flag = arm_tier_initialized
-    }
-
-    # Save old tier for change detection
-    set_variable = { arm_old_tier_index = arm_tier_index }
-
-    # ===================================================
-    # PROMOTIONS (ascending — only if currently below)
-    # Threshold + 5 hysteresis to promote
-    # ===================================================
-
-    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = less_than }
-            check_variable = { var = arm_global_power value = 38 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = less_than }
-            check_variable = { var = arm_global_power value = 80 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = less_than }
-            check_variable = { var = arm_global_power value = 155 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = less_than }
-            check_variable = { var = arm_global_power value = 265 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 5 compare = less_than }
-            check_variable = { var = arm_global_power value = 385 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 5 }
-    }
-
-    # ===================================================
-    # DEMOTIONS (descending — only if currently above)
-    # Threshold - 5 hysteresis to demote
-    # ===================================================
-
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_global_power value = 375 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            check_variable = { var = arm_global_power value = 255 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
-            check_variable = { var = arm_global_power value = 145 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
-            check_variable = { var = arm_global_power value = 70 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
-            check_variable = { var = arm_global_power value = 28 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 0 }
-    }
-
-    # ===================================================
-    # Base lag by tier
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        # Superpowers stay near the frontier, but should not be universally perfect.
-        set_variable = { arm_base_lag = 0.25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_base_lag = 2.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_base_lag = 3.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_base_lag = 4.5 }
-    }
-    else = {
-        set_variable = { arm_base_lag = 6.0 }
-    }
-
-    # ===================================================
-    # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
-    }
-    else = {
-        set_variable = { arm_quarterly_cap = 1 }
-    }
-
-    # ===================================================
-    # Rule 7 — Grant cap modifier
-    # ===================================================
-    if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
-        }
-        # Divide by 2, round up: add 1 then divide by 2 (integer)
-        add_to_variable = { arm_quarterly_cap = 1 }
-        divide_variable = { arm_quarterly_cap = 2 }
-        # Clamp to at least 1
-        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
-        }
-        set_variable = { arm_quarterly_cap = 999 }
-    }
-    # ARM_CAP_STANDARD: use as-is (no change)
-
-    # ===================================================
-    # Rule 2 — Intensity modifier on base lag
-    # ===================================================
-    if = {
-        limit = {
-            OR = {
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
-            }
-        }
-        add_to_variable = { arm_base_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
-        }
-        subtract_from_variable = { arm_base_lag = 0.75 }
-        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
-    }
-
-    # ===================================================
-    # Set tier average for competence bonus calculations
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_tier_avg = 90 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_tier_avg = 65 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_tier_avg = 40 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_tier_avg = 25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_tier_avg = 12 }
-    }
-    else = {
-        set_variable = { arm_tier_avg = 5 }
-    }
-
-    # --- Fire tier change event if tier changed ---
-    if = {
-        limit = {
-            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
-            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
-        }
-        country_event = { id = arm_event.2 }
-    }
-}
-
-arm_assign_power_tier_rise_of_nations = {
-
-    # --- Initialize tier if it has never been set ---
-    if = {
-        limit = {
-            NOT = { has_country_flag = arm_tier_initialized }
-        }
-        set_variable = { arm_tier_index = 0 }
-        set_country_flag = arm_tier_initialized
-    }
-
-    # Save old tier for change detection
-    set_variable = { arm_old_tier_index = arm_tier_index }
-
-    # ===================================================
-    # PROMOTIONS (ascending — only if currently below)
-    # Threshold + 5 hysteresis to promote
-    # ===================================================
-
-    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = less_than }
-            check_variable = { var = arm_global_power value = 40 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = less_than }
-            check_variable = { var = arm_global_power value = 85 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = less_than }
-            check_variable = { var = arm_global_power value = 165 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = less_than }
-            check_variable = { var = arm_global_power value = 285 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 5 compare = less_than }
-            check_variable = { var = arm_global_power value = 405 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 5 }
-    }
-
-    # ===================================================
-    # DEMOTIONS (descending — only if currently above)
-    # Threshold - 5 hysteresis to demote
-    # ===================================================
-
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_global_power value = 395 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            check_variable = { var = arm_global_power value = 275 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
-            check_variable = { var = arm_global_power value = 155 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
-            check_variable = { var = arm_global_power value = 75 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
-            check_variable = { var = arm_global_power value = 30 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 0 }
-    }
-
-    # ===================================================
-    # Base lag by tier
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        # Superpowers stay near the frontier, but should not be universally perfect.
-        set_variable = { arm_base_lag = 0.25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_base_lag = 2.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_base_lag = 3.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_base_lag = 4.5 }
-    }
-    else = {
-        set_variable = { arm_base_lag = 6.0 }
-    }
-
-    # ===================================================
-    # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
-    }
-    else = {
-        set_variable = { arm_quarterly_cap = 1 }
-    }
-
-    # ===================================================
-    # Rule 7 — Grant cap modifier
-    # ===================================================
-    if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
-        }
-        # Divide by 2, round up: add 1 then divide by 2 (integer)
-        add_to_variable = { arm_quarterly_cap = 1 }
-        divide_variable = { arm_quarterly_cap = 2 }
-        # Clamp to at least 1
-        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
-        }
-        set_variable = { arm_quarterly_cap = 999 }
-    }
-    # ARM_CAP_STANDARD: use as-is (no change)
-
-    # ===================================================
-    # Rule 2 — Intensity modifier on base lag
-    # ===================================================
-    if = {
-        limit = {
-            OR = {
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
-            }
-        }
-        add_to_variable = { arm_base_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
-        }
-        subtract_from_variable = { arm_base_lag = 0.75 }
-        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
-    }
-
-    # ===================================================
-    # Set tier average for competence bonus calculations
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_tier_avg = 90 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_tier_avg = 65 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_tier_avg = 40 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_tier_avg = 25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_tier_avg = 12 }
-    }
-    else = {
-        set_variable = { arm_tier_avg = 5 }
-    }
-
-    # --- Fire tier change event if tier changed ---
-    if = {
-        limit = {
-            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
-            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
-        }
-        country_event = { id = arm_event.2 }
-    }
-}
-
-arm_assign_power_tier_kaiserredux = {
-
-    # --- Initialize tier if it has never been set ---
-    if = {
-        limit = {
-            NOT = { has_country_flag = arm_tier_initialized }
-        }
-        set_variable = { arm_tier_index = 0 }
-        set_country_flag = arm_tier_initialized
-    }
-
-    # Save old tier for change detection
-    set_variable = { arm_old_tier_index = arm_tier_index }
-
-    # ===================================================
-    # PROMOTIONS (ascending — only if currently below)
-    # Threshold + 5 hysteresis to promote
-    # ===================================================
-
-    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = less_than }
-            check_variable = { var = arm_global_power value = 27 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = less_than }
-            check_variable = { var = arm_global_power value = 55 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = less_than }
-            check_variable = { var = arm_global_power value = 107 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = less_than }
-            check_variable = { var = arm_global_power value = 180 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 5 compare = less_than }
-            check_variable = { var = arm_global_power value = 260 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 5 }
-    }
-
-    # ===================================================
-    # DEMOTIONS (descending — only if currently above)
-    # Threshold - 5 hysteresis to demote
-    # ===================================================
-
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_global_power value = 250 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            check_variable = { var = arm_global_power value = 170 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
-            check_variable = { var = arm_global_power value = 97 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
-            check_variable = { var = arm_global_power value = 45 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
-            check_variable = { var = arm_global_power value = 17 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 0 }
-    }
-
-    # ===================================================
-    # Base lag by tier
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        # Superpowers stay near the frontier, but should not be universally perfect.
-        set_variable = { arm_base_lag = 0.25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_base_lag = 2.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_base_lag = 3.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_base_lag = 4.5 }
-    }
-    else = {
-        set_variable = { arm_base_lag = 6.0 }
-    }
-
-    # ===================================================
-    # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
-    }
-    else = {
-        set_variable = { arm_quarterly_cap = 1 }
-    }
-
-    # ===================================================
-    # Rule 7 — Grant cap modifier
-    # ===================================================
-    if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
-        }
-        # Divide by 2, round up: add 1 then divide by 2 (integer)
-        add_to_variable = { arm_quarterly_cap = 1 }
-        divide_variable = { arm_quarterly_cap = 2 }
-        # Clamp to at least 1
-        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
-        }
-        set_variable = { arm_quarterly_cap = 999 }
-    }
-    # ARM_CAP_STANDARD: use as-is (no change)
-
-    # ===================================================
-    # Rule 2 — Intensity modifier on base lag
-    # ===================================================
-    if = {
-        limit = {
-            OR = {
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
-            }
-        }
-        add_to_variable = { arm_base_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
-        }
-        subtract_from_variable = { arm_base_lag = 0.75 }
-        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
-    }
-
-    # ===================================================
-    # Set tier average for competence bonus calculations
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_tier_avg = 90 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_tier_avg = 65 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_tier_avg = 40 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_tier_avg = 25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_tier_avg = 12 }
-    }
-    else = {
-        set_variable = { arm_tier_avg = 5 }
-    }
-
-    # --- Fire tier change event if tier changed ---
-    if = {
-        limit = {
-            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
-            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
-        }
-        country_event = { id = arm_event.2 }
-    }
-}
-
-arm_assign_power_tier_the_new_order = {
-
-    # --- Initialize tier if it has never been set ---
-    if = {
-        limit = {
-            NOT = { has_country_flag = arm_tier_initialized }
-        }
-        set_variable = { arm_tier_index = 0 }
-        set_country_flag = arm_tier_initialized
-    }
-
-    # Save old tier for change detection
-    set_variable = { arm_old_tier_index = arm_tier_index }
-
-    # ===================================================
-    # PROMOTIONS (ascending — only if currently below)
-    # Threshold + 5 hysteresis to promote
-    # ===================================================
-
-    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = less_than }
-            check_variable = { var = arm_global_power value = 30 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = less_than }
-            check_variable = { var = arm_global_power value = 65 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = less_than }
-            check_variable = { var = arm_global_power value = 125 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = less_than }
-            check_variable = { var = arm_global_power value = 210 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 5 compare = less_than }
-            check_variable = { var = arm_global_power value = 305 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 5 }
-    }
-
-    # ===================================================
-    # DEMOTIONS (descending — only if currently above)
-    # Threshold - 5 hysteresis to demote
-    # ===================================================
-
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_global_power value = 295 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            check_variable = { var = arm_global_power value = 200 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
-            check_variable = { var = arm_global_power value = 115 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
-            check_variable = { var = arm_global_power value = 55 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
-            check_variable = { var = arm_global_power value = 20 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 0 }
-    }
-
-    # ===================================================
-    # Base lag by tier
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        # Superpowers stay near the frontier, but should not be universally perfect.
-        set_variable = { arm_base_lag = 0.25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_base_lag = 2.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_base_lag = 3.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_base_lag = 4.5 }
-    }
-    else = {
-        set_variable = { arm_base_lag = 6.0 }
-    }
-
-    # ===================================================
-    # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
-    }
-    else = {
-        set_variable = { arm_quarterly_cap = 1 }
-    }
-
-    # ===================================================
-    # Rule 7 — Grant cap modifier
-    # ===================================================
-    if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
-        }
-        # Divide by 2, round up: add 1 then divide by 2 (integer)
-        add_to_variable = { arm_quarterly_cap = 1 }
-        divide_variable = { arm_quarterly_cap = 2 }
-        # Clamp to at least 1
-        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
-        }
-        set_variable = { arm_quarterly_cap = 999 }
-    }
-    # ARM_CAP_STANDARD: use as-is (no change)
-
-    # ===================================================
-    # Rule 2 — Intensity modifier on base lag
-    # ===================================================
-    if = {
-        limit = {
-            OR = {
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
-            }
-        }
-        add_to_variable = { arm_base_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
-        }
-        subtract_from_variable = { arm_base_lag = 0.75 }
-        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
-    }
-
-    # ===================================================
-    # Set tier average for competence bonus calculations
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_tier_avg = 90 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_tier_avg = 65 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_tier_avg = 40 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_tier_avg = 25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_tier_avg = 12 }
-    }
-    else = {
-        set_variable = { arm_tier_avg = 5 }
-    }
-
-    # --- Fire tier change event if tier changed ---
-    if = {
-        limit = {
-            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
-            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
-        }
-        country_event = { id = arm_event.2 }
-    }
-}
-
-arm_assign_power_tier_millennium_dawn = {
-
-    # --- Initialize tier if it has never been set ---
-    if = {
-        limit = {
-            NOT = { has_country_flag = arm_tier_initialized }
-        }
-        set_variable = { arm_tier_index = 0 }
-        set_country_flag = arm_tier_initialized
-    }
-
-    # Save old tier for change detection
-    set_variable = { arm_old_tier_index = arm_tier_index }
-
-    # ===================================================
-    # PROMOTIONS (ascending — only if currently below)
-    # Threshold + 5 hysteresis to promote
-    # ===================================================
-
-    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = less_than }
-            check_variable = { var = arm_global_power value = 40 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = less_than }
-            check_variable = { var = arm_global_power value = 85 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = less_than }
-            check_variable = { var = arm_global_power value = 165 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = less_than }
-            check_variable = { var = arm_global_power value = 285 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 5 compare = less_than }
-            check_variable = { var = arm_global_power value = 405 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 5 }
-    }
-
-    # ===================================================
-    # DEMOTIONS (descending — only if currently above)
-    # Threshold - 5 hysteresis to demote
-    # ===================================================
-
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_global_power value = 395 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            check_variable = { var = arm_global_power value = 275 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
-            check_variable = { var = arm_global_power value = 155 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
-            check_variable = { var = arm_global_power value = 75 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
-            check_variable = { var = arm_global_power value = 30 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 0 }
-    }
-
-    # ===================================================
-    # Base lag by tier
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        # Superpowers stay near the frontier, but should not be universally perfect.
-        set_variable = { arm_base_lag = 0.25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_base_lag = 2.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_base_lag = 3.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_base_lag = 4.5 }
-    }
-    else = {
-        set_variable = { arm_base_lag = 6.0 }
-    }
-
-    # ===================================================
-    # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
-    }
-    else = {
-        set_variable = { arm_quarterly_cap = 1 }
-    }
-
-    # ===================================================
-    # Rule 7 — Grant cap modifier
-    # ===================================================
-    if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
-        }
-        # Divide by 2, round up: add 1 then divide by 2 (integer)
-        add_to_variable = { arm_quarterly_cap = 1 }
-        divide_variable = { arm_quarterly_cap = 2 }
-        # Clamp to at least 1
-        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
-        }
-        set_variable = { arm_quarterly_cap = 999 }
-    }
-    # ARM_CAP_STANDARD: use as-is (no change)
-
-    # ===================================================
-    # Rule 2 — Intensity modifier on base lag
-    # ===================================================
-    if = {
-        limit = {
-            OR = {
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
-            }
-        }
-        add_to_variable = { arm_base_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
-        }
-        subtract_from_variable = { arm_base_lag = 0.75 }
-        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
-    }
-
-    # ===================================================
-    # Set tier average for competence bonus calculations
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_tier_avg = 90 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_tier_avg = 65 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_tier_avg = 40 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_tier_avg = 25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_tier_avg = 12 }
-    }
-    else = {
-        set_variable = { arm_tier_avg = 5 }
-    }
-
-    # --- Fire tier change event if tier changed ---
-    if = {
-        limit = {
-            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
-            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
-        }
-        country_event = { id = arm_event.2 }
-    }
-}
-
-arm_assign_power_tier_the_fire_rises = {
-
-    # --- Initialize tier if it has never been set ---
-    if = {
-        limit = {
-            NOT = { has_country_flag = arm_tier_initialized }
-        }
-        set_variable = { arm_tier_index = 0 }
-        set_country_flag = arm_tier_initialized
-    }
-
-    # Save old tier for change detection
-    set_variable = { arm_old_tier_index = arm_tier_index }
-
-    # ===================================================
-    # PROMOTIONS (ascending — only if currently below)
-    # Threshold + 5 hysteresis to promote
-    # ===================================================
-
-    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = less_than }
-            check_variable = { var = arm_global_power value = 40 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = less_than }
-            check_variable = { var = arm_global_power value = 90 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = less_than }
-            check_variable = { var = arm_global_power value = 175 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = less_than }
-            check_variable = { var = arm_global_power value = 295 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 5 compare = less_than }
-            check_variable = { var = arm_global_power value = 425 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 5 }
-    }
-
-    # ===================================================
-    # DEMOTIONS (descending — only if currently above)
-    # Threshold - 5 hysteresis to demote
-    # ===================================================
-
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_global_power value = 415 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            check_variable = { var = arm_global_power value = 285 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
-            check_variable = { var = arm_global_power value = 165 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
-            check_variable = { var = arm_global_power value = 80 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
-            check_variable = { var = arm_global_power value = 30 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 0 }
-    }
-
-    # ===================================================
-    # Base lag by tier
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        # Superpowers stay near the frontier, but should not be universally perfect.
-        set_variable = { arm_base_lag = 0.25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_base_lag = 2.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_base_lag = 3.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_base_lag = 4.5 }
-    }
-    else = {
-        set_variable = { arm_base_lag = 6.0 }
-    }
-
-    # ===================================================
-    # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
-    }
-    else = {
-        set_variable = { arm_quarterly_cap = 1 }
-    }
-
-    # ===================================================
-    # Rule 7 — Grant cap modifier
-    # ===================================================
-    if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
-        }
-        # Divide by 2, round up: add 1 then divide by 2 (integer)
-        add_to_variable = { arm_quarterly_cap = 1 }
-        divide_variable = { arm_quarterly_cap = 2 }
-        # Clamp to at least 1
-        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
-        }
-        set_variable = { arm_quarterly_cap = 999 }
-    }
-    # ARM_CAP_STANDARD: use as-is (no change)
-
-    # ===================================================
-    # Rule 2 — Intensity modifier on base lag
-    # ===================================================
-    if = {
-        limit = {
-            OR = {
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
-                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
-            }
-        }
-        add_to_variable = { arm_base_lag = 1.0 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
-        }
-        subtract_from_variable = { arm_base_lag = 0.75 }
-        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
-    }
-
-    # ===================================================
-    # Set tier average for competence bonus calculations
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_tier_avg = 90 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_tier_avg = 65 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_tier_avg = 40 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_tier_avg = 25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_tier_avg = 12 }
-    }
-    else = {
-        set_variable = { arm_tier_avg = 5 }
-    }
-
-    # --- Fire tier change event if tier changed ---
-    if = {
-        limit = {
-            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
-            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
-        }
-        country_event = { id = arm_event.2 }
-    }
-}
-
-arm_assign_power_tier_great_war_redux = {
-
-    # --- Initialize tier if it has never been set ---
-    if = {
-        limit = {
-            NOT = { has_country_flag = arm_tier_initialized }
-        }
-        set_variable = { arm_tier_index = 0 }
-        set_country_flag = arm_tier_initialized
-    }
-
-    # Save old tier for change detection
-    set_variable = { arm_old_tier_index = arm_tier_index }
-
-    # ===================================================
-    # PROMOTIONS (ascending — only if currently below)
-    # Threshold + 5 hysteresis to promote
-    # ===================================================
-
-    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = less_than }
-            check_variable = { var = arm_global_power value = 20 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = less_than }
-            check_variable = { var = arm_global_power value = 41 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = less_than }
-            check_variable = { var = arm_global_power value = 77 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = less_than }
-            check_variable = { var = arm_global_power value = 130 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 5 compare = less_than }
-            check_variable = { var = arm_global_power value = 190 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 5 }
-    }
-
-    # ===================================================
-    # DEMOTIONS (descending — only if currently above)
-    # Threshold - 5 hysteresis to demote
-    # ===================================================
-
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_global_power value = 180 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            check_variable = { var = arm_global_power value = 120 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
-            check_variable = { var = arm_global_power value = 67 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
-            check_variable = { var = arm_global_power value = 31 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
-            check_variable = { var = arm_global_power value = 10 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 0 }
-    }
-
-    # ===================================================
-    # Base lag by tier
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        # Superpowers stay near the frontier, but should not be universally perfect.
-        set_variable = { arm_base_lag = 0.25 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_base_lag = 2.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_base_lag = 3.5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_base_lag = 4.5 }
-    }
-    else = {
-        set_variable = { arm_base_lag = 6.0 }
-    }
-
-    # ===================================================
-    # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
-    # ===================================================
-    if = {
-        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
-    }
-    else_if = {
-        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
-    }
-    else = {
-        set_variable = { arm_quarterly_cap = 1 }
-    }
-
-    # ===================================================
-    # Rule 7 — Grant cap modifier
-    # ===================================================
-    if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
-        }
-        # Divide by 2, round up: add 1 then divide by 2 (integer)
-        add_to_variable = { arm_quarterly_cap = 1 }
-        divide_variable = { arm_quarterly_cap = 2 }
-        # Clamp to at least 1
-        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
-    }
-    else_if = {
-        limit = {
-            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
-        }
-        set_variable = { arm_quarterly_cap = 999 }
-    }
-    # ARM_CAP_STANDARD: use as-is (no change)
-
-    # ===================================================
-    # Rule 2 — Intensity modifier on base lag
+    # Rule 2 — ARM mode modifier on base lag
     # ===================================================
     if = {
         limit = {
@@ -3103,7 +1119,7 @@ arm_assign_power_tier_great_war = {
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
+        set_variable = { arm_base_lag = 2.5 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
@@ -3171,7 +1187,1495 @@ arm_assign_power_tier_great_war = {
     # ARM_CAP_STANDARD: use as-is (no change)
 
     # ===================================================
-    # Rule 2 — Intensity modifier on base lag
+    # Rule 2 — ARM mode modifier on base lag
+    # ===================================================
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        add_to_variable = { arm_base_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
+        }
+        subtract_from_variable = { arm_base_lag = 0.75 }
+        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
+    }
+
+    # ===================================================
+    # Set tier average for competence bonus calculations
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_tier_avg = 90 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_tier_avg = 65 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_tier_avg = 40 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_tier_avg = 25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_tier_avg = 12 }
+    }
+    else = {
+        set_variable = { arm_tier_avg = 5 }
+    }
+
+    # --- Fire tier change event if tier changed ---
+    if = {
+        limit = {
+            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
+            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
+        }
+        country_event = { id = arm_event.2 }
+    }
+}
+
+arm_assign_power_tier_great_war_redux = {
+
+    # --- Initialize tier if it has never been set ---
+    if = {
+        limit = {
+            NOT = { has_country_flag = arm_tier_initialized }
+        }
+        set_variable = { arm_tier_index = 0 }
+        set_country_flag = arm_tier_initialized
+    }
+
+    # Save old tier for change detection
+    set_variable = { arm_old_tier_index = arm_tier_index }
+
+    # ===================================================
+    # PROMOTIONS (ascending — only if currently below)
+    # Threshold + 5 hysteresis to promote
+    # ===================================================
+
+    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = less_than }
+            check_variable = { var = arm_global_power value = 20 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = less_than }
+            check_variable = { var = arm_global_power value = 41 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = less_than }
+            check_variable = { var = arm_global_power value = 77 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = less_than }
+            check_variable = { var = arm_global_power value = 130 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 5 compare = less_than }
+            check_variable = { var = arm_global_power value = 190 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 5 }
+    }
+
+    # ===================================================
+    # DEMOTIONS (descending — only if currently above)
+    # Threshold - 5 hysteresis to demote
+    # ===================================================
+
+    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_global_power value = 180 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_global_power value = 120 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_global_power value = 67 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_global_power value = 31 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+            check_variable = { var = arm_global_power value = 10 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 0 }
+    }
+
+    # ===================================================
+    # Base lag by tier
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        # Superpowers stay near the frontier, but should not be universally perfect.
+        set_variable = { arm_base_lag = 0.25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_base_lag = 3.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_base_lag = 4.5 }
+    }
+    else = {
+        set_variable = { arm_base_lag = 6.0 }
+    }
+
+    # ===================================================
+    # Quarterly cap by tier
+    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_quarterly_cap = 6 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_quarterly_cap = 5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_quarterly_cap = 4 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_quarterly_cap = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_quarterly_cap = 2 }
+    }
+    else = {
+        set_variable = { arm_quarterly_cap = 1 }
+    }
+
+    # ===================================================
+    # Rule 7 — Grant cap modifier
+    # ===================================================
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
+        }
+        # Divide by 2, round up: add 1 then divide by 2 (integer)
+        add_to_variable = { arm_quarterly_cap = 1 }
+        divide_variable = { arm_quarterly_cap = 2 }
+        # Clamp to at least 1
+        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
+        }
+        set_variable = { arm_quarterly_cap = 999 }
+    }
+    # ARM_CAP_STANDARD: use as-is (no change)
+
+    # ===================================================
+    # Rule 2 — ARM mode modifier on base lag
+    # ===================================================
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        add_to_variable = { arm_base_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
+        }
+        subtract_from_variable = { arm_base_lag = 0.75 }
+        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
+    }
+
+    # ===================================================
+    # Set tier average for competence bonus calculations
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_tier_avg = 90 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_tier_avg = 65 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_tier_avg = 40 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_tier_avg = 25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_tier_avg = 12 }
+    }
+    else = {
+        set_variable = { arm_tier_avg = 5 }
+    }
+
+    # --- Fire tier change event if tier changed ---
+    if = {
+        limit = {
+            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
+            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
+        }
+        country_event = { id = arm_event.2 }
+    }
+}
+
+arm_assign_power_tier_kaiserredux = {
+
+    # --- Initialize tier if it has never been set ---
+    if = {
+        limit = {
+            NOT = { has_country_flag = arm_tier_initialized }
+        }
+        set_variable = { arm_tier_index = 0 }
+        set_country_flag = arm_tier_initialized
+    }
+
+    # Save old tier for change detection
+    set_variable = { arm_old_tier_index = arm_tier_index }
+
+    # ===================================================
+    # PROMOTIONS (ascending — only if currently below)
+    # Threshold + 5 hysteresis to promote
+    # ===================================================
+
+    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = less_than }
+            check_variable = { var = arm_global_power value = 27 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = less_than }
+            check_variable = { var = arm_global_power value = 55 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = less_than }
+            check_variable = { var = arm_global_power value = 107 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = less_than }
+            check_variable = { var = arm_global_power value = 180 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 5 compare = less_than }
+            check_variable = { var = arm_global_power value = 260 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 5 }
+    }
+
+    # ===================================================
+    # DEMOTIONS (descending — only if currently above)
+    # Threshold - 5 hysteresis to demote
+    # ===================================================
+
+    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_global_power value = 250 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_global_power value = 170 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_global_power value = 97 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_global_power value = 45 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+            check_variable = { var = arm_global_power value = 17 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 0 }
+    }
+
+    # ===================================================
+    # Base lag by tier
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        # Superpowers stay near the frontier, but should not be universally perfect.
+        set_variable = { arm_base_lag = 0.25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_base_lag = 3.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_base_lag = 4.5 }
+    }
+    else = {
+        set_variable = { arm_base_lag = 6.0 }
+    }
+
+    # ===================================================
+    # Quarterly cap by tier
+    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_quarterly_cap = 6 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_quarterly_cap = 5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_quarterly_cap = 4 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_quarterly_cap = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_quarterly_cap = 2 }
+    }
+    else = {
+        set_variable = { arm_quarterly_cap = 1 }
+    }
+
+    # ===================================================
+    # Rule 7 — Grant cap modifier
+    # ===================================================
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
+        }
+        # Divide by 2, round up: add 1 then divide by 2 (integer)
+        add_to_variable = { arm_quarterly_cap = 1 }
+        divide_variable = { arm_quarterly_cap = 2 }
+        # Clamp to at least 1
+        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
+        }
+        set_variable = { arm_quarterly_cap = 999 }
+    }
+    # ARM_CAP_STANDARD: use as-is (no change)
+
+    # ===================================================
+    # Rule 2 — ARM mode modifier on base lag
+    # ===================================================
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        add_to_variable = { arm_base_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
+        }
+        subtract_from_variable = { arm_base_lag = 0.75 }
+        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
+    }
+
+    # ===================================================
+    # Set tier average for competence bonus calculations
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_tier_avg = 90 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_tier_avg = 65 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_tier_avg = 40 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_tier_avg = 25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_tier_avg = 12 }
+    }
+    else = {
+        set_variable = { arm_tier_avg = 5 }
+    }
+
+    # --- Fire tier change event if tier changed ---
+    if = {
+        limit = {
+            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
+            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
+        }
+        country_event = { id = arm_event.2 }
+    }
+}
+
+arm_assign_power_tier_kaiserreich = {
+
+    # --- Initialize tier if it has never been set ---
+    if = {
+        limit = {
+            NOT = { has_country_flag = arm_tier_initialized }
+        }
+        set_variable = { arm_tier_index = 0 }
+        set_country_flag = arm_tier_initialized
+    }
+
+    # Save old tier for change detection
+    set_variable = { arm_old_tier_index = arm_tier_index }
+
+    # ===================================================
+    # PROMOTIONS (ascending — only if currently below)
+    # Threshold + 5 hysteresis to promote
+    # ===================================================
+
+    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = less_than }
+            check_variable = { var = arm_global_power value = 27 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = less_than }
+            check_variable = { var = arm_global_power value = 55 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = less_than }
+            check_variable = { var = arm_global_power value = 105 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = less_than }
+            check_variable = { var = arm_global_power value = 175 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 5 compare = less_than }
+            check_variable = { var = arm_global_power value = 255 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 5 }
+    }
+
+    # ===================================================
+    # DEMOTIONS (descending — only if currently above)
+    # Threshold - 5 hysteresis to demote
+    # ===================================================
+
+    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_global_power value = 245 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_global_power value = 165 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_global_power value = 95 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_global_power value = 45 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+            check_variable = { var = arm_global_power value = 17 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 0 }
+    }
+
+    # ===================================================
+    # Base lag by tier
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        # Superpowers stay near the frontier, but should not be universally perfect.
+        set_variable = { arm_base_lag = 0.25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_base_lag = 3.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_base_lag = 4.5 }
+    }
+    else = {
+        set_variable = { arm_base_lag = 6.0 }
+    }
+
+    # ===================================================
+    # Quarterly cap by tier
+    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_quarterly_cap = 6 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_quarterly_cap = 5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_quarterly_cap = 4 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_quarterly_cap = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_quarterly_cap = 2 }
+    }
+    else = {
+        set_variable = { arm_quarterly_cap = 1 }
+    }
+
+    # ===================================================
+    # Rule 7 — Grant cap modifier
+    # ===================================================
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
+        }
+        # Divide by 2, round up: add 1 then divide by 2 (integer)
+        add_to_variable = { arm_quarterly_cap = 1 }
+        divide_variable = { arm_quarterly_cap = 2 }
+        # Clamp to at least 1
+        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
+        }
+        set_variable = { arm_quarterly_cap = 999 }
+    }
+    # ARM_CAP_STANDARD: use as-is (no change)
+
+    # ===================================================
+    # Rule 2 — ARM mode modifier on base lag
+    # ===================================================
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        add_to_variable = { arm_base_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
+        }
+        subtract_from_variable = { arm_base_lag = 0.75 }
+        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
+    }
+
+    # ===================================================
+    # Set tier average for competence bonus calculations
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_tier_avg = 90 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_tier_avg = 65 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_tier_avg = 40 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_tier_avg = 25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_tier_avg = 12 }
+    }
+    else = {
+        set_variable = { arm_tier_avg = 5 }
+    }
+
+    # --- Fire tier change event if tier changed ---
+    if = {
+        limit = {
+            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
+            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
+        }
+        country_event = { id = arm_event.2 }
+    }
+}
+
+arm_assign_power_tier_millennium_dawn = {
+
+    # --- Initialize tier if it has never been set ---
+    if = {
+        limit = {
+            NOT = { has_country_flag = arm_tier_initialized }
+        }
+        set_variable = { arm_tier_index = 0 }
+        set_country_flag = arm_tier_initialized
+    }
+
+    # Save old tier for change detection
+    set_variable = { arm_old_tier_index = arm_tier_index }
+
+    # ===================================================
+    # PROMOTIONS (ascending — only if currently below)
+    # Threshold + 5 hysteresis to promote
+    # ===================================================
+
+    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = less_than }
+            check_variable = { var = arm_global_power value = 40 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = less_than }
+            check_variable = { var = arm_global_power value = 85 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = less_than }
+            check_variable = { var = arm_global_power value = 165 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = less_than }
+            check_variable = { var = arm_global_power value = 285 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 5 compare = less_than }
+            check_variable = { var = arm_global_power value = 405 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 5 }
+    }
+
+    # ===================================================
+    # DEMOTIONS (descending — only if currently above)
+    # Threshold - 5 hysteresis to demote
+    # ===================================================
+
+    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_global_power value = 395 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_global_power value = 275 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_global_power value = 155 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_global_power value = 75 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+            check_variable = { var = arm_global_power value = 30 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 0 }
+    }
+
+    # ===================================================
+    # Base lag by tier
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        # Superpowers stay near the frontier, but should not be universally perfect.
+        set_variable = { arm_base_lag = 0.25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_base_lag = 3.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_base_lag = 4.5 }
+    }
+    else = {
+        set_variable = { arm_base_lag = 6.0 }
+    }
+
+    # ===================================================
+    # Quarterly cap by tier
+    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_quarterly_cap = 6 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_quarterly_cap = 5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_quarterly_cap = 4 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_quarterly_cap = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_quarterly_cap = 2 }
+    }
+    else = {
+        set_variable = { arm_quarterly_cap = 1 }
+    }
+
+    # ===================================================
+    # Rule 7 — Grant cap modifier
+    # ===================================================
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
+        }
+        # Divide by 2, round up: add 1 then divide by 2 (integer)
+        add_to_variable = { arm_quarterly_cap = 1 }
+        divide_variable = { arm_quarterly_cap = 2 }
+        # Clamp to at least 1
+        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
+        }
+        set_variable = { arm_quarterly_cap = 999 }
+    }
+    # ARM_CAP_STANDARD: use as-is (no change)
+
+    # ===================================================
+    # Rule 2 — ARM mode modifier on base lag
+    # ===================================================
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        add_to_variable = { arm_base_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
+        }
+        subtract_from_variable = { arm_base_lag = 0.75 }
+        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
+    }
+
+    # ===================================================
+    # Set tier average for competence bonus calculations
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_tier_avg = 90 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_tier_avg = 65 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_tier_avg = 40 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_tier_avg = 25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_tier_avg = 12 }
+    }
+    else = {
+        set_variable = { arm_tier_avg = 5 }
+    }
+
+    # --- Fire tier change event if tier changed ---
+    if = {
+        limit = {
+            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
+            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
+        }
+        country_event = { id = arm_event.2 }
+    }
+}
+
+arm_assign_power_tier_novum_vexillum = {
+
+    # --- Initialize tier if it has never been set ---
+    if = {
+        limit = {
+            NOT = { has_country_flag = arm_tier_initialized }
+        }
+        set_variable = { arm_tier_index = 0 }
+        set_country_flag = arm_tier_initialized
+    }
+
+    # Save old tier for change detection
+    set_variable = { arm_old_tier_index = arm_tier_index }
+
+    # ===================================================
+    # PROMOTIONS (ascending — only if currently below)
+    # Threshold + 5 hysteresis to promote
+    # ===================================================
+
+    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = less_than }
+            check_variable = { var = arm_global_power value = 38 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = less_than }
+            check_variable = { var = arm_global_power value = 80 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = less_than }
+            check_variable = { var = arm_global_power value = 155 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = less_than }
+            check_variable = { var = arm_global_power value = 265 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 5 compare = less_than }
+            check_variable = { var = arm_global_power value = 385 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 5 }
+    }
+
+    # ===================================================
+    # DEMOTIONS (descending — only if currently above)
+    # Threshold - 5 hysteresis to demote
+    # ===================================================
+
+    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_global_power value = 375 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_global_power value = 255 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_global_power value = 145 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_global_power value = 70 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+            check_variable = { var = arm_global_power value = 28 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 0 }
+    }
+
+    # ===================================================
+    # Base lag by tier
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        # Superpowers stay near the frontier, but should not be universally perfect.
+        set_variable = { arm_base_lag = 0.25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_base_lag = 3.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_base_lag = 4.5 }
+    }
+    else = {
+        set_variable = { arm_base_lag = 6.0 }
+    }
+
+    # ===================================================
+    # Quarterly cap by tier
+    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_quarterly_cap = 6 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_quarterly_cap = 5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_quarterly_cap = 4 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_quarterly_cap = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_quarterly_cap = 2 }
+    }
+    else = {
+        set_variable = { arm_quarterly_cap = 1 }
+    }
+
+    # ===================================================
+    # Rule 7 — Grant cap modifier
+    # ===================================================
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
+        }
+        # Divide by 2, round up: add 1 then divide by 2 (integer)
+        add_to_variable = { arm_quarterly_cap = 1 }
+        divide_variable = { arm_quarterly_cap = 2 }
+        # Clamp to at least 1
+        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
+        }
+        set_variable = { arm_quarterly_cap = 999 }
+    }
+    # ARM_CAP_STANDARD: use as-is (no change)
+
+    # ===================================================
+    # Rule 2 — ARM mode modifier on base lag
+    # ===================================================
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        add_to_variable = { arm_base_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
+        }
+        subtract_from_variable = { arm_base_lag = 0.75 }
+        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
+    }
+
+    # ===================================================
+    # Set tier average for competence bonus calculations
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_tier_avg = 90 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_tier_avg = 65 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_tier_avg = 40 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_tier_avg = 25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_tier_avg = 12 }
+    }
+    else = {
+        set_variable = { arm_tier_avg = 5 }
+    }
+
+    # --- Fire tier change event if tier changed ---
+    if = {
+        limit = {
+            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
+            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
+        }
+        country_event = { id = arm_event.2 }
+    }
+}
+
+arm_assign_power_tier_rise_of_nations = {
+
+    # --- Initialize tier if it has never been set ---
+    if = {
+        limit = {
+            NOT = { has_country_flag = arm_tier_initialized }
+        }
+        set_variable = { arm_tier_index = 0 }
+        set_country_flag = arm_tier_initialized
+    }
+
+    # Save old tier for change detection
+    set_variable = { arm_old_tier_index = arm_tier_index }
+
+    # ===================================================
+    # PROMOTIONS (ascending — only if currently below)
+    # Threshold + 5 hysteresis to promote
+    # ===================================================
+
+    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = less_than }
+            check_variable = { var = arm_global_power value = 40 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = less_than }
+            check_variable = { var = arm_global_power value = 85 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = less_than }
+            check_variable = { var = arm_global_power value = 165 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = less_than }
+            check_variable = { var = arm_global_power value = 285 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 5 compare = less_than }
+            check_variable = { var = arm_global_power value = 405 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 5 }
+    }
+
+    # ===================================================
+    # DEMOTIONS (descending — only if currently above)
+    # Threshold - 5 hysteresis to demote
+    # ===================================================
+
+    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_global_power value = 395 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_global_power value = 275 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_global_power value = 155 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_global_power value = 75 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+            check_variable = { var = arm_global_power value = 30 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 0 }
+    }
+
+    # ===================================================
+    # Base lag by tier
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        # Superpowers stay near the frontier, but should not be universally perfect.
+        set_variable = { arm_base_lag = 0.25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_base_lag = 3.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_base_lag = 4.5 }
+    }
+    else = {
+        set_variable = { arm_base_lag = 6.0 }
+    }
+
+    # ===================================================
+    # Quarterly cap by tier
+    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_quarterly_cap = 6 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_quarterly_cap = 5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_quarterly_cap = 4 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_quarterly_cap = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_quarterly_cap = 2 }
+    }
+    else = {
+        set_variable = { arm_quarterly_cap = 1 }
+    }
+
+    # ===================================================
+    # Rule 7 — Grant cap modifier
+    # ===================================================
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
+        }
+        # Divide by 2, round up: add 1 then divide by 2 (integer)
+        add_to_variable = { arm_quarterly_cap = 1 }
+        divide_variable = { arm_quarterly_cap = 2 }
+        # Clamp to at least 1
+        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
+        }
+        set_variable = { arm_quarterly_cap = 999 }
+    }
+    # ARM_CAP_STANDARD: use as-is (no change)
+
+    # ===================================================
+    # Rule 2 — ARM mode modifier on base lag
     # ===================================================
     if = {
         limit = {
@@ -3351,7 +2855,7 @@ arm_assign_power_tier_road_to_56 = {
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_base_lag = 1.5 }
+        set_variable = { arm_base_lag = 2.5 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
@@ -3419,7 +2923,503 @@ arm_assign_power_tier_road_to_56 = {
     # ARM_CAP_STANDARD: use as-is (no change)
 
     # ===================================================
-    # Rule 2 — Intensity modifier on base lag
+    # Rule 2 — ARM mode modifier on base lag
+    # ===================================================
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        add_to_variable = { arm_base_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
+        }
+        subtract_from_variable = { arm_base_lag = 0.75 }
+        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
+    }
+
+    # ===================================================
+    # Set tier average for competence bonus calculations
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_tier_avg = 90 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_tier_avg = 65 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_tier_avg = 40 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_tier_avg = 25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_tier_avg = 12 }
+    }
+    else = {
+        set_variable = { arm_tier_avg = 5 }
+    }
+
+    # --- Fire tier change event if tier changed ---
+    if = {
+        limit = {
+            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
+            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
+        }
+        country_event = { id = arm_event.2 }
+    }
+}
+
+arm_assign_power_tier_the_fire_rises = {
+
+    # --- Initialize tier if it has never been set ---
+    if = {
+        limit = {
+            NOT = { has_country_flag = arm_tier_initialized }
+        }
+        set_variable = { arm_tier_index = 0 }
+        set_country_flag = arm_tier_initialized
+    }
+
+    # Save old tier for change detection
+    set_variable = { arm_old_tier_index = arm_tier_index }
+
+    # ===================================================
+    # PROMOTIONS (ascending — only if currently below)
+    # Threshold + 5 hysteresis to promote
+    # ===================================================
+
+    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = less_than }
+            check_variable = { var = arm_global_power value = 40 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = less_than }
+            check_variable = { var = arm_global_power value = 90 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = less_than }
+            check_variable = { var = arm_global_power value = 175 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = less_than }
+            check_variable = { var = arm_global_power value = 295 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 5 compare = less_than }
+            check_variable = { var = arm_global_power value = 425 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 5 }
+    }
+
+    # ===================================================
+    # DEMOTIONS (descending — only if currently above)
+    # Threshold - 5 hysteresis to demote
+    # ===================================================
+
+    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_global_power value = 415 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_global_power value = 285 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_global_power value = 165 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_global_power value = 80 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+            check_variable = { var = arm_global_power value = 30 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 0 }
+    }
+
+    # ===================================================
+    # Base lag by tier
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        # Superpowers stay near the frontier, but should not be universally perfect.
+        set_variable = { arm_base_lag = 0.25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_base_lag = 3.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_base_lag = 4.5 }
+    }
+    else = {
+        set_variable = { arm_base_lag = 6.0 }
+    }
+
+    # ===================================================
+    # Quarterly cap by tier
+    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_quarterly_cap = 6 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_quarterly_cap = 5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_quarterly_cap = 4 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_quarterly_cap = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_quarterly_cap = 2 }
+    }
+    else = {
+        set_variable = { arm_quarterly_cap = 1 }
+    }
+
+    # ===================================================
+    # Rule 7 — Grant cap modifier
+    # ===================================================
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
+        }
+        # Divide by 2, round up: add 1 then divide by 2 (integer)
+        add_to_variable = { arm_quarterly_cap = 1 }
+        divide_variable = { arm_quarterly_cap = 2 }
+        # Clamp to at least 1
+        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
+        }
+        set_variable = { arm_quarterly_cap = 999 }
+    }
+    # ARM_CAP_STANDARD: use as-is (no change)
+
+    # ===================================================
+    # Rule 2 — ARM mode modifier on base lag
+    # ===================================================
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        add_to_variable = { arm_base_lag = 1.0 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
+        }
+        subtract_from_variable = { arm_base_lag = 0.75 }
+        clamp_variable = { var = arm_base_lag min = 0 max = 40 }
+    }
+
+    # ===================================================
+    # Set tier average for competence bonus calculations
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_tier_avg = 90 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_tier_avg = 65 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_tier_avg = 40 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_tier_avg = 25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_tier_avg = 12 }
+    }
+    else = {
+        set_variable = { arm_tier_avg = 5 }
+    }
+
+    # --- Fire tier change event if tier changed ---
+    if = {
+        limit = {
+            NOT = { check_variable = { var = arm_tier_index value = arm_old_tier_index compare = equals } }
+            NOT = { has_game_rule = { rule = arm_notifications option = ARM_NOTIFY_SILENT } }
+        }
+        country_event = { id = arm_event.2 }
+    }
+}
+
+arm_assign_power_tier_the_new_order = {
+
+    # --- Initialize tier if it has never been set ---
+    if = {
+        limit = {
+            NOT = { has_country_flag = arm_tier_initialized }
+        }
+        set_variable = { arm_tier_index = 0 }
+        set_country_flag = arm_tier_initialized
+    }
+
+    # Save old tier for change detection
+    set_variable = { arm_old_tier_index = arm_tier_index }
+
+    # ===================================================
+    # PROMOTIONS (ascending — only if currently below)
+    # Threshold + 5 hysteresis to promote
+    # ===================================================
+
+    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = less_than }
+            check_variable = { var = arm_global_power value = 30 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = less_than }
+            check_variable = { var = arm_global_power value = 65 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = less_than }
+            check_variable = { var = arm_global_power value = 125 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = less_than }
+            check_variable = { var = arm_global_power value = 210 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 5 compare = less_than }
+            check_variable = { var = arm_global_power value = 305 compare = greater_than }
+        }
+        set_variable = { arm_tier_index = 5 }
+    }
+
+    # ===================================================
+    # DEMOTIONS (descending — only if currently above)
+    # Threshold - 5 hysteresis to demote
+    # ===================================================
+
+    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_global_power value = 295 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 4 }
+    }
+
+    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_global_power value = 200 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 3 }
+    }
+
+    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_global_power value = 115 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 2 }
+    }
+
+    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_global_power value = 55 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 1 }
+    }
+
+    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
+    if = {
+        limit = {
+            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+            check_variable = { var = arm_global_power value = 20 compare = less_than }
+        }
+        set_variable = { arm_tier_index = 0 }
+    }
+
+    # ===================================================
+    # Base lag by tier
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        # Superpowers stay near the frontier, but should not be universally perfect.
+        set_variable = { arm_base_lag = 0.25 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_base_lag = 2.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_base_lag = 3.5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_base_lag = 4.5 }
+    }
+    else = {
+        set_variable = { arm_base_lag = 6.0 }
+    }
+
+    # ===================================================
+    # Quarterly cap by tier
+    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # ===================================================
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+        set_variable = { arm_quarterly_cap = 6 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+        set_variable = { arm_quarterly_cap = 5 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+        set_variable = { arm_quarterly_cap = 4 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+        set_variable = { arm_quarterly_cap = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+        set_variable = { arm_quarterly_cap = 2 }
+    }
+    else = {
+        set_variable = { arm_quarterly_cap = 1 }
+    }
+
+    # ===================================================
+    # Rule 7 — Grant cap modifier
+    # ===================================================
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
+        }
+        # Divide by 2, round up: add 1 then divide by 2 (integer)
+        add_to_variable = { arm_quarterly_cap = 1 }
+        divide_variable = { arm_quarterly_cap = 2 }
+        # Clamp to at least 1
+        clamp_variable = { var = arm_quarterly_cap min = 1 max = 999 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
+        }
+        set_variable = { arm_quarterly_cap = 999 }
+    }
+    # ARM_CAP_STANDARD: use as-is (no change)
+
+    # ===================================================
+    # Rule 2 — ARM mode modifier on base lag
     # ===================================================
     if = {
         limit = {

@@ -20,8 +20,7 @@ def run_step(args: list[str]) -> None:
 
 
 def main() -> None:
-    run_step(["Tools/generate_big_mod_compat.py"])
-    run_step(["Tools/build_builtin_compat_profiles.py"])
+    run_step(["Tools/manage_compat_profiles.py", "rebuild"])
     print("Rebuilt bundled major-mod compatibility profiles.")
 
 

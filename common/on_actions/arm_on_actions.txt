@@ -1,5 +1,5 @@
 ###############################################################################
-# arm_on_actions.txt — Startup + Monthly Pulse
+# arm_on_actions.txt - Startup + Monthly Pulse
 # Arms Race Mechanics mod
 #
 # on_startup:  Initialize globals, assign buckets, run initial scoring
@@ -13,63 +13,21 @@ on_actions = {
     # ===================================================================
     on_startup = {
         effect = {
-
-            # Initialize globals
-            set_variable = { global.arm_current_year = 0 }
-            set_variable = { global.arm_month_counter = 0 }
-            set_variable = { global.arm_bucket_counter = 0 }
-            set_variable = { global.arm_start_year = 0 }
-            set_variable = { global.arm_start_month_offset = 0 }
-            set_variable = { global.arm_elapsed_months = 0 }
-
-            # Vanilla 1939 starts in August; default all other bookmarks to January.
-            if = {
-                limit = {
-                    has_start_date > 1939.08.13
-                    has_start_date < 1939.08.15
-                }
-                set_variable = { global.arm_start_month_offset = 7 }
-            }
-
-            # Resolve current year and compat profile from a valid country scope.
-            random_country = {
-                limit = { always = yes }
-                arm_update_current_year = yes
-                arm_auto_detect_compat_profile = yes
-            }
-
-            # Initialize all countries
-            every_country = {
-
-                # Assign bucket (0, 1, or 2)
-                set_variable = { arm_bucket = global.arm_bucket_counter }
-                add_to_variable = { global.arm_bucket_counter = 1 }
-                if = {
-                    limit = { check_variable = { var = global.arm_bucket_counter value = 2 compare = greater_than } }
-                    set_variable = { global.arm_bucket_counter = 0 }
-                }
-
-                # Initialize tier to 0 (micro) — will be properly set on first evaluation
-                set_variable = { arm_tier_index = 0 }
-                set_variable = { arm_global_power = 0 }
-                set_variable = { arm_land_competence = 0 }
-                set_variable = { arm_air_competence = 0 }
-                set_variable = { arm_naval_competence = 0 }
-                set_variable = { arm_industry_competence = 0 }
-                set_variable = { arm_grant_counter = 0 }
-
-                # Run initial scoring state (but do NOT grant tech on startup)
-                arm_refresh_country_state_runtime = yes
-            }
+            arm_bootstrap_runtime_state = yes
         }
     }
 
     # ===================================================================
     # ON DAILY
     # Clears the one-day guard used by the weekly player UI refresh path.
+    # Also migrates legacy saves that add ARM after the campaign started.
     # ===================================================================
     on_daily = {
         effect = {
+            if = {
+                limit = { NOT = { has_global_flag = arm_runtime_bootstrapped } }
+                arm_bootstrap_runtime_state = yes
+            }
             if = {
                 limit = { has_global_flag = arm_ui_weekly_year_updated }
                 clr_global_flag = arm_ui_weekly_year_updated

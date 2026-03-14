@@ -24,7 +24,6 @@ arm_refresh_country_state_runtime = {
     arm_calculate_air_competence = yes
     arm_calculate_naval_competence = yes
     arm_calculate_industry_competence = yes
-    arm_apply_balanced_small_country_scaling = yes
 
     # Step 1b: Apply historical major-power bias if Historical mode is enabled
     if = {
@@ -33,6 +32,10 @@ arm_refresh_country_state_runtime = {
         }
         arm_apply_historical_bias = yes
     }
+
+    # Step 1c: Apply structural branch gates and universal power ceilings.
+    arm_apply_structural_capability_rules = yes
+    arm_apply_balanced_small_country_scaling = yes
 
     # Step 2: Assign tier using the active compatibility profile
     arm_assign_power_tier_for_profile = yes
@@ -49,6 +52,9 @@ arm_refresh_country_state_runtime = {
 
     # Step 5: Compute target years
     arm_compute_target_years = yes
+
+    # Step 5b: Cache the next monthly grant window for the UI.
+    arm_compute_next_grant_window = yes
 
     # Step 6: Update research speed spirits
     arm_update_research_speed_spirit = yes

@@ -529,6 +529,7 @@ arm_assign_allowed_categories = {
     if = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
+            num_of_naval_factories > 0
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
             check_variable = { var = arm_air_competence value = 34 compare = greater_than }
         }
@@ -551,6 +552,7 @@ arm_assign_allowed_categories = {
     if = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
+            num_of_naval_factories > 0
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 24 compare = greater_than }
         }
@@ -561,6 +563,7 @@ arm_assign_allowed_categories = {
     if = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
+            num_of_naval_factories > 0
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 24 compare = greater_than }
         }
@@ -571,6 +574,7 @@ arm_assign_allowed_categories = {
     if = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
+            num_of_naval_factories > 0
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 44 compare = greater_than }
         }
@@ -581,6 +585,7 @@ arm_assign_allowed_categories = {
     if = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
+            num_of_naval_factories > 0
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 44 compare = greater_than }
         }
@@ -591,6 +596,7 @@ arm_assign_allowed_categories = {
     if = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
+            num_of_naval_factories > 7
             check_variable = { var = arm_tier_index value = 3 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 69 compare = greater_than }
         }
@@ -601,6 +607,7 @@ arm_assign_allowed_categories = {
     if = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
+            num_of_naval_factories > 7
             check_variable = { var = arm_tier_index value = 3 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 69 compare = greater_than }
         }
@@ -611,6 +618,7 @@ arm_assign_allowed_categories = {
     if = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
+            num_of_naval_factories > 0
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 19 compare = greater_than }
         }
@@ -1101,6 +1109,28 @@ arm_compute_target_years = {
     arm_apply_frontier_buffer_to_year_gap = yes
     set_variable = { var = arm_target_year_industry value = global.arm_current_year }
     subtract_from_variable = { arm_target_year_industry = arm_temp_lag_year_gap }
+}
+
+arm_compute_next_grant_window = {
+    set_variable = { arm_months_to_next_grant = 3 }
+    set_temp_variable = { arm_next_bucket = global.arm_month_counter }
+
+    if = {
+        limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
+        set_variable = { arm_months_to_next_grant = 1 }
+    }
+    else = {
+        add_to_temp_variable = { arm_next_bucket = 1 }
+        if = {
+            limit = { check_variable = { var = arm_next_bucket value = 2 compare = greater_than } }
+            subtract_from_temp_variable = { arm_next_bucket = 3 }
+        }
+
+        if = {
+            limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
+            set_variable = { arm_months_to_next_grant = 2 }
+        }
+    }
 }
 
 #---------------------------------------------------------
