@@ -691,6 +691,23 @@ arm_prepare_country_context_cache = {
     set_variable = { arm_context_faction_bonus = 0 }
     set_variable = { arm_context_lend_lease_bonus = 0 }
     set_variable = { arm_context_puppet_bonus = 0 }
+    set_variable = { arm_context_mode_multiplier = 1.0 }
+
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        set_variable = { arm_context_mode_multiplier = 0.5 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }
+        }
+        set_variable = { arm_context_mode_multiplier = 1.25 }
+    }
 
     if = {
         limit = { has_war = yes }
@@ -794,6 +811,107 @@ arm_prepare_country_context_cache = {
         }
         set_variable = { arm_context_puppet_bonus = 0.5 }
     }
+
+    multiply_variable = { arm_context_combat_bonus = arm_context_mode_multiplier }
+    multiply_variable = { arm_context_defensive_bonus = arm_context_mode_multiplier }
+    multiply_variable = { arm_context_faction_bonus = arm_context_mode_multiplier }
+    multiply_variable = { arm_context_lend_lease_bonus = arm_context_mode_multiplier }
+    multiply_variable = { arm_context_puppet_bonus = arm_context_mode_multiplier }
+}
+
+#---------------------------------------------------------
+# Effect 3a: arm_compute_minimum_effective_lag
+#
+# Mode-sensitive lag floor. Realistic/Historical stay furthest
+# from the frontier; Arcade is loosest.
+#---------------------------------------------------------
+arm_compute_minimum_effective_lag = {
+    set_variable = { arm_minimum_effective_lag = 0.0 }
+
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        if = {
+            limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 1.0 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 1.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 2.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 3.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 4.5 }
+        }
+        else = {
+            set_variable = { arm_minimum_effective_lag = 6.0 }
+        }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_BALANCED }
+        }
+        if = {
+            limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 0.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 1.0 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 2.0 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 3.0 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 4.0 }
+        }
+        else = {
+            set_variable = { arm_minimum_effective_lag = 5.0 }
+        }
+    }
+    else = {
+        if = {
+            limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 0.0 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 0.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 1.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 2.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
+            set_variable = { arm_minimum_effective_lag = 3.5 }
+        }
+        else = {
+            set_variable = { arm_minimum_effective_lag = 4.5 }
+        }
+    }
 }
 
 #---------------------------------------------------------
@@ -804,6 +922,7 @@ arm_prepare_country_context_cache = {
 #---------------------------------------------------------
 arm_compute_effective_lag = {
     arm_prepare_country_context_cache = yes
+    arm_compute_minimum_effective_lag = yes
 
     # ===================================================
     # LAND branch - combat category
@@ -866,6 +985,10 @@ arm_compute_effective_lag = {
     }
 
     clamp_variable = { var = arm_effective_land_lag min = 0 max = 40 }
+    if = {
+        limit = { check_variable = { var = arm_effective_land_lag value = arm_minimum_effective_lag compare = less_than } }
+        set_variable = { arm_effective_land_lag = arm_minimum_effective_lag }
+    }
 
     # ===================================================
     # AIR branch - combat category
@@ -928,6 +1051,10 @@ arm_compute_effective_lag = {
     }
 
     clamp_variable = { var = arm_effective_air_lag min = 0 max = 40 }
+    if = {
+        limit = { check_variable = { var = arm_effective_air_lag value = arm_minimum_effective_lag compare = less_than } }
+        set_variable = { arm_effective_air_lag = arm_minimum_effective_lag }
+    }
 
     # ===================================================
     # NAVAL branch - tech-sharing category only
@@ -982,6 +1109,10 @@ arm_compute_effective_lag = {
     }
 
     clamp_variable = { var = arm_effective_naval_lag min = 0 max = 40 }
+    if = {
+        limit = { check_variable = { var = arm_effective_naval_lag value = arm_minimum_effective_lag compare = less_than } }
+        set_variable = { arm_effective_naval_lag = arm_minimum_effective_lag }
+    }
 
     # ===================================================
     # INDUSTRY branch - tech-sharing category only
@@ -1036,6 +1167,10 @@ arm_compute_effective_lag = {
     }
 
     clamp_variable = { var = arm_effective_industry_lag min = 0 max = 40 }
+    if = {
+        limit = { check_variable = { var = arm_effective_industry_lag value = arm_minimum_effective_lag compare = less_than } }
+        set_variable = { arm_effective_industry_lag = arm_minimum_effective_lag }
+    }
 }
 
 #---------------------------------------------------------
