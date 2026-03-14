@@ -1343,31 +1343,33 @@ arm_define_structural_bands = {
     add_to_variable = { arm_struct_naval_resource_total = arm_cached_naval_steel_bonus }
     add_to_variable = { arm_struct_naval_resource_total = arm_cached_naval_chromium_bonus }
 
+    set_variable = { arm_struct_battalion_count = num_battalions }
+
     if = {
         limit = {
             num_of_military_factories > 2
-            num_battalions > 20
+            check_variable = { var = arm_struct_battalion_count value = 20 compare = greater_than }
         }
         set_variable = { arm_struct_land_band = 1 }
     }
     if = {
         limit = {
             num_of_military_factories > 7
-            num_battalions > 60
+            check_variable = { var = arm_struct_battalion_count value = 60 compare = greater_than }
         }
         set_variable = { arm_struct_land_band = 2 }
     }
     if = {
         limit = {
             num_of_military_factories > 15
-            num_battalions > 140
+            check_variable = { var = arm_struct_battalion_count value = 140 compare = greater_than }
         }
         set_variable = { arm_struct_land_band = 3 }
     }
     if = {
         limit = {
             num_of_military_factories > 31
-            num_battalions > 260
+            check_variable = { var = arm_struct_battalion_count value = 260 compare = greater_than }
         }
         set_variable = { arm_struct_land_band = 4 }
     }

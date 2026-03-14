@@ -407,11 +407,15 @@ def extract_top_level_block(text: str, identifier: str) -> str:
 
 
 def rename_grant_effects(text: str, slug: str) -> str:
-    return re.sub(
-        r"(?m)^(arm_grant_[A-Za-z0-9_]+)\s*=",
-        lambda m: f"{m.group(1)}_{slug} =",
-        text,
-    )
+    suffix = f"_{slug}"
+
+    def repl(match: re.Match[str]) -> str:
+        token = match.group(1)
+        if token.endswith(suffix):
+            return token
+        return f"{token}{suffix}"
+
+    return re.sub(r"\b(arm_grant_[A-Za-z0-9_]+)\b", repl, text)
 
 
 def rename_tier_effect(block_text: str, slug: str) -> str:
