@@ -10,7 +10,7 @@ ideas = {
 		arm_tier_superpower = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_tier
+			picture = arm_idea_tier
 			modifier = {
 				research_speed_factor = 0.15
 			}
@@ -20,7 +20,7 @@ ideas = {
 		arm_tier_great_power = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_tier
+			picture = arm_idea_tier
 			modifier = {
 				research_speed_factor = 0.10
 			}
@@ -30,7 +30,7 @@ ideas = {
 		arm_tier_regional_power = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_tier
+			picture = arm_idea_tier
 			modifier = {
 				research_speed_factor = 0.05
 			}
@@ -40,7 +40,7 @@ ideas = {
 		arm_tier_minor_industrial = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_tier
+			picture = arm_idea_tier
 			modifier = {
 				research_speed_factor = 0
 			}
@@ -50,7 +50,7 @@ ideas = {
 		arm_tier_minor = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_tier
+			picture = arm_idea_tier
 			modifier = {
 				research_speed_factor = -0.05
 			}
@@ -60,7 +60,7 @@ ideas = {
 		arm_tier_micro = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_tier
+			picture = arm_idea_tier
 			modifier = {
 				research_speed_factor = -0.10
 			}
@@ -75,7 +75,7 @@ ideas = {
 		arm_land_cutting_edge = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_land
+			picture = arm_idea_land
 			research_bonus = {
 				infantry_weapons = 0.10
 				armor = 0.10
@@ -89,7 +89,7 @@ ideas = {
 		arm_land_advanced = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_land
+			picture = arm_idea_land
 			research_bonus = {
 				infantry_weapons = 0.05
 				armor = 0.05
@@ -103,7 +103,7 @@ ideas = {
 		arm_land_standard = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_land
+			picture = arm_idea_land
 			research_bonus = {
 				infantry_weapons = 0
 				armor = 0
@@ -117,7 +117,7 @@ ideas = {
 		arm_land_basic = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_land
+			picture = arm_idea_land
 			research_bonus = {
 				infantry_weapons = -0.05
 				armor = -0.05
@@ -131,7 +131,7 @@ ideas = {
 		arm_land_none = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_land
+			picture = arm_idea_land
 			research_bonus = {
 				infantry_weapons = -0.10
 				armor = -0.10
@@ -150,7 +150,7 @@ ideas = {
 		arm_air_cutting_edge = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_air
+			picture = arm_idea_air
 			research_bonus = {
 				air_equipment = 0.10
 				light_air = 0.10
@@ -163,7 +163,7 @@ ideas = {
 		arm_air_advanced = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_air
+			picture = arm_idea_air
 			research_bonus = {
 				air_equipment = 0.05
 				light_air = 0.05
@@ -176,7 +176,7 @@ ideas = {
 		arm_air_standard = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_air
+			picture = arm_idea_air
 			research_bonus = {
 				air_equipment = 0
 				light_air = 0
@@ -189,7 +189,7 @@ ideas = {
 		arm_air_basic = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_air
+			picture = arm_idea_air
 			research_bonus = {
 				air_equipment = -0.05
 				light_air = -0.05
@@ -202,7 +202,7 @@ ideas = {
 		arm_air_none = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_air
+			picture = arm_idea_air
 			research_bonus = {
 				air_equipment = -0.10
 				light_air = -0.10
@@ -220,7 +220,7 @@ ideas = {
 		arm_naval_cutting_edge = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_naval
+			picture = arm_idea_naval
 			research_bonus = {
 				naval_equipment = 0.10
 				dd_tech = 0.10
@@ -232,7 +232,7 @@ ideas = {
 		arm_naval_advanced = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_naval
+			picture = arm_idea_naval
 			research_bonus = {
 				naval_equipment = 0.05
 				dd_tech = 0.05
@@ -244,7 +244,7 @@ ideas = {
 		arm_naval_standard = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_naval
+			picture = arm_idea_naval
 			research_bonus = {
 				naval_equipment = 0
 				dd_tech = 0
@@ -256,7 +256,7 @@ ideas = {
 		arm_naval_basic = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_naval
+			picture = arm_idea_naval
 			research_bonus = {
 				naval_equipment = -0.05
 				dd_tech = -0.05
@@ -268,7 +268,7 @@ ideas = {
 		arm_naval_none = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_naval
+			picture = arm_idea_naval
 			research_bonus = {
 				naval_equipment = -0.10
 				dd_tech = -0.10
@@ -285,7 +285,7 @@ ideas = {
 		arm_industry_cutting_edge = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_industry
+			picture = arm_idea_industry
 			research_bonus = {
 				industry = 0.10
 				electronics = 0.10
@@ -298,7 +298,7 @@ ideas = {
 		arm_industry_advanced = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_industry
+			picture = arm_idea_industry
 			research_bonus = {
 				industry = 0.05
 				electronics = 0.05
@@ -311,7 +311,7 @@ ideas = {
 		arm_industry_standard = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_industry
+			picture = arm_idea_industry
 			research_bonus = {
 				industry = 0
 				electronics = 0
@@ -324,7 +324,7 @@ ideas = {
 		arm_industry_basic = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_industry
+			picture = arm_idea_industry
 			research_bonus = {
 				industry = -0.05
 				electronics = -0.05
@@ -337,7 +337,7 @@ ideas = {
 		arm_industry_none = {
 			allowed = { always = no }
 			removal_cost = -1
-			picture = GFX_arm_idea_industry
+			picture = arm_idea_industry
 			research_bonus = {
 				industry = -0.10
 				electronics = -0.10
