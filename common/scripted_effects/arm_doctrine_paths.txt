@@ -17,12 +17,3 @@ arm_initialize_doctrine_paths = {
         set_country_flag = arm_doctrine_paths_initialized
     }
 }
-
-arm_grant_doctrine_land_doctrine = {
-}
-
-arm_grant_doctrine_naval_doctrine = {
-}
-
-arm_grant_doctrine_air_doctrine = {
-}

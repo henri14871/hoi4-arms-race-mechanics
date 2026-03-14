@@ -13,7 +13,10 @@ on_actions = {
     # ===================================================================
     on_startup = {
         effect = {
-            arm_bootstrap_runtime_state = yes
+            random_country = {
+                limit = { always = yes }
+                arm_bootstrap_runtime_state = yes
+            }
         }
     }
 
@@ -26,7 +29,10 @@ on_actions = {
         effect = {
             if = {
                 limit = { NOT = { has_global_flag = arm_runtime_bootstrapped } }
-                arm_bootstrap_runtime_state = yes
+                random_country = {
+                    limit = { always = yes }
+                    arm_bootstrap_runtime_state = yes
+                }
             }
             if = {
                 limit = { has_global_flag = arm_ui_weekly_year_updated }
@@ -88,13 +94,57 @@ on_actions = {
                     subtract_from_temp_variable = { arm_current_bucket = 3 }
                 }
 
-                # Process countries in current bucket
+                # Pre-pass: cache lend-lease-from-major status to avoid O(n^2) inner loop.
+                # Also clear stale flags from previous months.
+                every_country = {
+                    limit = { arm_country_eligible = yes }
+                    clr_country_flag = arm_has_major_lender
+                    if = {
+                        limit = {
+                            is_in_faction = yes
+                            any_country = {
+                                is_lend_leasing = PREV
+                                check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+                            }
+                        }
+                        set_country_flag = arm_has_major_lender
+                    }
+                }
+
+                # Combined pass: initialize new countries AND evaluate current bucket.
                 every_country = {
                     limit = {
-                        check_variable = { var = arm_bucket value = var:arm_current_bucket compare = equals }
-                        arm_country_eligible = yes
+                        OR = {
+                            AND = {
+                                NOT = { has_country_flag = arm_bucket_initialized }
+                                OR = {
+                                    num_of_civilian_factories > 0
+                                    num_of_military_factories > 0
+                                }
+                            }
+                            AND = {
+                                has_country_flag = arm_bucket_initialized
+                                check_variable = { var = arm_bucket value = var:arm_current_bucket compare = equals }
+                                arm_country_eligible = yes
+                            }
+                        }
                     }
-                    arm_evaluate_and_grant_runtime = yes
+                    # Initialize new countries (civil wars, released nations)
+                    if = {
+                        limit = { NOT = { has_country_flag = arm_bucket_initialized } }
+                        set_variable = { arm_bucket = global.arm_bucket_counter }
+                        add_to_variable = { global.arm_bucket_counter = 1 }
+                        if = {
+                            limit = { check_variable = { var = global.arm_bucket_counter value = 2 compare = greater_than } }
+                            set_variable = { global.arm_bucket_counter = 0 }
+                        }
+                        set_country_flag = arm_bucket_initialized
+                        arm_refresh_country_state_runtime = yes
+                    }
+                    # Evaluate existing countries in current bucket
+                    else = {
+                        arm_evaluate_and_grant_runtime = yes
+                    }
                 }
 
                 # Increment month counter

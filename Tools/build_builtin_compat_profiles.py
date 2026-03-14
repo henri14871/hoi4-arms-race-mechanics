@@ -569,10 +569,11 @@ def build_profile_dispatch(index: dict) -> str:
         lines.append("        limit = {")
         lines.extend(build_profile_limit_lines(slug))
         lines.append("        }")
+        lines.append(f"        set_variable = {{ arm_grant_counter_{slug} = 0 }}")
         for effect_name in GRANT_ORDER:
             lines.append("        if = {")
             lines.append("            limit = {")
-            lines.append("                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }")
+            lines.append(f"                check_variable = {{ var = arm_grant_counter_{slug} value = arm_quarterly_cap compare = less_than }}")
             lines.append("            }")
             lines.append(f"            {effect_name}_{slug} = yes")
             lines.append("        }")

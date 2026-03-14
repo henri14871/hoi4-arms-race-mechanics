@@ -36,11 +36,9 @@ arm_refresh_country_state_runtime_core = {
 
     # Step 1c: Apply structural branch gates and universal power ceilings.
     arm_apply_structural_capability_rules = yes
-    arm_apply_balanced_small_country_scaling = yes
 
     # Step 2: Assign tier using the active compatibility profile
     arm_assign_power_tier_for_profile = yes
-    arm_apply_balanced_tier_sanity = yes
 
     # Step 2b: Lock doctrine preferences after branch scores exist
     arm_initialize_doctrine_paths_for_profile = yes
@@ -61,10 +59,52 @@ arm_refresh_country_state_runtime_core = {
 # ---------------------------------------------------------------------------
 # arm_refresh_country_state_ui_runtime
 # UI-only runtime refresh used by weekly visible-state updates.
-# Does not mutate research-speed spirits or grant techs.
+# Does not mutate research-speed spirits, grant techs, or change the
+# power tier.  Tier assignment is intentionally skipped so that the
+# weekly cadence cannot cascade a country through multiple tier
+# demotions between quarterly evaluations.
 # ---------------------------------------------------------------------------
 arm_refresh_country_state_ui_runtime = {
-    arm_refresh_country_state_runtime_core = yes
+
+    # Prepare cached score inputs once per refresh.
+    arm_prepare_score_inputs = yes
+
+    # Step 1: Calculate scores
+    arm_calculate_global_power = yes
+    arm_calculate_land_competence = yes
+    arm_calculate_air_competence = yes
+    arm_calculate_naval_competence = yes
+    arm_calculate_industry_competence = yes
+
+    # Step 1b: Apply historical major-power bias if Historical mode is enabled
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+        }
+        arm_apply_historical_bias = yes
+    }
+
+    # Step 1c: Apply structural branch gates and universal power ceilings.
+    arm_apply_structural_capability_rules = yes
+
+    # NOTE: Step 2 (arm_assign_power_tier_for_profile) is deliberately
+    # omitted here.  The tier must only change during the quarterly
+    # monthly evaluation to honour the one-tier-per-cycle guard.
+
+    # Step 2b: Lock doctrine preferences after branch scores exist
+    arm_initialize_doctrine_paths_for_profile = yes
+
+    # Step 3: Assign allowed categories (uses existing tier)
+    arm_assign_allowed_categories = yes
+
+    # Step 4: Compute effective lag per branch
+    arm_compute_effective_lag = yes
+
+    # Step 5: Compute target years
+    arm_compute_target_years = yes
+
+    # Step 5b: Cache the next monthly grant window for the UI.
+    arm_compute_next_grant_window = yes
 }
 
 # ---------------------------------------------------------------------------
@@ -118,14 +158,26 @@ arm_evaluate_and_grant_runtime = {
 
     arm_refresh_country_state_runtime = yes
 
-    # Step 7: Reset grant counter
-    set_variable = { arm_grant_counter = 0 }
+    # Skip grant dispatch for micro-nations with negligible power.
+    # Tier 0 countries with very low power have maximum lag and almost
+    # never qualify for any grants — skipping saves the full dispatch scan.
+    if = {
+        limit = {
+            OR = {
+                check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+                check_variable = { var = arm_global_power value = 9 compare = greater_than }
+            }
+        }
 
-    # Step 8: Grant technologies using the active compatibility profile
-    arm_grant_techs_for_profile = yes
+        # Step 7: Reset grant counter
+        set_variable = { arm_grant_counter = 0 }
 
-    # Step 9: Doctrines (if the active profile supports them)
-    arm_grant_doctrines_for_profile = yes
+        # Step 8: Grant technologies using the active compatibility profile
+        arm_grant_techs_for_profile = yes
+
+        # Step 9: Doctrines (if the active profile supports them)
+        arm_grant_doctrines_for_profile = yes
+    }
 }
 
 # ---------------------------------------------------------------------------
