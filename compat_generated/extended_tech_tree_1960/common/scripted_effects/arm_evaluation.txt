@@ -34,104 +34,69 @@ arm_assign_power_tier = {
     set_variable = { arm_old_tier_index = arm_tier_index }
 
     # ===================================================
-    # PROMOTIONS (ascending — only if currently below)
-    # Threshold + 5 hysteresis to promote
+    # Tier movement
+    # Evaluate from the tier at the start of the pass so a
+    # broken refresh cannot jump multiple tiers at once.
     # ===================================================
-
-    # Promote 0 -> 1 (Micro -> Minor) requires > 25 (20+5)
     if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = less_than }
-            check_variable = { var = arm_global_power value = 25 compare = greater_than }
+        limit = { check_variable = { var = arm_old_tier_index value = 0 compare = equals } }
+        if = {
+            limit = { check_variable = { var = arm_global_power value = 25 compare = greater_than } }
+            set_variable = { arm_tier_index = 1 }
         }
-        set_variable = { arm_tier_index = 1 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_old_tier_index value = 1 compare = equals } }
+        if = {
+            limit = { check_variable = { var = arm_global_power value = 50 compare = greater_than } }
+            set_variable = { arm_tier_index = 2 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_global_power value = 15 compare = less_than } }
+            set_variable = { arm_tier_index = 0 }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_old_tier_index value = 2 compare = equals } }
+        if = {
+            limit = { check_variable = { var = arm_global_power value = 95 compare = greater_than } }
+            set_variable = { arm_tier_index = 3 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_global_power value = 40 compare = less_than } }
+            set_variable = { arm_tier_index = 1 }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_old_tier_index value = 3 compare = equals } }
+        if = {
+            limit = { check_variable = { var = arm_global_power value = 155 compare = greater_than } }
+            set_variable = { arm_tier_index = 4 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_global_power value = 85 compare = less_than } }
+            set_variable = { arm_tier_index = 2 }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_old_tier_index value = 4 compare = equals } }
+        if = {
+            limit = { check_variable = { var = arm_global_power value = 225 compare = greater_than } }
+            set_variable = { arm_tier_index = 5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_global_power value = 145 compare = less_than } }
+            set_variable = { arm_tier_index = 3 }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_old_tier_index value = 5 compare = equals } }
+        if = {
+            limit = { check_variable = { var = arm_global_power value = 215 compare = less_than } }
+            set_variable = { arm_tier_index = 4 }
+        }
     }
 
-    # Promote 1 -> 2 (Minor -> Minor Industrial) requires > 50 (45+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = less_than }
-            check_variable = { var = arm_global_power value = 50 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Promote 2 -> 3 (Minor Industrial -> Regional) requires > 95 (90+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = less_than }
-            check_variable = { var = arm_global_power value = 95 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Promote 3 -> 4 (Regional -> Great Power) requires > 155 (150+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = less_than }
-            check_variable = { var = arm_global_power value = 155 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Promote 4 -> 5 (Great Power -> Superpower) requires > 305 (300+5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 5 compare = less_than }
-            check_variable = { var = arm_global_power value = 225 compare = greater_than }
-        }
-        set_variable = { arm_tier_index = 5 }
-    }
-
-    # ===================================================
-    # DEMOTIONS (descending — only if currently above)
-    # Threshold - 5 hysteresis to demote
-    # ===================================================
-
-    # Demote 5 -> 4 (Superpower -> Great Power) if score < 295 (300-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_global_power value = 215 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-    }
-
-    # Demote 4 -> 3 (Great Power -> Regional) if score < 145 (150-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-            check_variable = { var = arm_global_power value = 145 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 3 }
-    }
-
-    # Demote 3 -> 2 (Regional -> Minor Industrial) if score < 85 (90-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 2 compare = greater_than }
-            check_variable = { var = arm_global_power value = 85 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 2 }
-    }
-
-    # Demote 2 -> 1 (Minor Industrial -> Minor) if score < 40 (45-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 1 compare = greater_than }
-            check_variable = { var = arm_global_power value = 40 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 1 }
-    }
-
-    # Demote 1 -> 0 (Minor -> Micro) if score < 15 (20-5)
-    if = {
-        limit = {
-            check_variable = { var = arm_tier_index value = 0 compare = greater_than }
-            check_variable = { var = arm_global_power value = 15 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 0 }
-    }
 
     # ===================================================
     # Base lag by tier

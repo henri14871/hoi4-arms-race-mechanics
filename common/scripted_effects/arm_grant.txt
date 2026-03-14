@@ -9,11 +9,12 @@
 ###############################################################################
 
 # ---------------------------------------------------------------------------
-# arm_refresh_country_state_runtime
-# Recomputes persistent ARM state for runtime pulses.
+# arm_refresh_country_state_runtime_core
+# Recomputes persistent ARM state up to the point where UI and
+# grant logic share the same derived variables.
 # Assumes global.arm_current_year has already been updated.
 # ---------------------------------------------------------------------------
-arm_refresh_country_state_runtime = {
+arm_refresh_country_state_runtime_core = {
 
     # Prepare cached score inputs once per refresh.
     arm_prepare_score_inputs = yes
@@ -55,6 +56,24 @@ arm_refresh_country_state_runtime = {
 
     # Step 5b: Cache the next monthly grant window for the UI.
     arm_compute_next_grant_window = yes
+}
+
+# ---------------------------------------------------------------------------
+# arm_refresh_country_state_ui_runtime
+# UI-only runtime refresh used by weekly visible-state updates.
+# Does not mutate research-speed spirits or grant techs.
+# ---------------------------------------------------------------------------
+arm_refresh_country_state_ui_runtime = {
+    arm_refresh_country_state_runtime_core = yes
+}
+
+# ---------------------------------------------------------------------------
+# arm_refresh_country_state_runtime
+# Full runtime refresh used by evaluation and initialization paths.
+# Includes research-speed spirit updates.
+# ---------------------------------------------------------------------------
+arm_refresh_country_state_runtime = {
+    arm_refresh_country_state_runtime_core = yes
 
     # Step 6: Update research speed spirits
     arm_update_research_speed_spirit = yes

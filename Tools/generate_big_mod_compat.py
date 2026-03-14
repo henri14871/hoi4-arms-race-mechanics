@@ -257,65 +257,97 @@ def resolve_preset(generator, profile: dict) -> dict | None:
 
 
 def apply_thresholds_to_evaluation(text: str, thresholds: dict) -> str:
-    replacements = [
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 1 compare = less_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
-            thresholds["minor"] + 5,
-        ),
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 2 compare = less_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
-            thresholds["minor_industrial"] + 5,
-        ),
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 3 compare = less_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
-            thresholds["regional_power"] + 5,
-        ),
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 4 compare = less_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
-            thresholds["great_power"] + 5,
-        ),
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 5 compare = less_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = greater_than\s*\})",
-            thresholds["superpower"] + 5,
-        ),
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 4 compare = greater_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
-            thresholds["superpower"] - 5,
-        ),
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 3 compare = greater_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
-            thresholds["great_power"] - 5,
-        ),
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 2 compare = greater_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
-            thresholds["regional_power"] - 5,
-        ),
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 1 compare = greater_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
-            thresholds["minor_industrial"] - 5,
-        ),
-        (
-            r"(check_variable = \{\s*var = arm_tier_index value = 0 compare = greater_than\s*\}\s*"
-            r"check_variable = \{\s*var = arm_global_power value = )\d+(\s*compare = less_than\s*\})",
-            thresholds["minor"] - 5,
-        ),
-    ]
+    promotions = {
+        "minor": thresholds["minor"] + 5,
+        "minor_industrial": thresholds["minor_industrial"] + 5,
+        "regional_power": thresholds["regional_power"] + 5,
+        "great_power": thresholds["great_power"] + 5,
+        "superpower": thresholds["superpower"] + 5,
+    }
+    demotions = {
+        "minor": thresholds["minor"] - 5,
+        "minor_industrial": thresholds["minor_industrial"] - 5,
+        "regional_power": thresholds["regional_power"] - 5,
+        "great_power": thresholds["great_power"] - 5,
+        "superpower": thresholds["superpower"] - 5,
+    }
 
-    updated = text
-    for pattern, value in replacements:
-        updated, count = re.subn(pattern, rf"\g<1>{value}\g<2>", updated, count=1, flags=re.S)
-        if count != 1:
-            raise RuntimeError(f"Failed to apply preset threshold replacement for pattern: {pattern}")
-    return updated
+    section_re = re.compile(
+        r"(\s*# Save old tier for change detection\s*\n\s*set_variable = \{ arm_old_tier_index = arm_tier_index \}\s*\n)"
+        r"(.*?)"
+        r"(\s*# ===================================================\s*\n\s*# Base lag by tier)",
+        re.S,
+    )
+    match = section_re.search(text)
+    if not match:
+        raise RuntimeError("Failed to locate arm_assign_power_tier movement section")
+
+    movement = f"""    # ===================================================
+    # Tier movement
+    # Evaluate from the tier at the start of the pass so a
+    # broken refresh cannot jump multiple tiers at once.
+    # ===================================================
+    if = {{
+        limit = {{ check_variable = {{ var = arm_old_tier_index value = 0 compare = equals }} }}
+        if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {promotions["minor"]} compare = greater_than }} }}
+            set_variable = {{ arm_tier_index = 1 }}
+        }}
+    }}
+    else_if = {{
+        limit = {{ check_variable = {{ var = arm_old_tier_index value = 1 compare = equals }} }}
+        if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {promotions["minor_industrial"]} compare = greater_than }} }}
+            set_variable = {{ arm_tier_index = 2 }}
+        }}
+        else_if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {demotions["minor"]} compare = less_than }} }}
+            set_variable = {{ arm_tier_index = 0 }}
+        }}
+    }}
+    else_if = {{
+        limit = {{ check_variable = {{ var = arm_old_tier_index value = 2 compare = equals }} }}
+        if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {promotions["regional_power"]} compare = greater_than }} }}
+            set_variable = {{ arm_tier_index = 3 }}
+        }}
+        else_if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {demotions["minor_industrial"]} compare = less_than }} }}
+            set_variable = {{ arm_tier_index = 1 }}
+        }}
+    }}
+    else_if = {{
+        limit = {{ check_variable = {{ var = arm_old_tier_index value = 3 compare = equals }} }}
+        if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {promotions["great_power"]} compare = greater_than }} }}
+            set_variable = {{ arm_tier_index = 4 }}
+        }}
+        else_if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {demotions["regional_power"]} compare = less_than }} }}
+            set_variable = {{ arm_tier_index = 2 }}
+        }}
+    }}
+    else_if = {{
+        limit = {{ check_variable = {{ var = arm_old_tier_index value = 4 compare = equals }} }}
+        if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {promotions["superpower"]} compare = greater_than }} }}
+            set_variable = {{ arm_tier_index = 5 }}
+        }}
+        else_if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {demotions["great_power"]} compare = less_than }} }}
+            set_variable = {{ arm_tier_index = 3 }}
+        }}
+    }}
+    else_if = {{
+        limit = {{ check_variable = {{ var = arm_old_tier_index value = 5 compare = equals }} }}
+        if = {{
+            limit = {{ check_variable = {{ var = arm_global_power value = {demotions["superpower"]} compare = less_than }} }}
+            set_variable = {{ arm_tier_index = 4 }}
+        }}
+    }}
+"""
+
+    return text[:match.start(2)] + movement + text[match.start(3):]
 
 
 def write_preset_evaluation(output_path: Path, preset: dict):
