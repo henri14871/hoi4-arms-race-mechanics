@@ -347,3 +347,87 @@ defined_text = {
         trigger = { always = yes }
     }
 }
+
+defined_text = {
+    name = arm_ui_land_blocker
+
+    text = {
+        localization_key = arm_ui_blocker_low_mil
+        trigger = { check_variable = { var = arm_struct_land_blocker value = 1 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_small_army
+        trigger = { check_variable = { var = arm_struct_land_blocker value = 2 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_none
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_air_blocker
+
+    text = {
+        localization_key = arm_ui_blocker_low_mil
+        trigger = { check_variable = { var = arm_struct_air_blocker value = 1 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_low_slots
+        trigger = { check_variable = { var = arm_struct_air_blocker value = 3 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_weak_resources
+        trigger = { check_variable = { var = arm_struct_air_blocker value = 4 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_none
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_naval_blocker
+
+    text = {
+        localization_key = arm_ui_blocker_no_dockyards
+        trigger = { check_variable = { var = arm_struct_naval_blocker value = 5 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_low_dockyards
+        trigger = { check_variable = { var = arm_struct_naval_blocker value = 6 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_low_slots
+        trigger = { check_variable = { var = arm_struct_naval_blocker value = 3 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_weak_resources
+        trigger = { check_variable = { var = arm_struct_naval_blocker value = 4 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_none
+        trigger = { always = yes }
+    }
+}
+
+defined_text = {
+    name = arm_ui_industry_blocker
+
+    text = {
+        localization_key = arm_ui_blocker_low_civ
+        trigger = { check_variable = { var = arm_struct_industry_blocker value = 7 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_small_base
+        trigger = { check_variable = { var = arm_struct_industry_blocker value = 8 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_low_slots
+        trigger = { check_variable = { var = arm_struct_industry_blocker value = 3 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_blocker_none
+        trigger = { always = yes }
+    }
+}

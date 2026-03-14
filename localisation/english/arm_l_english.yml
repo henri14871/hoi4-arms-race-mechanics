@@ -306,7 +306,7 @@ arm_event.102.desc:0 "Base Lag: [?arm_base_lag]\n\nEffective Land Lag: [?arm_eff
  # DECISION CATEGORY
  ###########################################
  arm_debug_category:0 "Arms Race Mechanics"
- arm_debug_category_desc:0 "§YTier§!: [arm_ui_tier_status]   §YPower§!: [?arm_global_power|1]   §YCap§!: [?arm_quarterly_cap|0]   §YNext Grant§!: [arm_ui_next_grant_window]\n§YLand§!: [arm_ui_land_status] ([?arm_land_competence|1])   §YTarget§!: [arm_ui_land_target_year]   §YLag§!: [arm_ui_land_lag]\n§YAir§!: [arm_ui_air_status] ([?arm_air_competence|1])   §YTarget§!: [arm_ui_air_target_year]   §YLag§!: [arm_ui_air_lag]\n§YNaval§!: [arm_ui_naval_status] ([?arm_naval_competence|1])   §YTarget§!: [arm_ui_naval_target_year]   §YLag§!: [arm_ui_naval_lag]\n§YIndustry§!: [arm_ui_industry_status] ([?arm_industry_competence|1])   §YTarget§!: [arm_ui_industry_target_year]   §YLag§!: [arm_ui_industry_lag]"
+ arm_debug_category_desc:0 "§YTier§!: [arm_ui_tier_status]   §YPower§!: [?arm_global_power|1]   §YCap§!: [?arm_quarterly_cap|0]   §YNext Grant§!: [arm_ui_next_grant_window]\n§YLand§!: [arm_ui_land_status] ([?arm_land_competence|1])   §YTarget§!: [arm_ui_land_target_year]   §YLag§!: [arm_ui_land_lag][arm_ui_land_blocker]\n§YAir§!: [arm_ui_air_status] ([?arm_air_competence|1])   §YTarget§!: [arm_ui_air_target_year]   §YLag§!: [arm_ui_air_lag][arm_ui_air_blocker]\n§YNaval§!: [arm_ui_naval_status] ([?arm_naval_competence|1])   §YTarget§!: [arm_ui_naval_target_year]   §YLag§!: [arm_ui_naval_lag][arm_ui_naval_blocker]\n§YIndustry§!: [arm_ui_industry_status] ([?arm_industry_competence|1])   §YTarget§!: [arm_ui_industry_target_year]   §YLag§!: [arm_ui_industry_lag][arm_ui_industry_blocker]"
 
  ###########################################
  # DECISION NAMES AND DESCRIPTIONS
@@ -378,6 +378,15 @@ arm_event.102.desc:0 "Base Lag: [?arm_base_lag]\n\nEffective Land Lag: [?arm_eff
  arm_ui_industry_target_year_le_4:0 "§Y[?arm_target_year_industry|0]§!"
  arm_ui_industry_target_year_le_6:0 "§O[?arm_target_year_industry|0]§!"
  arm_ui_industry_target_year_gt_6:0 "§R[?arm_target_year_industry|0]§!"
+ arm_ui_blocker_none:0 ""
+ arm_ui_blocker_low_mil:0 "  §gLow Mil§!"
+ arm_ui_blocker_small_army:0 "  §gSmall Army§!"
+ arm_ui_blocker_low_slots:0 "  §gLow Slots§!"
+ arm_ui_blocker_weak_resources:0 "  §gWeak Res§!"
+ arm_ui_blocker_no_dockyards:0 "  §gNo Docks§!"
+ arm_ui_blocker_low_dockyards:0 "  §gLow Docks§!"
+ arm_ui_blocker_low_civ:0 "  §gLow Civ§!"
+ arm_ui_blocker_small_base:0 "  §gSmall Base§!"
 
  ###########################################
  # GAME RULE OPTION NAME KEYS

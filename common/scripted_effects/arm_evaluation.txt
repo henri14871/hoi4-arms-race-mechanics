@@ -355,6 +355,7 @@ arm_assign_allowed_categories = {
     if = {
         limit = {
             check_variable = { var = arm_tier_index value = 0 compare = greater_than }
+            check_variable = { var = arm_struct_industry_band value = 0 compare = greater_than }
             check_variable = { var = arm_industry_competence value = 14 compare = greater_than }
         }
         set_country_flag = arm_cat_industry
@@ -377,6 +378,7 @@ arm_assign_allowed_categories = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_AIR_NAVAL } }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_struct_industry_band value = 1 compare = greater_than }
             check_variable = { var = arm_industry_competence value = 34 compare = greater_than }
         }
         set_country_flag = arm_cat_electronics
@@ -388,6 +390,7 @@ arm_assign_allowed_categories = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_AIR_NAVAL } }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_struct_industry_band value = 1 compare = greater_than }
             check_variable = { var = arm_industry_competence value = 34 compare = greater_than }
         }
         set_country_flag = arm_cat_radar
@@ -401,6 +404,7 @@ arm_assign_allowed_categories = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_AIR_NAVAL } }
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_struct_land_band value = 0 compare = greater_than }
             check_variable = { var = arm_land_competence value = 24 compare = greater_than }
         }
         set_country_flag = arm_cat_motorised
@@ -412,6 +416,7 @@ arm_assign_allowed_categories = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_AIR_NAVAL } }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_struct_land_band value = 1 compare = greater_than }
             check_variable = { var = arm_land_competence value = 44 compare = greater_than }
         }
         set_country_flag = arm_cat_mechanised
@@ -423,6 +428,7 @@ arm_assign_allowed_categories = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_AIR_NAVAL } }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_struct_land_band value = 1 compare = greater_than }
             check_variable = { var = arm_land_competence value = 34 compare = greater_than }
         }
         set_country_flag = arm_cat_light_tanks
@@ -435,6 +441,7 @@ arm_assign_allowed_categories = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_AIR_NAVAL } }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_struct_land_band value = 1 compare = greater_than }
             check_variable = { var = arm_land_competence value = 34 compare = greater_than }
         }
         set_country_flag = arm_cat_tanks_generic
@@ -446,6 +453,7 @@ arm_assign_allowed_categories = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_AIR_NAVAL } }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_struct_land_band value = 1 compare = greater_than }
             check_variable = { var = arm_land_competence value = 44 compare = greater_than }
         }
         set_country_flag = arm_cat_medium_tanks
@@ -457,6 +465,7 @@ arm_assign_allowed_categories = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_AIR_NAVAL } }
             check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_struct_land_band value = 2 compare = greater_than }
             check_variable = { var = arm_land_competence value = 69 compare = greater_than }
         }
         set_country_flag = arm_cat_heavy_tanks
@@ -468,6 +477,7 @@ arm_assign_allowed_categories = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_AIR_NAVAL } }
             check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_struct_land_band value = 2 compare = greater_than }
             check_variable = { var = arm_land_competence value = 69 compare = greater_than }
         }
         set_country_flag = arm_cat_modern_tanks
@@ -480,6 +490,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_struct_air_band value = 0 compare = greater_than }
             check_variable = { var = arm_air_competence value = 24 compare = greater_than }
         }
         set_country_flag = arm_cat_fighters
@@ -490,6 +501,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_struct_air_band value = 1 compare = greater_than }
             check_variable = { var = arm_air_competence value = 44 compare = greater_than }
         }
         set_country_flag = arm_cat_heavy_fighters
@@ -500,6 +512,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_struct_air_band value = 0 compare = greater_than }
             check_variable = { var = arm_air_competence value = 24 compare = greater_than }
         }
         set_country_flag = arm_cat_cas
@@ -510,6 +523,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
+            check_variable = { var = arm_struct_air_band value = 1 compare = greater_than }
             check_variable = { var = arm_air_competence value = 44 compare = greater_than }
         }
         set_country_flag = arm_cat_tactical_bombers
@@ -520,6 +534,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+            check_variable = { var = arm_struct_air_band value = 2 compare = greater_than }
             check_variable = { var = arm_air_competence value = 69 compare = greater_than }
         }
         set_country_flag = arm_cat_strategic_bombers
@@ -530,6 +545,8 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             num_of_naval_factories > 0
+            check_variable = { var = arm_struct_air_band value = 1 compare = greater_than }
+            check_variable = { var = arm_struct_naval_band value = 0 compare = greater_than }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
             check_variable = { var = arm_air_competence value = 34 compare = greater_than }
         }
@@ -541,6 +558,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
+            check_variable = { var = arm_struct_air_band value = 0 compare = greater_than }
             check_variable = { var = arm_air_competence value = 19 compare = greater_than }
         }
         set_country_flag = arm_cat_transport
@@ -553,6 +571,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             num_of_naval_factories > 0
+            check_variable = { var = arm_struct_naval_band value = 0 compare = greater_than }
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 24 compare = greater_than }
         }
@@ -564,6 +583,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             num_of_naval_factories > 0
+            check_variable = { var = arm_struct_naval_band value = 0 compare = greater_than }
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 24 compare = greater_than }
         }
@@ -575,6 +595,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             num_of_naval_factories > 0
+            check_variable = { var = arm_struct_naval_band value = 1 compare = greater_than }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 44 compare = greater_than }
         }
@@ -586,6 +607,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             num_of_naval_factories > 0
+            check_variable = { var = arm_struct_naval_band value = 1 compare = greater_than }
             check_variable = { var = arm_tier_index value = 2 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 44 compare = greater_than }
         }
@@ -597,6 +619,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             num_of_naval_factories > 7
+            check_variable = { var = arm_struct_naval_band value = 2 compare = greater_than }
             check_variable = { var = arm_tier_index value = 3 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 69 compare = greater_than }
         }
@@ -608,6 +631,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             num_of_naval_factories > 7
+            check_variable = { var = arm_struct_naval_band value = 2 compare = greater_than }
             check_variable = { var = arm_tier_index value = 3 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 69 compare = greater_than }
         }
@@ -619,6 +643,7 @@ arm_assign_allowed_categories = {
         limit = {
             NOT = { has_game_rule = { rule = arm_tech_scope option = ARM_CORE_ONLY } }
             num_of_naval_factories > 0
+            check_variable = { var = arm_struct_naval_band value = 0 compare = greater_than }
             check_variable = { var = arm_tier_index value = 1 compare = greater_than }
             check_variable = { var = arm_naval_competence value = 19 compare = greater_than }
         }
@@ -634,6 +659,7 @@ arm_assign_allowed_categories = {
         limit = {
             has_game_rule = { rule = arm_tech_scope option = ARM_EVERYTHING }
             check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_struct_industry_band value = 3 compare = greater_than }
             check_variable = { var = arm_industry_competence value = 84 compare = greater_than }
         }
         set_country_flag = arm_cat_nuclear
@@ -644,6 +670,7 @@ arm_assign_allowed_categories = {
         limit = {
             has_game_rule = { rule = arm_tech_scope option = ARM_EVERYTHING }
             check_variable = { var = arm_tier_index value = 4 compare = greater_than }
+            check_variable = { var = arm_struct_industry_band value = 3 compare = greater_than }
             check_variable = { var = arm_industry_competence value = 84 compare = greater_than }
         }
         set_country_flag = arm_cat_rockets
@@ -1136,26 +1163,11 @@ arm_compute_next_grant_window = {
 #---------------------------------------------------------
 # Effect 4b: arm_apply_balanced_tier_sanity
 #
-# Balanced mode should not let medium industrial powers read
-# as full superpowers just because a profile has permissive
-# power thresholds.
+# Legacy alias.
+# Universal structural power ceilings now handle this before
+# profile tier assignment.
 #---------------------------------------------------------
 arm_apply_balanced_tier_sanity = {
-    set_temp_variable = { arm_balanced_tier_factory_total = num_of_civilian_factories }
-    add_to_temp_variable = { arm_balanced_tier_factory_total = num_of_military_factories }
-    add_to_temp_variable = { arm_balanced_tier_factory_total = num_of_naval_factories }
-
-    if = {
-        limit = {
-            has_game_rule = { rule = arm_auto_research_intensity option = ARM_BALANCED }
-            check_variable = { var = arm_tier_index value = 4 compare = greater_than }
-            check_variable = { var = arm_balanced_tier_factory_total value = 120 compare = less_than }
-        }
-        set_variable = { arm_tier_index = 4 }
-        set_variable = { arm_base_lag = 1.5 }
-        set_variable = { arm_quarterly_cap = 5 }
-        set_variable = { arm_tier_avg = 65 }
-    }
 }
 
 #---------------------------------------------------------

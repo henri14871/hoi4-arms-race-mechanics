@@ -49,53 +49,53 @@ arm_prepare_score_inputs = {
         set_variable = { arm_cached_industry_slots_bonus = 24 }
     }
 
-    # Stability affects posture and industry competence.
-    set_variable = { arm_cached_war_posture_stability_bonus = 3 }
-    set_variable = { arm_cached_industry_stability_bonus = 3 }
+    # Stability is helpful, but it should not substitute for real structure.
+    set_variable = { arm_cached_war_posture_stability_bonus = 1 }
+    set_variable = { arm_cached_industry_stability_bonus = 1 }
     if = {
         limit = { has_stability > 0.9 }
-        set_variable = { arm_cached_war_posture_stability_bonus = 30 }
-        set_variable = { arm_cached_industry_stability_bonus = 30 }
-    }
-    else_if = {
-        limit = { has_stability > 0.8 }
-        set_variable = { arm_cached_war_posture_stability_bonus = 27 }
-        set_variable = { arm_cached_industry_stability_bonus = 27 }
-    }
-    else_if = {
-        limit = { has_stability > 0.7 }
-        set_variable = { arm_cached_war_posture_stability_bonus = 24 }
-        set_variable = { arm_cached_industry_stability_bonus = 24 }
-    }
-    else_if = {
-        limit = { has_stability > 0.6 }
-        set_variable = { arm_cached_war_posture_stability_bonus = 21 }
-        set_variable = { arm_cached_industry_stability_bonus = 21 }
-    }
-    else_if = {
-        limit = { has_stability > 0.5 }
-        set_variable = { arm_cached_war_posture_stability_bonus = 18 }
-        set_variable = { arm_cached_industry_stability_bonus = 18 }
-    }
-    else_if = {
-        limit = { has_stability > 0.4 }
         set_variable = { arm_cached_war_posture_stability_bonus = 15 }
-        set_variable = { arm_cached_industry_stability_bonus = 15 }
-    }
-    else_if = {
-        limit = { has_stability > 0.3 }
-        set_variable = { arm_cached_war_posture_stability_bonus = 12 }
         set_variable = { arm_cached_industry_stability_bonus = 12 }
     }
     else_if = {
-        limit = { has_stability > 0.2 }
+        limit = { has_stability > 0.8 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 13 }
+        set_variable = { arm_cached_industry_stability_bonus = 11 }
+    }
+    else_if = {
+        limit = { has_stability > 0.7 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 11 }
+        set_variable = { arm_cached_industry_stability_bonus = 10 }
+    }
+    else_if = {
+        limit = { has_stability > 0.6 }
         set_variable = { arm_cached_war_posture_stability_bonus = 9 }
-        set_variable = { arm_cached_industry_stability_bonus = 9 }
+        set_variable = { arm_cached_industry_stability_bonus = 8 }
+    }
+    else_if = {
+        limit = { has_stability > 0.5 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 7 }
+        set_variable = { arm_cached_industry_stability_bonus = 6 }
+    }
+    else_if = {
+        limit = { has_stability > 0.4 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 5 }
+        set_variable = { arm_cached_industry_stability_bonus = 5 }
+    }
+    else_if = {
+        limit = { has_stability > 0.3 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 4 }
+        set_variable = { arm_cached_industry_stability_bonus = 4 }
+    }
+    else_if = {
+        limit = { has_stability > 0.2 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 3 }
+        set_variable = { arm_cached_industry_stability_bonus = 3 }
     }
     else_if = {
         limit = { has_stability > 0.1 }
-        set_variable = { arm_cached_war_posture_stability_bonus = 6 }
-        set_variable = { arm_cached_industry_stability_bonus = 6 }
+        set_variable = { arm_cached_war_posture_stability_bonus = 2 }
+        set_variable = { arm_cached_industry_stability_bonus = 2 }
     }
 
     set_variable = { arm_cached_war_support_bonus = 2 }
@@ -139,23 +139,23 @@ arm_prepare_score_inputs = {
     set_variable = { arm_cached_pp_bonus = 0 }
     if = {
         limit = { has_political_power > 400 }
-        set_variable = { arm_cached_pp_bonus = 10 }
+        set_variable = { arm_cached_pp_bonus = 5 }
     }
     else_if = {
         limit = { has_political_power > 300 }
-        set_variable = { arm_cached_pp_bonus = 8 }
-    }
-    else_if = {
-        limit = { has_political_power > 200 }
-        set_variable = { arm_cached_pp_bonus = 6 }
-    }
-    else_if = {
-        limit = { has_political_power > 100 }
         set_variable = { arm_cached_pp_bonus = 4 }
     }
     else_if = {
-        limit = { has_political_power > 50 }
+        limit = { has_political_power > 200 }
+        set_variable = { arm_cached_pp_bonus = 3 }
+    }
+    else_if = {
+        limit = { has_political_power > 100 }
         set_variable = { arm_cached_pp_bonus = 2 }
+    }
+    else_if = {
+        limit = { has_political_power > 50 }
+        set_variable = { arm_cached_pp_bonus = 1 }
     }
 
     set_variable = { arm_cached_mobilization_manpower_bonus = 0 }
@@ -567,29 +567,29 @@ arm_prepare_score_inputs = {
     set_variable = { arm_cached_industry_breadth_bonus = 0 }
     if = {
         limit = { has_resources_in_country = { resource = steel amount > 8 extracted = yes } }
-        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 1 }
     }
     if = {
         limit = { has_resources_in_country = { resource = aluminium amount > 8 extracted = yes } }
-        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 1 }
     }
     if = {
         limit = { has_resources_in_country = { resource = tungsten amount > 8 extracted = yes } }
-        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 1 }
     }
     if = {
         limit = { has_resources_in_country = { resource = chromium amount > 8 extracted = yes } }
-        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 1 }
     }
     if = {
         limit = { has_resources_in_country = { resource = rubber amount > 8 extracted = yes } }
-        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 1 }
     }
     if = {
         limit = { has_resources_in_country = { resource = oil amount > 8 extracted = yes } }
-        add_to_variable = { arm_cached_industry_breadth_bonus = 3 }
+        add_to_variable = { arm_cached_industry_breadth_bonus = 1 }
     }
-    clamp_variable = { var = arm_cached_industry_breadth_bonus min = 0 max = 18 }
+    clamp_variable = { var = arm_cached_industry_breadth_bonus min = 0 max = 6 }
 }
 
 ###################################
@@ -894,7 +894,7 @@ arm_calculate_industry_competence = {
 # Branches must be earned through real capacity, with
 # softer caps on easier modes.
 ###################################
-arm_apply_structural_capability_rules = {
+arm_apply_structural_capability_rules_legacy = {
     set_temp_variable = { arm_struct_total_factories = num_of_civilian_factories }
     add_to_temp_variable = { arm_struct_total_factories = num_of_military_factories }
     add_to_temp_variable = { arm_struct_total_factories = num_of_naval_factories }
@@ -1256,7 +1256,7 @@ arm_apply_structural_capability_rules = {
 # Keeps tiny, stable countries with a couple of slots from reading
 # as fully industrialized powers in the default mode.
 ###################################
-arm_apply_balanced_small_country_scaling = {
+arm_apply_balanced_small_country_scaling_legacy = {
     set_temp_variable = { arm_balanced_factory_total = num_of_civilian_factories }
     add_to_temp_variable = { arm_balanced_factory_total = num_of_military_factories }
     add_to_temp_variable = { arm_balanced_factory_total = num_of_naval_factories }
@@ -1318,4 +1318,663 @@ arm_apply_balanced_small_country_scaling = {
         subtract_from_variable = { arm_global_power = 10 }
         clamp_variable = { var = arm_global_power min = 0 max = 9999 }
     }
+}
+
+###################################
+# Structural branch bands
+# Persistent shared structure used by scoring, category gates,
+# and dashboard blocker text.
+###################################
+arm_define_structural_bands = {
+    set_variable = { arm_struct_total_factories = num_of_civilian_factories }
+    add_to_variable = { arm_struct_total_factories = num_of_military_factories }
+    add_to_variable = { arm_struct_total_factories = num_of_naval_factories }
+
+    set_variable = { arm_struct_land_band = 0 }
+    set_variable = { arm_struct_air_band = 0 }
+    set_variable = { arm_struct_naval_band = 0 }
+    set_variable = { arm_struct_industry_band = 0 }
+
+    set_variable = { arm_struct_air_resource_total = arm_cached_air_aluminium_bonus }
+    add_to_variable = { arm_struct_air_resource_total = arm_cached_air_rubber_bonus }
+    add_to_variable = { arm_struct_air_resource_total = arm_cached_air_oil_bonus }
+
+    set_variable = { arm_struct_naval_resource_total = arm_cached_naval_oil_bonus }
+    add_to_variable = { arm_struct_naval_resource_total = arm_cached_naval_steel_bonus }
+    add_to_variable = { arm_struct_naval_resource_total = arm_cached_naval_chromium_bonus }
+
+    if = {
+        limit = {
+            num_of_military_factories > 2
+            num_battalions > 20
+        }
+        set_variable = { arm_struct_land_band = 1 }
+    }
+    if = {
+        limit = {
+            num_of_military_factories > 7
+            num_battalions > 60
+        }
+        set_variable = { arm_struct_land_band = 2 }
+    }
+    if = {
+        limit = {
+            num_of_military_factories > 15
+            num_battalions > 140
+        }
+        set_variable = { arm_struct_land_band = 3 }
+    }
+    if = {
+        limit = {
+            num_of_military_factories > 31
+            num_battalions > 260
+        }
+        set_variable = { arm_struct_land_band = 4 }
+    }
+
+    if = {
+        limit = {
+            num_of_military_factories > 4
+            amount_research_slots > 1
+            check_variable = { var = arm_struct_air_resource_total value = 2 compare = greater_than }
+        }
+        set_variable = { arm_struct_air_band = 1 }
+    }
+    if = {
+        limit = {
+            num_of_military_factories > 10
+            amount_research_slots > 2
+            check_variable = { var = arm_struct_air_resource_total value = 7 compare = greater_than }
+        }
+        set_variable = { arm_struct_air_band = 2 }
+    }
+    if = {
+        limit = {
+            num_of_military_factories > 20
+            amount_research_slots > 3
+            check_variable = { var = arm_struct_air_resource_total value = 14 compare = greater_than }
+        }
+        set_variable = { arm_struct_air_band = 3 }
+    }
+    if = {
+        limit = {
+            num_of_military_factories > 36
+            amount_research_slots > 4
+            check_variable = { var = arm_struct_air_resource_total value = 22 compare = greater_than }
+        }
+        set_variable = { arm_struct_air_band = 4 }
+    }
+
+    if = {
+        limit = {
+            num_of_naval_factories > 0
+            amount_research_slots > 1
+            check_variable = { var = arm_struct_naval_resource_total value = 1 compare = greater_than }
+        }
+        set_variable = { arm_struct_naval_band = 1 }
+    }
+    if = {
+        limit = {
+            num_of_naval_factories > 4
+            amount_research_slots > 2
+            check_variable = { var = arm_struct_naval_resource_total value = 6 compare = greater_than }
+        }
+        set_variable = { arm_struct_naval_band = 2 }
+    }
+    if = {
+        limit = {
+            num_of_naval_factories > 10
+            amount_research_slots > 3
+            check_variable = { var = arm_struct_naval_resource_total value = 12 compare = greater_than }
+        }
+        set_variable = { arm_struct_naval_band = 3 }
+    }
+    if = {
+        limit = {
+            num_of_naval_factories > 20
+            amount_research_slots > 4
+            check_variable = { var = arm_struct_naval_resource_total value = 20 compare = greater_than }
+        }
+        set_variable = { arm_struct_naval_band = 4 }
+    }
+
+    if = {
+        limit = {
+            num_of_civilian_factories > 5
+            check_variable = { var = arm_struct_total_factories value = 10 compare = greater_than }
+            amount_research_slots > 1
+        }
+        set_variable = { arm_struct_industry_band = 1 }
+    }
+    if = {
+        limit = {
+            num_of_civilian_factories > 12
+            check_variable = { var = arm_struct_total_factories value = 24 compare = greater_than }
+            amount_research_slots > 2
+        }
+        set_variable = { arm_struct_industry_band = 2 }
+    }
+    if = {
+        limit = {
+            num_of_civilian_factories > 24
+            check_variable = { var = arm_struct_total_factories value = 45 compare = greater_than }
+            amount_research_slots > 3
+        }
+        set_variable = { arm_struct_industry_band = 3 }
+    }
+    if = {
+        limit = {
+            num_of_civilian_factories > 45
+            check_variable = { var = arm_struct_total_factories value = 80 compare = greater_than }
+            amount_research_slots > 4
+        }
+        set_variable = { arm_struct_industry_band = 4 }
+    }
+}
+
+###################################
+# Structural blockers
+# 0 none, 1 low mil, 2 small army, 3 low slots,
+# 4 weak resources, 5 no dockyards, 6 low dockyards,
+# 7 low civ, 8 small base
+###################################
+arm_define_structural_blockers = {
+    set_variable = { arm_struct_land_blocker = 0 }
+    set_variable = { arm_struct_air_blocker = 0 }
+    set_variable = { arm_struct_naval_blocker = 0 }
+    set_variable = { arm_struct_industry_blocker = 0 }
+
+    if = {
+        limit = {
+            check_variable = { var = arm_struct_land_band value = 0 compare = equals }
+            NOT = { num_of_military_factories > 2 }
+        }
+        set_variable = { arm_struct_land_blocker = 1 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_land_band value = 0 compare = equals } }
+        set_variable = { arm_struct_land_blocker = 2 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_land_band value = 1 compare = equals }
+            NOT = { num_of_military_factories > 7 }
+        }
+        set_variable = { arm_struct_land_blocker = 1 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_land_band value = 1 compare = equals } }
+        set_variable = { arm_struct_land_blocker = 2 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_land_band value = 2 compare = equals }
+            NOT = { num_of_military_factories > 15 }
+        }
+        set_variable = { arm_struct_land_blocker = 1 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_land_band value = 2 compare = equals } }
+        set_variable = { arm_struct_land_blocker = 2 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_land_band value = 3 compare = equals }
+            NOT = { num_of_military_factories > 31 }
+        }
+        set_variable = { arm_struct_land_blocker = 1 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_land_band value = 3 compare = equals } }
+        set_variable = { arm_struct_land_blocker = 2 }
+    }
+
+    if = {
+        limit = {
+            check_variable = { var = arm_struct_air_band value = 0 compare = equals }
+            NOT = { num_of_military_factories > 4 }
+        }
+        set_variable = { arm_struct_air_blocker = 1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_air_band value = 0 compare = equals }
+            NOT = { amount_research_slots > 1 }
+        }
+        set_variable = { arm_struct_air_blocker = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_air_band value = 0 compare = equals } }
+        set_variable = { arm_struct_air_blocker = 4 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_air_band value = 1 compare = equals }
+            NOT = { num_of_military_factories > 10 }
+        }
+        set_variable = { arm_struct_air_blocker = 1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_air_band value = 1 compare = equals }
+            NOT = { amount_research_slots > 2 }
+        }
+        set_variable = { arm_struct_air_blocker = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_air_band value = 1 compare = equals } }
+        set_variable = { arm_struct_air_blocker = 4 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_air_band value = 2 compare = equals }
+            NOT = { num_of_military_factories > 20 }
+        }
+        set_variable = { arm_struct_air_blocker = 1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_air_band value = 2 compare = equals }
+            NOT = { amount_research_slots > 3 }
+        }
+        set_variable = { arm_struct_air_blocker = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_air_band value = 2 compare = equals } }
+        set_variable = { arm_struct_air_blocker = 4 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_air_band value = 3 compare = equals }
+            NOT = { num_of_military_factories > 36 }
+        }
+        set_variable = { arm_struct_air_blocker = 1 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_air_band value = 3 compare = equals }
+            NOT = { amount_research_slots > 4 }
+        }
+        set_variable = { arm_struct_air_blocker = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_air_band value = 3 compare = equals } }
+        set_variable = { arm_struct_air_blocker = 4 }
+    }
+
+    if = {
+        limit = { NOT = { num_of_naval_factories > 0 } }
+        set_variable = { arm_struct_naval_blocker = 5 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_naval_band value = 0 compare = equals }
+            NOT = { amount_research_slots > 1 }
+        }
+        set_variable = { arm_struct_naval_blocker = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_naval_band value = 0 compare = equals } }
+        set_variable = { arm_struct_naval_blocker = 4 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_naval_band value = 1 compare = equals }
+            NOT = { num_of_naval_factories > 4 }
+        }
+        set_variable = { arm_struct_naval_blocker = 6 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_naval_band value = 1 compare = equals }
+            NOT = { amount_research_slots > 2 }
+        }
+        set_variable = { arm_struct_naval_blocker = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_naval_band value = 1 compare = equals } }
+        set_variable = { arm_struct_naval_blocker = 4 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_naval_band value = 2 compare = equals }
+            NOT = { num_of_naval_factories > 10 }
+        }
+        set_variable = { arm_struct_naval_blocker = 6 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_naval_band value = 2 compare = equals }
+            NOT = { amount_research_slots > 3 }
+        }
+        set_variable = { arm_struct_naval_blocker = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_naval_band value = 2 compare = equals } }
+        set_variable = { arm_struct_naval_blocker = 4 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_naval_band value = 3 compare = equals }
+            NOT = { num_of_naval_factories > 20 }
+        }
+        set_variable = { arm_struct_naval_blocker = 6 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_naval_band value = 3 compare = equals }
+            NOT = { amount_research_slots > 4 }
+        }
+        set_variable = { arm_struct_naval_blocker = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_naval_band value = 3 compare = equals } }
+        set_variable = { arm_struct_naval_blocker = 4 }
+    }
+
+    if = {
+        limit = {
+            check_variable = { var = arm_struct_industry_band value = 0 compare = equals }
+            NOT = { num_of_civilian_factories > 5 }
+        }
+        set_variable = { arm_struct_industry_blocker = 7 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_industry_band value = 0 compare = equals }
+            check_variable = { var = arm_struct_total_factories value = 10 compare = less_than_or_equals }
+        }
+        set_variable = { arm_struct_industry_blocker = 8 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_industry_band value = 0 compare = equals } }
+        set_variable = { arm_struct_industry_blocker = 3 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_industry_band value = 1 compare = equals }
+            NOT = { num_of_civilian_factories > 12 }
+        }
+        set_variable = { arm_struct_industry_blocker = 7 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_industry_band value = 1 compare = equals }
+            check_variable = { var = arm_struct_total_factories value = 24 compare = less_than_or_equals }
+        }
+        set_variable = { arm_struct_industry_blocker = 8 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_industry_band value = 1 compare = equals } }
+        set_variable = { arm_struct_industry_blocker = 3 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_industry_band value = 2 compare = equals }
+            NOT = { num_of_civilian_factories > 24 }
+        }
+        set_variable = { arm_struct_industry_blocker = 7 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_industry_band value = 2 compare = equals }
+            check_variable = { var = arm_struct_total_factories value = 45 compare = less_than_or_equals }
+        }
+        set_variable = { arm_struct_industry_blocker = 8 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_industry_band value = 2 compare = equals } }
+        set_variable = { arm_struct_industry_blocker = 3 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_industry_band value = 3 compare = equals }
+            NOT = { num_of_civilian_factories > 45 }
+        }
+        set_variable = { arm_struct_industry_blocker = 7 }
+    }
+    else_if = {
+        limit = {
+            check_variable = { var = arm_struct_industry_band value = 3 compare = equals }
+            check_variable = { var = arm_struct_total_factories value = 80 compare = less_than_or_equals }
+        }
+        set_variable = { arm_struct_industry_blocker = 8 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_industry_band value = 3 compare = equals } }
+        set_variable = { arm_struct_industry_blocker = 3 }
+    }
+}
+
+###################################
+# Structural competence caps
+###################################
+arm_apply_structural_competence_caps = {
+    if = {
+        limit = { check_variable = { var = arm_struct_land_band value = 0 compare = equals } }
+        clamp_variable = { var = arm_land_competence min = 0 max = 14 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_land_band value = 1 compare = equals } }
+        clamp_variable = { var = arm_land_competence min = 0 max = 34 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_land_band value = 2 compare = equals } }
+        clamp_variable = { var = arm_land_competence min = 0 max = 59 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_land_band value = 3 compare = equals } }
+        clamp_variable = { var = arm_land_competence min = 0 max = 84 }
+    }
+
+    if = {
+        limit = { check_variable = { var = arm_struct_air_band value = 0 compare = equals } }
+        clamp_variable = { var = arm_air_competence min = 0 max = 14 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_air_band value = 1 compare = equals } }
+        clamp_variable = { var = arm_air_competence min = 0 max = 34 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_air_band value = 2 compare = equals } }
+        clamp_variable = { var = arm_air_competence min = 0 max = 59 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_air_band value = 3 compare = equals } }
+        clamp_variable = { var = arm_air_competence min = 0 max = 84 }
+    }
+
+    if = {
+        limit = { check_variable = { var = arm_struct_naval_blocker value = 5 compare = equals } }
+        set_variable = { arm_naval_competence = 0 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_naval_band value = 0 compare = equals } }
+        clamp_variable = { var = arm_naval_competence min = 0 max = 14 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_naval_band value = 1 compare = equals } }
+        clamp_variable = { var = arm_naval_competence min = 0 max = 34 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_naval_band value = 2 compare = equals } }
+        clamp_variable = { var = arm_naval_competence min = 0 max = 59 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_naval_band value = 3 compare = equals } }
+        clamp_variable = { var = arm_naval_competence min = 0 max = 84 }
+    }
+
+    if = {
+        limit = { check_variable = { var = arm_struct_industry_band value = 0 compare = equals } }
+        clamp_variable = { var = arm_industry_competence min = 0 max = 14 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_industry_band value = 1 compare = equals } }
+        clamp_variable = { var = arm_industry_competence min = 0 max = 34 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_industry_band value = 2 compare = equals } }
+        clamp_variable = { var = arm_industry_competence min = 0 max = 59 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_struct_industry_band value = 3 compare = equals } }
+        clamp_variable = { var = arm_industry_competence min = 0 max = 84 }
+    }
+}
+
+###################################
+# Structural power ceiling
+###################################
+arm_apply_structural_power_ceiling = {
+    set_variable = { arm_struct_power_stage = 0 }
+    set_variable = { arm_structural_power_ceiling = 35 }
+
+    if = {
+        limit = {
+            check_variable = { var = arm_struct_total_factories value = 11 compare = greater_than }
+            num_of_civilian_factories > 5
+            num_of_military_factories > 2
+            amount_research_slots > 1
+        }
+        set_variable = { arm_struct_power_stage = 1 }
+    }
+    if = {
+        limit = {
+            check_variable = { var = arm_struct_total_factories value = 23 compare = greater_than }
+            num_of_civilian_factories > 12
+            num_of_military_factories > 6
+            amount_research_slots > 2
+        }
+        set_variable = { arm_struct_power_stage = 2 }
+    }
+    if = {
+        limit = {
+            check_variable = { var = arm_struct_total_factories value = 44 compare = greater_than }
+            num_of_civilian_factories > 24
+            num_of_military_factories > 12
+            amount_research_slots > 3
+        }
+        set_variable = { arm_struct_power_stage = 3 }
+    }
+    if = {
+        limit = {
+            check_variable = { var = arm_struct_total_factories value = 79 compare = greater_than }
+            num_of_civilian_factories > 45
+            num_of_military_factories > 24
+            amount_research_slots > 4
+        }
+        set_variable = { arm_struct_power_stage = 4 }
+    }
+    if = {
+        limit = {
+            check_variable = { var = arm_struct_total_factories value = 139 compare = greater_than }
+            num_of_civilian_factories > 70
+            num_of_military_factories > 40
+            amount_research_slots > 5
+        }
+        set_variable = { arm_struct_power_stage = 5 }
+    }
+
+    if = {
+        limit = {
+            OR = {
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_REALISTIC }
+                has_game_rule = { rule = arm_auto_research_intensity option = ARM_HISTORICAL }
+            }
+        }
+        if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 5 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 305 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 4 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 235 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 3 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 185 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 2 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 125 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 1 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 70 }
+        }
+    }
+    else_if = {
+        limit = { has_game_rule = { rule = arm_auto_research_intensity option = ARM_BALANCED } }
+        if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 5 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 325 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 4 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 260 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 3 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 205 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 2 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 145 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 1 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 85 }
+        }
+        else = {
+            set_variable = { arm_structural_power_ceiling = 45 }
+        }
+    }
+    else = {
+        if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 5 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 360 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 4 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 295 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 3 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 235 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 2 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 165 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_struct_power_stage value = 1 compare = equals } }
+            set_variable = { arm_structural_power_ceiling = 100 }
+        }
+        else = {
+            set_variable = { arm_structural_power_ceiling = 55 }
+        }
+    }
+
+    if = {
+        limit = { check_variable = { var = arm_global_power value = arm_structural_power_ceiling compare = greater_than } }
+        set_variable = { arm_global_power = arm_structural_power_ceiling }
+    }
+}
+
+###################################
+# Shared structural runtime entrypoint
+###################################
+arm_apply_structural_capability_rules = {
+    arm_define_structural_bands = yes
+    arm_define_structural_blockers = yes
+    arm_apply_structural_competence_caps = yes
+    arm_apply_structural_power_ceiling = yes
+}
+
+###################################
+# Legacy alias.
+# Universal structural bands and power ceilings now handle this.
+###################################
+arm_apply_balanced_small_country_scaling = {
 }
