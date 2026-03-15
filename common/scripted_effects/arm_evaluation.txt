@@ -125,31 +125,31 @@ arm_assign_power_tier = {
     }
 
     # ===================================================
-    # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Grant cap by tier (per 6-month evaluation cycle)
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -626,8 +626,16 @@ arm_prepare_country_context_cache = {
             set_variable = { arm_context_faction_bonus = 0.5 }
         }
 
+        # Inline lend-lease check (moved from on_monthly pre-pass to avoid
+        # iterating all countries; now only runs for current-bucket countries).
         if = {
-            limit = { has_country_flag = arm_has_major_lender }
+            limit = {
+                is_in_faction = yes
+                any_country = {
+                    is_lend_leasing = PREV
+                    check_variable = { var = arm_tier_index value = 3 compare = greater_than }
+                }
+            }
             set_variable = { arm_context_lend_lease_bonus = 0.25 }
         }
     }
@@ -1003,9 +1011,10 @@ arm_compute_target_years = {
 }
 
 arm_compute_next_grant_window = {
-    set_variable = { arm_months_to_next_grant = 3 }
+    set_variable = { arm_months_to_next_grant = 6 }
     set_temp_variable = { arm_next_bucket = global.arm_month_counter }
 
+    # Check each of the next 6 months to find when this country's bucket comes up.
     if = {
         limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
         set_variable = { arm_months_to_next_grant = 1 }
@@ -1013,13 +1022,45 @@ arm_compute_next_grant_window = {
     else = {
         add_to_temp_variable = { arm_next_bucket = 1 }
         if = {
-            limit = { check_variable = { var = arm_next_bucket value = 2 compare = greater_than } }
-            subtract_from_temp_variable = { arm_next_bucket = 3 }
+            limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
+            subtract_from_temp_variable = { arm_next_bucket = 6 }
         }
-
         if = {
             limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
             set_variable = { arm_months_to_next_grant = 2 }
+        }
+        else = {
+            add_to_temp_variable = { arm_next_bucket = 1 }
+            if = {
+                limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
+                subtract_from_temp_variable = { arm_next_bucket = 6 }
+            }
+            if = {
+                limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
+                set_variable = { arm_months_to_next_grant = 3 }
+            }
+            else = {
+                add_to_temp_variable = { arm_next_bucket = 1 }
+                if = {
+                    limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
+                    subtract_from_temp_variable = { arm_next_bucket = 6 }
+                }
+                if = {
+                    limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
+                    set_variable = { arm_months_to_next_grant = 4 }
+                }
+                else = {
+                    add_to_temp_variable = { arm_next_bucket = 1 }
+                    if = {
+                        limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
+                        subtract_from_temp_variable = { arm_next_bucket = 6 }
+                    }
+                    if = {
+                        limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
+                        set_variable = { arm_months_to_next_grant = 5 }
+                    }
+                }
+            }
         }
     }
 }

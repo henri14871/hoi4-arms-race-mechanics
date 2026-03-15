@@ -32,7 +32,7 @@ arm_bootstrap_runtime_state = {
             set_variable = { arm_bucket = global.arm_bucket_counter }
             add_to_variable = { global.arm_bucket_counter = 1 }
             if = {
-                limit = { check_variable = { var = global.arm_bucket_counter value = 2 compare = greater_than } }
+                limit = { check_variable = { var = global.arm_bucket_counter value = 5 compare = greater_than } }
                 set_variable = { global.arm_bucket_counter = 0 }
             }
             set_country_flag = arm_bucket_initialized

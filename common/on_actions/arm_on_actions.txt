@@ -84,31 +84,34 @@ on_actions = {
 
                 # Determine current bucket
                 set_temp_variable = { arm_current_bucket = global.arm_month_counter }
-                # Modulo 3: use if/else since modulo_temp_variable may not work on globals
+                # Modulo 6: use repeated if since modulo_temp_variable may not work on globals
                 if = {
-                    limit = { check_variable = { var = arm_current_bucket value = 2 compare = greater_than } }
-                    subtract_from_temp_variable = { arm_current_bucket = 3 }
+                    limit = { check_variable = { var = arm_current_bucket value = 5 compare = greater_than } }
+                    subtract_from_temp_variable = { arm_current_bucket = 6 }
                 }
                 if = {
-                    limit = { check_variable = { var = arm_current_bucket value = 2 compare = greater_than } }
-                    subtract_from_temp_variable = { arm_current_bucket = 3 }
+                    limit = { check_variable = { var = arm_current_bucket value = 5 compare = greater_than } }
+                    subtract_from_temp_variable = { arm_current_bucket = 6 }
                 }
 
-                # Pre-pass: cache lend-lease-from-major status to avoid O(n^2) inner loop.
-                # Also clear stale flags from previous months.
-                every_country = {
-                    limit = { arm_country_eligible = yes }
-                    clr_country_flag = arm_has_major_lender
-                    if = {
-                        limit = {
-                            is_in_faction = yes
-                            any_country = {
-                                is_lend_leasing = PREV
-                                check_variable = { var = arm_tier_index value = 3 compare = greater_than }
-                            }
+                # Lend-lease check is now inlined into arm_evaluation.txt
+                # (arm_prepare_country_context_cache) so it only runs for
+                # countries actually being evaluated, not all eligible ones.
+
+                # One-time migration: redistribute old 3-bucket saves into 6 buckets.
+                if = {
+                    limit = { NOT = { has_global_flag = arm_6bucket_migrated } }
+                    set_variable = { global.arm_bucket_counter = 0 }
+                    every_country = {
+                        limit = { has_country_flag = arm_bucket_initialized }
+                        set_variable = { arm_bucket = global.arm_bucket_counter }
+                        add_to_variable = { global.arm_bucket_counter = 1 }
+                        if = {
+                            limit = { check_variable = { var = global.arm_bucket_counter value = 5 compare = greater_than } }
+                            set_variable = { global.arm_bucket_counter = 0 }
                         }
-                        set_country_flag = arm_has_major_lender
                     }
+                    set_global_flag = arm_6bucket_migrated
                 }
 
                 # Combined pass: initialize new countries AND evaluate current bucket.
@@ -135,7 +138,7 @@ on_actions = {
                         set_variable = { arm_bucket = global.arm_bucket_counter }
                         add_to_variable = { global.arm_bucket_counter = 1 }
                         if = {
-                            limit = { check_variable = { var = global.arm_bucket_counter value = 2 compare = greater_than } }
+                            limit = { check_variable = { var = global.arm_bucket_counter value = 5 compare = greater_than } }
                             set_variable = { global.arm_bucket_counter = 0 }
                         }
                         set_country_flag = arm_bucket_initialized
@@ -150,9 +153,9 @@ on_actions = {
                 # Increment month counter
                 add_to_variable = { global.arm_elapsed_months = 1 }
                 add_to_variable = { global.arm_month_counter = 1 }
-                # Wrap at 3
+                # Wrap at 6
                 if = {
-                    limit = { check_variable = { var = global.arm_month_counter value = 2 compare = greater_than } }
+                    limit = { check_variable = { var = global.arm_month_counter value = 5 compare = greater_than } }
                     set_variable = { global.arm_month_counter = 0 }
                 }
             }
