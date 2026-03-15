@@ -1012,7 +1012,17 @@ arm_compute_target_years = {
 
 arm_compute_next_grant_window = {
     set_variable = { arm_months_to_next_grant = 6 }
+
+    # Start from the NEXT month counter, not the current one.
+    # During monthly evaluation the current counter still points at
+    # the bucket being processed, so starting there always matches
+    # the evaluated country and wrongly reports "1 month".
     set_temp_variable = { arm_next_bucket = global.arm_month_counter }
+    add_to_temp_variable = { arm_next_bucket = 1 }
+    if = {
+        limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
+        subtract_from_temp_variable = { arm_next_bucket = 6 }
+    }
 
     # Check each of the next 6 months to find when this country's bucket comes up.
     if = {

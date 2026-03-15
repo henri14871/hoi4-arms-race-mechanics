@@ -21,13 +21,13 @@ ARM scores each nation by power, economy, science, mobilization, resources, and 
 
 Four [b]branch competence[/b] tracks (Land, Air, Naval, Industry) decide [i]which[/i] techs a country can plausibly receive. A naval power gets naval tech. A land-focused industrial state gets armor and artillery. Countries do not get random filler tech they cannot support.
 
-Quarterly grants, war catch-up, faction support, and puppet sharing keep the world closer to the curve while avoiding full homogenization.
+Periodic grants, war catch-up, faction support, and puppet sharing keep the world closer to the curve while avoiding full homogenization.
 
 [h2]Features[/h2]
 [list]
 [*] Six power tiers from Micro to Superpower
 [*] Branch-based tech granting for Land, Air, Naval, and Industry
-[*] Quarterly tech grants with configurable caps
+[*] Periodic tech grants with configurable caps
 [*] War, faction, and desperation catch-up bonuses
 [*] Anti-death-spiral support for late-game relevance
 [*] Puppet tech sharing and research-speed spirits

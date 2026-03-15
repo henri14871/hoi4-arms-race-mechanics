@@ -125,9 +125,9 @@ ARM_DESC_HISTORICAL:0 "Uses Realistic mode values plus historical competence bon
  ARM_RULE_grant_cap:0 "Grant Cap"
  ARM_RULE_grant_cap_desc:0 "Controls the maximum number of technologies granted per evaluation cycle."
  ARM_OPT_CAP_STRICT:0 "Strict"
- ARM_DESC_CAP_STRICT:0 "Quarterly cap is halved (rounded up). Slower tech spread across all tiers."
+ ARM_DESC_CAP_STRICT:0 "Grant cap is halved (rounded up). Slower tech spread across all tiers."
  ARM_OPT_CAP_STANDARD:0 "Standard"
- ARM_DESC_CAP_STANDARD:0 "Standard quarterly cap based on tier. Superpower: 6, Great: 5, Regional: 4, Minor Industrial: 3, Minor: 2, Micro: 1."
+ ARM_DESC_CAP_STANDARD:0 "Standard grant cap based on tier. Superpower: 12, Great: 10, Regional: 8, Minor Industrial: 6, Minor: 4, Micro: 2."
  ARM_OPT_CAP_UNLIMITED:0 "Unlimited"
  ARM_DESC_CAP_UNLIMITED:0 "No cap on technologies granted per cycle. Nations receive all eligible techs at once."
 
@@ -289,7 +289,7 @@ arm_tier_superpower_desc:0 "This nation stands at the pinnacle of global power. 
 
  # arm_event.102 - Debug: Effective Lag Report
  arm_event.102.t:0 "ARM Debug: Effective Lag Report"
-arm_event.102.desc:0 "Base Lag: [?arm_base_lag]\n\nEffective Land Lag: [?arm_effective_land_lag]\nEffective Air Lag: [?arm_effective_air_lag]\nEffective Naval Lag: [?arm_effective_naval_lag]\nEffective Industry Lag: [?arm_effective_industry_lag]\n\nGrant Year (Land): [?arm_target_year_land]\nGrant Year (Air): [?arm_target_year_air]\nGrant Year (Naval): [?arm_target_year_naval]\nGrant Year (Industry): [?arm_target_year_industry]\n\nQuarterly Cap: [?arm_quarterly_cap]\nGrants Used: [?arm_grant_counter]"
+arm_event.102.desc:0 "Base Lag: [?arm_base_lag]\n\nEffective Land Lag: [?arm_effective_land_lag]\nEffective Air Lag: [?arm_effective_air_lag]\nEffective Naval Lag: [?arm_effective_naval_lag]\nEffective Industry Lag: [?arm_effective_industry_lag]\n\nGrant Year (Land): [?arm_target_year_land]\nGrant Year (Air): [?arm_target_year_air]\nGrant Year (Naval): [?arm_target_year_naval]\nGrant Year (Industry): [?arm_target_year_industry]\n\nGrant Cap: [?arm_quarterly_cap]\nGrants Used: [?arm_grant_counter]"
  arm_event.102.a:0 "Close"
 
  # arm_event.200 - News: Nation Enters Jet Age
@@ -337,6 +337,9 @@ arm_event.102.desc:0 "Base Lag: [?arm_base_lag]\n\nEffective Land Lag: [?arm_eff
  arm_ui_next_grant_1_month:0 "§G~1 month§!"
  arm_ui_next_grant_2_months:0 "§Y~2 months§!"
  arm_ui_next_grant_3_months:0 "§O~3 months§!"
+ arm_ui_next_grant_4_months:0 "§O~4 months§!"
+ arm_ui_next_grant_5_months:0 "§R~5 months§!"
+ arm_ui_next_grant_6_months:0 "§R~6 months§!"
  arm_ui_next_grant_unknown:0 "§gN/A§!"
  arm_ui_land_lag_le_1:0 "§G[?arm_effective_land_lag|1]y§!"
  arm_ui_land_lag_le_2:0 "§H[?arm_effective_land_lag|1]y§!"

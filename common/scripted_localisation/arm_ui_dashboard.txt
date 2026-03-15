@@ -243,6 +243,18 @@ defined_text = {
         trigger = { check_variable = { var = arm_months_to_next_grant value = 3 compare = equals } }
     }
     text = {
+        localization_key = arm_ui_next_grant_4_months
+        trigger = { check_variable = { var = arm_months_to_next_grant value = 4 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_next_grant_5_months
+        trigger = { check_variable = { var = arm_months_to_next_grant value = 5 compare = equals } }
+    }
+    text = {
+        localization_key = arm_ui_next_grant_6_months
+        trigger = { check_variable = { var = arm_months_to_next_grant value = 6 compare = equals } }
+    }
+    text = {
         localization_key = arm_ui_next_grant_unknown
         trigger = { always = yes }
     }

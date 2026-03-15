@@ -62,7 +62,7 @@ arm_refresh_country_state_runtime_core = {
 # Does not mutate research-speed spirits, grant techs, or change the
 # power tier.  Tier assignment is intentionally skipped so that the
 # weekly cadence cannot cascade a country through multiple tier
-# demotions between quarterly evaluations.
+# demotions between 6-month evaluations.
 # ---------------------------------------------------------------------------
 arm_refresh_country_state_ui_runtime = {
 
@@ -88,7 +88,7 @@ arm_refresh_country_state_ui_runtime = {
     arm_apply_structural_capability_rules = yes
 
     # NOTE: Step 2 (arm_assign_power_tier_for_profile) is deliberately
-    # omitted here.  The tier must only change during the quarterly
+    # omitted here.  The tier must only change during the 6-month
     # monthly evaluation to honour the one-tier-per-cycle guard.
 
     # Step 2b: Lock doctrine preferences after branch scores exist

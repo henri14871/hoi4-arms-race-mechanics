@@ -1439,10 +1439,10 @@ arm_apply_structural_power_ceiling = {
     }
     if = {
         limit = {
-            check_variable = { var = arm_struct_total_factories value = 139 compare = greater_than }
-            num_of_civilian_factories > 70
-            num_of_military_factories > 40
-            amount_research_slots > 5
+            check_variable = { var = arm_struct_total_factories value = 119 compare = greater_than }
+            num_of_civilian_factories > 55
+            num_of_military_factories > 35
+            amount_research_slots > 4
         }
         set_variable = { arm_struct_power_stage = 5 }
     }
@@ -1456,7 +1456,7 @@ arm_apply_structural_power_ceiling = {
         }
         if = {
             limit = { check_variable = { var = arm_struct_power_stage value = 5 compare = equals } }
-            set_variable = { arm_structural_power_ceiling = 305 }
+            set_variable = { arm_structural_power_ceiling = 310 }
         }
         else_if = {
             limit = { check_variable = { var = arm_struct_power_stage value = 4 compare = equals } }
