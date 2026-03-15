@@ -1,43 +1,47 @@
 [h1]Arms Race Mechanics[/h1]
 
-[b]Keep the world technologically competitive.[/b]
+[b]Why is Germany still on Interwar fighters in 1943?[/b]
 
-If you are tired of 1944 wars where major powers still have bizarre holes in air, armor, radar, or naval tech, this mod is for you.
+You know the problem. It's 1944, you're gearing up for D-Day, and the Axis AI is fielding Interwar-era tanks and '36 fighters. The Soviet Union somehow skipped half its infantry tech. Japan has no carriers. The war feels like a joke because nobody kept up.
 
-Arms Race Mechanics gives AI nations a credible tech baseline based on industry, military profile, and war pressure. Major powers stay near the curve. Regional powers stay dangerous in their strongest branches. Minor countries stay relevant without becoming ahistorical superpowers.
+This mod fixes that.
 
-[b]Your research still matters.[/b] ARM is AI-only by default and keeps auto-grants behind the frontier, so the player still wins through better timing, specialization, and planning.
+[h2]The Short Version[/h2]
+ARM doesn't try to make the AI smarter at picking research. Instead, it gives every nation a [b]tech baseline[/b] — a floor that makes sure no country is embarrassingly behind in the branches it should be good at. Think of it as the tech a country [i]would obviously have[/i] given its size, industry, and military.
 
-[h2]What It Does[/h2]
+On top of that baseline, normal research still happens. The AI focuses its research slots on what actually matters instead of plugging gaps it shouldn't have in the first place. If you enable it for players, same deal — you get a baseline so you can spend your slots on the research that counts, not catching up on stuff your country should already know.
+
+[b]AI-only by default.[/b] Your research still matters. ARM just makes sure nobody shows up to WW2 with WW1 tech.
+
+[h2]What Changes In Your Game[/h2]
 [list]
-[*] [b]Stops absurd tech gaps.[/b] Majors no longer fall years behind in branches they should clearly support.
-[*] [b]Keeps wars competitive.[/b] Countries under pressure get catch-up help instead of collapsing into tech irrelevance.
-[*] [b]Makes minors matter.[/b] Smaller nations stay useful and dangerous in the areas they can realistically sustain.
-[*] [b]Preserves player agency.[/b] The mod raises the baseline without replacing the value of smart research choices.
+[*] [b]Germany actually has medium tanks.[/b] Major powers won't randomly skip entire branches anymore.
+[*] [b]Wars stay hard.[/b] Nations that get invaded don't just roll over with 1936 equipment — they get help catching up.
+[*] [b]Minors aren't pushovers.[/b] Romania will have decent infantry tech. Siam will have fighters. They won't rival the USA, but they'll punch back.
+[*] [b]Research still matters.[/b] ARM sets the floor, not the ceiling. Your research choices on top of the baseline are what win games.
 [/list]
 
-[h2]How It Works[/h2]
-ARM scores each nation by power, economy, science, mobilization, resources, and war posture, then places it into a tier with a target lag behind the frontier.
+[h2]How Does It Work?[/h2]
+Every country gets rated on how powerful, industrial, and militarized it is — think of it like a tier list. Superpowers are at the top, tiny nations are at the bottom.
 
-Four [b]branch competence[/b] tracks (Land, Air, Naval, Industry) decide [i]which[/i] techs a country can plausibly receive. A naval power gets naval tech. A land-focused industrial state gets armor and artillery. Countries do not get random filler tech they cannot support.
+Then the mod looks at [i]what kind[/i] of country it is. A naval power like Britain or Japan gets naval tech. A land army nation like the USSR gets tanks and artillery. Nobody gets random tech they have no business having.
 
-Periodic grants, war catch-up, faction support, and puppet sharing keep the world closer to the curve while avoiding full homogenization.
+Throughout the game, countries get baseline tech grants to fill gaps — especially if they're at war and falling behind. This frees up their research slots for the stuff that actually matters, instead of wasting them playing catch-up. It keeps the world competitive without making every country a clone.
 
 [h2]Features[/h2]
 [list]
-[*] Six power tiers from Micro to Superpower
-[*] Branch-based tech granting for Land, Air, Naval, and Industry
-[*] Periodic tech grants with configurable caps
-[*] War, faction, and desperation catch-up bonuses
-[*] Anti-death-spiral support for late-game relevance
-[*] Puppet tech sharing and research-speed spirits
-[*] DLC-aware grants for Man the Guns, No Step Back, and By Blood Alone
-[*] 13 game rules for scope, intensity, and behavior
-[*] AI-only by default, with opt-in for player nations
+[*] 6 power tiers — from tiny nations to superpowers, everyone gets appropriate tech
+[*] 4 military branches — Land, Air, Naval, and Industry are tracked separately
+[*] War catch-up — countries at war won't fall hopelessly behind in tech
+[*] Faction sharing — allies help each other keep up (like real life)
+[*] Puppet support — subjects get tech from their overlords
+[*] Works with all DLC — automatically adjusts for MtG, NSB, BBA, etc.
+[*] 13 game rules — tweak everything from the menu if you want to
+[*] AI-only by default — enable it for yourself too to free up your research slots
 [/list]
 
 [h2]Compatibility[/h2]
-ARM ships with built-in compatibility profiles that auto-detect your mod setup. No patches, no sub-mods, no load-order juggling.
+Works out of the box with popular overhaul mods. No patches needed, no sub-mods, no fiddling with load order.
 
 [list]
 [*] Road to 56
@@ -47,7 +51,7 @@ ARM ships with built-in compatibility profiles that auto-detect your mod setup. 
 [*] Cold War Iron Curtain
 [*] The New Order
 [*] Millennium Dawn
-[*] and more bundled profiles included
+[*] + more built-in
 [/list]
 
 [b]Version:[/b] 1.0.0 | [b]HOI4:[/b] 1.17.4.1+ | [b]DLC Required:[/b] None
