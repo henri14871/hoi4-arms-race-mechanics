@@ -443,3 +443,26 @@ defined_text = {
         trigger = { always = yes }
     }
 }
+
+defined_text = {
+    name = arm_ui_player_scope_status
+
+    text = {
+        localization_key = arm_ui_player_scope_disabled
+        trigger = {
+            is_ai = no
+            has_game_rule = { rule = arm_auto_research_scope option = ARM_DISABLED }
+        }
+    }
+    text = {
+        localization_key = arm_ui_player_scope_ai_only
+        trigger = {
+            is_ai = no
+            NOT = { has_game_rule = { rule = arm_auto_research_scope option = ARM_EVERYONE } }
+        }
+    }
+    text = {
+        localization_key = arm_ui_player_scope_none
+        trigger = { always = yes }
+    }
+}
