@@ -70,27 +70,21 @@ arm_compat_profile = {
 		desc = "ARM_DESC_COMPAT_VANILLA"
 	}
 	option = {
-		name = ARM_COMPAT_ROAD_TO_56
-		text = "ARM_OPT_COMPAT_ROAD_TO_56"
-		desc = "ARM_DESC_COMPAT_ROAD_TO_56"
+		name = ARM_COMPAT_BLACKICE
+		text = "ARM_OPT_COMPAT_BLACKICE"
+		desc = "ARM_DESC_COMPAT_BLACKICE"
+		allow_achievements = no
+	}
+	option = {
+		name = ARM_COMPAT_CWIC
+		text = "ARM_OPT_COMPAT_CWIC"
+		desc = "ARM_DESC_COMPAT_CWIC"
 		allow_achievements = no
 	}
 	option = {
 		name = ARM_COMPAT_KAISERREICH
 		text = "ARM_OPT_COMPAT_KAISERREICH"
 		desc = "ARM_DESC_COMPAT_KAISERREICH"
-		allow_achievements = no
-	}
-	option = {
-		name = ARM_COMPAT_KAISERREDUX
-		text = "ARM_OPT_COMPAT_KAISERREDUX"
-		desc = "ARM_DESC_COMPAT_KAISERREDUX"
-		allow_achievements = no
-	}
-	option = {
-		name = ARM_COMPAT_BLACKICE
-		text = "ARM_OPT_COMPAT_BLACKICE"
-		desc = "ARM_DESC_COMPAT_BLACKICE"
 		allow_achievements = no
 	}
 	option = {
@@ -106,30 +100,6 @@ arm_compat_profile = {
 		allow_achievements = no
 	}
 	option = {
-		name = ARM_COMPAT_GREAT_WAR
-		text = "ARM_OPT_COMPAT_GREAT_WAR"
-		desc = "ARM_DESC_COMPAT_GREAT_WAR"
-		allow_achievements = no
-	}
-	option = {
-		name = ARM_COMPAT_GREAT_WAR_REDUX
-		text = "ARM_OPT_COMPAT_GREAT_WAR_REDUX"
-		desc = "ARM_DESC_COMPAT_GREAT_WAR_REDUX"
-		allow_achievements = no
-	}
-	option = {
-		name = ARM_COMPAT_MILLENNIUM_DAWN
-		text = "ARM_OPT_COMPAT_MILLENNIUM_DAWN"
-		desc = "ARM_DESC_COMPAT_MILLENNIUM_DAWN"
-		allow_achievements = no
-	}
-	option = {
-		name = ARM_COMPAT_TNO
-		text = "ARM_OPT_COMPAT_TNO"
-		desc = "ARM_DESC_COMPAT_TNO"
-		allow_achievements = no
-	}
-	option = {
 		name = ARM_COMPAT_NOVUM_VEXILLUM
 		text = "ARM_OPT_COMPAT_NOVUM_VEXILLUM"
 		desc = "ARM_DESC_COMPAT_NOVUM_VEXILLUM"
@@ -142,15 +112,45 @@ arm_compat_profile = {
 		allow_achievements = no
 	}
 	option = {
-		name = ARM_COMPAT_CWIC
-		text = "ARM_OPT_COMPAT_CWIC"
-		desc = "ARM_DESC_COMPAT_CWIC"
+		name = ARM_COMPAT_KAISERREDUX
+		text = "ARM_OPT_COMPAT_KAISERREDUX"
+		desc = "ARM_DESC_COMPAT_KAISERREDUX"
+		allow_achievements = no
+	}
+	option = {
+		name = ARM_COMPAT_TNO
+		text = "ARM_OPT_COMPAT_TNO"
+		desc = "ARM_DESC_COMPAT_TNO"
+		allow_achievements = no
+	}
+	option = {
+		name = ARM_COMPAT_MILLENNIUM_DAWN
+		text = "ARM_OPT_COMPAT_MILLENNIUM_DAWN"
+		desc = "ARM_DESC_COMPAT_MILLENNIUM_DAWN"
 		allow_achievements = no
 	}
 	option = {
 		name = ARM_COMPAT_TFR
 		text = "ARM_OPT_COMPAT_TFR"
 		desc = "ARM_DESC_COMPAT_TFR"
+		allow_achievements = no
+	}
+	option = {
+		name = ARM_COMPAT_GREAT_WAR_REDUX
+		text = "ARM_OPT_COMPAT_GREAT_WAR_REDUX"
+		desc = "ARM_DESC_COMPAT_GREAT_WAR_REDUX"
+		allow_achievements = no
+	}
+	option = {
+		name = ARM_COMPAT_GREAT_WAR
+		text = "ARM_OPT_COMPAT_GREAT_WAR"
+		desc = "ARM_DESC_COMPAT_GREAT_WAR"
+		allow_achievements = no
+	}
+	option = {
+		name = ARM_COMPAT_ROAD_TO_56
+		text = "ARM_OPT_COMPAT_ROAD_TO_56"
+		desc = "ARM_DESC_COMPAT_ROAD_TO_56"
 		allow_achievements = no
 	}
 }

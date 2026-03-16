@@ -4,7 +4,7 @@ Workshop ID: 1521695605
 Bundle slug: kaiserreich
 Generation mode: overhaul
 Parsed techs: 500
-Unknown techs: 29
+Unknown techs: 27
 Doctrines detected: 38
 Preset thresholds: kaiserreich
 

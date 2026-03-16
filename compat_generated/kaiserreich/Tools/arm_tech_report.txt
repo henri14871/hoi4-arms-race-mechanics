@@ -1,21 +1,21 @@
-ARMS RACE MECHANICS — TECH LIST GENERATION REPORT
+ARMS RACE MECHANICS -- TECH LIST GENERATION REPORT
 ============================================================
 
 Total techs parsed:    581
-Successfully mapped:   474
-Unmapped (unknown):    69
+Successfully mapped:   476
+Unmapped (unknown):    67
 
 BRANCH SUMMARY
 ----------------------------------------
   air                              81 techs
   industry_electronics             91 techs
-  land                            203 techs
+  land                            205 techs
   naval                            99 techs
 
 CATEGORY DETAIL
 ------------------------------------------------------------
 
-  [air / cas] — 12 techs
+  [air / cas] -- 12 techs
     1922  early_bombs
           [from: kaiserreich]
     1936  CAS1
@@ -41,7 +41,7 @@ CATEGORY DETAIL
     1944  air_torpedoe_3
           [from: kaiserreich]
 
-  [air / fighters] — 31 techs
+  [air / fighters] -- 31 techs
     1922  aa_lmg
           [from: kaiserreich]
     1922  engines_1
@@ -103,7 +103,7 @@ CATEGORY DETAIL
     1950  jet_fighter2
           [from: kaiserreich]
 
-  [air / heavy_fighters] — 8 techs
+  [air / heavy_fighters] -- 8 techs
     1926  iw_medium_airframe
           [from: kaiserreich]
     1936  heavy_fighter1
@@ -121,7 +121,7 @@ CATEGORY DETAIL
     1945  modern_medium_airframe
           [from: kaiserreich]
 
-  [air / naval_bombers] — 6 techs
+  [air / naval_bombers] -- 6 techs
     1936  naval_bomber1
           [from: kaiserreich]
     1936  cv_naval_bomber1
@@ -135,7 +135,7 @@ CATEGORY DETAIL
     1944  cv_naval_bomber3
           [from: kaiserreich]
 
-  [air / strategic_bombers] — 12 techs
+  [air / strategic_bombers] -- 12 techs
     1926  iw_large_airframe
           [from: kaiserreich]
     1936  strategic_bomber1
@@ -161,7 +161,7 @@ CATEGORY DETAIL
     1950  jet_strategic_bomber1
           [from: kaiserreich]
 
-  [air / tactical_bombers] — 6 techs
+  [air / tactical_bombers] -- 6 techs
     1933  early_bomber
           [from: kaiserreich]
     1936  tactical_bomber1
@@ -175,7 +175,7 @@ CATEGORY DETAIL
     1950  jet_tactical_bomber2
           [from: kaiserreich]
 
-  [air / transport] — 6 techs
+  [air / transport] -- 6 techs
     1933  early_transport_plane
           [from: kaiserreich]
     1933  bba_early_transport_plane
@@ -189,7 +189,7 @@ CATEGORY DETAIL
     1948  strategic_airlifter
           [from: kaiserreich]
 
-  [industry_electronics / electronics] — 17 techs
+  [industry_electronics / electronics] -- 17 techs
     1936  electronic_mechanical_engineering
           [from: kaiserreich]
     1936  radio
@@ -225,7 +225,7 @@ CATEGORY DETAIL
     1942  advanced_decryption
           [from: kaiserreich]
 
-  [industry_electronics / industry] — 48 techs
+  [industry_electronics / industry] -- 48 techs
     1936  basic_fortification_tech
           [from: kaiserreich]
     1936  coastal_fort_tech_1
@@ -323,7 +323,7 @@ CATEGORY DETAIL
     1943  excavation5
           [from: kaiserreich]
 
-  [industry_electronics / nuclear] — 6 techs
+  [industry_electronics / nuclear] -- 6 techs
     1940  atomic_research
           [from: kaiserreich]
     1943  nuclear_reactor
@@ -337,7 +337,7 @@ CATEGORY DETAIL
     1950  thermonuclear_bombs
           [from: kaiserreich]
 
-  [industry_electronics / radar] — 5 techs
+  [industry_electronics / radar] -- 5 techs
     1936  radio_detection
           [from: kaiserreich]
     1938  cavity_magnatron
@@ -349,7 +349,7 @@ CATEGORY DETAIL
     1942  monopulse_radar
           [from: kaiserreich]
 
-  [industry_electronics / rockets] — 15 techs
+  [industry_electronics / rockets] -- 15 techs
     1939  motorized_rocket_unit
           [from: kaiserreich]
     1940  rocket_artillery
@@ -381,7 +381,7 @@ CATEGORY DETAIL
     1946  sp_rockets_dual_chamber_rocket_engine_2
           [from: kaiserreich]
 
-  [land / anti_air] — 6 techs
+  [land / anti_air] -- 6 techs
     1936  interwar_antiair
           [from: kaiserreich]
     1939  antiair1
@@ -395,7 +395,9 @@ CATEGORY DETAIL
     1943  antiair5
           [from: kaiserreich]
 
-  [land / anti_tank] — 8 techs
+  [land / anti_tank] -- 10 techs
+    1922  photo_reconnaisance
+          [from: kaiserreich]
     1936  mountain_tanks
     1936  SWE_bofors_antitank_gun
     1936  interwar_antitank
@@ -410,8 +412,10 @@ CATEGORY DETAIL
           [from: kaiserreich]
     1943  antitank5
           [from: kaiserreich]
+    1945  sp_centrifugal_jet_tech
+          [from: kaiserreich]
 
-  [land / artillery] — 26 techs
+  [land / artillery] -- 26 techs
     1922  basic_battery
           [from: kaiserreich]
     1936  gw_artillery
@@ -465,7 +469,7 @@ CATEGORY DETAIL
     1944  advanced_dp_light_battery
           [from: kaiserreich]
 
-  [land / heavy_tanks] — 13 techs
+  [land / heavy_tanks] -- 13 techs
     1934  basic_heavy_tank
           [from: kaiserreich]
     1934  basic_heavy_tank_chassis
@@ -493,7 +497,7 @@ CATEGORY DETAIL
     1945  sp_armored_lc_weapon_fire_control_tech
           [from: kaiserreich]
 
-  [land / infantry] — 31 techs
+  [land / infantry] -- 31 techs
     1918  infantry_weapons
           [from: kaiserreich]
     1918  support_weapons
@@ -557,7 +561,7 @@ CATEGORY DETAIL
     1944  elite_forces
           [from: kaiserreich]
 
-  [land / light_tanks] — 8 techs
+  [land / light_tanks] -- 8 techs
     1918  gwtank
           [from: kaiserreich]
     1918  gwtank_chassis
@@ -575,7 +579,7 @@ CATEGORY DETAIL
     1941  advanced_light_tank_chassis
           [from: kaiserreich]
 
-  [land / mechanised] — 5 techs
+  [land / mechanised] -- 5 techs
     1940  mechanised_infantry
           [from: kaiserreich]
     1941  amphibious_mechanized_infantry
@@ -587,7 +591,7 @@ CATEGORY DETAIL
     1944  mechanised_infantry3
           [from: kaiserreich]
 
-  [land / medium_tanks] — 6 techs
+  [land / medium_tanks] -- 6 techs
     1938  basic_medium_tank_chassis
           [from: kaiserreich]
     1939  basic_medium_tank
@@ -601,19 +605,19 @@ CATEGORY DETAIL
     1943  advanced_medium_tank_chassis
           [from: kaiserreich]
 
-  [land / modern_tanks] — 2 techs
+  [land / modern_tanks] -- 2 techs
     1945  main_battle_tank
           [from: kaiserreich]
     1945  main_battle_tank_chassis
           [from: kaiserreich]
 
-  [land / motorised] — 2 techs
+  [land / motorised] -- 2 techs
     1936  tech_trucks
           [from: kaiserreich]
     1936  motorised_infantry
           [from: kaiserreich]
 
-  [land / support] — 42 techs
+  [land / support] -- 42 techs
     1910  basic_train
           [from: kaiserreich]
     1918  tech_support
@@ -698,7 +702,7 @@ CATEGORY DETAIL
     1946  night_vision2
           [from: kaiserreich]
 
-  [land / tanks_generic] — 54 techs
+  [land / tanks_generic] -- 54 techs
     1914  armored_car1
           [from: kaiserreich]
     1934  basic_light_td
@@ -804,7 +808,7 @@ CATEGORY DETAIL
     1945  modern_spaa
           [from: kaiserreich]
 
-  [naval / battleships] — 15 techs
+  [naval / battleships] -- 15 techs
     1922  early_battlecruiser
     1922  early_battleship
     1922  early_ship_hull_heavy
@@ -827,7 +831,7 @@ CATEGORY DETAIL
     1944  advanced_battleship
     1944  heavy_battleship2
 
-  [naval / carriers] — 10 techs
+  [naval / carriers] -- 10 techs
     1922  early_carrier
     1922  early_ship_hull_carrier
           [from: kaiserreich]
@@ -845,7 +849,7 @@ CATEGORY DETAIL
     1944  sp_ice_composite_runawayas
           [from: kaiserreich]
 
-  [naval / destroyers] — 17 techs
+  [naval / destroyers] -- 17 techs
     1922  early_destroyer
     1922  early_ship_hull_light
           [from: kaiserreich]
@@ -877,7 +881,7 @@ CATEGORY DETAIL
           [from: kaiserreich]
     1944  advanced_destroyer
 
-  [naval / heavy_cruisers] — 5 techs
+  [naval / heavy_cruisers] -- 5 techs
     1922  early_heavy_cruiser
     1922  basic_cruiser_armor_scheme (XP)
           [from: kaiserreich]
@@ -885,7 +889,7 @@ CATEGORY DETAIL
     1940  improved_heavy_cruiser
     1944  advanced_heavy_cruiser
 
-  [naval / light_cruisers] — 8 techs
+  [naval / light_cruisers] -- 8 techs
     1922  early_light_cruiser
     1922  early_ship_hull_cruiser
           [from: kaiserreich]
@@ -899,7 +903,7 @@ CATEGORY DETAIL
           [from: kaiserreich]
     1944  advanced_light_cruiser
 
-  [naval / naval_support] — 32 techs
+  [naval / naval_support] -- 32 techs
     1922  transport
     1922  basic_torpedo
           [from: kaiserreich]
@@ -962,7 +966,7 @@ CATEGORY DETAIL
     1944  mtg_tank_landing_craft
           [from: kaiserreich]
 
-  [naval / submarines] — 12 techs
+  [naval / submarines] -- 12 techs
     1922  early_submarine
     1922  early_ship_hull_submarine
           [from: kaiserreich]
@@ -1097,18 +1101,12 @@ Add entries to custom_mappings.txt to include them.
   penal_infantry
     categories: []
     source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
-  photo_reconnaisance
-    categories: ['air_equipment', 'plane_modules_tech', 'mio_cat_all_medium_aircraft_and_modules']
-    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\bba_air_techs.txt
   pre_dreadnoughts
     categories: []
     source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt
   sami_pathfinders_tech
     categories: []
     source: vanilla / E:\SteamLibrary\steamapps\common\Hearts of Iron IV\common\technologies\infantry.txt
-  sp_centrifugal_jet_tech
-    categories: ['jet_technology', 'cat_air_engine', 'helicopter_tech']
-    source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\bba_air_techs.txt
   sp_naval_proximity_fuze_tech
     categories: []
     source: kaiserreich / E:\SteamLibrary\steamapps\workshop\content\394360\1521695605\common\technologies\MTG_naval.txt

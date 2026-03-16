@@ -62,10 +62,11 @@ arm_refresh_country_state_runtime_core = {
 # ---------------------------------------------------------------------------
 # arm_refresh_country_state_ui_runtime
 # UI-only runtime refresh used by weekly visible-state updates.
-# Does not mutate research-speed spirits, grant techs, or change the
-# power tier.  Tier assignment is intentionally skipped so that the
-# weekly cadence cannot cascade a country through multiple tier
-# demotions between 6-month evaluations.
+# Does not grant techs or change the power tier.  Tier assignment is
+# intentionally skipped so that the weekly cadence cannot cascade a
+# country through multiple tier demotions between 6-month evaluations.
+# Research-speed spirits ARE updated so the player sees correct ideas
+# even in AI-Only mode where the full evaluation never runs for humans.
 # ---------------------------------------------------------------------------
 arm_refresh_country_state_ui_runtime = {
 
@@ -111,6 +112,12 @@ arm_refresh_country_state_ui_runtime = {
 
     # Step 5b: Cache the next monthly grant window for the UI.
     arm_compute_next_grant_window = yes
+
+    # Step 6: Keep research-speed spirits in sync with current scores.
+    # In AI-Only mode, human countries never run the full monthly
+    # evaluation, so without this the spirits freeze at their
+    # initialization values and never reflect actual competence.
+    arm_update_research_speed_spirit = yes
 }
 
 # ---------------------------------------------------------------------------
