@@ -580,18 +580,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_blackice = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_blackice = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_blackice = yes
         }
         if = {
             limit = {
@@ -633,18 +629,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_blackice = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_blackice = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_blackice = yes
         }
         if = {
@@ -665,6 +649,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_blackice = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_blackice = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_blackice = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_blackice = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_blackice = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_blackice = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_blackice = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_blackice = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_blackice = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_blackice = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
@@ -705,6 +737,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_blackice = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_blackice = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_blackice = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_blackice = yes
         }
         if = {
@@ -712,42 +759,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_blackice = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_blackice = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_blackice = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_blackice = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_blackice = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_blackice = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_blackice value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_blackice = yes
         }
         if = {
             limit = {
@@ -772,18 +783,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_cold_war_iron_curtain = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_cold_war_iron_curtain = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_cold_war_iron_curtain = yes
         }
         if = {
             limit = {
@@ -825,18 +832,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_cold_war_iron_curtain = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_cold_war_iron_curtain = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_cold_war_iron_curtain = yes
         }
         if = {
@@ -857,6 +852,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_cold_war_iron_curtain = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_cold_war_iron_curtain = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_cold_war_iron_curtain = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_cold_war_iron_curtain = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_cold_war_iron_curtain = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_cold_war_iron_curtain = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_cold_war_iron_curtain = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_cold_war_iron_curtain = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_cold_war_iron_curtain = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_cold_war_iron_curtain = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
@@ -897,6 +940,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_cold_war_iron_curtain = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_cold_war_iron_curtain = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_cold_war_iron_curtain = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_cold_war_iron_curtain = yes
         }
         if = {
@@ -904,42 +962,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_cold_war_iron_curtain = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_cold_war_iron_curtain = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_cold_war_iron_curtain = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_cold_war_iron_curtain = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_cold_war_iron_curtain = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_cold_war_iron_curtain = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_cold_war_iron_curtain value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_cold_war_iron_curtain = yes
         }
         if = {
             limit = {
@@ -964,18 +986,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_kaiserreich = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_kaiserreich = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_kaiserreich = yes
         }
         if = {
             limit = {
@@ -1017,18 +1035,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_kaiserreich = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_kaiserreich = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_kaiserreich = yes
         }
         if = {
@@ -1049,6 +1055,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_kaiserreich = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_kaiserreich = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_kaiserreich = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_kaiserreich = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_kaiserreich = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_kaiserreich = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_kaiserreich = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_kaiserreich = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_kaiserreich = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_kaiserreich = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
@@ -1089,6 +1143,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_kaiserreich = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_kaiserreich = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_kaiserreich = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_kaiserreich = yes
         }
         if = {
@@ -1096,42 +1165,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_kaiserreich = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_kaiserreich = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_kaiserreich = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_kaiserreich = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_kaiserreich = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_kaiserreich = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserreich value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_kaiserreich = yes
         }
         if = {
             limit = {
@@ -1156,18 +1189,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_endsieg = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_endsieg = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_endsieg = yes
         }
         if = {
             limit = {
@@ -1209,18 +1238,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_endsieg = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_endsieg = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_endsieg = yes
         }
         if = {
@@ -1241,6 +1258,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_endsieg = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_endsieg = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_endsieg = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_endsieg = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_endsieg = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_endsieg = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_endsieg = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_endsieg = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_endsieg = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_endsieg = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
@@ -1281,6 +1346,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_endsieg = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_endsieg = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_endsieg = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_endsieg = yes
         }
         if = {
@@ -1288,42 +1368,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_endsieg = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_endsieg = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_endsieg = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_endsieg = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_endsieg = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_endsieg = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_endsieg value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_endsieg = yes
         }
         if = {
             limit = {
@@ -1348,18 +1392,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_extended_tech_tree_1960 = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_extended_tech_tree_1960 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_extended_tech_tree_1960 = yes
         }
         if = {
             limit = {
@@ -1401,18 +1441,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_extended_tech_tree_1960 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_extended_tech_tree_1960 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_extended_tech_tree_1960 = yes
         }
         if = {
@@ -1433,6 +1461,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_extended_tech_tree_1960 = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_extended_tech_tree_1960 = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_extended_tech_tree_1960 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_extended_tech_tree_1960 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_extended_tech_tree_1960 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_extended_tech_tree_1960 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_extended_tech_tree_1960 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_extended_tech_tree_1960 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_extended_tech_tree_1960 = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_extended_tech_tree_1960 = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
@@ -1473,6 +1549,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_extended_tech_tree_1960 = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_extended_tech_tree_1960 = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_extended_tech_tree_1960 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_extended_tech_tree_1960 = yes
         }
         if = {
@@ -1480,42 +1571,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_extended_tech_tree_1960 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_extended_tech_tree_1960 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_extended_tech_tree_1960 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_extended_tech_tree_1960 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_extended_tech_tree_1960 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_extended_tech_tree_1960 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_extended_tech_tree_1960 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_extended_tech_tree_1960 = yes
         }
         if = {
             limit = {
@@ -1540,18 +1595,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_novum_vexillum = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_novum_vexillum = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_novum_vexillum = yes
         }
         if = {
             limit = {
@@ -1593,18 +1644,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_novum_vexillum = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_novum_vexillum = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_novum_vexillum = yes
         }
         if = {
@@ -1625,6 +1664,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_novum_vexillum = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_novum_vexillum = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_novum_vexillum = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_novum_vexillum = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_novum_vexillum = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_novum_vexillum = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_novum_vexillum = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_novum_vexillum = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_novum_vexillum = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_novum_vexillum = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
@@ -1665,6 +1752,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_novum_vexillum = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_novum_vexillum = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_novum_vexillum = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_novum_vexillum = yes
         }
         if = {
@@ -1672,42 +1774,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_novum_vexillum = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_novum_vexillum = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_novum_vexillum = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_novum_vexillum = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_novum_vexillum = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_novum_vexillum = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_novum_vexillum value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_novum_vexillum = yes
         }
         if = {
             limit = {
@@ -1732,18 +1798,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_rise_of_nations = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_rise_of_nations = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_rise_of_nations = yes
         }
         if = {
             limit = {
@@ -1785,18 +1847,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_rise_of_nations = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_rise_of_nations = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_rise_of_nations = yes
         }
         if = {
@@ -1817,6 +1867,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_rise_of_nations = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_rise_of_nations = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_rise_of_nations = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_rise_of_nations = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_rise_of_nations = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_rise_of_nations = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_rise_of_nations = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_rise_of_nations = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_rise_of_nations = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_rise_of_nations = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
@@ -1857,6 +1955,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_rise_of_nations = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_rise_of_nations = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_rise_of_nations = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_rise_of_nations = yes
         }
         if = {
@@ -1864,42 +1977,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_rise_of_nations = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_rise_of_nations = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_rise_of_nations = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_rise_of_nations = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_rise_of_nations = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_rise_of_nations = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_rise_of_nations value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_rise_of_nations = yes
         }
         if = {
             limit = {
@@ -1924,18 +2001,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_kaiserredux = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_kaiserredux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_kaiserredux = yes
         }
         if = {
             limit = {
@@ -1977,18 +2050,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_kaiserredux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_kaiserredux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_kaiserredux = yes
         }
         if = {
@@ -2009,6 +2070,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_kaiserredux = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_kaiserredux = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_kaiserredux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_kaiserredux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_kaiserredux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_kaiserredux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_kaiserredux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_kaiserredux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_kaiserredux = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_kaiserredux = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
@@ -2049,6 +2158,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_kaiserredux = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_kaiserredux = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_kaiserredux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_kaiserredux = yes
         }
         if = {
@@ -2056,42 +2180,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_kaiserredux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_kaiserredux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_kaiserredux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_kaiserredux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_kaiserredux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_kaiserredux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_kaiserredux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_kaiserredux = yes
         }
         if = {
             limit = {
@@ -2116,18 +2204,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_the_new_order = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_the_new_order = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_the_new_order = yes
         }
         if = {
             limit = {
@@ -2169,18 +2253,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_the_new_order = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_the_new_order = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_the_new_order = yes
         }
         if = {
@@ -2201,6 +2273,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_the_new_order = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_the_new_order = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_the_new_order = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_the_new_order = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_the_new_order = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_the_new_order = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_the_new_order = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_the_new_order = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_the_new_order = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_the_new_order = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
@@ -2241,6 +2361,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_the_new_order = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_the_new_order = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_the_new_order = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_the_new_order = yes
         }
         if = {
@@ -2248,42 +2383,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_the_new_order = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_the_new_order = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_the_new_order = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_the_new_order = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_the_new_order = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_the_new_order = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_new_order value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_the_new_order = yes
         }
         if = {
             limit = {
@@ -2308,18 +2407,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_millennium_dawn = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_millennium_dawn = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_millennium_dawn = yes
         }
         if = {
             limit = {
@@ -2361,18 +2456,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_millennium_dawn = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_millennium_dawn = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_millennium_dawn = yes
         }
         if = {
@@ -2393,6 +2476,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_millennium_dawn = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_millennium_dawn = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_millennium_dawn = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_millennium_dawn = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_millennium_dawn = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_millennium_dawn = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_millennium_dawn = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_millennium_dawn = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_millennium_dawn = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_millennium_dawn = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
@@ -2433,6 +2564,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_millennium_dawn = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_millennium_dawn = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_millennium_dawn = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_millennium_dawn = yes
         }
         if = {
@@ -2440,42 +2586,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_millennium_dawn = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_millennium_dawn = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_millennium_dawn = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_millennium_dawn = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_millennium_dawn = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_millennium_dawn = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_millennium_dawn value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_millennium_dawn = yes
         }
         if = {
             limit = {
@@ -2500,18 +2610,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_the_fire_rises = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_the_fire_rises = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_the_fire_rises = yes
         }
         if = {
             limit = {
@@ -2553,18 +2659,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_the_fire_rises = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_the_fire_rises = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_the_fire_rises = yes
         }
         if = {
@@ -2585,6 +2679,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_the_fire_rises = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_the_fire_rises = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_the_fire_rises = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_the_fire_rises = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_the_fire_rises = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_the_fire_rises = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_the_fire_rises = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_the_fire_rises = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_the_fire_rises = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_the_fire_rises = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
@@ -2625,6 +2767,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_the_fire_rises = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_the_fire_rises = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_the_fire_rises = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_the_fire_rises = yes
         }
         if = {
@@ -2632,42 +2789,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_the_fire_rises = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_the_fire_rises = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_the_fire_rises = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_the_fire_rises = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_the_fire_rises = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_the_fire_rises = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_the_fire_rises value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_the_fire_rises = yes
         }
         if = {
             limit = {
@@ -2692,18 +2813,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_great_war_redux = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_great_war_redux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_great_war_redux = yes
         }
         if = {
             limit = {
@@ -2745,18 +2862,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_great_war_redux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_great_war_redux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_great_war_redux = yes
         }
         if = {
@@ -2777,6 +2882,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_great_war_redux = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_great_war_redux = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_great_war_redux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_great_war_redux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_great_war_redux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_great_war_redux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_great_war_redux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_great_war_redux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_great_war_redux = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_great_war_redux = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
@@ -2817,6 +2970,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_great_war_redux = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_great_war_redux = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_great_war_redux = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_great_war_redux = yes
         }
         if = {
@@ -2824,42 +2992,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_great_war_redux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_great_war_redux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_great_war_redux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_great_war_redux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_great_war_redux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_great_war_redux = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war_redux value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_great_war_redux = yes
         }
         if = {
             limit = {
@@ -2884,18 +3016,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_great_war = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_great_war = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_great_war = yes
         }
         if = {
             limit = {
@@ -2937,18 +3065,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_great_war = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_great_war = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_great_war = yes
         }
         if = {
@@ -2969,6 +3085,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_great_war = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_great_war = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_great_war = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_great_war = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_great_war = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_great_war = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_great_war = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_great_war = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_great_war = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_great_war = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
@@ -3009,6 +3173,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_great_war = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_great_war = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_great_war = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_great_war = yes
         }
         if = {
@@ -3016,42 +3195,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_great_war = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_great_war = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_great_war = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_great_war = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_great_war = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_great_war = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_great_war value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_great_war = yes
         }
         if = {
             limit = {
@@ -3076,18 +3219,14 @@ arm_grant_techs_for_profile = {
             }
         }
         }
+        # --- LAND branch ---
         set_variable = { arm_grant_counter_road_to_56 = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry_road_to_56 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry_road_to_56 = yes
         }
         if = {
             limit = {
@@ -3129,18 +3268,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters_road_to_56 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas_road_to_56 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks_road_to_56 = yes
         }
         if = {
@@ -3161,6 +3288,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic_road_to_56 = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter_road_to_56 = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters_road_to_56 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas_road_to_56 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters_road_to_56 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers_road_to_56 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers_road_to_56 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers_road_to_56 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport_road_to_56 = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter_road_to_56 = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
@@ -3201,6 +3376,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support_road_to_56 = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter_road_to_56 = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry_road_to_56 = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics_road_to_56 = yes
         }
         if = {
@@ -3208,42 +3398,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar_road_to_56 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters_road_to_56 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers_road_to_56 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers_road_to_56 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers_road_to_56 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport_road_to_56 = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter_road_to_56 value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support_road_to_56 = yes
         }
         if = {
             limit = {
@@ -3259,17 +3413,14 @@ arm_grant_techs_for_profile = {
         }
     }
     else = {
+        # --- LAND branch ---
+        set_variable = { arm_grant_counter = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_land }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_land_infantry = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_industry_electronics_industry = yes
         }
         if = {
             limit = {
@@ -3311,18 +3462,6 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
             }
-            arm_grant_air_fighters = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_cas = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
-            }
             arm_grant_land_light_tanks = yes
         }
         if = {
@@ -3343,6 +3482,54 @@ arm_grant_techs_for_profile = {
             }
             arm_grant_land_tanks_generic = yes
         }
+        # --- AIR branch ---
+        set_variable = { arm_grant_counter = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_air }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_fighters = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_cas = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_heavy_fighters = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_tactical_bombers = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_strategic_bombers = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_naval_bombers = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_air_transport = yes
+        }
+        # --- NAVAL branch ---
+        set_variable = { arm_grant_counter = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_naval }
         if = {
             limit = {
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
@@ -3383,6 +3570,21 @@ arm_grant_techs_for_profile = {
             limit = {
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
             }
+            arm_grant_naval_naval_support = yes
+        }
+        # --- INDUSTRY branch ---
+        set_variable = { arm_grant_counter = 0 }
+        set_variable = { arm_quarterly_cap = arm_cap_industry }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
+            }
+            arm_grant_industry_electronics_industry = yes
+        }
+        if = {
+            limit = {
+                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
+            }
             arm_grant_industry_electronics_electronics = yes
         }
         if = {
@@ -3390,42 +3592,6 @@ arm_grant_techs_for_profile = {
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
             }
             arm_grant_industry_electronics_radar = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_heavy_fighters = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_tactical_bombers = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_strategic_bombers = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_naval_bombers = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_air_transport = yes
-        }
-        if = {
-            limit = {
-                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
-            }
-            arm_grant_naval_naval_support = yes
         }
         if = {
             limit = {

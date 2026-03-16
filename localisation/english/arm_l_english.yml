@@ -123,11 +123,11 @@ ARM_DESC_HISTORICAL:0 "Uses Realistic mode values plus historical competence bon
  # GAME RULE 7: arm_grant_cap
  ###########################################
  ARM_RULE_grant_cap:0 "Grant Cap"
- ARM_RULE_grant_cap_desc:0 "Controls the maximum number of technologies granted per evaluation cycle."
+ ARM_RULE_grant_cap_desc:0 "Controls the maximum number of technologies granted per branch per evaluation cycle. Each branch gets its own cap scaled by competence."
  ARM_OPT_CAP_STRICT:0 "Strict"
- ARM_DESC_CAP_STRICT:0 "Grant cap is halved (rounded up). Slower tech spread across all tiers."
+ ARM_DESC_CAP_STRICT:0 "Per-branch caps are halved. Slower tech spread across all tiers."
  ARM_OPT_CAP_STANDARD:0 "Standard"
- ARM_DESC_CAP_STANDARD:0 "Standard grant cap based on tier. Superpower: 12, Great: 10, Regional: 8, Minor Industrial: 6, Minor: 4, Micro: 2."
+ ARM_DESC_CAP_STANDARD:0 "Per-branch caps scale with tier and competence. Base per branch: Superpower/Great 3, Regional/Minor Industrial 2, Minor/Micro 1. Cutting Edge branches get 1.5x, Advanced 1.25x, Basic 0.5x."
  ARM_OPT_CAP_UNLIMITED:0 "Unlimited"
  ARM_DESC_CAP_UNLIMITED:0 "No cap on technologies granted per cycle. Nations receive all eligible techs at once."
 

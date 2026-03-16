@@ -112,30 +112,30 @@ arm_assign_power_tier_blackice = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -325,30 +325,30 @@ arm_assign_power_tier_cold_war_iron_curtain = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -538,30 +538,30 @@ arm_assign_power_tier_endsieg = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -751,30 +751,30 @@ arm_assign_power_tier_extended_tech_tree_1960 = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -964,30 +964,30 @@ arm_assign_power_tier_great_war = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -1177,30 +1177,30 @@ arm_assign_power_tier_great_war_redux = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -1390,30 +1390,30 @@ arm_assign_power_tier_kaiserredux = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -1603,30 +1603,30 @@ arm_assign_power_tier_kaiserreich = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -1816,30 +1816,30 @@ arm_assign_power_tier_millennium_dawn = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -2029,30 +2029,30 @@ arm_assign_power_tier_novum_vexillum = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -2242,30 +2242,30 @@ arm_assign_power_tier_rise_of_nations = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -2455,30 +2455,30 @@ arm_assign_power_tier_road_to_56 = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -2668,30 +2668,30 @@ arm_assign_power_tier_the_fire_rises = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================
@@ -2881,30 +2881,30 @@ arm_assign_power_tier_the_new_order = {
 
     # ===================================================
     # Quarterly cap by tier
-    # Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1
+    # Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2
     # ===================================================
     if = {
         limit = { check_variable = { var = arm_tier_index value = 5 compare = equals } }
-        set_variable = { arm_quarterly_cap = 6 }
+        set_variable = { arm_quarterly_cap = 12 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 4 compare = equals } }
-        set_variable = { arm_quarterly_cap = 5 }
+        set_variable = { arm_quarterly_cap = 10 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 3 compare = equals } }
-        set_variable = { arm_quarterly_cap = 4 }
+        set_variable = { arm_quarterly_cap = 8 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 2 compare = equals } }
-        set_variable = { arm_quarterly_cap = 3 }
+        set_variable = { arm_quarterly_cap = 6 }
     }
     else_if = {
         limit = { check_variable = { var = arm_tier_index value = 1 compare = equals } }
-        set_variable = { arm_quarterly_cap = 2 }
+        set_variable = { arm_quarterly_cap = 4 }
     }
     else = {
-        set_variable = { arm_quarterly_cap = 1 }
+        set_variable = { arm_quarterly_cap = 2 }
     }
 
     # ===================================================

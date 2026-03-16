@@ -231,6 +231,154 @@ arm_assign_power_tier = {
 }
 
 #---------------------------------------------------------
+# Effect 1b: arm_compute_branch_caps
+#
+# Computes per-branch grant caps from tier (base) and
+# branch competence (multiplier). Replaces the single
+# shared cap with four independent caps so that weaker
+# branches are not starved by stronger ones.
+#
+# Base per branch:  Tier 5-4 = 3,  Tier 3-2 = 2,  Tier 1-0 = 1
+# Multiplier:  Cutting Edge (>84) = x1.5,  Advanced (>59) = x1.25,
+#              Standard (>34) = x1.0,  Basic (>14) = x0.5,
+#              Minimal (<=14) = x0 (blocked by category gates)
+#---------------------------------------------------------
+arm_compute_branch_caps = {
+
+    # --- Base cap from tier ---
+    if = {
+        limit = { check_variable = { var = arm_tier_index value = 3 compare = greater_than } }
+        set_variable = { arm_branch_base_cap = 3 }
+    }
+    else_if = {
+        limit = { check_variable = { var = arm_tier_index value = 1 compare = greater_than } }
+        set_variable = { arm_branch_base_cap = 2 }
+    }
+    else = {
+        set_variable = { arm_branch_base_cap = 1 }
+    }
+
+    # --- Land cap ---
+    # Competence multiplier applied to base: CE=x1.5, Adv=x1.25, Std=x1, Basic=x0.5, Min=0
+    set_variable = { arm_cap_land = 0 }
+    if = {
+        limit = { check_variable = { var = arm_land_competence value = 14 compare = greater_than } }
+        set_variable = { arm_cap_land = arm_branch_base_cap }
+        if = {
+            limit = { check_variable = { var = arm_land_competence value = 84 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_land_competence value = 59 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.25 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_land_competence value = 34 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.0 }
+        }
+        else = {
+            set_temp_variable = { arm_cap_mult = 0.5 }
+        }
+        multiply_variable = { arm_cap_land = arm_cap_mult }
+    }
+
+    # --- Air cap ---
+    set_variable = { arm_cap_air = 0 }
+    if = {
+        limit = { check_variable = { var = arm_air_competence value = 14 compare = greater_than } }
+        set_variable = { arm_cap_air = arm_branch_base_cap }
+        if = {
+            limit = { check_variable = { var = arm_air_competence value = 84 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_air_competence value = 59 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.25 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_air_competence value = 34 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.0 }
+        }
+        else = {
+            set_temp_variable = { arm_cap_mult = 0.5 }
+        }
+        multiply_variable = { arm_cap_air = arm_cap_mult }
+    }
+
+    # --- Naval cap ---
+    set_variable = { arm_cap_naval = 0 }
+    if = {
+        limit = { check_variable = { var = arm_naval_competence value = 14 compare = greater_than } }
+        set_variable = { arm_cap_naval = arm_branch_base_cap }
+        if = {
+            limit = { check_variable = { var = arm_naval_competence value = 84 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_naval_competence value = 59 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.25 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_naval_competence value = 34 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.0 }
+        }
+        else = {
+            set_temp_variable = { arm_cap_mult = 0.5 }
+        }
+        multiply_variable = { arm_cap_naval = arm_cap_mult }
+    }
+
+    # --- Industry cap ---
+    set_variable = { arm_cap_industry = 0 }
+    if = {
+        limit = { check_variable = { var = arm_industry_competence value = 14 compare = greater_than } }
+        set_variable = { arm_cap_industry = arm_branch_base_cap }
+        if = {
+            limit = { check_variable = { var = arm_industry_competence value = 84 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.5 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_industry_competence value = 59 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.25 }
+        }
+        else_if = {
+            limit = { check_variable = { var = arm_industry_competence value = 34 compare = greater_than } }
+            set_temp_variable = { arm_cap_mult = 1.0 }
+        }
+        else = {
+            set_temp_variable = { arm_cap_mult = 0.5 }
+        }
+        multiply_variable = { arm_cap_industry = arm_cap_mult }
+    }
+
+    # --- Game rule modifiers ---
+    if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_STRICT }
+        }
+        multiply_variable = { arm_cap_land = 0.5 }
+        multiply_variable = { arm_cap_air = 0.5 }
+        multiply_variable = { arm_cap_naval = 0.5 }
+        multiply_variable = { arm_cap_industry = 0.5 }
+    }
+    else_if = {
+        limit = {
+            has_game_rule = { rule = arm_grant_cap option = ARM_CAP_UNLIMITED }
+        }
+        set_variable = { arm_cap_land = 999 }
+        set_variable = { arm_cap_air = 999 }
+        set_variable = { arm_cap_naval = 999 }
+        set_variable = { arm_cap_industry = 999 }
+    }
+
+    # --- Total for dashboard display ---
+    set_variable = { arm_quarterly_cap = arm_cap_land }
+    add_to_variable = { arm_quarterly_cap = arm_cap_air }
+    add_to_variable = { arm_quarterly_cap = arm_cap_naval }
+    add_to_variable = { arm_quarterly_cap = arm_cap_industry }
+}
+
+#---------------------------------------------------------
 # Effect 2: arm_assign_allowed_categories
 #
 # Clears all category flags, then conditionally sets them

@@ -344,38 +344,48 @@ DOCTRINE_SAFE_PROFILES = {
     "road_to_56",
 }
 
-GRANT_ORDER = [
-    "arm_grant_land_infantry",
-    "arm_grant_industry_electronics_industry",
-    "arm_grant_land_support",
-    "arm_grant_land_artillery",
-    "arm_grant_land_anti_air",
-    "arm_grant_land_anti_tank",
-    "arm_grant_land_motorised",
-    "arm_grant_land_mechanised",
-    "arm_grant_air_fighters",
-    "arm_grant_air_cas",
-    "arm_grant_land_light_tanks",
-    "arm_grant_land_medium_tanks",
-    "arm_grant_land_heavy_tanks",
-    "arm_grant_land_tanks_generic",
-    "arm_grant_naval_submarines",
-    "arm_grant_naval_destroyers",
-    "arm_grant_naval_light_cruisers",
-    "arm_grant_naval_heavy_cruisers",
-    "arm_grant_naval_battleships",
-    "arm_grant_naval_carriers",
-    "arm_grant_industry_electronics_electronics",
-    "arm_grant_industry_electronics_radar",
-    "arm_grant_air_heavy_fighters",
-    "arm_grant_air_tactical_bombers",
-    "arm_grant_air_strategic_bombers",
-    "arm_grant_air_naval_bombers",
-    "arm_grant_air_transport",
-    "arm_grant_naval_naval_support",
-    "arm_grant_industry_electronics_nuclear",
-    "arm_grant_industry_electronics_rockets",
-]
+GRANT_ORDER_BY_BRANCH = {
+    "land": [
+        "arm_grant_land_infantry",
+        "arm_grant_land_support",
+        "arm_grant_land_artillery",
+        "arm_grant_land_anti_air",
+        "arm_grant_land_anti_tank",
+        "arm_grant_land_motorised",
+        "arm_grant_land_mechanised",
+        "arm_grant_land_light_tanks",
+        "arm_grant_land_medium_tanks",
+        "arm_grant_land_heavy_tanks",
+        "arm_grant_land_tanks_generic",
+    ],
+    "air": [
+        "arm_grant_air_fighters",
+        "arm_grant_air_cas",
+        "arm_grant_air_heavy_fighters",
+        "arm_grant_air_tactical_bombers",
+        "arm_grant_air_strategic_bombers",
+        "arm_grant_air_naval_bombers",
+        "arm_grant_air_transport",
+    ],
+    "naval": [
+        "arm_grant_naval_submarines",
+        "arm_grant_naval_destroyers",
+        "arm_grant_naval_light_cruisers",
+        "arm_grant_naval_heavy_cruisers",
+        "arm_grant_naval_battleships",
+        "arm_grant_naval_carriers",
+        "arm_grant_naval_naval_support",
+    ],
+    "industry": [
+        "arm_grant_industry_electronics_industry",
+        "arm_grant_industry_electronics_electronics",
+        "arm_grant_industry_electronics_radar",
+        "arm_grant_industry_electronics_nuclear",
+        "arm_grant_industry_electronics_rockets",
+    ],
+}
+
+BRANCH_ORDER = ["land", "air", "naval", "industry"]
 
 CHECK_COMPARE_MAP = {
     ">": "greater_than",
@@ -504,6 +514,15 @@ def normalize_generated_tier_block(text: str) -> str:
         "set_variable = { arm_base_lag = __ARM_LAG_T2__ }": "set_variable = { arm_base_lag = 3.5 }",
         "subtract_from_variable = { arm_base_lag = 0.5 }": "subtract_from_variable = { arm_base_lag = 0.75 }",
         "has_game_rule = { rule = arm_auto_research_intensity option = ARM_AGGRESSIVE }": "has_game_rule = { rule = arm_auto_research_intensity option = ARM_ARCADE }",
+        # Cap normalization: double old quarterly caps for 6-month cycles
+        "set_variable = { arm_quarterly_cap = 6 }": "set_variable = { arm_quarterly_cap = 12 }",
+        "set_variable = { arm_quarterly_cap = 5 }": "set_variable = { arm_quarterly_cap = 10 }",
+        "set_variable = { arm_quarterly_cap = 4 }": "set_variable = { arm_quarterly_cap = 8 }",
+        "set_variable = { arm_quarterly_cap = 3 }": "set_variable = { arm_quarterly_cap = 6 }",
+        "set_variable = { arm_quarterly_cap = 2 }": "set_variable = { arm_quarterly_cap = 4 }",
+        "set_variable = { arm_quarterly_cap = 1 }": "set_variable = { arm_quarterly_cap = 2 }",
+        # Comment normalization
+        "# Superpower=6, Great=5, Regional=4, MinorInd=3, Minor=2, Micro=1": "# Superpower=12, Great=10, Regional=8, MinorInd=6, Minor=4, Micro=2",
     }
     for old, new in replacements.items():
         text = text.replace(old, new)
@@ -569,23 +588,33 @@ def build_profile_dispatch(index: dict) -> str:
         lines.append("        limit = {")
         lines.extend(build_profile_limit_lines(slug))
         lines.append("        }")
-        lines.append(f"        set_variable = {{ arm_grant_counter_{slug} = 0 }}")
-        for effect_name in GRANT_ORDER:
-            lines.append("        if = {")
-            lines.append("            limit = {")
-            lines.append(f"                check_variable = {{ var = arm_grant_counter_{slug} value = arm_quarterly_cap compare = less_than }}")
-            lines.append("            }")
-            lines.append(f"            {effect_name}_{slug} = yes")
-            lines.append("        }")
+        counter_var = f"arm_grant_counter_{slug}"
+        for branch in BRANCH_ORDER:
+            cap_var = f"arm_cap_{branch}"
+            lines.append(f"        # --- {branch.upper()} branch ---")
+            lines.append(f"        set_variable = {{ {counter_var} = 0 }}")
+            lines.append(f"        set_variable = {{ arm_quarterly_cap = {cap_var} }}")
+            for effect_name in GRANT_ORDER_BY_BRANCH[branch]:
+                lines.append("        if = {")
+                lines.append("            limit = {")
+                lines.append(f"                check_variable = {{ var = {counter_var} value = arm_quarterly_cap compare = less_than }}")
+                lines.append("            }")
+                lines.append(f"            {effect_name}_{slug} = yes")
+                lines.append("        }")
         lines.append("    }")
     lines.append("    else = {")
-    for effect_name in GRANT_ORDER:
-        lines.append("        if = {")
-        lines.append("            limit = {")
-        lines.append("                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }")
-        lines.append("            }")
-        lines.append(f"            {effect_name} = yes")
-        lines.append("        }")
+    for branch in BRANCH_ORDER:
+        cap_var = f"arm_cap_{branch}"
+        lines.append(f"        # --- {branch.upper()} branch ---")
+        lines.append("        set_variable = { arm_grant_counter = 0 }")
+        lines.append(f"        set_variable = {{ arm_quarterly_cap = {cap_var} }}")
+        for effect_name in GRANT_ORDER_BY_BRANCH[branch]:
+            lines.append("        if = {")
+            lines.append("            limit = {")
+            lines.append("                check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }")
+            lines.append("            }")
+            lines.append(f"            {effect_name} = yes")
+            lines.append("        }")
     lines.append("    }")
     lines.append("}")
     lines.append("")

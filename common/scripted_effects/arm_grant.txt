@@ -40,6 +40,9 @@ arm_refresh_country_state_runtime_core = {
     # Step 2: Assign tier using the active compatibility profile
     arm_assign_power_tier_for_profile = yes
 
+    # Step 2a: Compute per-branch grant caps from tier and competence
+    arm_compute_branch_caps = yes
+
     # Step 2b: Lock doctrine preferences after branch scores exist
     arm_initialize_doctrine_paths_for_profile = yes
 
@@ -91,6 +94,9 @@ arm_refresh_country_state_ui_runtime = {
     # omitted here.  The tier must only change during the 6-month
     # monthly evaluation to honour the one-tier-per-cycle guard.
 
+    # Step 2a: Recompute per-branch caps (uses existing tier + fresh competence)
+    arm_compute_branch_caps = yes
+
     # Step 2b: Lock doctrine preferences after branch scores exist
     arm_initialize_doctrine_paths_for_profile = yes
 
@@ -140,10 +146,7 @@ arm_evaluate_and_grant = {
 
     arm_refresh_country_state = yes
 
-    # Step 7: Reset grant counter
-    set_variable = { arm_grant_counter = 0 }
-
-    # Step 8: Grant technologies using the active compatibility profile
+    # Step 7-8: Grant technologies using per-branch caps
     arm_grant_techs_for_profile = yes
 
     # Step 9: Doctrines (if the active profile supports them)
@@ -169,10 +172,7 @@ arm_evaluate_and_grant_runtime = {
             }
         }
 
-        # Step 7: Reset grant counter
-        set_variable = { arm_grant_counter = 0 }
-
-        # Step 8: Grant technologies using the active compatibility profile
+        # Step 7-8: Grant technologies using per-branch caps
         arm_grant_techs_for_profile = yes
 
         # Step 9: Doctrines (if the active profile supports them)

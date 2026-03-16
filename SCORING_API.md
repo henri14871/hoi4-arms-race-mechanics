@@ -61,25 +61,25 @@ After calling `arm_assign_power_tier`:
 
 | Variable | Type | Description |
 |---|---|---|
-| `arm_tier_index` | int | 0–5, current power tier |
+| `arm_tier_index` | int | 0-5, current power tier |
 | `arm_base_lag` | float | Base technology lag in years |
-| `arm_quarterly_cap` | int | Tech grants allowed per quarter |
+| `arm_quarterly_cap` | int | Tech grants allowed per 6-month evaluation cycle |
 | `arm_tier_avg` | float | Expected average competence for this tier (used for bonus thresholds) |
 
 ---
 
 ## Power tiers
 
-| Index | Name | Power threshold | Promote at | Demote at | Base lag | Quarterly cap |
-|---|---|---|---|---|---|---|
-| 5 | Superpower | 300 | >305 | <295 | 0.0 | 6 |
-| 4 | Great Power | 150 | >155 | <145 | 0.5 | 5 |
-| 3 | Regional Power | 90 | >95 | <85 | 1.5 | 4 |
-| 2 | Minor Industrial | 45 | >50 | <40 | 3.0 | 3 |
-| 1 | Minor | 20 | >25 | <15 | 4.5 | 2 |
-| 0 | Micro | 0 | — | — | 6.0 | 1 |
+| Index | Name | Promote at | Demote at | Base lag | Grants / cycle |
+|---|---|---|---|---|---|
+| 5 | Superpower | > 305 | < 295 | 0.25 | 12 |
+| 4 | Great Power | > 155 | < 145 | 1.5 | 10 |
+| 3 | Regional Power | > 95 | < 85 | 2.5 | 8 |
+| 2 | Minor Industrial | > 50 | < 40 | 3.5 | 6 |
+| 1 | Minor | > 25 | < 15 | 4.5 | 4 |
+| 0 | Micro | -- | -- | 6.0 | 2 |
 
-Hysteresis is +5 to promote, -5 to demote. A country at tier 3 with 88 power stays at tier 3 until it drops below 85.
+Hysteresis prevents oscillation. A country at tier 3 with 88 power stays at tier 3 until it drops below 85. Promotion requires exceeding the next tier's threshold by +5; demotion requires falling below the current tier's threshold by -5.
 
 ---
 
@@ -87,7 +87,7 @@ Hysteresis is +5 to promote, -5 to demote. A country at tier 3 with 88 power sta
 
 ### Economy score
 
-Each factory type uses diminishing returns: first 80 at full weight, 81–160 at half, 161+ at quarter.
+Each factory type uses diminishing returns: first 80 at full weight, 81-160 at half, 161+ at quarter.
 
 | Factory type | Weight |
 |---|---|
@@ -141,7 +141,7 @@ Resources use threshold chains (not continuous math) for Clausewitz compatibilit
 
 | Component | Formula | Cap |
 |---|---|---|
-| Military factories | First 60 full, rest * 0.5 | — |
+| Military factories | First 60 full, rest * 0.5 | -- |
 | Deployed manpower | Threshold chain (1M = 25, 800K = 20, ...) | 25 |
 | Steel | /10 threshold chain | 15 |
 | Tungsten | /6 threshold chain | 10 |
@@ -151,7 +151,7 @@ Resources use threshold chains (not continuous math) for Clausewitz compatibilit
 
 | Component | Formula | Cap |
 |---|---|---|
-| Military factories | (First 60 full, rest * 0.4) * 0.8 | — |
+| Military factories | (First 60 full, rest * 0.4) * 0.8 | -- |
 | Aluminium | /5 threshold chain | 15 |
 | Rubber | /5 threshold chain | 10 |
 | Oil | /8 threshold chain | 10 |
@@ -161,7 +161,7 @@ Resources use threshold chains (not continuous math) for Clausewitz compatibilit
 
 | Component | Formula | Cap |
 |---|---|---|
-| Dockyards | (First 30 full, rest * 1.0) * 2.0 | — |
+| Dockyards | (First 30 full, rest * 1.0) * 2.0 | -- |
 | Oil | /8 threshold chain | 10 |
 | Steel | /10 threshold chain | 10 |
 | Chromium | /5 threshold chain | 10 |
@@ -171,7 +171,7 @@ Resources use threshold chains (not continuous math) for Clausewitz compatibilit
 
 | Component | Formula | Cap |
 |---|---|---|
-| Civilian factories | (First 60 full, rest * 0.4) * 0.8 | — |
+| Civilian factories | (First 60 full, rest * 0.4) * 0.8 | -- |
 | Research slots | * 12 threshold chain | 72 |
 | Stability | * 0.3 threshold chain | 30 |
 | Resource breadth | +3 per resource with 8+ access | 18 |
@@ -196,7 +196,7 @@ All triggers run in country scope.
 
 ## Using tier in your own mod
 
-The simplest integration — check `arm_tier_index` in your own triggers or effects:
+The simplest integration -- check `arm_tier_index` in your own triggers or effects:
 
 ```
 # Give a bonus to Great Powers and above
@@ -233,7 +233,7 @@ If ARM isn't loaded, `arm_tier_index` will be 0 (unset) and competence variables
 
 ## Dependencies
 
-None. The scoring system uses only vanilla triggers and variables — no DLC required, no other mods required. Remove the game rule checks from `arm_evaluation.txt` if you don't want the configurable rules.
+None. The scoring system uses only vanilla triggers and variables -- no DLC required, no other mods required. Remove the game rule checks from `arm_evaluation.txt` if you don't want the configurable rules.
 
 ---
 
