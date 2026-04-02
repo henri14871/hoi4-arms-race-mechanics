@@ -368,6 +368,35 @@ arm_anti_death_spiral = {
 	}
 }
 
+arm_bucket_spread = {
+	name = "ARM_RULE_bucket_spread"
+	group = "ARM_RULES_GROUP"
+
+	default = {
+		name = ARM_SPREAD_1
+		text = "ARM_OPT_SPREAD_1"
+		desc = "ARM_DESC_SPREAD_1"
+	}
+	option = {
+		name = ARM_SPREAD_2
+		text = "ARM_OPT_SPREAD_2"
+		desc = "ARM_DESC_SPREAD_2"
+		allow_achievements = no
+	}
+	option = {
+		name = ARM_SPREAD_3
+		text = "ARM_OPT_SPREAD_3"
+		desc = "ARM_DESC_SPREAD_3"
+		allow_achievements = no
+	}
+	option = {
+		name = ARM_SPREAD_6
+		text = "ARM_OPT_SPREAD_6"
+		desc = "ARM_DESC_SPREAD_6"
+		allow_achievements = no
+	}
+}
+
 arm_research_speed_bonuses = {
 	name = "ARM_RULE_research_speed_bonuses"
 	group = "ARM_RULES_GROUP"

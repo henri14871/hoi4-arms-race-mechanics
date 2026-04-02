@@ -180,7 +180,21 @@ ARM_DESC_HISTORICAL:0 "Uses Realistic mode values plus historical competence bon
  ARM_DESC_ADS_ENHANCED:0 "Enhanced desperation bonus with lower thresholds. At 10%+ surrender: -0.5 lag, at 20%+: -0.75 lag."
 
  ###########################################
- # GAME RULE 12: arm_research_speed_bonuses
+ # GAME RULE 12: arm_bucket_spread
+ ###########################################
+ ARM_RULE_bucket_spread:0 "Evaluation Spread"
+ ARM_RULE_bucket_spread_desc:0 "Controls how many months it takes to cycle through all countries. Lower values process more countries per month (heavier performance), higher values spread the load."
+ ARM_OPT_SPREAD_1:0 "1 Month"
+ ARM_DESC_SPREAD_1:0 "All countries are evaluated every month. Most responsive but heaviest on performance."
+ ARM_OPT_SPREAD_2:0 "2 Months"
+ ARM_DESC_SPREAD_2:0 "Countries are split into 2 groups and evaluated every other month."
+ ARM_OPT_SPREAD_3:0 "3 Months"
+ ARM_DESC_SPREAD_3:0 "Countries are split into 3 groups and evaluated every 3 months."
+ ARM_OPT_SPREAD_6:0 "6 Months"
+ ARM_DESC_SPREAD_6:0 "Countries are split into 6 groups and one group is evaluated per month. Lightest on performance."
+
+ ###########################################
+ # GAME RULE 13: arm_research_speed_bonuses
  ###########################################
  ARM_RULE_research_speed_bonuses:0 "Research Speed Bonuses"
  ARM_RULE_research_speed_bonuses_desc:0 "Controls whether tier and branch national spirits that modify research speed are applied."

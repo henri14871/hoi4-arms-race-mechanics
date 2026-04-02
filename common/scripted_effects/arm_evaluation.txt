@@ -1183,7 +1183,11 @@ arm_compute_target_years = {
 }
 
 arm_compute_next_grant_window = {
-    set_variable = { arm_months_to_next_grant = 6 }
+    set_variable = { arm_months_to_next_grant = global.arm_bucket_count }
+
+    # Precompute wrap threshold (bucket_count - 1).
+    set_temp_variable = { arm_max_bucket = global.arm_bucket_count }
+    subtract_from_temp_variable = { arm_max_bucket = 1 }
 
     # Start from the NEXT month counter, not the current one.
     # During monthly evaluation the current counter still points at
@@ -1192,8 +1196,8 @@ arm_compute_next_grant_window = {
     set_temp_variable = { arm_next_bucket = global.arm_month_counter }
     add_to_temp_variable = { arm_next_bucket = 1 }
     if = {
-        limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
-        subtract_from_temp_variable = { arm_next_bucket = 6 }
+        limit = { check_variable = { var = arm_next_bucket value = var:arm_max_bucket compare = greater_than } }
+        subtract_from_temp_variable = { arm_next_bucket = global.arm_bucket_count }
     }
 
     # Check each of the next 6 months to find when this country's bucket comes up.
@@ -1204,8 +1208,8 @@ arm_compute_next_grant_window = {
     else = {
         add_to_temp_variable = { arm_next_bucket = 1 }
         if = {
-            limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
-            subtract_from_temp_variable = { arm_next_bucket = 6 }
+            limit = { check_variable = { var = arm_next_bucket value = var:arm_max_bucket compare = greater_than } }
+            subtract_from_temp_variable = { arm_next_bucket = global.arm_bucket_count }
         }
         if = {
             limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
@@ -1214,8 +1218,8 @@ arm_compute_next_grant_window = {
         else = {
             add_to_temp_variable = { arm_next_bucket = 1 }
             if = {
-                limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
-                subtract_from_temp_variable = { arm_next_bucket = 6 }
+                limit = { check_variable = { var = arm_next_bucket value = var:arm_max_bucket compare = greater_than } }
+                subtract_from_temp_variable = { arm_next_bucket = global.arm_bucket_count }
             }
             if = {
                 limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
@@ -1224,8 +1228,8 @@ arm_compute_next_grant_window = {
             else = {
                 add_to_temp_variable = { arm_next_bucket = 1 }
                 if = {
-                    limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
-                    subtract_from_temp_variable = { arm_next_bucket = 6 }
+                    limit = { check_variable = { var = arm_next_bucket value = var:arm_max_bucket compare = greater_than } }
+                    subtract_from_temp_variable = { arm_next_bucket = global.arm_bucket_count }
                 }
                 if = {
                     limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }
@@ -1234,8 +1238,8 @@ arm_compute_next_grant_window = {
                 else = {
                     add_to_temp_variable = { arm_next_bucket = 1 }
                     if = {
-                        limit = { check_variable = { var = arm_next_bucket value = 5 compare = greater_than } }
-                        subtract_from_temp_variable = { arm_next_bucket = 6 }
+                        limit = { check_variable = { var = arm_next_bucket value = var:arm_max_bucket compare = greater_than } }
+                        subtract_from_temp_variable = { arm_next_bucket = global.arm_bucket_count }
                     }
                     if = {
                         limit = { check_variable = { var = arm_bucket value = var:arm_next_bucket compare = equals } }

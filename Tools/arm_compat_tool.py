@@ -278,6 +278,14 @@ DLC_TECH_OVERRIDES = {
     "sp_ice_composite_runawayas": "Gotterdammerung",
 }
 
+# Vanilla tech folders that are hidden when a specific DLC is active.
+# Derived from common/technology_tags/00_technology.txt in the base game.
+FOLDER_DLC_HIDDEN_MAP = {
+    "armour_folder": "No Step Back",
+    "air_techs_folder": "By Blood Alone",
+    "naval_folder": "Man the Guns",
+}
+
 
 # ============================================================================
 # DATA STRUCTURES
@@ -300,6 +308,8 @@ class TechDef:
     source_mod: str = "vanilla"
     dependency_depth: int = 0
     dlc_required: str = ""
+    dlc_hidden_by: str = ""
+    xor_techs: list = field(default_factory=list)
 
 
 # ============================================================================
@@ -973,6 +983,11 @@ def parse_single_tech(tech_id: str, block: str, source_file: str, mod_name: str)
         deps = re.findall(r'([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*\d+', dep_match.group(1))
         tech.dependencies = deps
 
+    xor_match = re.search(r'XOR\s*=\s*\{([^}]*)\}', block)
+    if xor_match:
+        xor_ids = re.findall(r'[a-zA-Z_][a-zA-Z0-9_]*', xor_match.group(1))
+        tech.xor_techs = [x for x in xor_ids if x != tech_id]
+
     if 'xp_research_type' in block or 'xp_cost' in block:
         tech.is_xp_gated = True
 
@@ -983,6 +998,29 @@ def parse_single_tech(tech_id: str, block: str, source_file: str, mod_name: str)
             'cat_fleet_in_being', 'cat_trade_interdiction',
             'cat_base_strike']):
         tech.is_doctrine = True
+
+    # Parse allow_branch for DLC gating (per-tech level).
+    # Negative: allow_branch = { NOT = { has_dlc = "X" } } → hidden when X active
+    ab_neg = re.search(
+        r'allow_branch\s*=\s*\{[^}]*NOT\s*=\s*\{[^}]*has_dlc\s*=\s*"([^"]+)"',
+        block)
+    if ab_neg:
+        tech.dlc_hidden_by = ab_neg.group(1)
+    else:
+        # Positive: allow_branch = { has_dlc = "X" } → requires X
+        ab_pos = re.search(
+            r'allow_branch\s*=\s*\{[^}]*has_dlc\s*=\s*"([^"]+)"', block)
+        if ab_pos and not tech.dlc_required:
+            tech.dlc_required = ab_pos.group(1)
+
+    # Parse folder assignments for folder-level DLC hiding.
+    if not tech.dlc_hidden_by:
+        folder_matches = re.findall(
+            r'folder\s*=\s*\{[^}]*name\s*=\s*(\w+)', block)
+        for folder_name in folder_matches:
+            if folder_name in FOLDER_DLC_HIDDEN_MAP:
+                tech.dlc_hidden_by = FOLDER_DLC_HIDDEN_MAP[folder_name]
+                break
 
     map_tech_to_branch(tech)
     return tech
@@ -1190,6 +1228,8 @@ def append_grant_limit_lines(lines: list, tech: TechDef, counter_var: str = "arm
         lines.append(f"{indent}has_tech = {dep}")
     if tech.dlc_required:
         lines.append(f'{indent}has_dlc = "{tech.dlc_required}"')
+    if tech.dlc_hidden_by:
+        lines.append(f'{indent}NOT = {{ has_dlc = "{tech.dlc_hidden_by}" }}')
 
 
 def append_group_outer_limit_lines(lines: list, tech_list: list[TechDef],
@@ -1230,6 +1270,9 @@ def append_group_outer_limit_lines(lines: list, tech_list: list[TechDef],
     shared_dlc = tech_list[0].dlc_required
     if shared_dlc and all(tech.dlc_required == shared_dlc for tech in tech_list):
         lines.append(f'{indent}has_dlc = "{shared_dlc}"')
+    shared_dlc_hidden = tech_list[0].dlc_hidden_by
+    if shared_dlc_hidden and all(tech.dlc_hidden_by == shared_dlc_hidden for tech in tech_list):
+        lines.append(f'{indent}NOT = {{ has_dlc = "{shared_dlc_hidden}" }}')
 
 
 def split_techs_by_start_year(tech_list: list[TechDef]) -> list[tuple[int, list[TechDef]]]:
@@ -1245,14 +1288,28 @@ def split_techs_by_start_year(tech_list: list[TechDef]) -> list[tuple[int, list[
 def append_generated_grant_tech_blocks(lines: list, tech_list: list[TechDef], indent: str = "        "):
     child_indent = f"{indent}    "
     grandchild_indent = f"{child_indent}    "
+    # Track XOR groups: once we emit the first tech of an XOR set, subsequent
+    # members use else_if so the engine cannot grant both in the same pass.
+    xor_emitted = set()
     for tech in tech_list:
         if tech.is_xp_gated:
             lines.append(f"{indent}# SKIPPED (XP-gated): {tech.tech_id}")
             continue
+        # Determine if this tech is an XOR follower (its counterpart already emitted).
+        is_xor_follower = False
+        if tech.xor_techs:
+            xor_key = frozenset([tech.tech_id] + tech.xor_techs)
+            if xor_key in xor_emitted:
+                is_xor_follower = True
+            else:
+                xor_emitted.add(xor_key)
+        block_keyword = "else_if" if is_xor_follower else "if"
         lines.append(f"{indent}# {tech.tech_id} - {tech.start_year}")
-        lines.append(f"{indent}if = {{")
+        lines.append(f"{indent}{block_keyword} = {{")
         lines.append(f"{child_indent}limit = {{")
         lines.append(f"{grandchild_indent}NOT = {{ has_tech = {tech.tech_id} }}")
+        for xor_id in tech.xor_techs:
+            lines.append(f"{grandchild_indent}NOT = {{ has_tech = {xor_id} }}")
         append_grant_limit_lines(lines, tech, indent=grandchild_indent)
         lines.append(f"{child_indent}}}")
         lines.append(f"{child_indent}set_technology = {{ {tech.tech_id} = 1 popup = no }}")
@@ -1365,12 +1422,15 @@ def generate_output_files(techs: list, output_dir: Path, mode: str, mod_name: st
             dep_str = ""
             if tech.dependencies:
                 dep_str = f" deps=[{', '.join(tech.dependencies)}]"
+            xor_str = ""
+            if tech.xor_techs:
+                xor_str = f" XOR=[{', '.join(tech.xor_techs)}]"
             lines.append(f"# {tech.tech_id}")
             lines.append(f"#   year={tech.start_year} branch={tech.branch} "
                          f"category={tech.category}")
             lines.append(f"#   min_tier={tech.min_tier} "
                          f"min_branch_score={tech.min_branch_score}"
-                         f"{dep_str}{flag_str}")
+                         f"{dep_str}{xor_str}{flag_str}")
             lines.append("")
         append_generated_grant_effect(lines, effect_name, tech_list)
 

@@ -3512,6 +3512,7 @@ arm_grant_industry_electronics_industry_y2020 = {
         if = {
             limit = {
                 NOT = { has_tech = concentrated_industry }
+                NOT = { has_tech = dispersed_industry }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2020 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3525,6 +3526,7 @@ arm_grant_industry_electronics_industry_y2020 = {
         if = {
             limit = {
                 NOT = { has_tech = dispersed_industry }
+                NOT = { has_tech = concentrated_industry }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2020 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3628,6 +3630,7 @@ arm_grant_industry_electronics_industry_y2021 = {
         if = {
             limit = {
                 NOT = { has_tech = concentrated_industry2 }
+                NOT = { has_tech = dispersed_industry2 }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2021 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3641,6 +3644,7 @@ arm_grant_industry_electronics_industry_y2021 = {
         if = {
             limit = {
                 NOT = { has_tech = dispersed_industry2 }
+                NOT = { has_tech = concentrated_industry2 }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2021 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3731,6 +3735,7 @@ arm_grant_industry_electronics_industry_y2023 = {
         if = {
             limit = {
                 NOT = { has_tech = concentrated_industry3 }
+                NOT = { has_tech = dispersed_industry3 }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2023 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3744,6 +3749,7 @@ arm_grant_industry_electronics_industry_y2023 = {
         if = {
             limit = {
                 NOT = { has_tech = dispersed_industry3 }
+                NOT = { has_tech = concentrated_industry3 }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2023 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3821,6 +3827,7 @@ arm_grant_industry_electronics_industry_y2025 = {
         if = {
             limit = {
                 NOT = { has_tech = concentrated_industry4 }
+                NOT = { has_tech = dispersed_industry4 }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2025 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3834,6 +3841,7 @@ arm_grant_industry_electronics_industry_y2025 = {
         if = {
             limit = {
                 NOT = { has_tech = dispersed_industry4 }
+                NOT = { has_tech = concentrated_industry4 }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2025 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3911,6 +3919,7 @@ arm_grant_industry_electronics_industry_y2027 = {
         if = {
             limit = {
                 NOT = { has_tech = flexible_line }
+                NOT = { has_tech = streamlined_line }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2027 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3924,6 +3933,7 @@ arm_grant_industry_electronics_industry_y2027 = {
         if = {
             limit = {
                 NOT = { has_tech = streamlined_line }
+                NOT = { has_tech = flexible_line }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2027 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3937,6 +3947,7 @@ arm_grant_industry_electronics_industry_y2027 = {
         if = {
             limit = {
                 NOT = { has_tech = concentrated_industry5 }
+                NOT = { has_tech = dispersed_industry5 }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2027 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
@@ -3950,6 +3961,7 @@ arm_grant_industry_electronics_industry_y2027 = {
         if = {
             limit = {
                 NOT = { has_tech = dispersed_industry5 }
+                NOT = { has_tech = concentrated_industry5 }
                 check_variable = { var = arm_grant_counter value = arm_quarterly_cap compare = less_than }
                 check_variable = { var = arm_target_year_industry value = 2027 compare = greater_than_or_equals }
                 check_variable = { var = arm_tier_index value = 1 compare = greater_than_or_equals }
