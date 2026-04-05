@@ -5,6 +5,7 @@
 # on_startup:  Initialize globals, buckets, and compat state
 # on_monthly:  Country-local monthly evaluation with optional spread
 ###############################################################################
+on_actions = {
 
 # ===================================================================
 # ON STARTUP
@@ -12,24 +13,6 @@
 on_startup = {
     effect = {
         random_country = {
-            tbm_bootstrap_runtime_state = yes
-        }
-    }
-}
-
-# ===================================================================
-# ON DAILY
-# Migrates legacy saves that add TBM after the campaign started.
-# ===================================================================
-on_daily = {
-    effect = {
-        if = {
-            limit = {
-                OR = {
-                    NOT = { has_global_flag = tbm_runtime_bootstrapped }
-                    NOT = { has_global_flag = tbm_runtime_schema_v2 }
-                }
-            }
             tbm_bootstrap_runtime_state = yes
         }
     }
@@ -132,4 +115,5 @@ on_monthly = {
             }
         }
     }
+}
 }

@@ -13,12 +13,6 @@ tbm_auto_research_scope = {
 		desc = "TBM_DESC_EVERYONE"
 	}
 	option = {
-		name = TBM_EVERYONE
-		text = "TBM_OPT_EVERYONE"
-		desc = "TBM_DESC_EVERYONE"
-		allow_achievements = no
-	}
-	option = {
 		name = TBM_DISABLED
 		text = "TBM_OPT_DISABLED"
 		desc = "TBM_DESC_DISABLED"
